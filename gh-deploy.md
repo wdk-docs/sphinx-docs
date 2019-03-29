@@ -13,7 +13,7 @@
 
 在这篇文章中，我将分享我开发的工作流程，以使用 Circle CI 自动化我的文档构建和部署到 gh 页面。
 
-## 第一次推到'gh-pages`:
+## 第一次推到`gh-pages`:
 
 在我们自动化构建之前，在服务器上使用 gh-pages 分支是有帮助的。
 在继续之前，请确保已提交并推送所有更改。
@@ -49,14 +49,14 @@ $ git push origin gh-pages
 ## 自动化所有未来的 doc 部署
 
 现在分支存在于远程，我们可以简化事情。
-如果您还没有 Circle 帐户，请转到注册页面，然后单击`使用 Github 注册`。
+如果您还没有 Circle 帐户，请转到[注册](https://circleci.com/signup/)页面，然后单击`使用 Github 注册`。
 从那里，您可以设置`.circleci/config.yml`将您的项目添加到 Circle 工作流以在 Github 推送上构建/测试。
-如果您不熟悉如何执行此操作，请按照本教程使用 Circle 进行设置。
+如果您不熟悉如何执行此操作，请按照[本教程](https://circleci.com/docs/2.0/tutorials/)使用 Circle 进行设置。
 
 ### 为您的文档创建构建脚本
 
-这是我的构建脚本的样子。
-它位于 build_tools / circle 目录中。
+这是我的[构建脚本](https://github.com/tgsmith61591/gh_automation/blob/master/build_tools/circle/build_push_doc.sh)的样子。
+它位于 `build_tools/circle` 目录中。
 我一直在散布评论，试图解释每一步：
 
 ```bash
