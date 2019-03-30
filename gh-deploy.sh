@@ -3,7 +3,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-buildDirectory=_build
+buildDirectory=doc/_build
 
 # get a clean master branch assuming
 # git checkout master
@@ -13,7 +13,7 @@ buildDirectory=_build
 # git fetch --all
 
 # build html docs from sphinx files
-sphinx-build -b html . "$buildDirectory"
+sphinx-build -b html ./doc "$buildDirectory"
 
 # create or use orphaned gh-pages branch
 branch_name=gh-pages
@@ -30,8 +30,8 @@ fi
 
 if [ -d "$buildDirectory" ]
 then
-	ls | grep -v _build | xargs rm -r
-	mv _build/* . && rm -rf _build
+	ls | grep -v doc/_build | xargs rm -r
+	mv doc/_build/* . && rm -rf doc
 	git add .
 	git commit -m "new pages version $(date)"
 	git push origin gh-pages
