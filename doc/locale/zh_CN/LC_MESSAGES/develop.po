@@ -357,7 +357,7 @@ msgstr "whooshindex: whoosh的索引器扩展"
 
 #: ../../develop.rst:99
 msgid "youtube: embed videos from YouTube_"
-msgstr "youtube: 从YouTube嵌入视频"
+msgstr "youtube: 从 YouTube_ 嵌入视频"
 
 #: ../../develop.rst:100
 msgid ""

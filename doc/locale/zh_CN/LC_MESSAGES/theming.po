@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../theming.rst:30
 msgid "A :file:`theme.conf` file."
-msgstr "答：文件：`theme.conf`文件。"
+msgstr ":file:`theme.conf` 文件。"
 
 #: ../../theming.rst:31
 msgid "HTML templates, if needed."

@@ -138,7 +138,7 @@ msgstr ""
 
 #: ../../templating.rst:84
 msgid "Blocks"
-msgstr "块"
+msgstr "Blocks"
 
 #: ../../templating.rst:86
 msgid "The following blocks exist in the ``layout.html`` template:"
@@ -206,7 +206,7 @@ msgstr ""
 
 #: ../../templating.rst:122
 msgid "`document`"
-msgstr "`document`"
+msgstr "`文档`"
 
 #: ../../templating.rst:121
 msgid ""
@@ -244,7 +244,7 @@ msgstr ""
 
 #: ../../templating.rst:144
 msgid "`footer`"
-msgstr "`footer`"
+msgstr "`页脚`"
 
 #: ../../templating.rst:143
 msgid ""
@@ -266,7 +266,7 @@ msgstr "`sidebartoc`"
 
 #: ../../templating.rst:152
 msgid "The table of contents within the sidebar."
-msgstr "The table of contents within the sidebar."
+msgstr "侧栏内的目录。"
 
 #: ../../templating.rst:159
 msgid "`sidebarrel`"
@@ -274,7 +274,7 @@ msgstr "`sidebarrel`"
 
 #: ../../templating.rst:157
 msgid "The relation links (previous, next document) within the sidebar."
-msgstr "The relation links (previous, next document) within the sidebar."
+msgstr "边栏内的关系链接（上一个，下一个文档）。"
 
 #: ../../templating.rst:165
 msgid "`sidebarsourcelink`"
@@ -323,15 +323,15 @@ msgstr ""
 
 #: ../../templating.rst:192
 msgid "Overriding works like this::"
-msgstr "Overriding works like this::"
+msgstr "覆盖就是这样的::"
 
 #: ../../templating.rst:199
 msgid "Add additional script files here, like this::"
-msgstr "Add additional script files here, like this::"
+msgstr "在这里添加其他脚本文件，如下所示::"
 
 #: ../../templating.rst:205
 msgid "Please use ``.Sphinx.add_js_file()`` instead."
-msgstr "Please use ``.Sphinx.add_js_file()`` instead."
+msgstr "请用 ``.Sphinx.add_js_file()`` 代替."
 
 #: ../../templating.rst:208
 msgid "Helper Functions"
@@ -388,7 +388,7 @@ msgstr "The name of the builder (e.g. ``html`` or ``htmlhelp``)."
 
 #: ../../templating.rst:252
 msgid "The value of :confval:`copyright`."
-msgstr "价值：confval：`copyright`。"
+msgstr "价值 :confval:`copyright` 。"
 
 #: ../../templating.rst:256
 msgid ""
@@ -406,7 +406,7 @@ msgstr ""
 
 #: ../../templating.rst:267
 msgid "The path to the HTML favicon in the static path, or ``''``."
-msgstr "静态路径中HTML favicon的路径，或者``'``。"
+msgstr "静态路径中 HTML favicon 的路径，或者 ``''``。"
 
 #: ../../templating.rst:271
 msgid ""
@@ -423,7 +423,7 @@ msgstr ""
 
 #: ../../templating.rst:282
 msgid "The value of :confval:`language`."
-msgstr "值：confval：`language`。"
+msgstr ":confval:`language` 的值 。"
 
 #: ../../templating.rst:286
 msgid "The build date."
@@ -435,7 +435,7 @@ msgstr "The path to the HTML logo image in the static path, or ``''``."
 
 #: ../../templating.rst:294
 msgid "The value of :confval:`master_doc`, for usage with :func:`pathto`."
-msgstr "The value of :confval:`master_doc`, for usage with :func:`pathto`."
+msgstr ":confval:`master_doc 的值`, 用于 :func:`pathto`."
 
 #: ../../templating.rst:298
 msgid ""
@@ -447,11 +447,11 @@ msgstr ""
 
 #: ../../templating.rst:304
 msgid "The value of :confval:`project`."
-msgstr "值：confval：`project`。"
+msgstr "值 :confval:`project`。"
 
 #: ../../templating.rst:308
 msgid "The value of :confval:`release`."
-msgstr "值：confval：`release`。"
+msgstr "值 :confval:`release`。"
 
 #: ../../templating.rst:312
 msgid ""
@@ -464,7 +464,7 @@ msgstr ""
 
 #: ../../templating.rst:319
 msgid "The value of :confval:`html_short_title`."
-msgstr "值：confval：`html_short_title`。"
+msgstr "值 :confval:`html_short_title`。"
 
 #: ../../templating.rst:323
 msgid "True if :confval:`html_show_sourcelink` is ``True``."
@@ -482,15 +482,15 @@ msgstr ""
 
 #: ../../templating.rst:336
 msgid "The title of the current document, as used in the ``<title>`` tag."
-msgstr "当前文档的标题，在``<title>``标签中使用。"
+msgstr "当前文档的标题，在 ``<title>`` 标签中使用。"
 
 #: ../../templating.rst:340
 msgid "The value of :confval:`html_use_opensearch`."
-msgstr "值：confval：`html_use_opensearch`。"
+msgstr "值 :confval:`html_use_opensearch`。"
 
 #: ../../templating.rst:344
 msgid "The value of :confval:`version`."
-msgstr "值：confval：`html使用opensearch`。"
+msgstr "值 :confval:`html_use_opensearch`。"
 
 #: ../../templating.rst:347
 msgid ""
@@ -518,11 +518,11 @@ msgstr "如果toc包含多个条目，则为布尔值为True。"
 
 #: ../../templating.rst:366
 msgid "Document metadata (a dictionary), see :ref:`metadata`."
-msgstr "文档元数据（字典），请参阅：ref：`metadata`。"
+msgstr "文档元数据（字典），请参阅 :ref:`metadata`。"
 
 #: ../../templating.rst:370
 msgid "A string containing the page's HTML :dudir:`meta` tags."
-msgstr "包含页面HTML：dudir：`meta`标签的字符串。"
+msgstr "包含页面HTML:dudir:`meta`标签的字符串。"
 
 #: ../../templating.rst:374
 msgid ""
@@ -547,7 +547,7 @@ msgstr ""
 
 #: ../../templating.rst:395
 msgid "Like :data:`next`, but for the previous page."
-msgstr "喜欢：数据：`next`，但是对于上一页。"
+msgstr "喜欢 :data:`next`，但是对于上一页。"
 
 #: ../../templating.rst:399
 msgid ""
