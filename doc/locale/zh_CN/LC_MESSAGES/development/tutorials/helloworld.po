@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../development/tutorials/helloworld.rst:2
 msgid "Developing a \"Hello world\" extension"
-msgstr ""
+msgstr "开发一个 \"Hello world\" 扩展"
 
 #: ../../development/tutorials/helloworld.rst:4
 msgid ""
@@ -43,11 +43,11 @@ msgstr ""
 
 #: ../../development/tutorials/helloworld.rst:17
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: ../../development/tutorials/helloworld.rst:19
 msgid "We want the extension to add the following to Sphinx:"
-msgstr ""
+msgstr "我们希望扩展程序将以下内容添加到Sphinx中:"
 
 #: ../../development/tutorials/helloworld.rst:21
 msgid ""
@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../../development/tutorials/helloworld.rst:25
 msgid "Prerequisites"
-msgstr ""
+msgstr "预备条件"
 
 #: ../../development/tutorials/helloworld.rst:27
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 
 #: ../../development/tutorials/helloworld.rst:55
 msgid "Writing the extension"
-msgstr ""
+msgstr "编写扩展"
 
 #: ../../development/tutorials/helloworld.rst:57
 msgid "Open :file:`helloworld.py` and paste the following code in it:"
@@ -168,7 +168,7 @@ msgstr ""
 
 #: ../../development/tutorials/helloworld.rst:127
 msgid "Using the extension"
-msgstr ""
+msgstr "使用扩展"
 
 #: ../../development/tutorials/helloworld.rst:129
 msgid ""
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../development/tutorials/helloworld.rst:177
 msgid "Further reading"
-msgstr ""
+msgstr "延伸阅读"
 
 #: ../../development/tutorials/helloworld.rst:179
 msgid ""

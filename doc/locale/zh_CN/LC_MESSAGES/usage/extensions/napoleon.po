@@ -25,11 +25,11 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:12
 msgid "Overview"
-msgstr ""
+msgstr "Overview"
 
 #: ../../usage/extensions/napoleon.rst:16
 msgid "Are you tired of writing docstrings that look like this::"
-msgstr ""
+msgstr "Are you tired of writing docstrings that look like this::"
 
 #: ../../usage/extensions/napoleon.rst:28
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:41
 msgid "Much more legible, no?"
-msgstr ""
+msgstr "Much more legible, no?"
 
 #: ../../usage/extensions/napoleon.rst:43
 msgid ""
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:64
 msgid "Getting Started"
-msgstr ""
+msgstr "Getting Started"
 
 #: ../../usage/extensions/napoleon.rst:66
 msgid ""
@@ -70,11 +70,11 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:74
 msgid "Use `sphinx-apidoc` to build your API documentation::"
-msgstr ""
+msgstr "Use `sphinx-apidoc` to build your API documentation::"
 
 #: ../../usage/extensions/napoleon.rst:80
 msgid "Docstrings"
-msgstr ""
+msgstr "Docstrings"
 
 #: ../../usage/extensions/napoleon.rst:82
 msgid ""
@@ -87,139 +87,139 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:88
 msgid "All standard reStructuredText formatting still works as expected."
-msgstr ""
+msgstr "All standard reStructuredText formatting still works as expected."
 
 #: ../../usage/extensions/napoleon.rst:94
 msgid "Docstring Sections"
-msgstr ""
+msgstr "Docstring Sections"
 
 #: ../../usage/extensions/napoleon.rst:96
 msgid "All of the following section headers are supported:"
-msgstr ""
+msgstr "All of the following section headers are supported:"
 
 #: ../../usage/extensions/napoleon.rst:98
 msgid "``Args`` *(alias of Parameters)*"
-msgstr ""
+msgstr "``Args`` *(alias of Parameters)*"
 
 #: ../../usage/extensions/napoleon.rst:99
 msgid "``Arguments`` *(alias of Parameters)*"
-msgstr ""
+msgstr "``Arguments`` *(alias of Parameters)*"
 
 #: ../../usage/extensions/napoleon.rst:100
 msgid "``Attention``"
-msgstr ""
+msgstr "``Attention``"
 
 #: ../../usage/extensions/napoleon.rst:101
 msgid "``Attributes``"
-msgstr ""
+msgstr "``Attributes``"
 
 #: ../../usage/extensions/napoleon.rst:102
 msgid "``Caution``"
-msgstr ""
+msgstr "``Caution``"
 
 #: ../../usage/extensions/napoleon.rst:103
 msgid "``Danger``"
-msgstr ""
+msgstr "``Danger``"
 
 #: ../../usage/extensions/napoleon.rst:104
 msgid "``Error``"
-msgstr ""
+msgstr "``Error``"
 
 #: ../../usage/extensions/napoleon.rst:105
 msgid "``Example``"
-msgstr ""
+msgstr "``Example``"
 
 #: ../../usage/extensions/napoleon.rst:106
 msgid "``Examples``"
-msgstr ""
+msgstr "``Examples``"
 
 #: ../../usage/extensions/napoleon.rst:107
 msgid "``Hint``"
-msgstr ""
+msgstr "``Hint``"
 
 #: ../../usage/extensions/napoleon.rst:108
 msgid "``Important``"
-msgstr ""
+msgstr "``Important``"
 
 #: ../../usage/extensions/napoleon.rst:109
 msgid "``Keyword Args`` *(alias of Keyword Arguments)*"
-msgstr ""
+msgstr "``Keyword Args`` *(alias of Keyword Arguments)*"
 
 #: ../../usage/extensions/napoleon.rst:110
 msgid "``Keyword Arguments``"
-msgstr ""
+msgstr "``Keyword Arguments``"
 
 #: ../../usage/extensions/napoleon.rst:111
 msgid "``Methods``"
-msgstr ""
+msgstr "``Methods``"
 
 #: ../../usage/extensions/napoleon.rst:112
 msgid "``Note``"
-msgstr ""
+msgstr "``Note``"
 
 #: ../../usage/extensions/napoleon.rst:113
 msgid "``Notes``"
-msgstr ""
+msgstr "``Notes``"
 
 #: ../../usage/extensions/napoleon.rst:114
 msgid "``Other Parameters``"
-msgstr ""
+msgstr "``Other Parameters``"
 
 #: ../../usage/extensions/napoleon.rst:115
 msgid "``Parameters``"
-msgstr ""
+msgstr "``Parameters``"
 
 #: ../../usage/extensions/napoleon.rst:116
 msgid "``Return`` *(alias of Returns)*"
-msgstr ""
+msgstr "``Return`` *(alias of Returns)*"
 
 #: ../../usage/extensions/napoleon.rst:117
 msgid "``Returns``"
-msgstr ""
+msgstr "``Returns``"
 
 #: ../../usage/extensions/napoleon.rst:118
 msgid "``Raises``"
-msgstr ""
+msgstr "``Raises``"
 
 #: ../../usage/extensions/napoleon.rst:119
 msgid "``References``"
-msgstr ""
+msgstr "``References``"
 
 #: ../../usage/extensions/napoleon.rst:120
 msgid "``See Also``"
-msgstr ""
+msgstr "``See Also``"
 
 #: ../../usage/extensions/napoleon.rst:121
 msgid "``Tip``"
-msgstr ""
+msgstr "``Tip``"
 
 #: ../../usage/extensions/napoleon.rst:122
 msgid "``Todo``"
-msgstr ""
+msgstr "``Todo``"
 
 #: ../../usage/extensions/napoleon.rst:123
 msgid "``Warning``"
-msgstr ""
+msgstr "``Warning``"
 
 #: ../../usage/extensions/napoleon.rst:124
 msgid "``Warnings`` *(alias of Warning)*"
-msgstr ""
+msgstr "``Warnings`` *(alias of Warning)*"
 
 #: ../../usage/extensions/napoleon.rst:125
 msgid "``Warns``"
-msgstr ""
+msgstr "``Warns``"
 
 #: ../../usage/extensions/napoleon.rst:126
 msgid "``Yield`` *(alias of Yields)*"
-msgstr ""
+msgstr "``Yield`` *(alias of Yields)*"
 
 #: ../../usage/extensions/napoleon.rst:127
 msgid "``Yields``"
-msgstr ""
+msgstr "``Yields``"
 
 #: ../../usage/extensions/napoleon.rst:130
 msgid "Google vs NumPy"
-msgstr ""
+msgstr "Google vs NumPy"
 
 #: ../../usage/extensions/napoleon.rst:132
 msgid ""
@@ -230,11 +230,11 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:136
 msgid "Google style:"
-msgstr ""
+msgstr "Google style:"
 
 #: ../../usage/extensions/napoleon.rst:155
 msgid "NumPy style:"
-msgstr ""
+msgstr "NumPy style:"
 
 #: ../../usage/extensions/napoleon.rst:179
 msgid ""
@@ -246,7 +246,7 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:184
 msgid "The `Khan Academy`_ recommends using Google style."
-msgstr ""
+msgstr "The `Khan Academy`_ recommends using Google style."
 
 #: ../../usage/extensions/napoleon.rst:186
 msgid ""
@@ -257,19 +257,19 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:191
 msgid "For complete examples:"
-msgstr ""
+msgstr "For complete examples:"
 
 #: ../../usage/extensions/napoleon.rst:193
 msgid ":ref:`example_google`"
-msgstr ""
+msgstr ":ref:`example_google`"
 
 #: ../../usage/extensions/napoleon.rst:194
 msgid ":ref:`example_numpy`"
-msgstr ""
+msgstr ":ref:`example_numpy`"
 
 #: ../../usage/extensions/napoleon.rst:198
 msgid "Type Annotations"
-msgstr ""
+msgstr "Type Annotations"
 
 #: ../../usage/extensions/napoleon.rst:200
 msgid ""
@@ -281,11 +281,11 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:206
 msgid "Google style with Python 3 type annotations::"
-msgstr ""
+msgstr "Google style with Python 3 type annotations::"
 
 #: ../../usage/extensions/napoleon.rst:223
 msgid "Google style with types in docstrings::"
-msgstr ""
+msgstr "Google style with types in docstrings::"
 
 #: ../../usage/extensions/napoleon.rst:241
 msgid ""
@@ -295,7 +295,7 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:252
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/napoleon.rst:254
 msgid ""
@@ -332,7 +332,7 @@ msgstr ""
 #: ../../usage/extensions/napoleon.rst:431
 #: ../../usage/extensions/napoleon.rst:473
 msgid "**If True**::"
-msgstr ""
+msgstr "**If True**::"
 
 #: ../../usage/extensions/napoleon.rst:310
 msgid ""
@@ -361,14 +361,14 @@ msgstr ""
 #: ../../usage/extensions/napoleon.rst:422
 #: ../../usage/extensions/napoleon.rst:466
 msgid "This `NumPy style`_ snippet will be converted as follows::"
-msgstr ""
+msgstr "This `NumPy style`_ snippet will be converted as follows::"
 
 #: ../../usage/extensions/napoleon.rst:363
 #: ../../usage/extensions/napoleon.rst:408
 #: ../../usage/extensions/napoleon.rst:438
 #: ../../usage/extensions/napoleon.rst:478
 msgid "**If False**::"
-msgstr ""
+msgstr "**If False**::"
 
 #: ../../usage/extensions/napoleon.rst:371
 msgid ""
@@ -385,7 +385,7 @@ msgstr ""
 #: ../../usage/extensions/napoleon.rst:379
 #: ../../usage/extensions/napoleon.rst:389
 msgid ":attr:`napoleon_use_admonition_for_examples`"
-msgstr ""
+msgstr ":attr:`napoleon_use_admonition_for_examples`"
 
 #: ../../usage/extensions/napoleon.rst:383
 msgid ""
@@ -424,7 +424,7 @@ msgstr ""
 
 #: ../../usage/extensions/napoleon.rst:459
 msgid ":attr:`napoleon_use_param`"
-msgstr ""
+msgstr ":attr:`napoleon_use_param`"
 
 #: ../../usage/extensions/napoleon.rst:463
 msgid ""

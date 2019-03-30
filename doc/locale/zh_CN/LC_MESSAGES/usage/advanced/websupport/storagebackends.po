@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/storagebackends.rst:6
 msgid "Storage Backends"
-msgstr ""
+msgstr "存储后端"
 
 #: ../../usage/advanced/websupport/storagebackends.rst:8
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/storagebackends.rst:22
 msgid "Defines an interface for storage backends."
-msgstr ""
+msgstr "Defines an interface for storage backends."
 
 #: ../../usage/advanced/websupport/storagebackends.rst:26
 msgid ""
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/storagebackends.rst:31
 msgid "Methods"
-msgstr ""
+msgstr "Methods"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.pre_build:1
 msgid ""
@@ -57,7 +57,7 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_node:1
 msgid "Add a node to the StorageBackend."
-msgstr ""
+msgstr "Add a node to the StorageBackend."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.accept_comment
 #: sphinxcontrib.websupport.storage.StorageBackend.add_comment
@@ -66,20 +66,20 @@ msgstr ""
 #: sphinxcontrib.websupport.storage.StorageBackend.get_data
 #: sphinxcontrib.websupport.storage.StorageBackend.process_vote
 #: sphinxcontrib.websupport.storage.StorageBackend.update_username
-msgid "Parameters"
-msgstr ""
+msgid "参数"
+msgstr "参数"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_node:3
 msgid "a unique id for the comment."
-msgstr ""
+msgstr "a unique id for the comment."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_node:4
 msgid "the name of the document the node belongs to."
-msgstr ""
+msgstr "the name of the document the node belongs to."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_node:5
 msgid "the source files name."
-msgstr ""
+msgstr "the source files name."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.post_build:1
 msgid ""
@@ -89,43 +89,43 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:1
 msgid "Called when a comment is being added."
-msgstr ""
+msgstr "Called when a comment is being added."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:3
 msgid "the text of the comment"
-msgstr ""
+msgstr "the text of the comment"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:4
 msgid "whether the comment should be displayed"
-msgstr ""
+msgstr "whether the comment should be displayed"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:5
 msgid "the name of the user adding the comment"
-msgstr ""
+msgstr "the name of the user adding the comment"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:6
 msgid "a date object with the time the comment was added"
-msgstr ""
+msgstr "a date object with the time the comment was added"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:7
 msgid "the text of the proposal the user made"
-msgstr ""
+msgstr "the text of the proposal the user made"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:8
 msgid "the id of the node that the comment is being added to"
-msgstr ""
+msgstr "the id of the node that the comment is being added to"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:9
 msgid "the id of the comment's parent comment."
-msgstr ""
+msgstr "the id of the comment's parent comment."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.add_comment:10
 msgid "whether the user adding the comment is a moderator"
-msgstr ""
+msgstr "whether the user adding the comment is a moderator"
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.delete_comment:1
 msgid "Delete a comment."
-msgstr ""
+msgstr "Delete a comment."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.delete_comment:3
 msgid ""
@@ -136,15 +136,15 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.delete_comment:7
 msgid "The id of the comment being deleted."
-msgstr ""
+msgstr "The id of the comment being deleted."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.delete_comment:8
 msgid "The username of the user requesting the deletion."
-msgstr ""
+msgstr "The username of the user requesting the deletion."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.delete_comment:9
 msgid "Whether the user is a moderator."
-msgstr ""
+msgstr "Whether the user is a moderator."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.get_data:1
 msgid ""
@@ -156,31 +156,31 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.get_data:6
 msgid "The id of the node to get data for."
-msgstr ""
+msgstr "The id of the node to get data for."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.get_data:7
 msgid "The name of the user requesting the data."
-msgstr ""
+msgstr "The name of the user requesting the data."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.get_data:8
 msgid "Whether the requestor is a moderator."
-msgstr ""
+msgstr "Whether the requestor is a moderator."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.process_vote:1
 msgid "Process a vote that is being cast. `value` will be either -1, 0, or 1."
-msgstr ""
+msgstr "Process a vote that is being cast. `value` will be either -1, 0, or 1."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.process_vote:4
 msgid "The id of the comment being voted on."
-msgstr ""
+msgstr "The id of the comment being voted on."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.process_vote:5
 msgid "The username of the user casting the vote."
-msgstr ""
+msgstr "The username of the user casting the vote."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.process_vote:6
 msgid "The value of the vote being cast."
-msgstr ""
+msgstr "The value of the vote being cast."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.update_username:1
 msgid ""
@@ -190,11 +190,11 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.update_username:4
 msgid "The username being changed."
-msgstr ""
+msgstr "The username being changed."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.update_username:5
 msgid "What the username is being changed to."
-msgstr ""
+msgstr "What the username is being changed to."
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.accept_comment:1
 msgid ""
@@ -204,5 +204,8 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.storage.StorageBackend.accept_comment:4
 msgid "The id of the comment being accepted."
-msgstr ""
+msgstr "The id of the comment being accepted."
+
+#~ msgid "Parameters"
+#~ msgstr ""
 

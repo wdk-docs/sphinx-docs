@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/index.rst:3
 msgid "Extensions"
-msgstr ""
+msgstr "扩展"
 
 #: ../../usage/extensions/index.rst:5
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../usage/extensions/index.rst:14
 msgid "Built-in extensions"
-msgstr ""
+msgstr "内置扩展"
 
 #: ../../usage/extensions/index.rst:16
 msgid ""
@@ -47,15 +47,15 @@ msgstr ""
 
 #: ../../usage/extensions/index.rst:41
 msgid "Third-party extensions"
-msgstr ""
+msgstr "第三方扩展"
 
 #: ../../usage/extensions/index.rst:43
-msgid "Todo"
-msgstr ""
+msgid "待处理"
+msgstr "待处理"
 
 #: ../../usage/extensions/index.rst:43
 msgid "This should reference the GitHub organization now"
-msgstr ""
+msgstr "这应该现在引用GitHub组织"
 
 #: ../../usage/extensions/index.rst:45
 msgid ""
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../../usage/extensions/index.rst:61
 msgid "Where to put your own extensions?"
-msgstr ""
+msgstr "在哪里放置自己的扩展？"
 
 #: ../../usage/extensions/index.rst:63
 msgid ""
@@ -99,4 +99,7 @@ msgid ""
 "You can also install extensions anywhere else on ``sys.path``, e.g. in "
 "the ``site-packages`` directory."
 msgstr ""
+
+#~ msgid "Todo"
+#~ msgstr ""
 

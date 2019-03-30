@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:3
 msgid "Getting Started"
-msgstr ""
+msgstr "入门"
 
 #: ../../usage/quickstart.rst:5
 msgid ""
@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:14
 msgid "Setting up the documentation sources"
-msgstr ""
+msgstr "设置文档源"
 
 #: ../../usage/quickstart.rst:16
 msgid ""
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:37
 msgid "Defining document structure"
-msgstr ""
+msgstr "定义文档结构"
 
 #: ../../usage/quickstart.rst:39
 msgid ""
@@ -80,7 +80,7 @@ msgid ""
 msgstr ""
 
 msgid "reStructuredText directives"
-msgstr ""
+msgstr "reStructuredText 指令"
 
 #: ../../usage/quickstart.rst:49
 msgid ""
@@ -115,11 +115,11 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:65
 msgid "The ``toctree`` directive initially is empty, and looks like so:"
-msgstr ""
+msgstr "The ``toctree`` directive initially is empty, and looks like so:"
 
 #: ../../usage/quickstart.rst:72
 msgid "You add documents listing them in the *content* of the directive:"
-msgstr ""
+msgstr "You add documents listing them in the *content* of the directive:"
 
 #: ../../usage/quickstart.rst:83
 msgid ""
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:88
 msgid "|more| Read more about :ref:`the toctree directive <toctree-directive>`."
-msgstr ""
+msgstr "|more| Read more about :ref:`the toctree directive <toctree-directive>`."
 
 #: ../../usage/quickstart.rst:90
 msgid ""
@@ -145,7 +145,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:99
 msgid "Adding content"
-msgstr ""
+msgstr "添加内容"
 
 #: ../../usage/quickstart.rst:101
 msgid ""
@@ -163,12 +163,12 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:109 ../../usage/quickstart.rst:151
 #: ../../usage/quickstart.rst:243 ../../usage/quickstart.rst:286
-msgid "Todo"
-msgstr ""
+msgid "待处理"
+msgstr "待处理"
 
 #: ../../usage/quickstart.rst:109
 msgid "Update the below link when we add new guides on these."
-msgstr ""
+msgstr "Update the below link when we add new guides on these."
 
 #: ../../usage/quickstart.rst:111
 msgid ""
@@ -178,7 +178,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:116
 msgid "Running the build"
-msgstr ""
+msgstr "运行构建"
 
 #: ../../usage/quickstart.rst:118
 msgid ""
@@ -217,7 +217,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:144
 msgid "How do I generate PDF documents?"
-msgstr ""
+msgstr "如何生成PDF文档？"
 
 #: ../../usage/quickstart.rst:146
 msgid ""
@@ -228,11 +228,11 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:151
 msgid "Move this whole section into a guide on rST or directives"
-msgstr ""
+msgstr "将整个部分移到rST或指令的指南中"
 
 #: ../../usage/quickstart.rst:154
 msgid "Documenting objects"
-msgstr ""
+msgstr "记录对象"
 
 #: ../../usage/quickstart.rst:156
 msgid ""
@@ -251,7 +251,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:172
 msgid "This is rendered like this:"
-msgstr ""
+msgstr "这是这样渲染的:"
 
 #: ../../usage/quickstart.rst:176
 msgid ""
@@ -274,7 +274,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:192
 msgid "does the same job if you keep the default setting for the default domain."
-msgstr ""
+msgstr "如果保留默认域的默认设置，则执行相同的工作。"
 
 #: ../../usage/quickstart.rst:194
 msgid ""
@@ -286,7 +286,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:203
 msgid "And here is the proof: A link to :func:`enumerate`."
-msgstr ""
+msgstr "这是 proof: 链接到 :func:`enumerate` 。"
 
 #: ../../usage/quickstart.rst:205
 msgid ""
@@ -310,7 +310,7 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:218
 msgid "Basic configuration"
-msgstr ""
+msgstr "基本配置"
 
 #: ../../usage/quickstart.rst:220
 msgid ""
@@ -349,11 +349,11 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:243
 msgid "Move this entire doc to a different section"
-msgstr ""
+msgstr "Move this entire doc to a different section"
 
 #: ../../usage/quickstart.rst:246
 msgid "Autodoc"
-msgstr ""
+msgstr "Autodoc"
 
 #: ../../usage/quickstart.rst:248
 msgid ""
@@ -412,11 +412,11 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:286
 msgid "Move this doc to another section"
-msgstr ""
+msgstr "将此文档移至另一部分"
 
 #: ../../usage/quickstart.rst:289
 msgid "Intersphinx"
-msgstr ""
+msgstr "Intersphinx"
 
 #: ../../usage/quickstart.rst:291
 msgid ""
@@ -458,44 +458,47 @@ msgstr ""
 
 #: ../../usage/quickstart.rst:319
 msgid "More topics to be covered"
-msgstr ""
+msgstr "更多主题"
 
 #: ../../usage/quickstart.rst:321
 msgid ":doc:`Other extensions </usage/extensions/index>`:"
-msgstr ""
+msgstr ":doc:`其他扩展 </usage/extensions/index>`:"
 
 #: ../../usage/quickstart.rst:322
 msgid "Static files"
-msgstr ""
+msgstr "静态文件"
 
 #: ../../usage/quickstart.rst:323
 msgid ":doc:`Selecting a theme </usage/theming>`"
-msgstr ""
+msgstr ":doc:`选择主题 </usage/theming>`"
 
 #: ../../usage/quickstart.rst:324
 msgid ":doc:`/usage/advanced/setuptools`"
-msgstr ""
+msgstr ":doc:`/usage/advanced/setuptools`"
 
 #: ../../usage/quickstart.rst:325
 msgid ":ref:`Templating <templating>`"
-msgstr ""
+msgstr ":ref:`模板 <templating>`"
 
 #: ../../usage/quickstart.rst:326
 msgid "Using extensions"
-msgstr ""
+msgstr "使用扩展"
 
 #: ../../usage/quickstart.rst:327
 msgid ":ref:`Writing extensions <dev-extensions>`"
-msgstr ""
+msgstr ":ref:`写扩展 <dev-extensions>`"
 
 #: ../../usage/quickstart.rst:331
 msgid "Footnotes"
-msgstr ""
+msgstr "脚注"
 
 #: ../../usage/quickstart.rst:332
 msgid ""
 "This is the usual layout.  However, :file:`conf.py` can also live in "
 "another directory, the :term:`configuration directory`.  Refer to the "
 ":doc:`sphinx-build man page </man/sphinx-build>` for more information."
-msgstr ""
+msgstr "这是通常的布局。但是， file:`conf.py` 也可以存在于另一个目录中 :term:`configuration directory` 。  有关更多信息，请参阅 :doc:`sphinx-build man page </man/sphinx-build>` 。"
+
+#~ msgid "Todo"
+#~ msgstr ""
 

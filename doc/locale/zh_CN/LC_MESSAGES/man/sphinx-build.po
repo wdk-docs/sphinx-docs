@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:2
 msgid "sphinx-build"
-msgstr ""
+msgstr "sphinx-build"
 
 #: ../../man/sphinx-build.rst:5
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../man/sphinx-build.rst:7
 msgid "**sphinx-build** [*options*] <*sourcedir*> <*outputdir*> [*filenames* ...]"
-msgstr ""
+msgstr "**sphinx-build** [*options*] <*sourcedir*> <*outputdir*> [*filenames* ...]"
 
 #: ../../man/sphinx-build.rst:10
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../man/sphinx-build.rst:12
 msgid ""
@@ -62,11 +62,11 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:27
 msgid "For a list of available options, refer to :option:`sphinx-build -b`."
-msgstr ""
+msgstr "For a list of available options, refer to :option:`sphinx-build -b`."
 
 #: ../../man/sphinx-build.rst:30
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #: ../../man/sphinx-build.rst:36
 msgid ""
@@ -76,15 +76,15 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:40
 msgid "**html**"
-msgstr ""
+msgstr "**html**"
 
 #: ../../man/sphinx-build.rst:40
 msgid "Build HTML pages.  This is the default builder."
-msgstr ""
+msgstr "Build HTML pages.  This is the default builder."
 
 #: ../../man/sphinx-build.rst:44
 msgid "**dirhtml**"
-msgstr ""
+msgstr "**dirhtml**"
 
 #: ../../man/sphinx-build.rst:43
 msgid ""
@@ -94,15 +94,15 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:47
 msgid "**singlehtml**"
-msgstr ""
+msgstr "**singlehtml**"
 
 #: ../../man/sphinx-build.rst:47
 msgid "Build a single HTML with the whole content."
-msgstr ""
+msgstr "Build a single HTML with the whole content."
 
 #: ../../man/sphinx-build.rst:51
 msgid "**htmlhelp**, **qthelp**, **devhelp**, **epub**"
-msgstr ""
+msgstr "**htmlhelp**, **qthelp**, **devhelp**, **epub**"
 
 #: ../../man/sphinx-build.rst:50
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:56
 msgid "**applehelp**"
-msgstr ""
+msgstr "**applehelp**"
 
 #: ../../man/sphinx-build.rst:54
 msgid ""
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:60
 msgid "**latex**"
-msgstr ""
+msgstr "**latex**"
 
 #: ../../man/sphinx-build.rst:59
 msgid ""
@@ -133,15 +133,15 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:63
 msgid "**man**"
-msgstr ""
+msgstr "**man**"
 
 #: ../../man/sphinx-build.rst:63
 msgid "Build manual pages in groff format for UNIX systems."
-msgstr ""
+msgstr "Build manual pages in groff format for UNIX systems."
 
 #: ../../man/sphinx-build.rst:67
 msgid "**texinfo**"
-msgstr ""
+msgstr "**texinfo**"
 
 #: ../../man/sphinx-build.rst:66
 msgid ""
@@ -151,23 +151,23 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:70
 msgid "**text**"
-msgstr ""
+msgstr "**text**"
 
 #: ../../man/sphinx-build.rst:70
 msgid "Build plain text files."
-msgstr ""
+msgstr "Build plain text files."
 
 #: ../../man/sphinx-build.rst:73
 msgid "**gettext**"
-msgstr ""
+msgstr "**gettext**"
 
 #: ../../man/sphinx-build.rst:73
 msgid "Build gettext-style message catalogs (``.pot`` files)."
-msgstr ""
+msgstr "Build gettext-style message catalogs (``.pot`` files)."
 
 #: ../../man/sphinx-build.rst:77
 msgid "**doctest**"
-msgstr ""
+msgstr "**doctest**"
 
 #: ../../man/sphinx-build.rst:76
 msgid ""
@@ -177,23 +177,23 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:80
 msgid "**linkcheck**"
-msgstr ""
+msgstr "**linkcheck**"
 
 #: ../../man/sphinx-build.rst:80
 msgid "Check the integrity of all external links."
-msgstr ""
+msgstr "Check the integrity of all external links."
 
 #: ../../man/sphinx-build.rst:83
 msgid "**xml**"
-msgstr ""
+msgstr "**xml**"
 
 #: ../../man/sphinx-build.rst:83
 msgid "Build Docutils-native XML files."
-msgstr ""
+msgstr "Build Docutils-native XML files."
 
 #: ../../man/sphinx-build.rst:87
 msgid "**pseudoxml**"
-msgstr ""
+msgstr "**pseudoxml**"
 
 #: ../../man/sphinx-build.rst:86
 msgid ""
@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:105
 msgid "**latexpdf**"
-msgstr ""
+msgstr "**latexpdf**"
 
 #: ../../man/sphinx-build.rst:102
 msgid ""
@@ -230,15 +230,15 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:108
 msgid "**info**"
-msgstr ""
+msgstr "**info**"
 
 #: ../../man/sphinx-build.rst:108
 msgid "Build Texinfo files and run them through :program:`makeinfo`."
-msgstr ""
+msgstr "Build Texinfo files and run them through :program:`makeinfo`."
 
 #: ../../man/sphinx-build.rst:111
 msgid "Sphinx only recognizes the ``-M`` option if it is placed first."
-msgstr ""
+msgstr "Sphinx only recognizes the ``-M`` option if it is placed first."
 
 #: ../../man/sphinx-build.rst:117
 msgid ""
@@ -280,11 +280,11 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:149
 msgid "This option should be considered *experimental*."
-msgstr ""
+msgstr "This option should be considered *experimental*."
 
 #: ../../man/sphinx-build.rst:152
 msgid "Support ``auto`` argument."
-msgstr ""
+msgstr "Support ``auto`` argument."
 
 #: ../../man/sphinx-build.rst:157
 msgid ""
@@ -321,19 +321,19 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:182
 msgid "For boolean values, use ``0`` or ``1`` as the value."
-msgstr ""
+msgstr "For boolean values, use ``0`` or ``1`` as the value."
 
 #: ../../man/sphinx-build.rst:184
 msgid "The value can now be a dictionary value."
-msgstr ""
+msgstr "The value can now be a dictionary value."
 
 #: ../../man/sphinx-build.rst:187
 msgid "The value can now also be a list value."
-msgstr ""
+msgstr "The value can now also be a list value."
 
 #: ../../man/sphinx-build.rst:192
 msgid "Make the *name* assigned to *value* in the HTML templates."
-msgstr ""
+msgstr "Make the *name* assigned to *value* in the HTML templates."
 
 #: ../../man/sphinx-build.rst:198
 msgid ""
@@ -344,7 +344,7 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:204
 msgid "Do not emit colored output."
-msgstr ""
+msgstr "Do not emit colored output."
 
 #: ../../man/sphinx-build.rst:208
 msgid ""
@@ -397,7 +397,7 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:254
 msgid "Display usage summary or Sphinx version."
-msgstr ""
+msgstr "Display usage summary or Sphinx version."
 
 #: ../../man/sphinx-build.rst:258
 msgid ""
@@ -408,11 +408,11 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:263
 msgid "Environment Variables"
-msgstr ""
+msgstr "环境变量"
 
 #: ../../man/sphinx-build.rst:265
 msgid "The :program:`sphinx-build` refers following environment variables:"
-msgstr ""
+msgstr "The :program:`sphinx-build` refers following environment variables:"
 
 #: ../../man/sphinx-build.rst:269
 msgid ""
@@ -422,7 +422,7 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:275
 msgid "Makefile Options"
-msgstr ""
+msgstr "Makefile Options"
 
 #: ../../man/sphinx-build.rst:276
 msgid ""
@@ -448,7 +448,7 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:296
 msgid "The command to use instead of ``sphinx-build``."
-msgstr ""
+msgstr "The command to use instead of ``sphinx-build``."
 
 #: ../../man/sphinx-build.rst:300
 msgid ""
@@ -458,11 +458,11 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:305
 msgid "Additional options for :program:`sphinx-build`."
-msgstr ""
+msgstr "Additional options for :program:`sphinx-build`."
 
 #: ../../man/sphinx-build.rst:310
 msgid "Deprecation Warnings"
-msgstr ""
+msgstr "弃用警告"
 
 #: ../../man/sphinx-build.rst:312
 msgid ""
@@ -480,25 +480,25 @@ msgstr ""
 
 #: ../../man/sphinx-build.rst:319
 msgid "``PYTHONWARNINGS= make html`` (Linux/Mac)"
-msgstr ""
+msgstr "``PYTHONWARNINGS= make html`` (Linux/Mac)"
 
 #: ../../man/sphinx-build.rst:320
 msgid "``export PYTHONWARNINGS=`` and do ``make html`` (Linux/Mac)"
-msgstr ""
+msgstr "``export PYTHONWARNINGS=`` and do ``make html`` (Linux/Mac)"
 
 #: ../../man/sphinx-build.rst:321
 msgid "``set PYTHONWARNINGS=`` and do ``make html`` (Windows)"
-msgstr ""
+msgstr "``set PYTHONWARNINGS=`` and do ``make html`` (Windows)"
 
 #: ../../man/sphinx-build.rst:322
 msgid "modify your Makefile/make.bat and set the environment variable"
-msgstr ""
+msgstr "modify your Makefile/make.bat and set the environment variable"
 
 #: ../../man/sphinx-build.rst:325
 msgid "See also"
-msgstr ""
+msgstr "也可以看看"
 
 #: ../../man/sphinx-build.rst:327
 msgid ":manpage:`sphinx-quickstart(1)`"
-msgstr ""
+msgstr ":manpage:`sphinx-quickstart(1)`"
 

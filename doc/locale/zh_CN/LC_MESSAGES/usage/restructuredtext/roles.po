@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:5
 msgid "Roles"
-msgstr ""
+msgstr "角色"
 
 #: ../../usage/restructuredtext/roles.rst:7
 msgid ""
@@ -38,11 +38,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:18
 msgid "See :doc:`/usage/restructuredtext/domains` for roles added by domains."
-msgstr ""
+msgstr "See :doc:`/usage/restructuredtext/domains` for roles added by domains."
 
 #: ../../usage/restructuredtext/roles.rst:24
 msgid "Cross-referencing syntax"
-msgstr ""
+msgstr "交叉引用语法"
 
 #: ../../usage/restructuredtext/roles.rst:26
 msgid ""
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:52
 msgid "Cross-referencing anything"
-msgstr ""
+msgstr "交叉引用任何东西"
 
 #: ../../usage/restructuredtext/roles.rst:58
 msgid ""
@@ -145,35 +145,35 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:93
 msgid "Cross-referencing objects"
-msgstr ""
+msgstr "交叉引用对象"
 
 #: ../../usage/restructuredtext/roles.rst:95
 msgid "These roles are described with their respective domains:"
-msgstr ""
+msgstr "These roles are described with their respective domains:"
 
 #: ../../usage/restructuredtext/roles.rst:97
 msgid ":ref:`Python <python-roles>`"
-msgstr ""
+msgstr ":ref:`Python <python-roles>`"
 
 #: ../../usage/restructuredtext/roles.rst:98
 msgid ":ref:`C <c-roles>`"
-msgstr ""
+msgstr ":ref:`C <c-roles>`"
 
 #: ../../usage/restructuredtext/roles.rst:99
 msgid ":ref:`C++ <cpp-roles>`"
-msgstr ""
+msgstr ":ref:`C++ <cpp-roles>`"
 
 #: ../../usage/restructuredtext/roles.rst:100
 msgid ":ref:`JavaScript <js-roles>`"
-msgstr ""
+msgstr ":ref:`JavaScript <js-roles>`"
 
 #: ../../usage/restructuredtext/roles.rst:101
 msgid ":ref:`ReST <rst-roles>`"
-msgstr ""
+msgstr ":ref:`ReST <rst-roles>`"
 
 #: ../../usage/restructuredtext/roles.rst:107
 msgid "Cross-referencing arbitrary locations"
-msgstr ""
+msgstr "Cross-referencing arbitrary locations"
 
 #: ../../usage/restructuredtext/roles.rst:111
 msgid ""
@@ -198,7 +198,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:132
 msgid "Automatic labels also work with figures. For example::"
-msgstr ""
+msgstr "Automatic labels also work with figures. For example::"
 
 #: ../../usage/restructuredtext/roles.rst:140
 msgid ""
@@ -235,11 +235,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:162
 msgid "Cross-referencing documents"
-msgstr ""
+msgstr "Cross-referencing documents"
 
 #: ../../usage/restructuredtext/roles.rst:166
 msgid "There is also a way to directly link to documents:"
-msgstr ""
+msgstr "There is also a way to directly link to documents:"
 
 #: ../../usage/restructuredtext/roles.rst:170
 msgid ""
@@ -260,7 +260,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:181
 msgid "Referencing downloadable files"
-msgstr ""
+msgstr "Referencing downloadable files"
 
 #: ../../usage/restructuredtext/roles.rst:187
 msgid ""
@@ -278,7 +278,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:195
 msgid "An example::"
-msgstr ""
+msgstr "一个例子::"
 
 #: ../../usage/restructuredtext/roles.rst:199
 msgid ""
@@ -301,7 +301,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:214
 msgid "Cross-referencing figures by figure number"
-msgstr ""
+msgstr "Cross-referencing figures by figure number"
 
 #: ../../usage/restructuredtext/roles.rst:218
 msgid ""
@@ -336,7 +336,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:239
 msgid "Cross-referencing other items of interest"
-msgstr ""
+msgstr "Cross-referencing other items of interest"
 
 #: ../../usage/restructuredtext/roles.rst:241
 msgid ""
@@ -391,19 +391,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:281
 msgid "Math"
-msgstr ""
+msgstr "Math"
 
 #: ../../usage/restructuredtext/roles.rst:285
 msgid "Role for inline math.  Use like this::"
-msgstr ""
+msgstr "Role for inline math.  Use like this::"
 
 #: ../../usage/restructuredtext/roles.rst:291
 msgid "Same as :rst:role:`math:numref`."
-msgstr ""
+msgstr "Same as :rst:role:`math:numref`."
 
 #: ../../usage/restructuredtext/roles.rst:295
 msgid "Other semantic markup"
-msgstr ""
+msgstr "Other semantic markup"
 
 #: ../../usage/restructuredtext/roles.rst:297
 msgid ""
@@ -420,11 +420,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:306
 msgid "Example: ``:abbr:`LIFO (last-in, first-out)```."
-msgstr ""
+msgstr "Example: ``:abbr:`LIFO (last-in, first-out)```."
 
 #: ../../usage/restructuredtext/roles.rst:312
 msgid "The name of an OS-level command, such as ``rm``."
-msgstr ""
+msgstr "The name of an OS-level command, such as ``rm``."
 
 #: ../../usage/restructuredtext/roles.rst:316
 msgid ""
@@ -485,7 +485,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:365
 msgid "The name of a :command:`make` variable."
-msgstr ""
+msgstr "The name of a :command:`make` variable."
 
 #: ../../usage/restructuredtext/roles.rst:369
 msgid ""
@@ -505,7 +505,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:381
 msgid "For example, to mark the selection \"Start > Programs\", use this markup::"
-msgstr ""
+msgstr "For example, to mark the selection \"Start > Programs\", use this markup::"
 
 #: ../../usage/restructuredtext/roles.rst:385
 msgid ""
@@ -528,15 +528,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:399
 msgid "The name of a Usenet newsgroup."
-msgstr ""
+msgstr "The name of a Usenet newsgroup."
 
 #: ../../usage/restructuredtext/roles.rst:401
-msgid "Todo"
-msgstr ""
+msgid "待处理"
+msgstr "待处理"
 
 #: ../../usage/restructuredtext/roles.rst:401
 msgid "Is this not part of the standard domain?"
-msgstr ""
+msgstr "Is this not part of the standard domain?"
 
 #: ../../usage/restructuredtext/roles.rst:405
 msgid ""
@@ -547,7 +547,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:411
 msgid "A regular expression. Quotes should not be included."
-msgstr ""
+msgstr "A regular expression. Quotes should not be included."
 
 #: ../../usage/restructuredtext/roles.rst:415
 msgid ""
@@ -565,15 +565,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:423
 msgid "Allowed to escape curly braces with backslash"
-msgstr ""
+msgstr "Allowed to escape curly braces with backslash"
 
 #: ../../usage/restructuredtext/roles.rst:426
 msgid "There is also an :rst:role:`index` role to generate index entries."
-msgstr ""
+msgstr "There is also an :rst:role:`index` role to generate index entries."
 
 #: ../../usage/restructuredtext/roles.rst:428
 msgid "The following roles generate external links:"
-msgstr ""
+msgstr "The following roles generate external links:"
 
 #: ../../usage/restructuredtext/roles.rst:432
 msgid ""
@@ -600,7 +600,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/roles.rst:452
 msgid "Substitutions"
-msgstr ""
+msgstr "Substitutions"
 
 #: ../../usage/restructuredtext/roles.rst:454
 msgid ""
@@ -629,4 +629,7 @@ msgid ""
 "format ``April 14, 2007``.  Set by :confval:`today_fmt` and "
 ":confval:`today`."
 msgstr ""
+
+#~ msgid "Todo"
+#~ msgstr ""
 

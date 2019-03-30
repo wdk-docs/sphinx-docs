@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../theming.rst:4
 msgid "HTML theming support"
-msgstr ""
+msgstr "HTML主题支持"
 
 #: ../../theming.rst:10
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../theming.rst:25
 msgid "Creating themes"
-msgstr ""
+msgstr "创建主题"
 
 #: ../../theming.rst:27
 msgid ""
@@ -55,11 +55,11 @@ msgstr ""
 
 #: ../../theming.rst:30
 msgid "A :file:`theme.conf` file."
-msgstr ""
+msgstr "答：文件：`theme.conf`文件。"
 
 #: ../../theming.rst:31
 msgid "HTML templates, if needed."
-msgstr ""
+msgstr "HTML模板，如果需要的话。"
 
 #: ../../theming.rst:32
 msgid ""
@@ -119,11 +119,11 @@ msgstr ""
 
 #: ../../theming.rst:73
 msgid "sidebar settings"
-msgstr ""
+msgstr "sidebar settings"
 
 #: ../../theming.rst:80
 msgid "Distribute your theme as a Python package"
-msgstr ""
+msgstr "将您的主题分发为Python包"
 
 #: ../../theming.rst:82
 msgid ""
@@ -147,19 +147,19 @@ msgstr ""
 
 #: ../../theming.rst:109
 msgid "'sphinx_themes' entry_points feature."
-msgstr ""
+msgstr "'sphinx_themes'entry_points功能。"
 
 #: ../../theming.rst:112
 msgid "``sphinx_themes`` entry_points has been deprecated."
-msgstr ""
+msgstr "``sphinx_themes`` entry_points has been deprecated."
 
 #: ../../theming.rst:115
 msgid "``sphinx.html_themes`` entry_points feature."
-msgstr ""
+msgstr "``sphinx.html_themes`` entry_points feature."
 
 #: ../../theming.rst:120
 msgid "Templating"
-msgstr ""
+msgstr "模板"
 
 #: ../../theming.rst:122
 msgid ""
@@ -170,15 +170,15 @@ msgstr ""
 
 #: ../../theming.rst:126
 msgid "First, in the user's ``templates_path`` directories."
-msgstr ""
+msgstr "First, in the user's ``templates_path`` directories."
 
 #: ../../theming.rst:127
 msgid "Then, in the selected theme."
-msgstr ""
+msgstr "然后，在选定的主题中。"
 
 #: ../../theming.rst:128
 msgid "Then, in its base theme, its base's base theme, etc."
-msgstr ""
+msgstr "然后，在它的基础主题，它的基地的基础主题等。"
 
 #: ../../theming.rst:130
 #, python-format
@@ -191,7 +191,7 @@ msgstr ""
 
 #: ../../theming.rst:136
 msgid "Static templates"
-msgstr ""
+msgstr "静态模板"
 
 #: ../../theming.rst:138
 msgid ""

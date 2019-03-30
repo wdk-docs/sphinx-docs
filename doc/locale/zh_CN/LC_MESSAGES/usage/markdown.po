@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/markdown.rst:7
 msgid "Markdown"
-msgstr ""
+msgstr "Markdown"
 
 #: ../../usage/markdown.rst:9
 msgid ""
@@ -32,15 +32,15 @@ msgstr ""
 
 #: ../../usage/markdown.rst:21
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: ../../usage/markdown.rst:23
 msgid "To configure your Sphinx project for Markdown support, proceed as follows:"
-msgstr ""
+msgstr "要配置Sphinx项目以获得Markdown支持，请执行以下操作:"
 
 #: ../../usage/markdown.rst:25
 msgid "Install the Markdown parser *recommonmark*::"
-msgstr ""
+msgstr "安装Markdown解析器 *recommonmark*::"
 
 #: ../../usage/markdown.rst:31
 msgid ""

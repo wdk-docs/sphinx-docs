@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/viewcode.rst:2
 msgid ":mod:`sphinx.ext.viewcode` -- Add links to highlighted source code"
-msgstr ""
+msgstr ":mod:`sphinx.ext.viewcode` -- Add links to highlighted source code"
 
 #: ../../usage/extensions/viewcode.rst:10
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../../usage/extensions/viewcode.rst:40
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/viewcode.rst:44
 msgid ""
@@ -80,7 +80,7 @@ msgstr ""
 
 #: ../../usage/extensions/viewcode.rst:50
 msgid "Renamed from ``viewcode_import`` to ``viewcode_follow_imported_members``."
-msgstr ""
+msgstr "Renamed from ``viewcode_import`` to ``viewcode_follow_imported_members``."
 
 #: ../../usage/extensions/viewcode.rst:55
 msgid ""
@@ -98,7 +98,7 @@ msgstr ""
 
 #: ../../usage/extensions/viewcode.rst:63
 msgid "The default is ``False``."
-msgstr ""
+msgstr "The default is ``False``."
 
 #: ../../usage/extensions/viewcode.rst:69
 msgid ""
@@ -123,27 +123,30 @@ msgid ""
 msgstr ""
 
 #: ../../usage/extensions/viewcode.rst
-msgid "Parameters"
-msgstr ""
+msgid "参数"
+msgstr "参数"
 
 #: ../../usage/extensions/viewcode.rst:87
 #: ../../usage/extensions/viewcode.rst:96
 msgid "The Sphinx application object."
-msgstr ""
+msgstr "The Sphinx application object."
 
 #: ../../usage/extensions/viewcode.rst:88
 msgid "The name of the module to find source code for."
-msgstr ""
+msgstr "The name of the module to find source code for."
 
 #: ../../usage/extensions/viewcode.rst:94
 msgid "Find the name of the original module for an attribute."
-msgstr ""
+msgstr "Find the name of the original module for an attribute."
 
 #: ../../usage/extensions/viewcode.rst:97
 msgid "The name of the module that the attribute belongs to."
-msgstr ""
+msgstr "The name of the module that the attribute belongs to."
 
 #: ../../usage/extensions/viewcode.rst:98
 msgid "The name of the member to follow."
-msgstr ""
+msgstr "The name of the member to follow."
+
+#~ msgid "Parameters"
+#~ msgstr ""
 

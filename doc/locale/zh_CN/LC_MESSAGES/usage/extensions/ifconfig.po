@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../usage/extensions/ifconfig.rst:4
 msgid ":mod:`sphinx.ext.ifconfig` -- Include content based on configuration"
-msgstr ""
+msgstr ":mod:`sphinx.ext.ifconfig` -- Include content based on configuration"
 
 #: ../../usage/extensions/ifconfig.rst:9
 msgid "This extension is quite simple, and features only one directive:"
-msgstr ""
+msgstr "This extension is quite simple, and features only one directive:"
 
 #: ../../usage/extensions/ifconfig.rst:13
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../usage/extensions/ifconfig.rst:18
 msgid "For example, one could write ::"
-msgstr ""
+msgstr "For example, one could write ::"
 
 #: ../../usage/extensions/ifconfig.rst:24
 msgid ""

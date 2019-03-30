@@ -19,50 +19,50 @@ msgstr ""
 
 #: ../../faq.rst:4
 msgid "Sphinx FAQ"
-msgstr ""
+msgstr "Sphinx 常问问题"
 
 #: ../../faq.rst:6
 msgid ""
 "This is a list of Frequently Asked Questions about Sphinx.  Feel free to "
 "suggest new entries!"
-msgstr ""
+msgstr "这是关于Sphinx的常见问题列表。随意提出新的条目！"
 
 #: ../../faq.rst:10
 msgid "How do I..."
-msgstr ""
+msgstr "我如何能..."
 
 #: ../../faq.rst:16
 msgid "... create PDF files without LaTeX?"
-msgstr ""
+msgstr "... 创建没有LaTeX的PDF文件？"
 
 #: ../../faq.rst:13
 msgid ""
 "`rinohtype`_ provides a PDF builder that can be used as a drop-in "
 "replacement for the LaTeX builder."
-msgstr ""
+msgstr "`rinohtype`_ provides PDF构建器，可用作LaTeX构建器的替代品。"
 
 #: ../../faq.rst:20
 msgid "... get section numbers?"
-msgstr ""
+msgstr "... 获得部分号码？"
 
 #: ../../faq.rst:19
 msgid ""
 "They are automatic in LaTeX output; for HTML, give a ``:numbered:`` "
 "option to the :rst:dir:`toctree` directive where you want to start "
 "numbering."
-msgstr ""
+msgstr "They are automatic in LaTeX output; for HTML, give a ``:numbered:`` option to the :rst:dir:`toctree` directive where you want to start numbering."
 
 #: ../../faq.rst:23
 msgid "... customize the look of the built HTML files?"
-msgstr ""
+msgstr "... 自定义构建的HTML文件的外观？"
 
 #: ../../faq.rst:23
 msgid "Use themes, see :doc:`/usage/theming`."
-msgstr ""
+msgstr "使用主题，请参阅 :doc:`/usage/theming`."
 
 #: ../../faq.rst:26
 msgid "... add global substitutions or includes?"
-msgstr ""
+msgstr "... 添加全球替换或包括？"
 
 #: ../../faq.rst:26
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../faq.rst:30
 msgid "... display the whole TOC tree in the sidebar?"
-msgstr ""
+msgstr "... 在侧边栏中显示整个TOC树？"
 
 #: ../../faq.rst:29
 msgid ""
@@ -82,15 +82,15 @@ msgstr ""
 
 #: ../../faq.rst:33
 msgid "... write my own extension?"
-msgstr ""
+msgstr "... 写我自己的扩展？"
 
 #: ../../faq.rst:33
 msgid "See the :doc:`/development/tutorials/index`."
-msgstr ""
+msgstr "See the :doc:`/development/tutorials/index`."
 
 #: ../../faq.rst:38
 msgid "... convert from my existing docs using MoinMoin markup?"
-msgstr ""
+msgstr "... 使用MoinMoin标记从我现有的文档转换？"
 
 #: ../../faq.rst:36
 msgid ""
@@ -101,11 +101,11 @@ msgstr ""
 
 #: ../../faq.rst:41
 msgid "... create HTML slides from Sphinx documents?"
-msgstr ""
+msgstr "... 从Sphinx文档创建HTML幻灯片？"
 
 #: ../../faq.rst:41
 msgid "See the \"Hieroglyph\" package at https://github.com/nyergler/hieroglyph."
-msgstr ""
+msgstr "See the \"Hieroglyph\" package at https://github.com/nyergler/hieroglyph."
 
 #: ../../faq.rst:43
 msgid ""
@@ -115,11 +115,11 @@ msgstr ""
 
 #: ../../faq.rst:51
 msgid "Using Sphinx with..."
-msgstr ""
+msgstr "使用Sphinx..."
 
 #: ../../faq.rst:59
 msgid "Read the Docs"
-msgstr ""
+msgstr "Read the Docs"
 
 #: ../../faq.rst:54
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 
 #: ../../faq.rst:63
 msgid "Epydoc"
-msgstr ""
+msgstr "Epydoc"
 
 #: ../../faq.rst:62
 msgid ""
@@ -143,7 +143,7 @@ msgstr ""
 
 #: ../../faq.rst:67
 msgid "Doxygen"
-msgstr ""
+msgstr "Doxygen"
 
 #: ../../faq.rst:66
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 
 #: ../../faq.rst:71
 msgid "SCons"
-msgstr ""
+msgstr "SCons"
 
 #: ../../faq.rst:70
 msgid ""
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../../faq.rst:77
 msgid "PyPI"
-msgstr ""
+msgstr "PyPI"
 
 #: ../../faq.rst:74
 msgid ""
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../../faq.rst:83
 msgid "GitHub Pages"
-msgstr ""
+msgstr "GitHub Pages"
 
 #: ../../faq.rst:80
 msgid ""
@@ -187,7 +187,7 @@ msgstr ""
 
 #: ../../faq.rst:86
 msgid "MediaWiki"
-msgstr ""
+msgstr "MediaWiki"
 
 #: ../../faq.rst:86
 msgid ""
@@ -197,15 +197,15 @@ msgstr ""
 
 #: ../../faq.rst:120
 msgid "Google Analytics"
-msgstr ""
+msgstr "Google Analytics"
 
 #: ../../faq.rst:89
 msgid "You can use a custom ``layout.html`` template, like this:"
-msgstr ""
+msgstr "You can use a custom ``layout.html`` template, like this:"
 
 #: ../../faq.rst:150
 msgid "Google Search"
-msgstr ""
+msgstr "Google Search"
 
 #: ../../faq.rst:123
 msgid ""
@@ -233,22 +233,22 @@ msgstr ""
 
 #: ../../faq.rst:159
 msgid "Epub info"
-msgstr ""
+msgstr "Epub 信息"
 
 #: ../../faq.rst:161
 msgid "The following list gives some hints for the creation of epub files:"
-msgstr ""
+msgstr "以下列表提供了有关创建epub文件的一些提示:"
 
 #: ../../faq.rst:163
 msgid ""
 "Split the text into several files. The longer the individual HTML files "
 "are, the longer it takes the ebook reader to render them.  In extreme "
 "cases, the rendering can take up to one minute."
-msgstr ""
+msgstr "将文本拆分为多个文件。单个HTML文件越长，电子书阅读器渲染它们的时间就越长。在极端情况下，渲染可能需要一分钟。"
 
 #: ../../faq.rst:167
 msgid "Try to minimize the markup.  This also pays in rendering time."
-msgstr ""
+msgstr "尽量减少标记。这也支付渲染时间。"
 
 #: ../../faq.rst:169
 msgid ""
@@ -264,7 +264,7 @@ msgstr ""
 
 #: ../../faq.rst:178
 msgid "You may have to experiment a little until you get reasonable results."
-msgstr ""
+msgstr "您可能需要进行一些实验，直到获得合理的结果。"
 
 #: ../../faq.rst:180
 msgid ""
@@ -322,11 +322,11 @@ msgstr ""
 
 #: ../../faq.rst:230
 msgid "If you get the following error, fix your document structure::"
-msgstr ""
+msgstr "If you get the following error, fix your document structure::"
 
 #: ../../faq.rst:244
 msgid "Texinfo info"
-msgstr ""
+msgstr "Texinfo 信息"
 
 #: ../../faq.rst:246
 msgid ""
@@ -335,11 +335,11 @@ msgid ""
 "Unix environments and can be quickly accessed from the terminal.  Emacs "
 "provides better font and color display and supports extensive "
 "customization (of course)."
-msgstr ""
+msgstr "有两个用于读取Info文件的主程序，``info`` 和GNU Emacs。  ``info`` 程序具有较少的功能，但在大多数Unix环境中都可用，并且可以从终端快速访问。  Emacs提供更好的字体和颜色显示，并支持广泛的自定义（当然）。"
 
 #: ../../faq.rst:254
 msgid "Displaying Links"
-msgstr ""
+msgstr "显示链接"
 
 #: ../../faq.rst:256
 msgid ""
@@ -357,7 +357,7 @@ msgstr ""
 
 #: ../../faq.rst:266
 msgid ":ref:`texinfo-links`"
-msgstr ""
+msgstr ":ref:`texinfo-links`"
 
 #: ../../faq.rst:268
 msgid ""
@@ -380,15 +380,15 @@ msgstr ""
 
 #: ../../faq.rst:302
 msgid "Notes"
-msgstr ""
+msgstr "注释"
 
 #: ../../faq.rst:304
 msgid "The following notes may be helpful if you want to create Texinfo files:"
-msgstr ""
+msgstr "The following notes may be helpful if you want to create Texinfo files:"
 
 #: ../../faq.rst:306
 msgid "Each section corresponds to a different ``node`` in the Info file."
-msgstr ""
+msgstr "Each section corresponds to a different ``node`` in the Info file."
 
 #: ../../faq.rst:308
 msgid ""
@@ -404,7 +404,7 @@ msgstr ""
 
 #: ../../faq.rst:316
 msgid "Inline markup"
-msgstr ""
+msgstr "Inline markup"
 
 #: ../../faq.rst:318
 msgid ""

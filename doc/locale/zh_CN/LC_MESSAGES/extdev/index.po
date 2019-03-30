@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:4
 msgid "Developing extensions for Sphinx"
-msgstr ""
+msgstr "为Sphinx开发扩展"
 
 #: ../../extdev/index.rst:6
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:26
 msgid "Discovery of builders by entry point"
-msgstr ""
+msgstr "通过切入点发现生成器"
 
 #: ../../extdev/index.rst:30
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:58
 msgid "Important objects"
-msgstr ""
+msgstr "重要的对象"
 
 #: ../../extdev/index.rst:60
 msgid ""
@@ -92,7 +92,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:69
 msgid "**Application**"
-msgstr ""
+msgstr "**应用**"
 
 #: ../../extdev/index.rst:64
 msgid ""
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:82
 msgid "**Environment**"
-msgstr ""
+msgstr "**环境**"
 
 #: ../../extdev/index.rst:72
 msgid ""
@@ -134,7 +134,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:91
 msgid "**Builder**"
-msgstr ""
+msgstr "**生成器**"
 
 #: ../../extdev/index.rst:85
 msgid ""
@@ -152,7 +152,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:98
 msgid "**Config**"
-msgstr ""
+msgstr "**配置**"
 
 #: ../../extdev/index.rst:94
 msgid ""
@@ -163,7 +163,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:98
 msgid "The config is available as ``app.config`` or ``env.config``."
-msgstr ""
+msgstr "配置可用作 ``app.config`` 或 ``env.config`` 。"
 
 #: ../../extdev/index.rst:100
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:105
 msgid "Build Phases"
-msgstr ""
+msgstr "建立阶段"
 
 #: ../../extdev/index.rst:107
 msgid ""
@@ -183,7 +183,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:110
 msgid "**Phase 0: Initialization**"
-msgstr ""
+msgstr "**第零阶段：初始化**"
 
 #: ../../extdev/index.rst:112
 msgid ""
@@ -195,7 +195,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:117
 msgid "**Phase 1: Reading**"
-msgstr ""
+msgstr "**第一阶段：阅读**"
 
 #: ../../extdev/index.rst:119
 msgid ""
@@ -232,15 +232,15 @@ msgstr ""
 
 #: ../../extdev/index.rst:138
 msgid "**Phase 2: Consistency checks**"
-msgstr ""
+msgstr "**第二阶段：一致性检查**"
 
 #: ../../extdev/index.rst:140
 msgid "Some checking is done to ensure no surprises in the built documents."
-msgstr ""
+msgstr "Some checking is done to ensure no surprises in the built documents."
 
 #: ../../extdev/index.rst:142
 msgid "**Phase 3: Resolving**"
-msgstr ""
+msgstr "**第三阶段：解决**"
 
 #: ../../extdev/index.rst:144
 msgid ""
@@ -253,7 +253,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:150
 msgid "**Phase 4: Writing**"
-msgstr ""
+msgstr "**第四阶段：写作**"
 
 #: ../../extdev/index.rst:152
 msgid ""
@@ -278,7 +278,7 @@ msgstr ""
 
 #: ../../extdev/index.rst:167
 msgid "Extension metadata"
-msgstr ""
+msgstr "扩展元数据"
 
 #: ../../extdev/index.rst:171
 msgid ""
@@ -323,5 +323,5 @@ msgstr ""
 
 #: ../../extdev/index.rst:192
 msgid "APIs used for writing extensions"
-msgstr ""
+msgstr "用于编写扩展的API"
 

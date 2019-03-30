@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,45 +19,45 @@ msgstr ""
 
 #: ../../usage/installation.rst:3
 msgid "Installing Sphinx"
-msgstr ""
+msgstr "安装 Sphinx"
 
 #: ../../usage/installation.rst:13
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: ../../usage/installation.rst:15
 msgid "Sphinx is written in `Python`__ and supports Python 3.5+."
-msgstr ""
+msgstr "Sphinx是用 `Python`__ 编写的，支持Python 3.5+。"
 
 #: ../../usage/installation.rst:21
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../usage/installation.rst:24
 msgid "Debian/Ubuntu"
-msgstr ""
+msgstr "Debian/Ubuntu"
 
 #: ../../usage/installation.rst:26
 msgid ""
 "Install either ``python3-sphinx`` (Python 3) or ``python-sphinx`` (Python"
 " 2) using :command:`apt-get`:"
-msgstr ""
+msgstr "使用 :command:`apt-get` 安装 ``python3-sphinx`` (Python 3) 或 ``python-sphinx`` (Python 2):"
 
 #: ../../usage/installation.rst:33 ../../usage/installation.rst:44
 msgid "If it not already present, this will install Python for you."
-msgstr ""
+msgstr "如果它还没有出现，这将为您安装Python。"
 
 #: ../../usage/installation.rst:36
 msgid "RHEL, CentOS"
-msgstr ""
+msgstr "RHEL, CentOS"
 
 #: ../../usage/installation.rst:38
 msgid "Install ``python-sphinx`` using :command:`yum`:"
-msgstr ""
+msgstr "使用 :command:`yum` 安装 ``python-sphinx`` :"
 
 #: ../../usage/installation.rst:47
 msgid "Other distributions"
-msgstr ""
+msgstr "其他发行版"
 
 #: ../../usage/installation.rst:49
 msgid ""
@@ -66,55 +66,55 @@ msgid ""
 "``sphinx``.  Be aware that there are at least two other packages with "
 "``sphinx`` in their name: a speech recognition toolkit (*CMU Sphinx*) and"
 " a full-text search database (*Sphinx search*)."
-msgstr ""
+msgstr "大多数Linux发行版都在其软件包存储库中安装了Sphinx。通常这个包被称为 ``python3-sphinx`` ， ``python-sphinx`` 或 ``sphinx`` 。  请注意，其名称中至少还有两个名为 ``sphinx`` 的软件包:语音识别工具包(*CMU Sphinx*)和全文搜索数据库(*Sphinx搜索*)。"
 
 #: ../../usage/installation.rst:57
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../usage/installation.rst:59
 msgid ""
 "Sphinx can be installed using `Homebrew`__, `MacPorts`__, or as part of a"
 " Python distribution such as `Anaconda`__."
-msgstr ""
+msgstr "Sphinx可以使用 `Homebrew`__, `MacPorts`__,  安装，或者作为Python发行版的一部分安装，例如 `Anaconda`__."
 
 #: ../../usage/installation.rst:67
 msgid "Homebrew"
-msgstr ""
+msgstr "Homebrew"
 
 #: ../../usage/installation.rst:73 ../../usage/installation.rst:94
 msgid "For more information, refer to the `package overview`__."
-msgstr ""
+msgstr "有关更多信息，请参阅 `package overview`__."
 
 #: ../../usage/installation.rst:78
 msgid "MacPorts"
-msgstr ""
+msgstr "MacPorts"
 
 #: ../../usage/installation.rst:80
 msgid ""
 "Install either ``python36-sphinx`` (Python 3) or ``python27-sphinx`` "
 "(Python 2) using :command:`port`:"
-msgstr ""
+msgstr "使用 :command:`port` 安装 ``python36-sphinx`` (Python 3)或 ``python27-sphinx`` (Python 2):"
 
 #: ../../usage/installation.rst:87
 msgid "To set up the executable paths, use the ``port select`` command:"
-msgstr ""
+msgstr "要设置可执行文件路径，请使用 ``port select`` 命令:"
 
 #: ../../usage/installation.rst:99
 msgid "Anaconda"
-msgstr ""
+msgstr "Anaconda"
 
 #: ../../usage/installation.rst:106
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../usage/installation.rst:108
-msgid "Todo"
-msgstr ""
+msgid "待处理"
+msgstr "待处理"
 
 #: ../../usage/installation.rst:108
 msgid "Could we start packaging this?"
-msgstr ""
+msgstr "我们可以开始打包吗？"
 
 #: ../../usage/installation.rst:110
 msgid ""
@@ -126,18 +126,18 @@ msgid ""
 "the screen.  If you do not have Python installed, refer to the "
 "`Hitchhikers Guide to Python's`__ Python on Windows installation guides. "
 "You must install `Python 3`__."
-msgstr ""
+msgstr "大多数Windows用户默认没有安装Python，因此我们首先安装Python本身。  如果您不确定，请打开 *命令提示符* (:kbd:`⊞Win-r` 并输入 :command:`cmd`)  打开命令提示符后，键入 :command:`python --version` 并按Enter键。 如果Python可用，您将看到在屏幕上打印的Python版本。  如果您没有安装Python，请参阅Windows安装指南中的 `Hitchhikers Guide to Python's`__ Python”。 你必须安装 `Python 3`__。"
 
 #: ../../usage/installation.rst:118
 msgid ""
 "Once Python is installed, you can install Sphinx using :command:`pip`.  "
 "Refer to the :ref:`pip installation instructions <install-pypi>` below "
 "for more information."
-msgstr ""
+msgstr "安装Python后，您可以使用 :command:`pip` 安装Sphinx 。有关更多信息，请参阅下面的 :ref:`pip installation instructions <install-pypi>` 。"
 
 #: ../../usage/installation.rst:129
 msgid "Installation from PyPI"
-msgstr ""
+msgstr "从PyPI安装"
 
 #: ../../usage/installation.rst:131
 msgid ""
@@ -145,26 +145,26 @@ msgid ""
 "<https://pypi.org/project/Sphinx/>`_.  The preferred tool for installing "
 "packages from *PyPI* is :command:`pip`.  This tool is provided with all "
 "modern versions of Python."
-msgstr ""
+msgstr "Sphinx包发布在 `Python Package Index <https://pypi.org/project/Sphinx/>`_ 上。  从 *PyPI* 安装软件包的首选工具是 :command:`pip` 。  此工具随Python的所有现代版本一起提供。"
 
 #: ../../usage/installation.rst:136
 msgid ""
 "On Linux or MacOS, you should open your terminal and run the following "
 "command."
-msgstr ""
+msgstr "在Linux或MacOS上，您应该打开终端并运行以下命令。"
 
 #: ../../usage/installation.rst:142
 msgid ""
 "On Windows, you should open *Command Prompt* (:kbd:`⊞Win-r` and type "
 ":command:`cmd`) and run the same command."
-msgstr ""
+msgstr "在Windows上，您应该打开 *命令提示符* ( :kbd:`⊞Win-r` 并键入 :command:`cmd` )并运行相同的命令。"
 
 #: ../../usage/installation.rst:149
 msgid ""
 "After installation, type :command:`sphinx-build --version` on the command"
 " prompt.  If everything worked fine, you will see the version number for "
 "the Sphinx package you just installed."
-msgstr ""
+msgstr "安装完成后，在命令提示符下键入 :command:`sphinx-build --version` 。如果一切正常，您将看到刚安装的Sphinx软件包的版本号。"
 
 #: ../../usage/installation.rst:153
 msgid ""
@@ -172,23 +172,26 @@ msgid ""
 "development release.  You will not generally need (or want) to do this, "
 "but it can be useful if you see a possible bug in the latest stable "
 "release.  To do this, use the ``--pre`` flag."
-msgstr ""
+msgstr "从*PyPI*安装也允许您安装最新的开发版本。您通常不需要(或想要)这样做，但如果您在最新的稳定版本中看到可能的错误，它会很有用。为此，请使用 ``--pre`` 标志。"
 
 #: ../../usage/installation.rst:164
 msgid "Installation from source"
-msgstr ""
+msgstr "从源代码安装"
 
 #: ../../usage/installation.rst:166
 msgid ""
 "You can install Sphinx directly from a clone of the `Git repository`__.  "
 "This can be done either by cloning the repo and installing from the local"
 " clone, on simply installing directly via :command:`git`."
-msgstr ""
+msgstr "您可以直接从 `Git repository`__ 的克隆安装Sphinx。这可以通过克隆repo并从本地克隆安装，只需通过 :command:`git` 直接安装即可完成。"
 
 #: ../../usage/installation.rst:180
 msgid ""
 "You can also download a snapshot of the Git repo in either `tar.gz`__ or "
 "`zip`__ format.  Once downloaded and extracted, these can be installed "
 "with :command:`pip` as above."
-msgstr ""
+msgstr "您也可以用 `tar.gz`__ 或 `zip`__ 格式下载 Git repo 的快照。下载并解压缩后，可以使用以下命令安装 :command:`pip` 。"
+
+#~ msgid "Todo"
+#~ msgstr ""
 

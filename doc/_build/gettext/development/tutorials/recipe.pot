@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
+"Project-Id-Version: Sphinx 2.1.0+/89df177\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,7 +109,7 @@ msgid "The index classes"
 msgstr ""
 
 #: ../../development/tutorials/recipe.rst:101
-msgid "Todo"
+msgid "待处理"
 msgstr ""
 
 #: ../../development/tutorials/recipe.rst:101

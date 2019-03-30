@@ -31,11 +31,11 @@ msgstr ""
 
 #: of sphinx.locale.init_console:1
 msgid "Initialize locale for console."
-msgstr ""
+msgstr "初始化控制台的区域设置。"
 
 #: of sphinx.locale.get_translation:1
 msgid "Get a translation function based on the *catalog* and *namespace*."
-msgstr ""
+msgstr "获取基于*catalog*和*namespace*的翻译功能。"
 
 #: of sphinx.locale.get_translation:3
 msgid ""

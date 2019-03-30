@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:7
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: ../../usage/configuration.rst:12
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:29
 msgid "Important points to note:"
-msgstr ""
+msgstr "重点要注意:"
 
 #: ../../usage/configuration.rst:31
 msgid ""
@@ -96,43 +96,43 @@ msgstr ""
 
 #: ../../usage/configuration.rst:62
 msgid "Project information"
-msgstr ""
+msgstr "项目信息"
 
 #: ../../usage/configuration.rst:66
 msgid "The documented project's name."
-msgstr ""
+msgstr "记录的项目名称。"
 
 #: ../../usage/configuration.rst:70
 msgid "The author name(s) of the document.  The default value is ``'unknown'``."
-msgstr ""
+msgstr "该文件的作者姓名。  默认值为 ``unknown``."
 
 #: ../../usage/configuration.rst:74
 msgid "A copyright statement in the style ``'2008, Author Name'``."
-msgstr ""
+msgstr "``2008, Author Name`` 风格的版权声明."
 
 #: ../../usage/configuration.rst:78
 msgid ""
 "The major project version, used as the replacement for ``|version|``.  "
 "For example, for the Python documentation, this may be something like "
 "``2.6``."
-msgstr ""
+msgstr "主要项目版本，用作 ``| version |`` 的替代品。  例如，对于Python文档，这可能类似于 ``2.6``。"
 
 #: ../../usage/configuration.rst:83
 msgid ""
 "The full project version, used as the replacement for ``|release|`` and "
 "e.g. in the HTML templates.  For example, for the Python documentation, "
 "this may be something like ``2.6.0rc1``."
-msgstr ""
+msgstr "完整的项目版本，用作 ``| release |`` 的替代品，例如在HTML模板中。例如，对于Python文档，这可能类似于 ``2.6.0rc1``。"
 
 #: ../../usage/configuration.rst:87
 msgid ""
 "If you don't need the separation provided between :confval:`version` and "
 ":confval:`release`, just set them both to the same value."
-msgstr ""
+msgstr "如果你不需要在 :confval:`version` 和 :confval:`release` 之间提供分隔，只需将它们设置为相同的值即可。"
 
 #: ../../usage/configuration.rst:92
 msgid "General configuration"
-msgstr ""
+msgstr "一般配置"
 
 #: ../../usage/configuration.rst:96
 msgid ""
@@ -183,19 +183,19 @@ msgstr ""
 
 #: ../../usage/configuration.rst:136
 msgid "Default is ``{'.rst': 'restructuredtext'}``."
-msgstr ""
+msgstr "Default is ``{'.rst': 'restructuredtext'}``."
 
 #: ../../usage/configuration.rst:138
 msgid "file extensions have to start with a dot (e.g. ``.rst``)."
-msgstr ""
+msgstr "文件扩展名必须以点开头 (e.g. ``.rst``)."
 
 #: ../../usage/configuration.rst:140
 msgid "Can now be a list of extensions."
-msgstr ""
+msgstr "现在可以是扩展名列表。"
 
 #: ../../usage/configuration.rst:143
 msgid "Support file type mapping"
-msgstr ""
+msgstr "支持文件类型映射"
 
 #: ../../usage/configuration.rst:148
 msgid ""
@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:151
 msgid "Previously, Sphinx accepted only UTF-8 encoded sources."
-msgstr ""
+msgstr "Previously, Sphinx accepted only UTF-8 encoded sources."
 
 #: ../../usage/configuration.rst:156
 msgid ""
@@ -219,7 +219,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:163 ../../usage/configuration.rst:1283
 msgid "For example::"
-msgstr ""
+msgstr "例如::"
 
 #: ../../usage/configuration.rst:169
 msgid ""
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:183
 msgid "The default is changed to ``'index'`` from ``'contents'``."
-msgstr ""
+msgstr "The default is changed to ``'index'`` from ``'contents'``."
 
 #: ../../usage/configuration.rst:188
 msgid ""
@@ -253,7 +253,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:193
 msgid "Example patterns:"
-msgstr ""
+msgstr "Example patterns:"
 
 #: ../../usage/configuration.rst:195
 msgid ""
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:197
 msgid "``'library/xml'`` -- ignores the ``library/xml`` directory"
-msgstr ""
+msgstr "``'library/xml'`` -- ignores the ``library/xml`` directory"
 
 #: ../../usage/configuration.rst:198
 msgid ""
@@ -273,7 +273,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:200
 msgid "``'**/.svn'`` -- ignores all ``.svn`` directories"
-msgstr ""
+msgstr "``'**/.svn'`` -- ignores all ``.svn`` directories"
 
 #: ../../usage/configuration.rst:202
 msgid ""
@@ -354,111 +354,111 @@ msgstr ""
 
 #: ../../usage/configuration.rst:289
 msgid "The default is ``False``, the pre-0.5 behavior was to always keep them."
-msgstr ""
+msgstr "The default is ``False``, the pre-0.5 behavior was to always keep them."
 
 #: ../../usage/configuration.rst:295
 msgid "A list of warning types to suppress arbitrary warning messages."
-msgstr ""
+msgstr "A list of warning types to suppress arbitrary warning messages."
 
 #: ../../usage/configuration.rst:297
 msgid "Sphinx supports following warning types:"
-msgstr ""
+msgstr "Sphinx支持以下警告类型:"
 
 #: ../../usage/configuration.rst:299
 msgid "app.add_node"
-msgstr ""
+msgstr "app.add_node"
 
 #: ../../usage/configuration.rst:300
 msgid "app.add_directive"
-msgstr ""
+msgstr "app.add_directive"
 
 #: ../../usage/configuration.rst:301
 msgid "app.add_role"
-msgstr ""
+msgstr "app.add_role"
 
 #: ../../usage/configuration.rst:302
 msgid "app.add_generic_role"
-msgstr ""
+msgstr "app.add_generic_role"
 
 #: ../../usage/configuration.rst:303
 msgid "app.add_source_parser"
-msgstr ""
+msgstr "app.add_source_parser"
 
 #: ../../usage/configuration.rst:304
 msgid "download.not_readable"
-msgstr ""
+msgstr "download.not_readable"
 
 #: ../../usage/configuration.rst:305
 msgid "image.not_readable"
-msgstr ""
+msgstr "image.not_readable"
 
 #: ../../usage/configuration.rst:306
 msgid "ref.term"
-msgstr ""
+msgstr "ref.term"
 
 #: ../../usage/configuration.rst:307
 msgid "ref.ref"
-msgstr ""
+msgstr "ref.ref"
 
 #: ../../usage/configuration.rst:308
 msgid "ref.numref"
-msgstr ""
+msgstr "ref.numref"
 
 #: ../../usage/configuration.rst:309
 msgid "ref.keyword"
-msgstr ""
+msgstr "ref.keyword"
 
 #: ../../usage/configuration.rst:310
 msgid "ref.option"
-msgstr ""
+msgstr "ref.option"
 
 #: ../../usage/configuration.rst:311
 msgid "ref.citation"
-msgstr ""
+msgstr "ref.citation"
 
 #: ../../usage/configuration.rst:312
 msgid "ref.footnote"
-msgstr ""
+msgstr "ref.footnote"
 
 #: ../../usage/configuration.rst:313
 msgid "ref.doc"
-msgstr ""
+msgstr "ref.doc"
 
 #: ../../usage/configuration.rst:314
 msgid "ref.python"
-msgstr ""
+msgstr "ref.python"
 
 #: ../../usage/configuration.rst:315
 msgid "misc.highlighting_failure"
-msgstr ""
+msgstr "misc.highlighting_failure"
 
 #: ../../usage/configuration.rst:316
 msgid "toc.secnum"
-msgstr ""
+msgstr "toc.secnum"
 
 #: ../../usage/configuration.rst:317
 msgid "epub.unknown_project_files"
-msgstr ""
+msgstr "epub.unknown_project_files"
 
 #: ../../usage/configuration.rst:319
 msgid "You can choose from these types."
-msgstr ""
+msgstr "You can choose from these types."
 
 #: ../../usage/configuration.rst:321
 msgid "Now, this option should be considered *experimental*."
-msgstr ""
+msgstr "Now, this option should be considered *experimental*."
 
 #: ../../usage/configuration.rst:327
 msgid "Added ``misc.highlighting_failure``"
-msgstr ""
+msgstr "Added ``misc.highlighting_failure``"
 
 #: ../../usage/configuration.rst:331
 msgid "Added ``epub.unknown_project_files``"
-msgstr ""
+msgstr "Added ``epub.unknown_project_files``"
 
 #: ../../usage/configuration.rst:335
 msgid "Added ``ref.footnote``"
-msgstr ""
+msgstr "Added ``ref.footnote``"
 
 #: ../../usage/configuration.rst:339
 msgid ""
@@ -469,7 +469,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:345
 msgid "also accepts micro version string"
-msgstr ""
+msgstr "also accepts micro version string"
 
 #: ../../usage/configuration.rst:350
 msgid ""
@@ -496,19 +496,19 @@ msgstr ""
 
 #: ../../usage/configuration.rst:368
 msgid "``page`` - the manual page (``man``)"
-msgstr ""
+msgstr "``page`` - the manual page (``man``)"
 
 #: ../../usage/configuration.rst:369
 msgid "``section`` - the manual section (``1``)"
-msgstr ""
+msgstr "``section`` - the manual section (``1``)"
 
 #: ../../usage/configuration.rst:370
 msgid "``path`` - the original manual page and section specified (``man(1)``)"
-msgstr ""
+msgstr "``path`` - the original manual page and section specified (``man(1)``)"
 
 #: ../../usage/configuration.rst:372
 msgid "This also supports manpages specified as ``man.1``."
-msgstr ""
+msgstr "This also supports manpages specified as ``man.1``."
 
 #: ../../usage/configuration.rst:374
 msgid ""
@@ -583,7 +583,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:432
 msgid "etc..."
-msgstr ""
+msgstr "etc..."
 
 #: ../../usage/configuration.rst:436
 msgid ""
@@ -625,7 +625,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:477
 msgid "This is a ``dict`` whose default is::"
-msgstr ""
+msgstr "This is a ``dict`` whose default is::"
 
 #: ../../usage/configuration.rst:481
 msgid ""
@@ -649,7 +649,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:499
 msgid "If true, Sphinx verifies server certifications.  Default is ``True``."
-msgstr ""
+msgstr "If true, Sphinx verifies server certifications.  Default is ``True``."
 
 #: ../../usage/configuration.rst:505
 msgid ""
@@ -674,7 +674,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:525
 msgid "If you set :confval:`today` to a non-empty value, it is used."
-msgstr ""
+msgstr "If you set :confval:`today` to a non-empty value, it is used."
 
 #: ../../usage/configuration.rst:526
 msgid ""
@@ -775,11 +775,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:610
 msgid "Now also removes ``<BLANKLINE>``."
-msgstr ""
+msgstr "Now also removes ``<BLANKLINE>``."
 
 #: ../../usage/configuration.rst:617
 msgid "Options for internationalization"
-msgstr ""
+msgstr "国际化的选择"
 
 #: ../../usage/configuration.rst:619
 msgid ""
@@ -801,163 +801,163 @@ msgstr ""
 
 #: ../../usage/configuration.rst:637
 msgid "Support figure substitution"
-msgstr ""
+msgstr "Support figure substitution"
 
 #: ../../usage/configuration.rst:639
 msgid "Currently supported languages by Sphinx are:"
-msgstr ""
+msgstr "Currently supported languages by Sphinx are:"
 
 #: ../../usage/configuration.rst:641
 msgid "``bn`` -- Bengali"
-msgstr ""
+msgstr "``bn`` -- Bengali"
 
 #: ../../usage/configuration.rst:642
 msgid "``ca`` -- Catalan"
-msgstr ""
+msgstr "``ca`` -- Catalan"
 
 #: ../../usage/configuration.rst:643
 msgid "``cs`` -- Czech"
-msgstr ""
+msgstr "``cs`` -- Czech"
 
 #: ../../usage/configuration.rst:644 ../../usage/configuration.rst:1207
 msgid "``da`` -- Danish"
-msgstr ""
+msgstr "``da`` -- Danish"
 
 #: ../../usage/configuration.rst:645 ../../usage/configuration.rst:1212
 msgid "``de`` -- German"
-msgstr ""
+msgstr "``de`` -- German"
 
 #: ../../usage/configuration.rst:646 ../../usage/configuration.rst:1209
 msgid "``en`` -- English"
-msgstr ""
+msgstr "``en`` -- English"
 
 #: ../../usage/configuration.rst:647 ../../usage/configuration.rst:1220
 msgid "``es`` -- Spanish"
-msgstr ""
+msgstr "``es`` -- Spanish"
 
 #: ../../usage/configuration.rst:648
 msgid "``et`` -- Estonian"
-msgstr ""
+msgstr "``et`` -- Estonian"
 
 #: ../../usage/configuration.rst:649
 msgid "``eu`` -- Basque"
-msgstr ""
+msgstr "``eu`` -- Basque"
 
 #: ../../usage/configuration.rst:650
 msgid "``fa`` -- Iranian"
-msgstr ""
+msgstr "``fa`` -- Iranian"
 
 #: ../../usage/configuration.rst:651 ../../usage/configuration.rst:1210
 msgid "``fi`` -- Finnish"
-msgstr ""
+msgstr "``fi`` -- Finnish"
 
 #: ../../usage/configuration.rst:652 ../../usage/configuration.rst:1211
 msgid "``fr`` -- French"
-msgstr ""
+msgstr "``fr`` -- French"
 
 #: ../../usage/configuration.rst:653
 msgid "``he`` -- Hebrew"
-msgstr ""
+msgstr "``he`` -- Hebrew"
 
 #: ../../usage/configuration.rst:654
 msgid "``hr`` -- Croatian"
-msgstr ""
+msgstr "``hr`` -- Croatian"
 
 #: ../../usage/configuration.rst:655 ../../usage/configuration.rst:1213
 msgid "``hu`` -- Hungarian"
-msgstr ""
+msgstr "``hu`` -- Hungarian"
 
 #: ../../usage/configuration.rst:656
 msgid "``id`` -- Indonesian"
-msgstr ""
+msgstr "``id`` -- Indonesian"
 
 #: ../../usage/configuration.rst:657 ../../usage/configuration.rst:1214
 msgid "``it`` -- Italian"
-msgstr ""
+msgstr "``it`` -- Italian"
 
 #: ../../usage/configuration.rst:658 ../../usage/configuration.rst:1215
 msgid "``ja`` -- Japanese"
-msgstr ""
+msgstr "``ja`` -- Japanese"
 
 #: ../../usage/configuration.rst:659
 msgid "``ko`` -- Korean"
-msgstr ""
+msgstr "``ko`` -- Korean"
 
 #: ../../usage/configuration.rst:660
 msgid "``lt`` -- Lithuanian"
-msgstr ""
+msgstr "``lt`` -- Lithuanian"
 
 #: ../../usage/configuration.rst:661
 msgid "``lv`` -- Latvian"
-msgstr ""
+msgstr "``lv`` -- Latvian"
 
 #: ../../usage/configuration.rst:662
 msgid "``mk`` -- Macedonian"
-msgstr ""
+msgstr "``mk`` -- Macedonian"
 
 #: ../../usage/configuration.rst:663
 msgid "``nb_NO`` -- Norwegian Bokmal"
-msgstr ""
+msgstr "``nb_NO`` -- Norwegian Bokmal"
 
 #: ../../usage/configuration.rst:664
 msgid "``ne`` -- Nepali"
-msgstr ""
+msgstr "``ne`` -- Nepali"
 
 #: ../../usage/configuration.rst:665 ../../usage/configuration.rst:1208
 msgid "``nl`` -- Dutch"
-msgstr ""
+msgstr "``nl`` -- Dutch"
 
 #: ../../usage/configuration.rst:666
 msgid "``pl`` -- Polish"
-msgstr ""
+msgstr "``pl`` -- Polish"
 
 #: ../../usage/configuration.rst:667
 msgid "``pt_BR`` -- Brazilian Portuguese"
-msgstr ""
+msgstr "``pt_BR`` -- Brazilian Portuguese"
 
 #: ../../usage/configuration.rst:668
 msgid "``pt_PT`` -- European Portuguese"
-msgstr ""
+msgstr "``pt_PT`` -- European Portuguese"
 
 #: ../../usage/configuration.rst:669 ../../usage/configuration.rst:1219
 msgid "``ru`` -- Russian"
-msgstr ""
+msgstr "``ru`` -- Russian"
 
 #: ../../usage/configuration.rst:670
 msgid "``si`` -- Sinhala"
-msgstr ""
+msgstr "``si`` -- Sinhala"
 
 #: ../../usage/configuration.rst:671
 msgid "``sk`` -- Slovak"
-msgstr ""
+msgstr "``sk`` -- Slovak"
 
 #: ../../usage/configuration.rst:672
 msgid "``sl`` -- Slovenian"
-msgstr ""
+msgstr "``sl`` -- Slovenian"
 
 #: ../../usage/configuration.rst:673 ../../usage/configuration.rst:1221
 msgid "``sv`` -- Swedish"
-msgstr ""
+msgstr "``sv`` -- Swedish"
 
 #: ../../usage/configuration.rst:674 ../../usage/configuration.rst:1222
 msgid "``tr`` -- Turkish"
-msgstr ""
+msgstr "``tr`` -- Turkish"
 
 #: ../../usage/configuration.rst:675
 msgid "``uk_UA`` -- Ukrainian"
-msgstr ""
+msgstr "``uk_UA`` -- Ukrainian"
 
 #: ../../usage/configuration.rst:676
 msgid "``vi`` -- Vietnamese"
-msgstr ""
+msgstr "``vi`` -- Vietnamese"
 
 #: ../../usage/configuration.rst:677
 msgid "``zh_CN`` -- Simplified Chinese"
-msgstr ""
+msgstr "``zh_CN`` -- Simplified Chinese"
 
 #: ../../usage/configuration.rst:678
 msgid "``zh_TW`` -- Traditional Chinese"
-msgstr ""
+msgstr "``zh_TW`` -- Traditional Chinese"
 
 #: ../../usage/configuration.rst:684
 msgid ""
@@ -977,11 +977,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:694
 msgid "The default is ``['locales']``."
-msgstr ""
+msgstr "The default is ``['locales']``."
 
 #: ../../usage/configuration.rst:696
 msgid "Use ``locales`` directory as a default value"
-msgstr ""
+msgstr "Use ``locales`` directory as a default value"
 
 #: ../../usage/configuration.rst:703
 msgid ""
@@ -1003,7 +1003,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:714
 msgid "Add uid line for each msgids in .pot files."
-msgstr ""
+msgstr "Add uid line for each msgids in .pot files."
 
 #: ../../usage/configuration.rst:715
 msgid ""
@@ -1020,7 +1020,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:722
 msgid "The default is ``False``."
-msgstr ""
+msgstr "The default is ``False``."
 
 #: ../../usage/configuration.rst:728
 msgid ""
@@ -1030,11 +1030,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:731 ../../usage/configuration.rst:739
 msgid "The default is ``True``."
-msgstr ""
+msgstr "The default is ``True``."
 
 #: ../../usage/configuration.rst:737
 msgid "If true, Sphinx builds mo file for each translation catalog files."
-msgstr ""
+msgstr "If true, Sphinx builds mo file for each translation catalog files."
 
 #: ../../usage/configuration.rst:745
 msgid ""
@@ -1044,51 +1044,51 @@ msgstr ""
 
 #: ../../usage/configuration.rst
 msgid "index"
-msgstr ""
+msgstr "index"
 
 #: ../../usage/configuration.rst:748
 msgid "index terms"
-msgstr ""
+msgstr "index terms"
 
 #: ../../usage/configuration.rst
 msgid "literal-block"
-msgstr ""
+msgstr "literal-block"
 
 #: ../../usage/configuration.rst:749
 msgid "literal blocks: ``::`` and ``code-block``."
-msgstr ""
+msgstr "literal blocks: ``::`` and ``code-block``."
 
 #: ../../usage/configuration.rst
 msgid "doctest-block"
-msgstr ""
+msgstr "doctest-block"
 
 #: ../../usage/configuration.rst:750
 msgid "doctest block"
-msgstr ""
+msgstr "doctest block"
 
 #: ../../usage/configuration.rst
 msgid "raw"
-msgstr ""
+msgstr "raw"
 
 #: ../../usage/configuration.rst:751
 msgid "raw content"
-msgstr ""
+msgstr "raw content"
 
 #: ../../usage/configuration.rst
 msgid "image"
-msgstr ""
+msgstr "image"
 
 #: ../../usage/configuration.rst:752
 msgid "image/figure uri and alt"
-msgstr ""
+msgstr "image/figure uri and alt"
 
 #: ../../usage/configuration.rst:754
 msgid "For example: ``gettext_additional_targets = ['literal-block', 'image']``."
-msgstr ""
+msgstr "For example: ``gettext_additional_targets = ['literal-block', 'image']``."
 
 #: ../../usage/configuration.rst:756
 msgid "The default is ``[]``."
-msgstr ""
+msgstr "The default is ``[]``."
 
 #: ../../usage/configuration.rst:762
 msgid ""
@@ -1118,11 +1118,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:773
 msgid "``{ext}`` - the file extension, e.g. ``.png``"
-msgstr ""
+msgstr "``{ext}`` - the file extension, e.g. ``.png``"
 
 #: ../../usage/configuration.rst:774
 msgid "``{language}`` - the translation language, e.g. ``en``"
-msgstr ""
+msgstr "``{language}`` - the translation language, e.g. ``en``"
 
 #: ../../usage/configuration.rst:776
 msgid ""
@@ -1132,15 +1132,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:781
 msgid "Added ``{path}`` and ``{basename}`` tokens."
-msgstr ""
+msgstr "Added ``{path}`` and ``{basename}`` tokens."
 
 #: ../../usage/configuration.rst:788
 msgid "Options for Math"
-msgstr ""
+msgstr "数学的选项"
 
 #: ../../usage/configuration.rst:790
 msgid "These options influence Math notations."
-msgstr ""
+msgstr "These options influence Math notations."
 
 #: ../../usage/configuration.rst:794
 msgid ""
@@ -1156,7 +1156,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:802
 msgid "Example: ``'Eq.{number}'`` gets rendered as, for example, ``Eq.10``."
-msgstr ""
+msgstr "Example: ``'Eq.{number}'`` gets rendered as, for example, ``Eq.10``."
 
 #: ../../usage/configuration.rst:806
 msgid ""
@@ -1168,7 +1168,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:817
 msgid "Options for HTML output"
-msgstr ""
+msgstr "HTML输出选项"
 
 #: ../../usage/configuration.rst:819
 msgid ""
@@ -1270,7 +1270,7 @@ msgstr ""
 #: ../../usage/configuration.rst:915 ../../usage/configuration.rst:931
 #: ../../usage/configuration.rst:1060 ../../usage/configuration.rst:1083
 msgid "Example::"
-msgstr ""
+msgstr "Example::"
 
 #: ../../usage/configuration.rst:925
 msgid ""
@@ -1312,11 +1312,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:963
 msgid "The paths in :confval:`html_static_path` can now contain subdirectories."
-msgstr ""
+msgstr "The paths in :confval:`html_static_path` can now contain subdirectories."
 
 #: ../../usage/configuration.rst:966
 msgid "The entries in :confval:`html_static_path` can now be single files."
-msgstr ""
+msgstr "The entries in :confval:`html_static_path` can now be single files."
 
 #: ../../usage/configuration.rst:969
 msgid ""
@@ -1356,7 +1356,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1003
 msgid "To disable smart quotes, use rather :confval:`smartquotes`."
-msgstr ""
+msgstr "To disable smart quotes, use rather :confval:`smartquotes`."
 
 #: ../../usage/configuration.rst:1008
 msgid ""
@@ -1373,7 +1373,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1014
 msgid "Previously, this was always activated."
-msgstr ""
+msgstr "Previously, this was always activated."
 
 #: ../../usage/configuration.rst:1017
 msgid ""
@@ -1396,7 +1396,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1030
 msgid "The values can be either lists or single strings."
-msgstr ""
+msgstr "The values can be either lists or single strings."
 
 #: ../../usage/configuration.rst:1032
 msgid ""
@@ -1422,11 +1422,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1047
 msgid "a single string value for ``html_sidebars`` will be removed in 2.0"
-msgstr ""
+msgstr "a single string value for ``html_sidebars`` will be removed in 2.0"
 
 #: ../../usage/configuration.rst:1049
 msgid "Builtin sidebar templates that can be rendered are:"
-msgstr ""
+msgstr "Builtin sidebar templates that can be rendered are:"
 
 #: ../../usage/configuration.rst:1051
 msgid ""
@@ -1442,7 +1442,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1055
 msgid "**relations.html** -- two links to the previous and next documents"
-msgstr ""
+msgstr "**relations.html** -- two links to the previous and next documents"
 
 #: ../../usage/configuration.rst:1056
 msgid ""
@@ -1452,7 +1452,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1058
 msgid "**searchbox.html** -- the \"quick search\" box"
-msgstr ""
+msgstr "**searchbox.html** -- the \"quick search\" box"
 
 #: ../../usage/configuration.rst:1067
 msgid ""
@@ -1464,7 +1464,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1072
 msgid "The ability to use globbing keys and to specify multiple sidebars."
-msgstr ""
+msgstr "The ability to use globbing keys and to specify multiple sidebars."
 
 #: ../../usage/configuration.rst:1075
 msgid ""
@@ -1502,7 +1502,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1106
 msgid "If true, add an index to the HTML documents.  Default is ``True``."
-msgstr ""
+msgstr "If true, add an index to the HTML documents.  Default is ``True``."
 
 #: ../../usage/configuration.rst:1112
 msgid ""
@@ -1596,27 +1596,27 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1205
 msgid "Support is present for these languages:"
-msgstr ""
+msgstr "Support is present for these languages:"
 
 #: ../../usage/configuration.rst:1216
 msgid "``no`` -- Norwegian"
-msgstr ""
+msgstr "``no`` -- Norwegian"
 
 #: ../../usage/configuration.rst:1217
 msgid "``pt`` -- Portuguese"
-msgstr ""
+msgstr "``pt`` -- Portuguese"
 
 #: ../../usage/configuration.rst:1218
 msgid "``ro`` -- Romanian"
-msgstr ""
+msgstr "``ro`` -- Romanian"
 
 #: ../../usage/configuration.rst:1223
 msgid "``zh`` -- Chinese"
-msgstr ""
+msgstr "``zh`` -- Chinese"
 
 #: ../../usage/configuration.rst:1225
 msgid "Accelerating build speed"
-msgstr ""
+msgstr "Accelerating build speed"
 
 #: ../../usage/configuration.rst:1227
 msgid ""
@@ -1627,19 +1627,19 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1231
 msgid "`PorterStemmer <https://pypi.org/project/PorterStemmer/>`_ (``en``)"
-msgstr ""
+msgstr "`PorterStemmer <https://pypi.org/project/PorterStemmer/>`_ (``en``)"
 
 #: ../../usage/configuration.rst:1232
 msgid "`PyStemmer <https://pypi.org/project/PyStemmer/>`_ (all languages)"
-msgstr ""
+msgstr "`PyStemmer <https://pypi.org/project/PyStemmer/>`_ (all languages)"
 
 #: ../../usage/configuration.rst:1234
 msgid "With support for ``en`` and ``ja``."
-msgstr ""
+msgstr "With support for ``en`` and ``ja``."
 
 #: ../../usage/configuration.rst:1237
 msgid "Added additional languages."
-msgstr ""
+msgstr "Added additional languages."
 
 #: ../../usage/configuration.rst:1242
 msgid ""
@@ -1649,15 +1649,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1245
 msgid "The English support has no options."
-msgstr ""
+msgstr "The English support has no options."
 
 #: ../../usage/configuration.rst:1247
 msgid "The Japanese support has these options:"
-msgstr ""
+msgstr "The Japanese support has these options:"
 
 #: ../../usage/configuration.rst
 msgid "type"
-msgstr ""
+msgstr "type"
 
 #: ../../usage/configuration.rst:1250
 msgid ""
@@ -1669,19 +1669,19 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1255
 msgid "You can choose from these modules:"
-msgstr ""
+msgstr "You can choose from these modules:"
 
 #: ../../usage/configuration.rst
 msgid "'sphinx.search.ja.DefaultSplitter'"
-msgstr ""
+msgstr "'sphinx.search.ja.DefaultSplitter'"
 
 #: ../../usage/configuration.rst:1258
 msgid "TinySegmenter algorithm. This is default splitter."
-msgstr ""
+msgstr "TinySegmenter algorithm. This is default splitter."
 
 #: ../../usage/configuration.rst
 msgid "'sphinx.search.ja.MecabSplitter'"
-msgstr ""
+msgstr "'sphinx.search.ja.MecabSplitter'"
 
 #: ../../usage/configuration.rst:1260
 msgid ""
@@ -1692,7 +1692,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst
 msgid "'sphinx.search.ja.JanomeSplitter'"
-msgstr ""
+msgstr "'sphinx.search.ja.JanomeSplitter'"
 
 #: ../../usage/configuration.rst:1264
 msgid ""
@@ -1709,31 +1709,31 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1272
 msgid "Other option values depend on splitter value which you choose."
-msgstr ""
+msgstr "Other option values depend on splitter value which you choose."
 
 #: ../../usage/configuration.rst:1290
 msgid "Options for ``'mecab'``:"
-msgstr ""
+msgstr "'''mecab'``的选项:"
 
 #: ../../usage/configuration.rst
 msgid "dic_enc"
-msgstr ""
+msgstr "dic_enc"
 
 #: ../../usage/configuration.rst:1276
 msgid "_`dic_enc option` is the encoding for the MeCab algorithm."
-msgstr ""
+msgstr "_`dic_enc option` is the encoding for the MeCab algorithm."
 
 #: ../../usage/configuration.rst
 msgid "dict"
-msgstr ""
+msgstr "dict"
 
 #: ../../usage/configuration.rst:1278
 msgid "_`dict option` is the dictionary to use for the MeCab algorithm."
-msgstr ""
+msgstr "_`dict option` is the dictionary to use for the MeCab algorithm."
 
 #: ../../usage/configuration.rst
 msgid "lib"
-msgstr ""
+msgstr "lib"
 
 #: ../../usage/configuration.rst:1280
 msgid ""
@@ -1743,19 +1743,19 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1297
 msgid "Options for ``'janome'``:"
-msgstr ""
+msgstr "'''janome'``的选项:"
 
 #: ../../usage/configuration.rst
 msgid "user_dic"
-msgstr ""
+msgstr "user_dic"
 
 #: ../../usage/configuration.rst:1294
 msgid "_`user_dic option` is the user dictionary file path for Janome."
-msgstr ""
+msgstr "_`user_dic option` is the user dictionary file path for Janome."
 
 #: ../../usage/configuration.rst
 msgid "user_dic_enc"
-msgstr ""
+msgstr "user_dic_enc"
 
 #: ../../usage/configuration.rst:1296
 msgid ""
@@ -1771,7 +1771,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1305
 msgid "The Chinese support has these options:"
-msgstr ""
+msgstr "The Chinese support has these options:"
 
 #: ../../usage/configuration.rst:1307
 msgid ""
@@ -1807,11 +1807,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1345
 msgid "Output is processed with HTML4 writer.  Default is ``False``."
-msgstr ""
+msgstr "Output is processed with HTML4 writer.  Default is ``False``."
 
 #: ../../usage/configuration.rst:1348
 msgid "Options for Single HTML output"
-msgstr ""
+msgstr "单个HTML输出的选项"
 
 #: ../../usage/configuration.rst:1352
 msgid ""
@@ -1824,11 +1824,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1361
 msgid "Options for HTML help output"
-msgstr ""
+msgstr "HTML帮助输出选项"
 
 #: ../../usage/configuration.rst:1365
 msgid "Output file base name for HTML help builder.  Default is ``'pydoc'``."
-msgstr ""
+msgstr "Output file base name for HTML help builder.  Default is ``'pydoc'``."
 
 #: ../../usage/configuration.rst:1369
 msgid ""
@@ -1838,11 +1838,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1376
 msgid "Suffix for generated links to HTML files.  The default is ``\".html\"``."
-msgstr ""
+msgstr "Suffix for generated links to HTML files.  The default is ``\".html\"``."
 
 #: ../../usage/configuration.rst:1384
 msgid "Options for Apple Help output"
-msgstr ""
+msgstr "Apple帮助输出选项"
 
 #: ../../usage/configuration.rst:1388
 msgid ""
@@ -1873,11 +1873,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1409
 msgid "The bundle ID for the help book bundle."
-msgstr ""
+msgstr "The bundle ID for the help book bundle."
 
 #: ../../usage/configuration.rst:1413
 msgid "You *must* set this value in order to generate Apple Help."
-msgstr ""
+msgstr "You *must* set this value in order to generate Apple Help."
 
 #: ../../usage/configuration.rst:1417
 msgid ""
@@ -1887,7 +1887,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1422
 msgid "The bundle version (as a string).  Defaults to ``'1'``."
-msgstr ""
+msgstr "The bundle version (as a string).  Defaults to ``'1'``."
 
 #: ../../usage/configuration.rst:1426
 msgid ""
@@ -1914,7 +1914,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1444
 msgid "Defaults to ``None`` for no remote search."
-msgstr ""
+msgstr "Defaults to ``None`` for no remote search."
 
 #: ../../usage/configuration.rst:1448
 msgid ""
@@ -1932,7 +1932,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1456
 msgid "Defaults to ``None`` for no remote content."
-msgstr ""
+msgstr "Defaults to ``None`` for no remote content."
 
 #: ../../usage/configuration.rst:1460
 msgid ""
@@ -1960,71 +1960,71 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1480
 msgid "Language"
-msgstr ""
+msgstr "Language"
 
 #: ../../usage/configuration.rst:1480
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #: ../../usage/configuration.rst:1482
 msgid "English"
-msgstr ""
+msgstr "English"
 
 #: ../../usage/configuration.rst:1482
 msgid "en"
-msgstr ""
+msgstr "en"
 
 #: ../../usage/configuration.rst:1483
 msgid "German"
-msgstr ""
+msgstr "German"
 
 #: ../../usage/configuration.rst:1483
 msgid "de"
-msgstr ""
+msgstr "de"
 
 #: ../../usage/configuration.rst:1484
 msgid "Spanish"
-msgstr ""
+msgstr "Spanish"
 
 #: ../../usage/configuration.rst:1484
 msgid "es"
-msgstr ""
+msgstr "es"
 
 #: ../../usage/configuration.rst:1485
 msgid "French"
-msgstr ""
+msgstr "French"
 
 #: ../../usage/configuration.rst:1485
 msgid "fr"
-msgstr ""
+msgstr "fr"
 
 #: ../../usage/configuration.rst:1486
 msgid "Swedish"
-msgstr ""
+msgstr "Swedish"
 
 #: ../../usage/configuration.rst:1486
 msgid "sv"
-msgstr ""
+msgstr "sv"
 
 #: ../../usage/configuration.rst:1487
 msgid "Hungarian"
-msgstr ""
+msgstr "Hungarian"
 
 #: ../../usage/configuration.rst:1487
 msgid "hu"
-msgstr ""
+msgstr "hu"
 
 #: ../../usage/configuration.rst:1488
 msgid "Italian"
-msgstr ""
+msgstr "Italian"
 
 #: ../../usage/configuration.rst:1488
 msgid "it"
-msgstr ""
+msgstr "it"
 
 #: ../../usage/configuration.rst:1491 ../../usage/configuration.rst:1499
 msgid "Defaults to :confval:`language`, or if that is not set, to :confval:`en`."
-msgstr ""
+msgstr "Defaults to :confval:`language`, or if that is not set, to :confval:`en`."
 
 #: ../../usage/configuration.rst:1495
 msgid ""
@@ -2035,7 +2035,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1503
 msgid "Specifies the help book title.  Defaults to :samp:`'{<project>} Help'`."
-msgstr ""
+msgstr "Specifies the help book title.  Defaults to :samp:`'{<project>} Help'`."
 
 #: ../../usage/configuration.rst:1507
 msgid ""
@@ -2090,11 +2090,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1542
 msgid "Defaults to ``False``."
-msgstr ""
+msgstr "Defaults to ``False``."
 
 #: ../../usage/configuration.rst:1548
 msgid "Options for epub output"
-msgstr ""
+msgstr "epub输出的选项"
 
 #: ../../usage/configuration.rst:1550
 msgid ""
@@ -2128,15 +2128,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1580
 msgid "It defaults to the ``project`` option."
-msgstr ""
+msgstr "It defaults to the ``project`` option."
 
 #: ../../usage/configuration.rst:1585
 msgid "The description of the document. The default value is ``'unknown'``."
-msgstr ""
+msgstr "The description of the document. The default value is ``'unknown'``."
 
 #: ../../usage/configuration.rst:1589
 msgid "Renamed from ``epub3_description``"
-msgstr ""
+msgstr "Renamed from ``epub3_description``"
 
 #: ../../usage/configuration.rst:1594
 msgid ""
@@ -2153,7 +2153,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1605
 msgid "Renamed from ``epub3_contributor``"
-msgstr ""
+msgstr "Renamed from ``epub3_contributor``"
 
 #: ../../usage/configuration.rst:1610
 msgid ""
@@ -2209,7 +2209,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1658 ../../usage/configuration.rst:1682
 msgid "The default value is ``()``."
-msgstr ""
+msgstr "The default value is ``()``."
 
 #: ../../usage/configuration.rst:1664
 msgid ""
@@ -2238,7 +2238,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1694
 msgid "The default value is ``[]``."
-msgstr ""
+msgstr "The default value is ``[]``."
 
 #: ../../usage/configuration.rst:1698
 msgid ""
@@ -2277,11 +2277,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1726
 msgid "``'default'`` -- include all toc entries that are not hidden (default)"
-msgstr ""
+msgstr "``'default'`` -- include all toc entries that are not hidden (default)"
 
 #: ../../usage/configuration.rst:1727
 msgid "``'includehidden'`` -- include all toc entries"
-msgstr ""
+msgstr "``'includehidden'`` -- include all toc entries"
 
 #: ../../usage/configuration.rst:1733
 msgid ""
@@ -2310,15 +2310,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1757
 msgid "``'inline'`` -- display URLs inline in parentheses (default)"
-msgstr ""
+msgstr "``'inline'`` -- display URLs inline in parentheses (default)"
 
 #: ../../usage/configuration.rst:1758 ../../usage/configuration.rst:1936
 msgid "``'footnote'`` -- display URLs in footnotes"
-msgstr ""
+msgstr "``'footnote'`` -- display URLs in footnotes"
 
 #: ../../usage/configuration.rst:1759 ../../usage/configuration.rst:2192
 msgid "``'no'`` -- do not display URLs"
-msgstr ""
+msgstr "``'no'`` -- do not display URLs"
 
 #: ../../usage/configuration.rst:1761
 msgid ""
@@ -2341,63 +2341,63 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1783
 msgid "``epub_writing_mode``"
-msgstr ""
+msgstr "``epub_writing_mode``"
 
 #: ../../usage/configuration.rst:1784
 msgid "``'horizontal'``"
-msgstr ""
+msgstr "``'horizontal'``"
 
 #: ../../usage/configuration.rst:1785
 msgid "``'vertical'``"
-msgstr ""
+msgstr "``'vertical'``"
 
 #: ../../usage/configuration.rst:1786
 msgid "writing-mode [#]_"
-msgstr ""
+msgstr "writing-mode [#]_"
 
 #: ../../usage/configuration.rst:1787
 msgid "``horizontal-tb``"
-msgstr ""
+msgstr "``horizontal-tb``"
 
 #: ../../usage/configuration.rst:1788
 msgid "``vertical-rl``"
-msgstr ""
+msgstr "``vertical-rl``"
 
 #: ../../usage/configuration.rst:1789
 msgid "page progression"
-msgstr ""
+msgstr "page progression"
 
 #: ../../usage/configuration.rst:1790
 msgid "left to right"
-msgstr ""
+msgstr "left to right"
 
 #: ../../usage/configuration.rst:1791
 msgid "right to left"
-msgstr ""
+msgstr "right to left"
 
 #: ../../usage/configuration.rst:1792
 msgid "iBook's Scroll Theme support"
-msgstr ""
+msgstr "iBook's Scroll Theme support"
 
 #: ../../usage/configuration.rst:1793
 msgid "scroll-axis is vertical."
-msgstr ""
+msgstr "scroll-axis is vertical."
 
 #: ../../usage/configuration.rst:1794
 msgid "scroll-axis is horizontal."
-msgstr ""
+msgstr "scroll-axis is horizontal."
 
 #: ../../usage/configuration.rst:1796
 msgid "https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode"
 
 #: ../../usage/configuration.rst:1802
 msgid "Options for LaTeX output"
-msgstr ""
+msgstr "LaTeX输出的选项"
 
 #: ../../usage/configuration.rst:1804
 msgid "These options influence LaTeX output."
-msgstr ""
+msgstr "These options influence LaTeX output."
 
 #: ../../usage/configuration.rst:1808
 msgid ""
@@ -2407,23 +2407,23 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1811
 msgid "``'pdflatex'`` -- PDFLaTeX (default)"
-msgstr ""
+msgstr "``'pdflatex'`` -- PDFLaTeX (default)"
 
 #: ../../usage/configuration.rst:1812
 msgid "``'xelatex'`` -- XeLaTeX"
-msgstr ""
+msgstr "``'xelatex'`` -- XeLaTeX"
 
 #: ../../usage/configuration.rst:1813
 msgid "``'lualatex'`` -- LuaLaTeX"
-msgstr ""
+msgstr "``'lualatex'`` -- LuaLaTeX"
 
 #: ../../usage/configuration.rst:1814
 msgid "``'platex'`` -- pLaTeX (default if :confval:`language` is ``'ja'``)"
-msgstr ""
+msgstr "``'platex'`` -- pLaTeX (default if :confval:`language` is ``'ja'``)"
 
 #: ../../usage/configuration.rst:1816
 msgid "``'pdflatex'``\\ 's support for Unicode characters is limited."
-msgstr ""
+msgstr "``'pdflatex'``\\ 's support for Unicode characters is limited."
 
 #: ../../usage/configuration.rst:1820
 msgid ""
@@ -2464,7 +2464,7 @@ msgstr ""
 #: ../../usage/configuration.rst:1850 ../../usage/configuration.rst:2091
 #: ../../usage/configuration.rst:2138
 msgid "*startdocname*"
-msgstr ""
+msgstr "*startdocname*"
 
 #: ../../usage/configuration.rst:1847
 msgid ""
@@ -2477,15 +2477,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1853 ../../usage/configuration.rst:2141
 msgid "*targetname*"
-msgstr ""
+msgstr "*targetname*"
 
 #: ../../usage/configuration.rst:1853
 msgid "File name of the LaTeX file in the output directory."
-msgstr ""
+msgstr "File name of the LaTeX file in the output directory."
 
 #: ../../usage/configuration.rst:1859 ../../usage/configuration.rst:2146
 msgid "*title*"
-msgstr ""
+msgstr "*title*"
 
 #: ../../usage/configuration.rst:1856
 msgid ""
@@ -2497,7 +2497,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1864 ../../usage/configuration.rst:2150
 msgid "*author*"
-msgstr ""
+msgstr "*author*"
 
 #: ../../usage/configuration.rst:1862
 msgid ""
@@ -2509,7 +2509,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1872
 msgid "*documentclass*"
-msgstr ""
+msgstr "*documentclass*"
 
 #: ../../usage/configuration.rst:1867
 msgid ""
@@ -2524,7 +2524,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1878 ../../usage/configuration.rst:2166
 msgid "*toctree_only*"
-msgstr ""
+msgstr "*toctree_only*"
 
 #: ../../usage/configuration.rst:1875
 msgid ""
@@ -2543,7 +2543,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1885
 msgid "The 6th item ``toctree_only``.  Tuples with 5 items are still accepted."
-msgstr ""
+msgstr "The 6th item ``toctree_only``.  Tuples with 5 items are still accepted."
 
 #: ../../usage/configuration.rst:1890
 msgid ""
@@ -2571,7 +2571,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1910 ../../usage/configuration.rst:2172
 msgid "A list of document names to append as an appendix to all manuals."
-msgstr ""
+msgstr "A list of document names to append as an appendix to all manuals."
 
 #: ../../usage/configuration.rst:1918 ../../usage/configuration.rst:2182
 msgid ""
@@ -2593,11 +2593,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:1935
 msgid "``'no'`` -- do not display URLs (default)"
-msgstr ""
+msgstr "``'no'`` -- do not display URLs (default)"
 
 #: ../../usage/configuration.rst:1937 ../../usage/configuration.rst:2193
 msgid "``'inline'`` -- display URLs inline in parentheses"
-msgstr ""
+msgstr "``'inline'`` -- display URLs inline in parentheses"
 
 #: ../../usage/configuration.rst:1940
 msgid ""
@@ -2706,23 +2706,23 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2031
 msgid "Options for text output"
-msgstr ""
+msgstr "文本输出选项"
 
 #: ../../usage/configuration.rst:2033
 msgid "These options influence text output."
-msgstr ""
+msgstr "These options influence text output."
 
 #: ../../usage/configuration.rst:2037
 msgid "Determines which end-of-line character(s) are used in text output."
-msgstr ""
+msgstr "Determines which end-of-line character(s) are used in text output."
 
 #: ../../usage/configuration.rst:2039
 msgid "``'unix'``: use Unix-style line endings (``\\n``)"
-msgstr ""
+msgstr "``'unix'``: use Unix-style line endings (``\\n``)"
 
 #: ../../usage/configuration.rst:2040
 msgid "``'windows'``: use Windows-style line endings (``\\r\\n``)"
-msgstr ""
+msgstr "``'windows'``: use Windows-style line endings (``\\r\\n``)"
 
 #: ../../usage/configuration.rst:2041
 msgid ""
@@ -2732,7 +2732,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2044
 msgid "Default: ``'unix'``."
-msgstr ""
+msgstr "Default: ``'unix'``."
 
 #: ../../usage/configuration.rst:2050
 msgid ""
@@ -2743,7 +2743,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2054
 msgid "The default is ``'*=-~\"+`'``."
-msgstr ""
+msgstr "The default is ``'*=-~\"+`'``."
 
 #: ../../usage/configuration.rst:2060
 msgid ""
@@ -2759,11 +2759,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2076
 msgid "Options for manual page output"
-msgstr ""
+msgstr "手动页面输出选项"
 
 #: ../../usage/configuration.rst:2078
 msgid "These options influence manual page output."
-msgstr ""
+msgstr "These options influence manual page output."
 
 #: ../../usage/configuration.rst:2082
 msgid ""
@@ -2783,7 +2783,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2096
 msgid "*name*"
-msgstr ""
+msgstr "*name*"
 
 #: ../../usage/configuration.rst:2094
 msgid ""
@@ -2794,15 +2794,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2099 ../../usage/configuration.rst:2156
 msgid "*description*"
-msgstr ""
+msgstr "*description*"
 
 #: ../../usage/configuration.rst:2099
 msgid "Description of the manual page.  This is used in the NAME section."
-msgstr ""
+msgstr "Description of the manual page.  This is used in the NAME section."
 
 #: ../../usage/configuration.rst:2104
 msgid "*authors*"
-msgstr ""
+msgstr "*authors*"
 
 #: ../../usage/configuration.rst:2102
 msgid ""
@@ -2813,7 +2813,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2108
 msgid "*section*"
-msgstr ""
+msgstr "*section*"
 
 #: ../../usage/configuration.rst:2107
 msgid ""
@@ -2823,15 +2823,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2114
 msgid "If true, add URL addresses after links.  Default is ``False``."
-msgstr ""
+msgstr "If true, add URL addresses after links.  Default is ``False``."
 
 #: ../../usage/configuration.rst:2122
 msgid "Options for Texinfo output"
-msgstr ""
+msgstr "Texinfo输出的选项"
 
 #: ../../usage/configuration.rst:2124
 msgid "These options influence Texinfo output."
-msgstr ""
+msgstr "These options influence Texinfo output."
 
 #: ../../usage/configuration.rst:2128
 msgid ""
@@ -2852,7 +2852,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2141
 msgid "File name (no extension) of the Texinfo file in the output directory."
-msgstr ""
+msgstr "File name (no extension) of the Texinfo file in the output directory."
 
 #: ../../usage/configuration.rst:2144
 msgid ""
@@ -2869,19 +2869,19 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2153
 msgid "*dir_entry*"
-msgstr ""
+msgstr "*dir_entry*"
 
 #: ../../usage/configuration.rst:2153
 msgid "The name that will appear in the top-level ``DIR`` menu file."
-msgstr ""
+msgstr "The name that will appear in the top-level ``DIR`` menu file."
 
 #: ../../usage/configuration.rst:2156
 msgid "Descriptive text to appear in the top-level ``DIR`` menu file."
-msgstr ""
+msgstr "Descriptive text to appear in the top-level ``DIR`` menu file."
 
 #: ../../usage/configuration.rst:2160
 msgid "*category*"
-msgstr ""
+msgstr "*category*"
 
 #: ../../usage/configuration.rst:2159
 msgid ""
@@ -2899,11 +2899,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2189
 msgid "Control how to display URL addresses."
-msgstr ""
+msgstr "Control how to display URL addresses."
 
 #: ../../usage/configuration.rst:2191
 msgid "``'footnote'`` -- display URLs in footnotes (default)"
-msgstr ""
+msgstr "``'footnote'`` -- display URLs in footnotes (default)"
 
 #: ../../usage/configuration.rst:2199
 msgid ""
@@ -2920,11 +2920,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2209
 msgid "Keys that you may want to override include:"
-msgstr ""
+msgstr "Keys that you may want to override include:"
 
 #: ../../usage/configuration.rst:2213
 msgid "``'paragraphindent'``"
-msgstr ""
+msgstr "``'paragraphindent'``"
 
 #: ../../usage/configuration.rst:2212
 msgid ""
@@ -2934,7 +2934,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2217
 msgid "``'exampleindent'``"
-msgstr ""
+msgstr "``'exampleindent'``"
 
 #: ../../usage/configuration.rst:2216
 msgid ""
@@ -2944,15 +2944,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2220
 msgid "``'preamble'``"
-msgstr ""
+msgstr "``'preamble'``"
 
 #: ../../usage/configuration.rst:2220
 msgid "Texinfo markup inserted near the beginning of the file."
-msgstr ""
+msgstr "Texinfo markup inserted near the beginning of the file."
 
 #: ../../usage/configuration.rst:2225
 msgid "``'copying'``"
-msgstr ""
+msgstr "``'copying'``"
 
 #: ../../usage/configuration.rst:2223
 msgid ""
@@ -2975,7 +2975,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2245
 msgid "Options for QtHelp output"
-msgstr ""
+msgstr "QtHelp输出的选项"
 
 #: ../../usage/configuration.rst:2247
 msgid ""
@@ -2997,11 +2997,11 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2262
 msgid "The HTML theme for the qthelp output. This defaults to ``'nonav'``."
-msgstr ""
+msgstr "The HTML theme for the qthelp output. This defaults to ``'nonav'``."
 
 #: ../../usage/configuration.rst:2273
 msgid "Options for the linkcheck builder"
-msgstr ""
+msgstr "linkcheck构建器的选项"
 
 #: ../../usage/configuration.rst:2277
 msgid ""
@@ -3052,15 +3052,15 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2335
 msgid "Options for the XML builder"
-msgstr ""
+msgstr "XML构建器的选项"
 
 #: ../../usage/configuration.rst:2339
 msgid "If true, pretty-print the XML.  Default is ``True``."
-msgstr ""
+msgstr "如果为true，则打印XML。默认为 ``True``。"
 
 #: ../../usage/configuration.rst:2345
 msgid "Footnotes"
-msgstr ""
+msgstr "脚注"
 
 #: ../../usage/configuration.rst:2346
 msgid ""
@@ -3072,7 +3072,7 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2355
 msgid "Options for the C++ domain"
-msgstr ""
+msgstr "C++ 域选项"
 
 #: ../../usage/configuration.rst:2359
 msgid ""
@@ -3099,5 +3099,5 @@ msgstr ""
 
 #: ../../usage/configuration.rst:2384
 msgid "Example of configuration file"
-msgstr ""
+msgstr "配置文件示例"
 

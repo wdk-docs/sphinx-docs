@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
+"Project-Id-Version: Sphinx 2.1.0+/89df177\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,26 @@ msgstr ""
 
 #: ../../_templates/index.html:2
 msgid "Overview"
-msgstr "概述"
+msgstr ""
 
 #: ../../_templates/index.html:4
 msgid "Welcome"
-msgstr "欢迎"
+msgstr ""
 
 #: ../../_templates/index.html:7
 msgid "What users say:"
-msgstr "用户怎么说:"
+msgstr ""
 
 #: ../../_templates/index.html:8
 msgid "&#8220;Cheers for a great tool that actually makes programmers <b>want</b>\n"
 "      to write documentation!&#8220;"
-msgstr "&#8220;<b>渴望</b>一个伟大的工具，\n"
-"      实际上让程序员想要编写文档！&#8220;"
+msgstr ""
 
 #: ../../_templates/index.html:12
 msgid "\n"
 "    Sphinx is a tool that makes it easy to create intelligent and beautiful\n"
 "    documentation, written by Georg Brandl and licensed under the BSD license."
-msgstr "\nSphinx是一个工具，可以轻松创建由Georg Brandl编写并根据BSD许可证授权的智能和美观文档。"
+msgstr ""
 
 #: ../../_templates/index.html:15
 msgid "It was originally created for <a href=\"https://docs.python.org/\">the\n"

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:4
 msgid ":mod:`sphinx.ext.doctest` -- Test snippets in the documentation"
-msgstr ""
+msgstr ":mod:`sphinx.ext.doctest` -- Test snippets in the documentation"
 
 #: ../../usage/extensions/doctest.rst:14
 msgid ""
@@ -36,11 +36,11 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:21
 msgid "zero or more *setup code* blocks (e.g. importing the module to test)"
-msgstr ""
+msgstr "zero or more *setup code* blocks (e.g. importing the module to test)"
 
 #: ../../usage/extensions/doctest.rst:22
 msgid "one or more *test* blocks"
-msgstr ""
+msgstr "one or more *test* blocks"
 
 #: ../../usage/extensions/doctest.rst:24
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:28
 msgid "There are two kinds of test blocks:"
-msgstr ""
+msgstr "There are two kinds of test blocks:"
 
 #: ../../usage/extensions/doctest.rst:30
 msgid ""
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:38
 msgid "Directives"
-msgstr ""
+msgstr "Directives"
 
 #: ../../usage/extensions/doctest.rst:40
 msgid ""
@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:66
 msgid "This directive supports three options:"
-msgstr ""
+msgstr "This directive supports three options:"
 
 #: ../../usage/extensions/doctest.rst:68
 msgid ""
@@ -125,31 +125,31 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:83
 msgid "The following operands are supported:"
-msgstr ""
+msgstr "The following operands are supported:"
 
 #: ../../usage/extensions/doctest.rst:85
 msgid "``~=``: Compatible release clause"
-msgstr ""
+msgstr "``~=``: Compatible release clause"
 
 #: ../../usage/extensions/doctest.rst:86
 msgid "``==``: Version matching clause"
-msgstr ""
+msgstr "``==``: Version matching clause"
 
 #: ../../usage/extensions/doctest.rst:87
 msgid "``!=``: Version exclusion clause"
-msgstr ""
+msgstr "``!=``: Version exclusion clause"
 
 #: ../../usage/extensions/doctest.rst:88
 msgid "``<=``, ``>=``: Inclusive ordered comparison clause"
-msgstr ""
+msgstr "``<=``, ``>=``: Inclusive ordered comparison clause"
 
 #: ../../usage/extensions/doctest.rst:89
 msgid "``<``, ``>``: Exclusive ordered comparison clause"
-msgstr ""
+msgstr "``<``, ``>``: Exclusive ordered comparison clause"
 
 #: ../../usage/extensions/doctest.rst:90
 msgid "``===``: Arbitrary equality clause."
-msgstr ""
+msgstr "``===``: Arbitrary equality clause."
 
 #: ../../usage/extensions/doctest.rst:92
 msgid ""
@@ -159,7 +159,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:99
 msgid "Supported PEP-440 operands and notations"
-msgstr ""
+msgstr "Supported PEP-440 operands and notations"
 
 #: ../../usage/extensions/doctest.rst:101
 msgid ""
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:105
 msgid "Also, you can give inline doctest options, like in doctest::"
-msgstr ""
+msgstr "Also, you can give inline doctest options, like in doctest::"
 
 #: ../../usage/extensions/doctest.rst:110
 msgid ""
@@ -180,11 +180,11 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:116
 msgid "A code block for a code-output-style test."
-msgstr ""
+msgstr "A code block for a code-output-style test."
 
 #: ../../usage/extensions/doctest.rst:118
 msgid "This directive supports one option:"
-msgstr ""
+msgstr "This directive supports one option:"
 
 #: ../../usage/extensions/doctest.rst:120
 msgid ""
@@ -214,7 +214,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:148
 msgid "This directive supports two options:"
-msgstr ""
+msgstr "This directive supports two options:"
 
 #: ../../usage/extensions/doctest.rst:150
 msgid ""
@@ -230,7 +230,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:156
 msgid "Example::"
-msgstr ""
+msgstr "Example::"
 
 #: ../../usage/extensions/doctest.rst:168
 msgid ""
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:202
 msgid "Skipping tests conditionally"
-msgstr ""
+msgstr "Skipping tests conditionally"
 
 #: ../../usage/extensions/doctest.rst:204
 msgid ""
@@ -255,47 +255,47 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:211
 msgid ":rst:dir:`testsetup` and :rst:dir:`testcleanup`"
-msgstr ""
+msgstr ":rst:dir:`testsetup` and :rst:dir:`testcleanup`"
 
 #: ../../usage/extensions/doctest.rst:213
 msgid "conditionally skip test setup and/or cleanup"
-msgstr ""
+msgstr "conditionally skip test setup and/or cleanup"
 
 #: ../../usage/extensions/doctest.rst:214
 msgid "customize setup/cleanup code per environment"
-msgstr ""
+msgstr "customize setup/cleanup code per environment"
 
 #: ../../usage/extensions/doctest.rst:216
 msgid ":rst:dir:`doctest`"
-msgstr ""
+msgstr ":rst:dir:`doctest`"
 
 #: ../../usage/extensions/doctest.rst:218
 msgid "conditionally skip both a test and its output verification"
-msgstr ""
+msgstr "conditionally skip both a test and its output verification"
 
 #: ../../usage/extensions/doctest.rst:220
 msgid ":rst:dir:`testcode`"
-msgstr ""
+msgstr ":rst:dir:`testcode`"
 
 #: ../../usage/extensions/doctest.rst:222
 msgid "conditionally skip a test"
-msgstr ""
+msgstr "conditionally skip a test"
 
 #: ../../usage/extensions/doctest.rst:223
 msgid "customize test code per environment"
-msgstr ""
+msgstr "customize test code per environment"
 
 #: ../../usage/extensions/doctest.rst:225
 msgid ":rst:dir:`testoutput`"
-msgstr ""
+msgstr ":rst:dir:`testoutput`"
 
 #: ../../usage/extensions/doctest.rst:227
 msgid "conditionally skip output assertion for a skipped test"
-msgstr ""
+msgstr "conditionally skip output assertion for a skipped test"
 
 #: ../../usage/extensions/doctest.rst:228
 msgid "expect different output depending on the environment"
-msgstr ""
+msgstr "expect different output depending on the environment"
 
 #: ../../usage/extensions/doctest.rst:230
 msgid ""
@@ -313,27 +313,27 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:238
 msgid "Here's an example which skips some tests if Pandas is not installed:"
-msgstr ""
+msgstr "Here's an example which skips some tests if Pandas is not installed:"
 
 #: ../../usage/extensions/doctest.rst:240
 msgid "conf.py"
-msgstr ""
+msgstr "conf.py"
 
 #: ../../usage/extensions/doctest.rst:251
 msgid "contents.rst"
-msgstr ""
+msgstr "contents.rst"
 
 #: ../../usage/extensions/doctest.rst:277
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/doctest.rst:279
 msgid "The doctest extension uses the following configuration values:"
-msgstr ""
+msgstr "The doctest extension uses the following configuration values:"
 
 #: ../../usage/extensions/doctest.rst:283
 msgid "By default, these options are enabled:"
-msgstr ""
+msgstr "By default, these options are enabled:"
 
 #: ../../usage/extensions/doctest.rst:285
 msgid ""

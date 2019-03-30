@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:5
 msgid "Builders"
-msgstr ""
+msgstr "构建器"
 
 #: ../../usage/builders/index.rst:10
 msgid ""
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:86
 msgid "Moved to sphinxcontrib.qthelp from sphinx.builders package."
-msgstr ""
+msgstr "Moved to sphinxcontrib.qthelp from sphinx.builders package."
 
 #: ../../usage/builders/index.rst:99
 msgid ""
@@ -103,7 +103,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:124
 msgid "Moved to sphinxcontrib.applehelp from sphinx.builders package."
-msgstr ""
+msgstr "Moved to sphinxcontrib.applehelp from sphinx.builders package."
 
 #: ../../usage/builders/index.rst:129
 msgid ""
@@ -114,7 +114,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:141
 msgid "Moved to sphinxcontrib.devhelp from sphinx.builders package."
-msgstr ""
+msgstr "Moved to sphinxcontrib.devhelp from sphinx.builders package."
 
 #: ../../usage/builders/index.rst:146
 msgid ""
@@ -154,15 +154,15 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:180
 msgid "``texlive-latex-recommended``"
-msgstr ""
+msgstr "``texlive-latex-recommended``"
 
 #: ../../usage/builders/index.rst:181
 msgid "``texlive-fonts-recommended``"
-msgstr ""
+msgstr "``texlive-fonts-recommended``"
 
 #: ../../usage/builders/index.rst:182
 msgid "``texlive-latex-extra``"
-msgstr ""
+msgstr "``texlive-latex-extra``"
 
 #: ../../usage/builders/index.rst:183
 msgid ""
@@ -208,11 +208,11 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:204
 msgid "Formerly, testing had been done on Ubuntu precise (TeXLive 2009)."
-msgstr ""
+msgstr "Formerly, testing had been done on Ubuntu precise (TeXLive 2009)."
 
 #: ../../usage/builders/index.rst:207
 msgid "Formerly, testing had been done on Ubuntu trusty (TeXLive 2013)."
-msgstr ""
+msgstr "Formerly, testing had been done on Ubuntu trusty (TeXLive 2013)."
 
 #: ../../usage/builders/index.rst:212
 msgid ""
@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:223
 msgid "reduces console output to a minimum."
-msgstr ""
+msgstr "reduces console output to a minimum."
 
 #: ../../usage/builders/index.rst:225
 msgid ""
@@ -305,7 +305,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:332
 msgid "The suffix for all regular files."
-msgstr ""
+msgstr "The suffix for all regular files."
 
 #: ../../usage/builders/index.rst:336
 msgid ""
@@ -316,12 +316,12 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:342
 msgid "The filename for the search index Sphinx generates."
-msgstr ""
+msgstr "The filename for the search index Sphinx generates."
 
 #: ../../usage/builders/index.rst:344 ../../usage/builders/index.rst:354
 #: ../../usage/builders/index.rst:373
 msgid "See :ref:`serialization-details` for details about the output format."
-msgstr ""
+msgstr "See :ref:`serialization-details` for details about the output format."
 
 #: ../../usage/builders/index.rst:350
 msgid ""
@@ -332,7 +332,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:358
 msgid "The old name ``web`` still works as well."
-msgstr ""
+msgstr "The old name ``web`` still works as well."
 
 #: ../../usage/builders/index.rst:364
 msgid ""
@@ -361,7 +361,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:392
 msgid "See the documentation on :ref:`intl` for further reference."
-msgstr ""
+msgstr "See the documentation on :ref:`intl` for further reference."
 
 #: ../../usage/builders/index.rst:405
 msgid ""
@@ -387,7 +387,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:443
 msgid "Since Sphinx-1.5, the linkcheck builder comes to use requests module."
-msgstr ""
+msgstr "Since Sphinx-1.5, the linkcheck builder comes to use requests module."
 
 #: ../../usage/builders/index.rst:448
 msgid ""
@@ -407,19 +407,19 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:477
 msgid "Built-in Sphinx extensions that offer more builders are:"
-msgstr ""
+msgstr "Built-in Sphinx extensions that offer more builders are:"
 
 #: ../../usage/builders/index.rst:479
 msgid ":mod:`~sphinx.ext.doctest`"
-msgstr ""
+msgstr ":mod:`~sphinx.ext.doctest`"
 
 #: ../../usage/builders/index.rst:480
 msgid ":mod:`~sphinx.ext.coverage`"
-msgstr ""
+msgstr ":mod:`~sphinx.ext.coverage`"
 
 #: ../../usage/builders/index.rst:486
 msgid "Serialization builder details"
-msgstr ""
+msgstr "序列化构建器详细信息"
 
 #: ../../usage/builders/index.rst:488
 msgid ""
@@ -444,7 +444,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:502
 msgid "``body``"
-msgstr ""
+msgstr "``body``"
 
 #: ../../usage/builders/index.rst:501
 msgid ""
@@ -454,39 +454,39 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:505
 msgid "``title``"
-msgstr ""
+msgstr "``title``"
 
 #: ../../usage/builders/index.rst:505
 msgid "The title of the document, as HTML (may contain markup)."
-msgstr ""
+msgstr "The title of the document, as HTML (may contain markup)."
 
 #: ../../usage/builders/index.rst:508
 msgid "``toc``"
-msgstr ""
+msgstr "``toc``"
 
 #: ../../usage/builders/index.rst:508
 msgid "The table of contents for the file, rendered as an HTML ``<ul>``."
-msgstr ""
+msgstr "The table of contents for the file, rendered as an HTML ``<ul>``."
 
 #: ../../usage/builders/index.rst:511
 msgid "``display_toc``"
-msgstr ""
+msgstr "``display_toc``"
 
 #: ../../usage/builders/index.rst:511
 msgid "A boolean that is ``True`` if the ``toc`` contains more than one entry."
-msgstr ""
+msgstr "A boolean that is ``True`` if the ``toc`` contains more than one entry."
 
 #: ../../usage/builders/index.rst:514
 msgid "``current_page_name``"
-msgstr ""
+msgstr "``current_page_name``"
 
 #: ../../usage/builders/index.rst:514
 msgid "The document name of the current file."
-msgstr ""
+msgstr "The document name of the current file."
 
 #: ../../usage/builders/index.rst:520
 msgid "``parents``, ``prev`` and ``next``"
-msgstr ""
+msgstr "``parents``, ``prev`` and ``next``"
 
 #: ../../usage/builders/index.rst:517
 msgid ""
@@ -498,51 +498,51 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:523
 msgid "``sourcename``"
-msgstr ""
+msgstr "``sourcename``"
 
 #: ../../usage/builders/index.rst:523
 msgid "The name of the source file under ``_sources``."
-msgstr ""
+msgstr "The name of the source file under ``_sources``."
 
 #: ../../usage/builders/index.rst:525
 msgid "The special files are located in the root output directory.  They are:"
-msgstr ""
+msgstr "The special files are located in the root output directory.  They are:"
 
 #: ../../usage/builders/index.rst:544
 msgid ":attr:`.SerializingHTMLBuilder.globalcontext_filename`"
-msgstr ""
+msgstr ":attr:`.SerializingHTMLBuilder.globalcontext_filename`"
 
 #: ../../usage/builders/index.rst:528
 msgid "A pickled dict with these keys:"
-msgstr ""
+msgstr "A pickled dict with these keys:"
 
 #: ../../usage/builders/index.rst:531
 msgid "``project``, ``copyright``, ``release``, ``version``"
-msgstr ""
+msgstr "``project``, ``copyright``, ``release``, ``version``"
 
 #: ../../usage/builders/index.rst:531
 msgid "The same values as given in the configuration file."
-msgstr ""
+msgstr "The same values as given in the configuration file."
 
 #: ../../usage/builders/index.rst:534
 msgid "``style``"
-msgstr ""
+msgstr "``style``"
 
 #: ../../usage/builders/index.rst:534
 msgid ":confval:`html_style`."
-msgstr ""
+msgstr ":confval:`html_style`."
 
 #: ../../usage/builders/index.rst:537
 msgid "``last_updated``"
-msgstr ""
+msgstr "``last_updated``"
 
 #: ../../usage/builders/index.rst:537
 msgid "Date of last build."
-msgstr ""
+msgstr "Date of last build."
 
 #: ../../usage/builders/index.rst:541
 msgid "``builder``"
-msgstr ""
+msgstr "``builder``"
 
 #: ../../usage/builders/index.rst:540
 msgid ""
@@ -552,15 +552,15 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:544
 msgid "``titles``"
-msgstr ""
+msgstr "``titles``"
 
 #: ../../usage/builders/index.rst:544
 msgid "A dictionary of all documents' titles, as HTML strings."
-msgstr ""
+msgstr "A dictionary of all documents' titles, as HTML strings."
 
 #: ../../usage/builders/index.rst:554
 msgid ":attr:`.SerializingHTMLBuilder.searchindex_filename`"
-msgstr ""
+msgstr ":attr:`.SerializingHTMLBuilder.searchindex_filename`"
 
 #: ../../usage/builders/index.rst:547
 msgid ""
@@ -570,7 +570,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:550
 msgid "A list of indexed docnames."
-msgstr ""
+msgstr "A list of indexed docnames."
 
 #: ../../usage/builders/index.rst:551
 msgid ""
@@ -586,7 +586,7 @@ msgstr ""
 
 #: ../../usage/builders/index.rst:563
 msgid "``environment.pickle``"
-msgstr ""
+msgstr "``environment.pickle``"
 
 #: ../../usage/builders/index.rst:557
 msgid ""
@@ -596,16 +596,19 @@ msgid ""
 msgstr ""
 
 #: ../../usage/builders/index.rst:561
-msgid "Todo"
-msgstr ""
+msgid "待处理"
+msgstr "待处理"
 
 #: ../../usage/builders/index.rst:561
 msgid "Document common members."
-msgstr ""
+msgstr "Document common members."
 
 #: ../../usage/builders/index.rst:563
 msgid ""
 "Unlike the other pickle files this pickle file requires that the "
 "``sphinx`` package is available on unpickling."
 msgstr ""
+
+#~ msgid "Todo"
+#~ msgstr ""
 

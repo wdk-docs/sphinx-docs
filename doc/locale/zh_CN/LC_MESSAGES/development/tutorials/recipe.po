@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:2
 msgid "Developing a \"recipe\" extension"
-msgstr ""
+msgstr "开发 \"recipe\" 扩展"
 
 #: ../../development/tutorials/recipe.rst:4
 msgid ""
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:17
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: ../../development/tutorials/recipe.rst:19
 msgid "We want the extension to add the following to Sphinx:"
@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:42
 msgid "Prerequisites"
-msgstr ""
+msgstr "前提条件"
 
 #: ../../development/tutorials/recipe.rst:44
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:59
 msgid "Writing the extension"
-msgstr ""
+msgstr "编写扩展"
 
 #: ../../development/tutorials/recipe.rst:61
 msgid ""
@@ -147,7 +147,7 @@ msgid "The index classes"
 msgstr ""
 
 #: ../../development/tutorials/recipe.rst:101
-msgid "Todo"
+msgid "待处理"
 msgstr ""
 
 #: ../../development/tutorials/recipe.rst:101
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:178
 msgid "Using the extension"
-msgstr ""
+msgstr "使用"
 
 #: ../../development/tutorials/recipe.rst:180
 msgid "You can now use the extension throughout your project. For example:"
@@ -264,11 +264,14 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:212
 msgid "Further reading"
-msgstr ""
+msgstr "延伸阅读"
 
 #: ../../development/tutorials/recipe.rst:214
 msgid ""
 "For more information, refer to the `docutils`_ documentation and "
 ":doc:`/extdev/index`."
 msgstr ""
+
+#~ msgid "Todo"
+#~ msgstr ""
 

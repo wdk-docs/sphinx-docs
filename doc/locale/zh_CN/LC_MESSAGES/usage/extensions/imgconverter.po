@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../usage/extensions/imgconverter.rst:15
 msgid "Internally, this extension uses Imagemagick_ to convert images."
-msgstr ""
+msgstr "Internally, this extension uses Imagemagick_ to convert images."
 
 #: ../../usage/extensions/imgconverter.rst:21
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../usage/extensions/imgconverter.rst:30
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/imgconverter.rst:34
 msgid ""

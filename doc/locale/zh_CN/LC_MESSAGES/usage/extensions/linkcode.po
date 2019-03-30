@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/linkcode.rst:2
 msgid ":mod:`sphinx.ext.linkcode` -- Add external links to source code"
-msgstr ""
+msgstr ":mod:`sphinx.ext.linkcode` -- Add external links to source code"
 
 #: ../../usage/extensions/linkcode.rst:10
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../usage/extensions/linkcode.rst:21
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/linkcode.rst:25
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../../usage/extensions/linkcode.rst:29
 msgid "The function should return ``None`` if no link is to be added."
-msgstr ""
+msgstr "The function should return ``None`` if no link is to be added."
 
 #: ../../usage/extensions/linkcode.rst:31
 msgid ""
@@ -59,15 +59,15 @@ msgstr ""
 
 #: ../../usage/extensions/linkcode.rst:35
 msgid "``py``: ``module`` (name of the module), ``fullname`` (name of the object)"
-msgstr ""
+msgstr "``py``: ``module`` (name of the module), ``fullname`` (name of the object)"
 
 #: ../../usage/extensions/linkcode.rst:36
 msgid "``c``: ``names`` (list of names for the object)"
-msgstr ""
+msgstr "``c``: ``names`` (list of names for the object)"
 
 #: ../../usage/extensions/linkcode.rst:37
 msgid "``cpp``: ``names`` (list of names for the object)"
-msgstr ""
+msgstr "``cpp``: ``names`` (list of names for the object)"
 
 #: ../../usage/extensions/linkcode.rst:38
 msgid ""
@@ -77,5 +77,5 @@ msgstr ""
 
 #: ../../usage/extensions/linkcode.rst:41
 msgid "Example:"
-msgstr ""
+msgstr "Example:"
 

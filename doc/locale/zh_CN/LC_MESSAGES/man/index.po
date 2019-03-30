@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../man/index.rst:2
 msgid "Man Pages"
-msgstr ""
+msgstr "手册页"
 
 #: ../../man/index.rst:4
 msgid "These are the applications provided as part of Sphinx."
-msgstr ""
+msgstr "这些是作为Sphinx的一部分提供的应用程序。"
 
 #: ../../man/index.rst:7
 msgid "Core Applications"
-msgstr ""
+msgstr "核心应用"
 
 #: ../../man/index.rst:16
 msgid "Additional Applications"
-msgstr ""
+msgstr "其他应用"
 

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/field-lists.rst:5
 msgid "Field Lists"
-msgstr ""
+msgstr "Field Lists"
 
 #: ../../usage/restructuredtext/field-lists.rst:7
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/field-lists.rst:17
 msgid "File-wide metadata"
-msgstr ""
+msgstr "File-wide metadata"
 
 #: ../../usage/restructuredtext/field-lists.rst:19
 msgid ""
@@ -50,19 +50,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/field-lists.rst:26
 msgid "At the moment, these metadata fields are recognized:"
-msgstr ""
+msgstr "At the moment, these metadata fields are recognized:"
 
 #: ../../usage/restructuredtext/field-lists.rst:33
 msgid "``tocdepth``"
-msgstr ""
+msgstr "``tocdepth``"
 
 #: ../../usage/restructuredtext/field-lists.rst:29
 msgid "The maximum depth for a table of contents of this file. ::"
-msgstr ""
+msgstr "The maximum depth for a table of contents of this file. ::"
 
 #: ../../usage/restructuredtext/field-lists.rst:39
 msgid "``nocomments``"
-msgstr ""
+msgstr "``nocomments``"
 
 #: ../../usage/restructuredtext/field-lists.rst:36
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/field-lists.rst:46
 msgid "``orphan``"
-msgstr ""
+msgstr "``orphan``"
 
 #: ../../usage/restructuredtext/field-lists.rst:42
 msgid ""

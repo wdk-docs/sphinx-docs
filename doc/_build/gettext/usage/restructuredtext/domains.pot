@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
+"Project-Id-Version: Sphinx 2.1.0+/89df177\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -296,7 +296,7 @@ msgstr ""
 #: ../../usage/restructuredtext/domains.rst:0
 #: ../../usage/restructuredtext/domains.rst:0
 #: ../../usage/restructuredtext/domains.rst:0
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:343
@@ -317,7 +317,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:0
 #: ../../usage/restructuredtext/domains.rst:0
-msgid "Returns"
+msgid "返回"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:348
@@ -325,11 +325,11 @@ msgid "the message id"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:0
-msgid "Return type"
+msgid "返回类型"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:0
-msgid "Raises"
+msgid "引发"
 msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:350

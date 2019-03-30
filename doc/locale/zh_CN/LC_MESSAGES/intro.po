@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../intro.rst:2
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../intro.rst:4
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../intro.rst:26
 msgid "Conversion from other systems"
-msgstr ""
+msgstr "从其他系统转换"
 
 #: ../../intro.rst:28
 msgid ""
@@ -95,15 +95,15 @@ msgstr ""
 
 #: ../../intro.rst:50
 msgid "Use with other systems"
-msgstr ""
+msgstr "与其他系统一起使用"
 
 #: ../../intro.rst:52
 msgid "See the :ref:`pertinent section in the FAQ list <usingwith>`."
-msgstr ""
+msgstr "查看 :ref:`pertinent section in the FAQ list <usingwith>`."
 
 #: ../../intro.rst:56
 msgid "Prerequisites"
-msgstr ""
+msgstr "先决条件"
 
 #: ../../intro.rst:58
 msgid ""
@@ -114,7 +114,7 @@ msgstr ""
 
 #: ../../intro.rst:68
 msgid "Usage"
-msgstr ""
+msgstr "用法"
 
 #: ../../intro.rst:70
 msgid ""

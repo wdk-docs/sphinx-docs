@@ -11,6 +11,7 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
 
 master_doc = 'contents'
 templates_path = ['_templates']
+language = 'zh_CN'
 exclude_patterns = ['_build']
 
 project = 'Sphinx'

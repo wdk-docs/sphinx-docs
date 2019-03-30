@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -638,7 +638,7 @@ msgid ""
 msgstr ""
 
 #: of sphinx.application.Sphinx.add_autodocumenter:9
-msgid "Todo"
+msgid "待处理"
 msgstr ""
 
 #: of sphinx.application.Sphinx.add_autodocumenter:9
@@ -886,7 +886,7 @@ msgid ""
 msgstr ""
 
 #: ../../extdev/appapi.rst
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: ../../extdev/appapi.rst:234
@@ -1171,4 +1171,10 @@ msgstr ""
 #: of sphinx.errors.VersionRequirementError:1
 msgid "Incompatible Sphinx version error."
 msgstr ""
+
+#~ msgid "Todo"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
 

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
+"Project-Id-Version: Sphinx 2.1.0+/89df177\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,7 +55,7 @@ msgstr ""
 #: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinxcontrib/websupport/storage/__init__.py:docstring of sphinxcontrib.websupport.storage.StorageBackend.process_vote:0
 #: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinxcontrib/websupport/storage/__init__.py:docstring of sphinxcontrib.websupport.storage.StorageBackend.update_username:0
 #: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinxcontrib/websupport/storage/__init__.py:docstring of sphinxcontrib.websupport.storage.StorageBackend.accept_comment:0
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinxcontrib/websupport/storage/__init__.py:docstring of sphinxcontrib.websupport.storage.StorageBackend.add_node:3

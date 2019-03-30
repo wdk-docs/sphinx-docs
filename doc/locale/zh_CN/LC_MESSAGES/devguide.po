@@ -19,10 +19,10 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:4
 msgid "Sphinx Developer's Guide"
-msgstr ""
+msgstr "Sphinx开发人员指南"
 
 msgid "Abstract"
-msgstr ""
+msgstr "Abstract"
 
 #: ../../../CONTRIBUTING.rst:8
 msgid ""
@@ -34,43 +34,43 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:15
 msgid "The Sphinx source code is managed using Git and is hosted on GitHub."
-msgstr ""
+msgstr "The Sphinx source code is managed using Git and is hosted on GitHub."
 
 #: ../../../CONTRIBUTING.rst:17
 msgid "git clone git://github.com/sphinx-doc/sphinx"
-msgstr ""
+msgstr "git clone git://github.com/sphinx-doc/sphinx"
 
 #: ../../../CONTRIBUTING.rst:20
 msgid "Community"
-msgstr ""
+msgstr "Community"
 
 #: ../../../CONTRIBUTING.rst:22
 msgid "sphinx-users <sphinx-users@googlegroups.com>"
-msgstr ""
+msgstr "sphinx-users <sphinx-users@googlegroups.com>"
 
 #: ../../../CONTRIBUTING.rst:22
 msgid "Mailing list for user support."
-msgstr ""
+msgstr "Mailing list for user support."
 
 #: ../../../CONTRIBUTING.rst:25
 msgid "sphinx-dev <sphinx-dev@googlegroups.com>"
-msgstr ""
+msgstr "sphinx-dev <sphinx-dev@googlegroups.com>"
 
 #: ../../../CONTRIBUTING.rst:25
 msgid "Mailing list for development related discussions."
-msgstr ""
+msgstr "Mailing list for development related discussions."
 
 #: ../../../CONTRIBUTING.rst:29
 msgid "#sphinx-doc on irc.freenode.net"
-msgstr ""
+msgstr "#sphinx-doc on irc.freenode.net"
 
 #: ../../../CONTRIBUTING.rst:28
 msgid "IRC channel for development questions and user support."
-msgstr ""
+msgstr "IRC channel for development questions and user support."
 
 #: ../../../CONTRIBUTING.rst:32
 msgid "Bug Reports and Feature Requests"
-msgstr ""
+msgstr "错误报告和功能请求"
 
 #: ../../../CONTRIBUTING.rst:34
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:52
 msgid "Contributing to Sphinx"
-msgstr ""
+msgstr "为Sphinx做贡献"
 
 #: ../../../CONTRIBUTING.rst:54
 msgid ""
@@ -141,15 +141,15 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:78
 msgid "Getting Started"
-msgstr ""
+msgstr "入门"
 
 #: ../../../CONTRIBUTING.rst:80
 msgid "These are the basic steps needed to start developing on Sphinx."
-msgstr ""
+msgstr "These are the basic steps needed to start developing on Sphinx."
 
 #: ../../../CONTRIBUTING.rst:82
 msgid "Create an account on GitHub."
-msgstr ""
+msgstr "在GitHub上创建一个帐户。"
 
 #: ../../../CONTRIBUTING.rst:84
 msgid ""
@@ -159,15 +159,15 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:87
 msgid "Clone the forked repository to your machine. ::"
-msgstr ""
+msgstr "将分叉的存储库克隆到您的计算机。 ::"
 
 #: ../../../CONTRIBUTING.rst:92
 msgid "Checkout the appropriate branch."
-msgstr ""
+msgstr "签出适当的分支。"
 
 #: ../../../CONTRIBUTING.rst:94
 msgid "Sphinx adopts Semantic Versioning 2.0.0 (refs: https://semver.org/ )."
-msgstr ""
+msgstr "Sphinx采用语义版本2.0.0 (refs: https://semver.org/ )."
 
 #: ../../../CONTRIBUTING.rst:96
 msgid ""
@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:108
 msgid "Setup a virtual environment."
-msgstr ""
+msgstr "设置虚拟环境。"
 
 #: ../../../CONTRIBUTING.rst:110
 msgid ""
@@ -201,19 +201,19 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:118
 msgid "Create a new working branch.  Choose any name you like. ::"
-msgstr ""
+msgstr "创建一个新的工作分支。选择您喜欢的任何名称。 ::"
 
 #: ../../../CONTRIBUTING.rst:122
 msgid "Hack, hack, hack."
-msgstr ""
+msgstr "黑客，破解，破解。"
 
 #: ../../../CONTRIBUTING.rst:124
 msgid "For tips on working with the code, see the `Coding Guide`_."
-msgstr ""
+msgstr "有关使用代码的提示，请参阅 `Coding Guide`_."
 
 #: ../../../CONTRIBUTING.rst:126
 msgid "Test, test, test."
-msgstr ""
+msgstr "测试，测试，测试。"
 
 #: ../../../CONTRIBUTING.rst:128
 msgid ""
@@ -223,11 +223,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:131
 msgid "To list all possible targets::"
-msgstr ""
+msgstr "列出所有可能的 targets::"
 
 #: ../../../CONTRIBUTING.rst:135
 msgid "To run unit tests for a specific Python version, such as 3.6::"
-msgstr ""
+msgstr "为特定的Python版本运行单元测试，例如 3.6::"
 
 #: ../../../CONTRIBUTING.rst:139
 msgid ""
@@ -237,7 +237,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:144
 msgid "To run code style and type checks::"
-msgstr ""
+msgstr "运行代码样式和类型 checks::"
 
 #: ../../../CONTRIBUTING.rst:149
 msgid ""
@@ -247,11 +247,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:154
 msgid "To build the documentation::"
-msgstr ""
+msgstr "建立 documentation::"
 
 #: ../../../CONTRIBUTING.rst:158
 msgid "To build the documentation in multiple formats::"
-msgstr ""
+msgstr "以多种方式构建文档 formats::"
 
 #: ../../../CONTRIBUTING.rst:162
 msgid ""
@@ -262,7 +262,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:168
 msgid "You can also test by installing dependencies in your local environment. ::"
-msgstr ""
+msgstr "您还可以通过在本地环境中安装依赖项来进行测试。 ::"
 
 #: ../../../CONTRIBUTING.rst:172
 msgid ""
@@ -298,15 +298,15 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:191
 msgid "For example::"
-msgstr ""
+msgstr "例如::"
 
 #: ../../../CONTRIBUTING.rst:195
 msgid "would close issue #42."
-msgstr ""
+msgstr "would close issue #42."
 
 #: ../../../CONTRIBUTING.rst:197
 msgid "Push changes in the branch to your forked repository on GitHub. ::"
-msgstr ""
+msgstr "Push changes in the branch to your forked repository on GitHub. ::"
 
 #: ../../../CONTRIBUTING.rst:201
 msgid ""
@@ -316,11 +316,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:204
 msgid "Wait for a core developer to review your changes."
-msgstr ""
+msgstr "Wait for a core developer to review your changes."
 
 #: ../../../CONTRIBUTING.rst:208
 msgid "Core Developers"
-msgstr ""
+msgstr "核心开发人员"
 
 #: ../../../CONTRIBUTING.rst:210
 msgid ""
@@ -339,7 +339,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:218
 msgid "The following are some general guidelines for core developers:"
-msgstr ""
+msgstr "The following are some general guidelines for core developers:"
 
 #: ../../../CONTRIBUTING.rst:220
 msgid ""
@@ -364,7 +364,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:232
 msgid "Locale updates"
-msgstr ""
+msgstr "区域设置更新"
 
 #: ../../../CONTRIBUTING.rst:234
 msgid ""
@@ -382,7 +382,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:241
 msgid "Use ``python setup.py extract_messages`` to update the ``.pot`` template."
-msgstr ""
+msgstr "Use ``python setup.py extract_messages`` to update the ``.pot`` template."
 
 #: ../../../CONTRIBUTING.rst:242
 msgid ""
@@ -424,7 +424,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:265
 msgid "Coding Guide"
-msgstr ""
+msgstr "编码指南"
 
 #: ../../../CONTRIBUTING.rst:267
 msgid ""
@@ -453,11 +453,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:282
 msgid "Add appropriate unit tests."
-msgstr ""
+msgstr "Add appropriate unit tests."
 
 #: ../../../CONTRIBUTING.rst:286
 msgid "Debugging Tips"
-msgstr ""
+msgstr "调试技巧"
 
 #: ../../../CONTRIBUTING.rst:288
 msgid ""
@@ -468,7 +468,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:292
 msgid "Use the :option:`sphinx-build -P` option to run ``pdb`` on exceptions."
-msgstr ""
+msgstr "Use the :option:`sphinx-build -P` option to run ``pdb`` on exceptions."
 
 #: ../../../CONTRIBUTING.rst:294
 msgid ""
@@ -506,7 +506,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:318
 msgid "Branch Model"
-msgstr ""
+msgstr "分支模型"
 
 #: ../../../CONTRIBUTING.rst:320
 msgid ""
@@ -516,7 +516,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:326
 msgid "``master``"
-msgstr ""
+msgstr "``master``"
 
 #: ../../../CONTRIBUTING.rst:324
 msgid ""
@@ -526,7 +526,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:335
 msgid "``X.Y``"
-msgstr ""
+msgstr "``X.Y``"
 
 #: ../../../CONTRIBUTING.rst:329
 msgid ""
@@ -544,7 +544,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:346
 msgid "``X.Y.Z``"
-msgstr ""
+msgstr "``X.Y.Z``"
 
 #: ../../../CONTRIBUTING.rst:338
 msgid ""
@@ -563,11 +563,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:349
 msgid "Deprecating a feature"
-msgstr ""
+msgstr "弃用某个功能"
 
 #: ../../../CONTRIBUTING.rst:351
 msgid "There are a couple reasons that code in Sphinx might be deprecated:"
-msgstr ""
+msgstr "There are a couple reasons that code in Sphinx might be deprecated:"
 
 #: ../../../CONTRIBUTING.rst:353
 msgid ""
@@ -601,7 +601,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:376
 msgid "Deprecation policy"
-msgstr ""
+msgstr "弃用政策"
 
 #: ../../../CONTRIBUTING.rst:378
 msgid ""
@@ -627,11 +627,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:391
 msgid "Sphinx 3.x will still contain the backwards-compatible replica."
-msgstr ""
+msgstr "Sphinx 3.x will still contain the backwards-compatible replica."
 
 #: ../../../CONTRIBUTING.rst:393
 msgid "Sphinx 4.0 will remove the feature outright."
-msgstr ""
+msgstr "Sphinx 4.0 will remove the feature outright."
 
 #: ../../../CONTRIBUTING.rst:395
 msgid ""
@@ -641,19 +641,19 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:398
 msgid "``PYTHONWARNINGS= make html`` (Linux/Mac)"
-msgstr ""
+msgstr "``PYTHONWARNINGS= make html`` (Linux/Mac)"
 
 #: ../../../CONTRIBUTING.rst:399
 msgid "``export PYTHONWARNINGS=`` and do ``make html`` (Linux/Mac)"
-msgstr ""
+msgstr "``export PYTHONWARNINGS=`` and do ``make html`` (Linux/Mac)"
 
 #: ../../../CONTRIBUTING.rst:400
 msgid "``set PYTHONWARNINGS=`` and do ``make html`` (Windows)"
-msgstr ""
+msgstr "``set PYTHONWARNINGS=`` and do ``make html`` (Windows)"
 
 #: ../../../CONTRIBUTING.rst:403
 msgid "Unit Testing"
-msgstr ""
+msgstr "单元测试"
 
 #: ../../../CONTRIBUTING.rst:405
 msgid ""
@@ -680,13 +680,13 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:422
 msgid "Prior to Sphinx - 1.5.2, Sphinx was running the test with nose."
-msgstr ""
+msgstr "Prior to Sphinx - 1.5.2, Sphinx was running the test with nose."
 
 #: ../../../CONTRIBUTING.rst:424
 msgid "``sphinx.testing`` as a experimental."
-msgstr ""
+msgstr "``sphinx.testing`` 作为实验."
 
 #: ../../../CONTRIBUTING.rst:427
 msgid "Sphinx also runs JavaScript tests."
-msgstr ""
+msgstr "Sphinx还运行JavaScript测试。"
 

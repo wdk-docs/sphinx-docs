@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../latex.rst:6
 msgid "LaTeX customization"
-msgstr ""
+msgstr "LaTeX 定制"
 
 #: ../../latex.rst:29
 msgid "The *latex* target does not benefit from prepared themes."
-msgstr ""
+msgstr "The *latex* target does not benefit from prepared themes."
 
 #: ../../latex.rst:31
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../latex.rst:41
 msgid "Example"
-msgstr ""
+msgstr "例"
 
 #: ../../latex.rst:43
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../latex.rst:73
 msgid "The latex_elements configuration setting"
-msgstr ""
+msgstr "latex_elements配置设置"
 
 #: ../../latex.rst:75
 msgid ""
@@ -62,11 +62,11 @@ msgstr ""
 
 #: ../../latex.rst:79
 msgid "Keys that you may want to override include:"
-msgstr ""
+msgstr "Keys that you may want to override include:"
 
 #: ../../latex.rst:83
 msgid "``'papersize'``"
-msgstr ""
+msgstr "``'papersize'``"
 
 #: ../../latex.rst:82
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 
 #: ../../latex.rst:87
 msgid "``'pointsize'``"
-msgstr ""
+msgstr "``'pointsize'``"
 
 #: ../../latex.rst:86
 msgid ""
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../../latex.rst:98
 msgid "``'pxunit'``"
-msgstr ""
+msgstr "``'pxunit'``"
 
 #: ../../latex.rst:90
 msgid ""
@@ -101,7 +101,7 @@ msgstr ""
 
 #: ../../latex.rst:104
 msgid "``'passoptionstopackages'``"
-msgstr ""
+msgstr "``'passoptionstopackages'``"
 
 #: ../../latex.rst:101
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../latex.rst:133
 msgid "``'babel'``"
-msgstr ""
+msgstr "``'babel'``"
 
 #: ../../latex.rst:107
 msgid ""
@@ -145,7 +145,7 @@ msgstr ""
 
 #: ../../latex.rst:129
 msgid "``'lualatex'`` uses same default setting as ``'xelatex'``"
-msgstr ""
+msgstr "``'lualatex'`` uses same default setting as ``'xelatex'``"
 
 #: ../../latex.rst:131
 msgid ""
@@ -155,7 +155,7 @@ msgstr ""
 
 #: ../../latex.rst:187
 msgid "``'fontpkg'``"
-msgstr ""
+msgstr "``'fontpkg'``"
 
 #: ../../latex.rst:136
 msgid ""
@@ -165,11 +165,11 @@ msgstr ""
 
 #: ../../latex.rst:139
 msgid "Defaults to ``''`` when the :confval:`language` uses the Cyrillic script."
-msgstr ""
+msgstr "当 :confval:`language` 使用西里尔文脚本时，默认为 ``''`` 。"
 
 #: ../../latex.rst:142
 msgid "Support for individual Greek and Cyrillic letters:"
-msgstr ""
+msgstr "支持希腊和西里尔字母:"
 
 #: ../../latex.rst:145
 msgid ""
@@ -222,7 +222,7 @@ msgstr ""
 
 #: ../../latex.rst:198
 msgid "``'fncychap'``"
-msgstr ""
+msgstr "``'fncychap'``"
 
 #: ../../latex.rst:190
 msgid ""
@@ -238,11 +238,11 @@ msgstr ""
 
 #: ../../latex.rst:198
 msgid "The default is ``''`` for Japanese documents."
-msgstr ""
+msgstr "The default is ``''`` for Japanese documents."
 
 #: ../../latex.rst:213
 msgid "``'preamble'``"
-msgstr ""
+msgstr "``'preamble'``"
 
 #: ../../latex.rst:201
 msgid ""
@@ -259,7 +259,7 @@ msgstr ""
 
 #: ../../latex.rst:222
 msgid "``'figure_align'``"
-msgstr ""
+msgstr "``'figure_align'``"
 
 #: ../../latex.rst:216
 msgid ""
@@ -272,31 +272,31 @@ msgstr ""
 
 #: ../../latex.rst:227
 msgid "``'atendofbody'``"
-msgstr ""
+msgstr "``'atendofbody'``"
 
 #: ../../latex.rst:225
 msgid "Additional document content (right before the indices), default empty."
-msgstr ""
+msgstr "Additional document content (right before the indices), default empty."
 
 #: ../../latex.rst:233
 msgid "``'footer'``"
-msgstr ""
+msgstr "``'footer'``"
 
 #: ../../latex.rst:230
 msgid "Additional footer content (before the indices), default empty."
-msgstr ""
+msgstr "额外的页脚内容（在索引之前），默认为空。"
 
 #: ../../latex.rst:232
 msgid "Use ``'atendofbody'`` key instead."
-msgstr ""
+msgstr "Use ``'atendofbody'`` key instead."
 
 #: ../../latex.rst:235
 msgid "Keys that don't need to be overridden unless in special cases are:"
-msgstr ""
+msgstr "除非在特殊情况下，否则不需要覆盖的键是:"
 
 #: ../../latex.rst:244
 msgid "``'extraclassoptions'``"
-msgstr ""
+msgstr "``'extraclassoptions'``"
 
 #: ../../latex.rst:238
 msgid ""
@@ -307,11 +307,11 @@ msgstr ""
 
 #: ../../latex.rst:243
 msgid "Added this documentation."
-msgstr ""
+msgstr "添加了此文档。"
 
 #: ../../latex.rst:262
 msgid "``'maxlistdepth'``"
-msgstr ""
+msgstr "``'maxlistdepth'``"
 
 #: ../../latex.rst:247
 msgid ""
@@ -337,7 +337,7 @@ msgstr ""
 
 #: ../../latex.rst:271
 msgid "``'inputenc'``"
-msgstr ""
+msgstr "``'inputenc'``"
 
 #: ../../latex.rst:265
 msgid ""
@@ -354,15 +354,15 @@ msgstr ""
 
 #: ../../latex.rst:276
 msgid "``'cmappkg'``"
-msgstr ""
+msgstr "``'cmappkg'``"
 
 #: ../../latex.rst:274
 msgid "\"cmap\" package inclusion, default ``'\\\\usepackage{cmap}'``."
-msgstr ""
+msgstr "\"cmap\" package inclusion, default ``'\\\\usepackage{cmap}'``."
 
 #: ../../latex.rst:318
 msgid "``'fontenc'``"
-msgstr ""
+msgstr "``'fontenc'``"
 
 #: ../../latex.rst:279
 msgid ""
@@ -402,7 +402,7 @@ msgstr ""
 
 #: ../../latex.rst:308
 msgid "``'lualatex'`` uses ``fontspec`` per default like ``'xelatex'``."
-msgstr ""
+msgstr "``'lualatex'`` uses ``fontspec`` per default like ``'xelatex'``."
 
 #: ../../latex.rst:310
 msgid ""
@@ -421,7 +421,7 @@ msgstr ""
 
 #: ../../latex.rst:340
 msgid "``'textgreek'``"
-msgstr ""
+msgstr "``'textgreek'``"
 
 #: ../../latex.rst:321
 msgid ""
@@ -454,15 +454,15 @@ msgstr ""
 
 #: ../../latex.rst:371
 msgid "``'geometry'``"
-msgstr ""
+msgstr "``'geometry'``"
 
 #: ../../latex.rst:343
 msgid "\"geometry\" package inclusion, the default definition is:"
-msgstr ""
+msgstr "\"geometry\" package inclusion, the default definition is:"
 
 #: ../../latex.rst:345
 msgid "``'\\\\usepackage{geometry}'``"
-msgstr ""
+msgstr "``'\\\\usepackage{geometry}'``"
 
 #: ../../latex.rst:347
 msgid ""
@@ -472,7 +472,7 @@ msgstr ""
 
 #: ../../latex.rst:350
 msgid "``\\PassOptionsToPackage{hmargin=1in,vmargin=1in,marginpar=0.5in}{geometry}``"
-msgstr ""
+msgstr "``\\PassOptionsToPackage{hmargin=1in,vmargin=1in,marginpar=0.5in}{geometry}``"
 
 #: ../../latex.rst:352
 msgid ""
@@ -482,11 +482,11 @@ msgstr ""
 
 #: ../../latex.rst:357
 msgid "``dvipdfm`` option if :confval:`latex_engine` is ``'platex'``."
-msgstr ""
+msgstr "``dvipdfm`` option if :confval:`latex_engine` is ``'platex'``."
 
 #: ../../latex.rst:360
 msgid "The :ref:`'sphinxsetup' keys for the margins <latexsphinxsetuphmargin>`."
-msgstr ""
+msgstr "The :ref:`'sphinxsetup' keys for the margins <latexsphinxsetuphmargin>`."
 
 #: ../../latex.rst:364
 msgid ""
@@ -501,7 +501,7 @@ msgstr ""
 
 #: ../../latex.rst:383
 msgid "``'hyperref'``"
-msgstr ""
+msgstr "``'hyperref'``"
 
 #: ../../latex.rst:374
 msgid ""
@@ -512,15 +512,15 @@ msgstr ""
 
 #: ../../latex.rst:380
 msgid "Loading of packages \"hyperref\" and \"hypcap\" is mandatory."
-msgstr ""
+msgstr "Loading of packages \"hyperref\" and \"hypcap\" is mandatory."
 
 #: ../../latex.rst:382
 msgid "Previously this was done from inside :file:`sphinx.sty`."
-msgstr ""
+msgstr "Previously this was done from inside :file:`sphinx.sty`."
 
 #: ../../latex.rst:401
 msgid "``'maketitle'``"
-msgstr ""
+msgstr "``'maketitle'``"
 
 #: ../../latex.rst:386
 msgid ""
@@ -549,7 +549,7 @@ msgstr ""
 
 #: ../../latex.rst:406
 msgid "``'releasename'``"
-msgstr ""
+msgstr "``'releasename'``"
 
 #: ../../latex.rst:404
 msgid ""
@@ -560,7 +560,7 @@ msgstr ""
 
 #: ../../latex.rst:419
 msgid "``'tableofcontents'``"
-msgstr ""
+msgstr "``'tableofcontents'``"
 
 #: ../../latex.rst:409
 msgid ""
@@ -580,7 +580,7 @@ msgstr ""
 
 #: ../../latex.rst:428
 msgid "``'transition'``"
-msgstr ""
+msgstr "``'transition'``"
 
 #: ../../latex.rst:422
 msgid ""
@@ -591,11 +591,11 @@ msgstr ""
 
 #: ../../latex.rst:427
 msgid "Remove unneeded ``{}`` after ``\\\\hrule``."
-msgstr ""
+msgstr "Remove unneeded ``{}`` after ``\\\\hrule``."
 
 #: ../../latex.rst:435
 msgid "``'printindex'``"
-msgstr ""
+msgstr "``'printindex'``"
 
 #: ../../latex.rst:431
 msgid ""
@@ -608,7 +608,7 @@ msgstr ""
 
 #: ../../latex.rst:447
 msgid "``'fvset'``"
-msgstr ""
+msgstr "``'fvset'``"
 
 #: ../../latex.rst:438
 msgid ""
@@ -639,7 +639,7 @@ msgstr ""
 
 #: ../../latex.rst:463
 msgid "\\\\'sphinxsetup\\\\' key"
-msgstr ""
+msgstr "\\\\'sphinxsetup\\\\' 键"
 
 #: ../../latex.rst:465
 msgid ""
@@ -663,11 +663,11 @@ msgstr ""
 
 #: ../../latex.rst:503
 msgid "at the start of the chapter and::"
-msgstr ""
+msgstr "at the start of the chapter and::"
 
 #: ../../latex.rst:509
 msgid "at its end."
-msgstr ""
+msgstr "at its end."
 
 #: ../../latex.rst:511
 msgid ""
@@ -684,7 +684,7 @@ msgstr ""
 
 #: ../../latex.rst:548
 msgid "``hmargin, vmargin``"
-msgstr ""
+msgstr "``hmargin, vmargin``"
 
 #: ../../latex.rst:526
 msgid ""
@@ -712,7 +712,7 @@ msgstr ""
 
 #: ../../latex.rst:555
 msgid "``marginpar``"
-msgstr ""
+msgstr "``marginpar``"
 
 #: ../../latex.rst:551
 msgid ""
@@ -723,7 +723,7 @@ msgstr ""
 
 #: ../../latex.rst:561
 msgid "``verbatimwithframe``"
-msgstr ""
+msgstr "``verbatimwithframe``"
 
 #: ../../latex.rst:558
 msgid ""
@@ -735,7 +735,7 @@ msgstr ""
 
 #: ../../latex.rst:565
 msgid "``verbatimwrapslines``"
-msgstr ""
+msgstr "``verbatimwrapslines``"
 
 #: ../../latex.rst:564
 msgid ""
@@ -745,7 +745,7 @@ msgstr ""
 
 #: ../../latex.rst:571
 msgid "``literalblockcappos``"
-msgstr ""
+msgstr "``literalblockcappos``"
 
 #: ../../latex.rst:568
 msgid ""
@@ -755,7 +755,7 @@ msgstr ""
 
 #: ../../latex.rst:579
 msgid "``verbatimhintsturnover``"
-msgstr ""
+msgstr "``verbatimhintsturnover``"
 
 #: ../../latex.rst:574
 msgid ""
@@ -765,11 +765,11 @@ msgstr ""
 
 #: ../../latex.rst:578
 msgid "the default changed from ``false`` to ``true``."
-msgstr ""
+msgstr "the default changed from ``false`` to ``true``."
 
 #: ../../latex.rst:585
 msgid "``verbatimcontinuedalign``, ``verbatimcontinuesalign``"
-msgstr ""
+msgstr "``verbatimcontinuedalign``, ``verbatimcontinuesalign``"
 
 #: ../../latex.rst:582
 msgid ""
@@ -779,7 +779,7 @@ msgstr ""
 
 #: ../../latex.rst:592
 msgid "``parsedliteralwraps``"
-msgstr ""
+msgstr "``parsedliteralwraps``"
 
 #: ../../latex.rst:588
 msgid ""
@@ -789,11 +789,11 @@ msgstr ""
 
 #: ../../latex.rst:591 ../../latex.rst:601
 msgid "set this option value to ``false`` to recover former behaviour."
-msgstr ""
+msgstr "set this option value to ``false`` to recover former behaviour."
 
 #: ../../latex.rst:602
 msgid "``inlineliteralwraps``"
-msgstr ""
+msgstr "``inlineliteralwraps``"
 
 #: ../../latex.rst:595
 msgid ""
@@ -806,7 +806,7 @@ msgstr ""
 
 #: ../../latex.rst:607
 msgid "``verbatimvisiblespace``"
-msgstr ""
+msgstr "``verbatimvisiblespace``"
 
 #: ../../latex.rst:605
 msgid ""
@@ -817,7 +817,7 @@ msgstr ""
 
 #: ../../latex.rst:618
 msgid "``verbatimcontinued``"
-msgstr ""
+msgstr "``verbatimcontinued``"
 
 #: ../../latex.rst:610
 msgid ""
@@ -835,7 +835,7 @@ msgstr ""
 
 #: ../../latex.rst:622
 msgid "``TitleColor``"
-msgstr ""
+msgstr "``TitleColor``"
 
 #: ../../latex.rst:621
 msgid ""
@@ -851,7 +851,7 @@ msgstr ""
 
 #: ../../latex.rst:631
 msgid "``InnerLinkColor``"
-msgstr ""
+msgstr "``InnerLinkColor``"
 
 #: ../../latex.rst:630
 msgid ""
@@ -861,7 +861,7 @@ msgstr ""
 
 #: ../../latex.rst:635
 msgid "``OuterLinkColor``"
-msgstr ""
+msgstr "``OuterLinkColor``"
 
 #: ../../latex.rst:634
 msgid ""
@@ -871,7 +871,7 @@ msgstr ""
 
 #: ../../latex.rst:639
 msgid "``VerbatimColor``"
-msgstr ""
+msgstr "``VerbatimColor``"
 
 #: ../../latex.rst:638
 msgid ""
@@ -881,19 +881,19 @@ msgstr ""
 
 #: ../../latex.rst:642
 msgid "``VerbatimBorderColor``"
-msgstr ""
+msgstr "``VerbatimBorderColor``"
 
 #: ../../latex.rst:642
 msgid "default ``{rgb}{0,0,0}``. The frame color, defaults to black."
-msgstr ""
+msgstr "default ``{rgb}{0,0,0}``. The frame color, defaults to black."
 
 #: ../../latex.rst:647
 msgid "``VerbatimHighlightColor``"
-msgstr ""
+msgstr "``VerbatimHighlightColor``"
 
 #: ../../latex.rst:645
 msgid "default ``{rgb}{0.878,1,1}``. The color for highlighted lines."
-msgstr ""
+msgstr "default ``{rgb}{0.878,1,1}``. The color for highlighted lines."
 
 #: ../../latex.rst:651
 msgid ""
@@ -903,15 +903,15 @@ msgstr ""
 
 #: ../../latex.rst:655
 msgid "``verbatimsep``"
-msgstr ""
+msgstr "``verbatimsep``"
 
 #: ../../latex.rst:655
 msgid "default ``\\fboxsep``. The separation between code lines and the frame."
-msgstr ""
+msgstr "default ``\\fboxsep``. The separation between code lines and the frame."
 
 #: ../../latex.rst:659
 msgid "``verbatimborder``"
-msgstr ""
+msgstr "``verbatimborder``"
 
 #: ../../latex.rst:658
 msgid ""
@@ -921,7 +921,7 @@ msgstr ""
 
 #: ../../latex.rst:663
 msgid "``shadowsep``"
-msgstr ""
+msgstr "``shadowsep``"
 
 #: ../../latex.rst:662
 msgid ""
@@ -931,15 +931,15 @@ msgstr ""
 
 #: ../../latex.rst:666
 msgid "``shadowsize``"
-msgstr ""
+msgstr "``shadowsize``"
 
 #: ../../latex.rst:666
 msgid "default ``4pt``. The width of the lateral \"shadow\" to the right."
-msgstr ""
+msgstr "default ``4pt``. The width of the lateral \"shadow\" to the right."
 
 #: ../../latex.rst:669
 msgid "``shadowrule``"
-msgstr ""
+msgstr "``shadowrule``"
 
 #: ../../latex.rst:669
 msgid ""
@@ -949,7 +949,7 @@ msgstr ""
 
 #: ../../latex.rst:673
 msgid "|notebdcolors|"
-msgstr ""
+msgstr "|notebdcolors|"
 
 #: ../../latex.rst:672
 msgid ""
@@ -959,27 +959,27 @@ msgstr ""
 
 #: ../../latex.rst:676
 msgid "``noteborder``, ``hintborder``, ``importantborder``, ``tipborder``"
-msgstr ""
+msgstr "``noteborder``, ``hintborder``, ``importantborder``, ``tipborder``"
 
 #: ../../latex.rst:676
 msgid "default ``0.5pt``. The width of the two horizontal rules."
-msgstr ""
+msgstr "default ``0.5pt``. The width of the two horizontal rules."
 
 #: ../../latex.rst:680
 msgid "|warningbdcolors|"
-msgstr ""
+msgstr "|warningbdcolors|"
 
 #: ../../latex.rst:681 ../../latex.rst:686
 msgid "default ``{rgb}{0,0,0}`` (black). The colour for the admonition frame."
-msgstr ""
+msgstr "default ``{rgb}{0,0,0}`` (black). The colour for the admonition frame."
 
 #: ../../latex.rst:685
 msgid "|wgbdcolorslatex|"
-msgstr ""
+msgstr "|wgbdcolorslatex|"
 
 #: ../../latex.rst:690
 msgid "|warningbgcolors|"
-msgstr ""
+msgstr "|warningbgcolors|"
 
 #: ../../latex.rst:689
 msgid ""
@@ -989,15 +989,15 @@ msgstr ""
 
 #: ../../latex.rst:693
 msgid "|warningborders|"
-msgstr ""
+msgstr "|warningborders|"
 
 #: ../../latex.rst:693
 msgid "default ``1pt``. The width of the frame."
-msgstr ""
+msgstr "default ``1pt``. The width of the frame."
 
 #: ../../latex.rst:697
 msgid "``AtStartFootnote``"
-msgstr ""
+msgstr "``AtStartFootnote``"
 
 #: ../../latex.rst:696
 msgid ""
@@ -1007,7 +1007,7 @@ msgstr ""
 
 #: ../../latex.rst:704
 msgid "``BeforeFootnote``"
-msgstr ""
+msgstr "``BeforeFootnote``"
 
 #: ../../latex.rst:700
 msgid ""
@@ -1018,15 +1018,15 @@ msgstr ""
 
 #: ../../latex.rst:708
 msgid "``HeaderFamily``"
-msgstr ""
+msgstr "``HeaderFamily``"
 
 #: ../../latex.rst:707
 msgid "default ``\\sffamily\\bfseries``. Sets the font used by headings."
-msgstr ""
+msgstr "default ``\\sffamily\\bfseries``. Sets the font used by headings."
 
 #: ../../latex.rst:732
 msgid "LaTeX macros and environments"
-msgstr ""
+msgstr "LaTeX宏和环境"
 
 #: ../../latex.rst:734
 msgid ""
@@ -1038,7 +1038,7 @@ msgstr ""
 
 #: ../../latex.rst:741
 msgid "Macros"
-msgstr ""
+msgstr "宏"
 
 #: ../../latex.rst:743
 msgid ""
@@ -1078,7 +1078,7 @@ msgstr ""
 
 #: ../../latex.rst:762
 msgid "``\\sphinxstylecodecontinued`` and ``\\sphinxstylecodecontinues``."
-msgstr ""
+msgstr "``\\sphinxstylecodecontinued`` and ``\\sphinxstylecodecontinues``."
 
 #: ../../latex.rst:764
 msgid ""
@@ -1091,7 +1091,7 @@ msgstr ""
 
 #: ../../latex.rst:770
 msgid "formerly, the meaning of ``\\tableofcontents`` was modified by Sphinx."
-msgstr ""
+msgstr "formerly, the meaning of ``\\tableofcontents`` was modified by Sphinx."
 
 #: ../../latex.rst:772
 msgid ""
@@ -1131,7 +1131,7 @@ msgstr ""
 
 #: ../../latex.rst:795
 msgid "Environments"
-msgstr ""
+msgstr "环境"
 
 #: ../../latex.rst:797
 msgid ""
@@ -1175,11 +1175,11 @@ msgstr ""
 
 #: ../../latex.rst:820
 msgid "former code refactored into an environment allowing page breaks."
-msgstr ""
+msgstr "former code refactored into an environment allowing page breaks."
 
 #: ../../latex.rst:822
 msgid "options ``shadowsep``, ``shadowsize``,  ``shadowrule``."
-msgstr ""
+msgstr "options ``shadowsep``, ``shadowsize``,  ``shadowrule``."
 
 #: ../../latex.rst:824
 msgid ""
@@ -1207,7 +1207,7 @@ msgstr ""
 
 #: ../../latex.rst:839
 msgid "support for ``:emphasize-lines:`` option"
-msgstr ""
+msgstr "support for ``:emphasize-lines:`` option"
 
 #: ../../latex.rst:841
 msgid ""
@@ -1226,11 +1226,11 @@ msgstr ""
 
 #: ../../latex.rst:849
 msgid "formerly, the original environments were modified by Sphinx."
-msgstr ""
+msgstr "formerly, the original environments were modified by Sphinx."
 
 #: ../../latex.rst:853
 msgid "Miscellany"
-msgstr ""
+msgstr "杂记"
 
 #: ../../latex.rst:855
 msgid ""
@@ -1261,7 +1261,7 @@ msgstr ""
 
 #: ../../latex.rst:872 ../../latex.rst:879
 msgid "currently all template variables are unstable and undocumented."
-msgstr ""
+msgstr "currently all template variables are unstable and undocumented."
 
 #: ../../latex.rst:875
 msgid ""

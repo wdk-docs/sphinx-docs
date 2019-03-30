@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/searchadapters.rst:6
 msgid "Search Adapters"
-msgstr ""
+msgstr "搜索适配器"
 
 #: ../../usage/advanced/websupport/searchadapters.rst:8
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/searchadapters.rst:22
 msgid "Defines an interface for search adapters."
-msgstr ""
+msgstr "Defines an interface for search adapters."
 
 #: ../../usage/advanced/websupport/searchadapters.rst:26
 msgid ""
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/searchadapters.rst:30
 msgid "Methods"
-msgstr ""
+msgstr "Methods"
 
 #: ../../usage/advanced/websupport/searchadapters.rst:32
 msgid ""
@@ -70,12 +70,12 @@ msgstr ""
 #: sphinxcontrib.websupport.search.BaseSearch.handle_query
 #: sphinxcontrib.websupport.search.BaseSearch.init_indexing
 #: sphinxcontrib.websupport.search.BaseSearch.query
-msgid "Parameters"
-msgstr ""
+msgid "参数"
+msgstr "参数"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.init_indexing:5
 msgid "a list of pagenames that will be re-indexed"
-msgstr ""
+msgstr "a list of pagenames that will be re-indexed"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.finish_indexing:1
 msgid ""
@@ -93,20 +93,20 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.search.BaseSearch.feed:6
 msgid "the name of the page to be indexed"
-msgstr ""
+msgstr "the name of the page to be indexed"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.add_document:13
 #: sphinxcontrib.websupport.search.BaseSearch.feed:7
 msgid "the name of the original source file"
-msgstr ""
+msgstr "the name of the original source file"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.feed:8
 msgid "the title of the page to be indexed"
-msgstr ""
+msgstr "the title of the page to be indexed"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.feed:9
 msgid "is the docutils doctree representation of the page"
-msgstr ""
+msgstr "is the docutils doctree representation of the page"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.add_document:1
 msgid ""
@@ -126,15 +126,15 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.search.BaseSearch.add_document:12
 msgid "the name of the page being indexed"
-msgstr ""
+msgstr "the name of the page being indexed"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.add_document:14
 msgid "the page's title"
-msgstr ""
+msgstr "the page's title"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.add_document:15
 msgid "the full text of the page"
-msgstr ""
+msgstr "the full text of the page"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.query:1
 msgid ""
@@ -147,7 +147,7 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.search.BaseSearch.query:7
 msgid "the search query string."
-msgstr ""
+msgstr "the search query string."
 
 #: of sphinxcontrib.websupport.search.BaseSearch.handle_query:1
 msgid ""
@@ -171,17 +171,20 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.search.BaseSearch.handle_query:14
 msgid "the search query"
-msgstr ""
+msgstr "the search query"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.extract_context:1
 msgid "Extract the context for the search query from the document's full `text`."
-msgstr ""
+msgstr "Extract the context for the search query from the document's full `text`."
 
 #: of sphinxcontrib.websupport.search.BaseSearch.extract_context:4
 msgid "the full text of the document to create the context for"
-msgstr ""
+msgstr "the full text of the document to create the context for"
 
 #: of sphinxcontrib.websupport.search.BaseSearch.extract_context:5
 msgid "the length of the context snippet to return."
-msgstr ""
+msgstr "the length of the context snippet to return."
+
+#~ msgid "Parameters"
+#~ msgstr ""
 

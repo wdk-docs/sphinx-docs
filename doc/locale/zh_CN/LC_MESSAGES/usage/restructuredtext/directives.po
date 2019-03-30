@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:5
 msgid "Directives"
-msgstr ""
+msgstr "指令"
 
 #: ../../usage/restructuredtext/directives.rst:7
 msgid ""
@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:12
 msgid "See :doc:`/usage/restructuredtext/domains` for roles added by domains."
-msgstr ""
+msgstr "See :doc:`/usage/restructuredtext/domains` for roles added by domains."
 
 #: ../../usage/restructuredtext/directives.rst:16
 msgid ""
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:23
 msgid "Table of contents"
-msgstr ""
+msgstr "Table of contents"
 
 #: ../../usage/restructuredtext/directives.rst:27
 msgid ""
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:62
 msgid "This accomplishes two things:"
-msgstr ""
+msgstr "This accomplishes two things:"
 
 #: ../../usage/restructuredtext/directives.rst:64
 msgid ""
@@ -102,7 +102,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:72
 msgid "**Entries**"
-msgstr ""
+msgstr "**Entries**"
 
 #: ../../usage/restructuredtext/directives.rst:74
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:92
 msgid "**Section numbering**"
-msgstr ""
+msgstr "**Section numbering**"
 
 #: ../../usage/restructuredtext/directives.rst:94
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 #: ../../usage/restructuredtext/directives.rst:480
 #: ../../usage/restructuredtext/directives.rst:554
 msgid "**Additional options**"
-msgstr ""
+msgstr "**Additional options**"
 
 #: ../../usage/restructuredtext/directives.rst:111
 msgid ""
@@ -199,7 +199,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:159
 msgid "You can also give a \"hidden\" option to the directive, like this::"
-msgstr ""
+msgstr "You can also give a \"hidden\" option to the directive, like this::"
 
 #: ../../usage/restructuredtext/directives.rst:167
 msgid ""
@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:182
 msgid "All other toctree entries can then be eliminated by the \"hidden\" option."
-msgstr ""
+msgstr "All other toctree entries can then be eliminated by the \"hidden\" option."
 
 #: ../../usage/restructuredtext/directives.rst:184
 msgid ""
@@ -246,7 +246,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:198
 msgid "Added \"globbing\" option."
-msgstr ""
+msgstr "Added \"globbing\" option."
 
 #: ../../usage/restructuredtext/directives.rst:201
 msgid ""
@@ -256,23 +256,23 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:205
 msgid "Added \"titlesonly\" option."
-msgstr ""
+msgstr "Added \"titlesonly\" option."
 
 #: ../../usage/restructuredtext/directives.rst:208
 msgid "Added numeric argument to \"numbered\"."
-msgstr ""
+msgstr "Added numeric argument to \"numbered\"."
 
 #: ../../usage/restructuredtext/directives.rst:211
 msgid "Added \"includehidden\" option."
-msgstr ""
+msgstr "Added \"includehidden\" option."
 
 #: ../../usage/restructuredtext/directives.rst:214
 msgid "Added \"caption\" and \"name\" option."
-msgstr ""
+msgstr "Added \"caption\" and \"name\" option."
 
 #: ../../usage/restructuredtext/directives.rst:218
 msgid "Special names"
-msgstr ""
+msgstr "Special names"
 
 #: ../../usage/restructuredtext/directives.rst:220
 msgid ""
@@ -282,11 +282,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:223
 msgid "The special document names (and pages generated for them) are:"
-msgstr ""
+msgstr "The special document names (and pages generated for them) are:"
 
 #: ../../usage/restructuredtext/directives.rst:225
 msgid "``genindex``, ``modindex``, ``search``"
-msgstr ""
+msgstr "``genindex``, ``modindex``, ``search``"
 
 #: ../../usage/restructuredtext/directives.rst:227
 msgid ""
@@ -317,7 +317,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:241
 msgid "every name beginning with ``_``"
-msgstr ""
+msgstr "every name beginning with ``_``"
 
 #: ../../usage/restructuredtext/directives.rst:243
 msgid ""
@@ -346,7 +346,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:260
 msgid "Paragraph-level markup"
-msgstr ""
+msgstr "Paragraph-level markup"
 
 #: ../../usage/restructuredtext/directives.rst:265
 msgid ""
@@ -367,7 +367,7 @@ msgstr ""
 #: ../../usage/restructuredtext/directives.rst:448
 #: ../../usage/restructuredtext/directives.rst:468
 msgid "Example::"
-msgstr ""
+msgstr "Example::"
 
 #: ../../usage/restructuredtext/directives.rst:283
 msgid ""
@@ -436,11 +436,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:341
 msgid "There's also a \"short form\" allowed that looks like this::"
-msgstr ""
+msgstr "There's also a \"short form\" allowed that looks like this::"
 
 #: ../../usage/restructuredtext/directives.rst:345
 msgid "The short form."
-msgstr ""
+msgstr "The short form."
 
 #: ../../usage/restructuredtext/directives.rst:350
 msgid ""
@@ -484,7 +484,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:395
 msgid "Showing code examples"
-msgstr ""
+msgstr "Showing code examples"
 
 #: ../../usage/restructuredtext/directives.rst:400
 msgid ""
@@ -520,7 +520,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:424
 msgid "``none`` (no highlighting)"
-msgstr ""
+msgstr "``none`` (no highlighting)"
 
 #: ../../usage/restructuredtext/directives.rst:425
 msgid ""
@@ -537,19 +537,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:430
 msgid "``python``"
-msgstr ""
+msgstr "``python``"
 
 #: ../../usage/restructuredtext/directives.rst:431
 msgid "``rest``"
-msgstr ""
+msgstr "``rest``"
 
 #: ../../usage/restructuredtext/directives.rst:432
 msgid "``c``"
-msgstr ""
+msgstr "``c``"
 
 #: ../../usage/restructuredtext/directives.rst:433
 msgid "... and any other `lexer alias that Pygments supports`__"
-msgstr ""
+msgstr "... and any other `lexer alias that Pygments supports`__"
 
 #: ../../usage/restructuredtext/directives.rst:435
 msgid ""
@@ -579,7 +579,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:464
 msgid "This will produce line numbers for all code blocks longer than five lines."
-msgstr ""
+msgstr "This will produce line numbers for all code blocks longer than five lines."
 
 #: ../../usage/restructuredtext/directives.rst:474
 msgid ""
@@ -623,7 +623,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:528
 msgid "The ``emphasize-lines`` option has been added."
-msgstr ""
+msgstr "The ``emphasize-lines`` option has been added."
 
 #: ../../usage/restructuredtext/directives.rst:531
 msgid ""
@@ -633,11 +633,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:535
 msgid "LaTeX supports the ``emphasize-lines`` option."
-msgstr ""
+msgstr "LaTeX supports the ``emphasize-lines`` option."
 
 #: ../../usage/restructuredtext/directives.rst:538
 msgid "The ``language`` argument becomes optional."
-msgstr ""
+msgstr "The ``language`` argument becomes optional."
 
 #: ../../usage/restructuredtext/directives.rst:543
 msgid ""
@@ -701,7 +701,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:597
 msgid "This includes the lines 1, 3, 5 to 10 and lines 20 to the last line."
-msgstr ""
+msgstr "This includes the lines 1, 3, 5 to 10 and lines 20 to the last line."
 
 #: ../../usage/restructuredtext/directives.rst:599
 msgid ""
@@ -758,7 +758,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:633
 msgid "Added the ``encoding`` option."
-msgstr ""
+msgstr "Added the ``encoding`` option."
 
 #: ../../usage/restructuredtext/directives.rst:636
 msgid ""
@@ -768,7 +768,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:640
 msgid "Added the ``prepend``, ``append``, and ``tab-width`` options."
-msgstr ""
+msgstr "Added the ``prepend``, ``append``, and ``tab-width`` options."
 
 #: ../../usage/restructuredtext/directives.rst:643
 msgid ""
@@ -778,7 +778,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:647
 msgid "Added the ``start-at``, and ``end-at`` options."
-msgstr ""
+msgstr "Added the ``start-at``, and ``end-at`` options."
 
 #: ../../usage/restructuredtext/directives.rst:650
 msgid ""
@@ -788,7 +788,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:657
 msgid "Glossary"
-msgstr ""
+msgstr "Glossary"
 
 #: ../../usage/restructuredtext/directives.rst:661
 msgid ""
@@ -806,7 +806,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:687
 msgid "(When the glossary is sorted, the first term determines the sort order.)"
-msgstr ""
+msgstr "(When the glossary is sorted, the first term determines the sort order.)"
 
 #: ../../usage/restructuredtext/directives.rst:689
 msgid ""
@@ -838,15 +838,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:711
 msgid "Now supports multiple terms and inline markup in terms."
-msgstr ""
+msgstr "Now supports multiple terms and inline markup in terms."
 
 #: ../../usage/restructuredtext/directives.rst:714
 msgid "Index key for glossary term should be considered *experimental*."
-msgstr ""
+msgstr "Index key for glossary term should be considered *experimental*."
 
 #: ../../usage/restructuredtext/directives.rst:719
 msgid "Meta-information markup"
-msgstr ""
+msgstr "Meta-information markup"
 
 #: ../../usage/restructuredtext/directives.rst:723
 msgid ""
@@ -875,7 +875,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:745
 msgid "Index-generating markup"
-msgstr ""
+msgstr "Index-generating markup"
 
 #: ../../usage/restructuredtext/directives.rst:747
 msgid ""
@@ -900,7 +900,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:760
 msgid "For example::"
-msgstr ""
+msgstr "For example::"
 
 #: ../../usage/restructuredtext/directives.rst:773
 msgid ""
@@ -918,11 +918,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:781
 msgid "The possible entry types are:"
-msgstr ""
+msgstr "The possible entry types are:"
 
 #: ../../usage/restructuredtext/directives.rst:785
 msgid "single"
-msgstr ""
+msgstr "single"
 
 #: ../../usage/restructuredtext/directives.rst:784
 msgid ""
@@ -933,7 +933,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:788
 msgid "pair"
-msgstr ""
+msgstr "pair"
 
 #: ../../usage/restructuredtext/directives.rst:788
 msgid ""
@@ -943,7 +943,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:792
 msgid "triple"
-msgstr ""
+msgstr "triple"
 
 #: ../../usage/restructuredtext/directives.rst:791
 msgid ""
@@ -954,7 +954,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:795
 msgid "see"
-msgstr ""
+msgstr "see"
 
 #: ../../usage/restructuredtext/directives.rst:795
 msgid ""
@@ -964,15 +964,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:797
 msgid "seealso"
-msgstr ""
+msgstr "seealso"
 
 #: ../../usage/restructuredtext/directives.rst:798
 msgid "Like ``see``, but inserts \"see also\" instead of \"see\"."
-msgstr ""
+msgstr "Like ``see``, but inserts \"see also\" instead of \"see\"."
 
 #: ../../usage/restructuredtext/directives.rst:802
 msgid "module, keyword, operator, object, exception, statement, builtin"
-msgstr ""
+msgstr "module, keyword, operator, object, exception, statement, builtin"
 
 #: ../../usage/restructuredtext/directives.rst:800
 msgid ""
@@ -990,7 +990,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:810
 msgid "and one page contains ::"
-msgstr ""
+msgstr "and one page contains ::"
 
 #: ../../usage/restructuredtext/directives.rst:814
 msgid ""
@@ -1006,11 +1006,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:821
 msgid "This creates four index entries."
-msgstr ""
+msgstr "This creates four index entries."
 
 #: ../../usage/restructuredtext/directives.rst:823
 msgid "Added ``see`` and ``seealso`` types, as well as marking main entries."
-msgstr ""
+msgstr "Added ``see`` and ``seealso`` types, as well as marking main entries."
 
 #: ../../usage/restructuredtext/directives.rst:828
 msgid ""
@@ -1030,7 +1030,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:847
 msgid "Including content based on tags"
-msgstr ""
+msgstr "Including content based on tags"
 
 #: ../../usage/restructuredtext/directives.rst:851
 msgid ""
@@ -1075,7 +1075,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:879
 msgid "Added the name of the builder and the prefixes."
-msgstr ""
+msgstr "Added the name of the builder and the prefixes."
 
 #: ../../usage/restructuredtext/directives.rst:884
 msgid ""
@@ -1085,27 +1085,27 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:890
 msgid "Tables"
-msgstr ""
+msgstr "Tables"
 
 #: ../../usage/restructuredtext/directives.rst:892
 msgid "Use :ref:`reStructuredText tables <rst-tables>`, i.e. either"
-msgstr ""
+msgstr "Use :ref:`reStructuredText tables <rst-tables>`, i.e. either"
 
 #: ../../usage/restructuredtext/directives.rst:894
 msgid "grid table syntax (:duref:`ref <grid-tables>`),"
-msgstr ""
+msgstr "grid table syntax (:duref:`ref <grid-tables>`),"
 
 #: ../../usage/restructuredtext/directives.rst:895
 msgid "simple table syntax (:duref:`ref <simple-tables>`),"
-msgstr ""
+msgstr "simple table syntax (:duref:`ref <simple-tables>`),"
 
 #: ../../usage/restructuredtext/directives.rst:896
 msgid ":dudir:`csv-table` syntax,"
-msgstr ""
+msgstr ":dudir:`csv-table` syntax,"
 
 #: ../../usage/restructuredtext/directives.rst:897
 msgid "or :dudir:`list-table` syntax."
-msgstr ""
+msgstr "or :dudir:`list-table` syntax."
 
 #: ../../usage/restructuredtext/directives.rst:899
 msgid ""
@@ -1137,35 +1137,35 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:920
 msgid "``L``"
-msgstr ""
+msgstr "``L``"
 
 #: ../../usage/restructuredtext/directives.rst:920
 msgid "flush left column with automatic width"
-msgstr ""
+msgstr "flush left column with automatic width"
 
 #: ../../usage/restructuredtext/directives.rst:922
 msgid "``R``"
-msgstr ""
+msgstr "``R``"
 
 #: ../../usage/restructuredtext/directives.rst:922
 msgid "flush right column with automatic width"
-msgstr ""
+msgstr "flush right column with automatic width"
 
 #: ../../usage/restructuredtext/directives.rst:924
 msgid "``C``"
-msgstr ""
+msgstr "``C``"
 
 #: ../../usage/restructuredtext/directives.rst:924
 msgid "centered column with automatic width"
-msgstr ""
+msgstr "centered column with automatic width"
 
 #: ../../usage/restructuredtext/directives.rst:926
 msgid "``J``"
-msgstr ""
+msgstr "``J``"
 
 #: ../../usage/restructuredtext/directives.rst:926
 msgid "justified column with automatic width"
-msgstr ""
+msgstr "justified column with automatic width"
 
 #: ../../usage/restructuredtext/directives.rst:929
 msgid ""
@@ -1176,7 +1176,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:933
 msgid "By default, Sphinx uses a table layout with ``J`` for every column."
-msgstr ""
+msgstr "By default, Sphinx uses a table layout with ``J`` for every column."
 
 #: ../../usage/restructuredtext/directives.rst:937
 msgid ""
@@ -1257,7 +1257,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:990
 msgid "This is used by the ``:widths:`` option of the :dudir:`table` directive."
-msgstr ""
+msgstr "This is used by the ``:widths:`` option of the :dudir:`table` directive."
 
 #: ../../usage/restructuredtext/directives.rst:992
 msgid ""
@@ -1287,7 +1287,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:1011
 msgid "Math"
-msgstr ""
+msgstr "Math"
 
 #: ../../usage/restructuredtext/directives.rst:1013
 msgid ""
@@ -1305,7 +1305,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:1023
 msgid "Directive for displayed math (math that takes the whole line for itself)."
-msgstr ""
+msgstr "Directive for displayed math (math that takes the whole line for itself)."
 
 #: ../../usage/restructuredtext/directives.rst:1025
 msgid ""
@@ -1350,15 +1350,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:1074
 msgid ":ref:`math-support`"
-msgstr ""
+msgstr ":ref:`math-support`"
 
 #: ../../usage/restructuredtext/directives.rst:1074
 msgid "Rendering options for math with HTML builders."
-msgstr ""
+msgstr "Rendering options for math with HTML builders."
 
 #: ../../usage/restructuredtext/directives.rst:1077
 msgid ":confval:`latex_engine`"
-msgstr ""
+msgstr ":confval:`latex_engine`"
 
 #: ../../usage/restructuredtext/directives.rst:1077
 msgid ""
@@ -1368,7 +1368,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:1082
 msgid "Grammar production displays"
-msgstr ""
+msgstr "Grammar production displays"
 
 #: ../../usage/restructuredtext/directives.rst:1084
 msgid ""
@@ -1397,7 +1397,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:1101
 msgid "Blank lines are not allowed within ``productionlist`` directive arguments."
-msgstr ""
+msgstr "Blank lines are not allowed within ``productionlist`` directive arguments."
 
 #: ../../usage/restructuredtext/directives.rst:1103
 msgid ""
@@ -1416,11 +1416,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/directives.rst:1112
 msgid "The following is an example taken from the Python Reference Manual::"
-msgstr ""
+msgstr "The following is an example taken from the Python Reference Manual::"
 
 #: ../../usage/restructuredtext/directives.rst:1125
 msgid "Footnotes"
-msgstr ""
+msgstr "Footnotes"
 
 #: ../../usage/restructuredtext/directives.rst:1126
 msgid ""

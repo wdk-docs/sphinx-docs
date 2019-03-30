@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:4
 msgid ":mod:`sphinx.ext.autosummary` -- Generate autodoc summaries"
-msgstr ""
+msgstr ":mod:`sphinx.ext.autosummary` -- Generate autodoc summaries"
 
 #: ../../usage/extensions/autosummary.rst:11
 msgid ""
@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:16
 msgid "The :mod:`sphinx.ext.autosummary` extension does this in two parts:"
-msgstr ""
+msgstr "The :mod:`sphinx.ext.autosummary` extension does this in two parts:"
 
 #: ../../usage/extensions/autosummary.rst:18
 msgid ""
@@ -65,11 +65,11 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:37
 msgid "For example, ::"
-msgstr ""
+msgstr "For example, ::"
 
 #: ../../usage/extensions/autosummary.rst:46
 msgid "produces a table like this:"
-msgstr ""
+msgstr "produces a table like this:"
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid ""
@@ -79,15 +79,15 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid "The environment in which the ReST files are translated."
-msgstr ""
+msgstr "The environment in which the ReST files are translated."
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid ":obj:`util.relative_uri <sphinx.util.relative_uri>`\\ \\(base\\, to\\)"
-msgstr ""
+msgstr ":obj:`util.relative_uri <sphinx.util.relative_uri>`\\ \\(base\\, to\\)"
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid "Return a relative URL from ``base`` to ``to``."
-msgstr ""
+msgstr "Return a relative URL from ``base`` to ``to``."
 
 #: ../../usage/extensions/autosummary.rst:57
 msgid ""
@@ -98,7 +98,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:61
 msgid "**Options**"
-msgstr ""
+msgstr "**Options**"
 
 #: ../../usage/extensions/autosummary.rst:63
 msgid ""
@@ -137,7 +137,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:104
 msgid ":program:`sphinx-autogen` -- generate autodoc stub pages"
-msgstr ""
+msgstr ":program:`sphinx-autogen` -- generate autodoc stub pages"
 
 #: ../../usage/extensions/autosummary.rst:106
 msgid ""
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:109
 msgid "For example, the command ::"
-msgstr ""
+msgstr "For example, the command ::"
 
 #: ../../usage/extensions/autosummary.rst:113
 msgid ""
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:131
 msgid "Generating stub pages automatically"
-msgstr ""
+msgstr "Generating stub pages automatically"
 
 #: ../../usage/extensions/autosummary.rst:133
 msgid ""
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:141
 msgid "Can also be a list of documents for which stub pages should be generated."
-msgstr ""
+msgstr "Can also be a list of documents for which stub pages should be generated."
 
 #: ../../usage/extensions/autosummary.rst:143
 msgid ""
@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:153
 msgid "Customizing templates"
-msgstr ""
+msgstr "Customizing templates"
 
 #: ../../usage/extensions/autosummary.rst:157
 msgid ""
@@ -223,51 +223,51 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:167
 msgid "Autosummary uses the following Jinja template files:"
-msgstr ""
+msgstr "Autosummary uses the following Jinja template files:"
 
 #: ../../usage/extensions/autosummary.rst:169
 msgid ":file:`autosummary/base.rst` -- fallback template"
-msgstr ""
+msgstr ":file:`autosummary/base.rst` -- fallback template"
 
 #: ../../usage/extensions/autosummary.rst:170
 msgid ":file:`autosummary/module.rst` -- template for modules"
-msgstr ""
+msgstr ":file:`autosummary/module.rst` -- template for modules"
 
 #: ../../usage/extensions/autosummary.rst:171
 msgid ":file:`autosummary/class.rst` -- template for classes"
-msgstr ""
+msgstr ":file:`autosummary/class.rst` -- template for classes"
 
 #: ../../usage/extensions/autosummary.rst:172
 msgid ":file:`autosummary/function.rst` -- template for functions"
-msgstr ""
+msgstr ":file:`autosummary/function.rst` -- template for functions"
 
 #: ../../usage/extensions/autosummary.rst:173
 msgid ":file:`autosummary/attribute.rst` -- template for class attributes"
-msgstr ""
+msgstr ":file:`autosummary/attribute.rst` -- template for class attributes"
 
 #: ../../usage/extensions/autosummary.rst:174
 msgid ":file:`autosummary/method.rst` -- template for class methods"
-msgstr ""
+msgstr ":file:`autosummary/method.rst` -- template for class methods"
 
 #: ../../usage/extensions/autosummary.rst:176
 msgid "The following variables available in the templates:"
-msgstr ""
+msgstr "The following variables available in the templates:"
 
 #: ../../usage/extensions/autosummary.rst:182
 msgid "Name of the documented object, excluding the module and class parts."
-msgstr ""
+msgstr "Name of the documented object, excluding the module and class parts."
 
 #: ../../usage/extensions/autosummary.rst:186
 msgid "Name of the documented object, excluding the module parts."
-msgstr ""
+msgstr "Name of the documented object, excluding the module parts."
 
 #: ../../usage/extensions/autosummary.rst:190
 msgid "Full name of the documented object, including module and class parts."
-msgstr ""
+msgstr "Full name of the documented object, including module and class parts."
 
 #: ../../usage/extensions/autosummary.rst:194
 msgid "Name of the module the documented object belongs to."
-msgstr ""
+msgstr "Name of the module the documented object belongs to."
 
 #: ../../usage/extensions/autosummary.rst:198
 msgid ""
@@ -326,7 +326,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:245
 msgid "Additionally, the following filters are available"
-msgstr ""
+msgstr "Additionally, the following filters are available"
 
 #: ../../usage/extensions/autosummary.rst:249
 msgid ""
@@ -337,7 +337,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:255
 msgid "Add a title underline to a piece of text."
-msgstr ""
+msgstr "Add a title underline to a piece of text."
 
 #: ../../usage/extensions/autosummary.rst:257
 msgid ""

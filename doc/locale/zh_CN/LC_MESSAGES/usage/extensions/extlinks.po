@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/extlinks.rst:2
 msgid ":mod:`sphinx.ext.extlinks` -- Markup to shorten external links"
-msgstr ""
+msgstr ":mod:`sphinx.ext.extlinks` -- Markup to shorten external links"
 
 #: ../../usage/extensions/extlinks.rst:10
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../usage/extensions/extlinks.rst:21
 msgid "The extension adds a config value:"
-msgstr ""
+msgstr "The extension adds a config value:"
 
 #: ../../usage/extensions/extlinks.rst:25
 msgid ""
@@ -60,11 +60,11 @@ msgstr ""
 
 #: ../../usage/extensions/extlinks.rst:37
 msgid "The link *caption* depends on the second item in the tuple, the *prefix*:"
-msgstr ""
+msgstr "The link *caption* depends on the second item in the tuple, the *prefix*:"
 
 #: ../../usage/extensions/extlinks.rst:39
 msgid "If the prefix is ``None``, the link caption is the full URL."
-msgstr ""
+msgstr "If the prefix is ``None``, the link caption is the full URL."
 
 #: ../../usage/extensions/extlinks.rst:40
 msgid ""

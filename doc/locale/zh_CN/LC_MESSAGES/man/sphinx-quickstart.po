@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:2
 msgid "sphinx-quickstart"
-msgstr ""
+msgstr "sphinx-quickstart"
 
 #: ../../man/sphinx-quickstart.rst:5
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../man/sphinx-quickstart.rst:7
 msgid "**sphinx-quickstart**"
-msgstr ""
+msgstr "**sphinx-quickstart**"
 
 #: ../../man/sphinx-quickstart.rst:10
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../man/sphinx-quickstart.rst:12
 msgid ""
@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:17
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #: ../../man/sphinx-quickstart.rst:23
 msgid ""
@@ -52,15 +52,15 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:28
 msgid "Display usage summary or Sphinx version."
-msgstr ""
+msgstr "Display usage summary or Sphinx version."
 
 #: ../../man/sphinx-quickstart.rst:31
 msgid "Structure Options"
-msgstr ""
+msgstr "Structure Options"
 
 #: ../../man/sphinx-quickstart.rst:34
 msgid "If specified, separate source and build directories."
-msgstr ""
+msgstr "If specified, separate source and build directories."
 
 #: ../../man/sphinx-quickstart.rst:38
 msgid ""
@@ -72,87 +72,87 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:44
 msgid "Project Basic Options"
-msgstr ""
+msgstr "Project Basic Options"
 
 #: ../../man/sphinx-quickstart.rst:47
 msgid "Project name will be set. (see :confval:`project`)."
-msgstr ""
+msgstr "Project name will be set. (see :confval:`project`)."
 
 #: ../../man/sphinx-quickstart.rst:51
 msgid "Author names. (see :confval:`copyright`)."
-msgstr ""
+msgstr "Author names. (see :confval:`copyright`)."
 
 #: ../../man/sphinx-quickstart.rst:55
 msgid "Version of project. (see :confval:`version`)."
-msgstr ""
+msgstr "Version of project. (see :confval:`version`)."
 
 #: ../../man/sphinx-quickstart.rst:59
 msgid "Release of project. (see :confval:`release`)."
-msgstr ""
+msgstr "Release of project. (see :confval:`release`)."
 
 #: ../../man/sphinx-quickstart.rst:63
 msgid "Document language. (see :confval:`language`)."
-msgstr ""
+msgstr "Document language. (see :confval:`language`)."
 
 #: ../../man/sphinx-quickstart.rst:67
 msgid "Source file suffix. (see :confval:`source_suffix`)."
-msgstr ""
+msgstr "Source file suffix. (see :confval:`source_suffix`)."
 
 #: ../../man/sphinx-quickstart.rst:71
 msgid "Master document name. (see :confval:`master_doc`)."
-msgstr ""
+msgstr "Master document name. (see :confval:`master_doc`)."
 
 #: ../../man/sphinx-quickstart.rst:74
 msgid "Extension Options"
-msgstr ""
+msgstr "Extension Options"
 
 #: ../../man/sphinx-quickstart.rst:77
 msgid "Enable `sphinx.ext.autodoc` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.autodoc` extension."
 
 #: ../../man/sphinx-quickstart.rst:81
 msgid "Enable `sphinx.ext.doctest` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.doctest` extension."
 
 #: ../../man/sphinx-quickstart.rst:85
 msgid "Enable `sphinx.ext.intersphinx` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.intersphinx` extension."
 
 #: ../../man/sphinx-quickstart.rst:89
 msgid "Enable `sphinx.ext.todo` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.todo` extension."
 
 #: ../../man/sphinx-quickstart.rst:93
 msgid "Enable `sphinx.ext.coverage` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.coverage` extension."
 
 #: ../../man/sphinx-quickstart.rst:97
 msgid "Enable `sphinx.ext.imgmath` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.imgmath` extension."
 
 #: ../../man/sphinx-quickstart.rst:101
 msgid "Enable `sphinx.ext.mathjax` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.mathjax` extension."
 
 #: ../../man/sphinx-quickstart.rst:105
 msgid "Enable `sphinx.ext.ifconfig` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.ifconfig` extension."
 
 #: ../../man/sphinx-quickstart.rst:109
 msgid "Enable `sphinx.ext.viewcode` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.viewcode` extension."
 
 #: ../../man/sphinx-quickstart.rst:113
 msgid "Enable `sphinx.ext.githubpages` extension."
-msgstr ""
+msgstr "Enable `sphinx.ext.githubpages` extension."
 
 #: ../../man/sphinx-quickstart.rst:117
 msgid "Enable arbitrary extensions."
-msgstr ""
+msgstr "Enable arbitrary extensions."
 
 #: ../../man/sphinx-quickstart.rst:120
 msgid "Makefile and Batchfile Creation Options"
-msgstr ""
+msgstr "Makefile and Batchfile Creation Options"
 
 #: ../../man/sphinx-quickstart.rst:123
 msgid ""
@@ -163,23 +163,23 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:126
 msgid "make-mode is default."
-msgstr ""
+msgstr "make-mode is default."
 
 #: ../../man/sphinx-quickstart.rst:131
 msgid "Create (or not create) makefile."
-msgstr ""
+msgstr "Create (or not create) makefile."
 
 #: ../../man/sphinx-quickstart.rst:135
 msgid "Create (or not create) batchfile"
-msgstr ""
+msgstr "Create (or not create) batchfile"
 
 #: ../../man/sphinx-quickstart.rst:138
 msgid "Project templating"
-msgstr ""
+msgstr "Project templating"
 
 #: ../../man/sphinx-quickstart.rst:139
 msgid "Project templating options for sphinx-quickstart"
-msgstr ""
+msgstr "Project templating options for sphinx-quickstart"
 
 #: ../../man/sphinx-quickstart.rst:144
 msgid ""
@@ -190,27 +190,27 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:148
 msgid "``master_doc.rst_t``"
-msgstr ""
+msgstr "``master_doc.rst_t``"
 
 #: ../../man/sphinx-quickstart.rst:149
 msgid "``conf.py_t``"
-msgstr ""
+msgstr "``conf.py_t``"
 
 #: ../../man/sphinx-quickstart.rst:150
 msgid "``Makefile_t``"
-msgstr ""
+msgstr "``Makefile_t``"
 
 #: ../../man/sphinx-quickstart.rst:151
 msgid "``Makefile.new_t``"
-msgstr ""
+msgstr "``Makefile.new_t``"
 
 #: ../../man/sphinx-quickstart.rst:152
 msgid "``make.bat_t``"
-msgstr ""
+msgstr "``make.bat_t``"
 
 #: ../../man/sphinx-quickstart.rst:153
 msgid "``make.bat.new_t``"
-msgstr ""
+msgstr "``make.bat.new_t``"
 
 #: ../../man/sphinx-quickstart.rst:155
 msgid ""
@@ -220,13 +220,13 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:160
 msgid "Define a template variable"
-msgstr ""
+msgstr "Define a template variable"
 
 #: ../../man/sphinx-quickstart.rst:163
 msgid "See also"
-msgstr ""
+msgstr "也可以看看"
 
 #: ../../man/sphinx-quickstart.rst:165
 msgid ":manpage:`sphinx-build(1)`"
-msgstr ""
+msgstr ":manpage:`sphinx-build(1)`"
 

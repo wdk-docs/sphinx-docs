@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../templating.rst:6
 msgid "Templating"
-msgstr ""
+msgstr "模板"
 
 #: ../../templating.rst:8
 msgid ""
@@ -32,11 +32,11 @@ msgstr ""
 
 #: ../../templating.rst:15
 msgid "Do I need to use Sphinx's templates to produce HTML?"
-msgstr ""
+msgstr "我是否需要使用Sphinx的模板来生成HTML？"
 
 #: ../../templating.rst:17
 msgid "No.  You have several other options:"
-msgstr ""
+msgstr "不，您还有其他几种选择:"
 
 #: ../../templating.rst:19
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../templating.rst:33
 msgid "Jinja/Sphinx Templating Primer"
-msgstr ""
+msgstr "Jinja/Sphinx 模板入门"
 
 #: ../../templating.rst:35
 msgid ""
@@ -127,7 +127,7 @@ msgstr ""
 
 #: ../../templating.rst:78
 msgid "Working with the builtin templates"
-msgstr ""
+msgstr "使用内置模板"
 
 #: ../../templating.rst:80
 msgid ""
@@ -138,15 +138,15 @@ msgstr ""
 
 #: ../../templating.rst:84
 msgid "Blocks"
-msgstr ""
+msgstr "块"
 
 #: ../../templating.rst:86
 msgid "The following blocks exist in the ``layout.html`` template:"
-msgstr ""
+msgstr "The following blocks exist in the ``layout.html`` template:"
 
 #: ../../templating.rst:92
 msgid "`doctype`"
-msgstr ""
+msgstr "`doctype`"
 
 #: ../../templating.rst:89
 msgid ""
@@ -158,7 +158,7 @@ msgstr ""
 
 #: ../../templating.rst:96
 msgid "`linktags`"
-msgstr ""
+msgstr "`linktags`"
 
 #: ../../templating.rst:95
 msgid ""
@@ -168,7 +168,7 @@ msgstr ""
 
 #: ../../templating.rst:101
 msgid "`extrahead`"
-msgstr ""
+msgstr "`extrahead`"
 
 #: ../../templating.rst:99
 msgid ""
@@ -179,7 +179,7 @@ msgstr ""
 
 #: ../../templating.rst:110
 msgid "`relbar1` / `relbar2`"
-msgstr ""
+msgstr "`relbar1` / `relbar2`"
 
 #: ../../templating.rst:104
 msgid ""
@@ -192,7 +192,7 @@ msgstr ""
 
 #: ../../templating.rst:118
 msgid "`rootrellink` / `relbaritems`"
-msgstr ""
+msgstr "`rootrellink` / `relbaritems`"
 
 #: ../../templating.rst:113
 msgid ""
@@ -206,7 +206,7 @@ msgstr ""
 
 #: ../../templating.rst:122
 msgid "`document`"
-msgstr ""
+msgstr "`document`"
 
 #: ../../templating.rst:121
 msgid ""
@@ -216,7 +216,7 @@ msgstr ""
 
 #: ../../templating.rst:136
 msgid "`sidebar1` / `sidebar2`"
-msgstr ""
+msgstr "`sidebar1` / `sidebar2`"
 
 #: ../../templating.rst:125
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 
 #: ../../templating.rst:140
 msgid "`sidebarlogo`"
-msgstr ""
+msgstr "`sidebarlogo`"
 
 #: ../../templating.rst:139
 msgid ""
@@ -244,7 +244,7 @@ msgstr ""
 
 #: ../../templating.rst:144
 msgid "`footer`"
-msgstr ""
+msgstr "`footer`"
 
 #: ../../templating.rst:143
 msgid ""
@@ -262,23 +262,23 @@ msgstr ""
 
 #: ../../templating.rst:154
 msgid "`sidebartoc`"
-msgstr ""
+msgstr "`sidebartoc`"
 
 #: ../../templating.rst:152
 msgid "The table of contents within the sidebar."
-msgstr ""
+msgstr "The table of contents within the sidebar."
 
 #: ../../templating.rst:159
 msgid "`sidebarrel`"
-msgstr ""
+msgstr "`sidebarrel`"
 
 #: ../../templating.rst:157
 msgid "The relation links (previous, next document) within the sidebar."
-msgstr ""
+msgstr "The relation links (previous, next document) within the sidebar."
 
 #: ../../templating.rst:165
 msgid "`sidebarsourcelink`"
-msgstr ""
+msgstr "`sidebarsourcelink`"
 
 #: ../../templating.rst:162
 msgid ""
@@ -288,7 +288,7 @@ msgstr ""
 
 #: ../../templating.rst:172
 msgid "`sidebarsearch`"
-msgstr ""
+msgstr "`sidebarsearch`"
 
 #: ../../templating.rst:168
 msgid ""
@@ -298,7 +298,7 @@ msgstr ""
 
 #: ../../templating.rst:175
 msgid "Configuration Variables"
-msgstr ""
+msgstr "配置变量"
 
 #: ../../templating.rst:177
 #, python-format
@@ -323,19 +323,19 @@ msgstr ""
 
 #: ../../templating.rst:192
 msgid "Overriding works like this::"
-msgstr ""
+msgstr "Overriding works like this::"
 
 #: ../../templating.rst:199
 msgid "Add additional script files here, like this::"
-msgstr ""
+msgstr "Add additional script files here, like this::"
 
 #: ../../templating.rst:205
 msgid "Please use ``.Sphinx.add_js_file()`` instead."
-msgstr ""
+msgstr "Please use ``.Sphinx.add_js_file()`` instead."
 
 #: ../../templating.rst:208
 msgid "Helper Functions"
-msgstr ""
+msgstr "助手功能"
 
 #: ../../templating.rst:210
 msgid ""
@@ -357,23 +357,23 @@ msgstr ""
 
 #: ../../templating.rst:225
 msgid "Check if a document with the name *document* exists."
-msgstr ""
+msgstr "检查是否存在名为 *document* 的文档。"
 
 #: ../../templating.rst:229
 msgid "Return the rendered sidebar."
-msgstr ""
+msgstr "返回渲染的侧边栏。"
 
 #: ../../templating.rst:233
 msgid "Return the rendered relation bar."
-msgstr ""
+msgstr "返回渲染的关系栏。"
 
 #: ../../templating.rst:237
 msgid "Emit a warning message."
-msgstr ""
+msgstr "发出警告信息。"
 
 #: ../../templating.rst:240
 msgid "Global Variables"
-msgstr ""
+msgstr "全局变量"
 
 #: ../../templating.rst:242
 msgid ""
@@ -384,11 +384,11 @@ msgstr ""
 
 #: ../../templating.rst:248
 msgid "The name of the builder (e.g. ``html`` or ``htmlhelp``)."
-msgstr ""
+msgstr "The name of the builder (e.g. ``html`` or ``htmlhelp``)."
 
 #: ../../templating.rst:252
 msgid "The value of :confval:`copyright`."
-msgstr ""
+msgstr "价值：confval：`copyright`。"
 
 #: ../../templating.rst:256
 msgid ""
@@ -406,7 +406,7 @@ msgstr ""
 
 #: ../../templating.rst:267
 msgid "The path to the HTML favicon in the static path, or ``''``."
-msgstr ""
+msgstr "静态路径中HTML favicon的路径，或者``'``。"
 
 #: ../../templating.rst:271
 msgid ""
@@ -423,19 +423,19 @@ msgstr ""
 
 #: ../../templating.rst:282
 msgid "The value of :confval:`language`."
-msgstr ""
+msgstr "值：confval：`language`。"
 
 #: ../../templating.rst:286
 msgid "The build date."
-msgstr ""
+msgstr "构建日期。"
 
 #: ../../templating.rst:290
 msgid "The path to the HTML logo image in the static path, or ``''``."
-msgstr ""
+msgstr "The path to the HTML logo image in the static path, or ``''``."
 
 #: ../../templating.rst:294
 msgid "The value of :confval:`master_doc`, for usage with :func:`pathto`."
-msgstr ""
+msgstr "The value of :confval:`master_doc`, for usage with :func:`pathto`."
 
 #: ../../templating.rst:298
 msgid ""
@@ -447,11 +447,11 @@ msgstr ""
 
 #: ../../templating.rst:304
 msgid "The value of :confval:`project`."
-msgstr ""
+msgstr "值：confval：`project`。"
 
 #: ../../templating.rst:308
 msgid "The value of :confval:`release`."
-msgstr ""
+msgstr "值：confval：`release`。"
 
 #: ../../templating.rst:312
 msgid ""
@@ -464,15 +464,15 @@ msgstr ""
 
 #: ../../templating.rst:319
 msgid "The value of :confval:`html_short_title`."
-msgstr ""
+msgstr "值：confval：`html_short_title`。"
 
 #: ../../templating.rst:323
 msgid "True if :confval:`html_show_sourcelink` is ``True``."
-msgstr ""
+msgstr "True if :confval:`html_show_sourcelink` is ``True``."
 
 #: ../../templating.rst:327
 msgid "The version of Sphinx used to build."
-msgstr ""
+msgstr "用于构建的Sphinx版本。"
 
 #: ../../templating.rst:331
 msgid ""
@@ -482,15 +482,15 @@ msgstr ""
 
 #: ../../templating.rst:336
 msgid "The title of the current document, as used in the ``<title>`` tag."
-msgstr ""
+msgstr "当前文档的标题，在``<title>``标签中使用。"
 
 #: ../../templating.rst:340
 msgid "The value of :confval:`html_use_opensearch`."
-msgstr ""
+msgstr "值：confval：`html_use_opensearch`。"
 
 #: ../../templating.rst:344
 msgid "The value of :confval:`version`."
-msgstr ""
+msgstr "值：confval：`html使用opensearch`。"
 
 #: ../../templating.rst:347
 msgid ""
@@ -514,15 +514,15 @@ msgstr ""
 
 #: ../../templating.rst:362
 msgid "A boolean that is True if the toc contains more than one entry."
-msgstr ""
+msgstr "如果toc包含多个条目，则为布尔值为True。"
 
 #: ../../templating.rst:366
 msgid "Document metadata (a dictionary), see :ref:`metadata`."
-msgstr ""
+msgstr "文档元数据（字典），请参阅：ref：`metadata`。"
 
 #: ../../templating.rst:370
 msgid "A string containing the page's HTML :dudir:`meta` tags."
-msgstr ""
+msgstr "包含页面HTML：dudir：`meta`标签的字符串。"
 
 #: ../../templating.rst:374
 msgid ""
@@ -547,7 +547,7 @@ msgstr ""
 
 #: ../../templating.rst:395
 msgid "Like :data:`next`, but for the previous page."
-msgstr ""
+msgstr "喜欢：数据：`next`，但是对于上一页。"
 
 #: ../../templating.rst:399
 msgid ""
@@ -558,7 +558,7 @@ msgstr ""
 
 #: ../../templating.rst:405
 msgid "The page title."
-msgstr ""
+msgstr "页面标题。"
 
 #: ../../templating.rst:409
 msgid ""

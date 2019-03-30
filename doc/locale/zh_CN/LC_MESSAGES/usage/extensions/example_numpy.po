@@ -19,13 +19,13 @@ msgstr ""
 
 #: ../../usage/extensions/example_numpy.rst:6
 msgid "Example NumPy Style Python Docstrings"
-msgstr ""
+msgstr "Example NumPy Style Python Docstrings"
 
 #: ../../usage/extensions/example_numpy.rst:10
 msgid ":ref:`example_google`"
-msgstr ""
+msgstr ":ref:`example_google`"
 
 #: ../../usage/extensions/example_numpy.rst:14
 msgid "Download: :download:`example_numpy.py <example_numpy.py>`"
-msgstr ""
+msgstr "Download: :download:`example_numpy.py <example_numpy.py>`"
 

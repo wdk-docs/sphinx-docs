@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:6
 msgid "Math support for HTML outputs in Sphinx"
-msgstr ""
+msgstr "Math support for HTML outputs in Sphinx"
 
 #: ../../usage/extensions/math.rst:14
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:21
 msgid ":mod:`sphinx.ext.imgmath` -- Render math as images"
-msgstr ""
+msgstr ":mod:`sphinx.ext.imgmath` -- Render math as images"
 
 #: ../../usage/extensions/math.rst:28
 msgid ""
@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:122
 msgid ":mod:`sphinx.ext.mathjax` -- Render math via JavaScript"
-msgstr ""
+msgstr ":mod:`sphinx.ext.mathjax` -- Render math via JavaScript"
 
 #: ../../usage/extensions/math.rst:129
 msgid ""
@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:158
 msgid "You can also give a full ``https://`` URL different from the CDN URL."
-msgstr ""
+msgstr "You can also give a full ``https://`` URL different from the CDN URL."
 
 #: ../../usage/extensions/math.rst:162
 msgid ""
@@ -215,7 +215,7 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:169
 msgid "The default is empty (``{}``)."
-msgstr ""
+msgstr "The default is empty (``{}``)."
 
 #: ../../usage/extensions/math.rst:173
 msgid ""
@@ -226,15 +226,15 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:177
 msgid "For example::"
-msgstr ""
+msgstr "For example::"
 
 #: ../../usage/extensions/math.rst:184
 msgid "The default is empty (not configured)."
-msgstr ""
+msgstr "The default is empty (not configured)."
 
 #: ../../usage/extensions/math.rst:189
 msgid ":mod:`sphinx.ext.jsmath` -- Render math via JavaScript"
-msgstr ""
+msgstr ":mod:`sphinx.ext.jsmath` -- Render math via JavaScript"
 
 #: ../../usage/extensions/math.rst:194
 msgid ""

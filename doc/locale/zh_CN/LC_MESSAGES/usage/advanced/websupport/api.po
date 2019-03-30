@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,29 +19,29 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:6
 msgid "The WebSupport Class"
-msgstr ""
+msgstr "Web Support类"
 
 #: ../../usage/advanced/websupport/api.rst:10
 msgid ""
 "The main API class for the web support package.  All interactions with "
 "the web support package should occur through this class."
-msgstr ""
+msgstr "Web支持包的主要API类。与Web支持包的所有交互都应该通过此类进行。"
 
 #: ../../usage/advanced/websupport/api.rst:13
 msgid "The class takes the following keyword arguments:"
-msgstr ""
+msgstr "该类采用以下关键字参数:"
 
 #: ../../usage/advanced/websupport/api.rst:16
 msgid "srcdir"
-msgstr ""
+msgstr "srcdir"
 
 #: ../../usage/advanced/websupport/api.rst:16
 msgid "The directory containing reStructuredText source files."
-msgstr ""
+msgstr "The directory containing reStructuredText source files."
 
 #: ../../usage/advanced/websupport/api.rst:21
 msgid "builddir"
-msgstr ""
+msgstr "builddir"
 
 #: ../../usage/advanced/websupport/api.rst:19
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:25
 msgid "datadir"
-msgstr ""
+msgstr "datadir"
 
 #: ../../usage/advanced/websupport/api.rst:24
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:30
 msgid "search"
-msgstr ""
+msgstr "search"
 
 #: ../../usage/advanced/websupport/api.rst:28
 msgid ""
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:35
 msgid "storage"
-msgstr ""
+msgstr "storage"
 
 #: ../../usage/advanced/websupport/api.rst:33
 msgid ""
@@ -84,7 +84,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:40
 msgid "moderation_callback"
-msgstr ""
+msgstr "moderation_callback"
 
 #: ../../usage/advanced/websupport/api.rst:38
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:49
 msgid "staticdir"
-msgstr ""
+msgstr "staticdir"
 
 #: ../../usage/advanced/websupport/api.rst:43
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:53
 msgid "staticroot"
-msgstr ""
+msgstr "staticroot"
 
 #: ../../usage/advanced/websupport/api.rst:52
 msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:56
 msgid "docroot"
-msgstr ""
+msgstr "docroot"
 
 #: ../../usage/advanced/websupport/api.rst:56
 msgid ""
@@ -139,7 +139,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:68
 msgid "Methods"
-msgstr ""
+msgstr "Methods"
 
 #: of sphinxcontrib.websupport.WebSupport.build:1
 msgid ""
@@ -174,27 +174,27 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:25
 msgid "**body**: The main body of the document as HTML"
-msgstr ""
+msgstr "**body**: The main body of the document as HTML"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:26
 msgid "**sidebar**: The sidebar of the document as HTML"
-msgstr ""
+msgstr "**sidebar**: The sidebar of the document as HTML"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:27
 msgid "**relbar**: A div containing links to related documents"
-msgstr ""
+msgstr "**relbar**: A div containing links to related documents"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:28
 msgid "**title**: The title of the document"
-msgstr ""
+msgstr "**title**: The title of the document"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:29
 msgid "**css**: Links to css files used by Sphinx"
-msgstr ""
+msgstr "**css**: Links to css files used by Sphinx"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:30
 msgid "**script**: Javascript containing comment options"
-msgstr ""
+msgstr "**script**: Javascript containing comment options"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:32
 msgid ""
@@ -208,12 +208,12 @@ msgstr ""
 #: sphinxcontrib.websupport.WebSupport.get_document
 #: sphinxcontrib.websupport.WebSupport.get_search_results
 #: sphinxcontrib.websupport.WebSupport.process_vote
-msgid "Parameters"
-msgstr ""
+msgid "参数"
+msgstr "参数"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:35
 msgid "the name of the document to load."
-msgstr ""
+msgstr "the name of the document to load."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:1
 msgid ""
@@ -227,55 +227,55 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:10
 msgid "Key"
-msgstr ""
+msgstr "Key"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:10
 msgid "Contents"
-msgstr ""
+msgstr "Contents"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:12
 msgid "text"
-msgstr ""
+msgstr "text"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:12
 msgid "The comment text."
-msgstr ""
+msgstr "The comment text."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:13
 msgid "username"
-msgstr ""
+msgstr "username"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:13
 msgid "The username that was stored with the comment."
-msgstr ""
+msgstr "The username that was stored with the comment."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:14
 msgid "id"
-msgstr ""
+msgstr "id"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:14
 msgid "The comment's unique identifier."
-msgstr ""
+msgstr "The comment's unique identifier."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:15
 msgid "rating"
-msgstr ""
+msgstr "rating"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:15
 msgid "The comment's current rating."
-msgstr ""
+msgstr "The comment's current rating."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:16
 msgid "age"
-msgstr ""
+msgstr "age"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:16
 msgid "The time in seconds since the comment was added."
-msgstr ""
+msgstr "The time in seconds since the comment was added."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:17
 msgid "time"
-msgstr ""
+msgstr "time"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:17
 msgid ""
@@ -287,7 +287,7 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:22
 msgid "vote"
-msgstr ""
+msgstr "vote"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:22
 msgid ""
@@ -297,7 +297,7 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:25
 msgid "node"
-msgstr ""
+msgstr "node"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:25
 msgid ""
@@ -307,7 +307,7 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:28
 msgid "parent"
-msgstr ""
+msgstr "parent"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:28
 msgid ""
@@ -317,15 +317,15 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:30
 msgid "children"
-msgstr ""
+msgstr "children"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:30
 msgid "A list of all children, in this format."
-msgstr ""
+msgstr "A list of all children, in this format."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:31
 msgid "proposal_diff"
-msgstr ""
+msgstr "proposal_diff"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:31
 msgid ""
@@ -335,15 +335,15 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:35
 msgid "the id of the node to get comments for."
-msgstr ""
+msgstr "the id of the node to get comments for."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:36
 msgid "the username of the user viewing the comments."
-msgstr ""
+msgstr "the username of the user viewing the comments."
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:37
 msgid "whether the user is a moderator."
-msgstr ""
+msgstr "whether the user is a moderator."
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:1
 msgid ""
@@ -367,23 +367,23 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:19
 msgid "the prefixed id of the comment's parent."
-msgstr ""
+msgstr "the prefixed id of the comment's parent."
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:20
 msgid "the text of the comment."
-msgstr ""
+msgstr "the text of the comment."
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:21
 msgid "for moderation purposes"
-msgstr ""
+msgstr "for moderation purposes"
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:22
 msgid "the username of the user making the comment."
-msgstr ""
+msgstr "the username of the user making the comment."
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:23
 msgid "the time the comment was created, defaults to now."
-msgstr ""
+msgstr "the time the comment was created, defaults to now."
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:1
 msgid ""
@@ -396,15 +396,15 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:19
 msgid "the comment being voted on"
-msgstr ""
+msgstr "the comment being voted on"
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:20
 msgid "the unique username of the user voting"
-msgstr ""
+msgstr "the unique username of the user voting"
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:21
 msgid "1 for an upvote, -1 for a downvote, 0 for an unvote."
-msgstr ""
+msgstr "1 for an upvote, -1 for a downvote, 0 for an unvote."
 
 #: of sphinxcontrib.websupport.WebSupport.get_search_results:1
 msgid ""
@@ -415,5 +415,8 @@ msgstr ""
 
 #: of sphinxcontrib.websupport.WebSupport.get_search_results:8
 msgid "the search query"
-msgstr ""
+msgstr "the search query"
+
+#~ msgid "Parameters"
+#~ msgstr ""
 

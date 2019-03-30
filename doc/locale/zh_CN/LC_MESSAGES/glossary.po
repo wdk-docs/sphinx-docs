@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../glossary.rst:4
 msgid "Glossary"
-msgstr ""
+msgstr "词汇表"
 
 #: ../../glossary.rst:7
 msgid "builder"
-msgstr ""
+msgstr "builder"
 
 #: ../../glossary.rst:9
 msgid ""
@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../glossary.rst:17
 msgid "configuration directory"
-msgstr ""
+msgstr "configuration directory"
 
 #: ../../glossary.rst:19
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../glossary.rst:22
 msgid "directive"
-msgstr ""
+msgstr "directive"
 
 #: ../../glossary.rst:24
 msgid ""
@@ -65,11 +65,11 @@ msgstr ""
 
 #: ../../glossary.rst:36
 msgid "See :ref:`rst-directives` for more information."
-msgstr ""
+msgstr "See :ref:`rst-directives` for more information."
 
 #: ../../glossary.rst:37
 msgid "document name"
-msgstr ""
+msgstr "document name"
 
 #: ../../glossary.rst:39
 msgid ""
@@ -91,7 +91,7 @@ msgstr ""
 
 #: ../../glossary.rst:50
 msgid "domain"
-msgstr ""
+msgstr "domain"
 
 #: ../../glossary.rst:52
 msgid ""
@@ -112,11 +112,11 @@ msgstr ""
 
 #: ../../glossary.rst:62
 msgid "For more information, refer to :doc:`/usage/restructuredtext/domains`."
-msgstr ""
+msgstr "For more information, refer to :doc:`/usage/restructuredtext/domains`."
 
 #: ../../glossary.rst:63
 msgid "environment"
-msgstr ""
+msgstr "environment"
 
 #: ../../glossary.rst:65
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../../glossary.rst:69
 msgid "extension"
-msgstr ""
+msgstr "extension"
 
 #: ../../glossary.rst:71
 msgid ""
@@ -138,19 +138,19 @@ msgstr ""
 
 #: ../../glossary.rst:74
 msgid "For more information, refer to :doc:`/usage/extensions/index`."
-msgstr ""
+msgstr "For more information, refer to :doc:`/usage/extensions/index`."
 
 #: ../../glossary.rst:75
 msgid "master document"
-msgstr ""
+msgstr "master document"
 
 #: ../../glossary.rst:77
 msgid "The document that contains the root :rst:dir:`toctree` directive."
-msgstr ""
+msgstr "The document that contains the root :rst:dir:`toctree` directive."
 
 #: ../../glossary.rst:78
 msgid "object"
-msgstr ""
+msgstr "object"
 
 #: ../../glossary.rst:80
 msgid ""
@@ -161,7 +161,7 @@ msgstr ""
 
 #: ../../glossary.rst:83
 msgid "RemoveInSphinxXXXWarning"
-msgstr ""
+msgstr "RemoveInSphinxXXXWarning"
 
 #: ../../glossary.rst:85
 msgid ""
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../glossary.rst:88
 msgid "role"
-msgstr ""
+msgstr "role"
 
 #: ../../glossary.rst:90
 msgid ""
@@ -183,7 +183,7 @@ msgstr ""
 
 #: ../../glossary.rst:93
 msgid "source directory"
-msgstr ""
+msgstr "source directory"
 
 #: ../../glossary.rst:95
 msgid ""
@@ -193,7 +193,7 @@ msgstr ""
 
 #: ../../glossary.rst:97
 msgid "reStructuredText"
-msgstr ""
+msgstr "reStructuredText"
 
 #: ../../glossary.rst:99
 msgid ""

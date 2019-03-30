@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosectionlabel.rst:14
 msgid "For example::"
-msgstr ""
+msgstr "For example::"
 
 #: ../../usage/extensions/autosectionlabel.rst:24
 msgid ""
@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosectionlabel.rst:32
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/autosectionlabel.rst:36
 msgid ""

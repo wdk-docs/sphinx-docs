@@ -19,355 +19,355 @@ msgstr ""
 
 #: ../../develop.rst:4
 msgid "Sphinx development"
-msgstr ""
+msgstr "Sphinx开发"
 
 #: ../../develop.rst:6
 msgid ""
 "Sphinx is a maintained by a group of volunteers.  We value every "
 "contribution!"
-msgstr ""
+msgstr "Sphinx由一群志愿者维护。我们重视每一个贡献！"
 
 #: ../../develop.rst:8
 msgid ""
 "The code can be found in a Git repository, at https://github.com/sphinx-"
 "doc/sphinx/."
-msgstr ""
+msgstr "该代码可以在Git存储库中找到，网址为https://github.com/sphinx-doc/sphinx/。"
 
 #: ../../develop.rst:10
 msgid ""
 "Issues and feature requests should be raised in the `tracker "
 "<https://github.com/sphinx-doc/sphinx/issues>`_."
-msgstr ""
+msgstr "应该在 `跟踪器 <https://github.com/sphinx-doc/sphinx/issues>`_ 中提出问题和功能请求."
 
 #: ../../develop.rst:12
 msgid ""
 "The mailing list for development is at `Google Groups "
 "<https://groups.google.com/forum/#!forum/sphinx-dev>`_."
-msgstr ""
+msgstr "用于开发的邮件列表位于 `Google Groups <https://groups.google.com/forum/#!forum/sphinx-dev>`_ ."
 
 #: ../../develop.rst:14
 msgid ""
 "There is also the #sphinx-doc IRC channel on `freenode "
 "<https://freenode.net/>`_."
-msgstr ""
+msgstr "`freenode <https://freenode.net/>`_ 上还有 #sphinx-doc IRC频道 ."
 
 #: ../../develop.rst:17
 msgid ""
 "For more about our development process and methods, see the "
 ":doc:`devguide`."
-msgstr ""
+msgstr "有关我们的开发过程和方法的更多信息，请参阅 :doc:`devguide`."
 
 #: ../../develop.rst:20
 msgid "Extensions"
-msgstr ""
+msgstr "扩展"
 
 #: ../../develop.rst:22
 msgid "To learn how to write your own extension, see :ref:`dev-extensions`."
-msgstr ""
+msgstr "要了解如何编写自己的扩展，请参阅 :ref:`dev-extensions`。"
 
 #: ../../develop.rst:24
 msgid ""
 "The `sphinx-contrib <https://bitbucket.org/birkenfeld/sphinx-contrib/>`_ "
 "repository contains many contributed extensions.  Some of them have their"
 " own releases on PyPI, others you can install from a checkout."
-msgstr ""
+msgstr "`sphinx-contrib <https://bitbucket.org/birkenfeld/sphinx-contrib/>`_ 知识库包含许多贡献的扩展。其中一些在PyPI上有自己的版本，其他一些你可以从结帐安装。"
 
 #: ../../develop.rst:28
 msgid "This is the current list of contributed extensions in that repository:"
-msgstr ""
+msgstr "这是该存储库中当前贡献的扩展列表:"
 
 #: ../../develop.rst:30
 msgid "aafig: render embedded ASCII art as nice images using aafigure_"
-msgstr ""
+msgstr "aafig:使用 aafigure_ 渲染嵌入式ASCII艺术作为漂亮的图像"
 
 #: ../../develop.rst:31
 msgid "actdiag: embed activity diagrams by using actdiag_"
-msgstr ""
+msgstr "actdiag:使用 actdiag_ 嵌入活动图"
 
 #: ../../develop.rst:32
 msgid "adadomain: an extension for Ada support (Sphinx 1.0 needed)"
-msgstr ""
+msgstr "adadomain: Ada支持的扩展(需要Sphinx 1.0)"
 
 #: ../../develop.rst:33
 msgid "ansi: parse ANSI color sequences inside documents"
-msgstr ""
+msgstr "ansi: 解析文档中的ANSI颜色序列"
 
 #: ../../develop.rst:34
 msgid ""
 "argdoc: automatically generate documentation for command-line arguments, "
 "descriptions, and help text"
-msgstr ""
+msgstr "argdoc: 自动生成命令行参数，描述和帮助文本的文档"
 
 #: ../../develop.rst:35
 msgid "astah: embed diagram by using astah"
-msgstr ""
+msgstr "astah: 使用astah嵌入图表"
 
 #: ../../develop.rst:36
 msgid "autoanysrc: Gather reST documentation from any source files"
-msgstr ""
+msgstr "autoanysrc: 从任何源文件中收集reST文档"
 
 #: ../../develop.rst:37
 msgid "autorun: Execute code in a ``runblock`` directive"
-msgstr ""
+msgstr "autorun: 在 ``runblock`` 指令中执行代码"
 
 #: ../../develop.rst:38
 msgid "blockdiag: embed block diagrams by using blockdiag_"
-msgstr ""
+msgstr "blockdiag: 使用 blockdiag_ 嵌入框图"
 
 #: ../../develop.rst:39
 msgid "cacoo: embed diagram from Cacoo"
-msgstr ""
+msgstr "cacoo: 从Cacoo嵌入图表"
 
 #: ../../develop.rst:40
 msgid "cf3domain: a domain for CFEngine 3 policies"
-msgstr ""
+msgstr "cf3domain: CFEngine 3政策的域"
 
 #: ../../develop.rst:41
 msgid "cheader: The missing c:header directive for Sphinx's built-in C domain"
-msgstr ""
+msgstr "cheader: Sphinx的内置C域缺少 c:header 指令"
 
 #: ../../develop.rst:42
 msgid "cheeseshop: easily link to PyPI packages"
-msgstr ""
+msgstr "cheeseshop: 轻松链接到PyPI包"
 
 #: ../../develop.rst:43
 msgid "clearquest: create tables from ClearQuest_ queries"
-msgstr ""
+msgstr "clearquest: 从 ClearQuest_ 查询创建表"
 
 #: ../../develop.rst:44
 msgid "cmakedomain_: a domain for CMake_"
-msgstr ""
+msgstr "cmakedomain_: CMake_ 的域"
 
 #: ../../develop.rst:45
 msgid "coffeedomain: a domain for (auto)documenting CoffeeScript source code"
-msgstr ""
+msgstr "coffeedomain: (自动)记录CoffeeScript源代码的域"
 
 #: ../../develop.rst:46
 msgid "context: a builder for ConTeXt"
-msgstr ""
+msgstr "context: ConTeXt的构建器"
 
 #: ../../develop.rst:47
 msgid "disqus: embed Disqus comments in documents"
-msgstr ""
+msgstr "disqus: 在文档中嵌入Disqus评论"
 
 #: ../../develop.rst:48
 msgid ""
 "documentedlist: converts a Python list to a table in the generated "
 "documentation"
-msgstr ""
+msgstr "documentedlist: 将Python列表转换为生成的文档中的表"
 
 #: ../../develop.rst:49
 msgid "doxylink: Link to external Doxygen-generated HTML documentation"
-msgstr ""
+msgstr "doxylink: 链接到外部Doxygen生成的HTML文档"
 
 #: ../../develop.rst:50
 msgid "domaintools_: A tool for easy domain creation"
-msgstr ""
+msgstr "domaintools_: 一个轻松创建域的工具"
 
 #: ../../develop.rst:51
 msgid "email: obfuscate email addresses"
-msgstr ""
+msgstr "email: 混淆电子邮件地址"
 
 #: ../../develop.rst:52
 msgid "erlangdomain: an extension for Erlang support (Sphinx 1.0 needed)"
-msgstr ""
+msgstr "erlangdomain: Erlang支持的扩展(需要Sphinx 1.0)"
 
 #: ../../develop.rst:53
 msgid "exceltable: embed Excel spreadsheets into documents using exceltable_"
-msgstr ""
+msgstr "exceltable: 使用 exceltable_ 将Excel电子表格嵌入到文档中"
 
 #: ../../develop.rst:54
 msgid ""
 "feed: an extension for creating syndication feeds and time-based "
 "overviews from your site content"
-msgstr ""
+msgstr "feed: 用于从您的网站内容创建联合供稿和基于时间的概述的扩展程序"
 
 #: ../../develop.rst:56
 msgid ""
 "findanything_: an extension to add Sublime Text 2-like findanything "
 "panels to your documentation to find pages, sections and index entries "
 "while typing"
-msgstr ""
+msgstr "findanything_: 一个扩展，用于在文档中添加Sublime Text-like findanything面板，以便在键入时查找页面，节和索引条目"
 
 #: ../../develop.rst:58
 msgid "gnuplot: produces images using gnuplot_ language"
-msgstr ""
+msgstr "gnuplot: 使用 gnuplot_ 语言生成图像"
 
 #: ../../develop.rst:59
 msgid "googleanalytics: track web visitor statistics by using `Google Analytics`_"
-msgstr ""
+msgstr "googleanalytics: 使用 `Google Analytics`_ 跟踪网络访问者统计信息"
 
 #: ../../develop.rst:60
 msgid "googlechart: embed charts by using `Google Chart`_"
-msgstr ""
+msgstr "googlechart: 使用 `Google Chart`_ 嵌入图表"
 
 #: ../../develop.rst:61
 msgid "googlemaps: embed maps by using `Google Maps`_"
-msgstr ""
+msgstr "googlemaps: 使用 `谷歌地图`_ 嵌入地图"
 
 #: ../../develop.rst:62
 msgid "httpdomain: a domain for documenting RESTful HTTP APIs"
-msgstr ""
+msgstr "httpdomain: 用于记录RESTful HTTP API的域"
 
 #: ../../develop.rst:63
 msgid "hyphenator: client-side hyphenation of HTML using hyphenator_"
-msgstr ""
+msgstr "hyphenator: 使用连 hyphenator_ 的客户端HTML连字符"
 
 #: ../../develop.rst:64
 msgid "imgur: embed Imgur images, albums, and metadata in documents"
-msgstr ""
+msgstr "imgur: 在文档中嵌入Imgur图像，相册和元数据"
 
 #: ../../develop.rst:65
 msgid "inlinesyntaxhighlight_: inline syntax highlighting"
-msgstr ""
+msgstr "inlinesyntaxhighlight_: 内联语法高亮显示"
 
 #: ../../develop.rst:66
 msgid "lassodomain: a domain for documenting Lasso_ source code"
-msgstr ""
+msgstr "lassodomain: 用于记录 Lasso_ 源代码的域"
 
 #: ../../develop.rst:67
 msgid ""
 "libreoffice: an extension to include any drawing supported by LibreOffice"
 " (e.g. odg, vsd, ...)"
-msgstr ""
+msgstr "libreoffice:包含LibreOffice支持的任何绘图的扩展(例如odg，vsd，...)"
 
 #: ../../develop.rst:68
 msgid ""
 "lilypond: an extension inserting music scripts from Lilypond_ in PNG "
 "format"
-msgstr ""
+msgstr "lilypond: 从 Lilypond_ 以PNG格式插入音乐脚本的扩展程序"
 
 #: ../../develop.rst:69
 msgid "makedomain_: a domain for `GNU Make`_"
-msgstr ""
+msgstr "makedomain_: `GNU Make`_ 的域"
 
 #: ../../develop.rst:70
 msgid "matlabdomain: document MATLAB_ code"
-msgstr ""
+msgstr "matlabdomain: 文档 MATLAB_ 代码"
 
 #: ../../develop.rst:71
 msgid "mockautodoc: mock imports"
-msgstr ""
+msgstr "mockautodoc: 模拟进口"
 
 #: ../../develop.rst:72
 msgid "mscgen: embed mscgen-formatted MSC (Message Sequence Chart)s"
-msgstr ""
+msgstr "mscgen: 嵌入mscgen格式的MSC(消息序列图)"
 
 #: ../../develop.rst:73
 msgid "napoleon: supports `Google style`_ and `NumPy style`_ docstrings"
-msgstr ""
+msgstr "napoleon: 支持 `Google style`_ 和 `NumPy style`_  docstrings"
 
 #: ../../develop.rst:74
 msgid "nicovideo: embed videos from nicovideo"
-msgstr ""
+msgstr "nicovideo: 嵌入来自nicovideo的视频"
 
 #: ../../develop.rst:75
 msgid "nwdiag: embed network diagrams by using nwdiag_"
-msgstr ""
+msgstr "nwdiag: 使用 nwdiag_ 嵌入网络图"
 
 #: ../../develop.rst:76
 msgid "omegat: support tools to collaborate with OmegaT_ (Sphinx 1.1 needed)"
-msgstr ""
+msgstr "omegat: 支持与 OmegaT_ 协作的工具(需要Sphinx 1.1)"
 
 #: ../../develop.rst:77
 msgid ""
 "osaka: convert standard Japanese doc to Osaka dialect (this is a joke "
 "extension)"
-msgstr ""
+msgstr "osaka: 将标准日语文档转换为大阪方言(这是一个笑话扩展)"
 
 #: ../../develop.rst:78
 msgid "paverutils: an alternate integration of Sphinx with Paver_"
-msgstr ""
+msgstr "paverutils: Sphinx与 Paver_ 的替代集成"
 
 #: ../../develop.rst:79
 msgid "phpdomain: an extension for PHP support"
-msgstr ""
+msgstr "phpdomain: PHP支持的扩展"
 
 #: ../../develop.rst:80
 msgid "plantuml: embed UML diagram by using PlantUML_"
-msgstr ""
+msgstr "plantuml: 使用 PlantUML_ 嵌入UML图"
 
 #: ../../develop.rst:81
 msgid ""
 "py_directive: Execute python code in a ``py`` directive and return a math"
 " node"
-msgstr ""
+msgstr "py_directive: 在 ``py`` 指令中执行python代码并返回一个数学节点"
 
 #: ../../develop.rst:83
 msgid "rawfiles: copy raw files, like a CNAME"
-msgstr ""
+msgstr "rawfiles: 复制原始文件，如CNAME"
 
 #: ../../develop.rst:84
 msgid ""
 "requirements: declare requirements wherever you need (e.g. in test "
 "docstrings), mark statuses and collect them in a single list"
-msgstr ""
+msgstr "requirements: 在任何需要的地方声明需求(例如在测试文档字符串中)，标记状态并将它们收集在一个列表中"
 
 #: ../../develop.rst:86
 msgid "restbuilder: a builder for reST (reStructuredText) files"
-msgstr ""
+msgstr "restbuilder: reST(reStructuredText)文件的构建器"
 
 #: ../../develop.rst:87
 msgid "rubydomain: an extension for Ruby support (Sphinx 1.0 needed)"
-msgstr ""
+msgstr "rubydomain: Ruby支持的扩展(需要Sphinx 1.0)"
 
 #: ../../develop.rst:88
 msgid "sadisplay: display SqlAlchemy model sadisplay_"
-msgstr ""
+msgstr "sadisplay: 显示SqlAlchemy模型 sadisplay_ "
 
 #: ../../develop.rst:89
 msgid ""
 "sdedit: an extension inserting sequence diagram by using Quick Sequence "
 "Diagram Editor (sdedit_)"
-msgstr ""
+msgstr "sdedit: 使用快速序列图编辑器(sdedit_)扩展插入序列图"
 
 #: ../../develop.rst:91
 msgid "seqdiag: embed sequence diagrams by using seqdiag_"
-msgstr ""
+msgstr "seqdiag: 使用 seqdiag_ 嵌入序列图"
 
 #: ../../develop.rst:92
 msgid "slide: embed presentation slides on slideshare_ and other sites"
-msgstr ""
+msgstr "slide: 在 slideshare_ 和其他网站上嵌入演示幻灯片"
 
 #: ../../develop.rst:93
 msgid "swf_: embed flash files"
-msgstr ""
+msgstr "swf_: 嵌入flash文件"
 
 #: ../../develop.rst:94
 msgid "sword: an extension inserting Bible verses from Sword_"
-msgstr ""
+msgstr "sword: 从 Sword_ 插入圣经经文的扩展"
 
 #: ../../develop.rst:95
 msgid "tikz: draw pictures with the `TikZ/PGF LaTeX package`_"
-msgstr ""
+msgstr "tikz: 使用 `TikZ/PGF LaTeX package`_ 绘制图片"
 
 #: ../../develop.rst:96
 msgid "traclinks: create TracLinks_ to a Trac_ instance from within Sphinx"
-msgstr ""
+msgstr "traclinks: 从Sphinx中创建 TracLinks_ 到 Trac_ 实例"
 
 #: ../../develop.rst:97
 msgid ""
 "versioning: Sphinx extension that allows building versioned docs for "
 "self-hosting"
-msgstr ""
+msgstr "versioning: Sphinx扩展允许构建版本化文档以进行自托管"
 
 #: ../../develop.rst:98
 msgid "whooshindex: whoosh indexer extension"
-msgstr ""
+msgstr "whooshindex: whoosh的索引器扩展"
 
 #: ../../develop.rst:99
 msgid "youtube: embed videos from YouTube_"
-msgstr ""
+msgstr "youtube: 从YouTube嵌入视频"
 
 #: ../../develop.rst:100
 msgid ""
 "zopeext: provide an ``autointerface`` directive for using `Zope "
 "interfaces`_"
-msgstr ""
+msgstr "提供一个 ``autointerface`` 指令，用于使用 `Zope interfaces`_ "
 
 #: ../../develop.rst:103
 msgid ""
 "See the :doc:`extension tutorials <../development/tutorials/index>` on "
 "getting started with writing your own extensions."
-msgstr ""
+msgstr "在开始编写自己的扩展时，请参阅 :doc:`extension tutorials <../development/tutorials/index>` 。"
 

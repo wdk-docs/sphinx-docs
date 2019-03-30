@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:2
 msgid "Developing a \"TODO\" extension"
-msgstr ""
+msgstr "开发 \"TODO\" 扩展"
 
 #: ../../development/tutorials/todo.rst:4
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:14
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 #: ../../development/tutorials/todo.rst:17
 msgid ""
@@ -92,7 +92,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:47
 msgid "Prerequisites"
-msgstr ""
+msgstr "先决条件"
 
 #: ../../development/tutorials/todo.rst:49
 msgid ""
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:76
 msgid "Writing the extension"
-msgstr ""
+msgstr "编写扩展"
 
 #: ../../development/tutorials/todo.rst:78
 msgid ""
@@ -345,7 +345,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:263
 msgid "Using the extension"
-msgstr ""
+msgstr "使用扩展"
 
 #: ../../development/tutorials/todo.rst:265
 msgid ""
@@ -401,7 +401,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:333
 msgid "Further reading"
-msgstr ""
+msgstr "延伸阅读"
 
 #: ../../development/tutorials/todo.rst:335
 msgid ""

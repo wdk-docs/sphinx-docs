@@ -19,12 +19,12 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/index.rst:4
 msgid "Sphinx Web Support"
-msgstr ""
+msgstr "Sphinx Web支持"
 
 #: ../../usage/advanced/websupport/index.rst:8
 msgid ""
 "Sphinx provides a Python API to easily integrate Sphinx documentation "
 "into your web application.  To learn more read the "
 ":ref:`websupportquickstart`."
-msgstr ""
+msgstr "Sphinx提供了一个Python API，可以轻松地将Sphinx文档集成到您的Web应用程序中。要了解更多信息，请阅读 :ref:`websupportquickstart` 。"
 

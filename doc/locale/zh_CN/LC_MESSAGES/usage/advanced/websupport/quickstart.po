@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:4
 msgid "Web Support Quick Start"
-msgstr ""
+msgstr "Web支持快速入门"
 
 #: ../../usage/advanced/websupport/quickstart.rst:7
 msgid "Building Documentation Data"
-msgstr ""
+msgstr "构建文档数据"
 
 #: ../../usage/advanced/websupport/quickstart.rst:9
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:37
 msgid "Integrating Sphinx Documents Into Your Webapp"
-msgstr ""
+msgstr "将Sphinx文档集成到您的Webapp中"
 
 #: ../../usage/advanced/websupport/quickstart.rst:39
 msgid ""
@@ -72,31 +72,31 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:53
 msgid "This will return a dictionary containing the following items:"
-msgstr ""
+msgstr "This will return a dictionary containing the following items:"
 
 #: ../../usage/advanced/websupport/quickstart.rst:55
 msgid "**body**: The main body of the document as HTML"
-msgstr ""
+msgstr "**body**: 文档的主体为HTML"
 
 #: ../../usage/advanced/websupport/quickstart.rst:56
 msgid "**sidebar**: The sidebar of the document as HTML"
-msgstr ""
+msgstr "**sidebar**: 文档的侧边栏为HTML"
 
 #: ../../usage/advanced/websupport/quickstart.rst:57
 msgid "**relbar**: A div containing links to related documents"
-msgstr ""
+msgstr "**relbar**: 包含相关文档链接的div"
 
 #: ../../usage/advanced/websupport/quickstart.rst:58
 msgid "**title**: The title of the document"
-msgstr ""
+msgstr "**title**: 文件的标题"
 
 #: ../../usage/advanced/websupport/quickstart.rst:59
 msgid "**css**: Links to CSS files used by Sphinx"
-msgstr ""
+msgstr "**css**: 链接到Sphinx使用的CSS文件"
 
 #: ../../usage/advanced/websupport/quickstart.rst:60
 msgid "**script**: JavaScript containing comment options"
-msgstr ""
+msgstr "**script**: 包含评论选项的JavaScript"
 
 #: ../../usage/advanced/websupport/quickstart.rst:62
 msgid ""
@@ -107,7 +107,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:99
 msgid "Authentication"
-msgstr ""
+msgstr "认证"
 
 #: ../../usage/advanced/websupport/quickstart.rst:101
 msgid ""
@@ -154,7 +154,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:149
 msgid "Performing Searches"
-msgstr ""
+msgstr "执行搜索"
 
 #: ../../usage/advanced/websupport/quickstart.rst:151
 msgid ""
@@ -177,7 +177,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:171
 msgid "Comments & Proposals"
-msgstr ""
+msgstr "评论和建议"
 
 #: ../../usage/advanced/websupport/quickstart.rst:173
 msgid ""
@@ -206,7 +206,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:221
 msgid "Comment Moderation"
-msgstr ""
+msgstr "评论审核"
 
 #: ../../usage/advanced/websupport/quickstart.rst:223
 msgid ""
@@ -224,7 +224,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/quickstart.rst:243
 msgid "Rejecting comments happens via comment deletion."
-msgstr ""
+msgstr "通过删除评论来拒绝评论。"
 
 #: ../../usage/advanced/websupport/quickstart.rst:245
 msgid ""

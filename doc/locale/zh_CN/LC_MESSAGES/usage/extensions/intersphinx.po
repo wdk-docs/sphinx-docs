@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:2
 msgid ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation"
-msgstr ""
+msgstr ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation"
 
 #: ../../usage/extensions/intersphinx.rst:11
 msgid ""
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:26
 msgid "Behind the scenes, this works as follows:"
-msgstr ""
+msgstr "Behind the scenes, this works as follows:"
 
 #: ../../usage/extensions/intersphinx.rst:28
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:43
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/intersphinx.rst:45
 msgid ""
@@ -104,11 +104,11 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:61
 msgid "**Old format for this config value**"
-msgstr ""
+msgstr "**Old format for this config value**"
 
 #: ../../usage/extensions/intersphinx.rst:63
 msgid "This is the format used before Sphinx 1.0.  It is still recognized."
-msgstr ""
+msgstr "This is the format used before Sphinx 1.0.  It is still recognized."
 
 #: ../../usage/extensions/intersphinx.rst:65
 msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:71
 msgid "**New format for this config value**"
-msgstr ""
+msgstr "**New format for this config value**"
 
 #: ../../usage/extensions/intersphinx.rst:75
 msgid ""
@@ -143,7 +143,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:86
 msgid "**Example**"
-msgstr ""
+msgstr "**Example**"
 
 #: ../../usage/extensions/intersphinx.rst:88
 msgid ""
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:109
 msgid "**Multiple target for the inventory**"
-msgstr ""
+msgstr "**Multiple target for the inventory**"
 
 #: ../../usage/extensions/intersphinx.rst:113
 msgid ""
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:142
 msgid "Showing all links of an Intersphinx mapping file"
-msgstr ""
+msgstr "Showing all links of an Intersphinx mapping file"
 
 #: ../../usage/extensions/intersphinx.rst:144
 msgid ""

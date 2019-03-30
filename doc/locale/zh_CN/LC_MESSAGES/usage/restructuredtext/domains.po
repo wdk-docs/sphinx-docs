@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:5
 msgid "Domains"
-msgstr ""
+msgstr "域"
 
 #: ../../usage/restructuredtext/domains.rst:9
 msgid ""
@@ -32,6 +32,10 @@ msgid ""
 "purposes: C/C++ projects, JavaScript, or even reStructuredText markup "
 "(like in this documentation)."
 msgstr ""
+"最初，Sphinx是为单个项目构思的，即Python语言的文档。不久之后，它作为一个文档工具提供给每个人，但Python模块的文档仍然内置 -- "
+"最基本的指令，如 "
+"``function``，是为Python对象设计的。由于Sphinx已经变得有些受欢迎，因此将其用于许多不同目的的兴趣：C/C++ "
+"项目，JavaScript，甚至是reStructuredText 标记（如本文档中所述）。"
 
 #: ../../usage/restructuredtext/domains.rst:17
 msgid ""
@@ -68,7 +72,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:40
 msgid "Basic Markup"
-msgstr ""
+msgstr "Basic Markup"
 
 #: ../../usage/restructuredtext/domains.rst:42
 msgid ""
@@ -90,7 +94,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:62
 msgid "(This example also shows how to use the ``:noindex:`` flag.)"
-msgstr ""
+msgstr "(This example also shows how to use the ``:noindex:`` flag.)"
 
 #: ../../usage/restructuredtext/domains.rst:64
 msgid ""
@@ -107,7 +111,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:74
 msgid "Default Domain"
-msgstr ""
+msgstr "Default Domain"
 
 #: ../../usage/restructuredtext/domains.rst:75
 msgid ""
@@ -138,7 +142,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:99
 msgid "Cross-referencing syntax"
-msgstr ""
+msgstr "Cross-referencing syntax"
 
 #: ../../usage/restructuredtext/domains.rst:101
 msgid ""
@@ -148,7 +152,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:104
 msgid "In short:"
-msgstr ""
+msgstr "In short:"
 
 #: ../../usage/restructuredtext/domains.rst:106
 msgid ""
@@ -172,7 +176,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:117
 msgid "The Python Domain"
-msgstr ""
+msgstr "The Python Domain"
 
 #: ../../usage/restructuredtext/domains.rst:119
 msgid ""
@@ -190,7 +194,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:129
 msgid "This directive will also cause an entry in the global module index."
-msgstr ""
+msgstr "This directive will also cause an entry in the global module index."
 
 #: ../../usage/restructuredtext/domains.rst:131
 msgid ""
@@ -227,7 +231,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:153
 msgid "The following directives are provided for module and class contents:"
-msgstr ""
+msgstr "The following directives are provided for module and class contents:"
 
 #: ../../usage/restructuredtext/domains.rst:157
 msgid ""
@@ -238,7 +242,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:163
 msgid "For methods you should use :rst:dir:`py:method`."
-msgstr ""
+msgstr "For methods you should use :rst:dir:`py:method`."
 
 #: ../../usage/restructuredtext/domains.rst:165
 msgid ""
@@ -282,7 +286,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:204
 msgid "The first way is the preferred one."
-msgstr ""
+msgstr "The first way is the preferred one."
 
 #: ../../usage/restructuredtext/domains.rst:208
 msgid ""
@@ -319,11 +323,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:249
 msgid "the descriptions should look like this::"
-msgstr ""
+msgstr "the descriptions should look like this::"
 
 #: ../../usage/restructuredtext/domains.rst:259
 msgid "(as opposed to ``.. py:decorator:: removename(func)``.)"
-msgstr ""
+msgstr "(as opposed to ``.. py:decorator:: removename(func)``.)"
 
 #: ../../usage/restructuredtext/domains.rst:261
 msgid ""
@@ -333,15 +337,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:267
 msgid "Same as :rst:dir:`py:decorator`, but for decorators that are methods."
-msgstr ""
+msgstr "Same as :rst:dir:`py:decorator`, but for decorators that are methods."
 
 #: ../../usage/restructuredtext/domains.rst:269
 msgid "Refer to a decorator method using the :rst:role:`py:meth` role."
-msgstr ""
+msgstr "Refer to a decorator method using the :rst:role:`py:meth` role."
 
 #: ../../usage/restructuredtext/domains.rst:274
 msgid "Python Signatures"
-msgstr ""
+msgstr "Python Signatures"
 
 #: ../../usage/restructuredtext/domains.rst:276
 msgid ""
@@ -365,12 +369,12 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:291
 msgid "It is customary to put the opening bracket before the comma."
-msgstr ""
+msgstr "It is customary to put the opening bracket before the comma."
 
 #: ../../usage/restructuredtext/domains.rst:296
 #: ../../usage/restructuredtext/domains.rst:1029
 msgid "Info field lists"
-msgstr ""
+msgstr "Info field lists"
 
 #: ../../usage/restructuredtext/domains.rst:300
 msgid ""
@@ -386,7 +390,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:305
 msgid "``type``: Type of a parameter.  Creates a link if possible."
-msgstr ""
+msgstr "``type``: Type of a parameter.  Creates a link if possible."
 
 #: ../../usage/restructuredtext/domains.rst:306
 msgid ""
@@ -396,19 +400,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:308
 msgid "``var``, ``ivar``, ``cvar``: Description of a variable."
-msgstr ""
+msgstr "``var``, ``ivar``, ``cvar``: Description of a variable."
 
 #: ../../usage/restructuredtext/domains.rst:309
 msgid "``vartype``: Type of a variable.  Creates a link if possible."
-msgstr ""
+msgstr "``vartype``: Type of a variable.  Creates a link if possible."
 
 #: ../../usage/restructuredtext/domains.rst:310
 msgid "``returns``, ``return``: Description of the return value."
-msgstr ""
+msgstr "``returns``, ``return``: Description of the return value."
 
 #: ../../usage/restructuredtext/domains.rst:311
 msgid "``rtype``: Return type.  Creates a link if possible."
-msgstr ""
+msgstr "``rtype``: Return type.  Creates a link if possible."
 
 #: ../../usage/restructuredtext/domains.rst:315
 msgid ""
@@ -425,55 +429,55 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:336
 msgid "This will render like this:"
-msgstr ""
+msgstr "This will render like this:"
 
 #: ../../usage/restructuredtext/domains.rst:341
 msgid "Send a message to a recipient"
-msgstr ""
+msgstr "Send a message to a recipient"
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "Parameters"
-msgstr ""
+msgid "参数"
+msgstr "参数"
 
 #: ../../usage/restructuredtext/domains.rst:343
 msgid "The person sending the message"
-msgstr ""
+msgstr "The person sending the message"
 
 #: ../../usage/restructuredtext/domains.rst:344
 msgid "The recipient of the message"
-msgstr ""
+msgstr "The recipient of the message"
 
 #: ../../usage/restructuredtext/domains.rst:345
 msgid "The body of the message"
-msgstr ""
+msgstr "The body of the message"
 
 #: ../../usage/restructuredtext/domains.rst:346
 msgid "The priority of the message, can be a number 1-5"
-msgstr ""
+msgstr "The priority of the message, can be a number 1-5"
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "Returns"
-msgstr ""
+msgid "返回"
+msgstr "返回"
 
 #: ../../usage/restructuredtext/domains.rst:348
 msgid "the message id"
-msgstr ""
+msgstr "the message id"
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "Return type"
-msgstr ""
+msgid "返回类型"
+msgstr "返回类型"
 
 #: ../../usage/restructuredtext/domains.rst
-msgid "Raises"
-msgstr ""
+msgid "引发"
+msgstr "引发"
 
 #: ../../usage/restructuredtext/domains.rst:350
 msgid "if the message_body exceeds 160 characters"
-msgstr ""
+msgstr "if the message_body exceeds 160 characters"
 
 #: ../../usage/restructuredtext/domains.rst:351
 msgid "if the message_body is not a basestring"
-msgstr ""
+msgstr "if the message_body is not a basestring"
 
 #: ../../usage/restructuredtext/domains.rst:353
 msgid ""
@@ -495,7 +499,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:380
 msgid "Cross-referencing Python objects"
-msgstr ""
+msgstr "Cross-referencing Python objects"
 
 #: ../../usage/restructuredtext/domains.rst:382
 msgid ""
@@ -520,7 +524,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:399
 msgid "Reference a module-level variable."
-msgstr ""
+msgstr "Reference a module-level variable."
 
 #: ../../usage/restructuredtext/domains.rst:403
 msgid ""
@@ -530,7 +534,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:408
 msgid "Reference a class; a dotted name may be used."
-msgstr ""
+msgstr "Reference a class; a dotted name may be used."
 
 #: ../../usage/restructuredtext/domains.rst:412
 msgid ""
@@ -541,11 +545,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:418
 msgid "Reference a data attribute of an object."
-msgstr ""
+msgstr "Reference a data attribute of an object."
 
 #: ../../usage/restructuredtext/domains.rst:422
 msgid "Reference an exception.  A dotted name may be used."
-msgstr ""
+msgstr "Reference an exception.  A dotted name may be used."
 
 #: ../../usage/restructuredtext/domains.rst:426
 msgid ""
@@ -599,15 +603,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:462
 msgid "The C Domain"
-msgstr ""
+msgstr "The C Domain"
 
 #: ../../usage/restructuredtext/domains.rst:464
 msgid "The C domain (name **c**) is suited for documentation of C API."
-msgstr ""
+msgstr "The C domain (name **c**) is suited for documentation of C API."
 
 #: ../../usage/restructuredtext/domains.rst:468
 msgid "Describes a C function. The signature should be given as in C, e.g.::"
-msgstr ""
+msgstr "Describes a C function. The signature should be given as in C, e.g.::"
 
 #: ../../usage/restructuredtext/domains.rst:472
 msgid ""
@@ -624,7 +628,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:480
 msgid "Describes a C struct member. Example signature::"
-msgstr ""
+msgstr "Describes a C struct member. Example signature::"
 
 #: ../../usage/restructuredtext/domains.rst:484
 msgid ""
@@ -657,7 +661,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:511
 msgid "Cross-referencing C constructs"
-msgstr ""
+msgstr "Cross-referencing C constructs"
 
 #: ../../usage/restructuredtext/domains.rst:513
 msgid ""
@@ -667,35 +671,35 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:518
 msgid "Reference a C-language function. Should include trailing parentheses."
-msgstr ""
+msgstr "Reference a C-language function. Should include trailing parentheses."
 
 #: ../../usage/restructuredtext/domains.rst:522
 msgid "Reference a C-language member of a struct."
-msgstr ""
+msgstr "Reference a C-language member of a struct."
 
 #: ../../usage/restructuredtext/domains.rst:526
 msgid "Reference a \"simple\" C macro, as defined above."
-msgstr ""
+msgstr "Reference a \"simple\" C macro, as defined above."
 
 #: ../../usage/restructuredtext/domains.rst:530
 msgid "Reference a C-language type."
-msgstr ""
+msgstr "Reference a C-language type."
 
 #: ../../usage/restructuredtext/domains.rst:534
 msgid "Reference a C-language variable."
-msgstr ""
+msgstr "Reference a C-language variable."
 
 #: ../../usage/restructuredtext/domains.rst:540
 msgid "The C++ Domain"
-msgstr ""
+msgstr "The C++ Domain"
 
 #: ../../usage/restructuredtext/domains.rst:542
 msgid "The C++ domain (name **cpp**) supports documenting C++ projects."
-msgstr ""
+msgstr "The C++ domain (name **cpp**) supports documenting C++ projects."
 
 #: ../../usage/restructuredtext/domains.rst:545
 msgid "Directives for Declaring Entities"
-msgstr ""
+msgstr "Directives for Declaring Entities"
 
 #: ../../usage/restructuredtext/domains.rst:547
 msgid ""
@@ -718,43 +722,43 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:561
 msgid "The class can be directly declared inside a nested scope, e.g.,::"
-msgstr ""
+msgstr "The class can be directly declared inside a nested scope, e.g.,::"
 
 #: ../../usage/restructuredtext/domains.rst:565
 msgid "A class template can be declared::"
-msgstr ""
+msgstr "A class template can be declared::"
 
 #: ../../usage/restructuredtext/domains.rst:569
 msgid "or with a line break::"
-msgstr ""
+msgstr "or with a line break::"
 
 #: ../../usage/restructuredtext/domains.rst:574
 msgid "Full and partial template specialisations can be declared::"
-msgstr ""
+msgstr "Full and partial template specialisations can be declared::"
 
 #: ../../usage/restructuredtext/domains.rst:582
 msgid "The :rst:dir:`cpp:struct` directive."
-msgstr ""
+msgstr "The :rst:dir:`cpp:struct` directive."
 
 #: ../../usage/restructuredtext/domains.rst:587
 msgid "Describe a function or member function, e.g.,::"
-msgstr ""
+msgstr "Describe a function or member function, e.g.,::"
 
 #: ../../usage/restructuredtext/domains.rst:613
 msgid "Function templates can also be described::"
-msgstr ""
+msgstr "Function templates can also be described::"
 
 #: ../../usage/restructuredtext/domains.rst:618
 msgid "and function template specialisations::"
-msgstr ""
+msgstr "and function template specialisations::"
 
 #: ../../usage/restructuredtext/domains.rst:626
 msgid "Describe a variable or member variable, e.g.,::"
-msgstr ""
+msgstr "Describe a variable or member variable, e.g.,::"
 
 #: ../../usage/restructuredtext/domains.rst:634
 msgid "Variable templates can also be described::"
-msgstr ""
+msgstr "Variable templates can also be described::"
 
 #: ../../usage/restructuredtext/domains.rst:643
 msgid ""
@@ -764,23 +768,23 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:658
 msgid "A type alias can also be templated::"
-msgstr ""
+msgstr "A type alias can also be templated::"
 
 #: ../../usage/restructuredtext/domains.rst:663
 msgid "The example are rendered as follows."
-msgstr ""
+msgstr "The example are rendered as follows."
 
 #: ../../usage/restructuredtext/domains.rst:667
 msgid "A typedef-like declaration of a type."
-msgstr ""
+msgstr "A typedef-like declaration of a type."
 
 #: ../../usage/restructuredtext/domains.rst:671
 msgid "Declaration of a type alias with unspecified type."
-msgstr ""
+msgstr "Declaration of a type alias with unspecified type."
 
 #: ../../usage/restructuredtext/domains.rst:675
 msgid "Declaration of a type alias."
-msgstr ""
+msgstr "Declaration of a type alias."
 
 #: ../../usage/restructuredtext/domains.rst:684
 msgid ""
@@ -791,11 +795,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:707
 msgid "Describe an enumerator, optionally with its value defined, e.g.,::"
-msgstr ""
+msgstr "Describe an enumerator, optionally with its value defined, e.g.,::"
 
 #: ../../usage/restructuredtext/domains.rst:715
 msgid "Describe a union."
-msgstr ""
+msgstr "Describe a union."
 
 #: ../../usage/restructuredtext/domains.rst:721
 #: ../../usage/restructuredtext/domains.rst:854
@@ -813,7 +817,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:744
 msgid "This will render as follows:"
-msgstr ""
+msgstr "This will render as follows:"
 
 #: ../../usage/restructuredtext/domains.rst:748
 msgid ""
@@ -823,19 +827,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:751
 msgid "**Notation**"
-msgstr ""
+msgstr "**Notation**"
 
 #: ../../usage/restructuredtext/domains.rst:755
 msgid "An lvalue."
-msgstr ""
+msgstr "An lvalue."
 
 #: ../../usage/restructuredtext/domains.rst:757
 msgid "**Valid Expressions**"
-msgstr ""
+msgstr "**Valid Expressions**"
 
 #: ../../usage/restructuredtext/domains.rst:759
 msgid ":cpp:expr:`*r`, when :cpp:expr:`r` is dereferenceable."
-msgstr ""
+msgstr ":cpp:expr:`*r`, when :cpp:expr:`r` is dereferenceable."
 
 #: ../../usage/restructuredtext/domains.rst:760
 msgid ""
@@ -845,15 +849,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:767
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: ../../usage/restructuredtext/domains.rst:769
 msgid "Some directives support options:"
-msgstr ""
+msgstr "Some directives support options:"
 
 #: ../../usage/restructuredtext/domains.rst:771
 msgid "``:noindex:``, see :ref:`basic-domain-markup`."
-msgstr ""
+msgstr "``:noindex:``, see :ref:`basic-domain-markup`."
 
 #: ../../usage/restructuredtext/domains.rst:772
 msgid ""
@@ -863,7 +867,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:778
 msgid "Anonymous Entities"
-msgstr ""
+msgstr "Anonymous Entities"
 
 #: ../../usage/restructuredtext/domains.rst:780
 msgid ""
@@ -877,11 +881,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:787
 msgid "Example::"
-msgstr ""
+msgstr "Example::"
 
 #: ../../usage/restructuredtext/domains.rst:799
 msgid "This will be rendered as:"
-msgstr ""
+msgstr "This will be rendered as:"
 
 #: ../../usage/restructuredtext/domains.rst:809
 msgid ""
@@ -891,7 +895,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:815
 msgid "Aliasing Declarations"
-msgstr ""
+msgstr "Aliasing Declarations"
 
 #: ../../usage/restructuredtext/domains.rst:817
 msgid ""
@@ -910,28 +914,28 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:828
 msgid "For example::"
-msgstr ""
+msgstr "For example::"
 
 #: ../../usage/restructuredtext/domains.rst:833
 #: ../../usage/restructuredtext/domains.rst:843
 msgid "becomes"
-msgstr ""
+msgstr "becomes"
 
 #: ../../usage/restructuredtext/domains.rst:838
 msgid "whereas::"
-msgstr ""
+msgstr "whereas::"
 
 #: ../../usage/restructuredtext/domains.rst:852
 msgid "Constrained Templates"
-msgstr ""
+msgstr "Constrained Templates"
 
 #: ../../usage/restructuredtext/domains.rst:858
 msgid "Sphinx does not currently support ``requires`` clauses."
-msgstr ""
+msgstr "Sphinx does not currently support ``requires`` clauses."
 
 #: ../../usage/restructuredtext/domains.rst:861
 msgid "Placeholders"
-msgstr ""
+msgstr "Placeholders"
 
 #: ../../usage/restructuredtext/domains.rst:863
 msgid ""
@@ -942,7 +946,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:877
 msgid "Template Introductions"
-msgstr ""
+msgstr "Template Introductions"
 
 #: ../../usage/restructuredtext/domains.rst:879
 msgid ""
@@ -952,7 +956,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:892
 msgid "They are rendered as follows."
-msgstr ""
+msgstr "They are rendered as follows."
 
 #: ../../usage/restructuredtext/domains.rst:896
 msgid ""
@@ -975,7 +979,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:908
 msgid "Inline Expressions and Types"
-msgstr ""
+msgstr "Inline Expressions and Types"
 
 #: ../../usage/restructuredtext/domains.rst:913
 msgid ""
@@ -985,11 +989,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:925
 msgid "will be rendered as follows:"
-msgstr ""
+msgstr "will be rendered as follows:"
 
 #: ../../usage/restructuredtext/domains.rst:931
 msgid "An expression: :cpp:expr:`a * f(a)` (or as text: :cpp:texpr:`a * f(a)`)."
-msgstr ""
+msgstr "An expression: :cpp:expr:`a * f(a)` (or as text: :cpp:texpr:`a * f(a)`)."
 
 #: ../../usage/restructuredtext/domains.rst:933
 msgid ""
@@ -999,15 +1003,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:936
 msgid "The :rst:role:`cpp:expr` role."
-msgstr ""
+msgstr "The :rst:role:`cpp:expr` role."
 
 #: ../../usage/restructuredtext/domains.rst:939
 msgid "The :rst:role:`cpp:texpr` role."
-msgstr ""
+msgstr "The :rst:role:`cpp:texpr` role."
 
 #: ../../usage/restructuredtext/domains.rst:943
 msgid "Namespacing"
-msgstr ""
+msgstr "Namespacing"
 
 #: ../../usage/restructuredtext/domains.rst:945
 msgid ""
@@ -1052,7 +1056,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:971
 msgid "A namespace declaration can also be templated, e.g.,::"
-msgstr ""
+msgstr "A namespace declaration can also be templated, e.g.,::"
 
 #: ../../usage/restructuredtext/domains.rst:980
 msgid ""
@@ -1062,15 +1066,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:988
 msgid "or::"
-msgstr ""
+msgstr "or::"
 
 #: ../../usage/restructuredtext/domains.rst:995
 msgid "Change the scope relatively to the current scope. For example, after::"
-msgstr ""
+msgstr "Change the scope relatively to the current scope. For example, after::"
 
 #: ../../usage/restructuredtext/domains.rst:1001
 msgid "the current scope will be ``A::B::C::D``."
-msgstr ""
+msgstr "the current scope will be ``A::B::C::D``."
 
 #: ../../usage/restructuredtext/domains.rst:1007
 msgid ""
@@ -1080,7 +1084,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1016
 msgid "the current scope will be ``A::B`` (*not* ``A::B::C``)."
-msgstr ""
+msgstr "the current scope will be ``A::B`` (*not* ``A::B::C``)."
 
 #: ../../usage/restructuredtext/domains.rst:1018
 msgid ""
@@ -1097,15 +1101,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1034
 msgid "`param`, `parameter`, `arg`, `argument`: Description of a parameter."
-msgstr ""
+msgstr "`param`, `parameter`, `arg`, `argument`: Description of a parameter."
 
 #: ../../usage/restructuredtext/domains.rst:1035
 msgid "`tparam`: Description of a template parameter."
-msgstr ""
+msgstr "`tparam`: Description of a template parameter."
 
 #: ../../usage/restructuredtext/domains.rst:1036
 msgid "`returns`, `return`: Description of a return value."
-msgstr ""
+msgstr "`returns`, `return`: Description of a return value."
 
 #: ../../usage/restructuredtext/domains.rst:1037
 msgid ""
@@ -1115,11 +1119,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1042
 msgid "Cross-referencing"
-msgstr ""
+msgstr "Cross-referencing"
 
 #: ../../usage/restructuredtext/domains.rst:1044
 msgid "These roles link to the given declaration types:"
-msgstr ""
+msgstr "These roles link to the given declaration types:"
 
 #: ../../usage/restructuredtext/domains.rst:1057
 msgid ""
@@ -1135,7 +1139,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1063
 msgid "Note on References with Templates Parameters/Arguments"
-msgstr ""
+msgstr "Note on References with Templates Parameters/Arguments"
 
 #: ../../usage/restructuredtext/domains.rst:1065
 msgid ""
@@ -1156,7 +1160,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1076
 msgid "Declarations without template parameters and template arguments"
-msgstr ""
+msgstr "Declarations without template parameters and template arguments"
 
 #: ../../usage/restructuredtext/domains.rst:1078
 msgid ""
@@ -1166,7 +1170,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1083
 msgid "Overloaded (member) functions"
-msgstr ""
+msgstr "Overloaded (member) functions"
 
 #: ../../usage/restructuredtext/domains.rst:1085
 msgid ""
@@ -1179,27 +1183,27 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1100
 msgid "References using the :rst:role:`cpp:func` role:"
-msgstr ""
+msgstr "References using the :rst:role:`cpp:func` role:"
 
 #: ../../usage/restructuredtext/domains.rst:1102
 msgid "Arbitrary overload: ``C::f``, :cpp:func:`C::f`"
-msgstr ""
+msgstr "Arbitrary overload: ``C::f``, :cpp:func:`C::f`"
 
 #: ../../usage/restructuredtext/domains.rst:1103
 msgid "Also arbitrary overload: ``C::f()``, :cpp:func:`C::f()`"
-msgstr ""
+msgstr "Also arbitrary overload: ``C::f()``, :cpp:func:`C::f()`"
 
 #: ../../usage/restructuredtext/domains.rst:1104
 msgid "Specific overload: ``void C::f()``, :cpp:func:`void C::f()`"
-msgstr ""
+msgstr "Specific overload: ``void C::f()``, :cpp:func:`void C::f()`"
 
 #: ../../usage/restructuredtext/domains.rst:1105
 msgid "Specific overload: ``void C::f(int)``, :cpp:func:`void C::f(int)`"
-msgstr ""
+msgstr "Specific overload: ``void C::f(int)``, :cpp:func:`void C::f(int)`"
 
 #: ../../usage/restructuredtext/domains.rst:1106
 msgid "Specific overload: ``void C::f(double)``, :cpp:func:`void C::f(double)`"
-msgstr ""
+msgstr "Specific overload: ``void C::f(double)``, :cpp:func:`void C::f(double)`"
 
 #: ../../usage/restructuredtext/domains.rst:1107
 msgid ""
@@ -1215,12 +1219,12 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1116
 msgid "Templated declarations"
-msgstr ""
+msgstr "Templated declarations"
 
 #: ../../usage/restructuredtext/domains.rst:1118
 #: ../../usage/restructuredtext/domains.rst:1154
 msgid "Assume the following declarations."
-msgstr ""
+msgstr "Assume the following declarations."
 
 #: ../../usage/restructuredtext/domains.rst:1128
 msgid ""
@@ -1259,11 +1263,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1144
 msgid "``Wrapper::Outer`` (:cpp:class:`Wrapper::Outer`)"
-msgstr ""
+msgstr "``Wrapper::Outer`` (:cpp:class:`Wrapper::Outer`)"
 
 #: ../../usage/restructuredtext/domains.rst:1146
 msgid "``Wrapper::Outer::Inner`` (:cpp:class:`Wrapper::Outer::Inner`)"
-msgstr ""
+msgstr "``Wrapper::Outer::Inner`` (:cpp:class:`Wrapper::Outer::Inner`)"
 
 #: ../../usage/restructuredtext/domains.rst:1148
 msgid ""
@@ -1273,7 +1277,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1152
 msgid "(Full) Template Specialisations"
-msgstr ""
+msgstr "(Full) Template Specialisations"
 
 #: ../../usage/restructuredtext/domains.rst:1171
 msgid ""
@@ -1290,11 +1294,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1181
 msgid "Partial Template Specialisations"
-msgstr ""
+msgstr "Partial Template Specialisations"
 
 #: ../../usage/restructuredtext/domains.rst:1183
 msgid "Assume the following declaration."
-msgstr ""
+msgstr "Assume the following declaration."
 
 #: ../../usage/restructuredtext/domains.rst:1188
 msgid ""
@@ -1306,15 +1310,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1194
 msgid "Configuration Variables"
-msgstr ""
+msgstr "Configuration Variables"
 
 #: ../../usage/restructuredtext/domains.rst:1196
 msgid "See :ref:`cpp-config`."
-msgstr ""
+msgstr "See :ref:`cpp-config`."
 
 #: ../../usage/restructuredtext/domains.rst:1201
 msgid "The Standard Domain"
-msgstr ""
+msgstr "The Standard Domain"
 
 #: ../../usage/restructuredtext/domains.rst:1203
 msgid ""
@@ -1331,7 +1335,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1210
 msgid "There is a set of directives allowing documenting command-line programs:"
-msgstr ""
+msgstr "There is a set of directives allowing documenting command-line programs:"
 
 #: ../../usage/restructuredtext/domains.rst:1214
 msgid ""
@@ -1400,11 +1404,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1282
 msgid "The JavaScript Domain"
-msgstr ""
+msgstr "The JavaScript Domain"
 
 #: ../../usage/restructuredtext/domains.rst:1284
 msgid "The JavaScript domain (name **js**) provides the following directives:"
-msgstr ""
+msgstr "The JavaScript domain (name **js**) provides the following directives:"
 
 #: ../../usage/restructuredtext/domains.rst:1288
 msgid ""
@@ -1439,15 +1443,15 @@ msgstr ""
 #: ../../usage/restructuredtext/domains.rst:1320
 #: ../../usage/restructuredtext/domains.rst:1349
 msgid "This is rendered as:"
-msgstr ""
+msgstr "This is rendered as:"
 
 #: ../../usage/restructuredtext/domains.rst:1324
 msgid "An URI to the location of the resource."
-msgstr ""
+msgstr "An URI to the location of the resource."
 
 #: ../../usage/restructuredtext/domains.rst:1325
 msgid "Gets called with the object."
-msgstr ""
+msgstr "Gets called with the object."
 
 #: ../../usage/restructuredtext/domains.rst:1326
 msgid ""
@@ -1457,15 +1461,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst
 msgid "throws SomeError"
-msgstr ""
+msgstr "throws SomeError"
 
 #: ../../usage/restructuredtext/domains.rst:1329
 msgid "For whatever reason in that case."
-msgstr ""
+msgstr "For whatever reason in that case."
 
 #: ../../usage/restructuredtext/domains.rst:1330
 msgid "Something."
-msgstr ""
+msgstr "Something."
 
 #: ../../usage/restructuredtext/domains.rst:1334
 msgid ""
@@ -1481,28 +1485,28 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1353
 msgid "The name of the animal"
-msgstr ""
+msgstr "The name of the animal"
 
 #: ../../usage/restructuredtext/domains.rst:1354
 msgid "an optional age for the animal"
-msgstr ""
+msgstr "an optional age for the animal"
 
 #: ../../usage/restructuredtext/domains.rst:1358
 msgid "Describes a global variable or constant."
-msgstr ""
+msgstr "Describes a global variable or constant."
 
 #: ../../usage/restructuredtext/domains.rst:1362
 msgid "Describes the attribute *name* of *object*."
-msgstr ""
+msgstr "Describes the attribute *name* of *object*."
 
 #: ../../usage/restructuredtext/domains.rst:1366
 #: ../../usage/restructuredtext/domains.rst:1421
 msgid "These roles are provided to refer to the described objects:"
-msgstr ""
+msgstr "These roles are provided to refer to the described objects:"
 
 #: ../../usage/restructuredtext/domains.rst:1377
 msgid "The reStructuredText domain"
-msgstr ""
+msgstr "The reStructuredText domain"
 
 #: ../../usage/restructuredtext/domains.rst:1379
 msgid ""
@@ -1520,28 +1524,28 @@ msgstr ""
 #: ../../usage/restructuredtext/domains.rst:1395
 #: ../../usage/restructuredtext/domains.rst:1413
 msgid "will be rendered as:"
-msgstr ""
+msgstr "will be rendered as:"
 
 #: ../../usage/restructuredtext/domains.rst:1399
 #: ../../usage/restructuredtext/domains.rst:1417
 msgid "Foo description."
-msgstr ""
+msgstr "Foo description."
 
 #: ../../usage/restructuredtext/domains.rst:1403
 msgid "Bar description."
-msgstr ""
+msgstr "Bar description."
 
 #: ../../usage/restructuredtext/domains.rst:1407
 msgid "Describes a reST role.  For example::"
-msgstr ""
+msgstr "Describes a reST role.  For example::"
 
 #: ../../usage/restructuredtext/domains.rst:1429
 msgid "The Math Domain"
-msgstr ""
+msgstr "The Math Domain"
 
 #: ../../usage/restructuredtext/domains.rst:1431
 msgid "The math domain (name **math**) provides the following roles::"
-msgstr ""
+msgstr "The math domain (name **math**) provides the following roles::"
 
 #: ../../usage/restructuredtext/domains.rst:1435
 msgid ""
@@ -1551,7 +1555,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1447
 msgid "More domains"
-msgstr ""
+msgstr "More domains"
 
 #: ../../usage/restructuredtext/domains.rst:1449
 msgid ""
@@ -1560,4 +1564,19 @@ msgid ""
 "MATLAB_, PHP_, and Ruby_ domains. Also available are domains for "
 "`Chapel`_, `Common Lisp`_, dqn_, Go_, Jinja_, Operation_, and Scala_."
 msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Return type"
+#~ msgstr ""
+
+#~ msgid "Raises"
+#~ msgstr ""
+
+#~ msgid "域"
+#~ msgstr ""
 

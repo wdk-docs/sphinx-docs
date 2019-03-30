@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:4
 msgid ":mod:`sphinx.ext.autodoc` -- Include documentation from docstrings"
-msgstr ""
+msgstr ":mod:`sphinx.ext.autodoc` -- 包括docstrings中的文档"
 
 #: ../../usage/extensions/autodoc.rst:12
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:50
 msgid "Directives"
-msgstr ""
+msgstr "Directives"
 
 #: ../../usage/extensions/autodoc.rst:52
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:74
 msgid "will produce source like this::"
-msgstr ""
+msgstr "will produce source like this::"
 
 #: ../../usage/extensions/autodoc.rst:80
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:94
 msgid "**Options and advanced usage**"
-msgstr ""
+msgstr "**Options and advanced usage**"
 
 #: ../../usage/extensions/autodoc.rst:96
 msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:102
 msgid "will document all module members (recursively), and ::"
-msgstr ""
+msgstr "will document all module members (recursively), and ::"
 
 #: ../../usage/extensions/autodoc.rst:107
 msgid ""
@@ -177,11 +177,11 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:153
 msgid "would document both \"private\" and \"special\" members of the class."
-msgstr ""
+msgstr "would document both \"private\" and \"special\" members of the class."
 
 #: ../../usage/extensions/autodoc.rst:157
 msgid "The option can now take arguments, i.e. the special members to document."
-msgstr ""
+msgstr "The option can now take arguments, i.e. the special members to document."
 
 #: ../../usage/extensions/autodoc.rst:160
 msgid ""
@@ -211,7 +211,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:184
 msgid "This is useful if the signature from the method is hidden by a decorator."
-msgstr ""
+msgstr "This is useful if the signature from the method is hidden by a decorator."
 
 #: ../../usage/extensions/autodoc.rst:188
 msgid ""
@@ -287,7 +287,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:258
 msgid "You can tell sphinx what should be printed after the name::"
-msgstr ""
+msgstr "You can tell sphinx what should be printed after the name::"
 
 #: ../../usage/extensions/autodoc.rst:263
 msgid ""
@@ -313,7 +313,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:295
 msgid "Comment docs are now allowed on the same line after an assignment."
-msgstr ""
+msgstr "Comment docs are now allowed on the same line after an assignment."
 
 #: ../../usage/extensions/autodoc.rst:297
 msgid ""
@@ -323,7 +323,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:300
 msgid ":rst:dir:`autodecorator` added."
-msgstr ""
+msgstr ":rst:dir:`autodecorator` added."
 
 #: ../../usage/extensions/autodoc.rst:305
 msgid ""
@@ -342,11 +342,11 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:316
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/autodoc.rst:318
 msgid "There are also config values that you can set:"
-msgstr ""
+msgstr "There are also config values that you can set:"
 
 #: ../../usage/extensions/autodoc.rst:322
 msgid ""
@@ -356,7 +356,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:327
 msgid "``\"class\"``"
-msgstr ""
+msgstr "``\"class\"``"
 
 #: ../../usage/extensions/autodoc.rst:326
 msgid ""
@@ -367,7 +367,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:330
 msgid "``\"both\"``"
-msgstr ""
+msgstr "``\"both\"``"
 
 #: ../../usage/extensions/autodoc.rst:330
 msgid ""
@@ -377,11 +377,11 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:333
 msgid "``\"init\"``"
-msgstr ""
+msgstr "``\"init\"``"
 
 #: ../../usage/extensions/autodoc.rst:333
 msgid "Only the ``__init__`` method's docstring is inserted."
-msgstr ""
+msgstr "Only the ``__init__`` method's docstring is inserted."
 
 #: ../../usage/extensions/autodoc.rst:337
 msgid ""
@@ -406,7 +406,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:354
 msgid "Support for ``'bysource'``."
-msgstr ""
+msgstr "Support for ``'bysource'``."
 
 #: ../../usage/extensions/autodoc.rst:359
 msgid ""
@@ -419,7 +419,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:369
 msgid "Integrated into :confval:`autodoc_default_options`."
-msgstr ""
+msgstr "Integrated into :confval:`autodoc_default_options`."
 
 #: ../../usage/extensions/autodoc.rst:373
 msgid ""
@@ -444,7 +444,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:395
 msgid "Accepts ``True`` as a value."
-msgstr ""
+msgstr "Accepts ``True`` as a value."
 
 #: ../../usage/extensions/autodoc.rst:400
 msgid ""
@@ -472,7 +472,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:423
 msgid "Will mock all imports under the ``django`` package."
-msgstr ""
+msgstr "Will mock all imports under the ``django`` package."
 
 #: ../../usage/extensions/autodoc.rst:427
 msgid ""
@@ -496,7 +496,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:444
 msgid "The default is ``True``."
-msgstr ""
+msgstr "The default is ``True``."
 
 #: ../../usage/extensions/autodoc.rst:451
 msgid ""
@@ -507,19 +507,19 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:455
 msgid "autodoc"
-msgstr ""
+msgstr "autodoc"
 
 #: ../../usage/extensions/autodoc.rst:456
 msgid "autodoc.import_object"
-msgstr ""
+msgstr "autodoc.import_object"
 
 #: ../../usage/extensions/autodoc.rst:460
 msgid "Docstring preprocessing"
-msgstr ""
+msgstr "Docstring preprocessing"
 
 #: ../../usage/extensions/autodoc.rst:462
 msgid "autodoc provides the following additional events:"
-msgstr ""
+msgstr "autodoc provides the following additional events:"
 
 #: ../../usage/extensions/autodoc.rst:468
 msgid ""
@@ -530,14 +530,14 @@ msgid ""
 msgstr ""
 
 #: ../../usage/extensions/autodoc.rst
-msgid "Parameters"
-msgstr ""
+msgid "参数"
+msgstr "参数"
 
 #: ../../usage/extensions/autodoc.rst:472
 #: ../../usage/extensions/autodoc.rst:492
 #: ../../usage/extensions/autodoc.rst:534
 msgid "the Sphinx application object"
-msgstr ""
+msgstr "the Sphinx application object"
 
 #: ../../usage/extensions/autodoc.rst:473
 #: ../../usage/extensions/autodoc.rst:493
@@ -552,13 +552,13 @@ msgstr ""
 #: ../../usage/extensions/autodoc.rst:496
 #: ../../usage/extensions/autodoc.rst:538
 msgid "the fully qualified name of the object"
-msgstr ""
+msgstr "the fully qualified name of the object"
 
 #: ../../usage/extensions/autodoc.rst:477
 #: ../../usage/extensions/autodoc.rst:497
 #: ../../usage/extensions/autodoc.rst:539
 msgid "the object itself"
-msgstr ""
+msgstr "the object itself"
 
 #: ../../usage/extensions/autodoc.rst:478
 #: ../../usage/extensions/autodoc.rst:498
@@ -572,7 +572,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:482
 msgid "the lines of the docstring, see above"
-msgstr ""
+msgstr "the lines of the docstring, see above"
 
 #: ../../usage/extensions/autodoc.rst:488
 msgid ""
@@ -610,7 +610,7 @@ msgstr ""
 
 #: of sphinx.ext.autodoc.cut_lines:5
 msgid "Use like this (e.g. in the ``setup()`` function of :file:`conf.py`)::"
-msgstr ""
+msgstr "Use like this (e.g. in the ``setup()`` function of :file:`conf.py`)::"
 
 #: of sphinx.ext.autodoc.cut_lines:10
 msgid ""
@@ -634,7 +634,7 @@ msgstr ""
 
 #: ../../usage/extensions/autodoc.rst:516
 msgid "Skipping members"
-msgstr ""
+msgstr "Skipping members"
 
 #: ../../usage/extensions/autodoc.rst:518
 msgid ""
@@ -663,4 +663,7 @@ msgid ""
 "a boolean indicating if autodoc will skip this member if the user handler"
 " does not override the decision"
 msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
 

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:4
 msgid "Internationalization"
-msgstr ""
+msgstr "国际化"
 
 #: ../../usage/advanced/intl.rst:8
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:22
 msgid "Sphinx internationalization details"
-msgstr ""
+msgstr "Sphinx国际化细节"
 
 #: ../../usage/advanced/intl.rst:24
 msgid ""
@@ -105,7 +105,7 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:65
 msgid "Set :confval:`locale_dirs` to ``[\"locale/\"]``."
-msgstr ""
+msgstr "Set :confval:`locale_dirs` to ``[\"locale/\"]``."
 
 #: ../../usage/advanced/intl.rst:66
 msgid ""
@@ -115,15 +115,15 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:68
 msgid "Run your desired build."
-msgstr ""
+msgstr "运行您想要的构建。"
 
 #: ../../usage/advanced/intl.rst:72
 msgid "Translating with sphinx-intl"
-msgstr ""
+msgstr "用sphinx-intl翻译"
 
 #: ../../usage/advanced/intl.rst:75
 msgid "Quick guide"
-msgstr ""
+msgstr "快速指南"
 
 #: ../../usage/advanced/intl.rst:77
 msgid ""
@@ -133,11 +133,11 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:80
 msgid "Install `sphinx-intl`_."
-msgstr ""
+msgstr "安装 `sphinx-intl`_."
 
 #: ../../usage/advanced/intl.rst:86
 msgid "Add configurations to ``conf.py``."
-msgstr ""
+msgstr "添加配置 ``conf.py``."
 
 #: ../../usage/advanced/intl.rst:93
 msgid ""
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:97
 msgid "Extract translatable messages into pot files."
-msgstr ""
+msgstr "将可翻译的消息提取到pot文件中。"
 
 #: ../../usage/advanced/intl.rst:103
 msgid ""
@@ -158,11 +158,11 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:105
 msgid "Generate po files."
-msgstr ""
+msgstr "生成po文件。"
 
 #: ../../usage/advanced/intl.rst:107
 msgid "We'll use the pot files generated in the above step."
-msgstr ""
+msgstr "我们将使用上面步骤中生成的pot文件。"
 
 #: ../../usage/advanced/intl.rst:113
 msgid ""
@@ -172,15 +172,15 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:116
 msgid "``./locale/de/LC_MESSAGES/``"
-msgstr ""
+msgstr "``./locale/de/LC_MESSAGES/``"
 
 #: ../../usage/advanced/intl.rst:117
 msgid "``./locale/ja/LC_MESSAGES/``"
-msgstr ""
+msgstr "``./locale/ja/LC_MESSAGES/``"
 
 #: ../../usage/advanced/intl.rst:119
 msgid "Translate po files."
-msgstr ""
+msgstr "Translate po files."
 
 #: ../../usage/advanced/intl.rst:121
 msgid ""
@@ -203,7 +203,7 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:148
 msgid "Build translated document."
-msgstr ""
+msgstr "构建翻译文档。"
 
 #: ../../usage/advanced/intl.rst:150
 msgid ""
@@ -213,15 +213,15 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:153
 msgid "For for BSD/GNU make, run:"
-msgstr ""
+msgstr "对于BSD/GNU make，运行:"
 
 #: ../../usage/advanced/intl.rst:159
 msgid "For Windows :command:`cmd.exe`, run:"
-msgstr ""
+msgstr "For Windows :command:`cmd.exe`, run:"
 
 #: ../../usage/advanced/intl.rst:166
 msgid "For PowerShell, run:"
-msgstr ""
+msgstr "对于PowerShell，请运行:"
 
 #: ../../usage/advanced/intl.rst:173
 msgid ""
@@ -243,11 +243,11 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:185
 msgid "Translating"
-msgstr ""
+msgstr "翻译"
 
 #: ../../usage/advanced/intl.rst:188
 msgid "Update your po files by new pot files"
-msgstr ""
+msgstr "通过新的pot文件更新您的po文件"
 
 #: ../../usage/advanced/intl.rst:190
 msgid ""
@@ -259,7 +259,7 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:200
 msgid "Using Transifex service for team translation"
-msgstr ""
+msgstr "使用Transifex服务进行团队翻译"
 
 #: ../../usage/advanced/intl.rst:202
 msgid ""
@@ -270,19 +270,19 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:209
 msgid "Install `transifex-client`_."
-msgstr ""
+msgstr "Install `transifex-client`_."
 
 #: ../../usage/advanced/intl.rst:211
 msgid "You need :command:`tx` command to upload resources (pot files)."
-msgstr ""
+msgstr "你需要：command：`tx`命令来上传资源（pot文件）。"
 
 #: ../../usage/advanced/intl.rst:217
 msgid "`Transifex Client documentation`_"
-msgstr ""
+msgstr "`Transifex Client documentation`_"
 
 #: ../../usage/advanced/intl.rst:219
 msgid "Create your transifex_ account and create new project for your document."
-msgstr ""
+msgstr "创建 transifex_ 帐户并为您的文档创建新项目。"
 
 #: ../../usage/advanced/intl.rst:221
 msgid ""
@@ -293,27 +293,27 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:225
 msgid "For example:"
-msgstr ""
+msgstr "例如:"
 
 #: ../../usage/advanced/intl.rst
 msgid "Project ID"
-msgstr ""
+msgstr "项目ID"
 
 #: ../../usage/advanced/intl.rst:227
 msgid "``sphinx-document-test_1_0``"
-msgstr ""
+msgstr "``sphinx-document-test_1_0``"
 
 #: ../../usage/advanced/intl.rst
 msgid "Project URL"
-msgstr ""
+msgstr "项目网址"
 
 #: ../../usage/advanced/intl.rst:228
 msgid "``https://www.transifex.com/projects/p/sphinx-document-test_1_0/``"
-msgstr ""
+msgstr "``https://www.transifex.com/projects/p/sphinx-document-test_1_0/``"
 
 #: ../../usage/advanced/intl.rst:230
 msgid "Create config files for :command:`tx` command."
-msgstr ""
+msgstr "为 :command:`tx` 命令创建配置文件."
 
 #: ../../usage/advanced/intl.rst:232
 msgid ""
@@ -323,23 +323,23 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:246
 msgid "Upload pot files to transifex service."
-msgstr ""
+msgstr "将pot文件上传到transifex服务。"
 
 #: ../../usage/advanced/intl.rst:248
 msgid "Register pot files to ``.tx/config`` file:"
-msgstr ""
+msgstr "将pot文件注册到 ``.tx/config`` 文件:"
 
 #: ../../usage/advanced/intl.rst:256
 msgid "and upload pot files:"
-msgstr ""
+msgstr "并上传pot文件:"
 
 #: ../../usage/advanced/intl.rst:267
 msgid "Forward the translation on transifex."
-msgstr ""
+msgstr "转发transifex的翻译。"
 
 #: ../../usage/advanced/intl.rst:271
 msgid "Pull translated po files and make translated HTML."
-msgstr ""
+msgstr "拉出翻译的po文件并制作翻译的HTML。"
 
 #: ../../usage/advanced/intl.rst:273
 msgid ""
@@ -349,15 +349,15 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:285
 msgid "Invoke :command:`make html` (for BSD/GNU make):"
-msgstr ""
+msgstr "Invoke :command:`make html` (for BSD/GNU make):"
 
 #: ../../usage/advanced/intl.rst:291
 msgid "That's all!"
-msgstr ""
+msgstr "就这样！"
 
 #: ../../usage/advanced/intl.rst:293
 msgid "Translating locally and on Transifex"
-msgstr ""
+msgstr "在本地和Transifex上进行翻译"
 
 #: ../../usage/advanced/intl.rst:295
 msgid ""
@@ -374,7 +374,7 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:304
 msgid "Contributing to Sphinx reference translation"
-msgstr ""
+msgstr "有助于Sphinx参考翻译"
 
 #: ../../usage/advanced/intl.rst:306
 msgid ""
@@ -384,31 +384,31 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:309
 msgid "There is `sphinx translation page`_ for Sphinx (master) documentation."
-msgstr ""
+msgstr "有一个用于Sphinx（主）文档的 `sphinx translation page`_ 。"
 
 #: ../../usage/advanced/intl.rst:311
 msgid "Login to transifex_ service."
-msgstr ""
+msgstr "登录transifex_服务。"
 
 #: ../../usage/advanced/intl.rst:312
 msgid "Go to `sphinx translation page`_."
-msgstr ""
+msgstr "去`sphinx translation page`_."
 
 #: ../../usage/advanced/intl.rst:313
 msgid "Click ``Request language`` and fill form."
-msgstr ""
+msgstr "点击 ``Request language`` and fill form."
 
 #: ../../usage/advanced/intl.rst:314
 msgid "Wait acceptance by transifex sphinx translation maintainers."
-msgstr ""
+msgstr "等待transifex sphinx翻译维护者的接受。"
 
 #: ../../usage/advanced/intl.rst:315
 msgid "(After acceptance) Translate on transifex."
-msgstr ""
+msgstr "（接受后）翻译transifex。"
 
 #: ../../usage/advanced/intl.rst:318
 msgid "Footnotes"
-msgstr ""
+msgstr "脚注"
 
 #: ../../usage/advanced/intl.rst:319
 msgid ""
@@ -419,5 +419,5 @@ msgstr ""
 
 #: ../../usage/advanced/intl.rst:322
 msgid "Because nobody expects the Spanish Inquisition!"
-msgstr ""
+msgstr "因为没有人期待西班牙宗教裁判所！"
 

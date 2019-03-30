@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/graphviz.rst:4
 msgid ":mod:`sphinx.ext.graphviz` -- Add Graphviz graphs"
-msgstr ""
+msgstr ":mod:`sphinx.ext.graphviz` -- Add Graphviz graphs"
 
 #: ../../usage/extensions/graphviz.rst:11
 msgid ""
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../usage/extensions/graphviz.rst:14
 msgid "It adds these directives:"
-msgstr ""
+msgstr "It adds these directives:"
 
 #: ../../usage/extensions/graphviz.rst:18
 msgid ""
@@ -58,7 +58,7 @@ msgstr ""
 
 #: ../../usage/extensions/graphviz.rst:39
 msgid "Added support for external files."
-msgstr ""
+msgstr "Added support for external files."
 
 #: ../../usage/extensions/graphviz.rst:45
 msgid ""
@@ -71,7 +71,7 @@ msgstr ""
 #: ../../usage/extensions/graphviz.rst:49
 #: ../../usage/extensions/graphviz.rst:66
 msgid "For example::"
-msgstr ""
+msgstr "For example::"
 
 #: ../../usage/extensions/graphviz.rst:55
 msgid ""
@@ -114,11 +114,11 @@ msgstr ""
 
 #: ../../usage/extensions/graphviz.rst:90
 msgid "All three directives support a ``name`` option to set the label to graph."
-msgstr ""
+msgstr "All three directives support a ``name`` option to set the label to graph."
 
 #: ../../usage/extensions/graphviz.rst:93
 msgid "There are also these config values:"
-msgstr ""
+msgstr "There are also these config values:"
 
 #: ../../usage/extensions/graphviz.rst:97
 msgid ""
@@ -154,5 +154,5 @@ msgstr ""
 
 #: ../../usage/extensions/graphviz.rst:130
 msgid "Previously, output always was PNG."
-msgstr ""
+msgstr "Previously, output always was PNG."
 

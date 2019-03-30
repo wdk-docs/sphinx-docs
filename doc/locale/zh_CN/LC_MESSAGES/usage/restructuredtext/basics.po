@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:7
 msgid "reStructuredText Primer"
-msgstr ""
+msgstr "reStructuredText Primer"
 
 #: ../../usage/restructuredtext/basics.rst:9
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:24
 msgid "Paragraphs"
-msgstr ""
+msgstr "段落"
 
 #: ../../usage/restructuredtext/basics.rst:26
 msgid ""
@@ -53,23 +53,23 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:35
 msgid "Inline markup"
-msgstr ""
+msgstr "内联标记"
 
 #: ../../usage/restructuredtext/basics.rst:37
 msgid "The standard reST inline markup is quite simple: use"
-msgstr ""
+msgstr "The standard reST inline markup is quite simple: use"
 
 #: ../../usage/restructuredtext/basics.rst:39
 msgid "one asterisk: ``*text*`` for emphasis (italics),"
-msgstr ""
+msgstr "one asterisk: ``*text*`` for emphasis (italics),"
 
 #: ../../usage/restructuredtext/basics.rst:40
 msgid "two asterisks: ``**text**`` for strong emphasis (boldface), and"
-msgstr ""
+msgstr "two asterisks: ``**text**`` for strong emphasis (boldface), and"
 
 #: ../../usage/restructuredtext/basics.rst:41
 msgid "backquotes: ````text```` for code samples."
-msgstr ""
+msgstr "backquotes: ````text```` for code samples."
 
 #: ../../usage/restructuredtext/basics.rst:43
 msgid ""
@@ -79,15 +79,15 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:46
 msgid "Be aware of some restrictions of this markup:"
-msgstr ""
+msgstr "Be aware of some restrictions of this markup:"
 
 #: ../../usage/restructuredtext/basics.rst:48
 msgid "it may not be nested,"
-msgstr ""
+msgstr "它可能不是嵌套的，"
 
 #: ../../usage/restructuredtext/basics.rst:49
 msgid "content may not start or end with whitespace: ``* text*`` is wrong,"
-msgstr ""
+msgstr "content may not start or end with whitespace: ``* text*`` is wrong,"
 
 #: ../../usage/restructuredtext/basics.rst:50
 msgid ""
@@ -97,7 +97,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:53
 msgid "These restrictions may be lifted in future versions of the docutils."
-msgstr ""
+msgstr "在将来的docutils版本中可能会取消这些限制。"
 
 #: ../../usage/restructuredtext/basics.rst:55
 msgid ""
@@ -107,7 +107,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:60
 msgid "Lists and Quote-like blocks"
-msgstr ""
+msgstr "列表和引用类似的块"
 
 #: ../../usage/restructuredtext/basics.rst:62
 msgid ""
@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:97
 msgid "Note that the term cannot have more than one line of text."
-msgstr ""
+msgstr "请注意，该术语不能包含多行文本。"
 
 #: ../../usage/restructuredtext/basics.rst:99
 msgid ""
@@ -146,7 +146,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:108
 msgid "There are also several more special blocks available:"
-msgstr ""
+msgstr "There are also several more special blocks available:"
 
 #: ../../usage/restructuredtext/basics.rst:110
 msgid ""
@@ -156,19 +156,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:112
 msgid "option lists (:duref:`ref <option-lists>`)"
-msgstr ""
+msgstr "选项列表 (:duref:`ref <option-lists>`)"
 
 #: ../../usage/restructuredtext/basics.rst:113
 msgid "quoted literal blocks (:duref:`ref <quoted-literal-blocks>`)"
-msgstr ""
+msgstr "引用文字块 (:duref:`ref <quoted-literal-blocks>`)"
 
 #: ../../usage/restructuredtext/basics.rst:114
 msgid "doctest blocks (:duref:`ref <doctest-blocks>`)"
-msgstr ""
+msgstr "doctest块 (:duref:`ref <doctest-blocks>`)"
 
 #: ../../usage/restructuredtext/basics.rst:120
 msgid "Literal blocks"
-msgstr ""
+msgstr "文字块"
 
 #: ../../usage/restructuredtext/basics.rst:122
 msgid ""
@@ -180,7 +180,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:136
 msgid "The handling of the ``::`` marker is smart:"
-msgstr ""
+msgstr "The handling of the ``::`` marker is smart:"
 
 #: ../../usage/restructuredtext/basics.rst:138
 msgid ""
@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:140
 msgid "If it is preceded by whitespace, the marker is removed."
-msgstr ""
+msgstr "If it is preceded by whitespace, the marker is removed."
 
 #: ../../usage/restructuredtext/basics.rst:141
 msgid ""
@@ -215,7 +215,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:157
 msgid "Doctest blocks"
-msgstr ""
+msgstr "Doctest块"
 
 #: ../../usage/restructuredtext/basics.rst:159
 msgid ""
@@ -227,7 +227,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:170
 msgid "Tables"
-msgstr ""
+msgstr "表"
 
 #: ../../usage/restructuredtext/basics.rst:172
 msgid ""
@@ -251,11 +251,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:202
 msgid "Hyperlinks"
-msgstr ""
+msgstr "超链接"
 
 #: ../../usage/restructuredtext/basics.rst:205
 msgid "External links"
-msgstr ""
+msgstr "外部链接"
 
 #: ../../usage/restructuredtext/basics.rst:207
 msgid ""
@@ -278,7 +278,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:221
 msgid "Internal links"
-msgstr ""
+msgstr "内部链接"
 
 #: ../../usage/restructuredtext/basics.rst:223
 msgid ""
@@ -288,7 +288,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:228
 msgid "Sections"
-msgstr ""
+msgstr "Sections"
 
 #: ../../usage/restructuredtext/basics.rst:230
 msgid ""
@@ -308,27 +308,27 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:244
 msgid "``#`` with overline, for parts"
-msgstr ""
+msgstr "``#`` with overline, for parts"
 
 #: ../../usage/restructuredtext/basics.rst:245
 msgid "``*`` with overline, for chapters"
-msgstr ""
+msgstr "``*`` with overline, for chapters"
 
 #: ../../usage/restructuredtext/basics.rst:246
 msgid "``=``, for sections"
-msgstr ""
+msgstr "``=``, for sections"
 
 #: ../../usage/restructuredtext/basics.rst:247
 msgid "``-``, for subsections"
-msgstr ""
+msgstr "``-``, for subsections"
 
 #: ../../usage/restructuredtext/basics.rst:248
 msgid "``^``, for subsubsections"
-msgstr ""
+msgstr "``^``, for subsubsections"
 
 #: ../../usage/restructuredtext/basics.rst:249
 msgid "``\"``, for paragraphs"
-msgstr ""
+msgstr "``\"``, for paragraphs"
 
 #: ../../usage/restructuredtext/basics.rst:251
 msgid ""
@@ -339,7 +339,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:259
 msgid "Field Lists"
-msgstr ""
+msgstr "现场名单"
 
 #: ../../usage/restructuredtext/basics.rst:261
 msgid ""
@@ -349,7 +349,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:266
 msgid "They are commonly used in Python documentation::"
-msgstr ""
+msgstr "They are commonly used in Python documentation::"
 
 #: ../../usage/restructuredtext/basics.rst:277
 msgid ""
@@ -360,7 +360,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:288
 msgid "Roles"
-msgstr ""
+msgstr "角色"
 
 #: ../../usage/restructuredtext/basics.rst:290
 msgid ""
@@ -373,27 +373,27 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:296
 msgid "Docutils supports the following roles:"
-msgstr ""
+msgstr "Docutils supports the following roles:"
 
 #: ../../usage/restructuredtext/basics.rst:298
 msgid ":durole:`emphasis` -- equivalent of ``*emphasis*``"
-msgstr ""
+msgstr ":durole:`emphasis` -- equivalent of ``*emphasis*``"
 
 #: ../../usage/restructuredtext/basics.rst:299
 msgid ":durole:`strong` -- equivalent of ``**strong**``"
-msgstr ""
+msgstr ":durole:`strong` -- equivalent of ``**strong**``"
 
 #: ../../usage/restructuredtext/basics.rst:300
 msgid ":durole:`literal` -- equivalent of ````literal````"
-msgstr ""
+msgstr ":durole:`literal` -- equivalent of ````literal````"
 
 #: ../../usage/restructuredtext/basics.rst:301
 msgid ":durole:`subscript` -- subscript text"
-msgstr ""
+msgstr ":durole:`subscript` -- subscript text"
 
 #: ../../usage/restructuredtext/basics.rst:302
 msgid ":durole:`superscript` -- superscript text"
-msgstr ""
+msgstr ":durole:`superscript` -- superscript text"
 
 #: ../../usage/restructuredtext/basics.rst:303
 msgid ""
@@ -403,11 +403,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:306
 msgid "Refer to :doc:`roles` for roles added by Sphinx."
-msgstr ""
+msgstr "Refer to :doc:`roles` for roles added by Sphinx."
 
 #: ../../usage/restructuredtext/basics.rst:310
 msgid "Explicit Markup"
-msgstr ""
+msgstr "显式标记"
 
 #: ../../usage/restructuredtext/basics.rst:312
 msgid ""
@@ -427,7 +427,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:326
 msgid "Directives"
-msgstr ""
+msgstr "指令"
 
 #: ../../usage/restructuredtext/basics.rst:328
 msgid ""
@@ -438,7 +438,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:332
 msgid "Docutils supports the following directives:"
-msgstr ""
+msgstr "Docutils supports the following directives:"
 
 #: ../../usage/restructuredtext/basics.rst:334
 msgid ""
@@ -451,19 +451,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:340
 msgid "Images:"
-msgstr ""
+msgstr "图片:"
 
 #: ../../usage/restructuredtext/basics.rst:342
 msgid ":dudir:`image` (see also Images_ below)"
-msgstr ""
+msgstr ":dudir:`image` (see also Images_ below)"
 
 #: ../../usage/restructuredtext/basics.rst:343
 msgid ":dudir:`figure` (an image with caption and optional legend)"
-msgstr ""
+msgstr ":dudir:`figure` (an image with caption and optional legend)"
 
 #: ../../usage/restructuredtext/basics.rst:345
 msgid "Additional body elements:"
-msgstr ""
+msgstr "Additional body elements:"
 
 #: ../../usage/restructuredtext/basics.rst:347
 msgid ""
@@ -479,19 +479,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:351
 msgid ":dudir:`rubric` (a heading without relation to the document sectioning)"
-msgstr ""
+msgstr ":dudir:`rubric` (a heading without relation to the document sectioning)"
 
 #: ../../usage/restructuredtext/basics.rst:352
 msgid ":dudir:`topic`, :dudir:`sidebar` (special highlighted body elements)"
-msgstr ""
+msgstr ":dudir:`topic`, :dudir:`sidebar` (special highlighted body elements)"
 
 #: ../../usage/restructuredtext/basics.rst:353
 msgid ":dudir:`parsed-literal` (literal block that supports inline markup)"
-msgstr ""
+msgstr ":dudir:`parsed-literal` (literal block that supports inline markup)"
 
 #: ../../usage/restructuredtext/basics.rst:354
 msgid ":dudir:`epigraph` (a block quote with optional attribution line)"
-msgstr ""
+msgstr ":dudir:`epigraph` (a block quote with optional attribution line)"
 
 #: ../../usage/restructuredtext/basics.rst:355
 msgid ""
@@ -501,31 +501,31 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:357
 msgid ":dudir:`compound <compound-paragraph>` (a compound paragraph)"
-msgstr ""
+msgstr ":dudir:`compound <compound-paragraph>` (a compound paragraph)"
 
 #: ../../usage/restructuredtext/basics.rst:359
 msgid "Special tables:"
-msgstr ""
+msgstr "特别表:"
 
 #: ../../usage/restructuredtext/basics.rst:361
 msgid ":dudir:`table` (a table with title)"
-msgstr ""
+msgstr ":dudir:`table` (a table with title)"
 
 #: ../../usage/restructuredtext/basics.rst:362
 msgid ":dudir:`csv-table` (a table generated from comma-separated values)"
-msgstr ""
+msgstr ":dudir:`csv-table` (a table generated from comma-separated values)"
 
 #: ../../usage/restructuredtext/basics.rst:363
 msgid ":dudir:`list-table` (a table generated from a list of lists)"
-msgstr ""
+msgstr ":dudir:`list-table` (a table generated from a list of lists)"
 
 #: ../../usage/restructuredtext/basics.rst:365
 msgid "Special directives:"
-msgstr ""
+msgstr "特别指令:"
 
 #: ../../usage/restructuredtext/basics.rst:367
 msgid ":dudir:`raw <raw-data-pass-through>` (include raw target-format markup)"
-msgstr ""
+msgstr ":dudir:`raw <raw-data-pass-through>` (include raw target-format markup)"
 
 #: ../../usage/restructuredtext/basics.rst:368
 msgid ""
@@ -536,31 +536,31 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:371
 msgid ":dudir:`class` (assign a class attribute to the next element) [1]_"
-msgstr ""
+msgstr ":dudir:`class` (assign a class attribute to the next element) [1]_"
 
 #: ../../usage/restructuredtext/basics.rst:373
 msgid "HTML specifics:"
-msgstr ""
+msgstr "HTML specifics:"
 
 #: ../../usage/restructuredtext/basics.rst:375
 msgid ":dudir:`meta` (generation of HTML ``<meta>`` tags)"
-msgstr ""
+msgstr ":dudir:`meta` (generation of HTML ``<meta>`` tags)"
 
 #: ../../usage/restructuredtext/basics.rst:376
 msgid ":dudir:`title <metadata-document-title>` (override document title)"
-msgstr ""
+msgstr ":dudir:`title <metadata-document-title>` (override document title)"
 
 #: ../../usage/restructuredtext/basics.rst:378
 msgid "Influencing markup:"
-msgstr ""
+msgstr "Influencing markup:"
 
 #: ../../usage/restructuredtext/basics.rst:380
 msgid ":dudir:`default-role` (set a new default role)"
-msgstr ""
+msgstr ":dudir:`default-role` (set a new default role)"
 
 #: ../../usage/restructuredtext/basics.rst:381
 msgid ":dudir:`role` (create a new role)"
-msgstr ""
+msgstr ":dudir:`role` (create a new role)"
 
 #: ../../usage/restructuredtext/basics.rst:383
 msgid ""
@@ -576,7 +576,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:391
 msgid "Directives added by Sphinx are described in :doc:`directives`."
-msgstr ""
+msgstr "Directives added by Sphinx are described in :doc:`directives`."
 
 #: ../../usage/restructuredtext/basics.rst:393
 msgid ""
@@ -602,11 +602,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:414
 msgid "Images"
-msgstr ""
+msgstr "图片"
 
 #: ../../usage/restructuredtext/basics.rst:416
 msgid "reST supports an image directive (:dudir:`ref <image>`), used like so::"
-msgstr ""
+msgstr "reST supports an image directive (:dudir:`ref <image>`), used like so::"
 
 #: ../../usage/restructuredtext/basics.rst:421
 msgid ""
@@ -653,24 +653,24 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:449
 msgid "Note that image file names should not contain spaces."
-msgstr ""
+msgstr "Note that image file names should not contain spaces."
 
 #: ../../usage/restructuredtext/basics.rst:451
 msgid "Added the support for file names ending in an asterisk."
-msgstr ""
+msgstr "Added the support for file names ending in an asterisk."
 
 #: ../../usage/restructuredtext/basics.rst:454
 msgid "Image paths can now be absolute."
-msgstr ""
+msgstr "Image paths can now be absolute."
 
 #: ../../usage/restructuredtext/basics.rst:457
 msgid "latex target supports pixels (default is ``96px=1in``)."
-msgstr ""
+msgstr "latex target supports pixels (default is ``96px=1in``)."
 
 #: ../../usage/restructuredtext/basics.rst:462
 #: ../../usage/restructuredtext/basics.rst:565
 msgid "Footnotes"
-msgstr ""
+msgstr "脚注"
 
 #: ../../usage/restructuredtext/basics.rst:464
 msgid ""
@@ -687,7 +687,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:480
 msgid "Citations"
-msgstr ""
+msgstr "引文"
 
 #: ../../usage/restructuredtext/basics.rst:482
 msgid ""
@@ -704,7 +704,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:495
 msgid "Substitutions"
-msgstr ""
+msgstr "Substitutions"
 
 #: ../../usage/restructuredtext/basics.rst:497
 msgid ""
@@ -716,7 +716,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:503
 msgid "or this::"
-msgstr ""
+msgstr "or this::"
 
 #: ../../usage/restructuredtext/basics.rst:508
 msgid ""
@@ -742,7 +742,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:524
 msgid "Comments"
-msgstr ""
+msgstr "评论"
 
 #: ../../usage/restructuredtext/basics.rst:526
 msgid ""
@@ -753,11 +753,11 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:532
 msgid "You can indent text after a comment start to form multiline comments::"
-msgstr ""
+msgstr "You can indent text after a comment start to form multiline comments::"
 
 #: ../../usage/restructuredtext/basics.rst:542
 msgid "Source encoding"
-msgstr ""
+msgstr "源编码"
 
 #: ../../usage/restructuredtext/basics.rst:544
 msgid ""
@@ -770,7 +770,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:551
 msgid "Gotchas"
-msgstr ""
+msgstr "陷阱"
 
 #: ../../usage/restructuredtext/basics.rst:553
 msgid ""

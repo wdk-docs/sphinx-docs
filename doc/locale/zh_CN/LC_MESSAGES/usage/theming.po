@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-03-30 00:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 
 #: ../../usage/theming.rst:4
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: ../../usage/theming.rst:6
 msgid "Sphinx provides a number of builders for HTML and HTML-based formats."
-msgstr ""
+msgstr "Sphinx为HTML和基于HTML的格式提供了许多构建器。"
 
 #: ../../usage/theming.rst:9
 msgid "Builders"
-msgstr ""
+msgstr "生成器"
 
 #: ../../usage/theming.rst:11
-msgid "Todo"
-msgstr ""
+msgid "待处理"
+msgstr "待处理"
 
 #: ../../usage/theming.rst:11
 msgid "Populate when the 'builders' document is split up."
-msgstr ""
+msgstr "在 'builders' 文档被拆分时填充。"
 
 #: ../../usage/theming.rst:15
 msgid "Themes"
-msgstr ""
+msgstr "主题"
 
 #: ../../usage/theming.rst:21
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:34
 msgid "Using a theme"
-msgstr ""
+msgstr "使用主题"
 
 #: ../../usage/theming.rst:36
 msgid ""
@@ -118,103 +118,103 @@ msgstr ""
 
 #: ../../usage/theming.rst:86
 msgid "Builtin themes"
-msgstr ""
+msgstr "内置主题"
 
 #: ../../usage/theming.rst:91 ../../usage/theming.rst:310
 msgid "**Theme overview**"
-msgstr ""
+msgstr "**主题概述**"
 
 #: ../../usage/theming.rst:93
 msgid "|alabaster|"
-msgstr ""
+msgstr "|alabaster|"
 
 #: ../../usage/theming.rst:95
 msgid "*alabaster*"
-msgstr ""
+msgstr "*alabaster*"
 
 #: ../../usage/theming.rst:93
 msgid "|classic|"
-msgstr ""
+msgstr "|classic|"
 
 #: ../../usage/theming.rst:95
 msgid "*classic*"
-msgstr ""
+msgstr "*classic*"
 
 #: ../../usage/theming.rst:97
 msgid "|sphinxdoc|"
-msgstr ""
+msgstr "|sphinxdoc|"
 
 #: ../../usage/theming.rst:99
 msgid "*sphinxdoc*"
-msgstr ""
+msgstr "*sphinxdoc*"
 
 #: ../../usage/theming.rst:97
 msgid "|scrolls|"
-msgstr ""
+msgstr "|scrolls|"
 
 #: ../../usage/theming.rst:99
 msgid "*scrolls*"
-msgstr ""
+msgstr "*scrolls*"
 
 #: ../../usage/theming.rst:101
 msgid "|agogo|"
-msgstr ""
+msgstr "|agogo|"
 
 #: ../../usage/theming.rst:103
 msgid "*agogo*"
-msgstr ""
+msgstr "*agogo*"
 
 #: ../../usage/theming.rst:101
 msgid "|traditional|"
-msgstr ""
+msgstr "|traditional|"
 
 #: ../../usage/theming.rst:103
 msgid "*traditional*"
-msgstr ""
+msgstr "*traditional*"
 
 #: ../../usage/theming.rst:105
 msgid "|nature|"
-msgstr ""
+msgstr "|nature|"
 
 #: ../../usage/theming.rst:107
 msgid "*nature*"
-msgstr ""
+msgstr "*nature*"
 
 #: ../../usage/theming.rst:105
 msgid "|haiku|"
-msgstr ""
+msgstr "|haiku|"
 
 #: ../../usage/theming.rst:107
 msgid "*haiku*"
-msgstr ""
+msgstr "*haiku*"
 
 #: ../../usage/theming.rst:109
 msgid "|pyramid|"
-msgstr ""
+msgstr "|pyramid|"
 
 #: ../../usage/theming.rst:111
 msgid "*pyramid*"
-msgstr ""
+msgstr "*pyramid*"
 
 #: ../../usage/theming.rst:109
 msgid "|bizstyle|"
-msgstr ""
+msgstr "|bizstyle|"
 
 #: ../../usage/theming.rst:111
 msgid "*bizstyle*"
-msgstr ""
+msgstr "*bizstyle*"
 
 #: ../../usage/theming.rst:125
 msgid "Sphinx comes with a selection of themes to choose from."
-msgstr ""
+msgstr "Sphinx comes with a selection of themes to choose from."
 
 #: ../../usage/theming.rst:129
 msgid "These themes are:"
-msgstr ""
+msgstr "These themes are:"
 
 #: ../../usage/theming.rst:152
 msgid "**basic**"
-msgstr ""
+msgstr "**basic**"
 
 #: ../../usage/theming.rst:132
 msgid ""
@@ -255,7 +255,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:162
 msgid "**alabaster**"
-msgstr ""
+msgstr "**alabaster**"
 
 #: ../../usage/theming.rst:155
 msgid ""
@@ -268,7 +268,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:208
 msgid "**classic**"
-msgstr ""
+msgstr "**classic**"
 
 #: ../../usage/theming.rst:165
 msgid ""
@@ -310,15 +310,15 @@ msgstr ""
 
 #: ../../usage/theming.rst:186
 msgid "**footerbgcolor** (CSS color): Background color for the footer line."
-msgstr ""
+msgstr "**footerbgcolor** (CSS color): Background color for the footer line."
 
 #: ../../usage/theming.rst:187
 msgid "**footertextcolor** (CSS color): Text color for the footer line."
-msgstr ""
+msgstr "**footertextcolor** (CSS color): Text color for the footer line."
 
 #: ../../usage/theming.rst:188
 msgid "**sidebarbgcolor** (CSS color): Background color for the sidebar."
-msgstr ""
+msgstr "**sidebarbgcolor** (CSS color): Background color for the sidebar."
 
 #: ../../usage/theming.rst:189
 msgid ""
@@ -328,55 +328,55 @@ msgstr ""
 
 #: ../../usage/theming.rst:191
 msgid "**sidebartextcolor** (CSS color): Text color for the sidebar."
-msgstr ""
+msgstr "**sidebartextcolor** (CSS color): Text color for the sidebar."
 
 #: ../../usage/theming.rst:192
 msgid "**sidebarlinkcolor** (CSS color): Link color for the sidebar."
-msgstr ""
+msgstr "**sidebarlinkcolor** (CSS color): Link color for the sidebar."
 
 #: ../../usage/theming.rst:193
 msgid "**relbarbgcolor** (CSS color): Background color for the relation bar."
-msgstr ""
+msgstr "**relbarbgcolor** (CSS color): Background color for the relation bar."
 
 #: ../../usage/theming.rst:194
 msgid "**relbartextcolor** (CSS color): Text color for the relation bar."
-msgstr ""
+msgstr "**relbartextcolor** (CSS color): Text color for the relation bar."
 
 #: ../../usage/theming.rst:195
 msgid "**relbarlinkcolor** (CSS color): Link color for the relation bar."
-msgstr ""
+msgstr "**relbarlinkcolor** (CSS color): Link color for the relation bar."
 
 #: ../../usage/theming.rst:196
 msgid "**bgcolor** (CSS color): Body background color."
-msgstr ""
+msgstr "**bgcolor** (CSS color): Body background color."
 
 #: ../../usage/theming.rst:197
 msgid "**textcolor** (CSS color): Body text color."
-msgstr ""
+msgstr "**textcolor** (CSS color): Body text color."
 
 #: ../../usage/theming.rst:198 ../../usage/theming.rst:245
 msgid "**linkcolor** (CSS color): Body link color."
-msgstr ""
+msgstr "**linkcolor** (CSS color): Body link color."
 
 #: ../../usage/theming.rst:199
 msgid "**visitedlinkcolor** (CSS color): Body color for visited links."
-msgstr ""
+msgstr "**visitedlinkcolor** (CSS color): Body color for visited links."
 
 #: ../../usage/theming.rst:200
 msgid "**headbgcolor** (CSS color): Background color for headings."
-msgstr ""
+msgstr "**headbgcolor** (CSS color): Background color for headings."
 
 #: ../../usage/theming.rst:201
 msgid "**headtextcolor** (CSS color): Text color for headings."
-msgstr ""
+msgstr "**headtextcolor** (CSS color): Text color for headings."
 
 #: ../../usage/theming.rst:202
 msgid "**headlinkcolor** (CSS color): Link color for headings."
-msgstr ""
+msgstr "**headlinkcolor** (CSS color): Link color for headings."
 
 #: ../../usage/theming.rst:203
 msgid "**codebgcolor** (CSS color): Background color for code blocks."
-msgstr ""
+msgstr "**codebgcolor** (CSS color): Background color for code blocks."
 
 #: ../../usage/theming.rst:204
 msgid ""
@@ -386,15 +386,15 @@ msgstr ""
 
 #: ../../usage/theming.rst:207
 msgid "**bodyfont** (CSS font-family): Font for normal text."
-msgstr ""
+msgstr "**bodyfont** (CSS font-family): Font for normal text."
 
 #: ../../usage/theming.rst:208
 msgid "**headfont** (CSS font-family): Font for headings."
-msgstr ""
+msgstr "**headfont** (CSS font-family): Font for headings."
 
 #: ../../usage/theming.rst:219
 msgid "**sphinxdoc**"
-msgstr ""
+msgstr "**sphinxdoc**"
 
 #: ../../usage/theming.rst:211
 msgid ""
@@ -412,7 +412,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:229
 msgid "**scrolls**"
-msgstr ""
+msgstr "**scrolls**"
 
 #: ../../usage/theming.rst:222
 msgid ""
@@ -422,43 +422,43 @@ msgstr ""
 
 #: ../../usage/theming.rst:225
 msgid "**headerbordercolor**"
-msgstr ""
+msgstr "**headerbordercolor**"
 
 #: ../../usage/theming.rst:226
 msgid "**subheadlinecolor**"
-msgstr ""
+msgstr "**subheadlinecolor**"
 
 #: ../../usage/theming.rst:227
 msgid "**linkcolor**"
-msgstr ""
+msgstr "**linkcolor**"
 
 #: ../../usage/theming.rst:228
 msgid "**visitedlinkcolor**"
-msgstr ""
+msgstr "**visitedlinkcolor**"
 
 #: ../../usage/theming.rst:229
 msgid "**admonitioncolor**"
-msgstr ""
+msgstr "**admonitioncolor**"
 
 #: ../../usage/theming.rst:251
 msgid "**agogo**"
-msgstr ""
+msgstr "**agogo**"
 
 #: ../../usage/theming.rst:232
 msgid "A theme created by Andi Albrecht.  The following options are supported:"
-msgstr ""
+msgstr "A theme created by Andi Albrecht.  The following options are supported:"
 
 #: ../../usage/theming.rst:234
 msgid "**bodyfont** (CSS font family): Font for normal text."
-msgstr ""
+msgstr "**bodyfont** (CSS font family): Font for normal text."
 
 #: ../../usage/theming.rst:235
 msgid "**headerfont** (CSS font family): Font for headings."
-msgstr ""
+msgstr "**headerfont** (CSS font family): Font for headings."
 
 #: ../../usage/theming.rst:236
 msgid "**pagewidth** (CSS length): Width of the page content, default 70em."
-msgstr ""
+msgstr "**pagewidth** (CSS length): Width of the page content, default 70em."
 
 #: ../../usage/theming.rst:237
 msgid ""
@@ -468,11 +468,11 @@ msgstr ""
 
 #: ../../usage/theming.rst:239
 msgid "**sidebarwidth** (CSS length): Width of the sidebar, default 20em."
-msgstr ""
+msgstr "**sidebarwidth** (CSS length): Width of the sidebar, default 20em."
 
 #: ../../usage/theming.rst:240
 msgid "**bgcolor** (CSS color): Background color."
-msgstr ""
+msgstr "**bgcolor** (CSS color): Background color."
 
 #: ../../usage/theming.rst:241
 msgid ""
@@ -506,7 +506,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:255
 msgid "**nature**"
-msgstr ""
+msgstr "**nature**"
 
 #: ../../usage/theming.rst:254
 msgid ""
@@ -516,7 +516,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:259
 msgid "**pyramid**"
-msgstr ""
+msgstr "**pyramid**"
 
 #: ../../usage/theming.rst:258
 msgid ""
@@ -527,7 +527,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:272
 msgid "**haiku**"
-msgstr ""
+msgstr "**haiku**"
 
 #: ../../usage/theming.rst:262
 msgid ""
@@ -552,7 +552,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:276
 msgid "**traditional**"
-msgstr ""
+msgstr "**traditional**"
 
 #: ../../usage/theming.rst:275
 msgid ""
@@ -562,7 +562,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:287
 msgid "**epub**"
-msgstr ""
+msgstr "**epub**"
 
 #: ../../usage/theming.rst:279
 msgid ""
@@ -585,7 +585,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:294
 msgid "**bizstyle**"
-msgstr ""
+msgstr "**bizstyle**"
 
 #: ../../usage/theming.rst:290
 msgid ""
@@ -595,7 +595,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:296
 msgid "'alabaster', 'sphinx_rtd_theme' and 'bizstyle' theme."
-msgstr ""
+msgstr "'alabaster', 'sphinx_rtd_theme' and 'bizstyle' theme."
 
 #: ../../usage/theming.rst:299
 msgid ""
@@ -606,15 +606,15 @@ msgstr ""
 
 #: ../../usage/theming.rst:305
 msgid "Third Party Themes"
-msgstr ""
+msgstr "第三方主题"
 
 #: ../../usage/theming.rst:312
 msgid "|sphinx_rtd_theme|"
-msgstr ""
+msgstr "|sphinx_rtd_theme|"
 
 #: ../../usage/theming.rst:314
 msgid "*sphinx_rtd_theme*"
-msgstr ""
+msgstr "*sphinx_rtd_theme*"
 
 #: ../../usage/theming.rst:319
 msgid ""
@@ -626,7 +626,7 @@ msgstr ""
 
 #: ../../usage/theming.rst:335
 msgid "**sphinx_rtd_theme**"
-msgstr ""
+msgstr "**sphinx_rtd_theme**"
 
 #: ../../usage/theming.rst:327
 msgid ""
@@ -638,5 +638,8 @@ msgstr ""
 
 #: ../../usage/theming.rst:334
 msgid "**sphinx_rtd_theme** has become optional."
-msgstr ""
+msgstr "**sphinx_rtd_theme** has become optional."
+
+#~ msgid "Todo"
+#~ msgstr ""
 

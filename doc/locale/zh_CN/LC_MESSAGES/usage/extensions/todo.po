@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../usage/extensions/todo.rst:2
 msgid ":mod:`sphinx.ext.todo` -- Support for todo items"
-msgstr ""
+msgstr ":mod:`sphinx.ext.todo` -- Support for todo items"
 
 #: ../../usage/extensions/todo.rst:10
 msgid "There are two additional directives when using this extension:"
-msgstr ""
+msgstr "There are two additional directives when using this extension:"
 
 #: ../../usage/extensions/todo.rst:14
 msgid "Use this directive like, for example, :rst:dir:`note`."
-msgstr ""
+msgstr "Use this directive like, for example, :rst:dir:`note`."
 
 #: ../../usage/extensions/todo.rst:16
 msgid ""
@@ -50,11 +50,11 @@ msgstr ""
 
 #: ../../usage/extensions/todo.rst:30
 msgid "These can be configured as seen below."
-msgstr ""
+msgstr "These can be configured as seen below."
 
 #: ../../usage/extensions/todo.rst:33
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/todo.rst:37
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 
 #: ../../usage/extensions/todo.rst:54
 msgid "autodoc provides the following an additional event:"
-msgstr ""
+msgstr "autodoc provides the following an additional event:"
 
 #: ../../usage/extensions/todo.rst:60
 msgid ""

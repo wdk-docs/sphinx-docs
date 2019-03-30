@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:4
 msgid ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
-msgstr ""
+msgstr ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
 
 #: ../../usage/extensions/inheritance.rst:11
 msgid ""
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:14
 msgid "It adds this directive:"
-msgstr ""
+msgstr "It adds this directive:"
 
 #: ../../usage/extensions/inheritance.rst:18
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:42
 msgid "You can use ``caption`` option to give a caption to the diagram."
-msgstr ""
+msgstr "You can use ``caption`` option to give a caption to the diagram."
 
 #: ../../usage/extensions/inheritance.rst:44
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:48
 msgid "Added ``caption`` option"
-msgstr ""
+msgstr "Added ``caption`` option"
 
 #: ../../usage/extensions/inheritance.rst:51
 msgid ""
@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:81
 msgid "If you have specified a module in the inheritance diagram like this::"
-msgstr ""
+msgstr "If you have specified a module in the inheritance diagram like this::"
 
 #: ../../usage/extensions/inheritance.rst:86
 msgid ""
@@ -112,11 +112,11 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:97
 msgid "Added ``top-classes`` option to limit the scope of inheritance graphs."
-msgstr ""
+msgstr "Added ``top-classes`` option to limit the scope of inheritance graphs."
 
 #: ../../usage/extensions/inheritance.rst:102
 msgid "Examples"
-msgstr ""
+msgstr "Examples"
 
 #: ../../usage/extensions/inheritance.rst:104
 msgid ""
@@ -126,11 +126,11 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:107
 msgid "With full names::"
-msgstr ""
+msgstr "With full names::"
 
 #: ../../usage/extensions/inheritance.rst:114
 msgid "Showing class names only::"
-msgstr ""
+msgstr "Showing class names only::"
 
 #: ../../usage/extensions/inheritance.rst:122
 msgid ""
@@ -141,25 +141,25 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:137
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../usage/extensions/inheritance.rst:141
 msgid "A dictionary of graphviz graph attributes for inheritance diagrams."
-msgstr ""
+msgstr "A dictionary of graphviz graph attributes for inheritance diagrams."
 
 #: ../../usage/extensions/inheritance.rst:143
 #: ../../usage/extensions/inheritance.rst:152
 #: ../../usage/extensions/inheritance.rst:167
 msgid "For example::"
-msgstr ""
+msgstr "For example::"
 
 #: ../../usage/extensions/inheritance.rst:150
 msgid "A dictionary of graphviz node attributes for inheritance diagrams."
-msgstr ""
+msgstr "A dictionary of graphviz node attributes for inheritance diagrams."
 
 #: ../../usage/extensions/inheritance.rst:159
 msgid "A dictionary of graphviz edge attributes for inheritance diagrams."
-msgstr ""
+msgstr "A dictionary of graphviz edge attributes for inheritance diagrams."
 
 #: ../../usage/extensions/inheritance.rst:163
 msgid ""

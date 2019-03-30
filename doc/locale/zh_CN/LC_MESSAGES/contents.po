@@ -19,25 +19,25 @@ msgstr ""
 
 #: ../../contents.rst:5
 msgid "Sphinx documentation contents"
-msgstr ""
+msgstr "Sphinx文档内容"
 
 #: ../../contents.rst:41
 msgid "Indices and tables"
-msgstr ""
+msgstr "指数和表格"
 
 #: ../../contents.rst:45
 msgid ":ref:`genindex`"
-msgstr ""
+msgstr ":ref:`genindex`"
 
 #: ../../contents.rst:46 ../../contents.rst:52
 msgid ":ref:`modindex`"
-msgstr ""
+msgstr ":ref:`modindex`"
 
 #: ../../contents.rst:47
 msgid ":ref:`search`"
-msgstr ""
+msgstr ":ref:`search`"
 
 #: ../../contents.rst:48 ../../contents.rst:53
 msgid ":ref:`glossary`"
-msgstr ""
+msgstr ":ref:`glossary`"
 
