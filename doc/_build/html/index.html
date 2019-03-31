@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>概述 &#8212; Sphinx 2.1.0+/7ed78b5 文档</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/7ed78b5 文档 中搜索"
+          href="_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/index.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="#">主页</a></li>
+    <li><a href="usage/installation.html">安装</a></li>
+    <li><a href="contents.html">文档</a></li>
+    <li><a href="develop.html">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="#">
+      <img src="_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+<li><a href="#">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="logo">A <a href="https://www.pocoo.org/">
+  <img src="_static/pocoo.png" alt="Pocoo" /></a>
+  项目</p>
+
+<h3>Download</h3>
+<p class="download">当前版本: <a href="https://pypi.org/project/Sphinx/" alt="PyPI"><img src="https://img.shields.io/pypi/v/sphinx.svg"></a></p>
+<p>安装Sphinx:</p>
+<pre>pip install -U Sphinx</pre>
+
+<h3>有问题吗？建议？</h3>
+
+<p>加入Google网上论坛的s<a href="https://groups.google.com/group/sphinx-users">phinx-users</a>邮件列表:</p>
+<div class="subscribeformwrapper">
+<form action="https://groups.google.com/group/sphinx-users/boxsubscribe"
+      class="subscribeform">
+  <input type="text" name="email" value="your@email"
+         onfocus="$(this).val('');" />
+  <input type="submit" name="sub" value="Subscribe" />
+</form>
+</div>
+<p>或者来到FreeNode上的<tt>#sphinx-doc</tt>频道。</p>
+<p>您还可以在<a href="https://github.com/sphinx-doc/sphinx/issues">跟踪器</a>上打开问题</p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>欢迎</h1>
+
+  <div class="quotebar">
+    <p><em>用户说什么</em></p>
+    <p>&#8220;渴望一个伟大的工具，实际上让程序员<b>想要</b>编写文档！&#8220;</p>
+  </div>
+
+  <p>Sphinx是一个工具，可以轻松创建由Georg Brandl编写并根据BSD许可证授权的智能和美观文档</p>
+  <p>它最初是为<a href="https://docs.python.org/">Python文档</a>创建的，它具有出色的工具，可用于各种语言的软件项目文档。  当然，这个站点也是使用reStructuredText源创建的
+  </p>
+  <ul>
+    <li><b>输出格式:</b> HTML（包括Windows HTML帮助），LaTeX（适用于可打印的PDF版本），ePub，Texinfo，手册页，纯文本</li>
+    <li><b>广泛的交叉引用:</b> 语义标记和功能，类，引用，词汇表术语和类似信息的自动链接</li>
+    <li><b>分层结构:</b> 轻松定义文档树，自动链接到平级，上级和下级</li>
+    <li><b>自动索引:</b> 一般索引以及特定于语言的模块索引</li>
+    <li><b>代码处理:</b> 使用<a href="http://pygments.org">Pygments</a>荧光笔自动突出显示</li>
+    <li><b>扩展:</b> 自动测试代码片段，包含Python模块（API文档）中的文档字符串<a href="ext/builtins.html#builtin-sphinx-extensions">等</a></li>
+    <li><b>贡献的扩展:</b> 用户在第二个存储库中<a href="develop.html#extensions">贡献</a>了50多个扩展;其中大多数可以从PyPI安装</li>
+  </ul>
+  <p>Sphinx使用<a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>作为其标记语言，其许多优点来自reStructuredText及其解析和翻译套件<a href="http://docutils.sourceforge.net/">Docutils</a>的强大功能和直接性。
+  </p>
+
+  <h2 style="margin-bottom: 0">文档</h2>
+
+  <table class="contentstable">
+    <tr>
+      <td>
+        <p class="biglink"><a class="biglink" href="usage/quickstart.html">入门</a><br/>
+           <span class="linkdescr">基本任务概述</span></p>
+      </td><td><p class="biglink"><a class="biglink" href="search.html">搜索页</a><br/>
+           <span class="linkdescr">搜索文档</span></p>
+      </td>
+    </tr><tr>
+      <td>
+        <p class="biglink"><a class="biglink" href="contents.html">目录</a><br/>
+           <span class="linkdescr">如需完整概述</span></p>
+      </td><td><p class="biglink"><a class="biglink" href="genindex.html">总目录</a><br/>
+           <span class="linkdescr">所的函数，类，术语</span></p>
+      </td>
+    </tr><tr>
+      <td>
+        <p class="biglink"><a class="biglink" href="changes.html">变化</a><br/>
+           <span class="linkdescr">发布历史</span></p>
+      </td><td>
+      </td>
+    </tr>
+  </table>
+
+  <p>您也可以从右下角的弹出菜单下载Sphinx文档的PDF/EPUB版本。
+  </p>
+
+  <h2>实际案例</h2>
+  <p>可以在使用<a href="examples.html">Sphinx的Projects</a>页面上找到使用Sphinx生成的文档的链接。
+  </p>
+  <p>有关Sphinx源文件外观的示例，请使用除此欢迎页面之外的文档所有页面上的&#8220;显示源&#8221;链接。
+  </p>
+
+  <p>您可能还对如何使用matplotlib开发人员编写的Sphinx创建自定义文档的非常好的<a href="http://matplotlib.sourceforge.net/sampledoc/">教程</a>感兴趣</p>
+
+  <p>感谢日本Sphinx用户组，该文档有<a href="http://docs.sphinx-users.jp/">日文翻译</a>。</p>
+  <p>O'Reilly出版了一本关于Sphinx的日语书:<a href="https://www.oreilly.co.jp/books/9784873116488/">Sphinxをはじめよう/Learning Sphinx</a></p>
+  <!-- <p><img src="_static/bookcover.png"/></p> -->
+
+
+  <h2>主机</h2>
+
+  <p>需要一个地方来托管你的Sphinx文档？ <a href="https://readthedocs.org/">readthedocs.org</a>已经托管了许多Sphinx文档，并且与项目的源代码控制很好地集成。  它还具有强大的内置搜索功能，超出了Sphinx基于JavaScript的离线搜索功能。</p>
+
+  <h2>贡献者指南</h2>
+
+  <p>如果您想为项目做出贡献，这部分文档适合您。</p>
+
+    <ul>
+      <li><a href="devguide.html">Sphinx开发人员指南</a></li>
+      <li><a href="authors.html">Sphinx 作者</a></li>
+    </ul>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+<li><a href="#">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7ed78b5 创建。
+    </div>
+  </body>
+</html>
