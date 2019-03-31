@@ -142,7 +142,7 @@ msgstr "Blocks"
 
 #: ../../templating.rst:86
 msgid "The following blocks exist in the ``layout.html`` template:"
-msgstr "The following blocks exist in the ``layout.html`` template:"
+msgstr "``layout.html`` 模板中存在以下块:"
 
 #: ../../templating.rst:92
 msgid "`doctype`"
@@ -154,7 +154,7 @@ msgid ""
 "Transitional as this is the closest to what Sphinx and Docutils generate "
 "and it's a good idea not to change it unless you want to switch to HTML 5"
 " or a different but compatible XHTML doctype."
-msgstr ""
+msgstr "输出格式的doctype。默认情况下，这是XHTML 1.0 Transitional，因为它最接近Sphinx和Docutils生成的内容，除非您想要切换到HTML 5或不同但兼容的XHTML doctype，否则最好不要更改它。"
 
 #: ../../templating.rst:96
 msgid "`linktags`"
@@ -164,7 +164,7 @@ msgstr "`linktags`"
 msgid ""
 "This block adds a couple of ``<link>`` tags to the head section of the "
 "template."
-msgstr ""
+msgstr "这个块在模板的head部分添加了几个 ``<link>`` 标签。"
 
 #: ../../templating.rst:101
 msgid "`extrahead`"

@@ -29,7 +29,7 @@ msgid ""
 "will generate a documentation source directory and populate it with some "
 "defaults. We're going to use the :program:`sphinx-quickstart` tool here, "
 "though it's use by no means necessary."
-msgstr ""
+msgstr "一旦Sphinx完成 :doc:`安装 </usage/installation>`，您就可以继续设置您的第一个Sphinx项目了。 为了简化入门过程，Sphinx提供了一个工具 :program:`sphinx-quickstart`，它将生成一个文档源目录并用一些默认值填充它。 我们将在这里使用 :program:`sphinx-quickstart` 工具，尽管它没有必要使用。"
 
 #: ../../usage/quickstart.rst:14
 msgid "Setting up the documentation sources"
@@ -42,7 +42,7 @@ msgid ""
 "also contains the Sphinx configuration file :file:`conf.py`, where you "
 "can configure all aspects of how Sphinx reads your sources and builds "
 "your documentation.  [#]_"
-msgstr ""
+msgstr "Sphinx集合 :term:`reStructuredText` 文档源的根目录称为 :term:`source directory`。该目录还包含Sphinx配置文件 :file:`conf.py`，您可以在其中配置Sphinx如何读取源代码和构建文档的所有方面。 [#]_"
 
 #: ../../usage/quickstart.rst:21
 msgid ""
@@ -50,19 +50,19 @@ msgid ""
 "up a source directory and creates a default :file:`conf.py` with the most"
 " useful configuration values from a few questions it asks you. To use "
 "this, run:"
-msgstr ""
+msgstr "Sphinx附带一个名为 :program:`sphinx-quickstart` 的脚本，它设置一个源目录并创建一个默认的 :file:`conf.py` ，其中包含几个问题中最有用的配置值。要使用它，请运行:"
 
 #: ../../usage/quickstart.rst:29
 msgid ""
 "Answer each question asked. Be sure to say yes to the ``autodoc`` "
 "extension, as we will use this later."
-msgstr ""
+msgstr "回答每个问题。一定要对 ``autodoc`` 扩展名回答\"yes\"，因为我们稍后会使用它。"
 
 #: ../../usage/quickstart.rst:32
 msgid ""
 "There is also an automatic \"API documentation\" generator called "
 ":program:`sphinx-apidoc`; see :doc:`/man/sphinx-apidoc` for details."
-msgstr ""
+msgstr "还有一个自动的\"API documentation\"生成器，名为 :program:`sphinx-apidoc` ;请参阅 :doc:`/man/sphinx-apidoc` 了解详情。"
 
 #: ../../usage/quickstart.rst:37
 msgid "Defining document structure"
@@ -77,7 +77,10 @@ msgid ""
 " the root of the \"table of contents tree\" (or *toctree*).  This is one "
 "of the main things that Sphinx adds to reStructuredText, a way to connect"
 " multiple files to a single hierarchy of documents."
-msgstr ""
+msgstr "让我们假设你运行 :program:`sphinx-quickstart`。"
+"它创建了一个源目录 :file:`conf.py` 和一个主文件 :file:`index.rst` (如果你接受了默认值)。"
+" :term:`master document` 的主要功能是作为欢迎页面，并包含\"目录树\"(或*toctree*)的根。"
+"这是Sphinx为reStructuredText添加的主要功能之一，reStructuredText是一种将多个文件连接到单个文档层次结构的方法。"
 
 msgid "reStructuredText directives"
 msgstr "reStructuredText 指令"
@@ -86,40 +89,40 @@ msgstr "reStructuredText 指令"
 msgid ""
 "``toctree`` is a reStructuredText :dfn:`directive`, a very versatile "
 "piece of markup.  Directives can have arguments, options and content."
-msgstr ""
+msgstr " ``toctree`` 是一个reStructuredText :dfn:`directive` ，一个非常通用的标记。  指令可以包含参数，选项和内容。"
 
 #: ../../usage/quickstart.rst:52
 msgid ""
 "*Arguments* are given directly after the double colon following the "
 "directive's name.  Each directive decides whether it can have arguments, "
 "and how many."
-msgstr ""
+msgstr "*参数* 在指令名后面的双冒号后直接给出。每个指令决定它是否可以有参数，以及有多少参数。"
 
 #: ../../usage/quickstart.rst:56
 msgid ""
 "*Options* are given after the arguments, in form of a \"field list\".  "
 "The ``maxdepth`` is such an option for the ``toctree`` directive."
-msgstr ""
+msgstr "*选项* 在参数后面以\"字段列表\"的形式给出。  ``maxdepth`` 是 ``toctree`` 指令的一个选项。"
 
 #: ../../usage/quickstart.rst:59
 msgid ""
 "*Content* follows the options or arguments after a blank line.  Each "
 "directive decides whether to allow content, and what to do with it."
-msgstr ""
+msgstr "*Content* 在空行后面跟着选项或参数。*Content* 在空行后跟一个选项或参数。"
 
 #: ../../usage/quickstart.rst:62
 msgid ""
 "A common gotcha with directives is that **the first line of the content "
 "must be indented to the same level as the options are**."
-msgstr ""
+msgstr "指令的常见问题是 **内容的第一行必须缩进到与选项** 相同的级别。"
 
 #: ../../usage/quickstart.rst:65
 msgid "The ``toctree`` directive initially is empty, and looks like so:"
-msgstr "The ``toctree`` directive initially is empty, and looks like so:"
+msgstr "``toctree`` 指令最初是空的，看起来像这样:"
 
 #: ../../usage/quickstart.rst:72
 msgid "You add documents listing them in the *content* of the directive:"
-msgstr "You add documents listing them in the *content* of the directive:"
+msgstr "您可以在指令的 *content* 中添加列出它们的文档:"
 
 #: ../../usage/quickstart.rst:83
 msgid ""
@@ -127,11 +130,11 @@ msgid ""
 "documents to include are given as :term:`document name`\\ s, which in "
 "short means that you leave off the file name extension and use forward "
 "slashes (``/``) as directory separators."
-msgstr ""
+msgstr "这正是本文档的 ``toctree`` 的外观。要包含的文件如下 :term:`document name`\\ s，简而言之就是你不使用文件扩展名并使用正斜杠(``/``)作为目录分隔符。"
 
 #: ../../usage/quickstart.rst:88
 msgid "|more| Read more about :ref:`the toctree directive <toctree-directive>`."
-msgstr "|more| Read more about :ref:`the toctree directive <toctree-directive>`."
+msgstr "|more| 阅读更多关于 :ref:`toctree指令 <toctree-directive>` 。"
 
 #: ../../usage/quickstart.rst:90
 msgid ""
@@ -141,7 +144,7 @@ msgid ""
 "placed.  Also, Sphinx now knows about the order and hierarchy of your "
 "documents.  (They may contain ``toctree`` directives themselves, which "
 "means you can create deeply nested hierarchies if necessary.)"
-msgstr ""
+msgstr "您现在可以创建在 ``toctree`` 中列出的文件并添加内容，并且将在放置 ``toctree`` 指令的地方插入它们的部分标题(直到 ``maxdepth`` 级别) 。  此外，Sphinx现在知道您的文档的顺序和层次结构。(它们本身可能包含 ``toctree`` 指令，这意味着如果需要，您可以创建深层嵌套的层次结构。)"
 
 #: ../../usage/quickstart.rst:99
 msgid "Adding content"
@@ -153,13 +156,13 @@ msgid ""
 ":term:`reStructuredText`.  There are also several features added by "
 "Sphinx. For example, you can add cross-file references in a portable way "
 "(which works for all output types) using the :rst:role:`ref` role."
-msgstr ""
+msgstr "在Sphinx源文件中，您可以使用标准的大多数功能 :term:`reStructuredText` 。  Sphinx还增加了一些功能。 例如，您可以使用  :rst:role:`ref` 角色以可移植的方式(适用于所有输出类型)添加跨文件引用。"
 
 #: ../../usage/quickstart.rst:106
 msgid ""
 "For an example, if you are viewing the HTML version you can look at the "
 "source for this document -- use the \"Show Source\" link in the sidebar."
-msgstr ""
+msgstr "例如，如果您正在查看HTML版本，则可以查看此文档的源代码 - 使用侧栏中的\"显示源\"链接。"
 
 #: ../../usage/quickstart.rst:109 ../../usage/quickstart.rst:151
 #: ../../usage/quickstart.rst:243 ../../usage/quickstart.rst:286
@@ -168,13 +171,13 @@ msgstr "待处理"
 
 #: ../../usage/quickstart.rst:109
 msgid "Update the below link when we add new guides on these."
-msgstr "Update the below link when we add new guides on these."
+msgstr "在我们添加新指南时更新以下链接。"
 
 #: ../../usage/quickstart.rst:111
 msgid ""
 "|more| See :doc:`/usage/restructuredtext/index` for a more in-depth "
 "introduction to reStructuredText, including markup added by Sphinx."
-msgstr ""
+msgstr "|more| 有关reStructuredText的更深入介绍，请参阅 :doc:`/usage/restructuredtext/index`，包括Sphinx添加的标记。"
 
 #: ../../usage/quickstart.rst:116
 msgid "Running the build"
@@ -185,7 +188,7 @@ msgid ""
 "Now that you have added some files and content, let's make a first build "
 "of the docs.  A build is started with the :program:`sphinx-build` "
 "program:"
-msgstr ""
+msgstr "现在您已经添加了一些文件和内容，让我们首先构建文档。使用 :program:`sphinx-build` 程序启动构建:"
 
 #: ../../usage/quickstart.rst:125
 msgid ""
@@ -193,13 +196,13 @@ msgid ""
 "directory in which you want to place the built documentation. The "
 ":option:`-b <sphinx-build -b>` option selects a builder; in this example "
 "Sphinx will build HTML files."
-msgstr ""
+msgstr "其中 *sourcedir* 是 :term:`source directory` ，*builddir* 是您要在其中放置构建文档的目录。 :option:`-b <sphinx-build -b>` 选项选择一个构建器;在这个例子中，Sphinx将构建HTML文件。"
 
 #: ../../usage/quickstart.rst:130
 msgid ""
 "|more| Refer to the :doc:`sphinx-build man page </man/sphinx-build>` for "
 "all options that :program:`sphinx-build` supports."
-msgstr ""
+msgstr "|more| 对于以下所有选项，请参阅 :doc:`sphinx-build手册页 </man/sphinx-build>` :program:`sphinx-build` 支持。"
 
 #: ../../usage/quickstart.rst:133
 msgid ""
@@ -207,13 +210,13 @@ msgid ""
 "and a :file:`make.bat` which make life even easier for you. These can be "
 "executed by running :command:`make` with the name of the builder. For "
 "example."
-msgstr ""
+msgstr "但是，:program:`sphinx-quickstart` 脚本创建了一个 :file:`Makefile` 和一个 :file:`make.bat`，它让你的生活更加轻松。 这些可以通过运行 :command:`make` 来执行，其中包含构建器的名称。例如。"
 
 #: ../../usage/quickstart.rst:141
 msgid ""
 "This will build HTML docs in the build directory you chose. Execute "
 ":command:`make` without an argument to see which targets are available."
-msgstr ""
+msgstr "这些可以通过运行 :command:`make` 来执行，它包含构建器的名称。例如。"
 
 #: ../../usage/quickstart.rst:144
 msgid "How do I generate PDF documents?"
@@ -224,7 +227,7 @@ msgid ""
 "``make latexpdf`` runs the :mod:`LaTeX builder "
 "<sphinx.builders.latex.LaTeXBuilder>` and readily invokes the pdfTeX "
 "toolchain for you."
-msgstr ""
+msgstr "``make latexpdf`` 运行 :mod:`LaTeX 生成器 <sphinx.builders.latex.LaTeXBuilder>` 并随时为你调用pdfTeX工具链。"
 
 #: ../../usage/quickstart.rst:151
 msgid "Move this whole section into a guide on rST or directives"
@@ -240,14 +243,14 @@ msgid ""
 "(in a very general sense) in any :dfn:`domain`.  A domain is a collection"
 " of object types that belong together, complete with markup to create and"
 " reference descriptions of these objects."
-msgstr ""
+msgstr "Sphinx的主要目标之一是简单地记录 :dfn:`objects` (在很一般意义上)在任何 :dfn:`domain` 。  域是属于一起的对象类型的集合，带有标记以创建和引用这些对象的描述。"
 
 #: ../../usage/quickstart.rst:161
 msgid ""
 "The most prominent domain is the Python domain. For example, to document "
 "Python's built-in function ``enumerate()``, you would add this to one of "
 "your source files."
-msgstr ""
+msgstr "最突出的域是Python域。例如，要记录Python的内置函数 ``enumerate()`` ，您可以将其添加到您的一个源文件中。"
 
 #: ../../usage/quickstart.rst:172
 msgid "This is rendered like this:"
@@ -257,20 +260,20 @@ msgstr "这是这样渲染的:"
 msgid ""
 "Return an iterator that yields tuples of an index and an item of the "
 "*sequence*. (And so on.)"
-msgstr ""
+msgstr "返回一个迭代器，它产生一个索引的元组和一个 *sequence* 的项。 (等等。)"
 
 #: ../../usage/quickstart.rst:179
 msgid ""
 "The argument of the directive is the :dfn:`signature` of the object you "
 "describe, the content is the documentation for it.  Multiple signatures "
 "can be given, each in its own line."
-msgstr ""
+msgstr "该指令的参数是你描述的对象的 :dfn:`signature` ，内容是它的文档。可以给出多个签名，每个签名都在其自己的行中。"
 
 #: ../../usage/quickstart.rst:183
 msgid ""
 "The Python domain also happens to be the default domain, so you don't "
 "need to prefix the markup with the domain name."
-msgstr ""
+msgstr "Python域也恰好是默认域，因此您不需要在标记前加上域名。"
 
 #: ../../usage/quickstart.rst:192
 msgid "does the same job if you keep the default setting for the default domain."
@@ -282,7 +285,7 @@ msgid ""
 "objects, for example :rst:dir:`py:class` or :rst:dir:`py:method`.  There "
 "is also a cross-referencing :dfn:`role` for each of these object types.  "
 "This markup will create a link to the documentation of ``enumerate()``."
-msgstr ""
+msgstr "还有几个用于记录其他类型的Python对象的指令，例如 :rst:dir:`py:class` 或 :rst:dir:`py:method` 。对于每种对象类型，还有一个交叉引用 :dfn:`role` 。这个标记将创建一个指向 ``enumerate()`` 文档的链接。"
 
 #: ../../usage/quickstart.rst:203
 msgid "And here is the proof: A link to :func:`enumerate`."
@@ -293,20 +296,20 @@ msgid ""
 "Again, the ``py:`` can be left out if the Python domain is the default "
 "one.  It doesn't matter which file contains the actual documentation for "
 "``enumerate()``; Sphinx will find it and create a link to it."
-msgstr ""
+msgstr "同样，如果Python域是默认域，则可以省略 ``py:`` 。哪个文件包含 ``enumerate()`` 的实际文档并不重要; Sphinx会找到它并创建一个链接。"
 
 #: ../../usage/quickstart.rst:209
 msgid ""
 "Each domain will have special rules for how the signatures can look like,"
 " and make the formatted output look pretty, or add specific features like"
 " links to parameter types, e.g. in the C/C++ domains."
-msgstr ""
+msgstr "每个域都有特殊的规则来表示签名的外观，并使格式化的输出看起来很漂亮，或添加特定的功能，如链接到参数类型，例如在C/C ++域中。"
 
 #: ../../usage/quickstart.rst:213
 msgid ""
 "|more| See :doc:`/usage/restructuredtext/domains` for all the available "
 "domains and their directives/roles."
-msgstr ""
+msgstr "|more| 请参阅 :doc:`/usage/restructuredtext/domains`，了解所有可用域及其指令/角色。"
 
 #: ../../usage/quickstart.rst:218
 msgid "Basic configuration"
@@ -320,7 +323,7 @@ msgid ""
 "it is executed by Sphinx, you can do non-trivial tasks in it, like "
 "extending :data:`sys.path` or importing a module to find out the version "
 "you are documenting."
-msgstr ""
+msgstr "之前我们提到过 :file:`conf.py` 文件控制着Sphinx处理文档的方式。在该文件中，它作为Python源文件执行，您可以分配配置值。对于高级用户: 由于它是由Sphinx执行的，因此您可以在其中执行非平凡的任务，例如扩展 :data:`sys.path` 或导入模块以找出您正在记录的版本。"
 
 #: ../../usage/quickstart.rst:227
 msgid ""
@@ -330,7 +333,7 @@ msgid ""
 "the line).  To change the default value, remove the hash sign and modify "
 "the value.  To customize a config value that is not automatically added "
 "by :program:`sphinx-quickstart`, just add an additional assignment."
-msgstr ""
+msgstr "您可能想要更改的配置值已经放入 :file:`conf.py` 由 :program:`sphinx-quickstart` 并且最初被注释掉(使用标准的Python语法: ``#`` 注释其余的这条线)。要更改默认值，请删除哈希符号并修改该值。要自定义一个不会自动添加的配置值  :program:`sphinx-quickstart` ，只需添加一个额外的赋值。"
 
 #: ../../usage/quickstart.rst:234
 msgid ""
@@ -339,17 +342,17 @@ msgid ""
 "encoding declaration in the first line.  If you use non-ASCII characters "
 "in any string value, you need to use Python Unicode strings (like "
 "``project = u'Exposé'``)."
-msgstr ""
+msgstr "请记住，该文件使用Python语法来表示字符串，数字，列表等。默认情况下，文件以UTF-8保存，如第一行中的编码声明所示。如果在任何字符串值中使用非ASCII字符，则需要使用Python Unicode字符串(如 ``project =u'Exposé'`` )。"
 
 #: ../../usage/quickstart.rst:239
 msgid ""
 "|more| See :doc:`/usage/configuration` for documentation of all available"
 " config values."
-msgstr ""
+msgstr "|more| 有关所有可用配置值的文档，请参阅 :doc:`/usage/configuration` 。"
 
 #: ../../usage/quickstart.rst:243
 msgid "Move this entire doc to a different section"
-msgstr "Move this entire doc to a different section"
+msgstr "将整个文档移动到其他部分"
 
 #: ../../usage/quickstart.rst:246
 msgid "Autodoc"
@@ -362,7 +365,7 @@ msgid ""
 "inclusion of docstrings from your modules with an :dfn:`extension` (an "
 "extension is a Python module that provides additional features for Sphinx"
 " projects) called *autodoc*."
-msgstr ""
+msgstr "在记录Python代码时，通常会在文档字符串中的源文件中放入大量文档。 Sphinx支持在模块中包含docstrings :dfn:`extension`  (扩展名是为Sphinx项目提供附加功能的Python模块)，称为 *autodoc* 。"
 
 #: ../../usage/quickstart.rst:253
 msgid ""
@@ -370,45 +373,45 @@ msgid ""
 "putting the string ``'sphinx.ext.autodoc'`` into the list assigned to the"
 " :confval:`extensions` config value.  Then, you have a few additional "
 "directives at your disposal."
-msgstr ""
+msgstr "为了使用 *autodoc* ，你需要在 :file:`conf.py` 中激活它，方法是将字符串 ``'sphinx.ext.autodoc'`` 放入分配给 :confval:`extensions` 配置的列表中值。  然后，您可以使用其他一些指令。"
 
 #: ../../usage/quickstart.rst:258
 msgid ""
 "For example, to document the function ``io.open()``, reading its "
 "signature and docstring from the source file, you'd write this::"
-msgstr ""
+msgstr "例如，要记录函数 ``io.open()`` ，从源文件中读取它的签名和docstring，你就写下::"
 
 #: ../../usage/quickstart.rst:263
 msgid ""
 "You can also document whole classes or even modules automatically, using "
 "member options for the auto directives, like ::"
-msgstr ""
+msgstr "您还可以使用auto指令的成员选项自动记录整个类甚至模块，例如::"
 
 #: ../../usage/quickstart.rst:269
 msgid ""
 "*autodoc* needs to import your modules in order to extract the "
 "docstrings. Therefore, you must add the appropriate path to "
 ":py:data:`sys.path` in your :file:`conf.py`."
-msgstr ""
+msgstr "*autodoc* 需要导入您的模块才能提取文档字符串。因此，您必须在 :file:`conf.py` 中添加适当的路径 :py:data:`sys.path` 。"
 
 #: ../../usage/quickstart.rst:275
 msgid ""
 ":mod:`~sphinx.ext.autodoc` **imports** the modules to be documented.  If "
 "any modules have side effects on import, these will be executed by "
 "``autodoc`` when ``sphinx-build`` is run."
-msgstr ""
+msgstr ":mod:`~sphinx.ext.autodoc` **导入** 要记录的模块。如果任何模块对导入有副作用，那么当运行 ``sphinx-build`` 时，这些将由 ``autodoc`` 执行。"
 
 #: ../../usage/quickstart.rst:279
 msgid ""
 "If you document scripts (as opposed to library modules), make sure their "
 "main routine is protected by a ``if __name__ == '__main__'`` condition."
-msgstr ""
+msgstr "如果您记录脚本(而不是库模块)，请确保它们的主例程受 ``if __name__ =='__ main __'`` 条件的保护。"
 
 #: ../../usage/quickstart.rst:282
 msgid ""
 "|more| See :mod:`sphinx.ext.autodoc` for the complete description of the "
 "features of autodoc."
-msgstr ""
+msgstr "|more| 有关autodoc功能的完整描述，请参阅 :mod:`sphinx.ext.autodoc` 。"
 
 #: ../../usage/quickstart.rst:286
 msgid "Move this doc to another section"
@@ -423,7 +426,7 @@ msgid ""
 "Many Sphinx documents including the `Python documentation`_ are published"
 " on the Internet.  When you want to make links to such documents from "
 "your documentation, you can do it with :mod:`sphinx.ext.intersphinx`."
-msgstr ""
+msgstr "包括 `Python documentation`_ 在内的许多Sphinx文档都在Internet上发布。如果要从文档中链接到此类文档，可以使用  :mod:`sphinx.ext.intersphinx` 。"
 
 #: ../../usage/quickstart.rst:297
 msgid ""
@@ -431,13 +434,13 @@ msgid ""
 "by putting the string ``'sphinx.ext.intersphinx'`` into the "
 ":confval:`extensions` list and set up the :confval:`intersphinx_mapping` "
 "config value."
-msgstr ""
+msgstr "为了使用intersphinx，你需要在 :file:`conf.py` 中激活它，方法是将字符串 ``'sphinx.ext.intersphinx'`` 放入  :confval:`extensions` 列表并设置 :confval:`intersphinx_mapping` 配置值。"
 
 #: ../../usage/quickstart.rst:301
 msgid ""
 "For example, to link to ``io.open()`` in the Python library manual, you "
 "need to setup your :confval:`intersphinx_mapping` like::"
-msgstr ""
+msgstr "例如，要链接到Python库手册中的 ``io.open()`` ，你需要设置 :confval:`intersphinx_mapping` 如下 ::"
 
 #: ../../usage/quickstart.rst:306
 msgid ""
@@ -448,13 +451,13 @@ msgid ""
 " to download the list of valid targets).  Intersphinx also works for some"
 " other :term:`domain`\\'s roles including ``:ref:``, however it doesn't "
 "work for ``:doc:`` as that is non-domain role."
-msgstr ""
+msgstr "现在，您可以编写一个交叉引用，如 ``:py:func:`io.open``` 。任何在当前文档集中没有匹配目标的交叉引用都将在配置的文档集中查找 :confval:`intersphinx_mapping` (这需要访问URL才能下载有效目标列表)。 Intersphinx也适用于其他一些 :term:`domain` 的角色，包括 ``:ref:`` ，但它不适用于 ``:doc:`` ，因为那是非域角色。"
 
 #: ../../usage/quickstart.rst:314
 msgid ""
 "|more| See :mod:`sphinx.ext.intersphinx` for the complete description of "
 "the features of intersphinx."
-msgstr ""
+msgstr "|more| 有关intersphinx功能的完整描述，请参阅 :mod:`sphinx.ext.intersphinx` 。"
 
 #: ../../usage/quickstart.rst:319
 msgid "More topics to be covered"
@@ -462,7 +465,7 @@ msgstr "更多主题"
 
 #: ../../usage/quickstart.rst:321
 msgid ":doc:`Other extensions </usage/extensions/index>`:"
-msgstr ":doc:`其他扩展 </usage/extensions/index>`:"
+msgstr ":doc:`其他扩展 </usage/extensions/index>` :"
 
 #: ../../usage/quickstart.rst:322
 msgid "Static files"
@@ -497,7 +500,7 @@ msgid ""
 "This is the usual layout.  However, :file:`conf.py` can also live in "
 "another directory, the :term:`configuration directory`.  Refer to the "
 ":doc:`sphinx-build man page </man/sphinx-build>` for more information."
-msgstr "这是通常的布局。但是， file:`conf.py` 也可以存在于另一个目录中 :term:`configuration directory` 。  有关更多信息，请参阅 :doc:`sphinx-build man page </man/sphinx-build>` 。"
+msgstr "这是通常的布局。但是， file:`conf.py` 也可以存在于另一个目录中 :term:`configuration directory` 。  有关更多信息，请参阅 :doc:`sphinx-build手册页 </man/sphinx-build>` 。"
 
 #~ msgid "Todo"
 #~ msgstr ""

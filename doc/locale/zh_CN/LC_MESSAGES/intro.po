@@ -31,7 +31,7 @@ msgid ""
 " well), Sphinx can generate a nicely-organized arrangement of HTML files "
 "(in some other directory) for easy browsing and navigation.  But from the"
 " same source, it can also generate a PDF file using LaTeX."
-msgstr ""
+msgstr "这是Sphinx文档构建器的文档。 Sphinx是一个工具，它将一组 reStructuredText_ 源文件转换为各种输出格式，自动生成交叉引用，索引等。 也就是说，如果你有一个目录包含一堆reST格式的文档(也可能是那里的docs子目录)，Sphinx可以生成一个组织良好的HTML文件排列(在其他目录中)，以便于浏览和导航。但是从相同的来源，它也可以使用LaTeX生成PDF文件。"
 
 #: ../../intro.rst:13
 msgid ""
@@ -40,14 +40,14 @@ msgid ""
 "(which is intended to be freely mixed with hand-written content), if you "
 "need pure API docs have a look at `Epydoc "
 "<http://epydoc.sourceforge.net/>`_, which also understands reST."
-msgstr ""
+msgstr "重点是手写文档，而不是自动生成的API文档。 虽然也支持这种文档(可以与手写内容自由混合)，如果你需要纯API文档，请查看 `Epydoc <http://epydoc.sourceforge.net/>`_ ，它也理解reST。"
 
 #: ../../intro.rst:19
 msgid ""
 "For a great \"introduction\" to writing docs in general -- the whys and "
 "hows, see also `Write the docs <https://write-the-"
 "docs.readthedocs.io/>`_, written by Eric Holscher."
-msgstr ""
+msgstr "对于编写文档的一个伟大的\"介绍\" -- 一如既往，请参阅Eric Holscher编写的 `编写文档 <https://write-the-docs.readthedocs.io/>`_ 。"
 
 #: ../../intro.rst:26
 msgid "Conversion from other systems"
@@ -57,14 +57,14 @@ msgstr "从其他系统转换"
 msgid ""
 "This section is intended to collect helpful hints for those wanting to "
 "migrate to reStructuredText/Sphinx from other documentation systems."
-msgstr ""
+msgstr "本节旨在为那些想要从其他文档系统迁移到 reStructuredText/Sphinx 的人收集有用的提示。"
 
 #: ../../intro.rst:31
 msgid ""
 "Gerard Flanagan has written a script to convert pure HTML to reST; it can"
 " be found at the `Python Package Index "
 "<https://pypi.org/project/html2rest/>`_."
-msgstr ""
+msgstr "Gerard Flanagan编写了一个脚本，将纯HTML转换为reST;它可以在 `Python包索引 <https://pypi.org/project/html2rest/>`_ 找到。"
 
 #: ../../intro.rst:34
 msgid ""
@@ -72,26 +72,26 @@ msgid ""
 "which can be found at `the Python SVN repository "
 "<https://svn.python.org/projects/doctools/converter/>`_.  It contains "
 "generic code to convert Python-doc-style LaTeX markup to Sphinx reST."
-msgstr ""
+msgstr "为了将旧的Python文档转换为Sphinx，编写了一个转换器，可以在 `Python SVN存储库 <https://svn.python.org/projects/doctools/converter/>`_ 中找到。它包含将Python-doc样式的LaTeX标记转换为Sphinx reST的通用代码。"
 
 #: ../../intro.rst:39
 msgid ""
 "Marcin Wojdyr has written a script to convert Docbook to reST with Sphinx"
 " markup; it is at `GitHub <https://github.com/wojdyr/db2rst>`_."
-msgstr ""
+msgstr "Marcin Wojdyr编写了一个脚本，将Docbook转换为使用Sphinx标记的reST; 它位于 `GitHub <https://github.com/wojdyr/db2rst>`_ 。"
 
 #: ../../intro.rst:42
 msgid ""
 "Christophe de Vienne wrote a tool to convert from Open/LibreOffice "
 "documents to Sphinx: `odt2sphinx "
 "<https://pypi.org/project/odt2sphinx/>`_."
-msgstr ""
+msgstr "Christophe de Vienne编写了一个工具，用于将Open/LibreOffice文档转换为Sphinx: `odt2sphinx <https://pypi.org/project/odt2sphinx/>`_ 。"
 
 #: ../../intro.rst:45
 msgid ""
 "To convert different markups, `Pandoc <https://pandoc.org/>`_ is a very "
 "helpful tool."
-msgstr ""
+msgstr "要转换不同的标记，`Pandoc <https://pandoc.org/>`_ 是一个非常有用的工具。"
 
 #: ../../intro.rst:50
 msgid "Use with other systems"
@@ -99,7 +99,7 @@ msgstr "与其他系统一起使用"
 
 #: ../../intro.rst:52
 msgid "See the :ref:`pertinent section in the FAQ list <usingwith>`."
-msgstr "查看 :ref:`pertinent section in the FAQ list <usingwith>`."
+msgstr "查看 :ref:`FAQ列表中的相关部分 <usingwith>`."
 
 #: ../../intro.rst:56
 msgid "Prerequisites"
@@ -110,7 +110,7 @@ msgid ""
 "Sphinx needs at least **Python 3.5** to run, as well as the docutils_ and"
 " Jinja2_ libraries. Sphinx should work with docutils version 0.12 or some"
 " (not broken) SVN trunk snapshot."
-msgstr ""
+msgstr "Sphinx至少需要运行 **Python 3.5**，以及 docutils_ 和 Jinja2_ 库。 Sphinx应该使用docutils版本0.12或一些(未损坏的)SVN中继快照。"
 
 #: ../../intro.rst:68
 msgid "Usage"
@@ -120,5 +120,5 @@ msgstr "用法"
 msgid ""
 "See :doc:`/usage/quickstart` for an introduction.  It also contains links"
 " to more advanced sections in this manual for the topics it discusses."
-msgstr ""
+msgstr "请参阅 :doc:`/usage/quickstart` 作为介绍。它还包含本手册中针对其讨论的主题的更高级部分的链接。"
 

@@ -132,7 +132,7 @@ msgstr "如果你不需要在 :confval:`version` 和 :confval:`release` 之间�
 
 #: ../../usage/configuration.rst:92
 msgid "General configuration"
-msgstr "一般配置"
+msgstr "一般配置项"
 
 #: ../../usage/configuration.rst:96
 msgid ""
@@ -775,17 +775,17 @@ msgstr ""
 
 #: ../../usage/configuration.rst:610
 msgid "Now also removes ``<BLANKLINE>``."
-msgstr "Now also removes ``<BLANKLINE>``."
+msgstr "现在也删除了 ``<BLANKLINE>``."
 
 #: ../../usage/configuration.rst:617
 msgid "Options for internationalization"
-msgstr "国际化的选择"
+msgstr "国际化选项"
 
 #: ../../usage/configuration.rst:619
 msgid ""
 "These options influence Sphinx's *Native Language Support*.  See the "
 "documentation on :ref:`intl` for details."
-msgstr ""
+msgstr "这些选项会影响Sphinx的 *母语支持* 。有关详细信息，请参阅以下文档 :ref:`intl`。"
 
 #: ../../usage/configuration.rst:624
 msgid ""
@@ -797,174 +797,180 @@ msgid ""
 "substitute them for original figures.  In the LaTeX builder, a suitable "
 "language will be selected as an option for the *Babel* package.  Default "
 "is ``None``, which means that no translation will be done."
-msgstr ""
+msgstr "文档编写语言的代码。"
+"Sphinx自动生成的任何文本都将使用该语言。"
+"此外，Sphinx将尝试使用以下内容替换您文档中的各个段落 :confval:`locale_dirs`。"
+"Sphinx将搜索由 `figure_language_filename` 命名的语言特定数字，并将其替换为原始数字。"
+"在LaTeX构建器中，将选择合适的语言作为 *Babel* 包的选项。"
+"默认为 ``None``，这意味着不会进行任何翻译。"
 
 #: ../../usage/configuration.rst:637
 msgid "Support figure substitution"
-msgstr "Support figure substitution"
+msgstr "支持数字替换"
 
 #: ../../usage/configuration.rst:639
 msgid "Currently supported languages by Sphinx are:"
-msgstr "Currently supported languages by Sphinx are:"
+msgstr "目前Sphinx支持的语言是:"
 
 #: ../../usage/configuration.rst:641
 msgid "``bn`` -- Bengali"
-msgstr "``bn`` -- Bengali"
+msgstr "``bn`` -- 孟加拉语"
 
 #: ../../usage/configuration.rst:642
 msgid "``ca`` -- Catalan"
-msgstr "``ca`` -- Catalan"
+msgstr "``ca`` -- 加泰罗尼亚语"
 
 #: ../../usage/configuration.rst:643
 msgid "``cs`` -- Czech"
-msgstr "``cs`` -- Czech"
+msgstr "``cs`` -- 捷克语"
 
 #: ../../usage/configuration.rst:644 ../../usage/configuration.rst:1207
 msgid "``da`` -- Danish"
-msgstr "``da`` -- Danish"
+msgstr "``da`` -- 丹麦语"
 
 #: ../../usage/configuration.rst:645 ../../usage/configuration.rst:1212
 msgid "``de`` -- German"
-msgstr "``de`` -- German"
+msgstr "``de`` -- 德语"
 
 #: ../../usage/configuration.rst:646 ../../usage/configuration.rst:1209
 msgid "``en`` -- English"
-msgstr "``en`` -- English"
+msgstr "``en`` -- 英语"
 
 #: ../../usage/configuration.rst:647 ../../usage/configuration.rst:1220
 msgid "``es`` -- Spanish"
-msgstr "``es`` -- Spanish"
+msgstr "``es`` -- 西班牙语"
 
 #: ../../usage/configuration.rst:648
 msgid "``et`` -- Estonian"
-msgstr "``et`` -- Estonian"
+msgstr "``et`` -- 爱沙尼亚语"
 
 #: ../../usage/configuration.rst:649
 msgid "``eu`` -- Basque"
-msgstr "``eu`` -- Basque"
+msgstr "``eu`` -- 巴斯克语"
 
 #: ../../usage/configuration.rst:650
 msgid "``fa`` -- Iranian"
-msgstr "``fa`` -- Iranian"
+msgstr "``fa`` -- 伊朗语"
 
 #: ../../usage/configuration.rst:651 ../../usage/configuration.rst:1210
 msgid "``fi`` -- Finnish"
-msgstr "``fi`` -- Finnish"
+msgstr "``fi`` -- 芬兰语"
 
 #: ../../usage/configuration.rst:652 ../../usage/configuration.rst:1211
 msgid "``fr`` -- French"
-msgstr "``fr`` -- French"
+msgstr "``fr`` -- 法语"
 
 #: ../../usage/configuration.rst:653
 msgid "``he`` -- Hebrew"
-msgstr "``he`` -- Hebrew"
+msgstr "``he`` -- 希伯来语"
 
 #: ../../usage/configuration.rst:654
 msgid "``hr`` -- Croatian"
-msgstr "``hr`` -- Croatian"
+msgstr "``hr`` -- 克罗地亚语"
 
 #: ../../usage/configuration.rst:655 ../../usage/configuration.rst:1213
 msgid "``hu`` -- Hungarian"
-msgstr "``hu`` -- Hungarian"
+msgstr "``hu`` -- 匈牙利语"
 
 #: ../../usage/configuration.rst:656
 msgid "``id`` -- Indonesian"
-msgstr "``id`` -- Indonesian"
+msgstr "``id`` -- 印度尼西亚语"
 
 #: ../../usage/configuration.rst:657 ../../usage/configuration.rst:1214
 msgid "``it`` -- Italian"
-msgstr "``it`` -- Italian"
+msgstr "``it`` -- 意大利语"
 
 #: ../../usage/configuration.rst:658 ../../usage/configuration.rst:1215
 msgid "``ja`` -- Japanese"
-msgstr "``ja`` -- Japanese"
+msgstr "``ja`` -- 日语"
 
 #: ../../usage/configuration.rst:659
 msgid "``ko`` -- Korean"
-msgstr "``ko`` -- Korean"
+msgstr "``ko`` -- 朝鲜语"
 
 #: ../../usage/configuration.rst:660
 msgid "``lt`` -- Lithuanian"
-msgstr "``lt`` -- Lithuanian"
+msgstr "``lt`` -- 立陶宛语"
 
 #: ../../usage/configuration.rst:661
 msgid "``lv`` -- Latvian"
-msgstr "``lv`` -- Latvian"
+msgstr "``lv`` -- 拉脱维亚语"
 
 #: ../../usage/configuration.rst:662
 msgid "``mk`` -- Macedonian"
-msgstr "``mk`` -- Macedonian"
+msgstr "``mk`` -- 马其顿语"
 
 #: ../../usage/configuration.rst:663
 msgid "``nb_NO`` -- Norwegian Bokmal"
-msgstr "``nb_NO`` -- Norwegian Bokmal"
+msgstr "``nb_NO`` -- 挪威博克马尔语"
 
 #: ../../usage/configuration.rst:664
 msgid "``ne`` -- Nepali"
-msgstr "``ne`` -- Nepali"
+msgstr "``ne`` -- 尼泊尔语"
 
 #: ../../usage/configuration.rst:665 ../../usage/configuration.rst:1208
 msgid "``nl`` -- Dutch"
-msgstr "``nl`` -- Dutch"
+msgstr "``nl`` -- 荷兰语"
 
 #: ../../usage/configuration.rst:666
 msgid "``pl`` -- Polish"
-msgstr "``pl`` -- Polish"
+msgstr "``pl`` -- 波兰语"
 
 #: ../../usage/configuration.rst:667
 msgid "``pt_BR`` -- Brazilian Portuguese"
-msgstr "``pt_BR`` -- Brazilian Portuguese"
+msgstr "``pt_BR`` -- 巴西葡萄牙语"
 
 #: ../../usage/configuration.rst:668
 msgid "``pt_PT`` -- European Portuguese"
-msgstr "``pt_PT`` -- European Portuguese"
+msgstr "``pt_PT`` -- 欧洲葡萄牙语"
 
 #: ../../usage/configuration.rst:669 ../../usage/configuration.rst:1219
 msgid "``ru`` -- Russian"
-msgstr "``ru`` -- Russian"
+msgstr "``ru`` -- 俄语"
 
 #: ../../usage/configuration.rst:670
 msgid "``si`` -- Sinhala"
-msgstr "``si`` -- Sinhala"
+msgstr "``si`` -- 僧伽罗语"
 
 #: ../../usage/configuration.rst:671
 msgid "``sk`` -- Slovak"
-msgstr "``sk`` -- Slovak"
+msgstr "``sk`` -- 斯洛伐克语"
 
 #: ../../usage/configuration.rst:672
 msgid "``sl`` -- Slovenian"
-msgstr "``sl`` -- Slovenian"
+msgstr "``sl`` -- 斯洛文尼亚语"
 
 #: ../../usage/configuration.rst:673 ../../usage/configuration.rst:1221
 msgid "``sv`` -- Swedish"
-msgstr "``sv`` -- Swedish"
+msgstr "``sv`` -- 瑞典语"
 
 #: ../../usage/configuration.rst:674 ../../usage/configuration.rst:1222
 msgid "``tr`` -- Turkish"
-msgstr "``tr`` -- Turkish"
+msgstr "``tr`` -- 土耳其语"
 
 #: ../../usage/configuration.rst:675
 msgid "``uk_UA`` -- Ukrainian"
-msgstr "``uk_UA`` -- Ukrainian"
+msgstr "``uk_UA`` -- 乌克兰语"
 
 #: ../../usage/configuration.rst:676
 msgid "``vi`` -- Vietnamese"
-msgstr "``vi`` -- Vietnamese"
+msgstr "``vi`` -- 越南语"
 
 #: ../../usage/configuration.rst:677
 msgid "``zh_CN`` -- Simplified Chinese"
-msgstr "``zh_CN`` -- Simplified Chinese"
+msgstr "``zh_CN`` -- 简体中文"
 
 #: ../../usage/configuration.rst:678
 msgid "``zh_TW`` -- Traditional Chinese"
-msgstr "``zh_TW`` -- Traditional Chinese"
+msgstr "``zh_TW`` -- 繁体中文"
 
 #: ../../usage/configuration.rst:684
 msgid ""
 "Directories in which to search for additional message catalogs (see "
 ":confval:`language`), relative to the source directory.  The directories "
 "on this path are searched by the standard :mod:`gettext` module."
-msgstr ""
+msgstr "相对于源目录，在其中搜索其他消息目录（请参阅 :confval:`language` ）的目录。"
+"此路径上的目录由标准 :mod:`gettext` 模块搜索。"
 
 #: ../../usage/configuration.rst:688
 msgid ""

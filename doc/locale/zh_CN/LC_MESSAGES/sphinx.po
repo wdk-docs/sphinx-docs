@@ -122,7 +122,7 @@ msgstr "文档"
 
 #: ../../_templates/index.html:52
 msgid "First steps with Sphinx"
-msgstr "使用Sphinx第一部"
+msgstr "入门"
 
 #: ../../_templates/index.html:53
 msgid "overview of basic tasks"
@@ -130,7 +130,7 @@ msgstr "基本任务概述"
 
 #: ../../_templates/index.html:55
 msgid "Search page"
-msgstr "搜索页面"
+msgstr "搜索页"
 
 #: ../../_templates/index.html:56
 msgid "search the documentation"
@@ -210,7 +210,7 @@ msgid ""
 "    <a "
 "href=\"https://www.oreilly.co.jp/books/9784873116488/\">Sphinxをはじめよう /\n"
 "      Learning Sphinx</a>."
-msgstr "O'Reilly出版了一本关于狮身人面像的日本书:<a href=\"https://www.oreilly.co.jp/books/9784873116488/\">Sphinxをはじめよう/Learning Sphinx</a>"
+msgstr "O'Reilly出版了一本关于Sphinx的日语书:<a href=\"https://www.oreilly.co.jp/books/9784873116488/\">Sphinxをはじめよう/Learning Sphinx</a>"
 
 #: ../../_templates/index.html:103
 msgid "Hosting"

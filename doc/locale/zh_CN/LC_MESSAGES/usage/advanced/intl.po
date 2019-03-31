@@ -27,13 +27,13 @@ msgid ""
 " as navigation bars, Sphinx provides mechanisms facilitating *document* "
 "translations in itself.  See the :ref:`intl-options` for details on "
 "configuration."
-msgstr ""
+msgstr "作为Sphinx生成的消息(如导航栏)的翻译的补充，Sphinx提供了促进 *文档* 翻译的机制。有关配置的详细信息，请参阅 :ref:`intl-options` 。"
 
 #: ../../usage/advanced/intl.rst:15
 msgid ""
 "Workflow visualization of translations in Sphinx.  (The stick-figure is "
 "taken from an `XKCD comic <https://xkcd.com/779/>`_.)"
-msgstr ""
+msgstr "Sphinx中翻译的工作流可视化。 (棒图来源于 `XKCD漫画 <https://xkcd.com/779/>`_ 。)"
 
 #: ../../usage/advanced/intl.rst:22
 msgid "Sphinx internationalization details"
@@ -44,14 +44,14 @@ msgid ""
 "**gettext** [1]_ is an established standard for internationalization and "
 "localization.  It naively maps messages in a program to a translated "
 "string. Sphinx uses these facilities to translate whole documents."
-msgstr ""
+msgstr "**gettext** [1]_ 是国际化和本地化的既定标准。它天真地将程序中的消息映射到翻译的字符串。 Sphinx使用这些工具翻译整个文档。"
 
 #: ../../usage/advanced/intl.rst:28
 msgid ""
 "Initially project maintainers have to collect all translatable strings "
 "(also referred to as *messages*) to make them known to translators.  "
 "Sphinx extracts these through invocation of ``sphinx-build -b gettext``."
-msgstr ""
+msgstr "最初项目维护者必须收集所有可翻译的字符串(也称为 *消息* )，以使翻译人员知道它们。Sphinx通过调用 ``sphinx-build -b gettext`` 来提取这些。"
 
 #: ../../usage/advanced/intl.rst:32
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 "little bit of context for translators in free-text passages.  It is the "
 "maintainer's task to split up paragraphs which are too large as there is "
 "no sane automated way to do that."
-msgstr ""
+msgstr "doctree中的每个元素都将以单个消息结束，这会导致列表被平均分成不同的块，而大段落将保持原始文档中的粗粒度。这样可以为自由文本段落中的翻译人员提供无缝文档更新，同时仍然提供一些上下文。维护者的任务是分割太大的段落，因为没有合理的自动化方法。"
 
 #: ../../usage/advanced/intl.rst:40
 msgid ""
@@ -71,14 +71,14 @@ msgid ""
 "collection of ``.pot`` files in your output directory.  These are "
 "**catalog templates** and contain messages in your original language "
 "*only*."
-msgstr ""
+msgstr "在Sphinx成功运行 :class:`~sphinx.builders.gettext.MessageCatalogBu​​ilder` 后，您将在输出目录中找到 ``.pot`` 文件的集合。这些是 **目录模板** ，包含原始语言 *仅* 的邮件。"
 
 #: ../../usage/advanced/intl.rst:45
 msgid ""
 "They can be delivered to translators which will transform them to ``.po``"
 " files --- so called **message catalogs** --- containing a mapping from "
 "the original messages to foreign-language strings."
-msgstr ""
+msgstr "它们可以传递给翻译人员，翻译人员将把它们转换成 ``.po`` 文件---所谓的 **消息目录** ---包含从原始消息到外语字符串的映射。"
 
 #: ../../usage/advanced/intl.rst:49
 msgid ""
@@ -86,7 +86,7 @@ msgid ""
 " through :program:`msgfmt` for efficiency reasons.  If you make these "
 "files discoverable with :confval:`locale_dirs` for your "
 ":confval:`language`, Sphinx will pick them up automatically."
-msgstr ""
+msgstr "*gettext* 出于效率原因将它们编译成称为 **二进制目录的二进制格式** :program:`msgfmt` 。如果你使用 :confval:`locale_dirs` 为你的 :confval:`language` 发现这些文件，Sphinx会自动选择它们。"
 
 #: ../../usage/advanced/intl.rst:54
 msgid ""
@@ -94,24 +94,24 @@ msgid ""
 "The *gettext* builder will put its messages into ``usage.pot``.  Imagine "
 "you have Spanish translations [2]_ stored in ``usage.po`` --- for your "
 "builds to be translated you need to follow these instructions:"
-msgstr ""
+msgstr "例如:你的Sphinx项目中有一个文件 ``usage.rst``。 *gettext* 构建器将其消息放入 ``usage.pot`` 。想象一下，您有西班牙语翻译 [2]_ 存储在 ``usage.po`` ---为您的翻译版本需要按照以下说明操作:"
 
 #: ../../usage/advanced/intl.rst:59
 msgid ""
 "Compile your message catalog to a locale directory, say ``locale``, so it"
 " ends up in ``./locale/es/LC_MESSAGES/usage.mo`` in your source directory"
 " (where ``es`` is the language code for Spanish.) ::"
-msgstr ""
+msgstr "将您的消息目录编译到语言环境目录，比如说 ``locale`` ，所以它最终出现在源目录中的 ``./ locale/es/LC_MESSAGES/usage.mo`` 中(其中 ``es`` 是语言西班牙语代码。)::"
 
 #: ../../usage/advanced/intl.rst:65
 msgid "Set :confval:`locale_dirs` to ``[\"locale/\"]``."
-msgstr "Set :confval:`locale_dirs` to ``[\"locale/\"]``."
+msgstr "设置 :confval:`locale_dirs` 到 ``[\"locale/\"]``。"
 
 #: ../../usage/advanced/intl.rst:66
 msgid ""
 "Set :confval:`language` to ``es`` (also possible via :option:`-D <sphinx-"
 "build -D>`)."
-msgstr ""
+msgstr "设置 :confval:`language` 为 ``es`` (也可以通过 :option:`-D <sphinx-build -D>` )。"
 
 #: ../../usage/advanced/intl.rst:68
 msgid "Run your desired build."
@@ -129,22 +129,22 @@ msgstr "快速指南"
 msgid ""
 "`sphinx-intl`_ is a useful tool to work with Sphinx translation flow.  "
 "This section describe an easy way to translate with *sphinx-intl*."
-msgstr ""
+msgstr "`sphinx-intl`_ 是一个使用Sphinx翻译流程的有用工具。本节描述了使用 *sphinx-intl* 进行翻译的简便方法。"
 
 #: ../../usage/advanced/intl.rst:80
 msgid "Install `sphinx-intl`_."
-msgstr "安装 `sphinx-intl`_."
+msgstr "安装 `sphinx-intl`_ ."
 
 #: ../../usage/advanced/intl.rst:86
 msgid "Add configurations to ``conf.py``."
-msgstr "添加配置 ``conf.py``."
+msgstr "添加配置 ``conf.py`` ."
 
 #: ../../usage/advanced/intl.rst:93
 msgid ""
 "This case-study assumes that :confval:`locale_dirs` is set to ``locale/``"
 " and :confval:`gettext_compact` is set to ``False`` (the Sphinx document "
 "is already configured as such)."
-msgstr ""
+msgstr "本案例研究假设 :confval:`locale_dirs` 设置为 ``locale/`` 并且 :confval:`gettext_compact` 设置为 ``False`` (Sphinx文档已经配置为这样)。"
 
 #: ../../usage/advanced/intl.rst:97
 msgid "Extract translatable messages into pot files."
@@ -154,7 +154,7 @@ msgstr "将可翻译的消息提取到pot文件中。"
 msgid ""
 "The generated pot files will be placed in the ``_build/gettext`` "
 "directory."
-msgstr ""
+msgstr "生成的pot文件将放在 ``_build/gettext`` 目录中。"
 
 #: ../../usage/advanced/intl.rst:105
 msgid "Generate po files."
@@ -168,7 +168,7 @@ msgstr "我们将使用上面步骤中生成的pot文件。"
 msgid ""
 "Once completed, the generated po files will be placed in the below "
 "directories:"
-msgstr ""
+msgstr "完成后，生成的po文件将放在以下目录中:"
 
 #: ../../usage/advanced/intl.rst:116
 msgid "``./locale/de/LC_MESSAGES/``"
@@ -180,26 +180,26 @@ msgstr "``./locale/ja/LC_MESSAGES/``"
 
 #: ../../usage/advanced/intl.rst:119
 msgid "Translate po files."
-msgstr "Translate po files."
+msgstr "翻译po文件。"
 
 #: ../../usage/advanced/intl.rst:121
 msgid ""
 "AS noted above, these are located in the ``./locale/<lang>/LC_MESSAGES`` "
 "directory.  An example of one such file, from Sphinx, ``builders.po``, is"
 " given below."
-msgstr ""
+msgstr "如上所述，它们位于 ``./locale/<lang>/LC_MESSAGES`` 目录中。下面给出了来自Sphinx，``builders.po`` 的一个这样的文件的例子。"
 
 #: ../../usage/advanced/intl.rst:132
 msgid ""
 "Another case, msgid is multi-line text and contains reStructuredText "
 "syntax:"
-msgstr ""
+msgstr "另一种情况，msgid是多行文本，包含reStructuredText语法:"
 
 #: ../../usage/advanced/intl.rst:145
 msgid ""
 "Please be careful not to break reST notation.  Most po-editors will help "
 "you with that."
-msgstr ""
+msgstr "请注意不要破坏reST表示法。大多数编辑都会帮助你。"
 
 #: ../../usage/advanced/intl.rst:148
 msgid "Build translated document."
@@ -209,7 +209,7 @@ msgstr "构建翻译文档。"
 msgid ""
 "You need a :confval:`language` parameter in ``conf.py`` or you may also "
 "specify the parameter on the command line."
-msgstr ""
+msgstr "你需要在 ``conf.py`` 中使用 :confval:`language` 参数，或者你也可以在命令行中指定参数。"
 
 #: ../../usage/advanced/intl.rst:153
 msgid "For for BSD/GNU make, run:"
@@ -217,7 +217,7 @@ msgstr "对于BSD/GNU make，运行:"
 
 #: ../../usage/advanced/intl.rst:159
 msgid "For Windows :command:`cmd.exe`, run:"
-msgstr "For Windows :command:`cmd.exe`, run:"
+msgstr "对于Windows :command:`cmd.exe`，运行:"
 
 #: ../../usage/advanced/intl.rst:166
 msgid "For PowerShell, run:"
@@ -227,19 +227,19 @@ msgstr "对于PowerShell，请运行:"
 msgid ""
 "Congratulations! You got the translated documentation in the "
 "``_build/html`` directory."
-msgstr ""
+msgstr "恭喜！您在 ``_build/html`` 目录中获得了翻译文档。"
 
 #: ../../usage/advanced/intl.rst:178
 msgid ""
 ":program:`sphinx-build` that is invoked by make command will build po "
 "files into mo files."
-msgstr ""
+msgstr "由make命令调用的 :program:`sphinx-build` 会将po文件构建到mo文件中。"
 
 #: ../../usage/advanced/intl.rst:181
 msgid ""
 "If you are using 1.2.x or earlier, please invoke :command:`sphinx-intl "
 "build` command before :command:`make` command."
-msgstr ""
+msgstr "如果您使用的是1.2.x或更早版本，请在之前调用 :command:`sphinx-intl build` 命令 :command:`make` 命令。"
 
 #: ../../usage/advanced/intl.rst:185
 msgid "Translating"
@@ -255,7 +255,7 @@ msgid ""
 "and to apply differences to translated po files.  In order to apply the "
 "updates from a pot file to the po file, use the :command:`sphinx-intl "
 "update` command."
-msgstr ""
+msgstr "如果文档已更新，则需要生成更新的pot文件并将差异应用于已翻译的po文件。要将更新从pot文件应用到po文件，请使用 :command:`sphinx-intl update` 命令。"
 
 #: ../../usage/advanced/intl.rst:200
 msgid "Using Transifex service for team translation"
@@ -266,15 +266,15 @@ msgid ""
 "Transifex_ is one of several services that allow collaborative "
 "translation via a web interface.  It has a nifty Python-based command "
 "line client that makes it easy to fetch and push translations."
-msgstr ""
+msgstr "Transifex_ 是允许通过Web界面进行协作翻译的多种服务之一。它有一个漂亮的基于Python的命令行客户端，可以轻松获取和推送翻译。"
 
 #: ../../usage/advanced/intl.rst:209
 msgid "Install `transifex-client`_."
-msgstr "Install `transifex-client`_."
+msgstr "安装 `transifex-client`_."
 
 #: ../../usage/advanced/intl.rst:211
 msgid "You need :command:`tx` command to upload resources (pot files)."
-msgstr "你需要：command：`tx`命令来上传资源（pot文件）。"
+msgstr "你需要 :command:`tx` 命令来上传资源(pot文件)。"
 
 #: ../../usage/advanced/intl.rst:217
 msgid "`Transifex Client documentation`_"
@@ -289,7 +289,7 @@ msgid ""
 "Currently, transifex does not allow for a translation project to have "
 "more than one version of the document, so you'd better include a version "
 "number in your project name."
-msgstr ""
+msgstr "目前，transifex不允许翻译项目拥有多个版本的文档，因此您最好在项目名称中包含版本号。"
 
 #: ../../usage/advanced/intl.rst:225
 msgid "For example:"
@@ -319,7 +319,7 @@ msgstr "为 :command:`tx` 命令创建配置文件."
 msgid ""
 "This process will create ``.tx/config`` in the current directory, as well"
 " as a ``~/.transifexrc`` file that includes auth information."
-msgstr ""
+msgstr "这个过程将在当前目录中创建 ``.tx/config`` ，以及包含auth信息的 ``〜/.transifexrc`` 文件。"
 
 #: ../../usage/advanced/intl.rst:246
 msgid "Upload pot files to transifex service."
@@ -345,11 +345,11 @@ msgstr "拉出翻译的po文件并制作翻译的HTML。"
 msgid ""
 "Get translated catalogs and build mo files. For example, to build mo "
 "files for German (de):"
-msgstr ""
+msgstr "获取翻译的目录并构建mo文件。例如，要为德语(de)构建mo文件:"
 
 #: ../../usage/advanced/intl.rst:285
 msgid "Invoke :command:`make html` (for BSD/GNU make):"
-msgstr "Invoke :command:`make html` (for BSD/GNU make):"
+msgstr "Invoke :command:`make html` (对于BSD/GNU make):"
 
 #: ../../usage/advanced/intl.rst:291
 msgid "That's all!"
@@ -364,13 +364,13 @@ msgid ""
 "If you want to push all language's po files, you can be done by using "
 ":command:`tx push -t` command.  Watch out! This operation overwrites "
 "translations in transifex."
-msgstr ""
+msgstr "如果要推送所有语言的po文件，可以使用 :command:`tx push -t` 命令完成。小心！此操作会覆盖transifex中的翻译。"
 
 #: ../../usage/advanced/intl.rst:299
 msgid ""
 "In other words, if you have updated each in the service and local po "
 "files, it would take much time and effort to integrate them."
-msgstr ""
+msgstr "换句话说，如果您更新了服务和本地po文件中的每一个，则需要花费很多时间和精力来集成它们。"
 
 #: ../../usage/advanced/intl.rst:304
 msgid "Contributing to Sphinx reference translation"
@@ -380,19 +380,19 @@ msgstr "有助于Sphinx参考翻译"
 msgid ""
 "The recommended way for new contributors to translate Sphinx reference is"
 " to join the translation team on Transifex."
-msgstr ""
+msgstr "新贡献者翻译Sphinx参考的推荐方法是加入Transifex的翻译团队。"
 
 #: ../../usage/advanced/intl.rst:309
 msgid "There is `sphinx translation page`_ for Sphinx (master) documentation."
-msgstr "有一个用于Sphinx（主）文档的 `sphinx translation page`_ 。"
+msgstr "有一个用于Sphinx(主)文档的  `sphinx translation page`_  。"
 
 #: ../../usage/advanced/intl.rst:311
 msgid "Login to transifex_ service."
-msgstr "登录transifex_服务。"
+msgstr "登录 transifex_ 服务。"
 
 #: ../../usage/advanced/intl.rst:312
 msgid "Go to `sphinx translation page`_."
-msgstr "去`sphinx translation page`_."
+msgstr "去 `sphinx translation page`_ ."
 
 #: ../../usage/advanced/intl.rst:313
 msgid "Click ``Request language`` and fill form."
@@ -404,7 +404,7 @@ msgstr "等待transifex sphinx翻译维护者的接受。"
 
 #: ../../usage/advanced/intl.rst:315
 msgid "(After acceptance) Translate on transifex."
-msgstr "（接受后）翻译transifex。"
+msgstr "(接受后)翻译transifex。"
 
 #: ../../usage/advanced/intl.rst:318
 msgid "Footnotes"
@@ -415,7 +415,7 @@ msgid ""
 "See the `GNU gettext utilities "
 "<https://www.gnu.org/software/gettext/manual/gettext.html#Introduction>`_"
 " for details on that software suite."
-msgstr ""
+msgstr "有关该软件套件的详细信息，请参阅 `GNU gettext实用程序 <https://www.gnu.org/software/gettext/manual/gettext.html#Introduction>`_ 。"
 
 #: ../../usage/advanced/intl.rst:322
 msgid "Because nobody expects the Spanish Inquisition!"
