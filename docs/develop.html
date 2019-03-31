@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sphinx开发 &#8212; Sphinx 2.1.0+/a5409da 文档</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/a5409da 文档 中搜索"
+          href="_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/develop.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="usage/installation.html">安装</a></li>
+    <li><a href="contents.html">文档</a></li>
+    <li><a href="#">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="index.html">
+      <img src="_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Sphinx开发</a></li>
+<li><a class="reference internal" href="#extensions">扩展</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/develop.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sphinx-development">
+<h1>Sphinx开发<a class="headerlink" href="#sphinx-development" title="永久链接至标题">¶</a></h1>
+<p>Sphinx由一群志愿者维护。我们重视每一个贡献！</p>
+<ul class="simple">
+<li><p>该代码可以在Git存储库中找到，网址为https://github.com/sphinx-doc/sphinx/。</p></li>
+<li><p>应该在 <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues">跟踪器</a> 中提出问题和功能请求.</p></li>
+<li><p>用于开发的邮件列表位于 <a class="reference external" href="https://groups.google.com/forum/#!forum/sphinx-dev">Google Groups</a> .</p></li>
+<li><p><a class="reference external" href="https://freenode.net/">freenode</a> 上还有 #sphinx-doc IRC频道 .</p></li>
+</ul>
+<p>有关我们的开发过程和方法的更多信息，请参阅 <a class="reference internal" href="devguide.html"><span class="doc">Sphinx开发人员指南</span></a>.</p>
+</div>
+<div class="section" id="extensions">
+<h1>扩展<a class="headerlink" href="#extensions" title="永久链接至标题">¶</a></h1>
+<p>要了解如何编写自己的扩展，请参阅 <a class="reference internal" href="extdev/index.html#dev-extensions"><span class="std std-ref">为Sphinx开发扩展</span></a>。</p>
+<p><a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib/">sphinx-contrib</a> 知识库包含许多贡献的扩展。其中一些在PyPI上有自己的版本，其他一些你可以从结帐安装。</p>
+<p>这是该存储库中当前贡献的扩展列表:</p>
+<ul class="simple">
+<li><p>aafig:使用 <a class="reference external" href="https://launchpad.net/aafigure">aafigure</a> 渲染嵌入式ASCII艺术作为漂亮的图像</p></li>
+<li><p>actdiag:使用 <a class="reference external" href="http://blockdiag.com/en/">actdiag</a> 嵌入活动图</p></li>
+<li><p>adadomain: Ada支持的扩展(需要Sphinx 1.0)</p></li>
+<li><p>ansi: 解析文档中的ANSI颜色序列</p></li>
+<li><p>argdoc: 自动生成命令行参数，描述和帮助文本的文档</p></li>
+<li><p>astah: 使用astah嵌入图表</p></li>
+<li><p>autoanysrc: 从任何源文件中收集reST文档</p></li>
+<li><p>autorun: 在 <code class="docutils literal notranslate"><span class="pre">runblock</span></code> 指令中执行代码</p></li>
+<li><p>blockdiag: 使用 <a class="reference external" href="http://blockdiag.com/en/">blockdiag</a> 嵌入框图</p></li>
+<li><p>cacoo: 从Cacoo嵌入图表</p></li>
+<li><p>cf3domain: CFEngine 3政策的域</p></li>
+<li><p>cheader: Sphinx的内置C域缺少 c:header 指令</p></li>
+<li><p>cheeseshop: 轻松链接到PyPI包</p></li>
+<li><p>clearquest: 从 <a class="reference external" href="https://www.ibm.com/us-en/marketplace/rational-clearquest">ClearQuest</a> 查询创建表</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org/klorenz/sphinxcontrib-cmakedomain">cmakedomain</a>: <a class="reference external" href="https://cmake.org">CMake</a> 的域</p></li>
+<li><p>coffeedomain: (自动)记录CoffeeScript源代码的域</p></li>
+<li><p>context: ConTeXt的构建器</p></li>
+<li><p>disqus: 在文档中嵌入Disqus评论</p></li>
+<li><p>documentedlist: 将Python列表转换为生成的文档中的表</p></li>
+<li><p>doxylink: 链接到外部Doxygen生成的HTML文档</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org/klorenz/sphinxcontrib-domaintools">domaintools</a>: 一个轻松创建域的工具</p></li>
+<li><p>email: 混淆电子邮件地址</p></li>
+<li><p>erlangdomain: Erlang支持的扩展(需要Sphinx 1.0)</p></li>
+<li><p>exceltable: 使用 <a class="reference external" href="https://pythonhosted.org/sphinxcontrib-exceltable/">exceltable</a> 将Excel电子表格嵌入到文档中</p></li>
+<li><p>feed: 用于从您的网站内容创建联合供稿和基于时间的概述的扩展程序</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org/klorenz/sphinxcontrib-findanything">findanything</a>: 一个扩展，用于在文档中添加Sublime Text-like findanything面板，以便在键入时查找页面，节和索引条目</p></li>
+<li><p>gnuplot: 使用 <a class="reference external" href="http://www.gnuplot.info/">gnuplot</a> 语言生成图像</p></li>
+<li><p>googleanalytics: 使用 <a class="reference external" href="https://www.google.com/analytics/">Google Analytics</a> 跟踪网络访问者统计信息</p></li>
+<li><p>googlechart: 使用 <a class="reference external" href="https://developers.google.com/chart/">Google Chart</a> 嵌入图表</p></li>
+<li><p>googlemaps: 使用 <a class="reference external" href="https://www.google.com/maps">谷歌地图</a> 嵌入地图</p></li>
+<li><p>httpdomain: 用于记录RESTful HTTP API的域</p></li>
+<li><p>hyphenator: 使用连 <a class="reference external" href="https://github.com/mnater/hyphenator">hyphenator</a> 的客户端HTML连字符</p></li>
+<li><p>imgur: 在文档中嵌入Imgur图像，相册和元数据</p></li>
+<li><p><a class="reference external" href="https://sphinxcontrib-inlinesyntaxhighlight.readthedocs.io/">inlinesyntaxhighlight</a>: 内联语法高亮显示</p></li>
+<li><p>lassodomain: 用于记录 <a class="reference external" href="http://www.lassosoft.com/">Lasso</a> 源代码的域</p></li>
+<li><p>libreoffice:包含LibreOffice支持的任何绘图的扩展(例如odg，vsd，…)</p></li>
+<li><p>lilypond: 从 <a class="reference external" href="http://lilypond.org/">Lilypond</a> 以PNG格式插入音乐脚本的扩展程序</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org/klorenz/sphinxcontrib-makedomain">makedomain</a>: <a class="reference external" href="https://www.gnu.org/software/make/">GNU Make</a> 的域</p></li>
+<li><p>matlabdomain: 文档 <a class="reference external" href="https://www.mathworks.com/products/matlab.html">MATLAB</a> 代码</p></li>
+<li><p>mockautodoc: 模拟进口</p></li>
+<li><p>mscgen: 嵌入mscgen格式的MSC(消息序列图)</p></li>
+<li><p>napoleon: 支持 <a class="reference external" href="https://google.github.io/styleguide/pyguide.html">Google style</a> 和 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a>  docstrings</p></li>
+<li><p>nicovideo: 嵌入来自nicovideo的视频</p></li>
+<li><p>nwdiag: 使用 <a class="reference external" href="http://blockdiag.com/en/">nwdiag</a> 嵌入网络图</p></li>
+<li><p>omegat: 支持与 <a class="reference external" href="https://omegat.org/">OmegaT</a> 协作的工具(需要Sphinx 1.1)</p></li>
+<li><p>osaka: 将标准日语文档转换为大阪方言(这是一个笑话扩展)</p></li>
+<li><p>paverutils: Sphinx与 <a class="reference external" href="https://paver.readthedocs.io/en/latest/">Paver</a> 的替代集成</p></li>
+<li><p>phpdomain: PHP支持的扩展</p></li>
+<li><p>plantuml: 使用 <a class="reference external" href="http://plantuml.com/">PlantUML</a> 嵌入UML图</p></li>
+<li><p>py_directive: 在 <code class="docutils literal notranslate"><span class="pre">py</span></code> 指令中执行python代码并返回一个数学节点</p></li>
+<li><p>rawfiles: 复制原始文件，如CNAME</p></li>
+<li><p>requirements: 在任何需要的地方声明需求(例如在测试文档字符串中)，标记状态并将它们收集在一个列表中</p></li>
+<li><p>restbuilder: reST(reStructuredText)文件的构建器</p></li>
+<li><p>rubydomain: Ruby支持的扩展(需要Sphinx 1.0)</p></li>
+<li><p>sadisplay: 显示SqlAlchemy模型 <a class="reference external" href="https://bitbucket.org/estin/sadisplay/wiki/Home">sadisplay</a></p></li>
+<li><p>sdedit: 使用快速序列图编辑器(<a class="reference external" href="http://sdedit.sourceforge.net/">sdedit</a>)扩展插入序列图</p></li>
+<li><p>seqdiag: 使用 <a class="reference external" href="http://blockdiag.com/en/">seqdiag</a> 嵌入序列图</p></li>
+<li><p>slide: 在 <a class="reference external" href="https://www.slideshare.net/">slideshare</a> 和其他网站上嵌入演示幻灯片</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org/klorenz/sphinxcontrib-swf">swf</a>: 嵌入flash文件</p></li>
+<li><p>sword: 从 <a class="reference external" href="https://www.crosswire.org/sword/">Sword</a> 插入圣经经文的扩展</p></li>
+<li><p>tikz: 使用 <a class="reference external" href="https://sourceforge.net/projects/pgf/">TikZ/PGF LaTeX package</a> 绘制图片</p></li>
+<li><p>traclinks: 从Sphinx中创建 <a class="reference external" href="https://trac.edgewall.org/wiki/TracLinks">TracLinks</a> 到 <a class="reference external" href="https://trac.edgewall.org/">Trac</a> 实例</p></li>
+<li><p>versioning: Sphinx扩展允许构建版本化文档以进行自托管</p></li>
+<li><p>whooshindex: whoosh的索引器扩展</p></li>
+<li><p>youtube: 从 <a class="reference external" href="https://www.youtube.com/">YouTube</a> 嵌入视频</p></li>
+<li><p>提供一个 <code class="docutils literal notranslate"><span class="pre">autointerface</span></code> 指令，用于使用 <a class="reference external" href="https://zopeinterface.readthedocs.io/en/latest/README.html">Zope interfaces</a></p></li>
+</ul>
+<p>在开始编写自己的扩展时，请参阅 <a class="reference internal" href="development/tutorials/index.html"><span class="doc">extension tutorials</span></a> 。</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a5409da 创建。
+    </div>
+  </body>
+</html>

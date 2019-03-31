@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Markdown &#8212; Sphinx 2.1.0+/a5409da 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/a5409da 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="配置" href="configuration.html" />
+    <link rel="prev" title="域" href="restructuredtext/domains.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/markdown.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="installation.html">安装</a></li>
+    <li><a href="../contents.html">文档</a></li>
+    <li><a href="../develop.html">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="configuration.html" title="配置"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="restructuredtext/domains.html" title="域"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Markdown</a><ul>
+<li><a class="reference internal" href="#configuration">配置</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="restructuredtext/domains.html"
+                        title="上一章">域</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="configuration.html"
+                        title="下一章">配置</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/usage/markdown.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="markdown">
+<span id="id1"></span><h1>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> 是一种轻量级标记语言，具有简单的纯文本格式语法。它存在于许多语法上不同的 <em>flavors</em> 。  为了支持基于Markdown的文档，Sphinx可以使用 <a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/index.html">recommonmark</a> 。recommonmark是一个Docutils桥接器，用于 <a class="reference external" href="https://github.com/rtfd/CommonMark-py">CommonMark-py</a> ，这是一个用于解析 <a class="reference external" href="https://commonmark.org/">CommonMark</a> Markdown风格的Python包。</p>
+<div class="section" id="configuration">
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<p>要配置Sphinx项目以获得Markdown支持，请执行以下操作:</p>
+<ol class="arabic">
+<li><p>安装Markdown解析器 <em>recommonmark</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">recommonmark</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>此处说明的配置需要6.5.0或更高版本的propmonmark。</p>
+</div>
+</li>
+<li><p>将 <em>recommonmark</em> 添加到 <a class="reference internal" href="configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">已配置的扩展名列表</span></code></a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;recommonmark&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.8 版更改: </span>版本1.8弃用，版本3.0删除了旧的 <em>recommonmark</em> 版本使用的 <code class="docutils literal notranslate"><span class="pre">source_parsers</span></code> 配置变量。</p>
+</div>
+</li>
+<li><p>如果要使用除 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 以外的扩展名的Markdown文件，请调整 <a class="reference internal" href="configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a> 变量。下面的示例配置Sphinx将所有扩展名为 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> 的文件解析为 Markdown:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>您可以进一步配置 <em>recommonmark</em> 以允许标准 <em>CommonMark</em> 不支持的自定义语法。 阅读 <a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/auto_structify.html">recommonmark documentation</a> 中的更多内容。</p></li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="configuration.html" title="配置"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="restructuredtext/domains.html" title="域"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a5409da 创建。
+    </div>
+  </body>
+</html>

@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>国际化 &#8212; Sphinx 2.1.0+/a5409da 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/a5409da 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Setuptools集成" href="setuptools.html" />
+    <link rel="prev" title="HTML" href="../theming.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/advanced/intl.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../installation.html">安装</a></li>
+    <li><a href="../../contents.html">文档</a></li>
+    <li><a href="../../develop.html">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="setuptools.html" title="Setuptools集成"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="../theming.html" title="HTML"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">国际化</a><ul>
+<li><a class="reference internal" href="#sphinx-internationalization-details">Sphinx国际化细节</a></li>
+<li><a class="reference internal" href="#translating-with-sphinx-intl">用sphinx-intl翻译</a><ul>
+<li><a class="reference internal" href="#quick-guide">快速指南</a></li>
+<li><a class="reference internal" href="#translating">翻译</a></li>
+<li><a class="reference internal" href="#update-your-po-files-by-new-pot-files">通过新的pot文件更新您的po文件</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-transifex-service-for-team-translation">使用Transifex服务进行团队翻译</a></li>
+<li><a class="reference internal" href="#contributing-to-sphinx-reference-translation">有助于Sphinx参考翻译</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="../theming.html"
+                        title="上一章">HTML</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="setuptools.html"
+                        title="下一章">Setuptools集成</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/usage/advanced/intl.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="internationalization">
+<span id="intl"></span><h1>国际化<a class="headerlink" href="#internationalization" title="永久链接至标题">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">1.1 新版功能.</span></p>
+</div>
+<p>作为Sphinx生成的消息(如导航栏)的翻译的补充，Sphinx提供了促进 <em>文档</em> 翻译的机制。有关配置的详细信息，请参阅 <a class="reference internal" href="../configuration.html#intl-options"><span class="std std-ref">国际化选项</span></a> 。</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/translation.png"><img alt="../../_images/translation.png" src="../../_images/translation.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Sphinx中翻译的工作流可视化。 (棒图来源于 <a class="reference external" href="https://xkcd.com/779/">XKCD漫画</a> 。)</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
+</div>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#sphinx-internationalization-details" id="id7">Sphinx国际化细节</a></p></li>
+<li><p><a class="reference internal" href="#translating-with-sphinx-intl" id="id8">用sphinx-intl翻译</a></p>
+<ul>
+<li><p><a class="reference internal" href="#quick-guide" id="id9">快速指南</a></p></li>
+<li><p><a class="reference internal" href="#translating" id="id10">翻译</a></p></li>
+<li><p><a class="reference internal" href="#update-your-po-files-by-new-pot-files" id="id11">通过新的pot文件更新您的po文件</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#using-transifex-service-for-team-translation" id="id12">使用Transifex服务进行团队翻译</a></p></li>
+<li><p><a class="reference internal" href="#contributing-to-sphinx-reference-translation" id="id13">有助于Sphinx参考翻译</a></p></li>
+</ul>
+</div>
+<div class="section" id="sphinx-internationalization-details">
+<h2><a class="toc-backref" href="#id7">Sphinx国际化细节</a><a class="headerlink" href="#sphinx-internationalization-details" title="永久链接至标题">¶</a></h2>
+<p><strong>gettext</strong> <a class="footnote-reference brackets" href="#id4" id="id2">1</a> 是国际化和本地化的既定标准。它天真地将程序中的消息映射到翻译的字符串。 Sphinx使用这些工具翻译整个文档。</p>
+<p>最初项目维护者必须收集所有可翻译的字符串(也称为 <em>消息</em> )，以使翻译人员知道它们。Sphinx通过调用 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">gettext</span></code> 来提取这些。</p>
+<p>doctree中的每个元素都将以单个消息结束，这会导致列表被平均分成不同的块，而大段落将保持原始文档中的粗粒度。这样可以为自由文本段落中的翻译人员提供无缝文档更新，同时仍然提供一些上下文。维护者的任务是分割太大的段落，因为没有合理的自动化方法。</p>
+<p>在Sphinx成功运行 <code class="xref py py-class docutils literal notranslate"><span class="pre">MessageCatalogBu​​ilder</span></code> 后，您将在输出目录中找到 <code class="docutils literal notranslate"><span class="pre">.pot</span></code> 文件的集合。这些是 <strong>目录模板</strong> ，包含原始语言 <em>仅</em> 的邮件。</p>
+<p>它们可以传递给翻译人员，翻译人员将把它们转换成 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件—所谓的 <strong>消息目录</strong> —包含从原始消息到外语字符串的映射。</p>
+<p><em>gettext</em> 出于效率原因将它们编译成称为 <strong>二进制目录的二进制格式</strong> <strong class="program">msgfmt</strong> 。如果你使用 <a class="reference internal" href="../configuration.html#confval-locale_dirs"><code class="xref std std-confval docutils literal notranslate"><span class="pre">locale_dirs</span></code></a> 为你的 <a class="reference internal" href="../configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 发现这些文件，Sphinx会自动选择它们。</p>
+<p>例如:你的Sphinx项目中有一个文件 <code class="docutils literal notranslate"><span class="pre">usage.rst</span></code>。 <em>gettext</em> 构建器将其消息放入 <code class="docutils literal notranslate"><span class="pre">usage.pot</span></code> 。想象一下，您有西班牙语翻译 <a class="footnote-reference brackets" href="#id5" id="id3">2</a> 存储在 <code class="docutils literal notranslate"><span class="pre">usage.po</span></code> —为您的翻译版本需要按照以下说明操作:</p>
+<ul>
+<li><p>将您的消息目录编译到语言环境目录，比如说 <code class="docutils literal notranslate"><span class="pre">locale</span></code> ，所以它最终出现在源目录中的 <code class="docutils literal notranslate"><span class="pre">./</span> <span class="pre">locale/es/LC_MESSAGES/usage.mo</span></code> 中(其中 <code class="docutils literal notranslate"><span class="pre">es</span></code> 是语言西班牙语代码。):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">msgfmt</span> <span class="s2">&quot;usage.po&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="s2">&quot;locale/es/LC_MESSAGES/usage.mo&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>设置 <a class="reference internal" href="../configuration.html#confval-locale_dirs"><code class="xref std std-confval docutils literal notranslate"><span class="pre">locale_dirs</span></code></a> 到 <code class="docutils literal notranslate"><span class="pre">[&quot;locale/&quot;]</span></code>。</p></li>
+<li><p>设置 <a class="reference internal" href="../configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 为 <code class="docutils literal notranslate"><span class="pre">es</span></code> (也可以通过 <a class="reference internal" href="../../man/sphinx-build.html#id2"><code class="xref std std-option docutils literal notranslate"><span class="pre">-D</span></code></a> )。</p></li>
+<li><p>运行您想要的构建。</p></li>
+</ul>
+</div>
+<div class="section" id="translating-with-sphinx-intl">
+<h2><a class="toc-backref" href="#id8">用sphinx-intl翻译</a><a class="headerlink" href="#translating-with-sphinx-intl" title="永久链接至标题">¶</a></h2>
+<div class="section" id="quick-guide">
+<h3><a class="toc-backref" href="#id9">快速指南</a><a class="headerlink" href="#quick-guide" title="永久链接至标题">¶</a></h3>
+<p><a class="reference external" href="https://pypi.org/project/sphinx-intl/">sphinx-intl</a> 是一个使用Sphinx翻译流程的有用工具。本节描述了使用 <em>sphinx-intl</em> 进行翻译的简便方法。</p>
+<ol class="arabic">
+<li><p>安装 <a class="reference external" href="https://pypi.org/project/sphinx-intl/">sphinx-intl</a> .</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install sphinx-intl
+</pre></div>
+</div>
+</li>
+<li><p>添加配置 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> .</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">locale_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;locale/&#39;</span><span class="p">]</span>   <span class="c1"># path is example but recommended.</span>
+<span class="n">gettext_compact</span> <span class="o">=</span> <span class="kc">False</span>     <span class="c1"># optional.</span>
+</pre></div>
+</div>
+<p>本案例研究假设 <a class="reference internal" href="../configuration.html#confval-locale_dirs"><code class="xref std std-confval docutils literal notranslate"><span class="pre">locale_dirs</span></code></a> 设置为 <code class="docutils literal notranslate"><span class="pre">locale/</span></code> 并且 <a class="reference internal" href="../configuration.html#confval-gettext_compact"><code class="xref std std-confval docutils literal notranslate"><span class="pre">gettext_compact</span></code></a> 设置为 <code class="docutils literal notranslate"><span class="pre">False</span></code> (Sphinx文档已经配置为这样)。</p>
+</li>
+<li><p>将可翻译的消息提取到pot文件中。</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make gettext
+</pre></div>
+</div>
+<p>生成的pot文件将放在 <code class="docutils literal notranslate"><span class="pre">_build/gettext</span></code> 目录中。</p>
+</li>
+<li><p>生成po文件。</p>
+<p>我们将使用上面步骤中生成的pot文件。</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-intl update -p _build/gettext -l de -l ja
+</pre></div>
+</div>
+<p>完成后，生成的po文件将放在以下目录中:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./locale/de/LC_MESSAGES/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./locale/ja/LC_MESSAGES/</span></code></p></li>
+</ul>
+</li>
+<li><p>翻译po文件。</p>
+<p>如上所述，它们位于 <code class="docutils literal notranslate"><span class="pre">./locale/&lt;lang&gt;/LC_MESSAGES</span></code> 目录中。下面给出了来自Sphinx，<code class="docutils literal notranslate"><span class="pre">builders.po</span></code> 的一个这样的文件的例子。</p>
+<div class="highlight-po notranslate"><div class="highlight"><pre><span></span><span class="c1"># a5600c3d2e3d48fc8c261ea0284db79b</span>
+<span class="kd">#: ../../builders.rst:4</span>
+<span class="nv">msgid</span> <span class="s">&quot;Available builders&quot;</span>
+<span class="nv">msgstr</span> <span class="s">&quot;&lt;FILL HERE BY TARGET LANGUAGE&gt;&quot;</span>
+</pre></div>
+</div>
+<p>另一种情况，msgid是多行文本，包含reStructuredText语法:</p>
+<div class="highlight-po notranslate"><div class="highlight"><pre><span></span><span class="c1"># 302558364e1d41c69b3277277e34b184</span>
+<span class="kd">#: ../../builders.rst:9</span>
+<span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+<span class="s">&quot;These are the built-in Sphinx builders. More builders can be added by &quot;</span>
+<span class="s">&quot;:ref:`extensions &lt;extensions&gt;`.&quot;</span>
+<span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+<span class="s">&quot;FILL HERE BY TARGET LANGUAGE FILL HERE BY TARGET LANGUAGE FILL HERE &quot;</span>
+<span class="s">&quot;BY TARGET LANGUAGE :ref:`EXTENSIONS &lt;extensions&gt;` FILL HERE.&quot;</span>
+</pre></div>
+</div>
+<p>请注意不要破坏reST表示法。大多数编辑都会帮助你。</p>
+</li>
+<li><p>构建翻译文档。</p>
+<p>你需要在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中使用 <a class="reference internal" href="../configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 参数，或者你也可以在命令行中指定参数。</p>
+<p>对于BSD/GNU make，运行:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make -e <span class="nv">SPHINXOPTS</span><span class="o">=</span><span class="s2">&quot;-D language=&#39;de&#39;&quot;</span> html
+</pre></div>
+</div>
+<p>对于Windows <strong class="command">cmd.exe</strong>，运行:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span> <span class="nb">set</span> <span class="nv">SPHINXOPTS</span><span class="o">=</span>-D <span class="nv">language</span><span class="o">=</span>de
+<span class="gp">&gt;</span> .<span class="se">\m</span>ake.bat html
+</pre></div>
+</div>
+<p>对于PowerShell，请运行:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span> Set-Item env:SPHINXOPTS <span class="s2">&quot;-D language=de&quot;</span>
+<span class="gp">&gt;</span> .<span class="se">\m</span>ake.bat html
+</pre></div>
+</div>
+</li>
+</ol>
+<p>恭喜！您在 <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 目录中获得了翻译文档。</p>
+<div class="versionadded">
+<p><span class="versionmodified added">1.3 新版功能: </span>由make命令调用的 <strong class="program">sphinx-build</strong> 会将po文件构建到mo文件中。</p>
+<p>如果您使用的是1.2.x或更早版本，请在之前调用 <strong class="command">sphinx-intl build</strong> 命令 <strong class="command">make</strong> 命令。</p>
+</div>
+</div>
+<div class="section" id="translating">
+<h3><a class="toc-backref" href="#id10">翻译</a><a class="headerlink" href="#translating" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="update-your-po-files-by-new-pot-files">
+<h3><a class="toc-backref" href="#id11">通过新的pot文件更新您的po文件</a><a class="headerlink" href="#update-your-po-files-by-new-pot-files" title="永久链接至标题">¶</a></h3>
+<p>如果文档已更新，则需要生成更新的pot文件并将差异应用于已翻译的po文件。要将更新从pot文件应用到po文件，请使用 <strong class="command">sphinx-intl update</strong> 命令。</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-intl update -p _build/locale
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-transifex-service-for-team-translation">
+<h2><a class="toc-backref" href="#id12">使用Transifex服务进行团队翻译</a><a class="headerlink" href="#using-transifex-service-for-team-translation" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://www.transifex.com/">Transifex</a> 是允许通过Web界面进行协作翻译的多种服务之一。它有一个漂亮的基于Python的命令行客户端，可以轻松获取和推送翻译。</p>
+<ol class="arabic">
+<li><p>安装 <a class="reference external" href="https://pypi.org/project/transifex-client/">transifex-client</a>.</p>
+<p>你需要 <strong class="command">tx</strong> 命令来上传资源(pot文件)。</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install transifex-client
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p><a class="reference external" href="https://docs.transifex.com/client/introduction/">Transifex Client documentation</a></p>
+</div>
+</li>
+<li><p>创建 <a class="reference external" href="https://www.transifex.com/">transifex</a> 帐户并为您的文档创建新项目。</p>
+<p>目前，transifex不允许翻译项目拥有多个版本的文档，因此您最好在项目名称中包含版本号。</p>
+<p>例如:</p>
+<dl class="field-list simple">
+<dt class="field-odd">项目ID</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">sphinx-document-test_1_0</span></code></p>
+</dd>
+<dt class="field-even">项目网址</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">https://www.transifex.com/projects/p/sphinx-document-test_1_0/</span></code></p>
+</dd>
+</dl>
+</li>
+<li><p>为 <strong class="command">tx</strong> 命令创建配置文件.</p>
+<p>这个过程将在当前目录中创建 <code class="docutils literal notranslate"><span class="pre">.tx/config</span></code> ，以及包含auth信息的 <code class="docutils literal notranslate"><span class="pre">〜/.transifexrc</span></code> 文件。</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tx init
+<span class="go">Creating .tx folder...</span>
+<span class="go">Transifex instance [https://www.transifex.com]:</span>
+<span class="go">...</span>
+<span class="go">Please enter your transifex username: &lt;transifex-username&gt;</span>
+<span class="go">Password: &lt;transifex-password&gt;</span>
+<span class="go">...</span>
+<span class="go">Done.</span>
+</pre></div>
+</div>
+</li>
+<li><p>将pot文件上传到transifex服务。</p>
+<p>将pot文件注册到 <code class="docutils literal notranslate"><span class="pre">.tx/config</span></code> 文件:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> /your/document/root
+<span class="gp">$</span> sphinx-intl update-txconfig-resources --pot-dir _build/locale <span class="se">\</span>
+  --transifex-project-name sphinx-document-test_1_0
+</pre></div>
+</div>
+<p>并上传pot文件:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tx push -s
+<span class="go">Pushing translations for resource sphinx-document-test_1_0.builders:</span>
+<span class="go">Pushing source file (locale/pot/builders.pot)</span>
+<span class="go">Resource does not exist.  Creating...</span>
+<span class="go">...</span>
+<span class="go">Done.</span>
+</pre></div>
+</div>
+</li>
+<li><p>转发transifex的翻译。</p>
+</li>
+<li><p>拉出翻译的po文件并制作翻译的HTML。</p>
+<p>获取翻译的目录并构建mo文件。例如，要为德语(de)构建mo文件:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> /your/document/root
+<span class="gp">$</span> tx pull -l de
+<span class="go">Pulling translations for resource sphinx-document-test_1_0.builders (...)</span>
+<span class="go"> -&gt; de: locale/de/LC_MESSAGES/builders.po</span>
+<span class="go">...</span>
+<span class="go">Done.</span>
+</pre></div>
+</div>
+<p>Invoke <strong class="command">make html</strong> (对于BSD/GNU make):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make -e <span class="nv">SPHINXOPTS</span><span class="o">=</span><span class="s2">&quot;-D language=&#39;de&#39;&quot;</span> html
+</pre></div>
+</div>
+</li>
+</ol>
+<p>就这样！</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>在本地和Transifex上进行翻译</p>
+<p>如果要推送所有语言的po文件，可以使用 <strong class="command">tx push -t</strong> 命令完成。小心！此操作会覆盖transifex中的翻译。</p>
+<p>换句话说，如果您更新了服务和本地po文件中的每一个，则需要花费很多时间和精力来集成它们。</p>
+</div>
+</div>
+<div class="section" id="contributing-to-sphinx-reference-translation">
+<h2><a class="toc-backref" href="#id13">有助于Sphinx参考翻译</a><a class="headerlink" href="#contributing-to-sphinx-reference-translation" title="永久链接至标题">¶</a></h2>
+<p>新贡献者翻译Sphinx参考的推荐方法是加入Transifex的翻译团队。</p>
+<p>有一个用于Sphinx(主)文档的  <a class="reference external" href="https://www.transifex.com/sphinx-doc/sphinx-doc/">sphinx translation page</a>  。</p>
+<ol class="arabic simple">
+<li><p>登录 <a class="reference external" href="https://www.transifex.com/">transifex</a> 服务。</p></li>
+<li><p>去 <a class="reference external" href="https://www.transifex.com/sphinx-doc/sphinx-doc/">sphinx translation page</a> .</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">Request</span> <span class="pre">language</span></code> and fill form.</p></li>
+<li><p>等待transifex sphinx翻译维护者的接受。</p></li>
+<li><p>(接受后)翻译transifex。</p></li>
+</ol>
+<p class="rubric">脚注</p>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>有关该软件套件的详细信息，请参阅 <a class="reference external" href="https://www.gnu.org/software/gettext/manual/gettext.html#Introduction">GNU gettext实用程序</a> 。</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>因为没有人期待西班牙宗教裁判所！</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="setuptools.html" title="Setuptools集成"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="../theming.html" title="HTML"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a5409da 创建。
+    </div>
+  </body>
+</html>

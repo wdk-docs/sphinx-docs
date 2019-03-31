@@ -1,0 +1,5 @@
+<map id="inheritanceec46a4ed0d" name="inheritanceec46a4ed0d">
+<area shape="rect" id="node1" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" target="_top" title="Base class for reStructuredText directives." alt="" coords="5,5,79,29"/>
+<area shape="rect" id="node3" href="../../extdev/utils.html#sphinx.util.docutils.SphinxDirective" target="_top" title="A base class for Sphinx directives." alt="" coords="127,5,240,29"/>
+<area shape="rect" id="node2" title="Run when the inheritance_diagram directive is first encountered." alt="" coords="288,5,426,29"/>
+</map>

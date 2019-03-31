@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>介绍 &#8212; Sphinx 2.1.0+/a5409da 文档</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/a5409da 文档 中搜索"
+          href="_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="安装" href="usage/installation.html" />
+    <link rel="prev" title="Sphinx文档内容" href="contents.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/intro.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="usage/installation.html">安装</a></li>
+    <li><a href="contents.html">文档</a></li>
+    <li><a href="develop.html">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="index.html">
+      <img src="_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="usage/installation.html" title="安装"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="contents.html" title="Sphinx文档内容"
+             accesskey="P">上一页</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">介绍</a><ul>
+<li><a class="reference internal" href="#conversion-from-other-systems">从其他系统转换</a></li>
+<li><a class="reference internal" href="#use-with-other-systems">与其他系统一起使用</a></li>
+<li><a class="reference internal" href="#prerequisites">先决条件</a></li>
+<li><a class="reference internal" href="#usage">用法</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="contents.html"
+                        title="上一章">Sphinx文档内容</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="usage/installation.html"
+                        title="下一章">安装</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/intro.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1>介绍<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h1>
+<p>这是Sphinx文档构建器的文档。 Sphinx是一个工具，它将一组 <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> 源文件转换为各种输出格式，自动生成交叉引用，索引等。 也就是说，如果你有一个目录包含一堆reST格式的文档(也可能是那里的docs子目录)，Sphinx可以生成一个组织良好的HTML文件排列(在其他目录中)，以便于浏览和导航。但是从相同的来源，它也可以使用LaTeX生成PDF文件。</p>
+<p>重点是手写文档，而不是自动生成的API文档。 虽然也支持这种文档(可以与手写内容自由混合)，如果你需要纯API文档，请查看 <a class="reference external" href="http://epydoc.sourceforge.net/">Epydoc</a> ，它也理解reST。</p>
+<p>对于编写文档的一个伟大的”介绍” – 一如既往，请参阅Eric Holscher编写的 <a class="reference external" href="https://write-the-docs.readthedocs.io/">编写文档</a> 。</p>
+<div class="section" id="conversion-from-other-systems">
+<h2>从其他系统转换<a class="headerlink" href="#conversion-from-other-systems" title="永久链接至标题">¶</a></h2>
+<p>本节旨在为那些想要从其他文档系统迁移到 reStructuredText/Sphinx 的人收集有用的提示。</p>
+<ul class="simple">
+<li><p>Gerard Flanagan编写了一个脚本，将纯HTML转换为reST;它可以在 <a class="reference external" href="https://pypi.org/project/html2rest/">Python包索引</a> 找到。</p></li>
+<li><p>为了将旧的Python文档转换为Sphinx，编写了一个转换器，可以在 <a class="reference external" href="https://svn.python.org/projects/doctools/converter/">Python SVN存储库</a> 中找到。它包含将Python-doc样式的LaTeX标记转换为Sphinx reST的通用代码。</p></li>
+<li><p>Marcin Wojdyr编写了一个脚本，将Docbook转换为使用Sphinx标记的reST; 它位于 <a class="reference external" href="https://github.com/wojdyr/db2rst">GitHub</a> 。</p></li>
+<li><p>Christophe de Vienne编写了一个工具，用于将Open/LibreOffice文档转换为Sphinx: <a class="reference external" href="https://pypi.org/project/odt2sphinx/">odt2sphinx</a> 。</p></li>
+<li><p>要转换不同的标记，<a class="reference external" href="https://pandoc.org/">Pandoc</a> 是一个非常有用的工具。</p></li>
+</ul>
+</div>
+<div class="section" id="use-with-other-systems">
+<h2>与其他系统一起使用<a class="headerlink" href="#use-with-other-systems" title="永久链接至标题">¶</a></h2>
+<p>查看 <a class="reference internal" href="faq.html#usingwith"><span class="std std-ref">FAQ列表中的相关部分</span></a>.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>先决条件<a class="headerlink" href="#prerequisites" title="永久链接至标题">¶</a></h2>
+<p>Sphinx至少需要运行 <strong>Python 3.5</strong>，以及 <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> 和 <a class="reference external" href="http://jinja.pocoo.org/">Jinja2</a> 库。 Sphinx应该使用docutils版本0.12或一些(未损坏的)SVN中继快照。</p>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h2>
+<p>请参阅 <a class="reference internal" href="usage/quickstart.html"><span class="doc">入门</span></a> 作为介绍。它还包含本手册中针对其讨论的主题的更高级部分的链接。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="usage/installation.html" title="安装"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="contents.html" title="Sphinx文档内容"
+             >上一页</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a5409da 创建。
+    </div>
+  </body>
+</html>
