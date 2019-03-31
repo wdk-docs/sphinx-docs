@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sphinx作者 &#8212; Sphinx 2.1.0+/7ed78b5 文档</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/7ed78b5 文档 中搜索"
+          href="_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="使用Sphinx的项目" href="examples.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/authors.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="usage/installation.html">安装</a></li>
+    <li><a href="contents.html">文档</a></li>
+    <li><a href="develop.html">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="index.html">
+      <img src="_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="使用Sphinx的项目"
+             accesskey="P">上一页</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="examples.html"
+                        title="上一章">使用Sphinx的项目</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/authors.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sphinx-authors">
+<span id="authors"></span><h1>Sphinx作者<a class="headerlink" href="#sphinx-authors" title="永久链接至标题">¶</a></h1>
+<p>Sphinx由Georg Brandl &lt;<a class="reference external" href="mailto:georg&#37;&#52;&#48;python&#46;org">georg<span>&#64;</span>python<span>&#46;</span>org</a>&gt;编写和维护。</p>
+<p>模板的大部分内容由Armin Ronacher撰写&lt;<a class="reference external" href="mailto:armin&#46;ronacher&#37;&#52;&#48;active-4&#46;com">armin<span>&#46;</span>ronacher<span>&#64;</span>active-4<span>&#46;</span>com</a>&gt;。</p>
+<p>其他合作维护者：:</p>
+<ul class="simple">
+<li><p>Takayuki Shimizukawa &lt;<a class="reference external" href="mailto:shimizukawa&#37;&#52;&#48;gmail&#46;com">shimizukawa<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p></li>
+<li><p>Daniel Neuhäuser &lt;&#64;DasIch&gt;</p></li>
+<li><p>Jon Waltman &lt;&#64;jonwaltman&gt;</p></li>
+<li><p>Rob Ruana &lt;&#64;RobRuana&gt;</p></li>
+<li><p>Robert Lehmann &lt;&#64;lehmannro&gt;</p></li>
+<li><p>Roland Meister &lt;&#64;rolmei&gt;</p></li>
+<li><p>Takeshi Komiya &lt;&#64;tk0miya&gt;</p></li>
+<li><p>Jean-François Burnol &lt;&#64;jfbu&gt;</p></li>
+<li><p>Yoshiki Shibukawa &lt;&#64;shibu_jp&gt;</p></li>
+<li><p>Timotheus Kampik - &lt;&#64;TimKam&gt;</p></li>
+</ul>
+<p>按字母顺序排列的其他贡献者是:</p>
+<ul class="simple">
+<li><p>Alastair Houghton – Apple帮助建设者</p></li>
+<li><p>Alexander Todorov – inheritance_diagram测试和改进</p></li>
+<li><p>Andi Albrecht – agogo 主题</p></li>
+<li><p>Jakob Lykke Andersen – 重写的C++域</p></li>
+<li><p>Henrique Bastos – SVG支持graphviz扩展</p></li>
+<li><p>Daniel Bültmann – todo扩展</p></li>
+<li><p>Marco Buttu – doctest扩展(pyversion选项)</p></li>
+<li><p>Etienne Desautels – apidoc 模块</p></li>
+<li><p>Michael Droettboom – inheritance_diagram 扩展</p></li>
+<li><p>Charles Duffy – 原始graphviz扩展</p></li>
+<li><p>Kevin Dunn – MathJax 扩展</p></li>
+<li><p>Josip Dzolonga – coverage 建设者</p></li>
+<li><p>Buck Evan – dummy 建设者</p></li>
+<li><p>Matthew Fernandez – todo扩展修复</p></li>
+<li><p>Hernan Grecco – 搜索改进</p></li>
+<li><p>Horst Gutmann – 国际化支持</p></li>
+<li><p>Martin Hans – autodoc 改进</p></li>
+<li><p>Zac Hatfield-Dodds – doctest报告改进</p></li>
+<li><p>Doug Hellmann – graphviz 改进</p></li>
+<li><p>Tim Hoffmann – 主题改进</p></li>
+<li><p>Antti Kaihola – doctest扩展(skipif选项)</p></li>
+<li><p>Dave Kuhlman – 原来的LaTeX作家</p></li>
+<li><p>Blaise Laflamme – pyramid主题</p></li>
+<li><p>Chris Lamb – 再现性修复</p></li>
+<li><p>Thomas Lamb – linkcheck构建器</p></li>
+<li><p>Łukasz Langa – 部分支持autodoc</p></li>
+<li><p>Martin Larralde – 额外的napoleon警告</p></li>
+<li><p>Ian Lee – 快速入门改进</p></li>
+<li><p>Robert Lehmann – gettext builder(GSOC项目)</p></li>
+<li><p>Dan MacKinlay – 元数据修复</p></li>
+<li><p>Martin Mahner – 自然主题</p></li>
+<li><p>Will Maier – 目录HTML构建器</p></li>
+<li><p>Jacob Mason – websupport库(GSOC项目)</p></li>
+<li><p>Glenn Matthews – python域签名改进</p></li>
+<li><p>Kurt McKee – documentation 更新</p></li>
+<li><p>Roland Meister – epub 建设者</p></li>
+<li><p>Ezio Melotti – 可折叠的侧边栏JavaScript</p></li>
+<li><p>Bruce Mitchener – 轻微的epub改进</p></li>
+<li><p>Daniel Neuhäuser – JavaScript域，Python 3支持(GSOC)</p></li>
+<li><p>Julien Palard – Colspan和rowspan在文本构建器中</p></li>
+<li><p>Christopher Perkins – autosummary 积分</p></li>
+<li><p>Benjamin Peterson – unittests</p></li>
+<li><p>T. Powers – HTML output 改进</p></li>
+<li><p>Jeppe Pihl – literalinclude 改进</p></li>
+<li><p>Rob Ruana – napoleon 扩展</p></li>
+<li><p>Stefan Seefeld – toctree 改进</p></li>
+<li><p>Gregory Szorc – performance 改进</p></li>
+<li><p>Taku Shimizu – epub3 建设者</p></li>
+<li><p>Antonio Valentino – qthelp 建设者, docstring继承</p></li>
+<li><p>Filip Vavera – napoleon todo 指令</p></li>
+<li><p>Pauli Virtanen – autodoc 改进, autosummary 扩展</p></li>
+<li><p>Eric N. Vander Weele – autodoc 改进</p></li>
+<li><p>Stefan van der Walt – autosummary 扩展</p></li>
+<li><p>Thomas Waldmann – apidoc模块修复</p></li>
+<li><p>John Waltman – Texinfo建设者</p></li>
+<li><p>Barry Warsaw – 设置命令改进</p></li>
+<li><p>Sebastian Wiesner – 图像处理，distutils支持</p></li>
+<li><p>Michael Wilson – Intersphinx HTTP基本身份验证支持</p></li>
+<li><p>Matthew Woodcraft – 文本输出改进</p></li>
+<li><p>Joel Wurtz – LaTeX中的细胞扩增支持</p></li>
+<li><p>Hong Xu – sgg支持imgmath扩展和各种bug修复</p></li>
+<li><p>Stephen Finucane – 设置命令改进和文档</p></li>
+<li><p>Daniel Pizetta – 继承图改进</p></li>
+<li><p>KINEBUCHI Tomohiko – 键入Sphinx以及docutils</p></li>
+</ul>
+<p>非常感谢所有的贡献！</p>
+<p>其他作者和项目也包含一些模块或功能:</p>
+<ul class="simple">
+<li><p>sphinx.util.jsdump使用来自simplejson的basestring编码，由Bob Ippolito编写，在MIT许可下发布</p></li>
+<li><p>sphinx.util.stemmer由Vivake Gupta编写，置于公共领域</p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="使用Sphinx的项目"
+             >上一页</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7ed78b5 创建。
+    </div>
+  </body>
+</html>
