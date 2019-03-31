@@ -25,3 +25,7 @@ sphinx-autobuild ./ _build/html
    ```
 
 2. 打开`respository-`>`Setting`, 在 `GitHub Pages` -> `Source` 选项里选择 `master branch/docs folder`
+
+## Read the Docs
+
+<https://sphinx-doc.readthedocs.io>
