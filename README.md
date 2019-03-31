@@ -12,3 +12,16 @@
 !pip install sphinx-autobuild
 sphinx-autobuild ./ _build/html
 ```
+
+## 部署 gh-pages
+
+1. 生成静态文件
+
+   ```sh
+   cd doc
+   sphinx-build -b html ./ ../docs
+   cd ../docs
+   touch .nojekyll
+   ```
+
+2. 打开`respository-`>`Setting`, 在 `GitHub Pages` -> `Source` 选项里选择 `master branch/docs folder`
