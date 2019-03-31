@@ -522,7 +522,7 @@ msgstr "文档元数据（字典），请参阅 :ref:`metadata`。"
 
 #: ../../templating.rst:370
 msgid "A string containing the page's HTML :dudir:`meta` tags."
-msgstr "包含页面HTML:dudir:`meta`标签的字符串。"
+msgstr "包含页面HTML :dudir:`meta` 标签的字符串。"
 
 #: ../../templating.rst:374
 msgid ""
