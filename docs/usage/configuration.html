@@ -1,179 +1,205 @@
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
-  <head>
-    <meta charset="utf-8" />
-    <title>配置 &#8212; Sphinx 2.1.0+/54c2e3a 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>配置 &mdash; Sphinx 2.1.0+/77d104c 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/54c2e3a 文档 中搜索"
+          title="在 Sphinx 2.1.0+/77d104c 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="构建器" href="builders/index.html" />
-    <link rel="prev" title="Markdown" href="markdown.html" />
-<link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/configuration.html" />
+    <link rel="prev" title="Markdown" href="markdown.html" /> 
+</head>
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
- 
-<style type="text/css">
-  table.right {
-    float: right;
-    margin-left: 20px;
-  }
+<body class="wy-body-for-nav">
 
-  table.right td {
-    border: 1px solid #ccc;
-  }
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
 
-    {
-    % if pagename=='index'%
-  }
+          
+            <a href="../contents.html" class="icon icon-home"> Sphinx
+          
 
-  .related {
-    display: none;
-  }
+          
+          </a>
 
-    {
-    % endif %
-  }
-</style>
-<script type="text/javascript">
-  // intelligent scrolling of the sidebar content
-  $(window).scroll(function () {
-    var sb = $('.sphinxsidebarwrapper');
-    var win = $(window);
-    var sbh = sb.height();
-    var offset = $('.sphinxsidebar').position()['top'];
-    var wintop = win.scrollTop();
-    var winbot = wintop + win.innerHeight();
-    var curtop = sb.position()['top'];
-    var curbot = curtop + sbh;
-    // does sidebar fit in window?
-    if (sbh < win.innerHeight()) {
-      // yes: easy case -- always keep at the top
-      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
-        $(document).height() - sbh - 200
-      ]));
-    } else {
-      // no: only scroll if top/bottom edge of sidebar is at
-      // top/bottom edge of window
-      if (curtop > wintop && curbot > winbot) {
-        sb.css('top', $u.max([wintop - offset - 10, 0]));
-      } else if (curtop < wintop && curbot < winbot) {
-        sb.css('top', $u.min([winbot - sbh - offset - 20,
-          $(document).height() - sbh - 200
-        ]));
-      }
-    }
-  });
-</script>
+          
+            
+            
+              <div class="version">
+                2.1.0+/77d104c
+              </div>
+            
+          
 
-  </head><body>
-<div class="pageheader">
-  <ul>
-    <li><a href="../index.html">主页</a></li>
-    <li><a href="installation.html">安装</a></li>
-    <li><a href="../contents.html">文档</a></li>
-    <li><a href="../develop.html">扩展/开发</a></li>
-  </ul>
-  <div>
-    <a href="../index.html">
-      <img src="../_static/sphinxheader.png" alt="SPHINX" />
-    </a>
-  </div>
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
 
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             accesskey="I">索引</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
-        <li class="right" >
-          <a href="builders/index.html" title="构建器"
-             accesskey="N">下一页</a> |</li>
-        <li class="right" >
-          <a href="markdown.html" title="Markdown"
-             accesskey="P">上一页</a> |</li>
-<li><a href="../index.html">主页</a>&#160;|</li>
-<li><a href="../contents.html">文档</a> &#187;</li>
- 
-      </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../contents.html">目录</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">配置</a><ul>
-<li><a class="reference internal" href="#project-information">项目信息</a></li>
-<li><a class="reference internal" href="#general-configuration">一般配置项</a></li>
-<li><a class="reference internal" href="#options-for-internationalization">国际化选项</a></li>
-<li><a class="reference internal" href="#options-for-math">数学的选项</a></li>
-<li><a class="reference internal" href="#options-for-html-output">HTML输出选项</a></li>
-<li><a class="reference internal" href="#options-for-single-html-output">单个HTML输出的选项</a></li>
-<li><a class="reference internal" href="#options-for-html-help-output">HTML帮助输出选项</a></li>
-<li><a class="reference internal" href="#options-for-apple-help-output">Apple帮助输出选项</a></li>
-<li><a class="reference internal" href="#options-for-epub-output">epub输出的选项</a></li>
-<li><a class="reference internal" href="#options-for-latex-output">LaTeX输出的选项</a></li>
-<li><a class="reference internal" href="#options-for-text-output">文本输出选项</a></li>
-<li><a class="reference internal" href="#options-for-manual-page-output">手动页面输出选项</a></li>
-<li><a class="reference internal" href="#options-for-texinfo-output">Texinfo输出的选项</a></li>
-<li><a class="reference internal" href="#options-for-qthelp-output">QtHelp输出的选项</a></li>
-<li><a class="reference internal" href="#options-for-the-linkcheck-builder">linkcheck构建器的选项</a></li>
-<li><a class="reference internal" href="#options-for-the-xml-builder">XML构建器的选项</a></li>
-<li><a class="reference internal" href="#options-for-the-c-domain">C++ 域选项</a><ul>
-<li><a class="reference internal" href="#example-of-configuration-file">配置文件示例</a></li>
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext/index.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-information">项目信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-configuration">一般配置项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-internationalization">国际化选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-math">数学的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-html-output">HTML输出选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-single-html-output">单个HTML输出的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-html-help-output">HTML帮助输出选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-apple-help-output">Apple帮助输出选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-epub-output">epub输出的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-latex-output">LaTeX输出的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-text-output">文本输出选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-manual-page-output">手动页面输出选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-texinfo-output">Texinfo输出的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-qthelp-output">QtHelp输出的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-the-linkcheck-builder">linkcheck构建器的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-the-xml-builder">XML构建器的选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-for-the-c-domain">C++ 域选项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-of-configuration-file">配置文件示例</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="builders/index.html">构建器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extensions/index.html">扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/intl.html">国际化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/setuptools.html">Setuptools集成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/websupport/index.html">Sphinx Web支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man/index.html">手册页</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theming.html">HTML主题支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../templating.html">模板</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex.html">LaTeX 定制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extdev/index.html">为Sphinx开发扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/tutorials/index.html">扩展教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Sphinx 常问问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devguide.html">Sphinx开发人员指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Sphinx更新</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">使用Sphinx的项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Sphinx作者</a></li>
 </ul>
 
-  <h4>上一个主题</h4>
-  <p class="topless"><a href="markdown.html"
-                        title="上一章">Markdown</a></p>
-  <h4>下一个主题</h4>
-  <p class="topless"><a href="builders/index.html"
-                        title="下一章">构建器</a></p>
-  <div role="note" aria-label="source link">
-    <h3>本页</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/usage/configuration.rst.txt"
-            rel="nofollow">显示源代码</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="转向" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+          
         </div>
       </div>
+    </nav>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">Sphinx</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+      <li>配置</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/usage/configuration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="module-conf">
 <span id="configuration"></span><span id="build-config"></span><h1>配置<a class="headerlink" href="#module-conf" title="永久链接至标题">¶</a></h1>
@@ -208,7 +234,7 @@ delete them from the namespace with <code class="docutils literal notranslate"><
 removed automatically, so you don’t need to <code class="docutils literal notranslate"><span class="pre">del</span></code> your imports after use.</p>
 </li>
 <li id="conf-tags"><p>There is a special object named <code class="docutils literal notranslate"><span class="pre">tags</span></code> available in the config file.
-It can be used to query and change the tags (see <a class="reference internal" href="restructuredtext/directives.html#tags"><span class="std std-ref">Including content based on tags</span></a>).  Use
+It can be used to query and change the tags (see <a class="reference internal" href="restructuredtext/directives.html#tags"><span class="std std-ref">包括基于标签的内容</span></a>).  Use
 <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code> to query, <code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> and <code class="docutils literal notranslate"><span class="pre">tags.remove('tag')</span></code>
 to change. Only tags set via the <code class="docutils literal notranslate"><span class="pre">-t</span></code> command-line option or via
 <code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> can be queried using <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code>.
@@ -750,7 +776,7 @@ format for the selected locale).</p>
 <code class="descname">highlight_language</code><a class="headerlink" href="#confval-highlight_language" title="永久链接至目标">¶</a></dt>
 <dd><p>The default language to highlight source code in.  The default is
 <code class="docutils literal notranslate"><span class="pre">'python3'</span></code>.  The value should be a valid Pygments lexer name, see
-<a class="reference internal" href="restructuredtext/directives.html#code-examples"><span class="std std-ref">Showing code examples</span></a> for more details.</p>
+<a class="reference internal" href="restructuredtext/directives.html#code-examples"><span class="std std-ref">显示代码示例</span></a> for more details.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
@@ -3275,34 +3301,52 @@ when attributes have been <code class="docutils literal notranslate"><span class
 </div>
 
 
+           </div>
+           
           </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="builders/index.html" class="btn btn-neutral float-right" title="构建器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="markdown.html" class="btn btn-neutral float-left" title="Markdown" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2007-2019, Georg Brandl and the Sphinx team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>导航</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="总目录"
-             >索引</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python 模块索引"
-             >模块</a> |</li>
-        <li class="right" >
-          <a href="builders/index.html" title="构建器"
-             >下一页</a> |</li>
-        <li class="right" >
-          <a href="markdown.html" title="Markdown"
-             >上一页</a> |</li>
-<li><a href="../index.html">主页</a>&#160;|</li>
-<li><a href="../contents.html">文档</a> &#187;</li>
- 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/54c2e3a 创建。
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>

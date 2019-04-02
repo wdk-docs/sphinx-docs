@@ -5465,19 +5465,19 @@ msgstr "#2951: Add ``--implicit-namespaces`` PEP-0420 support to apidoc."
 
 #: ../../../CHANGES:2020
 msgid "Add ``:caption:`` option for sphinx.ext.inheritance_diagram."
-msgstr "Add ``:caption:`` option for sphinx.ext.inheritance_diagram."
+msgstr "为sphinx.ext.inheritance_diagram添加 ``:caption:`` 选项。"
 
 #: ../../../CHANGES:2021
 msgid "#2471: Add config variable for default doctest flags."
-msgstr "#2471: Add config variable for default doctest flags."
+msgstr "#2471: 为默认doctest标志添加配置变量。"
 
 #: ../../../CHANGES:2022
 msgid "Convert linkcheck builder to requests for better encoding handling"
-msgstr "Convert linkcheck builder to requests for better encoding handling"
+msgstr "将linkcheck构建器转换为更好的编码处理请求"
 
 #: ../../../CHANGES:2023
 msgid "#2463, #2516: Add keywords of \"meta\" directive to search index"
-msgstr "#2463, #2516: Add keywords of \"meta\" directive to search index"
+msgstr "#2463, #2516: 将 \"meta\" 指令的关键字添加到搜索索引中"
 
 #: ../../../CHANGES:2024
 msgid "``:maxdepth:`` option of toctree affects ``secnumdepth`` (ref: #2547)"

@@ -28,7 +28,7 @@ msgid ""
 "concepts and syntax, intended to provide authors with enough information "
 "to author documents productively.  Since reST was designed to be a "
 "simple, unobtrusive markup language, this will not take too long."
-msgstr "reStructuredText是Sphinx使用的默认纯文本标记语言。 本节简要介绍reStructuredText（reST）概念和语法，旨在为作者提供足够的信息，以高效地编写文档。 由于reST旨在成为一种简单，不显眼的标记语言，因此这不会花费太长时间。"
+msgstr "reStructuredText是Sphinx使用的默认纯文本标记语言。 本节简要介绍reStructuredText(reST)概念和语法，旨在为作者提供足够的信息，以高效地编写文档。 由于reST旨在成为一种简单，不显眼的标记语言，因此这不会花费太长时间。"
 
 #: ../../usage/restructuredtext/basics.rst:17
 msgid ""
@@ -36,7 +36,7 @@ msgid ""
 "<http://docutils.sourceforge.net/rst.html>`_.  The \"ref\" links in this "
 "document link to the description of the individual constructs in the reST"
 " reference."
-msgstr ""
+msgstr "权威的 `reStructuredText用户文档 <http://docutils.sourceforge.net/rst.html>`_ 。本文档中的\"ref\"链接链接到reST参考中各个构造的描述。"
 
 #: ../../usage/restructuredtext/basics.rst:24
 msgid "Paragraphs"
@@ -49,7 +49,7 @@ msgid ""
 "more blank lines.  As in Python, indentation is significant in reST, so "
 "all lines of the same paragraph must be left-aligned to the same level of"
 " indentation."
-msgstr ""
+msgstr "段落(:duref:`ref <paragraph>`)是reST文档中最基本的块。段落只是由一个或多个空行分隔的文本块。与在Python中一样，缩进在reST中很重要，因此同一段落中的所有行必须左对齐到相同的缩进级别。"
 
 #: ../../usage/restructuredtext/basics.rst:35
 msgid "Inline markup"
@@ -57,29 +57,29 @@ msgstr "内联标记"
 
 #: ../../usage/restructuredtext/basics.rst:37
 msgid "The standard reST inline markup is quite simple: use"
-msgstr "The standard reST inline markup is quite simple: use"
+msgstr "标准的reST内联标记非常简单: 使用"
 
 #: ../../usage/restructuredtext/basics.rst:39
 msgid "one asterisk: ``*text*`` for emphasis (italics),"
-msgstr "one asterisk: ``*text*`` for emphasis (italics),"
+msgstr "一个星号: ``*text*`` 用于强调( *斜体* )，"
 
 #: ../../usage/restructuredtext/basics.rst:40
 msgid "two asterisks: ``**text**`` for strong emphasis (boldface), and"
-msgstr "two asterisks: ``**text**`` for strong emphasis (boldface), and"
+msgstr "两个星号: ``**text**`` 用于强调( **粗体** )"
 
 #: ../../usage/restructuredtext/basics.rst:41
 msgid "backquotes: ````text```` for code samples."
-msgstr "backquotes: ````text```` for code samples."
+msgstr "反引号: ````text```` 代码示例( ``code`` )。"
 
 #: ../../usage/restructuredtext/basics.rst:43
 msgid ""
 "If asterisks or backquotes appear in running text and could be confused "
 "with inline markup delimiters, they have to be escaped with a backslash."
-msgstr ""
+msgstr "如果星号或反引号出现在正在运行的文本中并且可能与内联标记分隔符混淆，则必须使用反斜杠对其进行转义。"
 
 #: ../../usage/restructuredtext/basics.rst:46
 msgid "Be aware of some restrictions of this markup:"
-msgstr "Be aware of some restrictions of this markup:"
+msgstr "请注意此标记的一些限制:"
 
 #: ../../usage/restructuredtext/basics.rst:48
 msgid "it may not be nested,"
@@ -87,13 +87,13 @@ msgstr "它可能不是嵌套的，"
 
 #: ../../usage/restructuredtext/basics.rst:49
 msgid "content may not start or end with whitespace: ``* text*`` is wrong,"
-msgstr "content may not start or end with whitespace: ``* text*`` is wrong,"
+msgstr "内容可能无法以空格开头或结尾: ``* text*`` 错误，"
 
 #: ../../usage/restructuredtext/basics.rst:50
 msgid ""
 "it must be separated from surrounding text by non-word characters.  Use a"
 " backslash escaped space to work around that: ``thisis\\ *one*\\ word``."
-msgstr ""
+msgstr "必须通过非单词字符将其与周围文本分开。使用反斜杠转义空间来解决这个问题: ``thisis\\ *one*\\ word``。"
 
 #: ../../usage/restructuredtext/basics.rst:53
 msgid "These restrictions may be lifted in future versions of the docutils."
@@ -103,7 +103,7 @@ msgstr "在将来的docutils版本中可能会取消这些限制。"
 msgid ""
 "It is also possible to replace or expand upon some of this inline markup "
 "with roles. Refer to :ref:`rst-roles-alt` for more information."
-msgstr ""
+msgstr "也可以使用角色替换或扩展此内联标记。有关更多信息，请参阅 :ref:`rst-roles-alt` 。"
 
 #: ../../usage/restructuredtext/basics.rst:60
 msgid "Lists and Quote-like blocks"
@@ -114,19 +114,19 @@ msgid ""
 "List markup (:duref:`ref <bullet-lists>`) is natural: just place an "
 "asterisk at the start of a paragraph and indent properly.  The same goes "
 "for numbered lists; they can also be autonumbered using a ``#`` sign::"
-msgstr ""
+msgstr "列表标记(:duref:`ref <bullet-lists>`)很自然:只需在段落的开头放一个星号并正确缩进。编号列表也是如此;它们也可以使用 ``＃`` 符号自动编号::"
 
 #: ../../usage/restructuredtext/basics.rst:76
 msgid ""
 "Nested lists are possible, but be aware that they must be separated from "
 "the parent list items by blank lines::"
-msgstr ""
+msgstr "也可以嵌套列表，但注意它们必须通过空行与父列表项分开::"
 
 #: ../../usage/restructuredtext/basics.rst:87
 msgid ""
 "Definition lists (:duref:`ref <definition-lists>`) are created as "
 "follows::"
-msgstr ""
+msgstr "定义列表(:duref:`ref <definition-lists>`)创建如下::"
 
 #: ../../usage/restructuredtext/basics.rst:97
 msgid "Note that the term cannot have more than one line of text."
@@ -136,23 +136,23 @@ msgstr "请注意，该术语不能包含多行文本。"
 msgid ""
 "Quoted paragraphs (:duref:`ref <block-quotes>`) are created by just "
 "indenting them more than the surrounding paragraphs."
-msgstr ""
+msgstr "引用的段落(:duref:`ref <block-quotes>`)只是通过缩进它们而不是周围的段落来创建。"
 
 #: ../../usage/restructuredtext/basics.rst:102
 msgid ""
 "Line blocks (:duref:`ref <line-blocks>`) are a way of preserving line "
 "breaks::"
-msgstr ""
+msgstr "行块(:duref:`ref <line-blocks>`)是一种保留换行符的方法::"
 
 #: ../../usage/restructuredtext/basics.rst:108
 msgid "There are also several more special blocks available:"
-msgstr "There are also several more special blocks available:"
+msgstr "还有几个特殊的块可用:"
 
 #: ../../usage/restructuredtext/basics.rst:110
 msgid ""
 "field lists (:duref:`ref <field-lists>`, with caveats noted in :ref:`rst-"
 "field-lists`)"
-msgstr ""
+msgstr "字段列表(:duref:`ref <field-lists>`，注意事项 :ref:`rst-field-lists`)"
 
 #: ../../usage/restructuredtext/basics.rst:112
 msgid "option lists (:duref:`ref <option-lists>`)"
@@ -176,33 +176,33 @@ msgid ""
 "ending a paragraph with the special marker ``::``.  The literal block "
 "must be indented (and, like all paragraphs, separated from the "
 "surrounding ones by blank lines)::"
-msgstr ""
+msgstr "通过使用特殊标记 ``::`` 结束段落来引入文字代码块(:duref:`ref <literal-blocks>`)。文字块必须缩进(和所有段落一样，用空行与周围的段分开)::"
 
 #: ../../usage/restructuredtext/basics.rst:136
 msgid "The handling of the ``::`` marker is smart:"
-msgstr "The handling of the ``::`` marker is smart:"
+msgstr "处理 ``::`` 标记是聪明的:"
 
 #: ../../usage/restructuredtext/basics.rst:138
 msgid ""
 "If it occurs as a paragraph of its own, that paragraph is completely left"
 " out of the document."
-msgstr ""
+msgstr "如果它作为自己的段落出现，则该段落完全不在文档中。"
 
 #: ../../usage/restructuredtext/basics.rst:140
 msgid "If it is preceded by whitespace, the marker is removed."
-msgstr "If it is preceded by whitespace, the marker is removed."
+msgstr "如果前面有空格，则删除标记。"
 
 #: ../../usage/restructuredtext/basics.rst:141
 msgid ""
 "If it is preceded by non-whitespace, the marker is replaced by a single "
 "colon."
-msgstr ""
+msgstr "如果前面是非空格，则标记将替换为单个冒号。"
 
 #: ../../usage/restructuredtext/basics.rst:144
 msgid ""
 "That way, the second sentence in the above example's first paragraph "
 "would be rendered as \"The next paragraph is a code sample:\"."
-msgstr ""
+msgstr "这样，上面例子的第一段中的第二句将呈现为 \"The next paragraph is a code sample:\"。"
 
 #: ../../usage/restructuredtext/basics.rst:147
 msgid ""
@@ -211,7 +211,7 @@ msgid ""
 " basis using the :confval:`highlight_language` configuration option. The "
 ":rst:dir:`code-block` directive can be used to set highlighting on a "
 "block-by-block basis. These directives are discussed later."
-msgstr ""
+msgstr "可以使用 :rst:dir:`highlight` 指令在文档范围内为这些文字块启用代码突出显示，并在项目范围内使用  :confval:`highlight_language` 配置选项。 :rst:dir:`code-block` 指令可用于逐块设置突出显示。这些指令将在后面讨论。"
 
 #: ../../usage/restructuredtext/basics.rst:157
 msgid "Doctest blocks"
@@ -223,7 +223,7 @@ msgid ""
 "sessions cut-and-pasted into docstrings. They do not require the "
 ":ref:`literal blocks <rst-literal-blocks>` syntax. The doctest block must"
 " end with a blank line and should *not* end with with an unused prompt::"
-msgstr ""
+msgstr "Doctest块(:duref:`ref <doctest-blocks>`)是切换并粘贴到文档字符串中的交互式Python会话。它们不需要 :ref:`literal blocks <rst-literal-blocks>` 语法。 doctest块必须以空行结束，并且 *不* 以未使用的提示结束::"
 
 #: ../../usage/restructuredtext/basics.rst:170
 msgid "Tables"
@@ -233,21 +233,21 @@ msgstr "表"
 msgid ""
 "For *grid tables* (:duref:`ref <grid-tables>`), you have to \"paint\" the"
 " cell grid yourself.  They look like this::"
-msgstr ""
+msgstr "对于 *grid tables* (:duref:`ref <grid-tables>`)，你必须自己\"绘制\"单元格网格。他们看起来像这样::"
 
 #: ../../usage/restructuredtext/basics.rst:184
 msgid ""
 "*Simple tables* (:duref:`ref <simple-tables>`) are easier to write, but "
 "limited: they must contain more than one row, and the first column cells "
 "cannot contain multiple lines.  They look like this::"
-msgstr ""
+msgstr "*简单表* (:duref:`ref <simple-tables>`)更容易编写，但有限制: 它们必须包含多行，并且第一列单元格不能包含多行。他们看起来像这样::"
 
 #: ../../usage/restructuredtext/basics.rst:197
 msgid ""
 "Two more syntaxes are supported: *CSV tables* and *List tables*. They use"
 " an *explicit markup block*. Refer to :ref:`table-directives` for more "
 "information."
-msgstr ""
+msgstr "支持另外两种语法: *CSV表* 和 *列表* 。他们使用 *显式标记块* 。有关更多信息，请参阅 :ref:`table-directives`。"
 
 #: ../../usage/restructuredtext/basics.rst:202
 msgid "Hyperlinks"
@@ -262,19 +262,19 @@ msgid ""
 "Use ```Link text <https://domain.invalid/>`_`` for inline web links.  If "
 "the link text should be the web address, you don't need special markup at"
 " all, the parser finds links and mail addresses in ordinary text."
-msgstr ""
+msgstr "使用 ```链接文本 <https://domain.invalid/>`_`` 进行内联网络链接。如果链接文本应该是Web地址，则根本不需要特殊标记，解析器会在普通文本中查找链接和邮件地址。"
 
 #: ../../usage/restructuredtext/basics.rst:211
 msgid ""
 "There must be a space between the link text and the opening \\< for the "
 "URL."
-msgstr ""
+msgstr "链接文本与URL的开头 \\< 之间必须有空格。"
 
 #: ../../usage/restructuredtext/basics.rst:213
 msgid ""
 "You can also separate the link and the target definition (:duref:`ref "
 "<hyperlink-targets>`), like this::"
-msgstr ""
+msgstr "你也可以把链接和目标定义分开(:duref:`ref <hyperlink-targets>`)，就像这样::"
 
 #: ../../usage/restructuredtext/basics.rst:221
 msgid "Internal links"
@@ -284,7 +284,7 @@ msgstr "内部链接"
 msgid ""
 "Internal linking is done via a special reST role provided by Sphinx, see "
 "the section on specific markup, :ref:`ref-role`."
-msgstr ""
+msgstr "内部链接是通过Sphinx提供的特殊reST角色完成的，请参阅特定标记部分 :ref:`ref-role` 。"
 
 #: ../../usage/restructuredtext/basics.rst:228
 msgid "Sections"
@@ -295,7 +295,7 @@ msgid ""
 "Section headers (:duref:`ref <sections>`) are created by underlining (and"
 " optionally overlining) the section title with a punctuation character, "
 "at least as long as the text::"
-msgstr ""
+msgstr "节标题(:duref:`ref <sections>`)是通过用标点字符加下划线(并且可选地覆盖)节标题来创建的，至少与文本一样长::"
 
 #: ../../usage/restructuredtext/basics.rst:238
 msgid ""
@@ -304,59 +304,59 @@ msgid ""
 "this convention is used in `Python's Style Guide for documenting "
 "<https://docs.python.org/devguide/documenting.html#style-guide>`_ which "
 "you may follow:"
-msgstr ""
+msgstr "通常，没有为某些字符分配标题级别，因为结构是从标题的连续性确定的。但是，这个约定在 `Python的样式指南中用于记录 <https://docs.python.org/devguide/documenting.html#style-guide>`_ ，您可以遵循:"
 
 #: ../../usage/restructuredtext/basics.rst:244
 msgid "``#`` with overline, for parts"
-msgstr "``#`` with overline, for parts"
+msgstr "``#`` 有上线，用于编"
 
 #: ../../usage/restructuredtext/basics.rst:245
 msgid "``*`` with overline, for chapters"
-msgstr "``*`` with overline, for chapters"
+msgstr "``*`` 有上线，用于章"
 
 #: ../../usage/restructuredtext/basics.rst:246
 msgid "``=``, for sections"
-msgstr "``=``, for sections"
+msgstr "``=``, 用于节"
 
 #: ../../usage/restructuredtext/basics.rst:247
 msgid "``-``, for subsections"
-msgstr "``-``, for subsections"
+msgstr "``-``, 用于小节"
 
 #: ../../usage/restructuredtext/basics.rst:248
 msgid "``^``, for subsubsections"
-msgstr "``^``, for subsubsections"
+msgstr "``^``, 用于子小节"
 
 #: ../../usage/restructuredtext/basics.rst:249
 msgid "``\"``, for paragraphs"
-msgstr "``\"``, for paragraphs"
+msgstr "``\"``, 用于款"
 
 #: ../../usage/restructuredtext/basics.rst:251
 msgid ""
 "Of course, you are free to use your own marker characters (see the reST "
 "documentation), and use a deeper nesting level, but keep in mind that "
 "most target formats (HTML, LaTeX) have a limited supported nesting depth."
-msgstr ""
+msgstr "当然，您可以自由使用自己的标记字符(请参阅reST文档)，并使用更深层次的嵌套级别，但请记住，大多数目标格式(HTML，LaTeX)具有有限的支持嵌套深度。"
 
 #: ../../usage/restructuredtext/basics.rst:259
 msgid "Field Lists"
-msgstr "现场名单"
+msgstr "域列表"
 
 #: ../../usage/restructuredtext/basics.rst:261
 msgid ""
 "Field lists (:duref:`ref <field-lists>`) are sequences of fields marked "
 "up like this::"
-msgstr ""
+msgstr "域列表(:duref:`ref <field-lists>`)是标记为这样的域序列::"
 
 #: ../../usage/restructuredtext/basics.rst:266
 msgid "They are commonly used in Python documentation::"
-msgstr "They are commonly used in Python documentation::"
+msgstr "它们通常用于Python文档中::"
 
 #: ../../usage/restructuredtext/basics.rst:277
 msgid ""
 "Sphinx extends standard docutils behavior and intercepts field lists "
 "specified at the beginning of documents.  Refer to :doc:`field-lists` for"
 " more information."
-msgstr ""
+msgstr "Sphinx扩展了标准的docutils行为，并拦截了文档开头指定的字段列表。有关更多信息，请参阅 :doc:`field-lists`。"
 
 #: ../../usage/restructuredtext/basics.rst:288
 msgid "Roles"
@@ -369,41 +369,41 @@ msgid ""
 " should be interpreted in a specific way.  Sphinx uses this to provide "
 "semantic markup and cross-referencing of identifiers, as described in the"
 " appropriate section.  The general syntax is ``:rolename:`content```."
-msgstr ""
+msgstr "角色或 \"自定义解释文本角色\" (:duref:`ref <roles>`)是显式标记的内联部分。它表示应以特定方式解释所附文本。 Sphinx使用它来提供标识符的语义标记和交叉引用，如相应章节中所述。一般语法是 ``:rolename:`content``` 。"
 
 #: ../../usage/restructuredtext/basics.rst:296
 msgid "Docutils supports the following roles:"
-msgstr "Docutils supports the following roles:"
+msgstr "Docutils支持以下角色:"
 
 #: ../../usage/restructuredtext/basics.rst:298
 msgid ":durole:`emphasis` -- equivalent of ``*emphasis*``"
-msgstr ":durole:`emphasis` -- equivalent of ``*emphasis*``"
+msgstr ":durole:`emphasis` -- 相当于 ``*emphasis*``"
 
 #: ../../usage/restructuredtext/basics.rst:299
 msgid ":durole:`strong` -- equivalent of ``**strong**``"
-msgstr ":durole:`strong` -- equivalent of ``**strong**``"
+msgstr ":durole:`strong` -- 相当于 ``**strong**``"
 
 #: ../../usage/restructuredtext/basics.rst:300
 msgid ":durole:`literal` -- equivalent of ````literal````"
-msgstr ":durole:`literal` -- equivalent of ````literal````"
+msgstr ":durole:`literal` -- 相当于 ````literal````"
 
 #: ../../usage/restructuredtext/basics.rst:301
 msgid ":durole:`subscript` -- subscript text"
-msgstr ":durole:`subscript` -- subscript text"
+msgstr ":durole:`subscript` -- 下标文字"
 
 #: ../../usage/restructuredtext/basics.rst:302
 msgid ":durole:`superscript` -- superscript text"
-msgstr ":durole:`superscript` -- superscript text"
+msgstr ":durole:`superscript` -- 上标文字"
 
 #: ../../usage/restructuredtext/basics.rst:303
 msgid ""
 ":durole:`title-reference` -- for titles of books, periodicals, and other "
 "materials"
-msgstr ""
+msgstr ":durole:`title-reference` -- 用于书籍，期刊和其他材料的标题"
 
 #: ../../usage/restructuredtext/basics.rst:306
 msgid "Refer to :doc:`roles` for roles added by Sphinx."
-msgstr "Refer to :doc:`roles` for roles added by Sphinx."
+msgstr "请参阅 :doc:`roles` ，了解Sphinx添加的角色。"
 
 #: ../../usage/restructuredtext/basics.rst:310
 msgid "Explicit Markup"
@@ -414,7 +414,7 @@ msgid ""
 "\"Explicit markup\" (:duref:`ref <explicit-markup-blocks>`) is used in "
 "reST for most constructs that need special handling, such as footnotes, "
 "specially-highlighted paragraphs, comments, and generic directives."
-msgstr ""
+msgstr "\"显式标记\"(:duref:`ref <explicit-markup-blocks>`)在reST中用于大多数需要特殊处理的构造，例如脚注，特别突出显示的段落，注释和泛型指令。"
 
 #: ../../usage/restructuredtext/basics.rst:316
 msgid ""
@@ -423,7 +423,7 @@ msgid ""
 "of indentation.  (There needs to be a blank line between explicit markup "
 "and normal paragraphs.  This may all sound a bit complicated, but it is "
 "intuitive enough when you write it.)"
-msgstr ""
+msgstr "显式标记块以一行开头，以\"..\"开头，后跟空格，并在相同的缩进级别由下一段终止。 (显式标记和普通段落之间需要有一个空行。这可能听起来有点复杂，但是当你写它时它足够直观。)"
 
 #: ../../usage/restructuredtext/basics.rst:326
 msgid "Directives"
@@ -434,11 +434,11 @@ msgid ""
 "A directive (:duref:`ref <directives>`) is a generic block of explicit "
 "markup. Along with roles, it is one of the extension mechanisms of reST, "
 "and Sphinx makes heavy use of it."
-msgstr ""
+msgstr "指令(:duref:`ref <directives>`)是显式标记的通用块。与角色一起，它是reST的扩展机制之一，并且Sphinx大量使用它。"
 
 #: ../../usage/restructuredtext/basics.rst:332
 msgid "Docutils supports the following directives:"
-msgstr "Docutils supports the following directives:"
+msgstr "Docutils支持以下指令:"
 
 #: ../../usage/restructuredtext/basics.rst:334
 msgid ""
@@ -447,7 +447,7 @@ msgid ""
 ":dudir:`tip`, :dudir:`warning` and the generic :dudir:`admonition "
 "<admonitions>`.  (Most themes style only \"note\" and \"warning\" "
 "specially.)"
-msgstr ""
+msgstr "忠告: :dudir:`attention`，:dudir:`caution`，:dudir:`danger`，:dudir:`error`，:dudir:`hint`，:dudir:`important`，:dudir:`note` ，:dudir:`tip`，:dudir:`warning` 和泛型 :dudir:`admonition <admonitions>` 。 (大多数主题仅限于 \"note\" 和 \"warning\" 。)"
 
 #: ../../usage/restructuredtext/basics.rst:340
 msgid "Images:"
@@ -455,53 +455,53 @@ msgstr "图片:"
 
 #: ../../usage/restructuredtext/basics.rst:342
 msgid ":dudir:`image` (see also Images_ below)"
-msgstr ":dudir:`image` (see also Images_ below)"
+msgstr ":dudir:`image` (另见下面的 Images_ )"
 
 #: ../../usage/restructuredtext/basics.rst:343
 msgid ":dudir:`figure` (an image with caption and optional legend)"
-msgstr ":dudir:`figure` (an image with caption and optional legend)"
+msgstr ":dudir:`figure` (带有标题和可选图例的图像)"
 
 #: ../../usage/restructuredtext/basics.rst:345
 msgid "Additional body elements:"
-msgstr "Additional body elements:"
+msgstr "额外的 body 元素:"
 
 #: ../../usage/restructuredtext/basics.rst:347
 msgid ""
 ":dudir:`contents <table-of-contents>` (a local, i.e. for the current file"
 " only, table of contents)"
-msgstr ""
+msgstr ":dudir:`contents <table-of-contents>` (本地，即仅当前文件，目录)"
 
 #: ../../usage/restructuredtext/basics.rst:349
 msgid ""
 ":dudir:`container` (a container with a custom class, useful to generate "
 "an outer ``<div>`` in HTML)"
-msgstr ""
+msgstr ":dudir:`container` (一个带有自定义类的容器，用于在HTML中生成外部 ``<div>`` )"
 
 #: ../../usage/restructuredtext/basics.rst:351
 msgid ":dudir:`rubric` (a heading without relation to the document sectioning)"
-msgstr ":dudir:`rubric` (a heading without relation to the document sectioning)"
+msgstr ":dudir:`rubric` (与文档切片无关的标题)"
 
 #: ../../usage/restructuredtext/basics.rst:352
 msgid ":dudir:`topic`, :dudir:`sidebar` (special highlighted body elements)"
-msgstr ":dudir:`topic`, :dudir:`sidebar` (special highlighted body elements)"
+msgstr ":dudir:`topic` , :dudir:`sidebar` (特别突出的 body 元素)"
 
 #: ../../usage/restructuredtext/basics.rst:353
 msgid ":dudir:`parsed-literal` (literal block that supports inline markup)"
-msgstr ":dudir:`parsed-literal` (literal block that supports inline markup)"
+msgstr ":dudir:`parsed-literal` (支持内联标记的文字块)"
 
 #: ../../usage/restructuredtext/basics.rst:354
 msgid ":dudir:`epigraph` (a block quote with optional attribution line)"
-msgstr ":dudir:`epigraph` (a block quote with optional attribution line)"
+msgstr ":dudir:`epigraph` (带有可选归因线的块引用)"
 
 #: ../../usage/restructuredtext/basics.rst:355
 msgid ""
 ":dudir:`highlights`, :dudir:`pull-quote` (block quotes with their own "
 "class attribute)"
-msgstr ""
+msgstr ":dudir:`highlight` ， :dudir:`pull-quote` (带有自己的class属性的块引号)"
 
 #: ../../usage/restructuredtext/basics.rst:357
 msgid ":dudir:`compound <compound-paragraph>` (a compound paragraph)"
-msgstr ":dudir:`compound <compound-paragraph>` (a compound paragraph)"
+msgstr ":dudir:`compound <compound-paragraph>` (复合段)"
 
 #: ../../usage/restructuredtext/basics.rst:359
 msgid "Special tables:"
@@ -509,15 +509,15 @@ msgstr "特别表:"
 
 #: ../../usage/restructuredtext/basics.rst:361
 msgid ":dudir:`table` (a table with title)"
-msgstr ":dudir:`table` (a table with title)"
+msgstr ":dudir:`table` (带标题的表格)"
 
 #: ../../usage/restructuredtext/basics.rst:362
 msgid ":dudir:`csv-table` (a table generated from comma-separated values)"
-msgstr ":dudir:`csv-table` (a table generated from comma-separated values)"
+msgstr ":dudir:`csv-table` (从逗号分隔值生成的表)"
 
 #: ../../usage/restructuredtext/basics.rst:363
 msgid ":dudir:`list-table` (a table generated from a list of lists)"
-msgstr ":dudir:`list-table` (a table generated from a list of lists)"
+msgstr ":dudir:`list-table` (从列表列表生成的表)"
 
 #: ../../usage/restructuredtext/basics.rst:365
 msgid "Special directives:"
@@ -525,65 +525,65 @@ msgstr "特别指令:"
 
 #: ../../usage/restructuredtext/basics.rst:367
 msgid ":dudir:`raw <raw-data-pass-through>` (include raw target-format markup)"
-msgstr ":dudir:`raw <raw-data-pass-through>` (include raw target-format markup)"
+msgstr ":dudir:`raw <raw-data-pass-through>` (包括原始目标格式标记)"
 
 #: ../../usage/restructuredtext/basics.rst:368
 msgid ""
 ":dudir:`include` (include reStructuredText from another file) -- in "
 "Sphinx, when given an absolute include file path, this directive takes it"
 " as relative to the source directory"
-msgstr ""
+msgstr ":dudir:`include` (包括来自另一个文件的 reStructuredText) - 在Sphinx中，当给定一个绝对包含文件路径时，该指令将其作为相对于源目录的"
 
 #: ../../usage/restructuredtext/basics.rst:371
 msgid ":dudir:`class` (assign a class attribute to the next element) [1]_"
-msgstr ":dudir:`class` (assign a class attribute to the next element) [1]_"
+msgstr ":dudir:`class` (为下一个元素分配一个class属性) [1]_"
 
 #: ../../usage/restructuredtext/basics.rst:373
 msgid "HTML specifics:"
-msgstr "HTML specifics:"
+msgstr "HTML细节:"
 
 #: ../../usage/restructuredtext/basics.rst:375
 msgid ":dudir:`meta` (generation of HTML ``<meta>`` tags)"
-msgstr ":dudir:`meta` (generation of HTML ``<meta>`` tags)"
+msgstr ":dudir:`meta` (生成HTML `` <meta>`` 标签)"
 
 #: ../../usage/restructuredtext/basics.rst:376
 msgid ":dudir:`title <metadata-document-title>` (override document title)"
-msgstr ":dudir:`title <metadata-document-title>` (override document title)"
+msgstr ":dudir:`title <metadata-document-title>` (覆盖文档标题)"
 
 #: ../../usage/restructuredtext/basics.rst:378
 msgid "Influencing markup:"
-msgstr "Influencing markup:"
+msgstr "影响标记:"
 
 #: ../../usage/restructuredtext/basics.rst:380
 msgid ":dudir:`default-role` (set a new default role)"
-msgstr ":dudir:`default-role` (set a new default role)"
+msgstr ":dudir:`default-role` (设置一个新的默认角色)"
 
 #: ../../usage/restructuredtext/basics.rst:381
 msgid ":dudir:`role` (create a new role)"
-msgstr ":dudir:`role` (create a new role)"
+msgstr ":dudir:`role` (创建一个新角色)"
 
 #: ../../usage/restructuredtext/basics.rst:383
 msgid ""
 "Since these are only per-file, better use Sphinx's facilities for setting"
 " the :confval:`default_role`."
-msgstr ""
+msgstr "由于这些只是每个文件，因此最好使用Sphinx的工具来设置 :confval:`default_role`。"
 
 #: ../../usage/restructuredtext/basics.rst:388
 msgid ""
 "Do *not* use the directives :dudir:`sectnum`, :dudir:`header` and "
 ":dudir:`footer`."
-msgstr ""
+msgstr "*不* 要使用指令 :dudir:`sectnum` ，:dudir:`header` 和 :dudir:`footer` 。"
 
 #: ../../usage/restructuredtext/basics.rst:391
 msgid "Directives added by Sphinx are described in :doc:`directives`."
-msgstr "Directives added by Sphinx are described in :doc:`directives`."
+msgstr "Sphinx添加的指令描述于 :doc:`directives` 。"
 
 #: ../../usage/restructuredtext/basics.rst:393
 msgid ""
 "Basically, a directive consists of a name, arguments, options and "
 "content. (Keep this terminology in mind, it is used in the next chapter "
 "describing custom directives.)  Looking at this example, ::"
-msgstr ""
+msgstr "基本上，指令由名称，参数，选项和内容组成。 (记住这个术语，它将在下一章描述自定义指令中使用。)看看这个例子，::"
 
 #: ../../usage/restructuredtext/basics.rst:403
 msgid ""
@@ -592,13 +592,13 @@ msgid ""
 "``module`` (as you can see, options are given in the lines immediately "
 "following the arguments and indicated by the colons).  Options must be "
 "indented to the same level as the directive content."
-msgstr ""
+msgstr "``function`` 是指令名称。这里给出了两个参数，第一行和第二行的其余部分，以及一个选项 ``module`` (如你所见，选项在紧跟在参数后面的行中给出并由冒号表示) 。选项必须缩进到与指令内容相同的级别。"
 
 #: ../../usage/restructuredtext/basics.rst:409
 msgid ""
 "The directive content follows after a blank line and is indented relative"
 " to the directive start."
-msgstr ""
+msgstr "指令内容在空白行后面，并相对于指令开始缩进。"
 
 #: ../../usage/restructuredtext/basics.rst:414
 msgid "Images"
@@ -606,7 +606,7 @@ msgstr "图片"
 
 #: ../../usage/restructuredtext/basics.rst:416
 msgid "reST supports an image directive (:dudir:`ref <image>`), used like so::"
-msgstr "reST supports an image directive (:dudir:`ref <image>`), used like so::"
+msgstr "reST支持一个image指令(:dudir:`ref <image>`)，像这样使用::"
 
 #: ../../usage/restructuredtext/basics.rst:421
 msgid ""
@@ -615,14 +615,14 @@ msgid ""
 "are relative to the top source directory.  For example, the file "
 "``sketch/spam.rst`` could refer to the image ``images/spam.png`` as "
 "``../images/spam.png`` or ``/images/spam.png``."
-msgstr ""
+msgstr "在Sphinx中使用时，给定的文件名(此处为 ``gnu.png`` )必须相对于源文件，或者绝对意味着它们相对于顶级源目录。例如，文件 ``sketch/spam.rst`` 可以将图像 ``images/spam.png`` 写为 ``../images/spam.png`` 或 ``/images/spam.png`` 。"
 
 #: ../../usage/restructuredtext/basics.rst:427
 msgid ""
 "Sphinx will automatically copy image files over to a subdirectory of the "
 "output directory on building (e.g. the ``_static`` directory for HTML "
 "output.)"
-msgstr ""
+msgstr "Sphinx会自动将图像文件复制到构建的输出目录的子目录中(例如，用于HTML输出的 ``_static`` 目录。)"
 
 #: ../../usage/restructuredtext/basics.rst:430
 msgid ""
@@ -632,13 +632,13 @@ msgid ""
 "units (like ``pt`` for points) will be used for HTML and LaTeX output "
 "(the latter replaces ``pt`` by ``bp`` as this is the TeX unit such that "
 "``72bp=1in``)."
-msgstr ""
+msgstr "图像大小选项( ``width`` 和 ``height`` )的解释如下:如果大小没有单位或单位是像素，则只有支持像素的输出通道才会考虑给定大小。其他单位(如点的 ``pt`` )将用于HTML和LaTeX输出(后者用 ``bp`` 替换 ``pt`` ，因为这是TeX单元，``72bp=1in`` )。"
 
 #: ../../usage/restructuredtext/basics.rst:436
 msgid ""
 "Sphinx extends the standard docutils behavior by allowing an asterisk for"
 " the extension::"
-msgstr ""
+msgstr "Sphinx通过允许扩展名的星号来扩展标准的docutils行为::"
 
 #: ../../usage/restructuredtext/basics.rst:441
 msgid ""
@@ -649,23 +649,23 @@ msgid ""
 "tree, the LaTeX builder would choose the former, while the HTML builder "
 "would prefer the latter.  Supported image types and choosing priority are"
 " defined at :doc:`/usage/builders/index`."
-msgstr ""
+msgstr "然后，Sphinx搜索与提供的模式匹配的所有图像并确定其类型。然后，每个构建器从这些候选者中选择最佳图像。例如，如果给出了文件名 ``gnu.*`` 并且源树中存在两个文件 :file:`gnu.pdf` 和 :file:`gnu.png` ，则LaTeX构建器将选择前者，而HTML构建器更喜欢后者。支持的图像类型和选择优先级定义在 :doc:`/usage/builders/index` 。"
 
 #: ../../usage/restructuredtext/basics.rst:449
 msgid "Note that image file names should not contain spaces."
-msgstr "Note that image file names should not contain spaces."
+msgstr "请注意，图像文件名不应包含空格。"
 
 #: ../../usage/restructuredtext/basics.rst:451
 msgid "Added the support for file names ending in an asterisk."
-msgstr "Added the support for file names ending in an asterisk."
+msgstr "添加了对以星号结尾的文件名的支持。"
 
 #: ../../usage/restructuredtext/basics.rst:454
 msgid "Image paths can now be absolute."
-msgstr "Image paths can now be absolute."
+msgstr "图像路径现在可以是绝对的。"
 
 #: ../../usage/restructuredtext/basics.rst:457
 msgid "latex target supports pixels (default is ``96px=1in``)."
-msgstr "latex target supports pixels (default is ``96px=1in``)."
+msgstr "latex目标支持像素(默认为 ``96px=1in``)。"
 
 #: ../../usage/restructuredtext/basics.rst:462
 #: ../../usage/restructuredtext/basics.rst:565
@@ -677,13 +677,13 @@ msgid ""
 "For footnotes (:duref:`ref <footnotes>`), use ``[#name]_`` to mark the "
 "footnote location, and add the footnote body at the bottom of the "
 "document after a \"Footnotes\" rubric heading, like so::"
-msgstr ""
+msgstr "对于脚注(:duref:`ref <footnotes>`)，使用 ``[#name]_`` 标记脚注位置，并在 \"Footnotes \" 标题后添加脚注主体在文档底部，像这样::"
 
 #: ../../usage/restructuredtext/basics.rst:475
 msgid ""
 "You can also explicitly number the footnotes (``[1]_``) or use auto-"
 "numbered footnotes without names (``[#]_``)."
-msgstr ""
+msgstr "您还可以明确编号脚注(``[1]_``)或使用不带名字的自动编号脚注(``[＃]_``)。"
 
 #: ../../usage/restructuredtext/basics.rst:480
 msgid "Citations"
@@ -694,13 +694,13 @@ msgid ""
 "Standard reST citations (:duref:`ref <citations>`) are supported, with "
 "the additional feature that they are \"global\", i.e. all citations can "
 "be referenced from all files.  Use them like so::"
-msgstr ""
+msgstr "支持标准reST引用(:duref:`ref <citations>`)，其附加功能是\"全局\"，即所有引用都可以从所有文件引用。像这样使用它们::"
 
 #: ../../usage/restructuredtext/basics.rst:490
 msgid ""
 "Citation usage is similar to footnote usage, but with a label that is not"
 " numeric or begins with ``#``."
-msgstr ""
+msgstr "引用用法类似于脚注用法，但标签不是数字或以\"＃\"开头。"
 
 #: ../../usage/restructuredtext/basics.rst:495
 msgid "Substitutions"
@@ -712,17 +712,17 @@ msgid ""
 "definitions>`), which are pieces of text and/or markup referred to in the"
 " text by ``|name|``.  They are defined like footnotes with explicit "
 "markup blocks, like this::"
-msgstr ""
+msgstr "reST支持 \"substitutions\"(:duref:`ref <substitution-definitions>`)，它们是文本中引用的文本和/或标记 ``|name|`` 。它们被定义为带有显式标记块的脚注，如下::"
 
 #: ../../usage/restructuredtext/basics.rst:503
 msgid "or this::"
-msgstr "or this::"
+msgstr "或这个::"
 
 #: ../../usage/restructuredtext/basics.rst:508
 msgid ""
 "See the :duref:`reST reference for substitutions <substitution-"
 "definitions>` for details."
-msgstr ""
+msgstr "有关详细信息，请参阅 :duref:`reST参考替换 <substitution-definitions>` 。"
 
 #: ../../usage/restructuredtext/basics.rst:513
 msgid ""
@@ -732,13 +732,13 @@ msgid ""
 "using the :rst:dir:`include` directive.  (Be sure to give the include "
 "file a file name extension differing from that of other source files, to "
 "avoid Sphinx finding it as a standalone document.)"
-msgstr ""
+msgstr "如果要对所有文档使用一些替换，请将它们放入 :confval:`rst_prolog` 或 :confval:`rst_epilog` 或将它们放入单独的文件中，并将其包含在要使用它们的所有文档中，使用 :rst:dir:`include` 指令。 (确保为include文件提供与其他源文件不同的文件扩展名，以避免Sphinx将其作为独立文档发现。)"
 
 #: ../../usage/restructuredtext/basics.rst:520
 msgid ""
 "Sphinx defines some default substitutions, see :ref:`default-"
 "substitutions`."
-msgstr ""
+msgstr "Sphinx定义了一些默认替换，请参阅 :ref:`default-substitutions` 。"
 
 #: ../../usage/restructuredtext/basics.rst:524
 msgid "Comments"
@@ -749,11 +749,11 @@ msgid ""
 "Every explicit markup block which isn't a valid markup construct (like "
 "the footnotes above) is regarded as a comment (:duref:`ref <comments>`)."
 "  For example::"
-msgstr ""
+msgstr "每个显式标记块都不是有效的标记结构(如上面的脚注)，它被视为注释(:duref:`ref <comments>`)。例如::"
 
 #: ../../usage/restructuredtext/basics.rst:532
 msgid "You can indent text after a comment start to form multiline comments::"
-msgstr "You can indent text after a comment start to form multiline comments::"
+msgstr "您可以在评论开始后缩进文本以形成多行注释::"
 
 #: ../../usage/restructuredtext/basics.rst:542
 msgid "Source encoding"
@@ -766,7 +766,7 @@ msgid ""
 "one has to specify an encoding.  Sphinx assumes source files to be "
 "encoded in UTF-8 by default; you can change this with the "
 ":confval:`source_encoding` config value."
-msgstr ""
+msgstr "由于在reST中包含特殊字符(例如em破折号或版权符号)的最简单方法是将它们直接写为Unicode字符，因此必须指定编码。 Sphinx默认假设源文件以UTF-8编码;你可以用 :confval:`source_encoding` 配置值来改变它。"
 
 #: ../../usage/restructuredtext/basics.rst:551
 msgid "Gotchas"
@@ -776,7 +776,7 @@ msgstr "陷阱"
 msgid ""
 "There are some problems one commonly runs into while authoring reST "
 "documents:"
-msgstr ""
+msgstr "在编写reST文档时，通常会遇到一些问题:"
 
 #: ../../usage/restructuredtext/basics.rst:555
 msgid ""
@@ -784,18 +784,18 @@ msgid ""
 "be separated from the surrounding text by non-word characters, you have "
 "to use a backslash-escaped space to get around that.  See :duref:`the "
 "reference <substitution-definitions>` for the details."
-msgstr ""
+msgstr "**内联标记的分离:** 如上所述，内联标记跨度必须通过非单词字符与周围文本分开，您必须使用反斜杠转义空间来绕过它。有关详细信息，请参阅 :duref:`引用 <substitution-definitions>` 。"
 
 #: ../../usage/restructuredtext/basics.rst:560
 msgid ""
 "**No nested inline markup:** Something like ``*see :func:`foo`*`` is not "
 "possible."
-msgstr ""
+msgstr "**没有嵌套的内联标记:** 像 ``*see :func:`foo`*`` 这样的东西是不可能的。"
 
 #: ../../usage/restructuredtext/basics.rst:566
 msgid ""
 "When the default domain contains a :rst:dir:`class` directive, this "
 "directive will be shadowed.  Therefore, Sphinx re-exports it as :rst:dir"
 ":`rst-class`."
-msgstr ""
+msgstr "当默认域包含 :rst:dir:`class` 指令时，该指令将被遮蔽。因此，Sphinx将其重新输出为 :rst:dir:`rst-class` 。"
 

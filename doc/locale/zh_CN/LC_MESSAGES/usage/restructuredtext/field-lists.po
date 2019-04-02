@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../../usage/restructuredtext/field-lists.rst:5
 msgid "Field Lists"
-msgstr "Field Lists"
+msgstr "域清单"
 
 #: ../../usage/restructuredtext/field-lists.rst:7
 msgid ""
 ":ref:`As previously discussed <rst-field-lists>`, field lists are "
 "sequences of fields marked up like this::"
-msgstr ""
+msgstr ":ref:`如前所述 <rst-field-lists>`，字段列表是标记为这样的字段序列::"
 
 #: ../../usage/restructuredtext/field-lists.rst:12
 msgid ""
 "Sphinx provides custom behavior for bibliographic fields compared to "
 "docutils."
-msgstr ""
+msgstr "与docutils相比，Sphinx为书目字段提供自定义行为。"
 
 #: ../../usage/restructuredtext/field-lists.rst:17
 msgid "File-wide metadata"
@@ -46,11 +46,11 @@ msgid ""
 "environment as document metadata and is not displayed in the output; a "
 "field list appearing after the document title will be part of the "
 "*docinfo* as normal and will be displayed in the output."
-msgstr ""
+msgstr "靠近文件顶部的字段列表通常由docutils解析为 *docinfo* ，它通常用于记录作者，发布日期和其他元数据。但是，在Sphinx中，任何其他标记之前的字段列表将作为文档元数据从 *docinfo* 移动到Sphinx环境，并且不会显示在输出中;文档标题后出现的字段列表将正常显示在 *docinfo* 中，并将显示在输出中。"
 
 #: ../../usage/restructuredtext/field-lists.rst:26
 msgid "At the moment, these metadata fields are recognized:"
-msgstr "At the moment, these metadata fields are recognized:"
+msgstr "目前，这些元数据字段被识别:"
 
 #: ../../usage/restructuredtext/field-lists.rst:33
 msgid "``tocdepth``"
@@ -58,7 +58,7 @@ msgstr "``tocdepth``"
 
 #: ../../usage/restructuredtext/field-lists.rst:29
 msgid "The maximum depth for a table of contents of this file. ::"
-msgstr "The maximum depth for a table of contents of this file. ::"
+msgstr "此文件的目录的最大深度。 ::"
 
 #: ../../usage/restructuredtext/field-lists.rst:39
 msgid "``nocomments``"
@@ -68,7 +68,7 @@ msgstr "``nocomments``"
 msgid ""
 "If set, the web application won't display a comment form for a page "
 "generated from this source file. ::"
-msgstr ""
+msgstr "如果设置，Web应用程序将不会显示从此源文件生成的页面的注释表单。 ::"
 
 #: ../../usage/restructuredtext/field-lists.rst:46
 msgid "``orphan``"
@@ -78,5 +78,5 @@ msgstr "``orphan``"
 msgid ""
 "If set, warnings about this file not being included in any toctree will "
 "be suppressed. ::"
-msgstr ""
+msgstr "如果设置，将禁止有关此文件的警告未包含在任何toctree中。 ::"
 

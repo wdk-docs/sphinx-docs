@@ -20,7 +20,7 @@ version = sphinx.__display_version__
 release = version
 show_authors = True
 
-html_theme = 'sphinx13'
+html_theme = 'sphinx_rtd_theme'
 html_theme_path = ['_themes']
 modindex_common_prefix = ['sphinx.']
 html_static_path = ['_static']
