@@ -25,7 +25,7 @@ msgstr "角色"
 msgid ""
 "Sphinx uses interpreted text roles to insert semantic markup into "
 "documents. They are written as ``:rolename:`content```."
-msgstr ""
+msgstr "Sphinx使用解释型文本角色将语义标记插入到文档中。它们被写成 ``:rolename:`content``` 。"
 
 #: ../../usage/restructuredtext/roles.rst:12
 msgid ""
@@ -34,11 +34,11 @@ msgid ""
 ":confval:`default_role` config value to set it to a known role -- the "
 ":rst:role:`any` role to find anything or the :rst:role:`py:obj` role to "
 "find Python objects are very useful for this."
-msgstr ""
+msgstr "默认角色(```content```)默认没有特殊含义。您可以随意使用它，例如:变量名;使用 :confval:`default_role` 配置值将其设置为已知角色 - :rst:role:`any` 角色可以找到任何东西，或者 :rst:role:`py:obj` 角色来查找Python对象对此非常有用。"
 
 #: ../../usage/restructuredtext/roles.rst:18
 msgid "See :doc:`/usage/restructuredtext/domains` for roles added by domains."
-msgstr "See :doc:`/usage/restructuredtext/domains` for roles added by domains."
+msgstr "请参阅 :doc:`/usage/restructuredtext/domains` ，了解域添加的角色。"
 
 #: ../../usage/restructuredtext/roles.rst:24
 msgid "Cross-referencing syntax"
@@ -50,26 +50,26 @@ msgid ""
 "Basically, you only need to write ``:role:`target```, and a link will be "
 "created to the item named *target* of the type indicated by *role*.  The "
 "link's text will be the same as *target*."
-msgstr ""
+msgstr "交叉引用由许多语义解释的文本角色生成。基本上，您只需要编写 ``:role:`target``` ，并且将为 *role* 指示的类型 *target* 项创建一个链接。链接的文本将与 *target* 相同。"
 
 #: ../../usage/restructuredtext/roles.rst:31
 msgid ""
 "There are some additional facilities, however, that make cross-"
 "referencing roles more versatile:"
-msgstr ""
+msgstr "但是，还有一些额外的功能可以使交叉引用角色更加通用:"
 
 #: ../../usage/restructuredtext/roles.rst:34
 msgid ""
 "You may supply an explicit title and reference target, like in reST "
 "direct hyperlinks: ``:role:`title <target>``` will refer to *target*, but"
 " the link text will be *title*."
-msgstr ""
+msgstr "你可以提供一个明确的标题和引用目标，比如在reST直接超链接中: ``:role:`title <target>``` 将引用 *target* ，但是链接文本将是 *title* 。"
 
 #: ../../usage/restructuredtext/roles.rst:38
 msgid ""
 "If you prefix the content with ``!``, no reference/hyperlink will be "
 "created."
-msgstr ""
+msgstr "如果在内容前加上 ``！`` ，则不会创建引用/超链接。"
 
 #: ../../usage/restructuredtext/roles.rst:40
 msgid ""
@@ -78,13 +78,13 @@ msgid ""
 "will refer to ``Queue.Queue.get`` but only display ``get`` as the link "
 "text.  This does not work with all cross-reference roles, but is domain "
 "specific."
-msgstr ""
+msgstr "如果在内容前面添加 ``~`` ，则链接文本将只是目标的最后一个组件。例如， ``:py:meth:`~Queue.Queue.get``` 将引用 ``Queue.Queue.get`` 但仅显示 ``get`` 作为链接文本。这不适用于所有交叉引用角色，但是特定于域。"
 
 #: ../../usage/restructuredtext/roles.rst:45
 msgid ""
 "In HTML output, the link's ``title`` attribute (that is e.g. shown as a "
 "tool-tip on mouse-hover) will always be the full target name."
-msgstr ""
+msgstr "在HTML输出中，链接的 ``title`` 属性(例如在鼠标悬停时显示为工具提示)将始终是完整的目标名称。"
 
 #: ../../usage/restructuredtext/roles.rst:52
 msgid "Cross-referencing anything"
@@ -94,19 +94,19 @@ msgstr "交叉引用任何东西"
 msgid ""
 "This convenience role tries to do its best to find a valid target for its"
 " reference text."
-msgstr ""
+msgstr "这个便利角色试图尽力为其参考文本找到有效的目标。"
 
 #: ../../usage/restructuredtext/roles.rst:61
 msgid ""
 "First, it tries standard cross-reference targets that would be referenced"
 " by :rst:role:`doc`, :rst:role:`ref` or :rst:role:`option`."
-msgstr ""
+msgstr "首先，它尝试引用的标准交叉引用目标 :rst:role:`doc` ， :rst:role:`ref` 或 :rst:role:`option` 。"
 
 #: ../../usage/restructuredtext/roles.rst:64
 msgid ""
 "Custom objects added to the standard domain by extensions (see "
 ":meth:`.Sphinx.add_object_type`) are also searched."
-msgstr ""
+msgstr "还会搜索通过扩展添加到标准域的自定义对象(请参阅 :meth:`.Sphinx.add_object_type` )。"
 
 #: ../../usage/restructuredtext/roles.rst:67
 msgid ""
@@ -114,34 +114,34 @@ msgid ""
 "the domains how specific a match must be.  For example, in the Python "
 "domain a reference of ``:any:`Builder``` would match the "
 "``sphinx.builders.Builder`` class."
-msgstr ""
+msgstr "然后，它在所有加载的域中查找对象(目标)。这取决于匹配必须具体的域。例如，在Python域中， ``:any:`Builder``` 的引用将匹配 ``sphinx.builders.Builder`` 类。"
 
 #: ../../usage/restructuredtext/roles.rst:72
 msgid ""
 "If none or multiple targets are found, a warning will be emitted.  In the"
 " case of multiple targets, you can change \"any\" to a specific role."
-msgstr ""
+msgstr "如果未找到任何目标或多个目标，则会发出警告。对于多个目标，您可以将 \"any\" 更改为特定角色。"
 
 #: ../../usage/restructuredtext/roles.rst:75
 msgid ""
 "This role is a good candidate for setting :confval:`default_role`.  If "
 "you do, you can write cross-references without a lot of markup overhead."
 "  For example, in this Python function documentation ::"
-msgstr ""
+msgstr "这个角色是设置的好方法 :confval:`default_role` 。如果这样做，您可以编写交叉引用，而不会产生大量的标记开销。例如，在这个Python函数文档::"
 
 #: ../../usage/restructuredtext/roles.rst:84
 msgid ""
 "there could be references to a glossary term (usually "
 "``:term:`handler```), a Python module (usually ``:py:mod:`signal``` or "
 "``:mod:`signal```) and a section (usually ``:ref:`about-signals```)."
-msgstr ""
+msgstr "可以引用词汇表术语(通常是 ``:term:`handler``` )，一个Python模块(通常是 ``:py:mod:`signal``` 或 ``:mod:`signal``` )和一节(通常是 ``:ref:`about-signals``` )。"
 
 #: ../../usage/restructuredtext/roles.rst:88
 msgid ""
 "The :rst:role:`any` role also works together with the "
 ":mod:`~sphinx.ext.intersphinx` extension: when no local cross-reference "
 "is found, all object types of intersphinx inventories are also searched."
-msgstr ""
+msgstr ":rst:role:`any` 角色也与 :mod:`~sphinx.ext.intersphinx` 扩展一起使用: 当没有找到本地交叉引用时，也会搜索所有对象类型的 intersphinx 库存。"
 
 #: ../../usage/restructuredtext/roles.rst:93
 msgid "Cross-referencing objects"
@@ -149,7 +149,7 @@ msgstr "交叉引用对象"
 
 #: ../../usage/restructuredtext/roles.rst:95
 msgid "These roles are described with their respective domains:"
-msgstr "These roles are described with their respective domains:"
+msgstr "这些角色用各自的域描述:"
 
 #: ../../usage/restructuredtext/roles.rst:97
 msgid ":ref:`Python <python-roles>`"
@@ -173,7 +173,7 @@ msgstr ":ref:`ReST <rst-roles>`"
 
 #: ../../usage/restructuredtext/roles.rst:107
 msgid "Cross-referencing arbitrary locations"
-msgstr "Cross-referencing arbitrary locations"
+msgstr "交叉引用任意位置"
 
 #: ../../usage/restructuredtext/roles.rst:111
 msgid ""
@@ -181,49 +181,49 @@ msgid ""
 "standard reST labels are used.  For this to work label names must be "
 "unique throughout the entire documentation.  There are two ways in which "
 "you can refer to labels:"
-msgstr ""
+msgstr "为了支持对任何文档中任意位置的交叉引用，使用标准reST标签。为此，标签名称在整个文档中必须是唯一的。您可以通过两种方式引用标签:"
 
 #: ../../usage/restructuredtext/roles.rst:116
 msgid ""
 "If you place a label directly before a section title, you can reference "
 "to it with ``:ref:`label-name```.  For example::"
-msgstr ""
+msgstr "如果在标题之前直接放置标签，可以用 ``:ref:`label-name``` 引用它。例如::"
 
 #: ../../usage/restructuredtext/roles.rst:128
 msgid ""
 "The ``:ref:`` role would then generate a link to the section, with the "
 "link title being \"Section to cross-reference\".  This works just as well"
 " when section and reference are in different source files."
-msgstr ""
+msgstr "然后 ``:ref:`` 角色将生成一个指向该部分的链接，链接标题为 \"要交叉引用的部分\" 。当section和reference在不同的源文件中时，这也可以正常工作。"
 
 #: ../../usage/restructuredtext/roles.rst:132
 msgid "Automatic labels also work with figures. For example::"
-msgstr "Automatic labels also work with figures. For example::"
+msgstr "自动标签也适用于数字。例如::"
 
 #: ../../usage/restructuredtext/roles.rst:140
 msgid ""
 "In this case, a  reference ``:ref:`my-figure``` would insert a reference "
 "to the figure with link text \"Figure caption\"."
-msgstr ""
+msgstr "在这种情况下，引用 ``:ref:`my-figure``` 将插入带有链接文本\ \"Figure caption\" 的图形的引用。"
 
 #: ../../usage/restructuredtext/roles.rst:143
 msgid ""
 "The same works for tables that are given an explicit caption using the "
 ":dudir:`table` directive."
-msgstr ""
+msgstr "对于使用 :dudir:`table` 指令给出显式标题的表，同样适用。"
 
 #: ../../usage/restructuredtext/roles.rst:146
 msgid ""
 "Labels that aren't placed before a section title can still be referenced,"
 " but you must give the link an explicit title, using this syntax: "
 "``:ref:`Link title <label-name>```."
-msgstr ""
+msgstr "仍未引用未放置在节标题之前的标签，但您必须使用以下语法为链接指定显式标题: ``:ref:`Link title <label-name>``` 。"
 
 #: ../../usage/restructuredtext/roles.rst:152
 msgid ""
 "Reference labels must start with an underscore. When referencing a label,"
 " the underscore must be omitted (see examples above)."
-msgstr ""
+msgstr "参考标签必须以下划线开头。引用标签时，必须省略下划线(参见上面的示例)。"
 
 #: ../../usage/restructuredtext/roles.rst:155
 msgid ""
@@ -231,15 +231,15 @@ msgid ""
 "sections (like ```Section title`_``) because it works across files, when "
 "section headings are changed, will raise warnings if incorrect, and works"
 " for all builders that support cross-references."
-msgstr ""
+msgstr "使用 :rst:role:`ref` 被建议通过标准的reStructuredText链接到部分(比如 ```Section title`_`` )，因为它适用于文件，当部分标题发生变化时，如果不正确则会发出警告，并且适用于所有支持交叉引用的构建器。"
 
 #: ../../usage/restructuredtext/roles.rst:162
 msgid "Cross-referencing documents"
-msgstr "Cross-referencing documents"
+msgstr "交叉引用文档"
 
 #: ../../usage/restructuredtext/roles.rst:166
 msgid "There is also a way to directly link to documents:"
-msgstr "There is also a way to directly link to documents:"
+msgstr "还有一种方法可以直接链接到文档:"
 
 #: ../../usage/restructuredtext/roles.rst:170
 msgid ""
@@ -249,24 +249,24 @@ msgid ""
 "link refers to ``sketches/parrot``.  If the reference is "
 "``:doc:`/people``` or ``:doc:`../people```, the link refers to "
 "``people``."
-msgstr ""
+msgstr "链接到指定的文件;文档名称可以绝对或相对方式指定。例如，如果引用 ``:doc:`parrot``` 出现在文档 ``sketches / index`` 中，则链接引用 ``sketches / parrot`` 。如果引用是 ``:doc:`/ people``` 或 ``:doc:`../ people``` ，则链接引用``people``。"
 
 #: ../../usage/restructuredtext/roles.rst:176
 msgid ""
 "If no explicit link text is given (like usual: ``:doc:`Monty Python "
 "members </people>```), the link caption will be the title of the given "
 "document."
-msgstr ""
+msgstr "如果没有给出明确的链接文本(比如通常: ``:doc:`Monty Python成员</ people>``` )，链接标题将是给定文档的标题。"
 
 #: ../../usage/restructuredtext/roles.rst:181
 msgid "Referencing downloadable files"
-msgstr "Referencing downloadable files"
+msgstr "引用可下载文件"
 
 #: ../../usage/restructuredtext/roles.rst:187
 msgid ""
 "This role lets you link to files within your source tree that are not "
 "reST documents that can be viewed, but files that can be downloaded."
-msgstr ""
+msgstr "此角色允许您链接到源树中的文件，这些文件不是可以查看的reST文档，而是可以下载的文件。"
 
 #: ../../usage/restructuredtext/roles.rst:190
 msgid ""
@@ -274,7 +274,7 @@ msgid ""
 "inclusion in the output when building (obviously, for HTML output only). "
 "All downloadable files are put into the ``_downloads`` subdirectory of "
 "the output directory; duplicate filenames are handled."
-msgstr ""
+msgstr "使用此角色时，引用的文件会在构建时自动标记为包含在输出中(显然，仅适用于HTML输出)。所有可下载的文件都放在输出目录的 ``_downloads`` 子目录中;处理重复的文件名。"
 
 #: ../../usage/restructuredtext/roles.rst:195
 msgid "An example::"
@@ -285,29 +285,29 @@ msgid ""
 "The given filename is usually relative to the directory the current "
 "source file is contained in, but if it absolute (starting with ``/``), it"
 " is taken as relative to the top source directory."
-msgstr ""
+msgstr "给定的文件名通常是相对于当前源文件所包含的目录，但如果它是绝对的(以 ``/`` 开头)，则它被视为相对于顶级源目录。"
 
 #: ../../usage/restructuredtext/roles.rst:203
 msgid ""
 "The ``example.py`` file will be copied to the output directory, and a "
 "suitable link generated to it."
-msgstr ""
+msgstr "``example.py`` 文件将被复制到输出目录，并生成一个合适的链接。"
 
 #: ../../usage/restructuredtext/roles.rst:206
 msgid ""
 "Not to show unavailable download links, you should wrap whole paragraphs "
 "that have this role::"
-msgstr ""
+msgstr "不显示不可用的下载链接，您应该包含具有此角色的整个段落::"
 
 #: ../../usage/restructuredtext/roles.rst:214
 msgid "Cross-referencing figures by figure number"
-msgstr "Cross-referencing figures by figure number"
+msgstr "按图号交叉引用数字"
 
 #: ../../usage/restructuredtext/roles.rst:218
 msgid ""
 "`numref` role can also refer sections. And `numref` allows `{name}` for "
 "the link text."
-msgstr ""
+msgstr " `numref` 角色也可以参考部分。并且 `numref` 允许链接文本使用 `{name}` 。"
 
 #: ../../usage/restructuredtext/roles.rst:224
 msgid ""
@@ -315,7 +315,7 @@ msgid ""
 "standard reST labels are used.  When you use this role, it will insert a "
 "reference to the figure with link text by its figure number like \"Fig. "
 "1.1\"."
-msgstr ""
+msgstr "链接到指定的数字，表格，代码块和部分;使用标准的reST标签。当您使用此角色时，它将插入带有链接文本的图形的引用，其图形编号如 \"图1.1\" 。"
 
 #: ../../usage/restructuredtext/roles.rst:228
 #, python-format
@@ -326,53 +326,53 @@ msgid ""
 "figure number and  `{name}` by the figure caption. If no explicit link "
 "text is given, the :confval:`numfig_format` setting is used as fall-back "
 "default."
-msgstr ""
+msgstr "如果给出了明确的链接文本(像往常一样: ``:numref:`Sphinx的图像(图。％s)<my-figure>``` )，链接标题将作为引用的标题。作为占位符， `％s`和`{number}` 被图形标题替换为图形编号和 `{name}` 。如果没有给出明确的链接文本，则 :confval:`numfig_format` 设置用作后备默认值。"
 
 #: ../../usage/restructuredtext/roles.rst:235
 msgid ""
 "If :confval:`numfig` is ``False``, figures are not numbered, so this role"
 " inserts not a reference but the label or the link text."
-msgstr ""
+msgstr "如果 :confval:`numfig` 是 ``False`` ，数字没有编号，所以这个角色不插入引用，而是插入标签或链接文本。"
 
 #: ../../usage/restructuredtext/roles.rst:239
 msgid "Cross-referencing other items of interest"
-msgstr "Cross-referencing other items of interest"
+msgstr "交叉引用其他感兴趣的项目"
 
 #: ../../usage/restructuredtext/roles.rst:241
 msgid ""
 "The following roles do possibly create a cross-reference, but do not "
 "refer to objects:"
-msgstr ""
+msgstr "以下角色可能会创建交叉引用，但不引用对象:"
 
 #: ../../usage/restructuredtext/roles.rst:246
 msgid ""
 "An environment variable.  Index entries are generated.  Also generates a "
 "link to the matching :rst:dir:`envvar` directive, if it exists."
-msgstr ""
+msgstr "环境变量。生成索引条目。还会生成匹配的链接 :rst:dir:`envvar` 指令(如果存在)。"
 
 #: ../../usage/restructuredtext/roles.rst:251
 msgid ""
 "The name of a grammar token (used to create links between "
 ":rst:dir:`productionlist` directives)."
-msgstr ""
+msgstr "语法标记的名称(用于创建 :rst:dir:`productionlist` 指令之间的链接)。"
 
 #: ../../usage/restructuredtext/roles.rst:256
 msgid ""
 "The name of a keyword in Python.  This creates a link to a reference "
 "label with that name, if it exists."
-msgstr ""
+msgstr "Python中关键字的名称。这将创建一个指向具有该名称的引用标签的链接(如果存在)。"
 
 #: ../../usage/restructuredtext/roles.rst:261
 msgid ""
 "A command-line option to an executable program.  This generates a link to"
 " a :rst:dir:`option` directive, if it exists."
-msgstr ""
+msgstr "可执行程序的命令行选项。这会生成一个指向 :rst:dir:`option` 指令的链接(如果存在)。"
 
 #: ../../usage/restructuredtext/roles.rst:265
 msgid ""
 "The following role creates a cross-reference to a term in a "
 ":ref:`glossary <glossary-directive>`:"
-msgstr ""
+msgstr "以下角色在以下内容中创建对术语的交叉引用 :ref:`glossary <glossary-directive>` :"
 
 #: ../../usage/restructuredtext/roles.rst:270
 msgid ""
@@ -381,13 +381,13 @@ msgid ""
 "definitions.  It does not have to be in the same file as the ``term`` "
 "markup, for example the Python docs have one global glossary in the "
 "``glossary.rst`` file."
-msgstr ""
+msgstr "参考词汇表中的术语。使用 ``glossary`` 指令创建词汇表，该指令包含带有术语和定义的定义列表。它不必与 ``term`` 标记在同一个文件中，例如Python文档在 ``glossary.rst`` 文件中有一个全局词汇表。"
 
 #: ../../usage/restructuredtext/roles.rst:276
 msgid ""
 "If you use a term that's not explained in a glossary, you'll get a "
 "warning during build."
-msgstr ""
+msgstr "如果您使用术语表中未解释的术语，您将在构建期间收到警告。"
 
 #: ../../usage/restructuredtext/roles.rst:281
 msgid "Math"
@@ -395,54 +395,54 @@ msgstr "Math"
 
 #: ../../usage/restructuredtext/roles.rst:285
 msgid "Role for inline math.  Use like this::"
-msgstr "Role for inline math.  Use like this::"
+msgstr "内联数学的作用。像这样使用::"
 
 #: ../../usage/restructuredtext/roles.rst:291
 msgid "Same as :rst:role:`math:numref`."
-msgstr "Same as :rst:role:`math:numref`."
+msgstr "同样如下 :rst:role:`math:numref` 。"
 
 #: ../../usage/restructuredtext/roles.rst:295
 msgid "Other semantic markup"
-msgstr "Other semantic markup"
+msgstr "其他语义标记"
 
 #: ../../usage/restructuredtext/roles.rst:297
 msgid ""
 "The following roles don't do anything special except formatting the text "
 "in a different style:"
-msgstr ""
+msgstr "除了以不同的样式格式化文本之外，以下角色不会做任何特殊操作:"
 
 #: ../../usage/restructuredtext/roles.rst:302
 msgid ""
 "An abbreviation.  If the role content contains a parenthesized "
 "explanation, it will be treated specially: it will be shown in a tool-tip"
 " in HTML, and output only once in LaTeX."
-msgstr ""
+msgstr "缩写。如果角色内容包含带括号的解释，则将对其进行特殊处理:它将以HTML格式显示在工具提示中，并在LaTeX中仅输出一次。"
 
 #: ../../usage/restructuredtext/roles.rst:306
 msgid "Example: ``:abbr:`LIFO (last-in, first-out)```."
-msgstr "Example: ``:abbr:`LIFO (last-in, first-out)```."
+msgstr "例: ``:abbr:`LIFO (last-in, first-out)``` ."
 
 #: ../../usage/restructuredtext/roles.rst:312
 msgid "The name of an OS-level command, such as ``rm``."
-msgstr "The name of an OS-level command, such as ``rm``."
+msgstr "操作系统级命令的名称，例如 ``rm`` 。"
 
 #: ../../usage/restructuredtext/roles.rst:316
 msgid ""
 "Mark the defining instance of a term in the text.  (No index entries are "
 "generated.)"
-msgstr ""
+msgstr "在文本中标记术语的定义实例。 (不生成索引条目。)"
 
 #: ../../usage/restructuredtext/roles.rst:321
 msgid ""
 "The name of a file or directory.  Within the contents, you can use curly "
 "braces to indicate a \"variable\" part, for example::"
-msgstr ""
+msgstr "文件或目录的名称。在内容中，您可以使用花括号来表示 \"变量\" 部分，例如::"
 
 #: ../../usage/restructuredtext/roles.rst:326
 msgid ""
 "In the built documentation, the ``x`` will be displayed differently to "
 "indicate that it is to be replaced by the Python minor version."
-msgstr ""
+msgstr "在构建的文档中， ``x`` 将以不同的方式显示，表示它将被Python次要版本替换。"
 
 #: ../../usage/restructuredtext/roles.rst:331
 msgid ""
@@ -452,14 +452,14 @@ msgid ""
 "libraries.  Any label used in the interface should be marked with this "
 "role, including button labels, window titles, field names, menu and menu "
 "selection names, and even values in selection lists."
-msgstr ""
+msgstr "作为交互式用户界面的一部分呈现的标签应使用 \"guilabel\" 标记。这包括来自基于文本的界面的标签，例如使用 :mod:`curses` 或其他基于文本的库创建的界面。界面中使用的任何标签都应标记为此角色，包括按钮标签，窗口标题，字段名称，菜单和菜单选择名称，甚至选择列表中的值。"
 
 #: ../../usage/restructuredtext/roles.rst:338
 msgid ""
 "An accelerator key for the GUI label can be included using an ampersand; "
 "this will be stripped and displayed underlined in the output (example: "
 "``:guilabel:`&Cancel```).  To include a literal ampersand, double it."
-msgstr ""
+msgstr "可以使用＆符号来包括GUI标签的加速键。这将被剥离并在输出中以下划线显示(例如: ``:guilabel:`＆Cancel``` )。要包括文字＆符号，请加倍。"
 
 #: ../../usage/restructuredtext/roles.rst:345
 msgid ""
@@ -470,7 +470,7 @@ msgid ""
 " example, an *xemacs* key sequence may be marked like ``:kbd:`C-x C-f```,"
 " but without reference to a specific application or platform, the same "
 "sequence should be marked as ``:kbd:`Control-x Control-f```."
-msgstr ""
+msgstr "标记一系列击键。密钥序列采用何种形式可能取决于平台或特定于应用程序的约定。如果没有相关约定，则应拼写修饰键的名称，以提高新用户和非母语人士的可访问性。例如，*xemacs* 键序列可以标记为 ``:kbd:`Cx Cf``` ，但是没有引用特定的应用程序或平台，相同的序列应该标记为 ``:kbd:`Control- x Control-f``` "
 
 #: ../../usage/restructuredtext/roles.rst:355
 msgid ""
@@ -481,18 +481,18 @@ msgid ""
 "entered in the same way it would normally be found in practice, with the "
 "camel-casing conventions being preferred where there is more than one "
 "common usage. For example: ``:mailheader:`Content-Type```."
-msgstr ""
+msgstr "RFC 822样式邮件头的名称。此标记并不意味着标题正在电子邮件消息中使用，但可用于引用相同 \"样式\" 的任何标题。这也用于各种MIME规范定义的标头。标题名称的输入方式应与通常在实践中找到的方式相同，在有多种常用用法的情况下，首选的是驼峰套管约定。例如: ``:mailheader:`Content-Type``` 。"
 
 #: ../../usage/restructuredtext/roles.rst:365
 msgid "The name of a :command:`make` variable."
-msgstr "The name of a :command:`make` variable."
+msgstr ":command:`make` 变量的名称。"
 
 #: ../../usage/restructuredtext/roles.rst:369
 msgid ""
 "A reference to a Unix manual page including the section, e.g. "
 "``:manpage:`ls(1)```. Creates a hyperlink to an external site rendering "
 "the manpage if :confval:`manpages_url` is defined."
-msgstr ""
+msgstr "对Unix手册页的引用，包括例如 ``:manpage:`LS(1)``` 。如果 :confval:`manpages_url` 已定义，则创建指向外部站点的超链接，呈现联机帮助页。"
 
 #: ../../usage/restructuredtext/roles.rst:375
 msgid ""
@@ -501,34 +501,34 @@ msgid ""
 "selecting submenus and choosing a specific operation, or any subsequence "
 "of such a sequence.  The names of individual selections should be "
 "separated by ``-->``."
-msgstr ""
+msgstr "应使用 ``menuselection`` 角色标记菜单选择。这用于标记完整的菜单选择序列，包括选择子菜单和选择特定操作，或此类序列的任何子序列。各个选择的名称应该用 ``-->`` 分隔。"
 
 #: ../../usage/restructuredtext/roles.rst:381
 msgid "For example, to mark the selection \"Start > Programs\", use this markup::"
-msgstr "For example, to mark the selection \"Start > Programs\", use this markup::"
+msgstr "例如，要标记选择 \"Start > Programs\" ，请使用此标记::"
 
 #: ../../usage/restructuredtext/roles.rst:385
 msgid ""
 "When including a selection that includes some trailing indicator, such as"
 " the ellipsis some operating systems use to indicate that the command "
 "opens a dialog, the indicator should be omitted from the selection name."
-msgstr ""
+msgstr "当包括一些包含一些尾随指示符的选择时，例如某些操作系统用来指示命令打开对话框的省略号时，应从选择名称中省略该指示符。"
 
 #: ../../usage/restructuredtext/roles.rst:389
 msgid ""
 "``menuselection`` also supports ampersand accelerators just like "
 ":rst:role:`guilabel`."
-msgstr ""
+msgstr "``menuselection`` 也支持＆符加速器，如: :rst:role:`guilabel`。"
 
 #: ../../usage/restructuredtext/roles.rst:394
 msgid ""
 "The name of a MIME type, or a component of a MIME type (the major or "
 "minor portion, taken alone)."
-msgstr ""
+msgstr "MIME类型的名称，或MIME类型的组件(主要或次要部分，单独使用)。"
 
 #: ../../usage/restructuredtext/roles.rst:399
 msgid "The name of a Usenet newsgroup."
-msgstr "The name of a Usenet newsgroup."
+msgstr "Usenet新闻组的名称。"
 
 #: ../../usage/restructuredtext/roles.rst:401
 msgid "待处理"
@@ -536,18 +536,18 @@ msgstr "待处理"
 
 #: ../../usage/restructuredtext/roles.rst:401
 msgid "Is this not part of the standard domain?"
-msgstr "Is this not part of the standard domain?"
+msgstr "这不是标准域的一部分吗？"
 
 #: ../../usage/restructuredtext/roles.rst:405
 msgid ""
 "The name of an executable program.  This may differ from the file name "
 "for the executable for some platforms.  In particular, the ``.exe`` (or "
 "other) extension should be omitted for Windows programs."
-msgstr ""
+msgstr "可执行程序的名称。这可能与某些平台的可执行文件的文件名不同。特别是，对于Windows程序，应省略 ``.exe`` (或其他)扩展名。"
 
 #: ../../usage/restructuredtext/roles.rst:411
 msgid "A regular expression. Quotes should not be included."
-msgstr "A regular expression. Quotes should not be included."
+msgstr "正则表达式。报价不应包括在内。"
 
 #: ../../usage/restructuredtext/roles.rst:415
 msgid ""
@@ -555,25 +555,25 @@ msgid ""
 "curly braces to indicate a \"variable\" part, as in :rst:role:`file`.  "
 "For example, in ``:samp:`print 1+{variable}```, the part ``variable`` "
 "would be emphasized."
-msgstr ""
+msgstr "一段文字文本，例如代码。在内容中，您可以使用花括号来表示 \"变量\" 部分，如 :rst:role:`file` 。例如，在  ``:samp:`print 1+ {variable}``` 中，将强调部分 ``variable`` 。"
 
 #: ../../usage/restructuredtext/roles.rst:420
 msgid ""
 "If you don't need the \"variable part\" indication, use the standard "
 "````code```` instead."
-msgstr ""
+msgstr "如果您不需要 \"可变部分\" 指示，请使用标准的 ````code```` 。"
 
 #: ../../usage/restructuredtext/roles.rst:423
 msgid "Allowed to escape curly braces with backslash"
-msgstr "Allowed to escape curly braces with backslash"
+msgstr "允许用反斜杠转义花括号"
 
 #: ../../usage/restructuredtext/roles.rst:426
 msgid "There is also an :rst:role:`index` role to generate index entries."
-msgstr "There is also an :rst:role:`index` role to generate index entries."
+msgstr "还有一个 :rst:role:`index` 角色来生成索引条目。"
 
 #: ../../usage/restructuredtext/roles.rst:428
 msgid "The following roles generate external links:"
-msgstr "The following roles generate external links:"
+msgstr "以下角色生成外部链接:"
 
 #: ../../usage/restructuredtext/roles.rst:432
 msgid ""
@@ -581,7 +581,7 @@ msgid ""
 " index entries. The text \"PEP *number*\\ \" is generated; in the HTML "
 "output, this text is a hyperlink to an online copy of the specified PEP."
 "  You can link to a specific section by saying ``:pep:`number#anchor```."
-msgstr ""
+msgstr "对Python Enhancement Proposal的引用。这会生成适当的索引条目。生成文本 \"PEP *number*\\ \" ;在HTML输出中，此文本是指向指定PEP的联机副本的超链接。你可以通过说 ``:pep:`number＃anchor``` 链接到特定的部分。"
 
 #: ../../usage/restructuredtext/roles.rst:439
 msgid ""
@@ -590,13 +590,13 @@ msgid ""
 "the HTML output, this text is a hyperlink to an online copy of the "
 "specified RFC.  You can link to a specific section by saying "
 "``:rfc:`number#anchor```."
-msgstr ""
+msgstr "对Internet请求注释的引用。这会生成适当的索引条目。生成文本 \"RFC *number*\\ \" ;在HTML输出中，此文本是指向指定RFC的联机副本的超链接。你可以通过说 ``:rfc:`number＃anchor``` 链接到特定的部分。"
 
 #: ../../usage/restructuredtext/roles.rst:445
 msgid ""
 "Note that there are no special roles for including hyperlinks as you can "
 "use the standard reST markup for that purpose."
-msgstr ""
+msgstr "请注意，包含超链接没有特殊角色，因为您可以使用标准reST标记来实现此目的。"
 
 #: ../../usage/restructuredtext/roles.rst:452
 msgid "Substitutions"
@@ -606,21 +606,21 @@ msgstr "Substitutions"
 msgid ""
 "The documentation system provides three substitutions that are defined by"
 " default. They are set in the build configuration file."
-msgstr ""
+msgstr "文档系统提供默认定义的三个替换。它们在构建配置文件中设置。"
 
 #: ../../usage/restructuredtext/roles.rst:459
 msgid ""
 "Replaced by the project release the documentation refers to.  This is "
 "meant to be the full version string including alpha/beta/release "
 "candidate tags, e.g. ``2.5.2b3``.  Set by :confval:`release`."
-msgstr ""
+msgstr "替换为项目发布的文档引用。这意味着是完整版本字符串，包括alpha/beta/release候选标签，例如 ``2.5.2b3`` 。设置 :confval:`release` 。"
 
 #: ../../usage/restructuredtext/roles.rst:465
 msgid ""
 "Replaced by the project version the documentation refers to. This is "
 "meant to consist only of the major and minor version parts, e.g. ``2.5``,"
 " even for version 2.5.1.  Set by :confval:`version`."
-msgstr ""
+msgstr "由文档引用的项目版本替换。这仅仅包括主要和次要版本部分，例如``2.5``，即使是版本2.5.1。设置方 :confval:`version` 。"
 
 #: ../../usage/restructuredtext/roles.rst:471
 msgid ""
@@ -628,7 +628,7 @@ msgid ""
 " or the date set in the build configuration file.  Normally has the "
 "format ``April 14, 2007``.  Set by :confval:`today_fmt` and "
 ":confval:`today`."
-msgstr ""
+msgstr "替换为今天的日期(读取文档的日期)或构建配置文件中设置的日期。通常格式为 ``April 14, 2007`` 。设置方式 :confval:`today_fmt` 和 :confval:`today` 。"
 
 #~ msgid "Todo"
 #~ msgstr ""

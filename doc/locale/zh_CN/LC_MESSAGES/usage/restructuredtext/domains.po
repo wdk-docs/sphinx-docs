@@ -31,11 +31,7 @@ msgid ""
 "somewhat popular, interest developed in using it for many different "
 "purposes: C/C++ projects, JavaScript, or even reStructuredText markup "
 "(like in this documentation)."
-msgstr ""
-"最初，Sphinx是为单个项目构思的，即Python语言的文档。不久之后，它作为一个文档工具提供给每个人，但Python模块的文档仍然内置 -- "
-"最基本的指令，如 "
-"``function``，是为Python对象设计的。由于Sphinx已经变得有些受欢迎，因此将其用于许多不同目的的兴趣：C/C++ "
-"项目，JavaScript，甚至是reStructuredText 标记（如本文档中所述）。"
+msgstr "最初，Sphinx是为单个项目构思的，即Python语言的文档。不久之后，它作为一个文档工具提供给每个人，但Python模块的文档仍然内置 - 最基本的指令，如 ``function`` ，是为Python对象设计的。由于Sphinx已经变得有些受欢迎，因此将其用于许多不同目的的兴趣: C/C++ 项目，JavaScript，甚至是reStructuredText标记(如本文档中所述)。"
 
 #: ../../usage/restructuredtext/domains.rst:17
 msgid ""
@@ -43,7 +39,7 @@ msgid ""
 "documentation of projects using different programming languages or even "
 "ones not supported by the main Sphinx distribution, by providing a "
 "**domain** for every such purpose."
-msgstr ""
+msgstr "虽然这总是可行的，但现在通过为每个此类目的提供 **domain** ，可以更轻松地轻松支持使用不同编程语言的项目文档，甚至是主要Sphinx发行版不支持的项目文档。"
 
 #: ../../usage/restructuredtext/domains.rst:22
 msgid ""
@@ -53,7 +49,7 @@ msgid ""
 "and role names in a domain have names like ``domain:name``, e.g. "
 "``py:function``.  Domains can also provide custom indices (like the "
 "Python Module Index)."
-msgstr ""
+msgstr "域是一组标签(reStructuredText :term:`directive`\\ s and :term:`role`\\ s)，用于描述和链接 :term:`object`\\ s ，属于一起，例如编程语言的元素。域中的指令和角色名称具有诸如 ``domain:name`` 之类的名称，例如 ``py:function`` 。域还可以提供自定义索引(例如Python模块索引)。"
 
 #: ../../usage/restructuredtext/domains.rst:28
 msgid ""
@@ -61,18 +57,18 @@ msgid ""
 "documentation wants to refer to e.g. C++ and Python classes.  It also "
 "means that extensions that support the documentation of whole new "
 "languages are much easier to write."
-msgstr ""
+msgstr "拥有域意味着当一组文档想要引用时，没有命名问题。 C++ 和 Python 类。这也意味着支持全新语言文档的扩展更容易编写。"
 
 #: ../../usage/restructuredtext/domains.rst:33
 msgid ""
 "This section describes what the domains that are included with Sphinx "
 "provide. The domain API is documented as well, in the section :ref"
 ":`domain-api`."
-msgstr ""
+msgstr "本节介绍Sphinx提供的域名。域API也在以下部分中记录 :ref:`domain-api` 。"
 
 #: ../../usage/restructuredtext/domains.rst:40
 msgid "Basic Markup"
-msgstr "Basic Markup"
+msgstr "基本标记"
 
 #: ../../usage/restructuredtext/domains.rst:42
 msgid ""
@@ -83,35 +79,35 @@ msgid ""
 " version makes entries in the general index; if no index entry is "
 "desired, you can give the directive option flag ``:noindex:``.  An "
 "example using a Python domain directive::"
-msgstr ""
+msgstr "大多数域提供了许多 :dfn:`object description directives` ，用于描述模块提供的特定对象。每个指令都需要一个或多个签名来提供有关所描述内容的基本信息，内容应该是描述。基本版本在一般索引中生成条目;如果不需要索引条目，可以给出指令选项标志 ``:noindex:`` 。使用Python域指令的示例::"
 
 #: ../../usage/restructuredtext/domains.rst:54
 msgid ""
 "This describes the two Python functions ``spam`` and ``ham``.  (Note that"
 " when signatures become too long, you can break them if you add a "
 "backslash to lines that are continued in the next line.  Example::"
-msgstr ""
+msgstr "这描述了两个Python函数 ``spam`` 和 ``ham`` 。 (请注意，当签名变得太长时，如果向下一行中继续的行添加反斜杠，则可以将其分解。示例::"
 
 #: ../../usage/restructuredtext/domains.rst:62
 msgid "(This example also shows how to use the ``:noindex:`` flag.)"
-msgstr "(This example also shows how to use the ``:noindex:`` flag.)"
+msgstr "(这个例子还展示了如何使用 ``:noindex:`` 标志。)"
 
 #: ../../usage/restructuredtext/domains.rst:64
 msgid ""
 "The domains also provide roles that link back to these object "
 "descriptions. For example, to link to one of the functions described in "
 "the example above, you could say ::"
-msgstr ""
+msgstr "域还提供链接回这些对象描述的角色。例如，要链接到上面示例中描述的其中一个函数，您可以说::"
 
 #: ../../usage/restructuredtext/domains.rst:70
 msgid ""
 "As you can see, both directive and role names contain the domain name and"
 " the directive name."
-msgstr ""
+msgstr "如您所见，指令和角色名称都包含域名和指令名称。"
 
 #: ../../usage/restructuredtext/domains.rst:74
 msgid "Default Domain"
-msgstr "Default Domain"
+msgstr "默认域"
 
 #: ../../usage/restructuredtext/domains.rst:75
 msgid ""
@@ -119,52 +115,52 @@ msgid ""
 " not have to state again its name at each directive, role, etc... after "
 "having specified a default. This can be done either via the config value "
 ":confval:`primary_domain` or via this directive:"
-msgstr ""
+msgstr "对于仅从一个域描述对象的文档，作者在指定默认值后，不必再在每个指令，角色等处再次声明其名称。这可以通过配置值 :confval:`primary_domain` 或通过此指令来完成:"
 
 #: ../../usage/restructuredtext/domains.rst:82
 msgid ""
 "Select a new default domain.  While the :confval:`primary_domain` selects"
 " a global default, this only has an effect within the same file."
-msgstr ""
+msgstr "选择一个新的默认域。虽然 :confval:`primary_domain` 选择全局默认值，但这只在同一个文件中有效。"
 
 #: ../../usage/restructuredtext/domains.rst:85
 msgid ""
 "If no other default is selected, the Python domain (named ``py``) is the "
 "default one, mostly for compatibility with documentation written for "
 "older versions of Sphinx."
-msgstr ""
+msgstr "如果没有选择其他默认值，则Python域(名为 ``py`` )是默认值，主要是为了与为旧版Sphinx编写的文档兼容。"
 
 #: ../../usage/restructuredtext/domains.rst:89
 msgid ""
 "Directives and roles that belong to the default domain can be mentioned "
 "without giving the domain name, i.e. ::"
-msgstr ""
+msgstr "可以在不提供域名的情况下提及属于默认域的指令和角色，即::"
 
 #: ../../usage/restructuredtext/domains.rst:99
 msgid "Cross-referencing syntax"
-msgstr "Cross-referencing syntax"
+msgstr "交叉引用语法"
 
 #: ../../usage/restructuredtext/domains.rst:101
 msgid ""
 "For cross-reference roles provided by domains, the same facilities exist "
 "as for general cross-references.  See :ref:`xref-syntax`."
-msgstr ""
+msgstr "对于域提供的交叉引用角色，存在与一般交叉引用相同的工具。请参阅 :ref:`xref-syntax` 。"
 
 #: ../../usage/restructuredtext/domains.rst:104
 msgid "In short:"
-msgstr "In short:"
+msgstr "简而言之:"
 
 #: ../../usage/restructuredtext/domains.rst:106
 msgid ""
 "You may supply an explicit title and reference target: ``:role:`title "
 "<target>``` will refer to *target*, but the link text will be *title*."
-msgstr ""
+msgstr "你可以提供一个明确的标题和引用目标: ``:role:`title <target>``` 将引用 *target* ，但链接文本将是 *title* 。"
 
 #: ../../usage/restructuredtext/domains.rst:109
 msgid ""
 "If you prefix the content with ``!``, no reference/hyperlink will be "
 "created."
-msgstr ""
+msgstr "如果在内容前加上 ``！`` ，则不会创建引用/超链接。"
 
 #: ../../usage/restructuredtext/domains.rst:111
 msgid ""
@@ -172,17 +168,17 @@ msgid ""
 " component of the target.  For example, ``:py:meth:`~Queue.Queue.get``` "
 "will refer to ``Queue.Queue.get`` but only display ``get`` as the link "
 "text."
-msgstr ""
+msgstr "如果在内容前面添加 ``~`` ，则链接文本将只是目标的最后一个组件。例如， ``:py:meth:`~Queue.Queue.get``` 将引用 ``Queue.Queue.get`` 但仅显示 ``get`` 作为链接文本。"
 
 #: ../../usage/restructuredtext/domains.rst:117
 msgid "The Python Domain"
-msgstr "The Python Domain"
+msgstr "Python域"
 
 #: ../../usage/restructuredtext/domains.rst:119
 msgid ""
 "The Python domain (name **py**) provides the following directives for "
 "module declarations:"
-msgstr ""
+msgstr "Python域(名称 **py** )为模块声明提供以下指令:"
 
 #: ../../usage/restructuredtext/domains.rst:124
 msgid ""
@@ -190,11 +186,11 @@ msgid ""
 "package submodule, in which case the name should be fully qualified, "
 "including the package name).  It does not create content (like e.g. "
 ":rst:dir:`py:class` does)."
-msgstr ""
+msgstr "该指令标志着模块(或包子模块)描述的开始，在这种情况下，名称应该是完全限定的，包括包名称。它不会创建内容(例如 :rst:dir:`py:class` 确实如此)。"
 
 #: ../../usage/restructuredtext/domains.rst:129
 msgid "This directive will also cause an entry in the global module index."
-msgstr "This directive will also cause an entry in the global module index."
+msgstr "该指令还将导致全局模块索引中的条目。"
 
 #: ../../usage/restructuredtext/domains.rst:131
 msgid ""
@@ -204,19 +200,19 @@ msgid ""
 "identifiers; examples that are in use include \"IRIX\", \"Mac\", "
 "\"Windows\", and \"Unix\".  It is important to use a key which has "
 "already been used when applicable."
-msgstr ""
+msgstr "``platform`` 选项(如果存在)是一个逗号分隔的模块可用平台列表(如果它在所有平台上都可用，则应省略该选项)。密钥是短标识符;正在使用的示例包括 \"IRIX\" ，\"Mac\" ， \"Windows\" 和 \"Unix\" 。使用已适用的密钥非常重要。"
 
 #: ../../usage/restructuredtext/domains.rst:137
 msgid ""
 "The ``synopsis`` option should consist of one sentence describing the "
 "module's purpose -- it is currently only used in the Global Module Index."
-msgstr ""
+msgstr "“概要”选项应包含一个描述模块用途的句子 - 它目前仅用于全局模块索引。"
 
 #: ../../usage/restructuredtext/domains.rst:140
 msgid ""
 "The ``deprecated`` option can be given (with no value) to mark a module "
 "as deprecated; it will be designated as such in various locations then."
-msgstr ""
+msgstr "可以给出 ``deprecated`` 选项(没有值)将模块标记为已弃用;它将在各个地点被指定。"
 
 #: ../../usage/restructuredtext/domains.rst:145
 msgid ""
@@ -227,73 +223,73 @@ msgid ""
 "documentation for things in a module is spread over multiple files or "
 "sections -- one location has the :rst:dir:`py:module` directive, the "
 "others only :rst:dir:`py:currentmodule`."
-msgstr ""
+msgstr "该指令告诉Sphinx，这里记录的类，函数等都在给定的模块中(如:rst:dir:`py:module`)，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标 :rst:role:`py:mod` 。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 :rst:dir:`py:module` 指令，其他只有 :rst:dir:`py:currentmodule` 。"
 
 #: ../../usage/restructuredtext/domains.rst:153
 msgid "The following directives are provided for module and class contents:"
-msgstr "The following directives are provided for module and class contents:"
+msgstr "为模块和类内容提供以下指令:"
 
 #: ../../usage/restructuredtext/domains.rst:157
 msgid ""
 "Describes a module-level function.  The signature should include the "
 "parameters as given in the Python function definition, see "
 ":ref:`signatures`. For example::"
-msgstr ""
+msgstr "描述模块级功能。签名应该包含Python函数定义中给出的参数，请参阅 :ref:`signatures` 。例如::"
 
 #: ../../usage/restructuredtext/domains.rst:163
 msgid "For methods you should use :rst:dir:`py:method`."
-msgstr "For methods you should use :rst:dir:`py:method`."
+msgstr "对于你应该使用的方法 :rst:dir:`py:method` 。"
 
 #: ../../usage/restructuredtext/domains.rst:165
 msgid ""
 "The description normally includes information about the parameters "
 "required and how they are used (especially whether mutable objects passed"
 " as parameters are modified), side effects, and possible exceptions."
-msgstr ""
+msgstr "描述通常包括有关所需参数及其使用方式的信息(特别是是否修改了作为参数传递的可变对象)，副作用和可能的异常。"
 
 #: ../../usage/restructuredtext/domains.rst:169
 msgid ""
 "This information can (in any ``py`` directive) optionally be given in a "
 "structured form, see :ref:`info-field-lists`."
-msgstr ""
+msgstr "这个信息可以(在任何 ``py`` 指令中)可选地以结构化形式给出，参见 :ref:`info-field-lists` 。"
 
 #: ../../usage/restructuredtext/domains.rst:174
 msgid ""
 "Describes global data in a module, including both variables and values "
 "used as \"defined constants.\"  Class and object attributes are not "
 "documented using this environment."
-msgstr ""
+msgstr "描述模块中的全局数据，包括用作“定义的常量”的变量和值。使用此环境不记录类和对象属性。"
 
 #: ../../usage/restructuredtext/domains.rst:180
 msgid ""
 "Describes an exception class.  The signature can, but need not include "
 "parentheses with constructor arguments."
-msgstr ""
+msgstr "描述异常类。签名可以，但不必包括带有构造函数参数的括号。"
 
 #: ../../usage/restructuredtext/domains.rst:186
 msgid ""
 "Describes a class.  The signature can optionally include parentheses with"
 " parameters which will be shown as the constructor arguments.  See also "
 ":ref:`signatures`."
-msgstr ""
+msgstr "描述一个类。签名可以选择包括带有参数的括号，这些参数将显示为构造函数参数。另见 :ref:`signatures` 。"
 
 #: ../../usage/restructuredtext/domains.rst:190
 msgid ""
 "Methods and attributes belonging to the class should be placed in this "
 "directive's body.  If they are placed outside, the supplied name should "
 "contain the class name so that cross-references still work.  Example::"
-msgstr ""
+msgstr "属于该类的方法和属性应放在此指令的主体中。如果将它们放在外面，则提供的名称应包含类名，以便交叉引用仍然有效。例::"
 
 #: ../../usage/restructuredtext/domains.rst:204
 msgid "The first way is the preferred one."
-msgstr "The first way is the preferred one."
+msgstr "第一种方式是首选方式。"
 
 #: ../../usage/restructuredtext/domains.rst:208
 msgid ""
 "Describes an object data attribute.  The description should include "
 "information about the type of the data to be expected and whether it may "
 "be changed directly."
-msgstr ""
+msgstr "描述对象数据属性。描述应包括有关预期数据类型的信息以及是否可以直接更改。"
 
 #: ../../usage/restructuredtext/domains.rst:214
 msgid ""
@@ -301,139 +297,139 @@ msgid ""
 "``self`` parameter.  The description should include similar information "
 "to that described for ``function``.  See also :ref:`signatures` and :ref"
 ":`info-field-lists`."
-msgstr ""
+msgstr "描述对象方法。参数不应包含 ``self`` 参数。描述应该包括与 ``function`` 描述的类似的信息。另见 :ref:`signatures` 和 :ref:`info-field-lists` 。"
 
 #: ../../usage/restructuredtext/domains.rst:221
 msgid ""
 "Like :rst:dir:`py:method`, but indicates that the method is a static "
 "method."
-msgstr ""
+msgstr "像 :rst:dir:`py:method` ，但表示该方法是静态方法。"
 
 #: ../../usage/restructuredtext/domains.rst:227
 msgid ""
 "Like :rst:dir:`py:method`, but indicates that the method is a class "
 "method."
-msgstr ""
+msgstr "像 :rst:dir:`py:method` ，但表示该方法是一个类方法。"
 
 #: ../../usage/restructuredtext/domains.rst:234
 msgid ""
 "Describes a decorator function.  The signature should represent the usage"
 " as a decorator.  For example, given the functions"
-msgstr ""
+msgstr "描述装饰器功能。签名应表示作为装饰者的用法。例如，给定功能"
 
 #: ../../usage/restructuredtext/domains.rst:249
 msgid "the descriptions should look like this::"
-msgstr "the descriptions should look like this::"
+msgstr "描述应如下所示::"
 
 #: ../../usage/restructuredtext/domains.rst:259
 msgid "(as opposed to ``.. py:decorator:: removename(func)``.)"
-msgstr "(as opposed to ``.. py:decorator:: removename(func)``.)"
+msgstr "(而不是 ``.. py:decorator :: removename(func)`` 。)"
 
 #: ../../usage/restructuredtext/domains.rst:261
 msgid ""
 "There is no ``py:deco`` role to link to a decorator that is marked up "
 "with this directive; rather, use the :rst:role:`py:func` role."
-msgstr ""
+msgstr "没有 ``py:deco`` 角色链接到用这个指令标记的装饰器;相反，使用 :rst:role:`py:func` 角色。"
 
 #: ../../usage/restructuredtext/domains.rst:267
 msgid "Same as :rst:dir:`py:decorator`, but for decorators that are methods."
-msgstr "Same as :rst:dir:`py:decorator`, but for decorators that are methods."
+msgstr "与 :rst:dir:`py:decorator` 相同，但对于作为方法的装饰器。"
 
 #: ../../usage/restructuredtext/domains.rst:269
 msgid "Refer to a decorator method using the :rst:role:`py:meth` role."
-msgstr "Refer to a decorator method using the :rst:role:`py:meth` role."
+msgstr "使用 :rst:role:`py:meth` 角色引用装饰器方法。"
 
 #: ../../usage/restructuredtext/domains.rst:274
 msgid "Python Signatures"
-msgstr "Python Signatures"
+msgstr "Python签名"
 
 #: ../../usage/restructuredtext/domains.rst:276
 msgid ""
 "Signatures of functions, methods and class constructors can be given like"
 " they would be written in Python."
-msgstr ""
+msgstr "函数，方法和类构造函数的签名可以像在Python中编写一样给出。"
 
 #: ../../usage/restructuredtext/domains.rst:279
 msgid ""
 "Default values for optional arguments can be given (but if they contain "
 "commas, they will confuse the signature parser).  Python 3-style argument"
 " annotations can also be given as well as return type annotations::"
-msgstr ""
+msgstr "可以给出可选参数的默认值(但如果它们包含逗号，则会混淆签名解析器)。还可以给出Python 3样式的参数注释以及返回类型注释::"
 
 #: ../../usage/restructuredtext/domains.rst:285
 msgid ""
 "For functions with optional parameters that don't have default values "
 "(typically functions implemented in C extension modules without keyword "
 "argument support), you can use brackets to specify the optional parts:"
-msgstr ""
+msgstr "对于具有可选参数但没有默认值的函数(通常在没有关键字参数支持的C扩展模块中实现的函数)，可以使用括号指定可选部分:"
 
 #: ../../usage/restructuredtext/domains.rst:291
 msgid "It is customary to put the opening bracket before the comma."
-msgstr "It is customary to put the opening bracket before the comma."
+msgstr "习惯上将开口括号放在逗号之前。"
 
 #: ../../usage/restructuredtext/domains.rst:296
 #: ../../usage/restructuredtext/domains.rst:1029
 msgid "Info field lists"
-msgstr "Info field lists"
+msgstr "信息字段列表"
 
 #: ../../usage/restructuredtext/domains.rst:300
 msgid ""
 "Inside Python object description directives, reST field lists with these "
 "fields are recognized and formatted nicely:"
-msgstr ""
+msgstr "在Python对象描述指令中，具有这些字段的reST字段列表可以很好地识别和格式化:"
 
 #: ../../usage/restructuredtext/domains.rst:303
 msgid ""
 "``param``, ``parameter``, ``arg``, ``argument``, ``key``, ``keyword``: "
 "Description of a parameter."
-msgstr ""
+msgstr "``param``, ``parameter``, ``arg``, ``argument``, ``key``, ``keyword``: Description of a parameter."
 
 #: ../../usage/restructuredtext/domains.rst:305
 msgid "``type``: Type of a parameter.  Creates a link if possible."
-msgstr "``type``: Type of a parameter.  Creates a link if possible."
+msgstr "``type``:参数的类型。如果可能，创建一个链接。"
 
 #: ../../usage/restructuredtext/domains.rst:306
 msgid ""
 "``raises``, ``raise``, ``except``, ``exception``: That (and when) a "
 "specific exception is raised."
-msgstr ""
+msgstr "``raises``，``raise``，``except``，``exception``:那个(和什么时候)引发了一个特定的异常。"
 
 #: ../../usage/restructuredtext/domains.rst:308
 msgid "``var``, ``ivar``, ``cvar``: Description of a variable."
-msgstr "``var``, ``ivar``, ``cvar``: Description of a variable."
+msgstr "``var``, ``ivar``, ``cvar``: 变量的描述。"
 
 #: ../../usage/restructuredtext/domains.rst:309
 msgid "``vartype``: Type of a variable.  Creates a link if possible."
-msgstr "``vartype``: Type of a variable.  Creates a link if possible."
+msgstr "``vartype``: Type of a variable.  如果可能，创建一个链接。"
 
 #: ../../usage/restructuredtext/domains.rst:310
 msgid "``returns``, ``return``: Description of the return value."
-msgstr "``returns``, ``return``: Description of the return value."
+msgstr "``returns``, ``return``: 返回值的描述。"
 
 #: ../../usage/restructuredtext/domains.rst:311
 msgid "``rtype``: Return type.  Creates a link if possible."
-msgstr "``rtype``: Return type.  Creates a link if possible."
+msgstr "``rtype``: Return type.  如果可能，创建一个链接。"
 
 #: ../../usage/restructuredtext/domains.rst:315
 msgid ""
 "In current release, all ``var``, ``ivar`` and ``cvar`` are represented as"
 " \"Variable\".  There is no difference at all."
-msgstr ""
+msgstr "在当前版本中，所有 ``var`` ， ``ivar`` 和 ``cvar`` 都表示为 \"Variable\" 。完全没有区别。"
 
 #: ../../usage/restructuredtext/domains.rst:318
 msgid ""
 "The field names must consist of one of these keywords and an argument "
 "(except for ``returns`` and ``rtype``, which do not need an argument).  "
 "This is best explained by an example::"
-msgstr ""
+msgstr "字段名称必须包含这些关键字之一和参数(除了 ``returns`` 和 ``rtype`` ，它们不需要参数)。这可以用一个例子来解释::"
 
 #: ../../usage/restructuredtext/domains.rst:336
 msgid "This will render like this:"
-msgstr "This will render like this:"
+msgstr "这将呈现如下:"
 
 #: ../../usage/restructuredtext/domains.rst:341
 msgid "Send a message to a recipient"
-msgstr "Send a message to a recipient"
+msgstr "向收件人发送邮件"
 
 #: ../../usage/restructuredtext/domains.rst
 msgid "参数"
@@ -441,19 +437,19 @@ msgstr "参数"
 
 #: ../../usage/restructuredtext/domains.rst:343
 msgid "The person sending the message"
-msgstr "The person sending the message"
+msgstr "发送消息的人"
 
 #: ../../usage/restructuredtext/domains.rst:344
 msgid "The recipient of the message"
-msgstr "The recipient of the message"
+msgstr "邮件的收件人"
 
 #: ../../usage/restructuredtext/domains.rst:345
 msgid "The body of the message"
-msgstr "The body of the message"
+msgstr "消息的正文"
 
 #: ../../usage/restructuredtext/domains.rst:346
 msgid "The priority of the message, can be a number 1-5"
-msgstr "The priority of the message, can be a number 1-5"
+msgstr "消息的优先级可以是1-5"
 
 #: ../../usage/restructuredtext/domains.rst
 msgid "返回"
@@ -461,7 +457,7 @@ msgstr "返回"
 
 #: ../../usage/restructuredtext/domains.rst:348
 msgid "the message id"
-msgstr "the message id"
+msgstr "消息ID"
 
 #: ../../usage/restructuredtext/domains.rst
 msgid "返回类型"
@@ -473,45 +469,45 @@ msgstr "引发"
 
 #: ../../usage/restructuredtext/domains.rst:350
 msgid "if the message_body exceeds 160 characters"
-msgstr "if the message_body exceeds 160 characters"
+msgstr "如果message_body超过160个字符"
 
 #: ../../usage/restructuredtext/domains.rst:351
 msgid "if the message_body is not a basestring"
-msgstr "if the message_body is not a basestring"
+msgstr "如果message_body不是基本字符串"
 
 #: ../../usage/restructuredtext/domains.rst:353
 msgid ""
 "It is also possible to combine parameter type and description, if the "
 "type is a single word, like this::"
-msgstr ""
+msgstr "如果类型是单个单词，也可以组合参数类型和描述，如下::"
 
 #: ../../usage/restructuredtext/domains.rst:360
 msgid ""
 "Container types such as lists and dictionaries can be linked "
 "automatically using the following syntax::"
-msgstr ""
+msgstr "可以使用以下语法自动链接容器类型(如列表和词典)::"
 
 #: ../../usage/restructuredtext/domains.rst:370
 msgid ""
 "Multiple types in a type field will be linked automatically if separated "
 "by the word \"or\"::"
-msgstr ""
+msgstr "如果用单词“”或“”分隔，则类型字段中的多个类型将自动链接::"
 
 #: ../../usage/restructuredtext/domains.rst:380
 msgid "Cross-referencing Python objects"
-msgstr "Cross-referencing Python objects"
+msgstr "交叉引用Python对象"
 
 #: ../../usage/restructuredtext/domains.rst:382
 msgid ""
 "The following roles refer to objects in modules and are possibly "
 "hyperlinked if a matching identifier is found:"
-msgstr ""
+msgstr "以下角色引用模块中的对象，如果找到匹配的标识符，则可能是超链接:"
 
 #: ../../usage/restructuredtext/domains.rst:387
 msgid ""
 "Reference a module; a dotted name may be used.  This should also be used "
 "for package names."
-msgstr ""
+msgstr "参考模块;可以使用虚线名称。这也应该用于包名称。"
 
 #: ../../usage/restructuredtext/domains.rst:392
 msgid ""
@@ -520,42 +516,42 @@ msgid ""
 "be added automatically by Sphinx if the "
 ":confval:`add_function_parentheses` config value is ``True`` (the "
 "default)."
-msgstr ""
+msgstr "引用Python函数;可以使用点名。角色文本不需要包括尾随括号以增强可读性;如果 :confval:`add_function_parentheses` 配置值为 ``True`` (默认值)，它们将由Sphinx自动添加。"
 
 #: ../../usage/restructuredtext/domains.rst:399
 msgid "Reference a module-level variable."
-msgstr "Reference a module-level variable."
+msgstr "引用模块级变量。"
 
 #: ../../usage/restructuredtext/domains.rst:403
 msgid ""
 "Reference a \"defined\" constant.  This may be a Python variable that is "
 "not intended to be changed."
-msgstr ""
+msgstr "引用一个“定义的”常量。这可能是一个不打算更改的Python变量。"
 
 #: ../../usage/restructuredtext/domains.rst:408
 msgid "Reference a class; a dotted name may be used."
-msgstr "Reference a class; a dotted name may be used."
+msgstr "引用一个类;可以使用虚线名称。"
 
 #: ../../usage/restructuredtext/domains.rst:412
 msgid ""
 "Reference a method of an object.  The role text can include the type name"
 " and the method name; if it occurs within the description of a type, the "
 "type name can be omitted.  A dotted name may be used."
-msgstr ""
+msgstr "引用对象的方法。角色文本可以包括类型名称和方法名称;如果它出现在类型的描述中，则可以省略类型名称。可以使用点状名称。"
 
 #: ../../usage/restructuredtext/domains.rst:418
 msgid "Reference a data attribute of an object."
-msgstr "Reference a data attribute of an object."
+msgstr "引用对象的数据属性。"
 
 #: ../../usage/restructuredtext/domains.rst:422
 msgid "Reference an exception.  A dotted name may be used."
-msgstr "Reference an exception.  A dotted name may be used."
+msgstr "引用异常。可以使用点状名称。"
 
 #: ../../usage/restructuredtext/domains.rst:426
 msgid ""
 "Reference an object of unspecified type.  Useful e.g. as the "
 ":confval:`default_role`."
-msgstr ""
+msgstr "引用未指定类型的对象。例如有用as:confval:`default_role`。"
 
 #: ../../usage/restructuredtext/domains.rst:431
 msgid ""
@@ -564,7 +560,7 @@ msgid ""
 " ``filter`` in the current module, or the built-in function of that name."
 "  In contrast, ``:py:func:`foo.filter``` clearly refers to the ``filter``"
 " function in the ``foo`` module."
-msgstr ""
+msgstr "此标记中包含的名称可以包括模块名称和/或类名称。例如，``:py:func:`filter``` 可以引用当前模块中名为 ``filter`` 的函数，或者该名称的内置函数。相比之下， ``:py:func:`foo.filter``` 清楚地引用了 ``foo`` 模块中的 ``filter`` 函数。"
 
 #: ../../usage/restructuredtext/domains.rst:437
 msgid ""
@@ -575,13 +571,13 @@ msgid ""
 "documentation of Python's :mod:`codecs` module, ``:py:func:`open``` "
 "always refers to the built-in function, while ``:py:func:`.open``` refers"
 " to :func:`codecs.open`."
-msgstr ""
+msgstr "通常，首先搜索这些角色中的名称而不进一步限定，然后将当前模块名称添加到前面，然后使用当前模块和类名(如果有)作为前缀。如果您在名称前加一个点，则此顺序相反。例如，在Python的文档 :mod:`codecs` 模块中，``:py:func:`open``` 总是引用内置函数，而 ``:py:func:`.open``` 指 :func:`codecs.open` 。"
 
 #: ../../usage/restructuredtext/domains.rst:444
 msgid ""
 "A similar heuristic is used to determine whether the name is an attribute"
 " of the currently documented class."
-msgstr ""
+msgstr "类似的启发式方法用于确定名称是否是当前记录的类的属性。"
 
 #: ../../usage/restructuredtext/domains.rst:447
 msgid ""
@@ -591,7 +587,7 @@ msgid ""
 "``tarfile.TarFile.close()`` function, even if the current module is not "
 "``tarfile``.  Since this can get ambiguous, if there is more than one "
 "possible match, you will get a warning from Sphinx."
-msgstr ""
+msgstr "此外，如果名称以点为前缀，并且未找到完全匹配，则将目标作为后缀，并搜索具有该后缀的所有对象名称。例如，``:py:meth:`.TarFile.close``` 引用 ``tarfile.TarFile.close()`` 函数，即使当前模块不是 ``tarfile`` 。由于这可能会变得模棱两可，如果有多个可能匹配，您将收到Sphinx的警告。"
 
 #: ../../usage/restructuredtext/domains.rst:454
 msgid ""
@@ -599,36 +595,36 @@ msgid ""
 "``:py:meth:`~.TarFile.close``` will reference the "
 "``tarfile.TarFile.close()`` method, but the visible link caption will "
 "only be ``close()``."
-msgstr ""
+msgstr "请注意，您可以组合使用 ``~`` 和 ``.`` 前缀: ``:py:meth:`~.TarFile.close``` 将引用 ``tarfile.TarFile.close()`` 方法，但可见的链接标题只是 ``close()``。"
 
 #: ../../usage/restructuredtext/domains.rst:462
 msgid "The C Domain"
-msgstr "The C Domain"
+msgstr "C域"
 
 #: ../../usage/restructuredtext/domains.rst:464
 msgid "The C domain (name **c**) is suited for documentation of C API."
-msgstr "The C domain (name **c**) is suited for documentation of C API."
+msgstr "C域(名称 **c**)适用于C API的文档。"
 
 #: ../../usage/restructuredtext/domains.rst:468
 msgid "Describes a C function. The signature should be given as in C, e.g.::"
-msgstr "Describes a C function. The signature should be given as in C, e.g.::"
+msgstr "描述C函数。签名应如C所示，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:472
 msgid ""
 "This is also used to describe function-like preprocessor macros.  The "
 "names of the arguments should be given so they may be used in the "
 "description."
-msgstr ""
+msgstr "这也用于描述类似函数的预处理器宏。应该给出参数的名称，以便它们可以在描述中使用。"
 
 #: ../../usage/restructuredtext/domains.rst:475
 msgid ""
 "Note that you don't have to backslash-escape asterisks in the signature, "
 "as it is not parsed by the reST inliner."
-msgstr ""
+msgstr "请注意，签名中不必使用反斜杠转义星号，因为reST内联器不会对其进行解析。"
 
 #: ../../usage/restructuredtext/domains.rst:480
 msgid "Describes a C struct member. Example signature::"
-msgstr "Describes a C struct member. Example signature::"
+msgstr "描述C结构成员。签名示例::"
 
 #: ../../usage/restructuredtext/domains.rst:484
 msgid ""
@@ -636,7 +632,7 @@ msgid ""
 "how the value should be interpreted, and whether the value can be "
 "changed. References to structure members in text should use the "
 "``member`` role."
-msgstr ""
+msgstr "描述文本应包括允许的值范围，应如何解释值以及是否可以更改值。对文本中结构成员的引用应使用 ``member`` 角色。"
 
 #: ../../usage/restructuredtext/domains.rst:490
 msgid ""
@@ -645,161 +641,161 @@ msgid ""
 "described as functions.  This is a simple C-language ``#define``.  "
 "Examples of its use in the Python documentation include "
 ":c:macro:`PyObject_HEAD` and :c:macro:`Py_BEGIN_ALLOW_THREADS`."
-msgstr ""
+msgstr "描述一个 \"simple\" 的C宏。简单宏是用于代码扩展的宏，但不带参数，因此不能将其描述为函数。这是一个简单的C语言 ``#define`` 。它在Python文档中的使用示例包括 :c:macro:`PyObject_HEAD` 和 :c:macro:`Py_BEGIN_ALLOW_THREADS` 。"
 
 #: ../../usage/restructuredtext/domains.rst:498
 msgid ""
 "Describes a C type (whether defined by a typedef or struct). The "
 "signature should just be the type name."
-msgstr ""
+msgstr "描述C类型(无论是由 typedef 还是 struct 定义)。签名应该只是类型名称。"
 
 #: ../../usage/restructuredtext/domains.rst:503
 msgid ""
 "Describes a global C variable.  The signature should include the type, "
 "such as::"
-msgstr ""
+msgstr "描述全局C变量。签名应包括类型，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:511
 msgid "Cross-referencing C constructs"
-msgstr "Cross-referencing C constructs"
+msgstr "交叉引用C构造"
 
 #: ../../usage/restructuredtext/domains.rst:513
 msgid ""
 "The following roles create cross-references to C-language constructs if "
 "they are defined in the documentation:"
-msgstr ""
+msgstr "如果在文档中定义了以下角色，则会创建对C语言构造的交叉引用:"
 
 #: ../../usage/restructuredtext/domains.rst:518
 msgid "Reference a C-language function. Should include trailing parentheses."
-msgstr "Reference a C-language function. Should include trailing parentheses."
+msgstr "引用C语言函数。应该包括尾随括号。"
 
 #: ../../usage/restructuredtext/domains.rst:522
 msgid "Reference a C-language member of a struct."
-msgstr "Reference a C-language member of a struct."
+msgstr "引用结构的C语言成员。"
 
 #: ../../usage/restructuredtext/domains.rst:526
 msgid "Reference a \"simple\" C macro, as defined above."
-msgstr "Reference a \"simple\" C macro, as defined above."
+msgstr "引用一个 \"simple\"  的C宏，如上所述。"
 
 #: ../../usage/restructuredtext/domains.rst:530
 msgid "Reference a C-language type."
-msgstr "Reference a C-language type."
+msgstr "引用C语言类型。"
 
 #: ../../usage/restructuredtext/domains.rst:534
 msgid "Reference a C-language variable."
-msgstr "Reference a C-language variable."
+msgstr "引用C语言变量。"
 
 #: ../../usage/restructuredtext/domains.rst:540
 msgid "The C++ Domain"
-msgstr "The C++ Domain"
+msgstr "C++ 域"
 
 #: ../../usage/restructuredtext/domains.rst:542
 msgid "The C++ domain (name **cpp**) supports documenting C++ projects."
-msgstr "The C++ domain (name **cpp**) supports documenting C++ projects."
+msgstr "C++ 域(名称 **cpp**)支持记录C++ 项目。"
 
 #: ../../usage/restructuredtext/domains.rst:545
 msgid "Directives for Declaring Entities"
-msgstr "Directives for Declaring Entities"
+msgstr "声明实体的指令"
 
 #: ../../usage/restructuredtext/domains.rst:547
 msgid ""
 "The following directives are available. All declarations can start with a"
 " visibility statement (``public``, ``private`` or ``protected``)."
-msgstr ""
+msgstr "以下指令可用。所有声明都可以从可见性声明开始(``public`` ，``private`` 或 ``protected``)"
 
 #: ../../usage/restructuredtext/domains.rst:553
 msgid ""
 "Describe a class/struct, possibly with specification of inheritance, "
 "e.g.,::"
-msgstr ""
+msgstr "描述一个类/结构，可能带有继承规范，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:557
 msgid ""
 "The difference between :rst:dir:`cpp:class` and :rst:dir:`cpp:struct` is "
 "only cosmetic: the prefix rendered in the output, and the specifier shown"
 " in the index."
-msgstr ""
+msgstr "区别 :rst:dir:`cpp:class` 和 :rst:dir:`cpp:struct` 只是装饰:输出中呈现的前缀，以及索引中显示的说明符。"
 
 #: ../../usage/restructuredtext/domains.rst:561
 msgid "The class can be directly declared inside a nested scope, e.g.,::"
-msgstr "The class can be directly declared inside a nested scope, e.g.,::"
+msgstr "该类可以直接在嵌套范围内声明，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:565
 msgid "A class template can be declared::"
-msgstr "A class template can be declared::"
+msgstr "可以声明一个类模板::"
 
 #: ../../usage/restructuredtext/domains.rst:569
 msgid "or with a line break::"
-msgstr "or with a line break::"
+msgstr "或者换行::"
 
 #: ../../usage/restructuredtext/domains.rst:574
 msgid "Full and partial template specialisations can be declared::"
-msgstr "Full and partial template specialisations can be declared::"
+msgstr "可以声明完整和部分模板特化::"
 
 #: ../../usage/restructuredtext/domains.rst:582
 msgid "The :rst:dir:`cpp:struct` directive."
-msgstr "The :rst:dir:`cpp:struct` directive."
+msgstr ":rst:dir:`cpp:struct` 指令。"
 
 #: ../../usage/restructuredtext/domains.rst:587
 msgid "Describe a function or member function, e.g.,::"
-msgstr "Describe a function or member function, e.g.,::"
+msgstr "描述一个函数或成员函数，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:613
 msgid "Function templates can also be described::"
-msgstr "Function templates can also be described::"
+msgstr "函数模板也可以描述::"
 
 #: ../../usage/restructuredtext/domains.rst:618
 msgid "and function template specialisations::"
-msgstr "and function template specialisations::"
+msgstr "和函数模板专业化::"
 
 #: ../../usage/restructuredtext/domains.rst:626
 msgid "Describe a variable or member variable, e.g.,::"
-msgstr "Describe a variable or member variable, e.g.,::"
+msgstr "描述变量或成员变量，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:634
 msgid "Variable templates can also be described::"
-msgstr "Variable templates can also be described::"
+msgstr "变量模板也可以描述::"
 
 #: ../../usage/restructuredtext/domains.rst:643
 msgid ""
 "Describe a type as in a typedef declaration, a type alias declaration, or"
 " simply the name of a type with unspecified type, e.g.,::"
-msgstr ""
+msgstr "描述typedef声明中的类型，类型别名声明，或者只是具有未指定类型的类型的名称，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:658
 msgid "A type alias can also be templated::"
-msgstr "A type alias can also be templated::"
+msgstr "类型别名也可以模板化::"
 
 #: ../../usage/restructuredtext/domains.rst:663
 msgid "The example are rendered as follows."
-msgstr "The example are rendered as follows."
+msgstr "该示例呈现如下。"
 
 #: ../../usage/restructuredtext/domains.rst:667
 msgid "A typedef-like declaration of a type."
-msgstr "A typedef-like declaration of a type."
+msgstr "类型的typedef式声明。"
 
 #: ../../usage/restructuredtext/domains.rst:671
 msgid "Declaration of a type alias with unspecified type."
-msgstr "Declaration of a type alias with unspecified type."
+msgstr "声明具有未指定类型的类型别名。"
 
 #: ../../usage/restructuredtext/domains.rst:675
 msgid "Declaration of a type alias."
-msgstr "Declaration of a type alias."
+msgstr "声明类型别名。"
 
 #: ../../usage/restructuredtext/domains.rst:684
 msgid ""
 "Describe a (scoped) enum, possibly with the underlying type specified.  "
 "Any enumerators declared inside an unscoped enum will be declared both in"
 " the enum scope and in the parent scope.  Examples::"
-msgstr ""
+msgstr "描述(范围)枚举，可能具有指定的基础类型。在unscoped枚举中声明的任何枚举器都将在枚举范围和父范围内声明。例子::"
 
 #: ../../usage/restructuredtext/domains.rst:707
 msgid "Describe an enumerator, optionally with its value defined, e.g.,::"
-msgstr "Describe an enumerator, optionally with its value defined, e.g.,::"
+msgstr "描述一个枚举器，可选择定义其值，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:715
 msgid "Describe a union."
-msgstr "Describe a union."
+msgstr "描述一个联盟。"
 
 #: ../../usage/restructuredtext/domains.rst:721
 #: ../../usage/restructuredtext/domains.rst:854
@@ -807,23 +803,23 @@ msgid ""
 "The support for concepts is experimental. It is based on the current "
 "draft standard and the Concepts Technical Specification. The features may"
 " change as they evolve."
-msgstr ""
+msgstr "对概念的支持是实验性的。它基于当前的标准草案和概念技术规范。这些功能可能随着它们的发展而变化。"
 
 #: ../../usage/restructuredtext/domains.rst:725
 msgid ""
 "Describe a concept. It must have exactly 1 template parameter list. The "
 "name may be a nested name. Example::"
-msgstr ""
+msgstr "描述一个概念。它必须有1个模板参数列表。名称可以是嵌套名称。例::"
 
 #: ../../usage/restructuredtext/domains.rst:744
 msgid "This will render as follows:"
-msgstr "This will render as follows:"
+msgstr "这将呈现如下:"
 
 #: ../../usage/restructuredtext/domains.rst:748
 msgid ""
 "Proxy to an element of a notional sequence that can be compared, "
 "indirected, or incremented."
-msgstr ""
+msgstr "代理到可以比较，间接或增量的有理序列的元素。"
 
 #: ../../usage/restructuredtext/domains.rst:751
 msgid "**Notation**"
@@ -831,7 +827,7 @@ msgstr "**Notation**"
 
 #: ../../usage/restructuredtext/domains.rst:755
 msgid "An lvalue."
-msgstr "An lvalue."
+msgstr "一个左值。"
 
 #: ../../usage/restructuredtext/domains.rst:757
 msgid "**Valid Expressions**"
@@ -839,35 +835,35 @@ msgstr "**Valid Expressions**"
 
 #: ../../usage/restructuredtext/domains.rst:759
 msgid ":cpp:expr:`*r`, when :cpp:expr:`r` is dereferenceable."
-msgstr ":cpp:expr:`*r`, when :cpp:expr:`r` is dereferenceable."
+msgstr ":cpp:expr:`*r`, 当 :cpp:expr:`r` 是可解除引用的。"
 
 #: ../../usage/restructuredtext/domains.rst:760
 msgid ""
 ":cpp:expr:`++r`, with return type :cpp:expr:`It&`, when :cpp:expr:`r` is "
 "incrementable."
-msgstr ""
+msgstr ":cpp:expr:`++ r` ，返回类型 :cpp:expr:`It&`, when :cpp:expr:`r` 是可递增的。"
 
 #: ../../usage/restructuredtext/domains.rst:767
 msgid "Options"
-msgstr "Options"
+msgstr "选项"
 
 #: ../../usage/restructuredtext/domains.rst:769
 msgid "Some directives support options:"
-msgstr "Some directives support options:"
+msgstr "一些指令支持选项:"
 
 #: ../../usage/restructuredtext/domains.rst:771
 msgid "``:noindex:``, see :ref:`basic-domain-markup`."
-msgstr "``:noindex:``, see :ref:`basic-domain-markup`."
+msgstr "``:noindex:`` , 看到 :ref:`basic-domain-markup`."
 
 #: ../../usage/restructuredtext/domains.rst:772
 msgid ""
 "``:tparam-line-spec:``, for templated declarations. If specified, each "
 "template parameter will be rendered on a separate line."
-msgstr ""
+msgstr "``:tparam-line-spec:`` ，用于模板化声明。如果指定，则每个模板参数将在单独的行上呈现。"
 
 #: ../../usage/restructuredtext/domains.rst:778
 msgid "Anonymous Entities"
-msgstr "Anonymous Entities"
+msgstr "匿名实体"
 
 #: ../../usage/restructuredtext/domains.rst:780
 msgid ""
@@ -877,32 +873,32 @@ msgid ""
 "references and (type) expressions, though nested symbols will be found "
 "even when omitted. The ``@...`` name will always be rendered as "
 "**[anonymous]** (possibly as a link)."
-msgstr ""
+msgstr "C++  支持匿名命名空间，类，枚举和联合。为了文档起见，必须给它们一些以 ``@`` 开头的名字，例如 ``@42`` 或 ``@data`` 。这些名称也可用于交叉引用和(类型)表达式，但即使省略也会找到嵌套符号。 ``@ ...`` 名称将始终显示为 **[anonymous]** (可能作为链接)。"
 
 #: ../../usage/restructuredtext/domains.rst:787
 msgid "Example::"
-msgstr "Example::"
+msgstr "例::"
 
 #: ../../usage/restructuredtext/domains.rst:799
 msgid "This will be rendered as:"
-msgstr "This will be rendered as:"
+msgstr "这将呈现为:"
 
 #: ../../usage/restructuredtext/domains.rst:809
 msgid ""
 "Explicit ref: :cpp:var:`Data::@data::a`. Short-hand ref: "
 ":cpp:var:`Data::a`."
-msgstr ""
+msgstr "显式ref :: cpp:var:`Data :: @ data :: a`。简写ref :: cpp:var:`Data :: a`。"
 
 #: ../../usage/restructuredtext/domains.rst:815
 msgid "Aliasing Declarations"
-msgstr "Aliasing Declarations"
+msgstr "别名声明"
 
 #: ../../usage/restructuredtext/domains.rst:817
 msgid ""
 "Sometimes it may be helpful list declarations elsewhere than their main "
 "documentation, e.g., when creating a synopsis of a class interface. The "
 "following directive can be used for this purpose."
-msgstr ""
+msgstr "有时，除了主要文档之外，它可能是有用的列表声明，例如，在创建类接口的概要时。以下指令可用于此目的。"
 
 #: ../../usage/restructuredtext/domains.rst:823
 msgid ""
@@ -910,11 +906,11 @@ msgid ""
 "they can in the :rst:role:`cpp:any` role. If the name of a function is "
 "given (as opposed to the complete signature), then all overloads of the "
 "function will be listed."
-msgstr ""
+msgstr "插入一个或多个别名声明。可以在 :rst:role:`cpp:any` 角色中指定每个实体。如果给出了函数的名称(而不是完整的签名)，那么将列出函数的所有重载。"
 
 #: ../../usage/restructuredtext/domains.rst:828
 msgid "For example::"
-msgstr "For example::"
+msgstr "例如::"
 
 #: ../../usage/restructuredtext/domains.rst:833
 #: ../../usage/restructuredtext/domains.rst:843
@@ -927,91 +923,91 @@ msgstr "whereas::"
 
 #: ../../usage/restructuredtext/domains.rst:852
 msgid "Constrained Templates"
-msgstr "Constrained Templates"
+msgstr "约束模板"
 
 #: ../../usage/restructuredtext/domains.rst:858
 msgid "Sphinx does not currently support ``requires`` clauses."
-msgstr "Sphinx does not currently support ``requires`` clauses."
+msgstr "Sphinx目前不支持 ``requires`` 条款。"
 
 #: ../../usage/restructuredtext/domains.rst:861
 msgid "Placeholders"
-msgstr "Placeholders"
+msgstr "占位符"
 
 #: ../../usage/restructuredtext/domains.rst:863
 msgid ""
 "Declarations may use the name of a concept to introduce constrained "
 "template parameters, or the keyword ``auto`` to introduce unconstrained "
 "template parameters::"
-msgstr ""
+msgstr "声明可以使用概念的名称来引入受约束的模板参数，或者使用关键字“auto”来引入无约束的模板参数::"
 
 #: ../../usage/restructuredtext/domains.rst:877
 msgid "Template Introductions"
-msgstr "Template Introductions"
+msgstr "模板介绍"
 
 #: ../../usage/restructuredtext/domains.rst:879
 msgid ""
 "Simple constrained function or class templates can be declared with a "
 "`template introduction` instead of a template parameter list::"
-msgstr ""
+msgstr "可以使用 `template introduction` 而不是模板参数列表声明简单约束函数或类模板::"
 
 #: ../../usage/restructuredtext/domains.rst:892
 msgid "They are rendered as follows."
-msgstr "They are rendered as follows."
+msgstr "它们呈现如下。"
 
 #: ../../usage/restructuredtext/domains.rst:896
 msgid ""
 "A function template with a template parameter constrained to be an "
 "Iterator."
-msgstr ""
+msgstr "具有模板参数的函数模板被约束为迭代器。"
 
 #: ../../usage/restructuredtext/domains.rst:900
 msgid ""
 "A class template with a template parameter constrained to be "
 "LessThanComparable."
-msgstr ""
+msgstr "具有模板参数的类模板约束为 LessThanComparable。"
 
 #: ../../usage/restructuredtext/domains.rst:903
 msgid ""
 "Note however that no checking is performed with respect to parameter "
 "compatibility. E.g., ``Iterator{A, B, C}`` will be accepted as an "
 "introduction even though it would not be valid C++."
-msgstr ""
+msgstr "但请注意，不会对参数兼容性进行检查。例如，``Iterator{A，B，C}`` 将被接受作为介绍，即使它不是有效的 C++。"
 
 #: ../../usage/restructuredtext/domains.rst:908
 msgid "Inline Expressions and Types"
-msgstr "Inline Expressions and Types"
+msgstr "内联表达式和类型"
 
 #: ../../usage/restructuredtext/domains.rst:913
 msgid ""
 "Insert a C++ expression or type either as inline code (``cpp:expr``) or "
 "inline text (``cpp:texpr``). For example::"
-msgstr ""
+msgstr "插入C++ 表达式或键入内联代码 (``cpp:expr``) 或内联文本 (``cpp:texpr``) 。例如::"
 
 #: ../../usage/restructuredtext/domains.rst:925
 msgid "will be rendered as follows:"
-msgstr "will be rendered as follows:"
+msgstr "将呈现如下:"
 
 #: ../../usage/restructuredtext/domains.rst:931
 msgid "An expression: :cpp:expr:`a * f(a)` (or as text: :cpp:texpr:`a * f(a)`)."
-msgstr "An expression: :cpp:expr:`a * f(a)` (or as text: :cpp:texpr:`a * f(a)`)."
+msgstr "表达式:: cpp:expr:`a * f(a)`(或文本:: cpp:texpr:`a * f(a)`)。"
 
 #: ../../usage/restructuredtext/domains.rst:933
 msgid ""
 "A type: :cpp:expr:`const MySortedContainer<int>&` (or as text "
 ":cpp:texpr:`const MySortedContainer<int>&`)."
-msgstr ""
+msgstr "类型:: cpp:expr:`const MySortedContainer <int>＆`(或作为text:cpp:texpr:`const MySortedContainer <int>＆`)。“"
 
 #: ../../usage/restructuredtext/domains.rst:936
 msgid "The :rst:role:`cpp:expr` role."
-msgstr "The :rst:role:`cpp:expr` role."
+msgstr ":rst:role:`cpp:expr`角色。"
 
 #: ../../usage/restructuredtext/domains.rst:939
 msgid "The :rst:role:`cpp:texpr` role."
-msgstr "The :rst:role:`cpp:texpr` role."
+msgstr "第一:角色:`cpp:texpr`角色。"
 
 #: ../../usage/restructuredtext/domains.rst:943
 msgid "Namespacing"
-msgstr "Namespacing"
+msgstr "命名空间"
 
 #: ../../usage/restructuredtext/domains.rst:945
 msgid ""
@@ -1019,19 +1015,19 @@ msgid ""
 "The current scope can be changed using three namespace directives.  They "
 "manage a stack declarations where ``cpp:namespace`` resets the stack and "
 "changes a given scope."
-msgstr ""
+msgstr "C++ 域中的声明默认放在全局范围内。可以使用三个命名空间指令更改当前范围。他们管理堆栈声明，其中 ``cpp:namespace`` 重置堆栈并更改给定的范围。“"
 
 #: ../../usage/restructuredtext/domains.rst:950
 msgid ""
 "The ``cpp:namespace-push`` directive changes the scope to a given inner "
 "scope of the current one."
-msgstr ""
+msgstr "``cpp:namespace-push`` 指令将范围更改为当前范围的给定内部范围。"
 
 #: ../../usage/restructuredtext/domains.rst:953
 msgid ""
 "The ``cpp:namespace-pop`` directive undoes the most recent ``cpp"
 ":namespace-push`` directive."
-msgstr ""
+msgstr "``cpp:namespace-pop`` 指令撤消了最新的 ``cpp:namespace-push`` 指令。"
 
 #: ../../usage/restructuredtext/domains.rst:958
 msgid ""
@@ -1039,107 +1035,107 @@ msgid ""
 "and resets the namespace directive stack.  Note that the namespace does "
 "not need to correspond to C++ namespaces, but can end in names of "
 "classes, e.g.,::"
-msgstr ""
+msgstr "将后续对象的当前范围更改为给定范围，并重置命名空间指令堆栈。请注意，命名空间不需要与C++ 命名空间相对应，但可以以类的名称结尾，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:964
 msgid ""
 "All subsequent objects will be defined as if their name were declared "
 "with the scope prepended. The subsequent cross-references will be "
 "searched for starting in the current scope."
-msgstr ""
+msgstr "将定义所有后续对象，就好像它们的名称是在前置范围的情况下声明的一样。将在当前范围中搜索后续交叉引用。"
 
 #: ../../usage/restructuredtext/domains.rst:968
 msgid ""
 "Using ``NULL``, ``0``, or ``nullptr`` as the scope will change to global "
 "scope."
-msgstr ""
+msgstr "使用 ``NULL`` ， ``0`` 或 ``nullptr`` 作为范围将变为全局范围。"
 
 #: ../../usage/restructuredtext/domains.rst:971
 msgid "A namespace declaration can also be templated, e.g.,::"
-msgstr "A namespace declaration can also be templated, e.g.,::"
+msgstr "命名空间声明也可以模板化，例如::"
 
 #: ../../usage/restructuredtext/domains.rst:980
 msgid ""
 "declares ``size`` as a member function of the class template "
 "``std::vector``.  Equivalently this could have been declared using::"
-msgstr ""
+msgstr "将 ``size`` 声明为类模板 ``std :: vector`` 的成员函数。等价地，这可以使用::"
 
 #: ../../usage/restructuredtext/domains.rst:988
 msgid "or::"
-msgstr "or::"
+msgstr "要么::"
 
 #: ../../usage/restructuredtext/domains.rst:995
 msgid "Change the scope relatively to the current scope. For example, after::"
-msgstr "Change the scope relatively to the current scope. For example, after::"
+msgstr "相对于当前范围更改范围。例如，之后::"
 
 #: ../../usage/restructuredtext/domains.rst:1001
 msgid "the current scope will be ``A::B::C::D``."
-msgstr "the current scope will be ``A::B::C::D``."
+msgstr "the current scope will be ``A::B::C::D`` ."
 
 #: ../../usage/restructuredtext/domains.rst:1007
 msgid ""
 "Undo the previous ``cpp:namespace-push`` directive (*not* just pop a "
 "scope). For example, after::"
-msgstr ""
+msgstr "撤消之前的 ``cpp：namespace-push`` 指令(*not*只是弹出作用域)。例如，之后::"
 
 #: ../../usage/restructuredtext/domains.rst:1016
 msgid "the current scope will be ``A::B`` (*not* ``A::B::C``)."
-msgstr "the current scope will be ``A::B`` (*not* ``A::B::C``)."
+msgstr "当前范围将是 ``A :: B`` (*not* ``A::B::C``)。"
 
 #: ../../usage/restructuredtext/domains.rst:1018
 msgid ""
 "If no previous ``cpp:namespace-push`` directive has been used, but only a"
 " ``cpp:namespace`` directive, then the current scope will be reset to "
 "global scope.  That is, ``.. cpp:namespace:: A::B`` is equivalent to::"
-msgstr ""
+msgstr "如果没有使用先前的 ``cpp:namespace-push`` 指令，但只使用 ``cpp:namespace`` 指令，则当前作用域将重置为全局作用域。也就是说，``cpp:namespace :: A :: B`` 相当于::"
 
 #: ../../usage/restructuredtext/domains.rst:1031
 msgid ""
 "The C++ directives support the following info fields (see also :ref"
 ":`info-field-lists`):"
-msgstr ""
+msgstr "C++ 指令支持以下信息字段(另请参阅 :ref:`info-field-lists` ):"
 
 #: ../../usage/restructuredtext/domains.rst:1034
 msgid "`param`, `parameter`, `arg`, `argument`: Description of a parameter."
-msgstr "`param`, `parameter`, `arg`, `argument`: Description of a parameter."
+msgstr "`param`, `parameter`, `arg`, `argument`: 参数说明。"
 
 #: ../../usage/restructuredtext/domains.rst:1035
 msgid "`tparam`: Description of a template parameter."
-msgstr "`tparam`: Description of a template parameter."
+msgstr "`tparam`:模板参数的描述。"
 
 #: ../../usage/restructuredtext/domains.rst:1036
 msgid "`returns`, `return`: Description of a return value."
-msgstr "`returns`, `return`: Description of a return value."
+msgstr "`returns`, `return`:返回值的描述。"
 
 #: ../../usage/restructuredtext/domains.rst:1037
 msgid ""
 "`throws`, `throw`, `exception`: Description of a possibly thrown "
 "exception."
-msgstr ""
+msgstr "`throws`, `throw`, `exception`: 可能抛出的异常的描述。"
 
 #: ../../usage/restructuredtext/domains.rst:1042
 msgid "Cross-referencing"
-msgstr "Cross-referencing"
+msgstr "交叉引用"
 
 #: ../../usage/restructuredtext/domains.rst:1044
 msgid "These roles link to the given declaration types:"
-msgstr "These roles link to the given declaration types:"
+msgstr "这些角色链接到给定的声明类型:"
 
 #: ../../usage/restructuredtext/domains.rst:1057
 msgid ""
 "Reference a C++ declaration by name (see below for details).  The name "
 "must be properly qualified relative to the position of the link."
-msgstr ""
+msgstr "按名称引用C++ 声明(有关详细信息，请参见下文)。名称必须相对于链接的位置适当限定。"
 
 #: ../../usage/restructuredtext/domains.rst:1060
 msgid ""
 "The :rst:role:`cpp:struct` role as alias for the :rst:role:`cpp:class` "
 "role."
-msgstr ""
+msgstr ":rst:role:`cpp:struct` 角色充当 :rst:role:`cpp:class` 角色的别名。"
 
 #: ../../usage/restructuredtext/domains.rst:1063
 msgid "Note on References with Templates Parameters/Arguments"
-msgstr "Note on References with Templates Parameters/Arguments"
+msgstr "有关模板参数/参数的引用的注释"
 
 #: ../../usage/restructuredtext/domains.rst:1065
 msgid ""
@@ -1149,28 +1145,28 @@ msgid ""
 "interpreted as a link to ``int`` with a title of ``MyClass``. In this "
 "case, escape the opening angle bracket with a backslash, like this: "
 "``:cpp:class:`MyClass\\<int>```."
-msgstr ""
+msgstr "这些角色遵循Sphinx :ref:`xref-syntax` 规则。这意味着在引用(部分)模板专业化时必须小心，例如:如果链接看起来像这样: ``:cpp:class:`MyClass <int>``` 。这被解释为 ``int`` 的链接，标题为 ``MyClass`` 。在这种情况下，用反斜杠转义开口尖括号，如下所示: ``:cpp:class:`MyClass\\<int>``` 。"
 
 #: ../../usage/restructuredtext/domains.rst:1072
 msgid ""
 "When a custom title is not needed it may be useful to use the roles for "
 "inline expressions, :rst:role:`cpp:expr` and :rst:role:`cpp:texpr`, where"
 " angle brackets do not need escaping."
-msgstr ""
+msgstr "当不需要自定义标题时，使用内联表达式的角色可能很有用 :rst:role:`cpp:expr` 和 :rst:role:`cpp:texpr` ，其中尖括号不需要转义。"
 
 #: ../../usage/restructuredtext/domains.rst:1076
 msgid "Declarations without template parameters and template arguments"
-msgstr "Declarations without template parameters and template arguments"
+msgstr "没有模板参数和模板参数的声明"
 
 #: ../../usage/restructuredtext/domains.rst:1078
 msgid ""
 "For linking to non-templated declarations the name must be a nested name,"
 " e.g., ``f`` or ``MyClass::f``."
-msgstr ""
+msgstr "对于链接到非模板化声明，名称必须是嵌套名称，例如 ``f`` 或 ``MyClass::f`` 。"
 
 #: ../../usage/restructuredtext/domains.rst:1083
 msgid "Overloaded (member) functions"
-msgstr "Overloaded (member) functions"
+msgstr "重载(成员)函数"
 
 #: ../../usage/restructuredtext/domains.rst:1085
 msgid ""
@@ -1179,79 +1175,79 @@ msgid ""
 "and :rst:role:`cpp:func` roles use an alternative format, which simply is"
 " a complete function declaration. This will resolve to the exact matching"
 " overload. As example, consider the following class declaration:"
-msgstr ""
+msgstr "当仅使用其名称引用(成员)函数时，引用将指向任意匹配的重载。 :rst:role:`cpp:any` 和 :rst:role:`cpp:func` roles 使用另一种格式，它只是一个完整的函数声明。这将解决完全匹配的重载。例如，请考虑以下类声明:"
 
 #: ../../usage/restructuredtext/domains.rst:1100
 msgid "References using the :rst:role:`cpp:func` role:"
-msgstr "References using the :rst:role:`cpp:func` role:"
+msgstr "引用使用 :rst:role:`cpp:func` 角色:"
 
 #: ../../usage/restructuredtext/domains.rst:1102
 msgid "Arbitrary overload: ``C::f``, :cpp:func:`C::f`"
-msgstr "Arbitrary overload: ``C::f``, :cpp:func:`C::f`"
+msgstr "任意重载: ``C::f`` ，:cpp:func:`C::f` "
 
 #: ../../usage/restructuredtext/domains.rst:1103
-msgid "Also arbitrary overload: ``C::f()``, :cpp:func:`C::f()`"
-msgstr "Also arbitrary overload: ``C::f()``, :cpp:func:`C::f()`"
+msgid "Also arbitrary overload: ``C::f()`` , :cpp:func:`C::f()`"
+msgstr "也是任意重载: ``C :: f()`` ， :cpp:func:`C::f()` "
 
 #: ../../usage/restructuredtext/domains.rst:1104
 msgid "Specific overload: ``void C::f()``, :cpp:func:`void C::f()`"
-msgstr "Specific overload: ``void C::f()``, :cpp:func:`void C::f()`"
+msgstr "特定的重载: ``void C::f()`` ， :cpp:func:`void C::f()` "
 
 #: ../../usage/restructuredtext/domains.rst:1105
 msgid "Specific overload: ``void C::f(int)``, :cpp:func:`void C::f(int)`"
-msgstr "Specific overload: ``void C::f(int)``, :cpp:func:`void C::f(int)`"
+msgstr "具体超负荷: ``void C::f(int)``, :cpp:func:`void C::f(int)`"
 
 #: ../../usage/restructuredtext/domains.rst:1106
 msgid "Specific overload: ``void C::f(double)``, :cpp:func:`void C::f(double)`"
-msgstr "Specific overload: ``void C::f(double)``, :cpp:func:`void C::f(double)`"
+msgstr "具体超负荷: ``void C::f(double)``, :cpp:func:`void C::f(double)`"
 
 #: ../../usage/restructuredtext/domains.rst:1107
 msgid ""
 "Specific overload: ``void C::f(double) const``, :cpp:func:`void "
 "C::f(double) const`"
-msgstr ""
+msgstr "具体超负荷: ``void C::f(double) const``, :cpp:func:`void C::f(double) const`"
 
 #: ../../usage/restructuredtext/domains.rst:1109
 msgid ""
 "Note that the :confval:`add_function_parentheses` configuration variable "
 "does not influence specific overload references."
-msgstr ""
+msgstr "请注意 :confval:`add_function_parentheses` 配置变量不会影响特定的重载引用。"
 
 #: ../../usage/restructuredtext/domains.rst:1116
 msgid "Templated declarations"
-msgstr "Templated declarations"
+msgstr "模板化的声明"
 
 #: ../../usage/restructuredtext/domains.rst:1118
 #: ../../usage/restructuredtext/domains.rst:1154
 msgid "Assume the following declarations."
-msgstr "Assume the following declarations."
+msgstr "假设以下声明。"
 
 #: ../../usage/restructuredtext/domains.rst:1128
 msgid ""
 "In general the reference must include the template parameter "
 "declarations, and template arguments for the prefix of qualified names. "
 "For example:"
-msgstr ""
+msgstr "通常，引用必须包含模板参数声明和限定名称前缀的模板参数。例如:"
 
 #: ../../usage/restructuredtext/domains.rst:1131
 msgid ""
 "``template\\<typename TOuter> Wrapper::Outer`` "
 "(:cpp:class:`template\\<typename TOuter> Wrapper::Outer`)"
-msgstr ""
+msgstr "``template\\<typename TOuter> Wrapper::Outer`` (:cpp:class:`template\\<typename TOuter> Wrapper::Outer`)"
 
 #: ../../usage/restructuredtext/domains.rst:1133
 msgid ""
 "``template\\<typename TOuter> template\\<typename TInner> "
 "Wrapper::Outer<TOuter>::Inner`` (:cpp:class:`template\\<typename TOuter> "
 "template\\<typename TInner> Wrapper::Outer<TOuter>::Inner`)"
-msgstr ""
+msgstr "``template\\<typename TOuter> template\\<typename TInner> Wrapper::Outer<TOuter>::Inner`` (:cpp:class:`template\\<typename TOuter> template\\<typename TInner> Wrapper::Outer<TOuter>::Inner`)"
 
 #: ../../usage/restructuredtext/domains.rst:1136
 msgid ""
 "Currently the lookup only succeed if the template parameter identifiers "
 "are equal strings. That is, ``template\\<typename UOuter> "
 "Wrapper::Outer`` will not work."
-msgstr ""
+msgstr "目前，如果模板参数标识符是相等的字符串，则查找仅成功。也就是说，``template\\<typename UOuter> Wrapper :: Outer`` 将不起作用。"
 
 #: ../../usage/restructuredtext/domains.rst:1139
 msgid ""
@@ -1259,7 +1255,7 @@ msgid ""
 "the lookup will assume either a primary template or a non-template, but "
 "not a partial template specialisation. This means the following "
 "references work as well:"
-msgstr ""
+msgstr "作为简写表示法，如果省略模板参数列表，则查找将采用主模板或非模板，而不是部分模板特化。这意味着以下参考资料也有效:“"
 
 #: ../../usage/restructuredtext/domains.rst:1144
 msgid "``Wrapper::Outer`` (:cpp:class:`Wrapper::Outer`)"
@@ -1273,11 +1269,11 @@ msgstr "``Wrapper::Outer::Inner`` (:cpp:class:`Wrapper::Outer::Inner`)"
 msgid ""
 "``template\\<typename TInner> Wrapper::Outer::Inner`` "
 "(:cpp:class:`template\\<typename TInner> Wrapper::Outer::Inner`)"
-msgstr ""
+msgstr "``template\\<typename TInner> Wrapper::Outer::Inner`` (:cpp:class:`template\\<typename TInner> Wrapper::Outer::Inner`)"
 
 #: ../../usage/restructuredtext/domains.rst:1152
 msgid "(Full) Template Specialisations"
-msgstr "(Full) Template Specialisations"
+msgstr "(完整)模板专业化"
 
 #: ../../usage/restructuredtext/domains.rst:1171
 msgid ""
@@ -1290,15 +1286,15 @@ msgid ""
 "parameter list can be omitted, e.g., ``Outer\\<int>`` "
 "(:cpp:class:`Outer\\<int>`) and ``Outer\\<int>::Inner\\<bool>`` "
 "(:cpp:class:`Outer\\<int>::Inner\\<bool>`)."
-msgstr ""
+msgstr "通常，引用必须包含每个模板参数列表的模板参数列表。 因此可以参考上面的完整专业化 ``template\\<> Outer\\<int>`` (:cpp:class:`template\\<> Outer\\<int>`) and ``template\\<> template\\<> Outer\\<int>::Inner\\<bool>`` (:cpp:class:`template\\<> template\\<> Outer\\<int>::Inner\\<bool>`).  作为简写，可以省略空模板参数列表，例如， ``Outer\\<int>`` (:cpp:class:`Outer\\<int>`) and ``Outer\\<int>::Inner\\<bool>`` (:cpp:class:`Outer\\<int>::Inner\\<bool>`)."
 
 #: ../../usage/restructuredtext/domains.rst:1181
 msgid "Partial Template Specialisations"
-msgstr "Partial Template Specialisations"
+msgstr "部分模板专业化"
 
 #: ../../usage/restructuredtext/domains.rst:1183
 msgid "Assume the following declaration."
-msgstr "Assume the following declaration."
+msgstr "假设以下声明。"
 
 #: ../../usage/restructuredtext/domains.rst:1188
 msgid ""
@@ -1306,42 +1302,42 @@ msgid ""
 "parameter lists, e.g., ``template\\<typename T> Outer\\<T*>`` "
 "(:cpp:class:`template\\<typename T> Outer\\<T*>`).  Currently the lookup "
 "only succeed if the template parameter identifiers are equal strings."
-msgstr ""
+msgstr "对部分特化的引用必须始终包含模板参数列表，例如 ``template\\<typename T> Outer\\<T *>`` (:cpp:class:`template\\<typename T> Outer\\< T *>`)。目前，只有当模板参数标识符是相等的字符串时，查找才会成功。“"
 
 #: ../../usage/restructuredtext/domains.rst:1194
 msgid "Configuration Variables"
-msgstr "Configuration Variables"
+msgstr "配置变量"
 
 #: ../../usage/restructuredtext/domains.rst:1196
 msgid "See :ref:`cpp-config`."
-msgstr "See :ref:`cpp-config`."
+msgstr "请参阅:ref:`cpp-config`。"
 
 #: ../../usage/restructuredtext/domains.rst:1201
 msgid "The Standard Domain"
-msgstr "The Standard Domain"
+msgstr "标准域"
 
 #: ../../usage/restructuredtext/domains.rst:1203
 msgid ""
 "The so-called \"standard\" domain collects all markup that doesn't "
 "warrant a domain of its own.  Its directives and roles are not prefixed "
 "with a domain name."
-msgstr ""
+msgstr "所谓的“标准”域收集所有不保证自己域名的标记。其指令和角色不以域名为前缀。"
 
 #: ../../usage/restructuredtext/domains.rst:1207
 msgid ""
 "The standard domain is also where custom object descriptions, added using"
 " the :func:`~sphinx.application.Sphinx.add_object_type` API, are placed."
-msgstr ""
+msgstr "标准域也是使用 :func:`~sphinx.application.Sphinx.add_object_type` API添加的自定义对象描述的位置。“"
 
 #: ../../usage/restructuredtext/domains.rst:1210
 msgid "There is a set of directives allowing documenting command-line programs:"
-msgstr "There is a set of directives allowing documenting command-line programs:"
+msgstr "有一组指令允许记录命令行程序:"
 
 #: ../../usage/restructuredtext/domains.rst:1214
 msgid ""
 "Describes a command line argument or switch.  Option argument names "
 "should be enclosed in angle brackets.  Examples::"
-msgstr ""
+msgstr "描述命令行参数或开关。选项参数名称应括在尖括号中。例子::"
 
 #: ../../usage/restructuredtext/domains.rst:1225
 msgid ""
@@ -1349,66 +1345,66 @@ msgid ""
 "referenceable by :rst:role:`option` (in the example case, you'd use "
 "something like ``:option:`dest_dir```, ``:option:`-m```, or "
 "``:option:`--module```)."
-msgstr ""
+msgstr "该指令将为给定的选项创建交叉引用目标，可通过以下方式引用 :rst:role:`option` (在示例中，您将使用类似 ``:option:`dest_dir``` , ``:option:`-m``` , 要么  ``:option:`--module```)。"
 
 #: ../../usage/restructuredtext/domains.rst:1229
 msgid ""
 "``cmdoption`` directive is a deprecated alias for the ``option`` "
 "directive."
-msgstr ""
+msgstr "``cmdoption`` 指令是 ``option`` 指令的弃用别名。"
 
 #: ../../usage/restructuredtext/domains.rst:1233
 msgid ""
 "Describes an environment variable that the documented code or program "
 "uses or defines.  Referenceable by :rst:role:`envvar`."
-msgstr ""
+msgstr "描述文档化代码或程序使用或定义的环境变量。可引用者 :rst:role:`envvar` 。"
 
 #: ../../usage/restructuredtext/domains.rst:1238
 msgid ""
 "Like :rst:dir:`py:currentmodule`, this directive produces no output. "
 "Instead, it serves to notify Sphinx that all following :rst:dir:`option` "
 "directives document options for the program called *name*."
-msgstr ""
+msgstr "像 :rst:dir:`py:currentmodule` ，这个指令不产生输出。相反，它用于通知Sphinx所有以下内容 :rst:dir:`option` 指令文件选项称为 *name* 。"
 
 #: ../../usage/restructuredtext/domains.rst:1242
 msgid ""
 "If you use :rst:dir:`program`, you have to qualify the references in your"
 " :rst:role:`option` roles by the program name, so if you have the "
 "following situation ::"
-msgstr ""
+msgstr "如果你使用 :rst:dir:`program` ，你必须通过程序名来限定你的 :rst:role:`option` 角色中的引用，所以如果你有以下情况::"
 
 #: ../../usage/restructuredtext/domains.rst:1258
 msgid ""
 "then ``:option:`rm -r``` would refer to the first option, while "
 "``:option:`svn -r``` would refer to the second one."
-msgstr ""
+msgstr "然后 ``:option:`rm -r``` 将引用第一个选项，而 ``:option:`svn -r``` 将引用第二个选项。"
 
 #: ../../usage/restructuredtext/domains.rst:1261
 msgid ""
 "The program name may contain spaces (in case you want to document "
 "subcommands like ``svn add`` and ``svn commit`` separately)."
-msgstr ""
+msgstr "程序名称可能包含空格(如果你想分别记录 ``svn add`` 和 ``svn commit`` 这样的子命令)。"
 
 #: ../../usage/restructuredtext/domains.rst:1266
 msgid ""
 "There is also a very generic object description directive, which is not "
 "tied to any domain:"
-msgstr ""
+msgstr "还有一个非常通用的对象描述指令，它不依赖于任何域:"
 
 #: ../../usage/restructuredtext/domains.rst:1272
 msgid ""
 "This directive produces the same formatting as the specific ones provided"
 " by domains, but does not create index entries or cross-referencing "
 "targets. Example::"
-msgstr ""
+msgstr "此伪指令生成与域提供的特定格式相同的格式，但不创建索引条目或交叉引用目标。例::"
 
 #: ../../usage/restructuredtext/domains.rst:1282
 msgid "The JavaScript Domain"
-msgstr "The JavaScript Domain"
+msgstr "JavaScript域"
 
 #: ../../usage/restructuredtext/domains.rst:1284
 msgid "The JavaScript domain (name **js**) provides the following directives:"
-msgstr "The JavaScript domain (name **js**) provides the following directives:"
+msgstr "JavaScript域(名称 **js**)提供以下指令:"
 
 #: ../../usage/restructuredtext/domains.rst:1288
 msgid ""
@@ -1416,7 +1412,7 @@ msgid ""
 "after. The module name is used in the global module index and in cross "
 "references. This directive does not create an object heading like "
 ":rst:dir:`py:class` would, for example."
-msgstr ""
+msgstr "该指令设置后面的对象声明的模块名称。 模块名称用于全局模块索引和交叉引用中。 该指令不会创建如下的对象标题 :rst:dir:`py:class` 。"
 
 #: ../../usage/restructuredtext/domains.rst:1293
 msgid ""
@@ -1424,138 +1420,138 @@ msgid ""
 "an entry in the global module index, unless the ``noindex`` option is "
 "specified.  If this option is specified, the directive will only update "
 "the current module name."
-msgstr ""
+msgstr "默认情况下，此指令将创建一个可链接的实体，并将在全局模块索引中生成一个条目，除非指定了 ``noindex`` 选项。如果指定了此选项，则该指令将仅更新当前模块名称。"
 
 #: ../../usage/restructuredtext/domains.rst:1302
 msgid ""
 "Describes a JavaScript function or method.  If you want to describe "
 "arguments as optional use square brackets as :ref:`documented "
 "<signatures>` for Python signatures."
-msgstr ""
+msgstr "描述JavaScript函数或方法。如果要将参数描述为可选，请使用方括号 :ref:`documentation <signatures>` 用于Python签名。"
 
 #: ../../usage/restructuredtext/domains.rst:1306
 msgid ""
 "You can use fields to give more details about arguments and their "
 "expected types, errors which may be thrown by the function, and the value"
 " being returned::"
-msgstr ""
+msgstr "您可以使用字段来提供有关参数及其预期类型的​​更多详细信息，函数可能抛出的错误以及返回的值::"
 
 #: ../../usage/restructuredtext/domains.rst:1320
 #: ../../usage/restructuredtext/domains.rst:1349
 msgid "This is rendered as:"
-msgstr "This is rendered as:"
+msgstr "这表现为:"
 
 #: ../../usage/restructuredtext/domains.rst:1324
 msgid "An URI to the location of the resource."
-msgstr "An URI to the location of the resource."
+msgstr "资源位置的URI。"
 
 #: ../../usage/restructuredtext/domains.rst:1325
 msgid "Gets called with the object."
-msgstr "Gets called with the object."
+msgstr "使用对象调用。"
 
 #: ../../usage/restructuredtext/domains.rst:1326
 msgid ""
 "Gets called in case the request fails. And a lot of other text so we need"
 " multiple lines."
-msgstr ""
+msgstr "在请求失败的情况下调用。还有很多其他文字，所以我们需要多行。"
 
 #: ../../usage/restructuredtext/domains.rst
 msgid "throws SomeError"
-msgstr "throws SomeError"
+msgstr "抛出SomeError"
 
 #: ../../usage/restructuredtext/domains.rst:1329
 msgid "For whatever reason in that case."
-msgstr "For whatever reason in that case."
+msgstr "无论出于何种原因。"
 
 #: ../../usage/restructuredtext/domains.rst:1330
 msgid "Something."
-msgstr "Something."
+msgstr "某物."
 
 #: ../../usage/restructuredtext/domains.rst:1334
 msgid ""
 "This directive is an alias for :rst:dir:`js:function`, however it "
 "describes a function that is implemented as a method on a class object."
-msgstr ""
+msgstr "该指令是以下的别名 :rst:dir:`js:function` ，但是它描述了一个作为类对象上的方法实现的函数。"
 
 #: ../../usage/restructuredtext/domains.rst:1341
 msgid ""
 "Describes a constructor that creates an object.  This is basically like a"
 " function but will show up with a `class` prefix::"
-msgstr ""
+msgstr "描述创建对象的构造函数。这基本上就像一个函数，但会出现一个 `class` 前缀::"
 
 #: ../../usage/restructuredtext/domains.rst:1353
 msgid "The name of the animal"
-msgstr "The name of the animal"
+msgstr "动物的名字"
 
 #: ../../usage/restructuredtext/domains.rst:1354
 msgid "an optional age for the animal"
-msgstr "an optional age for the animal"
+msgstr "动物的选择年龄"
 
 #: ../../usage/restructuredtext/domains.rst:1358
 msgid "Describes a global variable or constant."
-msgstr "Describes a global variable or constant."
+msgstr "描述全局变量或常量。"
 
 #: ../../usage/restructuredtext/domains.rst:1362
 msgid "Describes the attribute *name* of *object*."
-msgstr "Describes the attribute *name* of *object*."
+msgstr "描述*object* 的属性 *name*。"
 
 #: ../../usage/restructuredtext/domains.rst:1366
 #: ../../usage/restructuredtext/domains.rst:1421
 msgid "These roles are provided to refer to the described objects:"
-msgstr "These roles are provided to refer to the described objects:"
+msgstr "提供这些角色是为了引用所描述的对象:"
 
 #: ../../usage/restructuredtext/domains.rst:1377
 msgid "The reStructuredText domain"
-msgstr "The reStructuredText domain"
+msgstr "reStructuredText域"
 
 #: ../../usage/restructuredtext/domains.rst:1379
 msgid ""
 "The reStructuredText domain (name **rst**) provides the following "
 "directives:"
-msgstr ""
+msgstr "reStructuredText域(名称 **rst**)提供以下指令:"
 
 #: ../../usage/restructuredtext/domains.rst:1383
 msgid ""
 "Describes a reST directive.  The *name* can be a single directive name or"
 " actual directive syntax (`..` prefix and `::` suffix) with arguments "
 "that will be rendered differently.  For example::"
-msgstr ""
+msgstr "描述reST指令。 *name* 可以是单个指令名称或实际指令语法(`..` 前缀和 `::` 后缀)，其参数将以不同方式呈现。例如::"
 
 #: ../../usage/restructuredtext/domains.rst:1395
 #: ../../usage/restructuredtext/domains.rst:1413
 msgid "will be rendered as:"
-msgstr "will be rendered as:"
+msgstr "将呈现为:"
 
 #: ../../usage/restructuredtext/domains.rst:1399
 #: ../../usage/restructuredtext/domains.rst:1417
 msgid "Foo description."
-msgstr "Foo description."
+msgstr "Foo描述。"
 
 #: ../../usage/restructuredtext/domains.rst:1403
 msgid "Bar description."
-msgstr "Bar description."
+msgstr "Bar 描述."
 
 #: ../../usage/restructuredtext/domains.rst:1407
 msgid "Describes a reST role.  For example::"
-msgstr "Describes a reST role.  For example::"
+msgstr "描述reST角色。例如::"
 
 #: ../../usage/restructuredtext/domains.rst:1429
 msgid "The Math Domain"
-msgstr "The Math Domain"
+msgstr "数学域"
 
 #: ../../usage/restructuredtext/domains.rst:1431
 msgid "The math domain (name **math**) provides the following roles::"
-msgstr "The math domain (name **math**) provides the following roles::"
+msgstr "数学域(名称 **math**)提供以下角色::"
 
 #: ../../usage/restructuredtext/domains.rst:1435
 msgid ""
 "Role for cross-referencing equations defined by :rst:dir:`math` directive"
 " via their label.  Example::"
-msgstr ""
+msgstr "交叉引用方程的作用由以下定义 :rst:dir:`math` 指令通过其标签定义。例::"
 
 #: ../../usage/restructuredtext/domains.rst:1447
 msgid "More domains"
-msgstr "More domains"
+msgstr "更多域"
 
 #: ../../usage/restructuredtext/domains.rst:1449
 msgid ""
@@ -1563,7 +1559,8 @@ msgid ""
 "extensions; currently Ada_, CoffeeScript_, Erlang_, HTTP_, Lasso_, "
 "MATLAB_, PHP_, and Ruby_ domains. Also available are domains for "
 "`Chapel`_, `Common Lisp`_, dqn_, Go_, Jinja_, Operation_, and Scala_."
-msgstr ""
+msgstr "sphinx-contrib_ 存储库包含更多可用作扩展的域;目前有 Ada_, CoffeeScript_, Erlang_, HTTP_, Lasso_, "
+"MATLAB_, PHP_, 和 Ruby_ 域。另外还有 `Chapel`_, `Common Lisp`_, dqn_, Go_, Jinja_, Operation_, 和 Scala_ 的域。"
 
 #~ msgid "Parameters"
 #~ msgstr ""
