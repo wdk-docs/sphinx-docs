@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>配置 &#8212; Sphinx 2.1.0+/efa8fcc27 文档</title>
+    <title>配置 &#8212; Sphinx 2.1.0+/a6d11e3ad 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/efa8fcc27 文档 中搜索"
+          title="在 Sphinx 2.1.0+/a6d11e3ad 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
@@ -177,7 +177,10 @@
             
   <div class="section" id="module-conf">
 <span id="configuration"></span><span id="build-config"></span><h1>配置<a class="headerlink" href="#module-conf" title="永久链接至标题">¶</a></h1>
-<p><a class="reference internal" href="../glossary.html#term-configuration-directory"><span class="xref std std-term">configuration directory</span></a> 必须包含一个名为 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 的文件。此文件(包含Python代码)称为 “构建配置文件” ，并包含(几乎)自定义Sphinx输入和输出行为所需的所有配置。</p>
+<p>The <a class="reference internal" href="../glossary.html#term-configuration-directory"><span class="xref std std-term">configuration directory</span></a> must contain a file named <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>.
+This file (containing Python code) is called the “build configuration file”
+and contains (almost) all configuration needed to customize Sphinx input
+and output behavior.</p>
 <blockquote>
 <div><p>可以将一个可选文件 <a class="reference external" href="http://docutils.sourceforge.net/docs/user/config.html">docutils.conf</a> 添加到配置目录中，以便在没有被Sphinx覆盖或设置的情况下调整 <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> 配置。</p>
 </div></blockquote>
@@ -185,10 +188,13 @@
 <p>重点要注意:</p>
 <ul class="simple">
 <li><p>如果没有另外记录，则值必须是字符串，并且它们的默认值为空字符串。</p></li>
-<li><p>术语 “完全限定名称” 是指在模块内命名可导入Python对象的字符串;例如，FQN <code class="docutils literal notranslate"><span class="pre">&quot;sphinx.builders.Builder&quot;</span></code> 表示 <code class="docutils literal notranslate"><span class="pre">sphinx.builders</span></code> 模块中的 <code class="docutils literal notranslate"><span class="pre">Builder</span></code> 类。</p></li>
+<li><p>The term “fully-qualified name” refers to a string that names an importable
+Python object inside a module; for example, the FQN
+<code class="docutils literal notranslate"><span class="pre">&quot;sphinx.builders.Builder&quot;</span></code> means the <code class="docutils literal notranslate"><span class="pre">Builder</span></code> class in the
+<code class="docutils literal notranslate"><span class="pre">sphinx.builders</span></code> module.</p></li>
 <li><p>请记住，文档名称使用 <code class="docutils literal notranslate"><span class="pre">/</span></code> 作为路径分隔符，并且不包含文件扩展名。</p></li>
 <li><p>因为 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 被读作Python文件，通常的规则适用于编码和Unicode支持。</p></li>
-<li><p>挑选config命名空间的内容(以便Sphinx可以在配置更改时找到)，因此它可能不包含不可删除的值 - 如果合适，可以使用 <code class="docutils literal notranslate"><span class="pre">del</span></code> 从命名空间中删除它们。模块会自动删除，因此您在使用后无需 “del” 导入。</p>
+<li><p>挑选config命名空间的内容(以便Sphinx可以在配置更改时找到)，因此它可能不包含不可删除的值 - 如果合适，可以使用 <code class="docutils literal notranslate"><span class="pre">del</span></code> 从命名空间中删除它们。模块会自动删除，因此您在使用后无需 <code class="docutils literal notranslate"><span class="pre">del</span></code> 导入。</p>
 </li>
 <li id="conf-tags"><p>配置文件中有一个名为 <code class="docutils literal notranslate"><span class="pre">tags</span></code> 的特殊对象。它可用于查询和更改标记(请参阅 <a class="reference internal" href="restructuredtext/directives.html#tags"><span class="std std-ref">包括基于标签的内容</span></a> )。使用 <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code> 来查询， <code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> 和 <code class="docutils literal notranslate"><span class="pre">tags.remove('tag')</span></code> 来改变。只有通过 <code class="docutils literal notranslate"><span class="pre">-t</span></code> 命令行选项或 <code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> 设置的标签可以使用 <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code> 进行查询。请注意，当前构建器标记在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中不可用，因为它是在初始化构建器之 <em>后</em> 创建的。</p></li>
 </ul>
@@ -231,7 +237,7 @@
 <dl class="confval">
 <dt id="confval-extensions">
 <code class="descname">extensions</code><a class="headerlink" href="#confval-extensions" title="永久链接至目标">¶</a></dt>
-<dd><p>模块名称为 <span class="xref std std-doc">extensions</span> 的字符串列表。这些可以是Sphinx(名为 <code class="docutils literal notranslate"><span class="pre">sphinx.ext。*</span></code>)或自定义的扩展。</p>
+<dd><p>模块名称为 <a class="reference internal" href="extensions/index.html"><span class="doc">extensions</span></a> 的字符串列表。这些可以是Sphinx(名为 <code class="docutils literal notranslate"><span class="pre">sphinx.ext。*</span></code>)或自定义的扩展。</p>
 <p>请注意，如果扩展名位于另一个目录中，则可以在conf文件中扩展 <code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code>  - 但请确保使用绝对路径。如果你的扩展路径是相对于 <a class="reference internal" href="../glossary.html#term-configuration-directory"><span class="xref std std-term">configuration directory</span></a> ，那么使用 <code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.abspath()</span></code> 就像这样:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
 
@@ -302,7 +308,8 @@
 <dl class="confval">
 <dt id="confval-master_doc">
 <code class="descname">master_doc</code><a class="headerlink" href="#confval-master_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>“master” 文档的文档名称，即包含root <a class="reference internal" href="restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> 指令的文档。默认是 <code class="docutils literal notranslate"><span class="pre">'index'</span></code> 。</p>
+<dd><p>The document name of the “master” document, that is, the document that
+contains the root <a class="reference internal" href="restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> directive.  Default is <code class="docutils literal notranslate"><span class="pre">'index'</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 2.0 版更改: </span>默认值从 <code class="docutils literal notranslate"><span class="pre">'contents'</span></code> 改变为 <code class="docutils literal notranslate"><span class="pre">'index'</span></code> 。</p>
 </div>
@@ -371,7 +378,12 @@
 <dl class="confval">
 <dt id="confval-primary_domain">
 <code class="descname">primary_domain</code><a class="headerlink" href="#confval-primary_domain" title="永久链接至目标">¶</a></dt>
-<dd><p id="index-2">默认名称 <a class="reference internal" href="restructuredtext/domains.html"><span class="doc">domain</span></a> 。也可以是 <code class="docutils literal notranslate"><span class="pre">None</span></code> 来禁用默认域。默认为 <code class="docutils literal notranslate"><span class="pre">'py'</span></code> 。其他域中的那些对象(无论是显式给出域名，还是通过 <a class="reference internal" href="restructuredtext/domains.html#directive-default-domain" title="default-domain directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">default-domain</span></code></a> 指令选择)将在命名时显式地预先添加域名(例如，当默认域为C时，Python函数将命名为 “Python函数” ，而不仅仅是 “函数” 。</p>
+<dd><p id="index-2">The name of the default <a class="reference internal" href="restructuredtext/domains.html"><span class="doc">domain</span></a>.
+Can also be <code class="docutils literal notranslate"><span class="pre">None</span></code> to disable a default domain.  The default is <code class="docutils literal notranslate"><span class="pre">'py'</span></code>.
+Those objects in other domains (whether the domain name is given explicitly,
+or selected by a <a class="reference internal" href="restructuredtext/domains.html#directive-default-domain" title="default-domain directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">default-domain</span></code></a> directive) will have the domain
+name explicitly prepended when named (e.g., when the default domain is C,
+Python functions will be named “Python function”, not just “function”).</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -380,7 +392,10 @@
 <dl class="confval">
 <dt id="confval-default_role">
 <code class="descname">default_role</code><a class="headerlink" href="#confval-default_role" title="永久链接至目标">¶</a></dt>
-<dd><p id="index-3">用作默认角色的reST角色(内置或Sphinx扩展)的名称，即用于标记为 <code class="docutils literal notranslate"><span class="pre">`like</span> <span class="pre">this`</span></code> 的文本。这可以设置为 <code class="docutils literal notranslate"><span class="pre">'py:obj'</span></code> ，使 <code class="docutils literal notranslate"><span class="pre">`filter`</span></code> 成为Python函数 “filter” 的交叉引用。默认值为 “None” ，它不会重新分配默认角色。</p>
+<dd><p id="index-3">The name of a reST role (builtin or Sphinx extension) to use as the default
+role, that is, for text marked up <code class="docutils literal notranslate"><span class="pre">`like</span> <span class="pre">this`</span></code>.  This can be set to
+<code class="docutils literal notranslate"><span class="pre">'py:obj'</span></code> to make <code class="docutils literal notranslate"><span class="pre">`filter`</span></code> a cross-reference to the Python function
+“filter”.  The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, which doesn’t reassign the default role.</p>
 <p>可以使用标准reST <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">default-role</span></code> 指令始终在单个文档中设置默认角色。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
@@ -390,8 +405,10 @@
 <dl class="confval">
 <dt id="confval-keep_warnings">
 <code class="descname">keep_warnings</code><a class="headerlink" href="#confval-keep_warnings" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，请在构建的文档中将警告保留为 “系统消息” 段落。无论此设置如何，当运行 “sphinx-build” 时，警告总是写入标准错误流。</p>
-<p>默认为 “False” ，0.5之前的行为是始终保持它们。</p>
+<dd><p>If true, keep warnings as “system message” paragraphs in the built
+documents.  Regardless of this setting, warnings are always written to the
+standard error stream when <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> is run.</p>
+<p>默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> ，0.5之前的行为是始终保持它们。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
@@ -454,7 +471,7 @@
 <dl class="confval">
 <dt id="confval-needs_extensions">
 <code class="descname">needs_extensions</code><a class="headerlink" href="#confval-needs_extensions" title="永久链接至目标">¶</a></dt>
-<dd><p>该值可以是指定扩展名的版本要求的字典 <a class="reference internal" href="#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> ，例如: <code class="docutils literal notranslate"><span class="pre">needs_extensions</span> <span class="pre">=</span> <span class="pre">{'sphinxcontrib.something':'1.5'}</span></code> 。版本字符串应采用 “major.minor” 形式。不必为所有扩展指定要求，仅适用于您要检查的扩展。</p>
+<dd><p>该值可以是指定扩展名的版本要求的字典 <a class="reference internal" href="#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> ，例如: <code class="docutils literal notranslate"><span class="pre">needs_extensions</span> <span class="pre">=</span> <span class="pre">{'sphinxcontrib.something':'1.5'}</span></code> 。版本字符串应采用 <code class="docutils literal notranslate"><span class="pre">major.minor</span></code> 形式。不必为所有扩展指定要求，仅适用于您要检查的扩展。</p>
 <p>这要求扩展指定其版本给Sphinx(参见 <a class="reference internal" href="../extdev/index.html#dev-extensions"><span class="std std-ref">为Sphinx开发扩展</span></a> ，了解如何做到这一点)。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
@@ -464,7 +481,7 @@
 <dl class="confval">
 <dt id="confval-manpages_url">
 <code class="descname">manpages_url</code><a class="headerlink" href="#confval-manpages_url" title="永久链接至目标">¶</a></dt>
-<dd><p>交叉引用的URL <a class="reference internal" href="restructuredtext/roles.html#role-manpage" title="manpage role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">manpage</span></code></a> 指令。如果将其定义为 <code class="docutils literal notranslate"><span class="pre">https://manpages.debian.org/</span> <span class="pre">{path}</span></code> ，则 <code class="docutils literal notranslate"><span class="pre">:manpage:`man(1)`</span></code> 角色将链接到 &lt;<a class="reference external" href="https://manpages.debian.org/man(1)">https://manpages.debian.org/man(1)</a>&gt; 。可用的模式是:</p>
+<dd><p>交叉引用的URL <a class="reference internal" href="restructuredtext/roles.html#role-manpage" title="manpage role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">manpage</span></code></a> 指令。如果将其定义为 <code class="docutils literal notranslate"><span class="pre">https://manpages.debian.org/{path}</span></code> ，则 <code class="docutils literal notranslate"><span class="pre">:manpage:`man(1)`</span></code> 角色将链接到 &lt;<a class="reference external" href="https://manpages.debian.org/man(1)">https://manpages.debian.org/man(1)</a>&gt; 。可用的模式是:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">page</span></code> - 手册页 (<code class="docutils literal notranslate"><span class="pre">man</span></code>)</p></li>
@@ -485,7 +502,7 @@
 <dl class="confval">
 <dt id="confval-nitpicky">
 <code class="descname">nitpicky</code><a class="headerlink" href="#confval-nitpicky" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为真，Sphinx将警告*所有*引用无法找到目标。默认为 “False” 。您可以使用:选项临时激活此模式 <a class="reference internal" href="../man/sphinx-build.html#cmdoption-sphinx-build-n"><code class="xref std std-option docutils literal notranslate"><span class="pre">-n</span></code></a> 命令行开关。</p>
+<dd><p>如果为真，Sphinx将警告*所有*引用无法找到目标。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。您可以使用:选项临时激活此模式 <a class="reference internal" href="../man/sphinx-build.html#cmdoption-sphinx-build-n"><code class="xref std std-option docutils literal notranslate"><span class="pre">-n</span></code></a> 命令行开关。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -494,7 +511,10 @@
 <dl class="confval">
 <dt id="confval-nitpick_ignore">
 <code class="descname">nitpick_ignore</code><a class="headerlink" href="#confval-nitpick_ignore" title="永久链接至目标">¶</a></dt>
-<dd><p>在( “nitpicky模式” 中生成警告时应忽略的 <code class="docutils literal notranslate"><span class="pre">(type，target)</span></code> 元组列表(默认为空)。请注意， <code class="docutils literal notranslate"><span class="pre">type</span></code> 应该包含域名(如果存在)。示例条目将是 <code class="docutils literal notranslate"><span class="pre">('py:func'，'int')</span></code> 或 <code class="docutils literal notranslate"><span class="pre">('envvar'，'LD_LIBRARY_PATH')</span></code> 。</p>
+<dd><p>A list of <code class="docutils literal notranslate"><span class="pre">(type,</span> <span class="pre">target)</span></code> tuples (by default empty) that should be
+ignored when generating warnings in “nitpicky mode”.  Note that <code class="docutils literal notranslate"><span class="pre">type</span></code>
+should include the domain name if present.  Example entries would be
+<code class="docutils literal notranslate"><span class="pre">('py:func',</span> <span class="pre">'int')</span></code> or <code class="docutils literal notranslate"><span class="pre">('envvar',</span> <span class="pre">'LD_LIBRARY_PATH')</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -503,7 +523,7 @@
 <dl class="confval">
 <dt id="confval-numfig">
 <code class="descname">numfig</code><a class="headerlink" href="#confval-numfig" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则数字，表格和代码块如果有标题则会自动编号。 <a class="reference internal" href="restructuredtext/roles.html#role-numref" title="numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code></a> 角色已启用。到目前为止，只有HTML和LaTeX构建者才能使用 Obeyed 。默认为 “False” 。</p>
+<dd><p>如果为true，则数字，表格和代码块如果有标题则会自动编号。 <a class="reference internal" href="restructuredtext/roles.html#role-numref" title="numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code></a> 角色已启用。到目前为止，只有HTML和LaTeX构建者才能使用 Obeyed 。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p>无论是否启用此选项，LaTeX构建器始终会分配数字。</p>
@@ -527,7 +547,7 @@
 <dt id="confval-numfig_secnum_depth">
 <code class="descname">numfig_secnum_depth</code><a class="headerlink" href="#confval-numfig_secnum_depth" title="永久链接至目标">¶</a></dt>
 <dd><ul class="simple">
-<li><p>如果设置为 “0” ，则数字，表格和代码块从 “1” 开始连续编号。</p></li>
+<li><p>如果设置为 <code class="docutils literal notranslate"><span class="pre">0</span></code> ，则数字，表格和代码块从 <code class="docutils literal notranslate"><span class="pre">1</span></code> 开始连续编号。</p></li>
 <li><p>如果``1``(默认)数字将是 <code class="docutils literal notranslate"><span class="pre">x.1</span></code> ， <code class="docutils literal notranslate"><span class="pre">x.2</span></code> ，…与 <code class="docutils literal notranslate"><span class="pre">x</span></code> 的节号(顶级切片;没有 <code class="docutils literal notranslate"><span class="pre">x</span></code> 如果没有部分)。只有当通过 <a class="reference internal" href="restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> 指令的 <code class="docutils literal notranslate"><span class="pre">:numbered:</span></code> 选项激活了段号时，这才自然适用。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> 表示数字将是 <code class="docutils literal notranslate"><span class="pre">xy1</span></code> ， <code class="docutils literal notranslate"><span class="pre">xy2</span></code> ，…如果位于子区域(但仍然是 <code class="docutils literal notranslate"><span class="pre">x.1</span></code> ， <code class="docutils literal notranslate"><span class="pre">x.2</span> <span class="pre">``</span> <span class="pre">，...如果直接位于一个部分和</span> <span class="pre">``1</span></code> ， <code class="docutils literal notranslate"><span class="pre">2</span></code> ，…如果不在任何顶级部分。)</p></li>
 <li><p>等等…</p></li>
@@ -547,13 +567,16 @@
 <div class="versionadded">
 <p><span class="versionmodified added">1.6.6 新版功能: </span>如果是真的，最初基于 <a href="#id12"><span class="problematic" id="id14">`SmartyPants`__</span></a> (仅英文)并且目前以多种语言提供的 <cite>Docutils Smart Quotes Transformation</cite> ___ 将用于将引号和短划线转换为打印实体。默认值: <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 </div>
-<p>如果*通过相应的 <a href="#id16"><span class="problematic" id="id17">`Docutils选项`_</span></a>  <em>停用</em> 智能引号，则无条件地遵守位于配置目录(或全局 <a href="#id1"><span class="problematic" id="id2">:文件:`〜/ .docutils`文件 )中的 `docutils.conf`__</span></a> 文件。但如果它 <a href="#id3"><span class="problematic" id="id4">*</span></a>激活它们，那么 <a class="reference internal" href="#confval-smartquotes"><code class="xref std std-confval docutils literal notranslate"><span class="pre">smartquotes</span></code></a> 确实占上风。</p>
+<p>如果*通过相应的 <a href="#id17"><span class="problematic" id="id18">`Docutils选项`_</span></a>  <em>停用</em> 智能引号，则无条件地遵守位于配置目录(或全局 <a href="#id1"><span class="problematic" id="id2">:文件:`〜/.docutils`文件 )中的 `docutils.conf`__</span></a> 文件。但如果它 <a href="#id3"><span class="problematic" id="id4">*</span></a>激活它们，那么 <a class="reference internal" href="#confval-smartquotes"><code class="xref std std-confval docutils literal notranslate"><span class="pre">smartquotes</span></code></a> 确实占上风。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-smartquotes_action">
 <code class="descname">smartquotes_action</code><a class="headerlink" href="#confval-smartquotes_action" title="永久链接至目标">¶</a></dt>
-<dd><p>此字符串与Docutils “0.14” 或更高版本一起使用，可自定义智能引号转换。有关详细信息，请参阅`Docutils repository`__中的文件:file:<cite>smartquotes.py</cite>。默认的``’qDe’<code class="docutils literal notranslate"><span class="pre">教育正常的**</span> <span class="pre">q</span> <span class="pre">**</span> <span class="pre">\</span> <span class="pre">uote字符</span></code>```，<a href="#id1"><span class="problematic" id="id2">``</span></a><code class="docutils literal notranslate"><span class="pre">，em-和en</span>&#160; <span class="pre">-</span>&#160; <span class="pre">**</span> <span class="pre">D</span> <span class="pre">**</span> <span class="pre">\</span> <span class="pre">ashes</span></code>  - -<code class="docutils literal notranslate"><span class="pre">，</span></code>–<code class="docutils literal notranslate"><span class="pre">和**</span> <span class="pre">e</span> <span class="pre">**</span> <span class="pre">\</span> <span class="pre">llipses</span></code> …``。</p>
+<dd><p>This string, for use with Docutils <code class="docutils literal notranslate"><span class="pre">0.14</span></code> or later, customizes the Smart
+Quotes transform.  See the file <code class="file docutils literal notranslate"><span class="pre">smartquotes.py</span></code> at the <a href="#id12"><span class="problematic" id="id15">`Docutils
+repository`__</span></a> for details.  The default <code class="docutils literal notranslate"><span class="pre">'qDe'</span></code> educates normal <strong>q</strong>uote characters <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">'</span></code>, em- and en-<strong>D</strong>ashes <code class="docutils literal notranslate"><span class="pre">---</span></code>, <code class="docutils literal notranslate"><span class="pre">--</span></code>, and
+<strong>e</strong>llipses <code class="docutils literal notranslate"><span class="pre">...</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.6.6 新版功能.</span></p>
 </div>
@@ -562,14 +585,21 @@
 <dl class="confval">
 <dt id="confval-smartquotes_excludes">
 <code class="descname">smartquotes_excludes</code><a class="headerlink" href="#confval-smartquotes_excludes" title="永久链接至目标">¶</a></dt>
-<dd><p>This is a <code class="docutils literal notranslate"><span class="pre">dict</span></code> whose default is:</p>
+<dd><p>这是一个 <code class="docutils literal notranslate"><span class="pre">dict</span></code> ，其默认值为:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;languages&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ja&#39;</span><span class="p">],</span> <span class="s1">&#39;builders&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;man&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">]}</span>
 </pre></div>
 </div>
-<p>每个条目都给出了一个足够的条件来忽略:confval:<cite>smartquotes`设置并停用Smart Quotes变换。接受的键如上所述’</cite>’builders’<code class="docutils literal notranslate"><span class="pre">或</span></code>’languages “.``。值是列表。</p>
+<p>每个条目都给出了一个足够的条件来忽略 <a class="reference internal" href="#confval-smartquotes"><code class="xref std std-confval docutils literal notranslate"><span class="pre">smartquotes</span></code></a> 设置并停用Smart Quotes变换。接受的键如上所述  <code class="docutils literal notranslate"><span class="pre">'builders'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'languages'</span></code> 。值是列表。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>目前，如果调用:program:<cite>make`有多个目标，第一个目标名称是唯一一个针对`</cite>’builders’<cite>条目进行测试的目标名称，它决定所有目标。另外，``make html``后面的``make text``需要以``make text O = ” -  E” ``的形式发出，强制重新解析源文件，如缓存的那样已经转变了。另一方面，直接使用以下方法不会出现这个问题:program:`sphinx-build</cite>，因为它在每个构建器位置缓存(在其默认用法中)已解析的源文件。</p>
+<p>Currently, in case of invocation of <strong class="program">make</strong> with multiple
+targets, the first target name is the only one which is tested against
+the <code class="docutils literal notranslate"><span class="pre">'builders'</span></code> entry and it decides for all.  Also, a <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">text</span></code>
+following <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> needs to be issued in the form <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">text</span>
+<span class="pre">O=&quot;-E&quot;</span></code> to force re-parsing of source files, as the cached ones are
+already transformed.  On the other hand the issue does not arise with
+direct usage of <strong class="program">sphinx-build</strong> as it caches
+(in its default usage) the parsed source files in per builder locations.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">1.6.6 新版功能.</span></p>
@@ -579,7 +609,7 @@
 <dl class="confval">
 <dt id="confval-tls_verify">
 <code class="descname">tls_verify</code><a class="headerlink" href="#confval-tls_verify" title="永久链接至目标">¶</a></dt>
-<dd><p>If true, Sphinx verifies server certifications.  Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dd><p>如果为true，Sphinx将验证服务器认证。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5 新版功能.</span></p>
 </div>
@@ -594,7 +624,7 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>Sphinx在内部使用requests_作为HTTP库。因此，如果未设置`tls_cacerts`，则Sphinx会在指向``REQUESTS_CA_BUNDLE``环境变量的目录中引用认证文件。</p>
+<p>Sphinx在内部使用requests_作为HTTP库。因此，如果未设置 <cite>tls_cacerts</cite> ，则Sphinx会在指向 <code class="docutils literal notranslate"><span class="pre">REQUESTS_CA_BUNDLE</span></code> 环境变量的目录中引用认证文件。</p>
 </div>
 </dd></dl>
 
@@ -603,30 +633,30 @@
 <code class="descname">today</code><a class="headerlink" href="#confval-today" title="永久链接至目标">¶</a></dt>
 <dt id="confval-today_fmt">
 <code class="descname">today_fmt</code><a class="headerlink" href="#confval-today_fmt" title="永久链接至目标">¶</a></dt>
-<dd><p>这些值决定了如何格式化当前日期，用作``| today <a href="#id1"><span class="problematic" id="id2">|</span></a><a href="#id3"><span class="problematic" id="id4">``</span></a>的替换。</p>
+<dd><p>这些值决定了如何格式化当前日期，用作 <code class="docutils literal notranslate"><span class="pre">|today|</span></code> 的替换。</p>
 <ul class="simple">
-<li><p>如果将:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>today`设置为非空值，则使用它。</p></li>
-<li><p>否则，使用:func:<cite>time.strftime`格式化当前时间，格式为:confval:`today_fmt</cite>。</p></li>
+<li><p>如果将 <a class="reference internal" href="#confval-today"><code class="xref std std-confval docutils literal notranslate"><span class="pre">today</span></code></a> 设置为非空值，则使用它。</p></li>
+<li><p>否则，使用 <code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code> 格式化当前时间，格式为 <a class="reference internal" href="#confval-today_fmt"><code class="xref std std-confval docutils literal notranslate"><span class="pre">today_fmt</span></code></a> 。</p></li>
 </ul>
-<p>现在的默认值是:confval:<cite>today`和a:confval:`today_fmt`的</cite>’‘％B％d，％Y’<a href="#id1"><span class="problematic" id="id2">``</span></a>(或者，如果使用:confval:<a href="#id3"><span class="problematic" id="id4">`</span></a>language`启用翻译，则为等效格式对于选定的区域设置)。</p>
+<p>现在的默认值是 <a class="reference internal" href="#confval-today"><code class="xref std std-confval docutils literal notranslate"><span class="pre">today</span></code></a> 和 a <a class="reference internal" href="#confval-today_fmt"><code class="xref std std-confval docutils literal notranslate"><span class="pre">today_fmt</span></code></a> 的 <code class="docutils literal notranslate"><span class="pre">'％B％d，％Y'</span></code> (或者，如果使用 <a class="reference internal" href="#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 启用翻译，则为等效格式对于选定的区域设置)。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-highlight_language">
 <code class="descname">highlight_language</code><a class="headerlink" href="#confval-highlight_language" title="永久链接至目标">¶</a></dt>
-<dd><p>用于突出显示源代码的默认语言。默认语言为``’python3’<a href="#id1"><span class="problematic" id="id2">``</span></a>。该值应该是有效的Pygments词法分析器名称，请参阅:ref:<a href="#id3"><span class="problematic" id="id4">`</span></a>code-examples`以获取更多详细信息。</p>
+<dd><p>用于突出显示源代码的默认语言。默认语言为 <code class="docutils literal notranslate"><span class="pre">'python3'</span></code> 。该值应该是有效的Pygments词法分析器名称，请参阅 <a class="reference internal" href="restructuredtext/directives.html#code-examples"><span class="std std-ref">显示代码示例</span></a> 以获取更多详细信息。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.4 版更改: </span>默认为现在``’default’<code class="docutils literal notranslate"><span class="pre">。它类似于</span></code>’python3’<code class="docutils literal notranslate"><span class="pre">;它主要是</span></code>’python’<code class="docutils literal notranslate"><span class="pre">的超集，但是如果失败则它会在没有警告的情况下回退到</span></code>’none’<cite>。如果失败，`</cite>’python3’<code class="docutils literal notranslate"><span class="pre">和其他语言会发出警告。如果您只想要Python</span> <span class="pre">2高亮显示，可以将其设置回</span></code>’python’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<p><span class="versionmodified changed">在 1.4 版更改: </span>默认为现在 <code class="docutils literal notranslate"><span class="pre">'default'</span></code> 。它类似于 <code class="docutils literal notranslate"><span class="pre">'python3'</span></code> ;它主要是 <code class="docutils literal notranslate"><span class="pre">'python'</span></code> 的超集，但是如果失败则它会在没有警告的情况下回退到 <code class="docutils literal notranslate"><span class="pre">'none'</span></code> 。如果失败，<code class="docutils literal notranslate"><span class="pre">'python3'</span></code> 和其他语言会发出警告。如果您只想要Python 2高亮显示，可以将其设置回 <code class="docutils literal notranslate"><span class="pre">'python'</span></code> 。</p>
 </div>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-highlight_options">
 <code class="descname">highlight_options</code><a class="headerlink" href="#confval-highlight_options" title="永久链接至目标">¶</a></dt>
-<dd><p>修改由以下内容指定词法分析器的方式的选项字典:confval:<a class="reference external" href="http://pygments.org/docs/lexers/">highlight_language`生成突出显示的源代码。这些是特定于词法分析器的;对于每个人理解的选项，请参阅`Pygments documentation</a>。</p>
+<dd><p>修改由以下内容指定词法分析器的方式的选项字典 <a class="reference internal" href="#confval-highlight_language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">highlight_language</span></code></a> 生成突出显示的源代码。这些是特定于词法分析器的;对于每个人理解的选项，请参阅 <a class="reference external" href="http://pygments.org/docs/lexers/">Pygments documentation</a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
@@ -635,7 +665,7 @@
 <dl class="confval">
 <dt id="confval-pygments_style">
 <code class="descname">pygments_style</code><a class="headerlink" href="#confval-pygments_style" title="永久链接至目标">¶</a></dt>
-<dd><p>用于Pygments突出显示源代码的样式名称。如果未设置，则为HTML输出选择主题的默认样式或 “<cite>’sphinx’。</cite>。</p>
+<dd><p>用于Pygments突出显示源代码的样式名称。如果未设置，则为HTML输出选择主题的默认样式或 <code class="docutils literal notranslate"><span class="pre">'sphinx'</span></code> 。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 0.3 版更改: </span>如果该值是自定义Pygments样式类的完全限定名称，则将其用作自定义样式。</p>
 </div>
@@ -644,25 +674,27 @@
 <dl class="confval">
 <dt id="confval-add_function_parentheses">
 <code class="descname">add_function_parentheses</code><a class="headerlink" href="#confval-add_function_parentheses" title="永久链接至目标">¶</a></dt>
-<dd><p>一个布尔值，决定是否将括号附加到函数和方法角色文本(例如``:func:<a href="#id1"><span class="problematic" id="id2">`</span></a>input```的内容)以表示该名称是可调用的。默认为 “True” 。</p>
+<dd><p>一个布尔值，决定是否将括号附加到函数和方法角色文本(例如 <code class="docutils literal notranslate"><span class="pre">:func:`input`</span></code> 的内容)以表示该名称是可调用的。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-add_module_names">
 <code class="descname">add_module_names</code><a class="headerlink" href="#confval-add_module_names" title="永久链接至目标">¶</a></dt>
-<dd><p>一个布尔值，决定模块名称是否附加在所有:term:<a href="#id1"><span class="problematic" id="id2">`</span></a>object`名称(对于定义了某种类型的 “模块” 的对象类型)，例如for:rst:dir:<a href="#id3"><span class="problematic" id="id4">`</span></a>py:function`指令。默认为 “True” 。</p>
+<dd><p>A boolean that decides whether module names are prepended to all
+<a class="reference internal" href="../glossary.html#term-object"><span class="xref std std-term">object</span></a> names (for object types where a “module” of some kind is
+defined), e.g. for <a class="reference internal" href="restructuredtext/domains.html#directive-py:function" title="py:function directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:function</span></code></a> directives.  Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-show_authors">
 <code class="descname">show_authors</code><a class="headerlink" href="#confval-show_authors" title="永久链接至目标">¶</a></dt>
-<dd><p>一个布尔值，决定:rst:dir:<a href="#id1"><span class="problematic" id="id2">`</span></a>codeauthor`和:rst:dir:<a href="#id3"><span class="problematic" id="id4">`</span></a>sectionauthor`指令在构建的文件中产生任何输出。</p>
+<dd><p>一个布尔值，决定 <a class="reference internal" href="restructuredtext/directives.html#directive-codeauthor" title="codeauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">codeauthor</span></code></a> 和 <a class="reference internal" href="restructuredtext/directives.html#directive-sectionauthor" title="sectionauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">sectionauthor</span></code></a> 指令在构建的文件中产生任何输出。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-modindex_common_prefix">
 <code class="descname">modindex_common_prefix</code><a class="headerlink" href="#confval-modindex_common_prefix" title="永久链接至目标">¶</a></dt>
-<dd><p>为了对Python模块索引进行排序而忽略的前缀列表(例如，如果将其设置为``[‘foo。’]``，那么``foo.bar``将显示在``B``下，而不是``F``)。如果您记录包含单个包的项目，这可能很方便。仅适用于当前的HTML构建器。默认是``[]``。</p>
+<dd><p>为了对Python模块索引进行排序而忽略的前缀列表(例如，如果将其设置为 <code class="docutils literal notranslate"><span class="pre">['foo.']</span></code> ，那么 <code class="docutils literal notranslate"><span class="pre">foo.bar</span></code> 将显示在 <code class="docutils literal notranslate"><span class="pre">B</span></code> 下，而不是 <code class="docutils literal notranslate"><span class="pre">F</span></code> )。如果您记录包含单个包的项目，这可能很方便。仅适用于当前的HTML构建器。默认是 <code class="docutils literal notranslate"><span class="pre">[]</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
@@ -680,7 +712,7 @@
 <dl class="confval">
 <dt id="confval-trim_doctest_flags">
 <code class="descname">trim_doctest_flags</code><a class="headerlink" href="#confval-trim_doctest_flags" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则删除doctest标志(在行的末尾看起来像``doctest:FLAG，…``的注释)和``&lt;BLANKLINE&gt;``标记，以显示交互式Python会话的所有代码块(即doctests) 。默认为 “True” 。有关包含doctests的更多可能性，请参阅扩展名:mod:<cite>~sphinx.ext.doctest</cite>。</p>
+<dd><p>如果为true，则删除doctest标志(在行的末尾看起来像 <code class="docutils literal notranslate"><span class="pre">doctest:FLAG，...</span></code> 的注释)和 <code class="docutils literal notranslate"><span class="pre">&lt;BLANKLINE&gt;</span></code> 标记，以显示交互式Python会话的所有代码块(即doctests) 。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。有关包含doctests的更多可能性，请参阅扩展名 <a class="reference internal" href="extensions/doctest.html#module-sphinx.ext.doctest" title="sphinx.ext.doctest: Test snippets in the documentation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -753,7 +785,7 @@
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
 <p>相对于源目录，在其中搜索其他消息目录(请参阅 <a class="reference internal" href="#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> )的目录。此路径上的目录由标准 <code class="xref py py-mod docutils literal notranslate"><span class="pre">gettext</span></code> 模块搜索。</p>
-<p>内部消息是从 “sphinx” 的文本域中获取的;因此，如果将目录:file:<cite>。/ locale`添加到此设置，则消息目录(使用:program:`msgfmt`编译为`</cite>.po``格式)必须位于:file:<cite>./locale/ {语言} / LC_MESSAGES / sphinx.mo</cite>。单个文档的文本域取决于:confval:<cite>gettext_compact</cite>。</p>
+<p>内部消息是从 <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> 的文本域中获取的;因此，如果将目录:file:<cite>。/locale`添加到此设置，则消息目录(使用:program:`msgfmt`编译为`</cite>.po``格式)必须位于:file:<cite>./locale/{语言}/LC_MESSAGES/sphinx.mo</cite>。单个文档的文本域取决于:confval:<cite>gettext_compact</cite>。</p>
 <p>默认是 <code class="docutils literal notranslate"><span class="pre">['locales']</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 1.5 版更改: </span>使用``locales``目录作为默认值</p>
@@ -767,7 +799,7 @@
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
 <p>如果为true，则文档的文本域是其docname，如果它是顶级项目文件，则为其基本目录。</p>
-<p>默认情况下，文档``markup / code.rst``最终出现在``markup``文本域中。将此选项设置为 “False” ，它是 “标记/代码” 。</p>
+<p>默认情况下，文档``markup/code.rst``最终出现在``markup``文本域中。将此选项设置为 <code class="docutils literal notranslate"><span class="pre">False</span></code> ，它是 <code class="docutils literal notranslate"><span class="pre">标记/代码</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
@@ -836,20 +868,20 @@
 <dl class="confval">
 <dt id="confval-figure_language_filename">
 <code class="descname">figure_language_filename</code><a class="headerlink" href="#confval-figure_language_filename" title="永久链接至目标">¶</a></dt>
-<dd><p>语言特定数字的文件名格式。默认值为``{root}。{language} {ext}``。它将从``image :: dirname / filename.png``扩展为``dirname / filename.en.png``。可用的格式标记是:</p>
+<dd><p>语言特定数字的文件名格式。默认值为 <code class="docutils literal notranslate"><span class="pre">{root}.{language}{ext}</span></code> 。它将从 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span> <span class="pre">dirname/filename.png</span></code> 扩展为   <code class="docutils literal notranslate"><span class="pre">dirname/filename.en.png</span></code> 。可用的格式标记是:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">{root}</span></code> - 文件名，包括任何路径组件，没有文件扩展名，例如``目录名/ filename``</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{path}</span></code> - 文件名的目录路径组件，如果非空，则带有斜杠，例如: <code class="docutils literal notranslate"><span class="pre">目录名/</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{basename}</span></code> - 没有目录路径或文件扩展名组件的文件名，例如``filename``</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{ext}</span></code> - 文件扩展名，例如``.png``</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{language}</span></code> - 翻译语言，例如``en``</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{root}</span></code> - 文件名，包括任何路径组件，没有文件扩展名，例如 <code class="docutils literal notranslate"><span class="pre">dirname/filename</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{path}</span></code> - 文件名的目录路径组件，如果非空，则带有斜杠，例如: <code class="docutils literal notranslate"><span class="pre">dirname/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{basename}</span></code> - 没有目录路径或文件扩展名组件的文件名，例如 <code class="docutils literal notranslate"><span class="pre">filename</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{ext}</span></code> - 文件扩展名，例如 <code class="docutils literal notranslate"><span class="pre">.png</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{language}</span></code> - 翻译语言，例如 <code class="docutils literal notranslate"><span class="pre">en</span></code></p></li>
 </ul>
-<p>例如，将其设置为``{path} {language} / {basename} {ext}``将扩展为``dirname / en / filename.png``。</p>
+<p>例如，将其设置为 <code class="docutils literal notranslate"><span class="pre">{path}{language}/{basename}{ext}</span></code> 将扩展为 <code class="docutils literal notranslate"><span class="pre">dirname/en/filename.png</span></code>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.4 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.5 版更改: </span>添加了``{path}``和``{basename}``标记。</p>
+<p><span class="versionmodified changed">在 1.5 版更改: </span>添加了 <code class="docutils literal notranslate"><span class="pre">{path}</span></code> 和 <code class="docutils literal notranslate"><span class="pre">{basename}</span></code> 标记。</p>
 </div>
 </dd></dl>
 
@@ -860,20 +892,20 @@
 <dl class="confval">
 <dt id="confval-math_number_all">
 <code class="descname">math_number_all</code><a class="headerlink" href="#confval-math_number_all" title="永久链接至目标">¶</a></dt>
-<dd><p>如果要对所有显示的数学进行编号，请将此选项设置为 “True” 。默认为 “False” 。</p>
+<dd><p>如果要对所有显示的数学进行编号，请将此选项设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-math_eqref_format">
 <code class="descname">math_eqref_format</code><a class="headerlink" href="#confval-math_eqref_format" title="永久链接至目标">¶</a></dt>
-<dd><p>用于格式化方程式引用标签的字符串。 <a href="#id1"><span class="problematic" id="id2">``</span></a>{number}``占位符代表等式编号。</p>
+<dd><p>用于格式化方程式引用标签的字符串。 <code class="docutils literal notranslate"><span class="pre">{number}</span></code> 占位符代表等式编号。</p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">'Eq.{number}'</span></code> gets rendered as, for example, <code class="docutils literal notranslate"><span class="pre">Eq.10</span></code>.</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-math_numfig">
 <code class="descname">math_numfig</code><a class="headerlink" href="#confval-math_numfig" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为 “True” ，则在以下情况下显示的数学公式在页面中编号:confval:<cite>numfig`已启用。 :confval:`numfig_secnum_depth`设置受到尊重。 :rst:role:`eq</cite>，not:rst:role:<cite>numref</cite>，角色必须用于引用方程式数字。默认为 “True” 。</p>
+<dd><p>如果为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则在以下情况下显示的数学公式在页面中编号 <a class="reference internal" href="#confval-numfig"><code class="xref std std-confval docutils literal notranslate"><span class="pre">numfig</span></code></a> 已启用。 <a class="reference internal" href="#confval-numfig_secnum_depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">numfig_secnum_depth</span></code></a> 设置受到尊重。 <a class="reference internal" href="restructuredtext/roles.html#role-eq" title="eq role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">eq</span></code></a> ，not <a class="reference internal" href="restructuredtext/roles.html#role-numref" title="numref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">numref</span></code></a> ，角色必须用于引用方程式数字。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.7 新版功能.</span></p>
 </div>
@@ -886,7 +918,8 @@
 <dl class="confval">
 <dt id="confval-html_theme">
 <code class="descname">html_theme</code><a class="headerlink" href="#confval-html_theme" title="永久链接至目标">¶</a></dt>
-<dd><p>HTML输出应该使用的 “主题” 。请参阅:doc:<cite>部分关于主题&lt;/ usage / theming&gt;</cite>。默认是’‘’alabaster’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>The “theme” that the HTML output should use.  See the <a class="reference internal" href="theming.html"><span class="doc">section about
+theming</span></a>.  The default is <code class="docutils literal notranslate"><span class="pre">'alabaster'</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
@@ -895,7 +928,7 @@
 <dl class="confval">
 <dt id="confval-html_theme_options">
 <code class="descname">html_theme_options</code><a class="headerlink" href="#confval-html_theme_options" title="永久链接至目标">¶</a></dt>
-<dd><p>影响所选主题外观的选项字典。这些是针对主题的。有关内置主题所理解的选项，请参阅:ref:<cite>this section &lt;builtin-themes&gt;</cite>。</p>
+<dd><p>影响所选主题外观的选项字典。这些是针对主题的。有关内置主题所理解的选项，请参阅 <a class="reference internal" href="theming.html#builtin-themes"><span class="std std-ref">this section</span></a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
@@ -919,13 +952,18 @@
 <dl class="confval">
 <dt id="confval-html_title">
 <code class="descname">html_title</code><a class="headerlink" href="#confval-html_title" title="永久链接至目标">¶</a></dt>
-<dd><p>使用Sphinx自己的模板生成的HTML文档的 “标题” 。它附加到各个页面的 <a href="#id1"><span class="problematic" id="id2">``</span></a>&lt;title&gt;` 标签，并在导航栏中用作”topmost” 元素。它默认为:samp:<a href="#id3"><span class="problematic" id="id4">`</span></a>’{&lt;project&gt;} v {&lt;revision&gt;} documentation’。</p>
+<dd><p>The “title” for HTML documentation generated with Sphinx’s own templates.
+This is appended to the <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code> tag of individual pages, and used in the
+navigation bar as the “topmost” element.  It defaults to <code class="samp docutils literal notranslate"><span class="pre">'</span><em><span class="pre">&lt;project&gt;</span></em>
+<span class="pre">v</span><em><span class="pre">&lt;revision&gt;</span></em> <span class="pre">documentation'</span></code>.</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_short_title">
 <code class="descname">html_short_title</code><a class="headerlink" href="#confval-html_short_title" title="永久链接至目标">¶</a></dt>
-<dd><p>HTML文档的缩写 “标题” 。这用于标题和HTML帮助文档中的链接。如果没有给出，则默认值为:confval:<cite>html_title</cite>。</p>
+<dd><p>A shorter “title” for the HTML docs.  This is used in for links in the
+header and in the HTML Help docs.  If not given, it defaults to the value of
+<a class="reference internal" href="#confval-html_title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_title</span></code></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
 </div>
@@ -934,7 +972,7 @@
 <dl class="confval">
 <dt id="confval-html_baseurl">
 <code class="descname">html_baseurl</code><a class="headerlink" href="#confval-html_baseurl" title="永久链接至目标">¶</a></dt>
-<dd><p>指向HTML文档根目录的URL。它用于表示文档的位置，如``canonical_url``。</p>
+<dd><p>指向HTML文档根目录的URL。它用于表示文档的位置，如 <code class="docutils literal notranslate"><span class="pre">canonical_url</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.8 新版功能.</span></p>
 </div>
@@ -943,7 +981,7 @@
 <dl class="confval">
 <dt id="confval-html_context">
 <code class="descname">html_context</code><a class="headerlink" href="#confval-html_context" title="永久链接至目标">¶</a></dt>
-<dd><p>要传递到所有页面的模板引擎上下文的值字典。单个值也可以使用:选项:<a href="#id1"><span class="problematic" id="id2">`</span></a>-A &lt;sphinx-build -A&gt;``sphinx-build``的命令行选项放入这个字典中。</p>
+<dd><p>要传递到所有页面的模板引擎上下文的值字典。单个值也可以使用 <a class="reference internal" href="../man/sphinx-build.html#id3"><code class="xref std std-option docutils literal notranslate"><span class="pre">-A</span></code></a> <a href="#id1"><span class="problematic" id="id2">``</span></a>sphinx-build``的命令行选项放入这个字典中。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
@@ -952,26 +990,26 @@
 <dl class="confval">
 <dt id="confval-html_logo">
 <code class="descname">html_logo</code><a class="headerlink" href="#confval-html_logo" title="永久链接至目标">¶</a></dt>
-<dd><p>如果给定，则必须是图像文件的名称(相对于:term:<cite>configuration directory`的路径)，即文档的徽标。它位于侧边栏的顶部;因此它的宽度不应超过200像素。默认值:``None`</cite>。</p>
+<dd><p>如果给定，则必须是图像文件的名称(相对于 <a class="reference internal" href="../glossary.html#term-configuration-directory"><span class="xref std std-term">configuration directory</span></a> 的路径)，即文档的徽标。它位于侧边栏的顶部;因此它的宽度不应超过200像素。默认值:<code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">0.4.1 新版功能: </span>图像文件将被复制到输出HTML的``_static``目录中，但前提是该文件尚不存在。</p>
+<p><span class="versionmodified added">0.4.1 新版功能: </span>图像文件将被复制到输出HTML的 <code class="docutils literal notranslate"><span class="pre">_static</span></code> 目录中，但前提是该文件尚不存在。</p>
 </div>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_favicon">
 <code class="descname">html_favicon</code><a class="headerlink" href="#confval-html_favicon" title="永久链接至目标">¶</a></dt>
-<dd><p>如果给定，则必须是图像文件的名称(相对于:term:<cite>configuration directory`的路径)，它是文档的favicon。现代浏览器使用它作为标签，窗口和书签的图标。它应该是一个Windows风格的图标文件(`</cite>.ico``)，大小为16x16或32x32像素。默认值:<code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
+<dd><p>如果给定，则必须是图像文件的名称(相对于 <a class="reference internal" href="../glossary.html#term-configuration-directory"><span class="xref std std-term">configuration directory</span></a> 的路径)，它是文档的favicon。现代浏览器使用它作为标签，窗口和书签的图标。它应该是一个Windows风格的图标文件(<code class="docutils literal notranslate"><span class="pre">.ico</span></code>)，大小为16x16或32x32像素。默认值: <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">0.4 新版功能: </span>图像文件将被复制到输出HTML的``_static``目录中，但前提是该文件尚不存在。</p>
+<p><span class="versionmodified added">0.4 新版功能: </span>图像文件将被复制到输出HTML的 <code class="docutils literal notranslate"><span class="pre">_static</span></code> 目录中，但前提是该文件尚不存在。</p>
 </div>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_css_files">
 <code class="descname">html_css_files</code><a class="headerlink" href="#confval-html_css_files" title="永久链接至目标">¶</a></dt>
-<dd><p>CSS文件列表。该条目必须是* filename <em>字符串或包含</em> filename <em>字符串和</em> attributes <a href="#id1"><span class="problematic" id="id2">*</span></a>字典的元组。 * filename <a href="#id3"><span class="problematic" id="id4">*</span></a>必须相对于 <a class="reference internal" href="#confval-html_static_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_static_path</span></code></a> ，或者是一个完整的URI，其方案如``http:// example.org / style.css``。 * attributes <a href="#id5"><span class="problematic" id="id6">*</span></a>用于``&lt;link&gt;``标签的属性。它默认为空列表。</p>
-<p>Example:</p>
+<dd><p>CSS文件列表。该条目必须是 <em>filename</em> 字符串或包含 <em>filename</em> 字符串和 <em>attributes</em> 字典的元组。 <em>filename</em> 必须相对于 <a class="reference internal" href="#confval-html_static_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_static_path</span></code></a> ，或者是一个完整的URI，其方案如 <code class="docutils literal notranslate"><span class="pre">http://example.org/style.css</span></code> 。 <em>attributes</em> 用于``&lt;link&gt;`` 标签的属性。它默认为空列表。</p>
+<p>例:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;custom.css&#39;</span>
                   <span class="s1">&#39;https://example.com/css/custom.css&#39;</span><span class="p">,</span>
                   <span class="p">(</span><span class="s1">&#39;print.css&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;media&#39;</span><span class="p">:</span> <span class="s1">&#39;print&#39;</span><span class="p">})]</span>
@@ -985,8 +1023,8 @@
 <dl class="confval">
 <dt id="confval-html_js_files">
 <code class="descname">html_js_files</code><a class="headerlink" href="#confval-html_js_files" title="永久链接至目标">¶</a></dt>
-<dd><p>CSS文件列表。该条目必须是* filename <em>字符串或包含</em> filename <em>字符串和</em> attributes <em>字典的元组。 * filename *必须相对于 :confval:`html_static_path` ，或完整的URI，例如``http:// example.org / style.css``。 *`&lt;link&gt;``标签的</em> attributes <a href="#id1"><span class="problematic" id="id2">*</span></a>属性。它默认为空列表。</p>
-<p>Example:</p>
+<dd><p>JavaScript <em>filename</em> 列表。该条目必须是 <em>filename</em> 字符串或包含 <em>filename</em> 字符串和 <em>attributes</em> 字典的元组。  <em>filename*必须相对于 :confval:`html_static_path` ，或者是一个完整的URI，其方案如 ``http://example.org/script.js`` 。 *attributes</em> 用于 <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> 标签的属性。它默认为空列表。</p>
+<p>例:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_js_files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;script.js&#39;</span><span class="p">,</span>
                  <span class="s1">&#39;https://example.com/scripts/custom.js&#39;</span><span class="p">,</span>
                  <span class="p">(</span><span class="s1">&#39;custom.js&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;async&#39;</span><span class="p">:</span> <span class="s1">&#39;async&#39;</span><span class="p">})]</span>
@@ -1000,15 +1038,15 @@
 <dl class="confval">
 <dt id="confval-html_static_path">
 <code class="descname">html_static_path</code><a class="headerlink" href="#confval-html_static_path" title="永久链接至目标">¶</a></dt>
-<dd><p>包含自定义静态文件(例如样式表或脚本文件)的路径列表。相对路径被视为相对于配置目录。它们被复制到主题的静态文件之后的输出的:file:<cite>_ static`目录中，因此名为:file:`default.css`的文件将覆盖主题的:file:`default.css</cite>。</p>
+<dd><p>包含自定义静态文件(例如样式表或脚本文件)的路径列表。相对路径被视为相对于配置目录。它们被复制到主题的静态文件之后的输出的 <code class="file docutils literal notranslate"><span class="pre">_</span> <span class="pre">static</span></code> 目录中，因此名为 <code class="file docutils literal notranslate"><span class="pre">default.css</span></code> 的文件将覆盖主题的 <code class="file docutils literal notranslate"><span class="pre">default.css</span></code>。</p>
 <p>由于这些文件不是要构建的，因此它们会自动从源文件中排除。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>出于安全原因，不会复制``html_static_path``下的dotfiles。如果您想有意复制它们，请将每个文件路径添加到此设置:</p>
+<p>出于安全原因，不会复制 <code class="docutils literal notranslate"><span class="pre">html_static_path</span></code> 下的dotfiles。如果您想有意复制它们，请将每个文件路径添加到此设置:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">,</span> <span class="s1">&#39;_static/.htaccess&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>另一种方法，你也可以使用:confval:<cite>html_extra_path</cite>。它允许在目录下复制dotfiles。</p>
+<p>另一种方法，你也可以使用 <a class="reference internal" href="#confval-html_extra_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_extra_path</span></code></a> 。它允许在目录下复制dotfiles。</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 0.4 版更改: </span>以下路径 <a class="reference internal" href="#confval-html_static_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_static_path</span></code></a> 现在可以包含子目录。</p>
@@ -1024,36 +1062,38 @@
 <dl class="confval">
 <dt id="confval-html_extra_path">
 <code class="descname">html_extra_path</code><a class="headerlink" href="#confval-html_extra_path" title="永久链接至目标">¶</a></dt>
-<dd><p>包含与文档无直接关系的额外文件的路径列表，例如:file:<cite>robots.txt`或:file:</cite>.htaccess`。相对路径被视为相对于配置目录。它们被复制到输出目录。它们将覆盖任何同名的现有文件。</p>
+<dd><p>包含与文档无直接关系的额外文件的路径列表，例如 <code class="file docutils literal notranslate"><span class="pre">robots.txt</span></code> 或 <code class="file docutils literal notranslate"><span class="pre">.htaccess</span></code> 。相对路径被视为相对于配置目录。它们被复制到输出目录。它们将覆盖任何同名的现有文件。</p>
 <p>由于这些文件不是要构建的，因此它们会自动从源文件中排除。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.2 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.4 版更改: </span>额外目录中的dotfiles将被复制到输出目录。它指的是:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>exclude_patterns`复制额外的文件和目录，并忽略路径是否与模式匹配。</p>
+<p><span class="versionmodified changed">在 1.4 版更改: </span>额外目录中的dotfiles将被复制到输出目录。它指的是 <a class="reference internal" href="#confval-exclude_patterns"><code class="xref std std-confval docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a> 复制额外的文件和目录，并忽略路径是否与模式匹配。</p>
 </div>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_last_updated_fmt">
 <code class="descname">html_last_updated_fmt</code><a class="headerlink" href="#confval-html_last_updated_fmt" title="永久链接至目标">¶</a></dt>
-<dd><p>如果这不是None，则使用给定的:func:<cite>strftime`格式在每个页面底部插入’Last updated on:’时间戳。空字符串相当于`</cite>’％b％d，％Y’<a href="#id1"><span class="problematic" id="id2">``</span></a>(或依赖于语言环境的等价物)。</p>
+<dd><p>如果这不是None，则使用给定的 <code class="xref py py-func docutils literal notranslate"><span class="pre">strftime()</span></code> 格式在每个页面底部插入 ‘Last updated on:’ 时间戳。空字符串相当于 <code class="docutils literal notranslate"><span class="pre">'％b％d，％Y'</span></code> (或依赖于语言环境的等价物)。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_use_smartypants">
 <code class="descname">html_use_smartypants</code><a class="headerlink" href="#confval-html_use_smartypants" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则引号和短划线将转换为印刷正确的实体。默认值:<code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<dd><p>如果为true，则引号和短划线将转换为印刷正确的实体。默认值: <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">1.6 版后已移除: </span>要禁用智能引号，请使用:confval:<cite>smartquotes</cite>。</p>
+<p><span class="versionmodified deprecated">1.6 版后已移除: </span>要禁用智能引号，请使用 <a class="reference internal" href="#confval-smartquotes"><code class="xref std std-confval docutils literal notranslate"><span class="pre">smartquotes</span></code></a> 。</p>
 </div>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_add_permalinks">
 <code class="descname">html_add_permalinks</code><a class="headerlink" href="#confval-html_add_permalinks" title="永久链接至目标">¶</a></dt>
-<dd><p>Sphinx将为每个标题和描述环境添加 “永久链接” 作为当鼠标悬停在它们上方时可见的段落标记。</p>
-<p>此值确定永久链接的文本;它默认为``”¶” <a href="#id1"><span class="problematic" id="id2">``</span></a>。将其设置为 “None” 或空字符串以禁用永久链接。</p>
+<dd><p>Sphinx will add “permalinks” for each heading and description environment as
+paragraph signs that become visible when the mouse hovers over them.</p>
+<p>This value determines the text for the permalink; it defaults to <code class="docutils literal notranslate"><span class="pre">&quot;¶&quot;</span></code>.
+Set it to <code class="docutils literal notranslate"><span class="pre">None</span></code> or the empty string to disable permalinks.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能: </span>以前，这总是被激活。</p>
 </div>
@@ -1066,33 +1106,33 @@
 <dt id="confval-html_sidebars">
 <code class="descname">html_sidebars</code><a class="headerlink" href="#confval-html_sidebars" title="永久链接至目标">¶</a></dt>
 <dd><p>自定义侧边栏模板必须是将文档名称映射到模板名称的字典。</p>
-<p>键可以包含glob样式的模式[1] _，在这种情况下，所有匹配的文档都将获得指定的侧边栏。 (当多个glob样式模式与任何文档匹配时会发出警告。)</p>
+<p>键可以包含glob样式的模式 <a class="footnote-reference brackets" href="#id11" id="id7">1</a> ，在这种情况下，所有匹配的文档都将获得指定的侧边栏。 (当多个glob样式模式与任何文档匹配时会发出警告。)</p>
 <p>值可以是列表或单个字符串。</p>
 <ul>
 <li><p>如果值是列表，则它指定要包括的侧边栏模板的完整列表。如果要包含所有或部分默认侧边栏，则必须将它们放入此列表中。</p>
-<p>默认侧边栏(适用于与任何模式不匹配的文档)由主题本身定义。内置主题默认使用这些模板:<code class="docutils literal notranslate"><span class="pre">`''localtoc.html''，'relations.html'，'sourcelink.html'，'searchbox.html']</span></code>。</p>
+<p>默认侧边栏(适用于与任何模式不匹配的文档)由主题本身定义。内置主题默认使用这些模板: <code class="docutils literal notranslate"><span class="pre">'localtoc.html'，'relations.html'</span> <span class="pre">，'sourcelink.html'</span> <span class="pre">，'searchbox.html']</span></code> 。</p>
 </li>
-<li><p>如果值是单个字符串，则它指定要在``’sourcelink.html’<code class="docutils literal notranslate"><span class="pre">和</span></code>’searchbox.html’<a href="#id1"><span class="problematic" id="id2">``</span></a>条目之间添加的自定义侧边栏。这是为了与1.0之前的Sphinx版本兼容。</p></li>
+<li><p>如果值是单个字符串，则它指定要在 <code class="docutils literal notranslate"><span class="pre">'sourcelink.html'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'searchbox.html'</span></code> 条目之间添加的自定义侧边栏。这是为了与1.0之前的Sphinx版本兼容。</p></li>
 </ul>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">1.7 版后已移除: </span>a single string value for <code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code> will be removed in 2.0</p>
 </div>
 <p>可呈现的内置侧边栏模板是:</p>
 <ul class="simple">
-<li><p>** localtoc.html **  - 当前文档的细粒度目录</p></li>
+<li><p><strong>localtoc.html</strong>  - 当前文档的细粒度目录</p></li>
 <li><p><strong>globaltoc.html</strong> – 折叠整个文档集的粗粒度目录</p></li>
 <li><p><strong>relations.html</strong> – 两个指向上一个和下一个文档的链接</p></li>
 <li><p><strong>sourcelink.html</strong> – 指向当前文档源的链接，如果在:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>html_show_sourcelink`中启用</p></li>
-<li><p><strong>searchbox.html</strong> –  “快速搜索” 框</p></li>
+<li><p><strong>searchbox.html</strong> – the “quick search” box</p></li>
 </ul>
-<p>Example:</p>
+<p>例:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_sidebars</span> <span class="o">=</span> <span class="p">{</span>
    <span class="s1">&#39;**&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;globaltoc.html&#39;</span><span class="p">,</span> <span class="s1">&#39;sourcelink.html&#39;</span><span class="p">,</span> <span class="s1">&#39;searchbox.html&#39;</span><span class="p">],</span>
    <span class="s1">&#39;using/windows&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;windowssidebar.html&#39;</span><span class="p">,</span> <span class="s1">&#39;searchbox.html&#39;</span><span class="p">],</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这将呈现自定义模板``windowssidebar.html``和给定文档侧边栏内的快速搜索框，并呈现所有其他页面的默认侧边栏(除了本地TOC被全局TOC替换)。</p>
+<p>这将呈现自定义模板 <code class="docutils literal notranslate"><span class="pre">windowssidebar.html</span></code> 和给定文档侧边栏内的快速搜索框，并呈现所有其他页面的默认侧边栏(除了本地TOC被全局TOC替换)。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能: </span>能够使用通配键并指定多个侧边栏。</p>
 </div>
@@ -1103,20 +1143,20 @@
 <dt id="confval-html_additional_pages">
 <code class="descname">html_additional_pages</code><a class="headerlink" href="#confval-html_additional_pages" title="永久链接至目标">¶</a></dt>
 <dd><p>应呈现给HTML页面的其他模板必须是将文档名称映射到模板名称的字典。</p>
-<p>Example:</p>
+<p>例:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_additional_pages</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;download&#39;</span><span class="p">:</span> <span class="s1">&#39;customdownload.html&#39;</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这将把模板``customdownload.html``渲染为页面``download.html``。</p>
+<p>这将把模板 <code class="docutils literal notranslate"><span class="pre">customdownload.html</span></code> 渲染为页面 <code class="docutils literal notranslate"><span class="pre">download.html</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_domain_indices">
 <code class="descname">html_domain_indices</code><a class="headerlink" href="#confval-html_domain_indices" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则除了常规索引外，还会生成特定于域的索引。对于例如Python域，这是全局模块索引。默认为 “True” 。</p>
-<p>此值可以是bool或应生成的索引名称列表。要查找特定索引的索引名称，请查看HTML文件名。例如，Python模块索引的名称为``’py-modindex’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>如果为true，则除了常规索引外，还会生成特定于域的索引。对于例如Python域，这是全局模块索引。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
+<p>此值可以是bool或应生成的索引名称列表。要查找特定索引的索引名称，请查看HTML文件名。例如，Python模块索引的名称为 <code class="docutils literal notranslate"><span class="pre">'py-modindex'</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -1125,7 +1165,7 @@
 <dl class="confval">
 <dt id="confval-html_use_index">
 <code class="descname">html_use_index</code><a class="headerlink" href="#confval-html_use_index" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则为HTML文档添加索引。默认为 “True” 。</p>
+<dd><p>如果为true，则为HTML文档添加索引。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
 </div>
@@ -1134,7 +1174,7 @@
 <dl class="confval">
 <dt id="confval-html_split_index">
 <code class="descname">html_split_index</code><a class="headerlink" href="#confval-html_split_index" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则索引生成两次:一次作为包含所有条目的单个页面，一次作为每个起始字母的一个页面。默认为 “False” 。</p>
+<dd><p>如果为true，则索引生成两次:一次作为包含所有条目的单个页面，一次作为每个起始字母的一个页面。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
 </div>
@@ -1143,13 +1183,13 @@
 <dl class="confval">
 <dt id="confval-html_copy_source">
 <code class="descname">html_copy_source</code><a class="headerlink" href="#confval-html_copy_source" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则rest源包含在HTML构建中:file:<cite>_sources / {name}</cite>。默认为 “True” 。</p>
+<dd><p>如果为true，则rest源包含在HTML构建中 <code class="file docutils literal notranslate"><span class="pre">_sources/</span><em><span class="pre">name</span></em></code> 。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_show_sourcelink">
 <code class="descname">html_show_sourcelink</code><a class="headerlink" href="#confval-html_show_sourcelink" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true(并且:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>html_copy_source`也为true)，则指向reST源的链接将添加到侧栏。默认为 “True” 。</p>
+<dd><p>如果为true(并且 <a class="reference internal" href="#confval-html_copy_source"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_copy_source</span></code></a> 也为 true )，则指向reST源的链接将添加到侧栏。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
@@ -1167,13 +1207,19 @@
 <dl class="confval">
 <dt id="confval-html_use_opensearch">
 <code class="descname">html_use_opensearch</code><a class="headerlink" href="#confval-html_use_opensearch" title="永久链接至目标">¶</a></dt>
-<dd><p>如果非空，将输出一个`OpenSearch &lt;<a class="reference external" href="http://www.opensearch.org/Home">http://www.opensearch.org/Home</a>&gt;`_ description文件，所有页面都将包含一个引用它的``&lt;link&gt;``标签。由于OpenSearch不支持其搜索页面位置的相对URL，因此该选项的值必须是从中提供这些文档的基本URL(不带斜杠)，例如: <code class="docutils literal notranslate"><span class="pre">\</span>&#160; <span class="pre">&quot;HTTPS://docs.python.org&quot;</span> <span class="pre">``。默认为</span></code>’‘<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>If nonempty, an <a class="reference external" href="http://www.opensearch.org/Home">OpenSearch</a> description
+file will be output, and all pages will contain a <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> tag referring
+to it.  Since OpenSearch doesn’t support relative URLs for its search page
+location, the value of this option must be the base URL from which these
+documents are served (without trailing slash), e.g.
+<code class="docutils literal notranslate"><span class="pre">&quot;https://docs.python.org&quot;</span></code>.  The default is <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-html_file_suffix">
 <code class="descname">html_file_suffix</code><a class="headerlink" href="#confval-html_file_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>这是生成的HTML文件的文件名后缀。默认为``”。html” <a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>This is the file name suffix for generated HTML files.  The default is
+<code class="docutils literal notranslate"><span class="pre">&quot;.html&quot;</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
 </div>
@@ -1182,7 +1228,7 @@
 <dl class="confval">
 <dt id="confval-html_link_suffix">
 <code class="descname">html_link_suffix</code><a class="headerlink" href="#confval-html_link_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>生成HTML文件链接的后缀。默认值为:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>html_file_suffix`设置为;它可以设置不同(例如，支持不同的Web服务器设置)。</p>
+<dd><p>生成HTML文件链接的后缀。默认值为 <a class="reference internal" href="#confval-html_file_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_file_suffix</span></code></a> 设置为;它可以设置不同(例如，支持不同的Web服务器设置)。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
@@ -1191,7 +1237,8 @@
 <dl class="confval">
 <dt id="confval-html_show_copyright">
 <code class="descname">html_show_copyright</code><a class="headerlink" href="#confval-html_show_copyright" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则在HTML页脚中显示”(C)Copyright …” 。默认为 “True” 。</p>
+<dd><p>If true, “(C) Copyright …” is shown in the HTML footer. Default is
+<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -1200,7 +1247,8 @@
 <dl class="confval">
 <dt id="confval-html_show_sphinx">
 <code class="descname">html_show_sphinx</code><a class="headerlink" href="#confval-html_show_sphinx" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则 “使用Sphinx创建” 将显示在HTML页脚中。默认为 “True” 。</p>
+<dd><p>If true, “Created using Sphinx” is shown in the HTML footer.  Default is
+<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
 </div>
@@ -1209,7 +1257,7 @@
 <dl class="confval">
 <dt id="confval-html_output_encoding">
 <code class="descname">html_output_encoding</code><a class="headerlink" href="#confval-html_output_encoding" title="永久链接至目标">¶</a></dt>
-<dd><p>HTML输出文件的编码。默认为``’utf-8’<a href="#id1"><span class="problematic" id="id2">``</span></a>。请注意，此编码名称必须都是有效的Python编码名称和有效的HTML “<a href="#id3"><span class="problematic" id="id4">`</span></a>charset``值。</p>
+<dd><p>HTML输出文件的编码。默认为 <code class="docutils literal notranslate"><span class="pre">'utf-8'</span></code> 。请注意，此编码名称必须都是有效的Python编码名称和有效的HTML <code class="docutils literal notranslate"><span class="pre">charset</span></code> 值。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -1218,7 +1266,7 @@
 <dl class="confval">
 <dt id="confval-html_compact_lists">
 <code class="descname">html_compact_lists</code><a class="headerlink" href="#confval-html_compact_lists" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则列表中包含单个段落和/或子列表的所有项目等等…(递归定义)将不会对其任何项目使用``&lt;p&gt;``元素。这是标准的docutils行为。默认值:<code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<dd><p>如果为true，则列表中包含单个段落和/或子列表的所有项目等等…(递归定义)将不会对其任何项目使用 <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> 元素。这是标准的docutils行为。默认值: <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -1227,7 +1275,8 @@
 <dl class="confval">
 <dt id="confval-html_secnumber_suffix">
 <code class="descname">html_secnumber_suffix</code><a class="headerlink" href="#confval-html_secnumber_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>部分编号的后缀。默认值:<code class="docutils literal notranslate"><span class="pre">&quot;。\&quot;</span> <span class="pre">``。设置为</span></code>”” <a href="#id1"><span class="problematic" id="id2">``</span></a>来抑制节号上的最后一个点。</p>
+<dd><p>Suffix for section numbers.  Default: <code class="docutils literal notranslate"><span class="pre">&quot;.</span> <span class="pre">&quot;</span></code>.  Set to <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> to suppress
+the final dot on section numbers.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -1236,7 +1285,10 @@
 <dl class="confval">
 <dt id="confval-html_search_language">
 <code class="descname">html_search_language</code><a class="headerlink" href="#confval-html_search_language" title="永久链接至目标">¶</a></dt>
-<dd><p>用于生成HTML全文搜索索引的语言。这默认为使用以下选项选择的全局语言 <a class="reference internal" href="#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 。如果不支持这种语言，则使用 <code class="docutils literal notranslate"><span class="pre">&quot;en&quot;</span></code> 选择英语。</p>
+<dd><p>Language to be used for generating the HTML full-text search index.  This
+defaults to the global language selected with <a class="reference internal" href="#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a>.  If there
+is no support for this language, <code class="docutils literal notranslate"><span class="pre">&quot;en&quot;</span></code> is used which selects the English
+language.</p>
 <p>支持这些语言:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">da</span></code> – 丹麦语</p></li>
@@ -1356,7 +1408,7 @@
 <dl class="confval">
 <dt id="confval-html_scaled_image_link">
 <code class="descname">html_scaled_image_link</code><a class="headerlink" href="#confval-html_scaled_image_link" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则图像本身会链接到原始图像(如果它没有 “目标” 选项或缩放相关选项: ‘scale’ ， ‘width’ ， ‘height’ 。默认为 “True” 。</p>
+<dd><p>如果为true，则图像本身会链接到原始图像(如果它没有 <code class="docutils literal notranslate"><span class="pre">目标</span></code> 选项或缩放相关选项: ‘scale’ ， ‘width’ ， ‘height’ 。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
@@ -1374,7 +1426,7 @@
 <dl class="confval">
 <dt id="confval-html_experimental_html5_writer">
 <code class="descname">html_experimental_html5_writer</code><a class="headerlink" href="#confval-html_experimental_html5_writer" title="永久链接至目标">¶</a></dt>
-<dd><p>使用HTML5编写器处理输出。此功能需要0.1或更高版本的文档。默认为 “False” 。</p>
+<dd><p>使用HTML5编写器处理输出。此功能需要0.1或更高版本的文档。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.6 新版功能.</span></p>
 </div>
@@ -1386,7 +1438,7 @@
 <dl class="confval">
 <dt id="confval-html4_writer">
 <code class="descname">html4_writer</code><a class="headerlink" href="#confval-html4_writer" title="永久链接至目标">¶</a></dt>
-<dd><p>使用HTML4编写器处理输出。默认为 “False” 。</p>
+<dd><p>使用HTML4编写器处理输出。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 </dd></dl>
 
 </div>
@@ -1410,7 +1462,8 @@
 <dl class="confval">
 <dt id="confval-htmlhelp_file_suffix">
 <code class="descname">htmlhelp_file_suffix</code><a class="headerlink" href="#confval-htmlhelp_file_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>这是生成的HTML帮助文件的文件名后缀。默认为 <code class="docutils literal notranslate"><span class="pre">&quot;.html&quot;</span></code> 。</p>
+<dd><p>This is the file name suffix for generated HTML help files.  The
+default is <code class="docutils literal notranslate"><span class="pre">&quot;.html&quot;</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">2.0 新版功能.</span></p>
 </div>
@@ -1419,7 +1472,7 @@
 <dl class="confval">
 <dt id="confval-htmlhelp_link_suffix">
 <code class="descname">htmlhelp_link_suffix</code><a class="headerlink" href="#confval-htmlhelp_link_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>生成HTML文件链接的后缀。默认为 <code class="docutils literal notranslate"><span class="pre">&quot;.html&quot;</span></code> 。</p>
+<dd><p>Suffix for generated links to HTML files.  The default is <code class="docutils literal notranslate"><span class="pre">&quot;.html&quot;</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">2.0 新版功能.</span></p>
 </div>
@@ -1462,13 +1515,13 @@
 <dl class="confval">
 <dt id="confval-applehelp_bundle_version">
 <code class="descname">applehelp_bundle_version</code><a class="headerlink" href="#confval-applehelp_bundle_version" title="永久链接至目标">¶</a></dt>
-<dd><p>捆绑版本(作为字符串)。默认为 “1” 。</p>
+<dd><p>捆绑版本(作为字符串)。默认为 <code class="docutils literal notranslate"><span class="pre">1</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_icon">
 <code class="descname">applehelp_icon</code><a class="headerlink" href="#confval-applehelp_icon" title="永久链接至目标">¶</a></dt>
-<dd><p>帮助包图标文件，或 “None” 图标没有图标。根据Apple的文档，这应该是应用程序图标的16 x 16像素版本，具有透明背景，保存为PNG文件。</p>
+<dd><p>帮助包图标文件，或 <code class="docutils literal notranslate"><span class="pre">None</span></code> 图标没有图标。根据Apple的文档，这应该是应用程序图标的16 x 16像素版本，具有透明背景，保存为PNG文件。</p>
 </dd></dl>
 
 <dl class="confval">
@@ -1481,13 +1534,13 @@
 <dt id="confval-applehelp_kb_url">
 <code class="descname">applehelp_kb_url</code><a class="headerlink" href="#confval-applehelp_kb_url" title="永久链接至目标">¶</a></dt>
 <dd><p>知识库服务器的URL，例如 <code class="docutils literal notranslate"><span class="pre">https://example.com/kbsearch.py?p='product'&amp;q='query'&amp;l='lang'</span></code> 。帮助查看器将在运行时使用以下内容替换值 <code class="docutils literal notranslate"><span class="pre">'product'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'query'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'lang'</span></code> <a class="reference internal" href="#confval-applehelp_kb_product"><code class="xref std std-confval docutils literal notranslate"><span class="pre">applehelp_kb_product</span></code></a> ，用户输入的文本搜索框和用户的系统语言。</p>
-<p>没有远程搜索，默认为 “None” 。</p>
+<p>没有远程搜索，默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_remote_url">
 <code class="descname">applehelp_remote_url</code><a class="headerlink" href="#confval-applehelp_remote_url" title="永久链接至目标">¶</a></dt>
-<dd><p>远程内容的URL。您可以在此位置放置帮助手册的 “Resources” 文件夹的副本，帮助查看器将尝试使用它来获取更新的内容。</p>
+<dd><p>远程内容的URL。您可以在此位置放置帮助手册的 <code class="docutils literal notranslate"><span class="pre">Resources</span></code> 文件夹的副本，帮助查看器将尝试使用它来获取更新的内容。</p>
 <p>例如如果你把它设置为 <code class="docutils literal notranslate"><span class="pre">https://example.com/help/Foo/</span></code> 并且帮助查看器 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 副本，它会看到 <code class="docutils literal notranslate"><span class="pre">https://example.com/help/Foo/en.lproj/index.html</span></code> 。</p>
 <p>没有远程内容，默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 </dd></dl>
@@ -1548,46 +1601,46 @@
 <dl class="confval">
 <dt id="confval-applehelp_locale">
 <code class="descname">applehelp_locale</code><a class="headerlink" href="#confval-applehelp_locale" title="永久链接至目标">¶</a></dt>
-<dd><p>指定要为其生成帮助的语言环境。这用于确定Help Book的``Resources``中的``.lproj``文件夹的名称，并传递给帮助索引器。</p>
+<dd><p>指定要为其生成帮助的语言环境。这用于确定Help Book的 <code class="docutils literal notranslate"><span class="pre">Resources</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">.lproj</span></code> 文件夹的名称，并传递给帮助索引器。</p>
 <p>默认为 <a class="reference internal" href="#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> ，或者如果没有设置，则为 <code class="xref std std-confval docutils literal notranslate"><span class="pre">en</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_title">
 <code class="descname">applehelp_title</code><a class="headerlink" href="#confval-applehelp_title" title="永久链接至目标">¶</a></dt>
-<dd><p>指定帮助手册标题。默认为:samp:<cite>’{&lt;project&gt;} Help’</cite>。</p>
+<dd><p>指定帮助手册标题。默认为 <code class="samp docutils literal notranslate"><span class="pre">'</span><em><span class="pre">&lt;project&gt;</span></em> <span class="pre">Help'</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_codesign_identity">
 <code class="descname">applehelp_codesign_identity</code><a class="headerlink" href="#confval-applehelp_codesign_identity" title="永久链接至目标">¶</a></dt>
 <dd><p>指定用于代码签名的标识，如果不执行代码签名，则指定 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
-<p>默认为环境变量``CODE_SIGN_IDENTITY``的值，由Xcode为脚本构建阶段设置，或者如果未设置该变量则设置为``None``。</p>
+<p>默认为环境变量 <code class="docutils literal notranslate"><span class="pre">CODE_SIGN_IDENTITY</span></code> 的值，由Xcode为脚本构建阶段设置，或者如果未设置该变量则设置为``None``。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_codesign_flags">
 <code class="descname">applehelp_codesign_flags</code><a class="headerlink" href="#confval-applehelp_codesign_flags" title="永久链接至目标">¶</a></dt>
-<dd><p>签署帮助手册时要传递给:program:<a href="#id1"><span class="problematic" id="id2">`</span></a>codesign`的附加参数的* list <a href="#id3"><span class="problematic" id="id4">*</span></a>。</p>
-<p>默认为基于环境变量 “OTHER_CODE_SIGN_FLAGS” 的值的列表，该值由Xcode为脚本构建阶段设置，如果未设置该变量，则为空列表。</p>
+<dd><p>签署帮助手册时要传递给 <strong class="program">codesign</strong> 的附加参数的 <em>list</em> 。</p>
+<p>默认为基于环境变量 <code class="docutils literal notranslate"><span class="pre">OTHER_CODE_SIGN_FLAGS</span></code> 的值的列表，该值由Xcode为脚本构建阶段设置，如果未设置该变量，则为空列表。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_indexer_path">
 <code class="descname">applehelp_indexer_path</code><a class="headerlink" href="#confval-applehelp_indexer_path" title="永久链接至目标">¶</a></dt>
-<dd><p>程序:<cite>hiutil`程序的路径。默认为`</cite>’/ usr / bin / hiutil’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>程序:<cite>hiutil`程序的路径。默认为 `</cite>’/usr/bin/hiutil’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_codesign_path">
 <code class="descname">applehelp_codesign_path</code><a class="headerlink" href="#confval-applehelp_codesign_path" title="永久链接至目标">¶</a></dt>
-<dd><p>程序:<cite>codesign`程序的路径。默认为`</cite>’/ usr / bin / codesign’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>程序:<cite>codesign`程序的路径。默认为 `</cite>’/usr/bin/codesign’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-applehelp_disable_external_tools">
 <code class="descname">applehelp_disable_external_tools</code><a class="headerlink" href="#confval-applehelp_disable_external_tools" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为 “True” ，则无论指定了什么其他设置，构建器都不会运行索引器或代码签名工具。</p>
+<dd><p>如果为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则无论指定了什么其他设置，构建器都不会运行索引器或代码签名工具。</p>
 <p>这主要用于测试，或者您希望在非Mac OS X平台上运行Sphinx构建，然后出于某种原因在OS X上完成最终步骤。</p>
 <p>默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd></dl>
@@ -1595,7 +1648,7 @@
 </div>
 <div class="section" id="options-for-epub-output">
 <span id="epub-options"></span><h2>epub输出的选项<a class="headerlink" href="#options-for-epub-output" title="永久链接至标题">¶</a></h2>
-<p>这些选项会影响epub输出。由于此构建器派生自HTML构建器，因此HTML选项也适用。某些选项的实际值并不重要，只需将它们输入`Dublin Core metadata &lt;<a class="reference external" href="http://dublincore.org/">http://dublincore.org/</a>&gt;`_。</p>
+<p>这些选项会影响epub输出。由于此构建器派生自HTML构建器，因此HTML选项也适用。某些选项的实际值并不重要，只需将它们输入 <a class="reference external" href="http://dublincore.org/">Dublin Core metadata</a> 。</p>
 <dl class="confval">
 <dt id="confval-epub_basename">
 <code class="descname">epub_basename</code><a class="headerlink" href="#confval-epub_basename" title="永久链接至目标">¶</a></dt>
@@ -1605,13 +1658,13 @@
 <dl class="confval">
 <dt id="confval-epub_theme">
 <code class="descname">epub_theme</code><a class="headerlink" href="#confval-epub_theme" title="永久链接至目标">¶</a></dt>
-<dd><p>epub输出的HTML主题。由于默认主题未针对小屏幕空间进行优化，因此使用相同的主题进行HTML和epub输出通常并不明智。这默认为``’epub’<a href="#id1"><span class="problematic" id="id2">``</span></a>，这是一个旨在节省视觉空间的主题。</p>
+<dd><p>epub输出的HTML主题。由于默认主题未针对小屏幕空间进行优化，因此使用相同的主题进行HTML和epub输出通常并不明智。这默认为 <code class="docutils literal notranslate"><span class="pre">'epub'</span></code> ，这是一个旨在节省视觉空间的主题。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-epub_theme_options">
 <code class="descname">epub_theme_options</code><a class="headerlink" href="#confval-epub_theme_options" title="永久链接至目标">¶</a></dt>
-<dd><p>影响所选主题外观的选项字典。这些是针对主题的。有关内置主题所理解的选项，请参阅:ref:<cite>this section &lt;builtin-themes&gt;</cite>。</p>
+<dd><p>影响所选主题外观的选项字典。这些是针对主题的。有关内置主题所理解的选项，请参阅 <a class="reference internal" href="theming.html#builtin-themes"><span class="std std-ref">this section</span></a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.2 新版功能.</span></p>
 </div>
@@ -1620,7 +1673,7 @@
 <dl class="confval">
 <dt id="confval-epub_title">
 <code class="descname">epub_title</code><a class="headerlink" href="#confval-epub_title" title="永久链接至目标">¶</a></dt>
-<dd><p>文件的标题。它默认为:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>html_title`选项，但可以为epub创建独立设置。它默认为:confval:<a href="#id3"><span class="problematic" id="id4">`</span></a>project`选项。</p>
+<dd><p>文件的标题。它默认为 <a class="reference internal" href="#confval-html_title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_title</span></code></a> 选项，但可以为epub创建独立设置。它默认为 <a class="reference internal" href="#confval-project"><code class="xref std std-confval docutils literal notranslate"><span class="pre">project</span></code></a> 选项。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 2.0 版更改: </span>它默认为``project``选项。</p>
 </div>
@@ -1629,7 +1682,7 @@
 <dl class="confval">
 <dt id="confval-epub_description">
 <code class="descname">epub_description</code><a class="headerlink" href="#confval-epub_description" title="永久链接至目标">¶</a></dt>
-<dd><p>文件的描述。默认值为 “未知” .``。</p>
+<dd><p>文件的描述。默认值为 <code class="docutils literal notranslate"><span class="pre">未知</span></code> .``。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.4 新版功能.</span></p>
 </div>
@@ -1641,13 +1694,13 @@
 <dl class="confval">
 <dt id="confval-epub_author">
 <code class="descname">epub_author</code><a class="headerlink" href="#confval-epub_author" title="永久链接至目标">¶</a></dt>
-<dd><p>该文件的作者。这是在都柏林核心元数据中。它默认为:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>author`选项。</p>
+<dd><p>该文件的作者。这是在都柏林核心元数据中。它默认为 <a class="reference internal" href="#confval-author"><code class="xref std std-confval docutils literal notranslate"><span class="pre">author</span></code></a> 选项。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-epub_contributor">
 <code class="descname">epub_contributor</code><a class="headerlink" href="#confval-epub_contributor" title="永久链接至目标">¶</a></dt>
-<dd><p>在创建EPUB出版物内容中起次要作用的个人，组织等的名称。默认值为 “未知” .``。</p>
+<dd><p>在创建EPUB出版物内容中起次要作用的个人，组织等的名称。默认值为 <code class="docutils literal notranslate"><span class="pre">未知</span></code> .``。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.4 新版功能.</span></p>
 </div>
@@ -1659,7 +1712,7 @@
 <dl class="confval">
 <dt id="confval-epub_language">
 <code class="descname">epub_language</code><a class="headerlink" href="#confval-epub_language" title="永久链接至目标">¶</a></dt>
-<dd><p>文件的语言。这是在都柏林核心元数据中。如果未设置，则默认为:confval:<cite>language`选项或`</cite>’en’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>文件的语言。这是在都柏林核心元数据中。如果未设置，则默认为 <code class="xref std std-confval docutils literal notranslate"><span class="pre">language`选项或`</span></code>’en’`` 。</p>
 </dd></dl>
 
 <dl class="confval">
@@ -1671,37 +1724,37 @@
 <dl class="confval">
 <dt id="confval-epub_copyright">
 <code class="descname">epub_copyright</code><a class="headerlink" href="#confval-epub_copyright" title="永久链接至目标">¶</a></dt>
-<dd><p>该文件的版权。它默认为:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>copyright`选项，但可以为epub创建独立设置。</p>
+<dd><p>该文件的版权。它默认为 <a class="reference internal" href="#confval-copyright"><code class="xref std std-confval docutils literal notranslate"><span class="pre">copyright</span></code></a> 选项，但可以为epub创建独立设置。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-epub_identifier">
 <code class="descname">epub_identifier</code><a class="headerlink" href="#confval-epub_identifier" title="永久链接至目标">¶</a></dt>
-<dd><p>文档的标识符。这是在都柏林核心元数据中。对于已发布的文档，这是ISBN号，但您也可以使用替代方案，例如项目主页。默认值为 “未知” .``。</p>
+<dd><p>文档的标识符。这是在都柏林核心元数据中。对于已发布的文档，这是ISBN号，但您也可以使用替代方案，例如项目主页。默认值为 <code class="docutils literal notranslate"><span class="pre">未知</span></code> .``。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-epub_scheme">
 <code class="descname">epub_scheme</code><a class="headerlink" href="#confval-epub_scheme" title="永久链接至目标">¶</a></dt>
-<dd><p>发布方案:confval:<cite>epub_identifier</cite>。这是在都柏林核心元数据中。对于已出版的书籍，该计划是``’ISBN’<code class="docutils literal notranslate"><span class="pre">。如果您使用项目主页，</span></code>’URL’<code class="docutils literal notranslate"><span class="pre">似乎是合理的。默认值为</span> <span class="pre">&quot;未知&quot;</span> <span class="pre">.</span></code>。</p>
+<dd><p>发布方案 <a class="reference internal" href="#confval-epub_identifier"><code class="xref std std-confval docutils literal notranslate"><span class="pre">epub_identifier</span></code></a> 。这是在都柏林核心元数据中。对于已出版的书籍，该计划是 <code class="docutils literal notranslate"><span class="pre">'ISBN'</span></code> 。如果您使用项目主页， <code class="docutils literal notranslate"><span class="pre">'URL'</span></code> 似乎是合理的。默认值为 <code class="docutils literal notranslate"><span class="pre">未知</span></code> .``。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-epub_uid">
 <code class="descname">epub_uid</code><a class="headerlink" href="#confval-epub_uid" title="永久链接至目标">¶</a></dt>
-<dd><p>文档的唯一标识符。这是在都柏林核心元数据中。您可以使用`XML的名称格式&lt;<a class="reference external" href="https://www.w3.org/TR/REC-xml/#NT-NameStartChar">https://www.w3.org/TR/REC-xml/#NT-NameStartChar</a>&gt;`_ string。您不能将连字符，句点，数字用作第一个字符。默认值为 “未知” .``。</p>
+<dd><p>文档的唯一标识符。这是在都柏林核心元数据中。您可以使用 <a class="reference external" href="https://www.w3.org/TR/REC-xml/#NT-NameStartChar">XML的名称格式</a> string。您不能将连字符，句点，数字用作第一个字符。默认值为 <code class="docutils literal notranslate"><span class="pre">未知</span></code> .``。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-epub_cover">
 <code class="descname">epub_cover</code><a class="headerlink" href="#confval-epub_cover" title="永久链接至目标">¶</a></dt>
-<dd><p>封面信息。这是一个包含封面图像和html模板的文件名的元组。渲染的html封面页作为脊椎中的第一项插入:file:<cite>content.opf</cite>。如果模板文件名为空，则不会创建任何html封面。如果元组为空，则根本不会创建任何封面。例子:</p>
+<dd><p>封面信息。这是一个包含封面图像和html模板的文件名的元组。渲染的html封面页作为脊椎中的第一项插入 <code class="file docutils literal notranslate"><span class="pre">content.opf</span></code> 。如果模板文件名为空，则不会创建任何html封面。如果元组为空，则根本不会创建任何封面。例子:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">epub_cover</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_static/cover.png&#39;</span><span class="p">,</span> <span class="s1">&#39;epub-cover.html&#39;</span><span class="p">)</span>
 <span class="n">epub_cover</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_static/cover.png&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="n">epub_cover</span> <span class="o">=</span> <span class="p">()</span>
 </pre></div>
 </div>
-<p>默认值为``()``。</p>
+<p>默认值为 <code class="docutils literal notranslate"><span class="pre">()</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -1710,7 +1763,7 @@
 <dl class="confval">
 <dt id="confval-epub_css_files">
 <code class="descname">epub_css_files</code><a class="headerlink" href="#confval-epub_css_files" title="永久链接至目标">¶</a></dt>
-<dd><p>CSS文件列表。该条目必须是 <em>filename</em> 字符串或包含 <em>filename</em> 字符串和 <em>attributes</em> 字典的元组。有关更多信息，请参阅 <a class="reference internal" href="#confval-html_css_files"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_css_files</span></code></a>。</p>
+<dd><p>CSS文件列表。该条目必须是 <em>filename</em> 字符串或包含 <em>filename</em> 字符串和 <em>attributes</em> 字典的元组。有关更多信息，请参阅  <a class="reference internal" href="#confval-html_css_files"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_css_files</span></code></a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.8 新版功能.</span></p>
 </div>
@@ -1723,7 +1776,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">epub_guide</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;cover&#39;</span><span class="p">,</span> <span class="s1">&#39;cover.html&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Cover Page&#39;</span><span class="p">),)</span>
 </pre></div>
 </div>
-<p>默认值为``()``。</p>
+<p>默认值为 <code class="docutils literal notranslate"><span class="pre">()</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
@@ -1759,7 +1812,7 @@
 <dl class="confval">
 <dt id="confval-epub_tocdup">
 <code class="descname">epub_tocdup</code><a class="headerlink" href="#confval-epub_tocdup" title="永久链接至目标">¶</a></dt>
-<dd><p>此标志确定是否在其嵌套的toc列表的开头再次插入toc条目。这样可以更轻松地导航到章节的顶部，但可能会让人感到困惑，因为它会在一个列表中混合不同深度的条目。默认值为 “True” 。</p>
+<dd><p>此标志确定是否在其嵌套的toc列表的开头再次插入toc条目。这样可以更轻松地导航到章节的顶部，但可能会让人感到困惑，因为它会在一个列表中混合不同深度的条目。默认值为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
@@ -1778,7 +1831,7 @@
 <dl class="confval">
 <dt id="confval-epub_fix_images">
 <code class="descname">epub_fix_images</code><a class="headerlink" href="#confval-epub_fix_images" title="永久链接至目标">¶</a></dt>
-<dd><p>此标志确定sphinx是否应尝试修复某些epub阅读器不支持的图像格式。目前，具有小颜色表的调色板图像被升级。您需要安装Pillow(Python Image Library)才能使用此选项。默认值为 “False” ，因为自动转换可能会丢失信息。</p>
+<dd><p>此标志确定sphinx是否应尝试修复某些epub阅读器不支持的图像格式。目前，具有小颜色表的调色板图像被升级。您需要安装Pillow(Python Image Library)才能使用此选项。默认值为 <code class="docutils literal notranslate"><span class="pre">False</span></code> ，因为自动转换可能会丢失信息。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.2 新版功能.</span></p>
 </div>
@@ -1787,7 +1840,7 @@
 <dl class="confval">
 <dt id="confval-epub_max_image_width">
 <code class="descname">epub_max_image_width</code><a class="headerlink" href="#confval-epub_max_image_width" title="永久链接至目标">¶</a></dt>
-<dd><p>此选项指定图像的最大宽度。如果将其设置为大于零的值，则相应地缩放宽度大于给定值的图像。如果为零，则不执行缩放。默认值为 “0” 。您需要安装Python Image Library(Pillow)才能使用此选项。</p>
+<dd><p>此选项指定图像的最大宽度。如果将其设置为大于零的值，则相应地缩放宽度大于给定值的图像。如果为零，则不执行缩放。默认值为 <code class="docutils literal notranslate"><span class="pre">0</span></code> 。您需要安装Python Image Library(Pillow)才能使用此选项。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.2 新版功能.</span></p>
 </div>
@@ -1872,7 +1925,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">'pdflatex'</span></code>’s 对Unicode字符的支持是有限的。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>2.0增加了 <code class="docutils literal notranslate"><span class="pre">'pdflatex'</span></code> 支持拉丁语文档中偶尔的西里尔字母或希腊字母或单词。这不是自动的，请参阅讨论 <code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_elements``</span></code>’fontenc’<a href="#id1"><span class="problematic" id="id2">``</span></a>键。</p>
+<p>2.0增加了 <code class="docutils literal notranslate"><span class="pre">'pdflatex'</span></code> 支持拉丁语文档中偶尔的西里尔字母或希腊字母或单词。这不是自动的，请参阅讨论  <a class="reference internal" href="#confval-latex_elements"><code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_elements</span></code></a> <code class="docutils literal notranslate"><span class="pre">'fontenc'</span></code> 键。</p>
 </div>
 <p>如果你的项目使用Unicode字符，将引擎设置为 <code class="docutils literal notranslate"><span class="pre">'xelatex'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'lualatex'</span></code> 并确保使用具有足够宽的字形覆盖范围的OpenType字体通常比尝试制作更容易 <code class="docutils literal notranslate"><span class="pre">'pdflatex'</span></code> 使用额外的Unicode字符。由于Sphinx 2.0默认是GNU FreeFont，它涵盖了拉丁语，西里尔语和希腊语。</p>
 <p>相反 <a class="reference internal" href="extensions/math.html#math-support"><span class="std std-ref">MathJaX数学渲染在HTML输出</span></a> ，LaTeX需要一些额外的配置来支持Unicode文字 <a class="reference internal" href="restructuredtext/directives.html#directive-math" title="math directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">math</span></code></a>: 唯一全面的解决方案(据我们所知)是使用 <code class="docutils literal notranslate"><span class="pre">'xelatex'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'lualatex'</span></code> <a href="#id1"><span class="problematic" id="id2">*</span></a>和*来添加 <code class="docutils literal notranslate"><span class="pre">r'\</span> <span class="pre">usepackage</span> <span class="pre">{unicode-math}'</span></code> (例如通过:confval:<cite>latex_elements</cite> <code class="docutils literal notranslate"><span class="pre">'序言'</span></code> 键)。您可能更喜欢 <code class="docutils literal notranslate"><span class="pre">r'\</span> <span class="pre">usepackage</span> <span class="pre">[math-style</span> <span class="pre">=</span> <span class="pre">literal]</span> <span class="pre">{unicode-math}'`</span> <span class="pre">来保持Unicode文字，例如</span> <span class="pre">``α</span></code> (U + 03B1) ，例如在输出中，而不是而不是呈现为 <span class="math notranslate nohighlight">\(\ alpha\)</span> 。</p>
@@ -1891,16 +1944,23 @@
 </dd>
 <dt><em>author</em></dt><dd><p>LaTeX文档的作者。相同的LaTeX标记警告*标题*适用。使用``\和``来分隔多个作者，例如:<a href="#id1"><span class="problematic" id="id2">``</span></a>’John \和Sarah’<a href="#id3"><span class="problematic" id="id4">`</span></a>(反斜杠必须由Python转义才能到达LaTeX)。</p>
 </dd>
-<dt><em>documentclass</em></dt><dd><p>通常，<cite>’‘’manual’``或’</cite>’howto’<code class="docutils literal notranslate"><span class="pre">(由Sphinx提供并基于</span></code>’report’<code class="docutils literal notranslate"><span class="pre">，resp</span> <span class="pre">.`'article'</span></code>;日文文件使用``’Jsbook ‘<code class="docutils literal notranslate"><span class="pre">，resp。'''jreport'</span></code>。)”howto” (非日语)文件 </p>
+<dt><em>documentclass</em></dt><dd><p>Normally, one of <code class="docutils literal notranslate"><span class="pre">'manual'</span></code> or <code class="docutils literal notranslate"><span class="pre">'howto'</span></code> (provided by Sphinx and based
+on <code class="docutils literal notranslate"><span class="pre">'report'</span></code>, resp. <code class="docutils literal notranslate"><span class="pre">'article'</span></code>; Japanese documents use <code class="docutils literal notranslate"><span class="pre">'jsbook'</span></code>,
+resp. <code class="docutils literal notranslate"><span class="pre">'jreport'</span></code>.) “howto” (non-Japanese) documents will not get
+appendices. Also they have a simpler title page.  Other document classes
+can be given. Independently of the document class, the “sphinx” package is
+always loaded in order to define Sphinx’s custom LaTeX commands.</p>
 </dd>
 <dt><em>toctree_only</em></dt><dd><p>必须是``True``或``False``。如果为true，则* startdoc <a href="#id1"><span class="problematic" id="id2">*</span></a>文档本身不包含在输出中，只包含通过TOC树引用的文档。使用此选项，您可以在主文档中添加额外的内容，这些内容显示在HTML中，而不是LaTeX输出中。</p>
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified added">1.2 新版功能: </span>在过去，包括您自己的文档类需要您使用字符串”sphinx” 添加文档类名称。这不再是必要的了。</p>
+<p><span class="versionmodified added">1.2 新版功能: </span>In the past including your own document class required you to prepend the
+document class name with the string “sphinx”. This is not necessary
+anymore.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">0.3 新版功能: </span>第6项 “toctree_only``。仍然接受5件物品的元组。</p>
+<p><span class="versionmodified added">0.3 新版功能: </span>第6项 <code class="docutils literal notranslate"><span class="pre">toctree_only</span></code>。仍然接受5件物品的元组。</p>
 </div>
 </dd></dl>
 
@@ -1914,7 +1974,7 @@
 <dt id="confval-latex_toplevel_sectioning">
 <code class="descname">latex_toplevel_sectioning</code><a class="headerlink" href="#confval-latex_toplevel_sectioning" title="永久链接至目标">¶</a></dt>
 <dd><p>该值确定最顶部的切片单元。它应该从``’part’<code class="docutils literal notranslate"><span class="pre">，</span></code>’chapter’<code class="docutils literal notranslate"><span class="pre">或</span></code>’section’<code class="docutils literal notranslate"><span class="pre">中选择。默认为</span> <span class="pre">``None</span></code> 。最上面的分区单元由documentclass切换:如果documentclass是``howto``则使用``section``，否则将使用``chapter``。</p>
-<p>请注意，如果LaTeX使用``part``命令，那么一层深的切片单元的编号与HTML编号不同步，因为LaTeX编号连续``chapter``(或``section` <cite>为``howto`</cite>。) “</p>
+<p>请注意，如果LaTeX使用``part``命令，那么一层深的切片单元的编号与HTML编号不同步，因为LaTeX编号连续``chapter``(或``section` <cite>为``howto`</cite>。) ``</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.4 新版功能.</span></p>
 </div>
@@ -1929,7 +1989,7 @@
 <dl class="confval">
 <dt id="confval-latex_domain_indices">
 <code class="descname">latex_domain_indices</code><a class="headerlink" href="#confval-latex_domain_indices" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则除了常规索引外，还会生成特定于域的索引。对于例如Python域，这是全局模块索引。默认为 “True” 。</p>
+<dd><p>如果为true，则除了常规索引外，还会生成特定于域的索引。对于例如Python域，这是全局模块索引。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <p>此值可以是bool或应生成的索引名称列表，例如:confval:<cite>html_domain_indices</cite>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
@@ -1939,7 +1999,7 @@
 <dl class="confval">
 <dt id="confval-latex_show_pagerefs">
 <code class="descname">latex_show_pagerefs</code><a class="headerlink" href="#confval-latex_show_pagerefs" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则在内部引用后添加页面引用。这对手册的打印副本非常有用。默认为 “False” 。</p>
+<dd><p>如果为true，则在内部引用后添加页面引用。这对手册的打印副本非常有用。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -1958,7 +2018,7 @@
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.1 版更改: </span>这个值现在是一个字符串;以前它是一个布尔值，并且真值选择了``’inline’<a href="#id1"><span class="problematic" id="id2">``</span></a>显示。为了向后兼容，仍然接受 “True” 。</p>
+<p><span class="versionmodified changed">在 1.1 版更改: </span>这个值现在是一个字符串;以前它是一个布尔值，并且真值选择了``’inline’<code class="docutils literal notranslate"><span class="pre">显示。为了向后兼容，仍然接受</span> <span class="pre">``True</span></code> 。</p>
 </div>
 </dd></dl>
 
@@ -1966,7 +2026,7 @@
 <dt id="confval-latex_use_latex_multicolumn">
 <code class="descname">latex_use_latex_multicolumn</code><a class="headerlink" href="#confval-latex_use_latex_multicolumn" title="永久链接至目标">¶</a></dt>
 <dd><p>默认是  <code class="docutils literal notranslate"><span class="pre">False</span></code>: 这意味着Sphinx自己的宏用于网格表中的合并单元格。它们允许一般内容(文字块，列表，块引用，……)但如果使用:rst:dir:<cite>tabularcolumns`指令来注入类型`</cite>&gt; {..}的LaTeX标记，则可能会出现问题。 <cite>，```{{..}`</cite>，<a href="#id1"><span class="problematic" id="id2">``</span></a>&#64; {..}``作为列规范。</p>
-<p>设置为 “True” 表示使用LaTeX的标准``multicolumn``;这与水平合并单元格中的文字块不兼容，如果使用``tabulary``呈现表，则在此类单元格中也有多个段落。</p>
+<p>设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 表示使用LaTeX的标准``multicolumn``;这与水平合并单元格中的文字块不兼容，如果使用``tabulary``呈现表，则在此类单元格中也有多个段落。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.6 新版功能.</span></p>
 </div>
@@ -1975,7 +2035,7 @@
 <dl class="confval">
 <dt id="confval-latex_use_xindy">
 <code class="descname">latex_use_xindy</code><a class="headerlink" href="#confval-latex_use_xindy" title="永久链接至目标">¶</a></dt>
-<dd><p>如果``True``，由Sphinx创建的LaTeX文件的PDF构建将使用:program:<a href="#id1"><span class="problematic" id="id2">`</span></a>xindy`(<a href="#id12"><span class="problematic" id="id15">doc__</span></a>)而不是:program:<a href="#id3"><span class="problematic" id="id4">`</span></a>makeindex`用于准备一般术语的索引(来自:rst:dir: <a href="#id5"><span class="problematic" id="id6">`</span></a>index`用法)。这意味着具有UTF-8字符的单词将正确地为:confval:<a href="#id7"><span class="problematic" id="id8">`</span></a>language`排序。</p>
+<dd><p>如果``True``，由Sphinx创建的LaTeX文件的PDF构建将使用:program:<a href="#id1"><span class="problematic" id="id2">`</span></a>xindy`(<a href="#id12"><span class="problematic" id="id16">doc__</span></a>)而不是:program:<a href="#id3"><span class="problematic" id="id4">`</span></a>makeindex`用于准备一般术语的索引(来自:rst:dir: <a href="#id5"><span class="problematic" id="id6">`</span></a>index`用法)。这意味着具有UTF-8字符的单词将正确地为:confval:<a href="#id7"><span class="problematic" id="id8">`</span></a>language`排序。</p>
 <ul class="simple">
 <li><p>如果出现以下情况，则忽略此选项:confval:<cite>latex_engine`是`</cite>’platex’<a href="#id1"><span class="problematic" id="id2">``</span></a>(日文文件;:program:<a href="#id3"><span class="problematic" id="id4">`</span></a>mendex`替换:program:<a href="#id5"><span class="problematic" id="id6">`</span></a>makeindex`然后)。</p></li>
 <li><p>对于``’xelatex’<code class="docutils literal notranslate"><span class="pre">或</span></code>’lualatex’<code class="docutils literal notranslate"><span class="pre">，默认是``True</span></code><strong class="program">makeindex</strong>，如果任何索引术语以非ascii字符开头，则创建``.ind``包含UTF-8编码的无效字节的文件。使用``’lualatex’<a href="#id1"><span class="problematic" id="id2">``</span></a>这会打破PDF版本。</p></li>
@@ -1993,31 +2053,31 @@
 <dd><div class="versionadded">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
-<p>它的:ref:<cite>documentation &lt;latex_elements_confval&gt;`已移至:doc:</cite>/ latex`。</p>
+<p>它的:ref:<cite>documentation &lt;latex_elements_confval&gt;`已移至:doc:</cite>/latex`。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-latex_docclass">
 <code class="descname">latex_docclass</code><a class="headerlink" href="#confval-latex_docclass" title="永久链接至目标">¶</a></dt>
-<dd><p>将``’howto’<code class="docutils literal notranslate"><span class="pre">和</span></code>’manual’<code class="docutils literal notranslate"><span class="pre">的字典映射到真实文档类的名称，这些名称将用作两个Sphinx类的基础。默认是对</span></code>’howto’<code class="docutils literal notranslate"><span class="pre">使用</span></code>’article’<code class="docutils literal notranslate"><span class="pre">和`''manual'````````````````````````````````````````````</span></code></p>
+<dd><p>将 <code class="docutils literal notranslate"><span class="pre">'howto'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'manual'</span></code> 的字典映射到真实文档类的名称，这些名称将用作两个Sphinx类的基础。默认是对 <code class="docutils literal notranslate"><span class="pre">'howto'</span></code> 使用 <code class="docutils literal notranslate"><span class="pre">'article'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'manual'</span></code> 使用 <code class="docutils literal notranslate"><span class="pre">'report'</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.5 版更改: </span>在日语文档中:(confval:<cite>language`是`</cite>’ja’<code class="docutils literal notranslate"><span class="pre">)，默认情况下</span></code>’jreport’<code class="docutils literal notranslate"><span class="pre">用于</span></code>’howto’<code class="docutils literal notranslate"><span class="pre">和`''jsbook'``用于</span></code>  “manual’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<p><span class="versionmodified changed">在 1.5 版更改: </span>在日语文档中(<a class="reference internal" href="#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 是 <code class="docutils literal notranslate"><span class="pre">'ja'</span></code>)，默认情况下 <code class="docutils literal notranslate"><span class="pre">'jreport'</span></code> 用于 <code class="docutils literal notranslate"><span class="pre">'howto'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'jsbook'</span></code> 用于 ``  ‘manual’`` 。</p>
 </div>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-latex_additional_files">
 <code class="descname">latex_additional_files</code><a class="headerlink" href="#confval-latex_additional_files" title="永久链接至目标">¶</a></dt>
-<dd><p>构建LaTeX输出时要复制到构建目录的文件名列表(相对于配置目录)。这对于复制Sphinx不会自动复制的文件非常有用，例如如果在``latex_elements``中添加的自定义LaTeX中引用它们。源文件中引用的图像文件(例如通过``.. image ::<a href="#id1"><span class="problematic" id="id2">``</span></a>)会自动复制。</p>
+<dd><p>构建LaTeX输出时要复制到构建目录的文件名列表(相对于配置目录)。这对于复制Sphinx不会自动复制的文件非常有用，例如如果在 <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code> 中添加的自定义LaTeX中引用它们。源文件中引用的图像文件(例如通过 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image</span> <span class="pre">::</span></code> )会自动复制。</p>
 <p>您必须确保自己文件名不会与任何自动复制的文件冲突。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.2 版更改: </span>这将覆盖Sphinx提供的文件，例如``sphinx.sty``。</p>
+<p><span class="versionmodified changed">在 1.2 版更改: </span>这将覆盖Sphinx提供的文件，例如 <code class="docutils literal notranslate"><span class="pre">sphinx.sty</span></code> 。</p>
 </div>
 </dd></dl>
 
@@ -2030,11 +2090,11 @@
 <code class="descname">text_newlines</code><a class="headerlink" href="#confval-text_newlines" title="永久链接至目标">¶</a></dt>
 <dd><p>确定在文本输出中使用哪个行尾字符。</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'unix'</span></code>:使用Unix风格的行结尾(<code class="docutils literal notranslate"><span class="pre">\</span> <span class="pre">n</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'windows'</span></code>:使用Windows风格的行结尾(<code class="docutils literal notranslate"><span class="pre">\</span> <span class="pre">r</span> <span class="pre">\</span> <span class="pre">n</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'native'</span></code>:使用构建文档的平台的行结束样式</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'unix'</span></code>: 使用Unix风格的行结尾(<code class="docutils literal notranslate"><span class="pre">\n</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'windows'</span></code>: 使用Windows风格的行结尾(<code class="docutils literal notranslate"><span class="pre">\r\n</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'native'</span></code>: 使用构建文档的平台的行结束样式</p></li>
 </ul>
-<p>默认值:<code class="docutils literal notranslate"><span class="pre">'unix'</span></code>。</p>
+<p>默认值: <code class="docutils literal notranslate"><span class="pre">'unix'</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -2044,7 +2104,7 @@
 <dt id="confval-text_sectionchars">
 <code class="descname">text_sectionchars</code><a class="headerlink" href="#confval-text_sectionchars" title="永久链接至目标">¶</a></dt>
 <dd><p>一个7个字符的字符串，应该用于下划线部分。第一个字符用于第一级标题，第二个字符用于第二级标题，依此类推。</p>
-<p>默认是  <code class="docutils literal notranslate"><span class="pre">'*=-~&quot;+`'</span></code>.</p>
+<p>The default is <code class="docutils literal notranslate"><span class="pre">'*=-~&quot;+`'</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -2053,7 +2113,7 @@
 <dl class="confval">
 <dt id="confval-text_add_secnumbers">
 <code class="descname">text_add_secnumbers</code><a class="headerlink" href="#confval-text_add_secnumbers" title="永久链接至目标">¶</a></dt>
-<dd><p>一个布尔值，用于决定文本输出中是否包含节号。默认为 “True” 。</p>
+<dd><p>一个布尔值，用于决定文本输出中是否包含节号。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.7 新版功能.</span></p>
 </div>
@@ -2062,7 +2122,8 @@
 <dl class="confval">
 <dt id="confval-text_secnumber_suffix">
 <code class="descname">text_secnumber_suffix</code><a class="headerlink" href="#confval-text_secnumber_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>文本输出中节号的后缀。默认值:<code class="docutils literal notranslate"><span class="pre">&quot;。\&quot;</span> <span class="pre">``。设置为</span></code>”” <a href="#id1"><span class="problematic" id="id2">``</span></a>来抑制节号上的最后一个点。</p>
+<dd><p>Suffix for section numbers in text output.  Default: <code class="docutils literal notranslate"><span class="pre">&quot;.</span> <span class="pre">&quot;</span></code>. Set to
+<code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> to suppress the final dot on section numbers.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.7 新版功能.</span></p>
 </div>
@@ -2075,9 +2136,9 @@
 <dl class="confval">
 <dt id="confval-man_pages">
 <code class="descname">man_pages</code><a class="headerlink" href="#confval-man_pages" title="永久链接至目标">¶</a></dt>
-<dd><p>此值确定如何将文档树分组为手册页。它必须是元组列表``(startdocname，name，description，authors，section)``，其中的项目是:</p>
+<dd><p>此值确定如何将文档树分组为手册页。它必须是元组列表 <code class="docutils literal notranslate"><span class="pre">(startdocname，name，description，authors，section)</span></code> ，其中的项目是:</p>
 <dl class="simple">
-<dt><em>startdocname</em></dt><dd><p>字符串，指定手册页主文档的:term:<cite>document name</cite>。 TOC树中* startdoc <a href="#id1"><span class="problematic" id="id2">*</span></a>文档引用的所有文档都将包含在手册文件中。 (如果要为手册页构建使用默认主文档，请在此处使用:confval:<cite>master_doc</cite>。)</p>
+<dt><em>startdocname</em></dt><dd><p>字符串，指定手册页主文档的 <a class="reference internal" href="../glossary.html#term-document-name"><span class="xref std std-term">document name</span></a> 。 TOC树中 <em>startdoc</em> 文档引用的所有文档都将包含在手册文件中。 (如果要为手册页构建使用默认主文档，请在此处使用 <a class="reference internal" href="#confval-master_doc"><code class="xref std std-confval docutils literal notranslate"><span class="pre">master_doc</span></code></a> 。)</p>
 </dd>
 <dt><em>name</em></dt><dd><p>手册页的名称。这应该是一个没有空格或特殊字符的短字符串。它用于确定文件名以及手册页的名称(在NAME部分中)。</p>
 </dd>
@@ -2096,7 +2157,7 @@
 <dl class="confval">
 <dt id="confval-man_show_urls">
 <code class="descname">man_show_urls</code><a class="headerlink" href="#confval-man_show_urls" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，请在链接后添加URL地址。默认为 “False” 。</p>
+<dd><p>如果为true，请在链接后添加URL地址。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -2109,23 +2170,23 @@
 <dl class="confval">
 <dt id="confval-texinfo_documents">
 <code class="descname">texinfo_documents</code><a class="headerlink" href="#confval-texinfo_documents" title="永久链接至目标">¶</a></dt>
-<dd><p>此值确定如何将文档树分组为Texinfo源文件。它必须是元组列表``(startdocname，targetname，title，author，dir_entry，description，category，toctree_only)``，其中的项目是:</p>
+<dd><p>此值确定如何将文档树分组为Texinfo源文件。它必须是元组列表 <code class="docutils literal notranslate"><span class="pre">(startdocname，targetname，title，author，dir_entry，description，category，toctree_only)</span></code> ，其中的项目是:</p>
 <dl class="simple">
-<dt><em>startdocname</em></dt><dd><p>字符串，指定Texinfo文件主文档的:term:<cite>document name</cite>。 TOC树中* startdoc <a href="#id1"><span class="problematic" id="id2">*</span></a>文档引用的所有文档都将包含在Texinfo文件中。 (如果要为Texinfo构建使用默认主文档，请在此处提供:confval:<cite>master_doc</cite>。)</p>
+<dt><em>startdocname</em></dt><dd><p>字符串，指定Texinfo文件主文档的 <span class="xref std std-term">document name `。 TOC树中 *startdoc* 文档引用的所有文档都将包含在Texinfo文件中。 (如果要为Texinfo构建使用默认主文档，请在此处提供 :confval:`master_doc</span> 。)</p>
 </dd>
 <dt><em>targetname</em></dt><dd><p>输出目录中Texinfo文件的文件名(无扩展名)。</p>
 </dd>
-<dt><em>title</em></dt><dd><p>Texinfo文档标题。可以为空以使用* startdoc <a href="#id1"><span class="problematic" id="id2">*</span></a>文档的标题。作为Texinfo标记插入，所以需要转义像``&#64;``和``}``这样的特殊字符。</p>
+<dt><em>title</em></dt><dd><p>Texinfo文档标题。可以为空以使用 <em>startdoc</em> 文档的标题。作为Texinfo标记插入，所以需要转义像 <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">}</span></code> 这样的特殊字符。</p>
 </dd>
-<dt><em>author</em></dt><dd><p>Texinfo文档的作者。插入为Texinfo标记。使用``&#64; <a href="#id1"><span class="problematic" id="id2">*</span></a><code class="docutils literal notranslate"><span class="pre">来分隔多个作者，如:</span></code>’John &#64; * Sarah’<a href="#id3"><span class="problematic" id="id4">``</span></a>。</p>
+<dt><em>author</em></dt><dd><p>Texinfo文档的作者。插入为Texinfo标记。使用 <code class="docutils literal notranslate"><span class="pre">&#64;</span> <span class="pre">*</span></code> 来分隔多个作者，如: <code class="docutils literal notranslate"><span class="pre">'John</span> <span class="pre">&#64;</span> <span class="pre">*</span> <span class="pre">Sarah'</span></code> 。</p>
 </dd>
-<dt><em>dir_entry</em></dt><dd><p>将出现在顶级 “DIR” 菜单文件中的名称。</p>
+<dt><em>dir_entry</em></dt><dd><p>将出现在顶级 <code class="docutils literal notranslate"><span class="pre">DIR</span></code> 菜单文件中的名称。</p>
 </dd>
-<dt><em>description</em></dt><dd><p>描述性文本出现在顶级 “DIR” 菜单文件中。</p>
+<dt><em>description</em></dt><dd><p>描述性文本出现在顶级 <code class="docutils literal notranslate"><span class="pre">DIR</span></code> 菜单文件中。</p>
 </dd>
-<dt><em>category</em></dt><dd><p>指定此条目将出现在顶级 “DIR” 菜单文件中的部分。</p>
+<dt><em>category</em></dt><dd><p>指定此条目将出现在顶级 <code class="docutils literal notranslate"><span class="pre">DIR</span></code> 菜单文件中的部分。</p>
 </dd>
-<dt><em>toctree_only</em></dt><dd><p>必须是``True``或``False``。如果为true，则* startdoc <a href="#id1"><span class="problematic" id="id2">*</span></a>文档本身不包含在输出中，只包含通过TOC树引用的文档。使用此选项，您可以在HTML文档中显示的主文档中添加额外的内容，但不能在Texinfo输出中添加。</p>
+<dt><em>toctree_only</em></dt><dd><p>必须是 <code class="docutils literal notranslate"><span class="pre">True</span></code> 或 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。如果为true，则 <em>startdoc</em> 文档本身不包含在输出中，只包含通过TOC树引用的文档。使用此选项，您可以在HTML文档中显示的主文档中添加额外的内容，但不能在Texinfo输出中添加。</p>
 </dd>
 </dl>
 <div class="versionadded">
@@ -2145,7 +2206,7 @@
 <dl class="confval">
 <dt id="confval-texinfo_domain_indices">
 <code class="descname">texinfo_domain_indices</code><a class="headerlink" href="#confval-texinfo_domain_indices" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则除了常规索引外，还会生成特定于域的索引。对于例如Python域，这是全局模块索引。默认为 “True” 。</p>
+<dd><p>如果为true，则除了常规索引外，还会生成特定于域的索引。对于例如Python域，这是全局模块索引。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <p>此值可以是bool或应生成的索引名称列表，例如:confval:<cite>html_domain_indices</cite>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
@@ -2157,7 +2218,7 @@
 <code class="descname">texinfo_show_urls</code><a class="headerlink" href="#confval-texinfo_show_urls" title="永久链接至目标">¶</a></dt>
 <dd><p>控制如何显示URL地址。</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'footnote'</span></code> – display URLs in footnotes (default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'footnote'</span></code> – 在脚注中显示网址（默认）</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'不'</span></code> - 不显示网址</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'inline'</span></code> - 在括号中内嵌显示网址</p></li>
 </ul>
@@ -2169,7 +2230,8 @@
 <dl class="confval">
 <dt id="confval-texinfo_no_detailmenu">
 <code class="descname">texinfo_no_detailmenu</code><a class="headerlink" href="#confval-texinfo_no_detailmenu" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，则不要在”Top” 节点的菜单中生成一个 “&#64; detailmenu`” ，其中包含文档中每个子节点的条目。默认为 “False” 。</p>
+<dd><p>If true, do not generate a <code class="docutils literal notranslate"><span class="pre">&#64;detailmenu</span></code> in the “Top” node’s menu
+containing entries for each sub-node in the document.  Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.2 新版功能.</span></p>
 </div>
@@ -2178,17 +2240,17 @@
 <dl class="confval">
 <dt id="confval-texinfo_elements">
 <code class="descname">texinfo_elements</code><a class="headerlink" href="#confval-texinfo_elements" title="永久链接至目标">¶</a></dt>
-<dd><p>包含覆盖那些Sphinx的Texinfo片段的字典通常会放入生成的``.texi``文件中。</p>
+<dd><p>包含覆盖那些Sphinx的Texinfo片段的字典通常会放入生成的 <code class="docutils literal notranslate"><span class="pre">.texi</span></code> 文件中。</p>
 <ul>
 <li><p>您可能想要覆盖的键包括:</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">'paragraphindent'</span></code></dt><dd><p>每个段落的第一行缩进的空格数，默认为 “2” 。指定 “0” 以表示没有缩进。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">'paragraphindent'</span></code></dt><dd><p>每个段落的第一行缩进的空格数，默认为 <code class="docutils literal notranslate"><span class="pre">2</span></code> 。指定 <code class="docutils literal notranslate"><span class="pre">0</span></code> 以表示没有缩进。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">'exampleindent'</span></code></dt><dd><p>为示例或文字块缩进行的空格数，默认为``4``。指定 “0” 以表示没有缩进。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">'exampleindent'</span></code></dt><dd><p>为示例或文字块缩进行的空格数，默认为 <code class="docutils literal notranslate"><span class="pre">4</span></code> 。指定 <code class="docutils literal notranslate"><span class="pre">0</span></code> 以表示没有缩进。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">'preamble'</span></code></dt><dd><p>Texinfo标记插入文件的开头附近。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">'copying'</span></code></dt><dd><p>Texinfo标记插入``&#64;copy``块并显示在标题之后。默认值包含标识项目的简单标题页。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">'copying'</span></code></dt><dd><p>Texinfo标记插入 <code class="docutils literal notranslate"><span class="pre">&#64;copy</span></code> 块并显示在标题之后。默认值包含标识项目的简单标题页。</p>
 </dd>
 </dl>
 </li>
@@ -2215,25 +2277,25 @@
 <dl class="confval">
 <dt id="confval-qthelp_basename">
 <code class="descname">qthelp_basename</code><a class="headerlink" href="#confval-qthelp_basename" title="永久链接至目标">¶</a></dt>
-<dd><p>qthelp文件的基本名称。它默认为:confval:<a href="#id1"><span class="problematic" id="id2">`</span></a>project`名称。</p>
+<dd><p>qthelp文件的基本名称。它默认为 <a class="reference internal" href="#confval-project"><code class="xref std std-confval docutils literal notranslate"><span class="pre">project</span></code></a> 名称。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-qthelp_namespace">
 <code class="descname">qthelp_namespace</code><a class="headerlink" href="#confval-qthelp_namespace" title="永久链接至目标">¶</a></dt>
-<dd><p>qthelp文件的命名空间。它默认为``org.sphinx。&lt;project_name&gt;。&lt;project_version&gt;``。</p>
+<dd><p>qthelp文件的命名空间。它默认为 <code class="docutils literal notranslate"><span class="pre">org.sphinx。&lt;project_name&gt;。&lt;project_version&gt;</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-qthelp_theme">
 <code class="descname">qthelp_theme</code><a class="headerlink" href="#confval-qthelp_theme" title="永久链接至目标">¶</a></dt>
-<dd><p>qthelp输出的HTML主题。这默认为``’nonav’<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>qthelp输出的HTML主题。这默认为 <code class="docutils literal notranslate"><span class="pre">'nonav'</span></code> 。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-qthelp_theme_options">
 <code class="descname">qthelp_theme_options</code><a class="headerlink" href="#confval-qthelp_theme_options" title="永久链接至目标">¶</a></dt>
-<dd><p>影响所选主题外观的选项字典。这些是针对主题的。有关内置主题所理解的选项，请参阅:ref:<cite>this section &lt;builtin-themes&gt;</cite>。</p>
+<dd><p>影响所选主题外观的选项字典。这些是针对主题的。有关内置主题所理解的选项，请参阅 <a class="reference internal" href="theming.html#builtin-themes"><span class="std std-ref">this section</span></a> 。</p>
 </dd></dl>
 
 </div>
@@ -2242,7 +2304,7 @@
 <dl class="confval">
 <dt id="confval-linkcheck_ignore">
 <code class="descname">linkcheck_ignore</code><a class="headerlink" href="#confval-linkcheck_ignore" title="永久链接至目标">¶</a></dt>
-<dd><p>一个正则表达式列表，它匹配在执行``linkcheck``构建时不应检查的URI。例:</p>
+<dd><p>一个正则表达式列表，它匹配在执行 <code class="docutils literal notranslate"><span class="pre">linkcheck</span></code> 构建时不应检查的URI。例:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">linkcheck_ignore</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;http://localhost:\d+/&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -2281,7 +2343,7 @@
 <dl class="confval">
 <dt id="confval-linkcheck_anchors">
 <code class="descname">linkcheck_anchors</code><a class="headerlink" href="#confval-linkcheck_anchors" title="永久链接至目标">¶</a></dt>
-<dd><p>如果为true，请检查链接中``＃anchor`` s的有效性。由于这需要下载整个文档，因此启用时会相当慢。默认为 “True” 。</p>
+<dd><p>如果为true，请检查链接中 <code class="docutils literal notranslate"><span class="pre">＃anchor</span></code>s 的有效性。由于这需要下载整个文档，因此启用时会相当慢。默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.2 新版功能.</span></p>
 </div>
@@ -2290,10 +2352,13 @@
 <dl class="confval">
 <dt id="confval-linkcheck_anchors_ignore">
 <code class="descname">linkcheck_anchors_ignore</code><a class="headerlink" href="#confval-linkcheck_anchors_ignore" title="永久链接至目标">¶</a></dt>
-<dd><p>在检查链接中锚点的有效性时，应跳过与Sphinx匹配的锚点的正则表达式列表。这允许跳过网站的JavaScript添加的锚点来控制动态页面或触发内部REST请求。默认是``[“^！” ]``。</p>
+<dd><p>A list of regular expressions that match anchors Sphinx should skip when
+checking the validity of anchors in links. This allows skipping anchors that
+a website’s JavaScript adds to control dynamic pages or when triggering an
+internal REST request. Default is <code class="docutils literal notranslate"><span class="pre">[&quot;^!&quot;]</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>如果要忽略特定页面或与特定模式匹配的页面的锚点(但仍检查没有锚点的相同页面的出现)，请使用:confval:<cite>linkcheck_ignore</cite>，例如as如下:</p>
+<p>如果要忽略特定页面或与特定模式匹配的页面的锚点(但仍检查没有锚点的相同页面的出现)，请使用 <a class="reference internal" href="#confval-linkcheck_ignore"><code class="xref std std-confval docutils literal notranslate"><span class="pre">linkcheck_ignore</span></code></a> ，例如as如下:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">linkcheck_ignore</span> <span class="o">=</span> <span class="p">[</span>
    <span class="s1">&#39;http://www.sphinx-doc.org/en/1.7/intro.html#&#39;</span>
 <span class="p">]</span>
@@ -2320,7 +2385,7 @@
 <p class="rubric">脚注</p>
 <dl class="footnote brackets">
 <dt class="label" id="id11"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
-<dd><p>关于可用的globbing语法的注释:你可以使用标准shell构造``*``，<code class="docutils literal notranslate"><span class="pre">`</span></code>，<a href="#id1"><span class="problematic" id="id2">``</span></a>[…]``和``[！…]``这些都不匹配斜杠。双星``**``可用于匹配任何字符序列*，包括*斜杠。</p>
+<dd><p>关于可用的globbing语法的注释:你可以使用标准shell构造 <code class="docutils literal notranslate"><span class="pre">*</span></code> ，<code class="docutils literal notranslate"><span class="pre">?</span></code> ，<code class="docutils literal notranslate"><span class="pre">[...]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">[！...]</span></code> 这些都不匹配斜杠。双星 <code class="docutils literal notranslate"><span class="pre">**</span></code> 可用于匹配任何字符序列 <em>包括</em> 斜杠。</p>
 </dd>
 </dl>
 </div>
@@ -2338,7 +2403,7 @@
 <dl class="confval">
 <dt id="confval-cpp_id_attributes">
 <code class="descname">cpp_id_attributes</code><a class="headerlink" href="#confval-cpp_id_attributes" title="永久链接至目标">¶</a></dt>
-<dd><p>解析器另外应该接受的字符串列表作为属性。例如，当属性为 “#define” 以便于移植时，可以使用它。</p>
+<dd><p>解析器另外应该接受的字符串列表作为属性。例如，当属性为 <code class="docutils literal notranslate"><span class="pre">#define</span></code> 以便于移植时，可以使用它。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5 新版功能.</span></p>
 </div>
@@ -2347,7 +2412,7 @@
 <dl class="confval">
 <dt id="confval-cpp_paren_attributes">
 <code class="descname">cpp_paren_attributes</code><a class="headerlink" href="#confval-cpp_paren_attributes" title="永久链接至目标">¶</a></dt>
-<dd><p>解析器另外应该接受的字符串列表，作为具有一个参数的属性。也就是说，如果 <code class="docutils literal notranslate"><span class="pre">my_align_as</span></code> 在列表中，则 <code class="docutils literal notranslate"><span class="pre">my_align_as(X)</span></code> 被解析为所有字符串 <code class="docutils literal notranslate"><span class="pre">X</span></code> 的属性，它们具有平衡括号(<code class="docutils literal notranslate"><span class="pre">()</span></code> ， <code class="docutils literal notranslate"><span class="pre">[]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">{}</span></code> )。例如，当属性为 “#define” 以便于移植时，可以使用它。</p>
+<dd><p>解析器另外应该接受的字符串列表，作为具有一个参数的属性。也就是说，如果 <code class="docutils literal notranslate"><span class="pre">my_align_as</span></code> 在列表中，则 <code class="docutils literal notranslate"><span class="pre">my_align_as(X)</span></code> 被解析为所有字符串 <code class="docutils literal notranslate"><span class="pre">X</span></code> 的属性，它们具有平衡括号(<code class="docutils literal notranslate"><span class="pre">()</span></code> ， <code class="docutils literal notranslate"><span class="pre">[]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">{}</span></code> )。例如，当属性为 <code class="docutils literal notranslate"><span class="pre">#define</span></code> 以便于移植时，可以使用它。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5 新版功能.</span></p>
 </div>
@@ -2731,7 +2796,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/efa8fcc27 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a6d11e3ad 创建。
     </div>
   </body>
 </html>
