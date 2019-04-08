@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:45
 msgid "Or add this section in ``setup.cfg``::"
-msgstr "Or add this section in ``setup.cfg``::"
+msgstr "或者在 ``setup.cfg`` 中添加此部分::"
 
 #: ../../usage/advanced/setuptools.rst:53
 msgid ""
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:65
 msgid "This can also be set by passing the `-E` flag to ``setup.py``:"
-msgstr "This can also be set by passing the `-E` flag to ``setup.py``:"
+msgstr "这也可以通过将 `-E` 标志传递给 ``setup.py`` 来设置:"
 
 #: ../../usage/advanced/setuptools.rst:73
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:76
 msgid "This can also be set by passing the `-a` flag to ``setup.py``:"
-msgstr "This can also be set by passing the `-a` flag to ``setup.py``:"
+msgstr "这也可以通过将 `-a` 标志传递给 ``setup.py`` 来设置:"
 
 #: ../../usage/advanced/setuptools.rst:84
 msgid ""
@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:89
 msgid "This can also be set by passing the `-s` flag to ``setup.py``:"
-msgstr "This can also be set by passing the `-s` flag to ``setup.py``:"
+msgstr "这也可以通过将 `-s` 标志传递给 ``setup.py`` 来设置:"
 
 #: ../../usage/advanced/setuptools.rst:97
 msgid ""
@@ -110,7 +110,7 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:106
 msgid "This can also be set by passing the `-c` flag to ``setup.py``:"
-msgstr "这也可以通过将`-c`标志传递给``setup.py``来设置:"
+msgstr "这也可以通过将 `-c` 标志传递给 ``setup.py`` 来设置:"
 
 #: ../../usage/advanced/setuptools.rst:116
 msgid "The builder or list of builders to use. Default is ``html``."
@@ -118,7 +118,7 @@ msgstr "要使用的构建器或构建器列表。默认是``html``。"
 
 #: ../../usage/advanced/setuptools.rst:118
 msgid "This can also be set by passing the `-b` flag to ``setup.py``:"
-msgstr "这也可以通过将`-b`标志传递给``setup.py``来设置："
+msgstr "这也可以通过将 `-b` 标志传递给 ``setup.py`` 来设置："
 
 #: ../../usage/advanced/setuptools.rst:124
 msgid "This can now be a comma- or space-separated list of builders"
@@ -132,19 +132,19 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:132
 msgid "This can also be set by passing the `-W` flag to ``setup.py``:"
-msgstr "这也可以通过将`-W`标志传递给``setup.py``来设置："
+msgstr "这也可以通过将`-W`标志传递给 ``setup.py`` 来设置："
 
 #: ../../usage/advanced/setuptools.rst:142
 msgid "The documented project's name. Default is ``''``."
-msgstr "记录的项目名称。默认是``''``。"
+msgstr "记录的项目名称。默认是 ``''`` 。"
 
 #: ../../usage/advanced/setuptools.rst:148
 msgid "The short X.Y version. Default is ``''``."
-msgstr "简短的X.Y版本。默认是``''``。"
+msgstr "简短的 X.Y 版本。默认是 ``''`` 。"
 
 #: ../../usage/advanced/setuptools.rst:154
 msgid "The full version, including alpha/beta/rc tags. Default is ``''``."
-msgstr "完整版，包括alpha / beta / rc标签。默认是``''``。"
+msgstr "完整版，包括alpha /beta/rc 标签。默认是 ``''`` 。"
 
 #: ../../usage/advanced/setuptools.rst:160
 msgid ""
@@ -160,11 +160,11 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:170
 msgid "This can also be set by passing the `-i` flag to ``setup.py``:"
-msgstr "这也可以通过将`-i`标志传递给``setup.py``来设置："
+msgstr "这也可以通过将 `-i` 标志传递给 ``setup.py`` 来设置："
 
 #: ../../usage/advanced/setuptools.rst:180
 msgid "The copyright string. Default is ``''``."
-msgstr "版权字符串。默认是``''``。"
+msgstr "版权字符串。默认是 ``''`` 。"
 
 #: ../../usage/advanced/setuptools.rst:186
 msgid ""
@@ -175,5 +175,5 @@ msgstr ""
 
 #: ../../usage/advanced/setuptools.rst:194
 msgid "A boolean to configure ``pdb`` on exception. Default is false."
-msgstr "在异常上配置``pdb``的布尔值。默认值为false。"
+msgstr "在异常上配置 ``pdb`` 的布尔值。默认值为false。"
 

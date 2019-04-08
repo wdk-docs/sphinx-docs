@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>Sphinx</ShortName>
-  <Description>搜索 Sphinx 2.1.0+/a6d11e3ad 文档</Description>
+  <Description>搜索 Sphinx 2.1.0+/41035e8f9 文档</Description>
   <InputEncoding>utf-8</InputEncoding>
   <Url type="text/html" method="get"
        template="http://sphinx-doc.org/search.html?q={searchTerms}"/>
-  <LongName>Sphinx 2.1.0+/a6d11e3ad 文档</LongName>
+  <LongName>Sphinx 2.1.0+/41035e8f9 文档</LongName>
   
 </OpenSearchDescription>

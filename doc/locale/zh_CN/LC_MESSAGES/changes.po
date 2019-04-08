@@ -46,7 +46,7 @@ msgstr "不兼容的变化"
 msgid ""
 "Ignore filenames without file extension given to "
 "``Builder.build_specific()`` API directly"
-msgstr ""
+msgstr "忽略没有直接赋予 ``Builder.build_specific()`` API的文件扩展名的文件名"
 
 #: ../../../CHANGES:14 ../../../CHANGES:72 ../../../CHANGES:170
 #: ../../../CHANGES:596 ../../../CHANGES:1025 ../../../CHANGES:1103
@@ -168,7 +168,7 @@ msgstr "``sphinx.util.i18n.find_catalog_source_files()``"
 
 #: ../../../CHANGES:45 ../../../CHANGES:256
 msgid "For more details, see :ref:`deprecation APIs list <dev-deprecated-apis>`."
-msgstr "有关更多详细信息，请参阅 :ref:`deprecation APIs list <dev-deprecated-apis>`."
+msgstr "有关更多详细信息，请参阅 :ref:`弃用API列表 <dev-deprecated-apis>`."
 
 #: ../../../CHANGES:48 ../../../CHANGES:75 ../../../CHANGES:259
 #: ../../../CHANGES:426 ../../../CHANGES:464 ../../../CHANGES:688
@@ -189,23 +189,23 @@ msgstr "添加功能"
 msgid ""
 "Add a helper class "
 "``sphinx.transforms.post_transforms.SphinxPostTransform``"
-msgstr ""
+msgstr "添加一个辅助类 ``sphinx.transforms.post_transforms.SphinxPostTransform``"
 
 #: ../../../CHANGES:51
 msgid "Add a helper method ``SphinxDirective.set_source_info()``"
-msgstr "Add a helper method ``SphinxDirective.set_source_info()``"
+msgstr "添加辅助方法 ``SphinxDirective.set_source_info()``"
 
 #: ../../../CHANGES:52
 msgid "#6180: Support ``--keep-going`` with BuildDoc setup command"
-msgstr "#6180: Support ``--keep-going`` with BuildDoc setup command"
+msgstr "#6180: 支持 ``--keep-going`` 使用BuildDoc安装命令"
 
 #: ../../../CHANGES:53
 msgid "``math`` directive now supports ``:class:`` option"
-msgstr "``math`` directive now supports ``:class:`` option"
+msgstr "``math`` 指令现在支持 ``:class:`` 选项"
 
 #: ../../../CHANGES:54
 msgid "todo: ``todo`` directive now supports ``:name:`` option"
-msgstr "todo: ``todo`` directive now supports ``:name:`` option"
+msgstr "todo: ``todo`` 指令现在支持 ``:name:`` 选项"
 
 #: ../../../CHANGES:57 ../../../CHANGES:78 ../../../CHANGES:310
 #: ../../../CHANGES:375 ../../../CHANGES:397 ../../../CHANGES:433
@@ -265,7 +265,7 @@ msgid ""
 "for Greek adds, for example on Ubuntu xenial, the ``texlive-lang-greek`` "
 "and (if default font set-up is not modified) ``cm-super(-minimal)`` as "
 "additional Sphinx LaTeX requirements."
-msgstr ""
+msgstr "LaTeX构建器(带有 `'pdflatex'``:confval:`latex_engine`)将通过文本字体处理文本中的Unicode希腊字母(不是数学标记)，并且不会将它们转义为数学标记。请参阅 ``'fontenc'`` 键的讨论 :confval:`latex_elements`;希腊语的这种(可选)支持添加，例如在Ubuntu xenial， ``texlive-lang-greek`` 和(如果默认字体设置未被修改) ``cm-super(-minimal)`` 作为附加Sphinx LaTeX要求。"
 
 #: ../../../CHANGES:101
 msgid ""
@@ -273,7 +273,7 @@ msgid ""
 "``'lualatex'`` requires (by default) the ``FreeFont`` fonts, which in "
 "Ubuntu xenial are provided by package ``fonts-freefont-otf``, and e.g. in"
 " Fedora 29 via package ``texlive-gnu-freefont``."
-msgstr ""
+msgstr "LaTeX构建器 :confval:`latex_engine` 设置为 ``'xelatex'`` 或 ``'lualatex'`` 需要(默认情况下) ``FreeFont`` 字体，在Ubuntu xenial中由包 ``fonts-freefont-otf`` 提供，例如在Fedora 29中通过包 ``texlive-gnu-freefont`` 。"
 
 #: ../../../CHANGES:105
 msgid "requests 2.5.0 or above"
@@ -1149,11 +1149,11 @@ msgstr "#5948: LaTeX: duplicated labels are generated for sections"
 
 #: ../../../CHANGES:418
 msgid "#5958: versionadded directive causes crash with Python 3.5.0"
-msgstr "#5958: versionadded directive causes crash with Python 3.5.0"
+msgstr "#5958: versionadded指令导致Python 3.5.0崩溃"
 
 #: ../../../CHANGES:419
 msgid "#5995: autodoc: autodoc_mock_imports conflict with metaclass on Python 3.7"
-msgstr "#5995: autodoc: autodoc_mock_imports conflict with metaclass on Python 3.7"
+msgstr "#5995: autodoc: autodoc_mock_imports与Python 3.7上的元类冲突"
 
 #: ../../../CHANGES:420
 msgid "#5871: texinfo: a section title ``.`` is not allowed"
@@ -1547,11 +1547,11 @@ msgstr ""
 
 #: ../../../CHANGES:580
 msgid "#5072: Save environment object also with only new documents"
-msgstr "#5072: Save environment object also with only new documents"
+msgstr "#5072: 仅使用新文档保存环境对象"
 
 #: ../../../CHANGES:581
 msgid "#5035: qthelp builder allows dashes in :confval:`qthelp_namespace`"
-msgstr "#5035: qthelp builder allows dashes in :confval:`qthelp_namespace`"
+msgstr "#5035: qthelp builder允许破折号 :confval:`qthelp_namespace`"
 
 #: ../../../CHANGES:582
 msgid ""
@@ -4730,7 +4730,7 @@ msgstr "版本 1.6 (未发行)"
 
 #: ../../../CHANGES:1738
 msgid "not released (because of package script error)"
-msgstr "未发布（因为包脚本错误）"
+msgstr "未发布(因为包脚本错误)"
 
 #: ../../../CHANGES:1741
 msgid "Release 1.5.6 (released May 15, 2017)"

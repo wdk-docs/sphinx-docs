@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>指令 &#8212; Sphinx 2.1.0+/a6d11e3ad 文档</title>
+    <title>指令 &#8212; Sphinx 2.1.0+/41035e8f9 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/a6d11e3ad 文档 中搜索"
+          title="在 Sphinx 2.1.0+/41035e8f9 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -357,7 +357,7 @@
 <dt id="directive-versionadded">
 <code class="descname">.. versionadded::</code><code class="descclassname"> version</code><a class="headerlink" href="#directive-versionadded" title="永久链接至目标">¶</a></dt>
 <dd><p>该指令记录了将所描述的功能添加到库或C API的项目版本。当这适用于整个模块时，应该在任何散文之前将其放置在模块部分的顶部。</p>
-<p>必须给出第一个参数，并且是有问题的版本;您可以添加第二个参数，其中包含*简要*的更改说明。</p>
+<p>必须给出第一个参数，并且是有问题的版本;您可以添加第二个参数，其中包含 <em>简要</em> 的更改说明。</p>
 <p>例:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">versionadded</span><span class="p">::</span> 2.5
    The <span class="ge">*spam*</span> parameter.
@@ -385,7 +385,7 @@
 <dl class="directive">
 <dt id="directive-seealso">
 <code class="descname">.. seealso::</code><a class="headerlink" href="#directive-seealso" title="永久链接至目标">¶</a></dt>
-<dd><p>许多部分包括对模块文档或外部文档的引用列表。这些列表使用:rst:dir:<a href="#id1"><span class="problematic" id="id2">`</span></a>seealso`指令创建。</p>
+<dd><p>许多部分包括对模块文档或外部文档的引用列表。这些列表使用 <a class="reference internal" href="#directive-seealso" title="seealso directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">seealso</span></code></a> 指令创建。</p>
 <p><a class="reference internal" href="#directive-seealso" title="seealso directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">seealso</span></code></a> 指令通常放在任何子部分之前的部分中。对于HTML输出，它显示为从文本的主流中框出来。</p>
 <p>以下内容 <a class="reference internal" href="#directive-seealso" title="seealso directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">seealso</span></code></a> 指令应该是reST定义列表。例:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">seealso</span><span class="p">::</span>
@@ -397,12 +397,12 @@
       Documentation for tar archive files, including GNU tar extensions.
 </pre></div>
 </div>
-<p>还有一个 “短形式” 允许看起来像这样:</p>
+<p>还有一个 “短式” 允许看起来像这样:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">seealso</span><span class="p">::</span> modules <span class="na">:py:mod:</span><span class="nv">`zipfile`</span>, <span class="na">:py:mod:</span><span class="nv">`tarfile`</span>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">0.5 新版功能: </span>简短形式。</p>
+<p><span class="versionmodified added">0.5 新版功能: </span>短式。</p>
 </div>
 </dd></dl>
 
@@ -451,7 +451,7 @@
 </div>
 <div class="section" id="showing-code-examples">
 <span id="code-examples"></span><h2>显示代码示例<a class="headerlink" href="#showing-code-examples" title="永久链接至标题">¶</a></h2>
-<p id="index-2">有几种方法可以在Sphinx中显示语法高亮显示的文本块 <a class="reference internal" href="basics.html#rst-doctest-blocks"><span class="std std-ref">reST doctest blocks</span></a> ; using <a class="reference internal" href="basics.html#rst-literal-blocks"><span class="std std-ref">reST literal blocks</span></a> 你可以选择使用 <a class="reference internal" href="#directive-highlight" title="highlight directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">highlight</span></code></a> 指令;使用 <a class="reference internal" href="#directive-code-block" title="code-block directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code-block</span></code></a> 指令;并使用 <a class="reference internal" href="#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令。 Doctest块只能用于显示交互式Python会话，而其余三个可用于其他语言。在这三个文件中，当整个文档或至少大多数文档使用具有相同语法的代码块并且样式应该以相同的方式设置时，文本块是有用的。另一方面，当您想要更好地控制每个块的样式时，或者当您有一个包含使用许多不同语法的代码块的文档时，第一个 <a href="#id1"><span class="problematic" id="id2">:dir:`code-block`</span></a> 更有意义。 。最后， <a class="reference internal" href="#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令对于将整个代码文件包含在文档中非常有用。</p>
+<p id="index-2">有多种方法可以在Sphinx中显示语法高亮的文字代码块:使用 <a class="reference internal" href="basics.html#rst-doctest-blocks"><span class="std std-ref">reST doctest blocks</span></a> ;使用 <a class="reference internal" href="basics.html#rst-literal-blocks"><span class="std std-ref">reST literal blocks</span></a> ，可选择与 <a class="reference internal" href="#directive-highlight" title="highlight directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">highlight</span></code></a> 指令结合使用;使用 <a class="reference internal" href="#directive-code-block" title="code-block directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">code-block</span></code></a> 指令;并使用 <a class="reference internal" href="#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令。Doctest块只能用于显示交互式Python会话，而其余三个可用于其他语言。在这三个文件中，当整个文档或至少大部分文档使用具有相同语法的代码块并且应该以相同的方式设置样式时，文字块是有用的。另一方面，当你想要对每个块的样式进行更精细的控制，或者当你有一个包含使用多种不同语法的代码块的文档时，第一个 <a href="#id1"><span class="problematic" id="id2">:dir:`code-block`</span></a> 指令更有意义。最后， <a class="reference internal" href="#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令对于在文档中包含整个代码文件非常有用。</p>
 <p>在所有情况下，语法高亮由 <a class="reference external" href="http://pygments.org">Pygments</a> 提供。使用文字块时，使用源文件中的任何 <a class="reference internal" href="#directive-highlight" title="highlight directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">highlight</span></code></a> 指令进行配置。当遇到 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令时，它会被使用，直到遇到下一个 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令。如果文件中没有 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令，则使用全局突出显示语言。这默认为 <code class="docutils literal notranslate"><span class="pre">python</span></code> ，但可以使用 <a class="reference internal" href="../configuration.html#confval-highlight_language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">highlight_language</span></code></a> 配置值进行配置。支持以下值:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">none</span></code> (没有突出显示)</p></li>
@@ -680,7 +680,7 @@
 <dl class="directive">
 <dt id="directive-codeauthor">
 <code class="descname">.. codeauthor::</code><code class="descclassname"> name &lt;email&gt;</code><a class="headerlink" href="#directive-codeauthor" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">codeauthor`指令，可以多次出现，命名所描述代码的作者，就像</span> <span class="pre">:rst:dir:`sectionauthor</span></code> 命名一篇文档的作者。如果 <a class="reference internal" href="../configuration.html#confval-show_authors"><code class="xref std std-confval docutils literal notranslate"><span class="pre">show_authors</span></code></a> 配置值为 “True” ，它也只产生输出。</p>
+<dd><p><a class="reference internal" href="#directive-codeauthor" title="codeauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">codeauthor</span></code></a> 指令，可以多次出现，命名所描述代码的作者，就像 <a class="reference internal" href="#directive-sectionauthor" title="sectionauthor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">sectionauthor</span></code></a> 命名一篇文档的作者。如果  <a class="reference internal" href="../configuration.html#confval-show_authors"><code class="xref std std-confval docutils literal notranslate"><span class="pre">show_authors</span></code></a> 配置值为 “True” ，它也只产生输出。</p>
 </dd></dl>
 
 </div>
@@ -879,7 +879,7 @@
               &amp;=  a^2 + 2ab + b^2
 </pre></div>
 </div>
-<p>有关更多详细信息，请查看 “AmSMath LaTeX包” 的文档。</p>
+<p>有关更多详细信息，请查看 <a class="reference external" href="https://www.ams.org/publications/authors/tex/amslatex">AmSMath LaTeX package</a> 的文档。</p>
 <p>当数学只有一行文本时，它也可以作为指令参数给出:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">math</span><span class="p">::</span> (a + b)^2 = a^2 + 2ab + b^2
 </pre></div>
@@ -979,7 +979,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a6d11e3ad 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/41035e8f9 创建。
     </div>
   </body>
 </html>

@@ -391,7 +391,7 @@ msgstr "该指令记录了将所描述的功能添加到库或C API的项目版�
 msgid ""
 "The first argument must be given and is the version in question; you can "
 "add a second argument consisting of a *brief* explanation of the change."
-msgstr "必须给出第一个参数，并且是有问题的版本;您可以添加第二个参数，其中包含*简要*的更改说明。"
+msgstr "必须给出第一个参数，并且是有问题的版本;您可以添加第二个参数，其中包含 *简要* 的更改说明。"
 
 #: ../../usage/restructuredtext/directives.rst:303
 msgid ""
@@ -419,7 +419,7 @@ msgid ""
 "Many sections include a list of references to module documentation or "
 "external documents.  These lists are created using the :rst:dir:`seealso`"
 " directive."
-msgstr "许多部分包括对模块文档或外部文档的引用列表。这些列表使用:rst:dir:`seealso`指令创建。"
+msgstr "许多部分包括对模块文档或外部文档的引用列表。这些列表使用 :rst:dir:`seealso` 指令创建。"
 
 #: ../../usage/restructuredtext/directives.rst:326
 msgid ""
@@ -436,11 +436,11 @@ msgstr "以下内容 :rst:dir:`seealso` 指令应该是reST定义列表。例::"
 
 #: ../../usage/restructuredtext/directives.rst:341
 msgid "There's also a \"short form\" allowed that looks like this::"
-msgstr "还有一个 \"短形式\" 允许看起来像这样::"
+msgstr "还有一个 \"短式\" 允许看起来像这样::"
 
 #: ../../usage/restructuredtext/directives.rst:345
 msgid "The short form."
-msgstr "简短形式。"
+msgstr "短式。"
 
 #: ../../usage/restructuredtext/directives.rst:350
 msgid ""
@@ -503,7 +503,11 @@ msgid ""
 "containing code blocks using multiple varied syntaxes. Finally, the "
 ":rst:dir:`literalinclude` directive is useful for including entire code "
 "files in your documentation."
-msgstr "有几种方法可以在Sphinx中显示语法高亮显示的文本块 :using:ref:`reST doctest blocks <rst-doctest-blocks>` ; using :ref:`reST literal blocks <rst-literal-blocks>` 你可以选择使用 :rst:dir:`highlight` 指令;使用 :rst:dir:`code-block` 指令;并使用 :rst:dir:`literalinclude` 指令。 Doctest块只能用于显示交互式Python会话，而其余三个可用于其他语言。在这三个文件中，当整个文档或至少大多数文档使用具有相同语法的代码块并且样式应该以相同的方式设置时，文本块是有用的。另一方面，当您想要更好地控制每个块的样式时，或者当您有一个包含使用许多不同语法的代码块的文档时，第一个 :dir:`code-block` 更有意义。 。最后， :rst:dir:`literalinclude` 指令对于将整个代码文件包含在文档中非常有用。"
+msgstr "有多种方法可以在Sphinx中显示语法高亮的文字代码块:使用 :ref:`reST doctest blocks <rst-doctest-blocks>` ;使用 :ref:`reST literal blocks <rst-literal-blocks>` ，可选择与 :rst:dir:`highlight` 指令结合使用;使用 :rst:dir:`code-block` 指令;并使用 :rst:dir:`literalinclude` 指令。"
+"Doctest块只能用于显示交互式Python会话，而其余三个可用于其他语言。"
+"在这三个文件中，当整个文档或至少大部分文档使用具有相同语法的代码块并且应该以相同的方式设置样式时，文字块是有用的。"
+"另一方面，当你想要对每个块的样式进行更精细的控制，或者当你有一个包含使用多种不同语法的代码块的文档时，第一个 :dir:`code-block` 指令更有意义。"
+"最后， :rst:dir:`literalinclude` 指令对于在文档中包含整个代码文件非常有用。"
 
 #: ../../usage/restructuredtext/directives.rst:415
 msgid ""
@@ -871,7 +875,7 @@ msgid ""
 ":rst:dir:`sectionauthor` names the author(s) of a piece of documentation."
 "  It too only produces output if the :confval:`show_authors` "
 "configuration value is ``True``."
-msgstr ":rst:dir:`codeauthor`指令，可以多次出现，命名所描述代码的作者，就像 :rst:dir:`sectionauthor` 命名一篇文档的作者。如果 :confval:`show_authors` 配置值为 \"True\" ，它也只产生输出。"
+msgstr ":rst:dir:`codeauthor` 指令，可以多次出现，命名所描述代码的作者，就像 :rst:dir:`sectionauthor` 命名一篇文档的作者。如果  :confval:`show_authors` 配置值为 \"True\" ，它也只产生输出。"
 
 #: ../../usage/restructuredtext/directives.rst:745
 msgid "Index-generating markup"
@@ -1324,7 +1328,7 @@ msgstr "另外，每个单独的等式都设置在一个 ``split`` 环境中，�
 msgid ""
 "For more details, look into the documentation of the `AmSMath LaTeX "
 "package`_."
-msgstr "有关更多详细信息，请查看 \"AmSMath LaTeX包\" 的文档。"
+msgstr "有关更多详细信息，请查看 `AmSMath LaTeX package`_ 的文档。"
 
 #: ../../usage/restructuredtext/directives.rst:1046
 msgid ""

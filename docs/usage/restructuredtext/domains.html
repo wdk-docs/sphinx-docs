@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>域 &#8212; Sphinx 2.1.0+/a6d11e3ad 文档</title>
+    <title>域 &#8212; Sphinx 2.1.0+/41035e8f9 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/a6d11e3ad 文档 中搜索"
+          title="在 Sphinx 2.1.0+/41035e8f9 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -276,7 +276,7 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <dl class="directive">
 <dt id="directive-py:currentmodule">
 <code class="descname">.. py:currentmodule::</code><code class="descclassname"> name</code><a class="headerlink" href="#directive-py:currentmodule" title="永久链接至目标">¶</a></dt>
-<dd><p>该指令告诉Sphinx，这里记录的类，函数等都在给定的模块中(如:rst:dir:<cite>py:module</cite>)，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标 <a class="reference internal" href="#role-py:mod" title="py:mod role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">py:mod</span></code></a> 。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 <a class="reference internal" href="#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a> 指令，其他只有 <a class="reference internal" href="#directive-py:currentmodule" title="py:currentmodule directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:currentmodule</span></code></a> 。</p>
+<dd><p>该指令告诉Sphinx，这里记录的类，函数等都在给定的模块中(如 <a class="reference internal" href="#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a>)，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标 <a class="reference internal" href="#role-py:mod" title="py:mod role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">py:mod</span></code></a> 。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 <a class="reference internal" href="#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a> 指令，其他只有 <a class="reference internal" href="#directive-py:currentmodule" title="py:currentmodule directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:currentmodule</span></code></a> 。</p>
 </dd></dl>
 
 <p>为模块和类内容提供以下指令:</p>
@@ -556,7 +556,7 @@ Description of a parameter.</p></li>
 <dl class="role">
 <dt id="role-py:obj">
 <code class="descname">:py:obj:</code><a class="headerlink" href="#role-py:obj" title="永久链接至目标">¶</a></dt>
-<dd><p>引用未指定类型的对象。例如有用as:confval:<cite>default_role</cite>。</p>
+<dd><p>引用未指定类型的对象。例如有用as <a class="reference internal" href="../configuration.html#confval-default_role"><code class="xref std std-confval docutils literal notranslate"><span class="pre">default_role</span></code></a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
 </div>
@@ -951,7 +951,7 @@ Explicit ref: <span class="na">:cpp:var:</span><span class="nv">`Data::@data::a`
 
 </dd></dl>
 
-<p>显式ref :: cpp:var:<cite>Data :: &#64; data :: a</cite>。简写ref :: cpp:var:<cite>Data :: a</cite>。</p>
+<p>显式ref: <a class="reference internal" href="#_CPPv4N4DataUt4_data1aE" title="Data::[anonymous]::a"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">Data::[anonymous]::a</span></code></a> 。简写ref: <a class="reference internal" href="#_CPPv4N4DataUt4_data1aE" title="Data::[anonymous]::a"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">Data::a</span></code></a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.8 新版功能.</span></p>
 </div>
@@ -1084,13 +1084,13 @@ A type: <span class="na">:cpp:expr:</span><span class="nv">`const MySortedContai
 <span id="_CPPv31fi"></span><span id="_CPPv21fi"></span><span id="f__i"></span>int <code class="descname">f</code><span class="sig-paren">(</span>int <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv41fi" title="永久链接至目标">¶</a><br /></dt>
 <dd></dd></dl>
 
-<p>表达式:: cpp:expr:<cite>a * f(a)`(或文本:: cpp:texpr:`a * f(a)</cite>)。</p>
-<p>类型:: cpp:expr:<cite>const MySortedContainer &lt;int&gt;＆`(或作为text:cpp:texpr:`const MySortedContainer &lt;int&gt;＆</cite>)。“</p>
+<p>表达式: <code class="xref cpp cpp-expr docutils literal notranslate"><a class="reference internal" href="#_CPPv41a" title="a"><span class="pre">a</span></a> <span class="pre">*</span> <a class="reference internal" href="#_CPPv41fi" title="f"><span class="pre">f</span></a><span class="pre">(</span><a class="reference internal" href="#_CPPv41a" title="a"><span class="pre">a</span></a><span class="pre">)</span></code> (或文本: <span class="xref cpp cpp-texpr"><a class="reference internal" href="#_CPPv41a" title="a">a</a> * <a class="reference internal" href="#_CPPv41fi" title="f">f</a>(<a class="reference internal" href="#_CPPv41a" title="a">a</a>)</span>)。</p>
+<p>类型: <code class="xref cpp cpp-expr docutils literal notranslate"><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4I0EXNSt18LessThanComparableEI1TEE17MySortedContainer" title="MySortedContainer"><span class="pre">MySortedContainer</span></a><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span><span class="pre">&amp;</span></code> (或作为文本 <span class="xref cpp cpp-texpr"><em class="property">const</em> <a class="reference internal" href="#_CPPv4I0EXNSt18LessThanComparableEI1TEE17MySortedContainer" title="MySortedContainer">MySortedContainer</a>&lt;int&gt;&amp;</span>)。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">1.7 新版功能: </span>:rst:role:<a href="#id1"><span class="problematic" id="id2">`</span></a>cpp:expr`角色。</p>
+<p><span class="versionmodified added">1.7 新版功能: </span><a class="reference internal" href="#role-cpp:expr" title="cpp:expr role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">cpp:expr</span></code></a> 角色。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">1.8 新版功能: </span>第一:角色:<a href="#id1"><span class="problematic" id="id2">`</span></a>cpp:texpr`角色。</p>
+<p><span class="versionmodified added">1.8 新版功能: </span><a class="reference internal" href="#role-cpp:texpr" title="cpp:texpr role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">cpp:texpr</span></code></a> 角色。</p>
 </div>
 </dd></dl>
 
@@ -1150,7 +1150,7 @@ A type: <span class="na">:cpp:expr:</span><span class="nv">`const MySortedContai
 <dl class="directive">
 <dt id="directive-cpp:namespace-pop">
 <code class="descname">.. cpp:namespace-pop::</code><code class="descclassname"> </code><a class="headerlink" href="#directive-cpp:namespace-pop" title="永久链接至目标">¶</a></dt>
-<dd><p>撤消之前的 <code class="docutils literal notranslate"><span class="pre">cpp：namespace-push</span></code> 指令(<a href="#id1"><span class="problematic" id="id2">*</span></a>not*只是弹出作用域)。例如，之后:</p>
+<dd><p>撤消之前的 <code class="docutils literal notranslate"><span class="pre">cpp:namespace-push</span></code> 指令(<em>not</em> 只是弹出作用域)。例如，之后:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">cpp:namespace</span><span class="p">::</span> A::B
 
 <span class="p">..</span> <span class="ow">cpp:namespace-push</span><span class="p">::</span> C::D
@@ -1250,12 +1250,12 @@ A type: <span class="na">:cpp:expr:</span><span class="nv">`const MySortedContai
 
 <p>引用使用 <a class="reference internal" href="#role-cpp:func" title="cpp:func role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">cpp:func</span></code></a> 角色:</p>
 <ul class="simple">
-<li><p>任意重载: <code class="docutils literal notranslate"><span class="pre">C::f</span></code> ，<a class="reference internal" href="#_CPPv4NK16overload_example1C1fEd" title="overload_example::C::f"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">C::f()</span></code></a></p></li>
+<li><p>任意重载: <code class="docutils literal notranslate"><span class="pre">C::f</span></code> ， <a class="reference internal" href="#_CPPv4NK16overload_example1C1fEd" title="overload_example::C::f"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">C::f()</span></code></a></p></li>
 <li><p>Also arbitrary overload: <code class="docutils literal notranslate"><span class="pre">C::f()</span></code>, <a class="reference internal" href="#_CPPv4NK16overload_example1C1fEd" title="overload_example::C::f"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">C::f()</span></code></a></p></li>
 <li><p>特定的重载: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f()</span></code> ， <a class="reference internal" href="#_CPPv4N16overload_example1C1fEv" title="void C::f()"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f()</span></code></a></p></li>
-<li><p>具体超负荷: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(int)</span></code>, <a class="reference internal" href="#_CPPv4N16overload_example1C1fEi" title="void C::f(int)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(int)</span></code></a></p></li>
-<li><p>具体超负荷: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span></code>, <a class="reference internal" href="#_CPPv4N16overload_example1C1fEd" title="void C::f(double)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span></code></a></p></li>
-<li><p>具体超负荷: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span> <span class="pre">const</span></code>, <a class="reference internal" href="#_CPPv4NK16overload_example1C1fEd" title="void C::f(double) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span> <span class="pre">const</span></code></a></p></li>
+<li><p>具体超负荷: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(int)</span></code>,  <a class="reference internal" href="#_CPPv4N16overload_example1C1fEi" title="void C::f(int)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(int)</span></code></a></p></li>
+<li><p>具体超负荷: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span></code> ,  <a class="reference internal" href="#_CPPv4N16overload_example1C1fEd" title="void C::f(double)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span></code></a></p></li>
+<li><p>具体超负荷: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span> <span class="pre">const</span></code> , <a class="reference internal" href="#_CPPv4NK16overload_example1C1fEd" title="void C::f(double) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">C::f(double)</span> <span class="pre">const</span></code></a></p></li>
 </ul>
 <p>请注意 <a class="reference internal" href="../configuration.html#confval-add_function_parentheses"><code class="xref std std-confval docutils literal notranslate"><span class="pre">add_function_parentheses</span></code></a> 配置变量不会影响特定的重载引用。</p>
 </div>
@@ -1338,7 +1338,7 @@ A type: <span class="na">:cpp:expr:</span><span class="nv">`const MySortedContai
 </div>
 <div class="section" id="configuration-variables">
 <h3>配置变量<a class="headerlink" href="#configuration-variables" title="永久链接至标题">¶</a></h3>
-<p>请参阅:ref:<cite>cpp-config</cite>。</p>
+<p>请参阅 <a class="reference internal" href="../configuration.html#cpp-config"><span class="std std-ref">C++ 域选项</span></a> 。</p>
 </div>
 </div>
 <div class="section" id="the-standard-domain">
@@ -1646,7 +1646,7 @@ most beautiful mathematical formulas.
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a6d11e3ad 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/41035e8f9 创建。
     </div>
   </body>
 </html>

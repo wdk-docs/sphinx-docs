@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Setuptools集成 &#8212; Sphinx 2.1.0+/a6d11e3ad 文档</title>
+    <title>Setuptools集成 &#8212; Sphinx 2.1.0+/41035e8f9 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/a6d11e3ad 文档 中搜索"
+          title="在 Sphinx 2.1.0+/41035e8f9 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -195,7 +195,7 @@ configuration file.</p>
 hyphens in variable names with underscores. In the example above,
 <code class="docutils literal notranslate"><span class="pre">source-dir</span></code> becomes <code class="docutils literal notranslate"><span class="pre">source_dir</span></code>.</p>
 </div>
-<p>Or add this section in <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>:</p>
+<p>或者在 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> 中添加此部分:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">build_sphinx</span><span class="p">]</span>
 <span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;My project&#39;</span>
 <span class="n">version</span> <span class="o">=</span> <span class="mf">1.2</span>
@@ -215,7 +215,7 @@ hyphens in variable names with underscores. In the example above,
 <code class="descname">fresh-env</code><a class="headerlink" href="#confval-fresh-env" title="永久链接至目标">¶</a></dt>
 <dd><p>A boolean that determines whether the saved environment should be discarded
 on build. Default is false.</p>
-<p>This can also be set by passing the <cite>-E</cite> flag to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>:</p>
+<p>这也可以通过将 <cite>-E</cite> 标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 来设置:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -E
 </pre></div>
 </div>
@@ -226,7 +226,7 @@ on build. Default is false.</p>
 <code class="descname">all-files</code><a class="headerlink" href="#confval-all-files" title="永久链接至目标">¶</a></dt>
 <dd><p>A boolean that determines whether all files should be built from scratch.
 Default is false.</p>
-<p>This can also be set by passing the <cite>-a</cite> flag to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>:</p>
+<p>这也可以通过将 <cite>-a</cite> 标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 来设置:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -a
 </pre></div>
 </div>
@@ -239,7 +239,7 @@ Default is false.</p>
 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file, or it can be absolute.  It defaults to <code class="docutils literal notranslate"><span class="pre">./doc</span></code> or
 <code class="docutils literal notranslate"><span class="pre">./docs</span></code> if either contains a file named <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> (checking <code class="docutils literal notranslate"><span class="pre">./doc</span></code>
 first); otherwise it defaults to the current directory.</p>
-<p>This can also be set by passing the <cite>-s</cite> flag to <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>:</p>
+<p>这也可以通过将 <cite>-s</cite> 标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 来设置:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -s <span class="nv">$SOURCE_DIR</span>
 </pre></div>
 </div>
@@ -258,7 +258,7 @@ first); otherwise it defaults to the current directory.</p>
 <dd><p>Location of the configuration directory. This can be relative to the
 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> or <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file, or it can be absolute. Default is to use
 <cite>source-dir</cite>.</p>
-<p>这也可以通过将`-c`标志传递给``setup.py``来设置:</p>
+<p>这也可以通过将 <cite>-c</cite> 标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 来设置:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -c <span class="nv">$CONFIG_DIR</span>
 </pre></div>
 </div>
@@ -271,7 +271,7 @@ first); otherwise it defaults to the current directory.</p>
 <dt id="confval-builder">
 <code class="descname">builder</code><a class="headerlink" href="#confval-builder" title="永久链接至目标">¶</a></dt>
 <dd><p>要使用的构建器或构建器列表。默认是``html``。</p>
-<p>这也可以通过将`-b`标志传递给``setup.py``来设置：</p>
+<p>这也可以通过将 <cite>-b</cite> 标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 来设置：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -b <span class="nv">$BUILDER</span>
 </pre></div>
 </div>
@@ -285,7 +285,7 @@ first); otherwise it defaults to the current directory.</p>
 <code class="descname">warning-is-error</code><a class="headerlink" href="#confval-warning-is-error" title="永久链接至目标">¶</a></dt>
 <dd><p>A boolean that ensures Sphinx warnings will result in a failed build.
 Default is false.</p>
-<p>这也可以通过将`-W`标志传递给``setup.py``来设置：</p>
+<p>这也可以通过将`-W`标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 来设置：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -W
 </pre></div>
 </div>
@@ -297,7 +297,7 @@ Default is false.</p>
 <dl class="confval">
 <dt id="confval-project">
 <code class="descname">project</code><a class="headerlink" href="#confval-project" title="永久链接至目标">¶</a></dt>
-<dd><p>记录的项目名称。默认是``’‘<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>记录的项目名称。默认是 <code class="docutils literal notranslate"><span class="pre">''</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -306,7 +306,7 @@ Default is false.</p>
 <dl class="confval">
 <dt id="confval-version">
 <code class="descname">version</code><a class="headerlink" href="#confval-version" title="永久链接至目标">¶</a></dt>
-<dd><p>简短的X.Y版本。默认是``’‘<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>简短的 X.Y 版本。默认是 <code class="docutils literal notranslate"><span class="pre">''</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -315,7 +315,7 @@ Default is false.</p>
 <dl class="confval">
 <dt id="confval-release">
 <code class="descname">release</code><a class="headerlink" href="#confval-release" title="永久链接至目标">¶</a></dt>
-<dd><p>完整版，包括alpha / beta / rc标签。默认是``’‘<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>完整版，包括alpha /beta/rc 标签。默认是 <code class="docutils literal notranslate"><span class="pre">''</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -336,7 +336,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">''</span
 <code class="descname">link-index</code><a class="headerlink" href="#confval-link-index" title="永久链接至目标">¶</a></dt>
 <dd><p>A boolean that ensures index.html will be linked to the master doc. Default
 is false.</p>
-<p>这也可以通过将`-i`标志传递给``setup.py``来设置：</p>
+<p>这也可以通过将 <cite>-i</cite> 标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 来设置：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -i
 </pre></div>
 </div>
@@ -348,7 +348,7 @@ is false.</p>
 <dl class="confval">
 <dt id="confval-copyright">
 <code class="descname">copyright</code><a class="headerlink" href="#confval-copyright" title="永久链接至目标">¶</a></dt>
-<dd><p>版权字符串。默认是``’‘<a href="#id1"><span class="problematic" id="id2">``</span></a>。</p>
+<dd><p>版权字符串。默认是 <code class="docutils literal notranslate"><span class="pre">''</span></code> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
@@ -368,7 +368,7 @@ exclude some references as “known missing”.</p>
 <dl class="confval">
 <dt id="confval-pdb">
 <code class="descname">pdb</code><a class="headerlink" href="#confval-pdb" title="永久链接至目标">¶</a></dt>
-<dd><p>在异常上配置``pdb``的布尔值。默认值为false。</p>
+<dd><p>在异常上配置 <code class="docutils literal notranslate"><span class="pre">pdb</span></code> 的布尔值。默认值为false。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5 新版功能.</span></p>
 </div>
@@ -405,7 +405,7 @@ exclude some references as “known missing”.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a6d11e3ad 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/41035e8f9 创建。
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Sphinx更新 &#8212; Sphinx 2.1.0+/a6d11e3ad 文档</title>
+    <title>Sphinx更新 &#8212; Sphinx 2.1.0+/41035e8f9 文档</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/a6d11e3ad 文档 中搜索"
+          title="在 Sphinx 2.1.0+/41035e8f9 文档 中搜索"
           href="_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="genindex.html" />
@@ -240,8 +240,7 @@
 <div class="section" id="incompatible-changes">
 <h3>不兼容的变化<a class="headerlink" href="#incompatible-changes" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li><p>Ignore filenames without file extension given to <code class="docutils literal notranslate"><span class="pre">Builder.build_specific()</span></code>
-API directly</p></li>
+<li><p>忽略没有直接赋予 <code class="docutils literal notranslate"><span class="pre">Builder.build_specific()</span></code> API的文件扩展名的文件名</p></li>
 </ul>
 </div>
 <div class="section" id="deprecated">
@@ -276,16 +275,16 @@ API directly</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinx.util.i18n.find_catalog_files()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinx.util.i18n.find_catalog_source_files()</span></code></p></li>
 </ul>
-<p>有关更多详细信息，请参阅 <a class="reference internal" href="extdev/deprecated.html#dev-deprecated-apis"><span class="std std-ref">deprecation APIs list</span></a>.</p>
+<p>有关更多详细信息，请参阅 <a class="reference internal" href="extdev/deprecated.html#dev-deprecated-apis"><span class="std std-ref">弃用API列表</span></a>.</p>
 </div>
 <div class="section" id="features-added">
 <h3>添加功能<a class="headerlink" href="#features-added" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li><p>Add a helper class <code class="docutils literal notranslate"><span class="pre">sphinx.transforms.post_transforms.SphinxPostTransform</span></code></p></li>
-<li><p>Add a helper method <code class="docutils literal notranslate"><span class="pre">SphinxDirective.set_source_info()</span></code></p></li>
-<li><p>#6180: Support <code class="docutils literal notranslate"><span class="pre">--keep-going</span></code> with BuildDoc setup command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">math</span></code> directive now supports <code class="docutils literal notranslate"><span class="pre">:class:</span></code> option</p></li>
-<li><p>todo: <code class="docutils literal notranslate"><span class="pre">todo</span></code> directive now supports <code class="docutils literal notranslate"><span class="pre">:name:</span></code> option</p></li>
+<li><p>添加一个辅助类 <code class="docutils literal notranslate"><span class="pre">sphinx.transforms.post_transforms.SphinxPostTransform</span></code></p></li>
+<li><p>添加辅助方法 <code class="docutils literal notranslate"><span class="pre">SphinxDirective.set_source_info()</span></code></p></li>
+<li><p>#6180: 支持 <code class="docutils literal notranslate"><span class="pre">--keep-going</span></code> 使用BuildDoc安装命令</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math</span></code> 指令现在支持 <code class="docutils literal notranslate"><span class="pre">:class:</span></code> 选项</p></li>
+<li><p>todo: <code class="docutils literal notranslate"><span class="pre">todo</span></code> 指令现在支持 <code class="docutils literal notranslate"><span class="pre">:name:</span></code> 选项</p></li>
 </ul>
 </div>
 <div class="section" id="bugs-fixed">
@@ -326,17 +325,8 @@ API directly</p></li>
 <p>2.0.0b1</p>
 <ul class="simple">
 <li><p>LaTeX构建器现在依赖于TeX Live 2015或更高版本。</p></li>
-<li><p>LaTeX builder (with <code class="docutils literal notranslate"><span class="pre">'pdflatex'</span></code> <a class="reference internal" href="usage/configuration.html#confval-latex_engine"><code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_engine</span></code></a>) will process
-Unicode Greek letters in text (not in math mark-up) via the text font and
-will not escape them to math mark-up. See the discussion of the
-<code class="docutils literal notranslate"><span class="pre">'fontenc'</span></code> key of <a class="reference internal" href="usage/configuration.html#confval-latex_elements"><code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_elements</span></code></a>; such (optional) support for
-Greek adds, for example on Ubuntu xenial, the <code class="docutils literal notranslate"><span class="pre">texlive-lang-greek</span></code> and (if
-default font set-up is not modified) <code class="docutils literal notranslate"><span class="pre">cm-super(-minimal)</span></code> as additional
-Sphinx LaTeX requirements.</p></li>
-<li><p>LaTeX builder with <a class="reference internal" href="usage/configuration.html#confval-latex_engine"><code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_engine</span></code></a> set to <code class="docutils literal notranslate"><span class="pre">'xelatex'</span></code> or to
-<code class="docutils literal notranslate"><span class="pre">'lualatex'</span></code> requires (by default) the <code class="docutils literal notranslate"><span class="pre">FreeFont</span></code> fonts,
-which in Ubuntu xenial are provided by package <code class="docutils literal notranslate"><span class="pre">fonts-freefont-otf</span></code>, and
-e.g. in Fedora 29 via package <code class="docutils literal notranslate"><span class="pre">texlive-gnu-freefont</span></code>.</p></li>
+<li><p>LaTeX构建器(带有 <code class="xref any docutils literal notranslate"><span class="pre">'pdflatex'`</span></code><a class="reference internal" href="usage/configuration.html#confval-latex_engine"><code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_engine</span></code></a>)将通过文本字体处理文本中的Unicode希腊字母(不是数学标记)，并且不会将它们转义为数学标记。请参阅 <code class="docutils literal notranslate"><span class="pre">'fontenc'</span></code> 键的讨论 <a class="reference internal" href="usage/configuration.html#confval-latex_elements"><code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_elements</span></code></a>;希腊语的这种(可选)支持添加，例如在Ubuntu xenial， <code class="docutils literal notranslate"><span class="pre">texlive-lang-greek</span></code> 和(如果默认字体设置未被修改) <code class="docutils literal notranslate"><span class="pre">cm-super(-minimal)</span></code> 作为附加Sphinx LaTeX要求。</p></li>
+<li><p>LaTeX构建器 <a class="reference internal" href="usage/configuration.html#confval-latex_engine"><code class="xref std std-confval docutils literal notranslate"><span class="pre">latex_engine</span></code></a> 设置为 <code class="docutils literal notranslate"><span class="pre">'xelatex'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'lualatex'</span></code> 需要(默认情况下) <code class="docutils literal notranslate"><span class="pre">FreeFont</span></code> 字体，在Ubuntu xenial中由包 <code class="docutils literal notranslate"><span class="pre">fonts-freefont-otf</span></code> 提供，例如在Fedora 29中通过包 <code class="docutils literal notranslate"><span class="pre">texlive-gnu-freefont</span></code> 。</p></li>
 <li><p>要求2.5.0或以上</p></li>
 <li><p>六个包不再是依赖</p></li>
 <li><p>sphinxcontrib-websupport包不再是依赖项</p></li>
@@ -493,7 +483,7 @@ configuration files which should be converted to Python 3.</p></li>
 </ul>
 </li>
 </ul>
-<p>有关更多详细信息，请参阅 <a class="reference internal" href="extdev/deprecated.html#dev-deprecated-apis"><span class="std std-ref">deprecation APIs list</span></a>.</p>
+<p>有关更多详细信息，请参阅 <a class="reference internal" href="extdev/deprecated.html#dev-deprecated-apis"><span class="std std-ref">弃用API列表</span></a>.</p>
 </div>
 <div class="section" id="id10">
 <h3>添加功能<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
@@ -653,8 +643,8 @@ in an admonition</p></li>
 <li><p>#5960: LaTeX: modified PDF layout since September 2018 TeXLive update of
 <code class="file docutils literal notranslate"><span class="pre">parskip.sty</span></code></p></li>
 <li><p>#5948: LaTeX: duplicated labels are generated for sections</p></li>
-<li><p>#5958: versionadded directive causes crash with Python 3.5.0</p></li>
-<li><p>#5995: autodoc: autodoc_mock_imports conflict with metaclass on Python 3.7</p></li>
+<li><p>#5958: versionadded指令导致Python 3.5.0崩溃</p></li>
+<li><p>#5995: autodoc: autodoc_mock_imports与Python 3.7上的元类冲突</p></li>
 <li><p>#5871: texinfo: a section title <code class="docutils literal notranslate"><span class="pre">.</span></code> is not allowed</p></li>
 </ul>
 </div>
@@ -822,8 +812,8 @@ citations</p></li>
 <li><p>#4983: html: The anchor for productionlist tokens has been changed</p></li>
 <li><p>Modifying a template variable <code class="docutils literal notranslate"><span class="pre">script_files</span></code> in templates is allowed now.
 Please use <code class="docutils literal notranslate"><span class="pre">app.add_js_file()</span></code> instead.</p></li>
-<li><p>#5072: Save environment object also with only new documents</p></li>
-<li><p>#5035: qthelp builder allows dashes in <a class="reference internal" href="usage/configuration.html#confval-qthelp_namespace"><code class="xref std std-confval docutils literal notranslate"><span class="pre">qthelp_namespace</span></code></a></p></li>
+<li><p>#5072: 仅使用新文档保存环境对象</p></li>
+<li><p>#5035: qthelp builder允许破折号 <a class="reference internal" href="usage/configuration.html#confval-qthelp_namespace"><code class="xref std std-confval docutils literal notranslate"><span class="pre">qthelp_namespace</span></code></a></p></li>
 <li><p>LaTeX: with lualatex or xelatex use by default <strong class="program">xindy</strong> as
 UTF-8 able replacement of <strong class="program">makeindex</strong> (refs: #5134).  After
 upgrading Sphinx, please clean latex build repertory of existing project
@@ -2014,7 +2004,7 @@ Please move customization into new macro <code class="docutils literal notransla
 <div class="section" id="release-1-6-unreleased">
 <h2>版本 1.6 (未发行)<a class="headerlink" href="#release-1-6-unreleased" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><p>未发布（因为包脚本错误）</p></li>
+<li><p>未发布(因为包脚本错误)</p></li>
 </ul>
 </div>
 <div class="section" id="release-1-5-6-released-may-15-2017">
@@ -4687,7 +4677,7 @@ of HTML built with the <code class="docutils literal notranslate"><span class="p
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/a6d11e3ad 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/41035e8f9 创建。
     </div>
   </body>
 </html>
