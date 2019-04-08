@@ -846,7 +846,7 @@ msgstr "现在支持多个术语和内联标记。"
 
 #: ../../usage/restructuredtext/directives.rst:714
 msgid "Index key for glossary term should be considered *experimental*."
-msgstr "词汇表术语的索引键应视为*experimental*。"
+msgstr "词汇表术语的索引键应视为 *experimental* 。"
 
 #: ../../usage/restructuredtext/directives.rst:719
 msgid "Meta-information markup"

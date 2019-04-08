@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../glossary.rst:4
 msgid "Glossary"
-msgstr "词汇表"
+msgstr "术语"
 
 #: ../../glossary.rst:7
 msgid "builder"
-msgstr "builder"
+msgstr "构建器"
 
 #: ../../glossary.rst:9
 msgid ""
@@ -32,13 +32,14 @@ msgid ""
 "translate the documents to an output format, but it is also possible to "
 "use the builder builders that e.g. check for broken links in the "
 "documentation, or build coverage information."
-msgstr ""
+msgstr "一个类(继承自 :class:`~sphinx.builders.Builder` )，它接受已分析的文档并对它们执行操作。"
+"通常，构建器将文档转换为输出格式，但也可以使用构建器构建器，例如，检查文档中是否存在损坏的链接，或构建覆盖率信息。"
 
 #: ../../glossary.rst:15
 msgid ""
 "See :doc:`/usage/builders/index` for an overview over Sphinx's built-in "
 "builders."
-msgstr ""
+msgstr "查看 :doc:`/usage/builders/index` 有关Sphinx内置构建器的概述。"
 
 #: ../../glossary.rst:17
 msgid "configuration directory"
@@ -49,11 +50,12 @@ msgid ""
 "The directory containing :file:`conf.py`.  By default, this is the same "
 "as the :term:`source directory`, but can be set differently with the "
 "**-c** command-line option."
-msgstr ""
+msgstr "该目录包含 :file:`conf.py` 。 "
+"默认情况下，这与 :term:`source directory` 相同，但可以使用 **-c** 命令行选项进行不同设置。"
 
 #: ../../glossary.rst:22
 msgid "directive"
-msgstr "directive"
+msgstr "指令"
 
 #: ../../glossary.rst:24
 msgid ""
@@ -61,7 +63,7 @@ msgid ""
 "with special meaning.  Directives are supplied not only by docutils, but "
 "Sphinx and custom extensions can add their own.  The basic directive "
 "syntax looks like this:"
-msgstr ""
+msgstr "一个reStructuredText标记元素，允许标记具有特殊含义的内容块。指令不仅由docutils提供，而且Sphinx和自定义扩展可以添加自己的指令。基本指令语法如下所示:"
 
 #: ../../glossary.rst:36
 msgid "See :ref:`rst-directives` for more information."
@@ -80,18 +82,18 @@ msgid ""
 "relative to the :term:`source directory`, the extension is stripped, and "
 "path separators are converted to slashes.  All values, parameters and "
 "such referring to \"documents\" expect such document names."
-msgstr ""
+msgstr "由于reST源文件可以有不同的扩展名(有些人喜欢 ``.txt`` ，有些像 ``.rst`` -- 扩展名可以配置 :confval:`source_suffix`)，不同的操作系统有不同的路径分隔符， Sphinx抽象它们: :dfn:`document names` 总是相对于  :term:`source directory` ，扩展被剥离，路径分隔符被转换为斜杠。 所有引用  \"documents\" 的值，参数等都需要这样的文档名称。"
 
 #: ../../glossary.rst:47
 msgid ""
 "Examples for document names are ``index``, ``library/zipfile``, or "
 "``reference/datamodel/types``.  Note that there is no leading or trailing"
 " slash."
-msgstr ""
+msgstr "文档名称的示例是 ``index`` ， ``library/zipfile`` 或 ``reference/datamodel/types`` 。请注意，没有前导或尾随斜杠。"
 
 #: ../../glossary.rst:50
 msgid "domain"
-msgstr "domain"
+msgstr "域"
 
 #: ../../glossary.rst:52
 msgid ""
@@ -100,7 +102,7 @@ msgid ""
 "belonging together, e.g. elements of a programming language.  Directive "
 "and role names in a domain have names like ``domain:name``, e.g. "
 "``py:function``."
-msgstr ""
+msgstr "域是标记(reStructuredText :term:`directive`\\ s 和 :term:`role`\\ s)的集合，用于描述和链接到 :term:`object`\\ s，属于一起，例如:编程语言的元素。域中的指令和角色名称具有  ``domain:name`` 之类的名称，例如 ``py:function`` 。"
 
 #: ../../glossary.rst:57
 msgid ""
@@ -108,7 +110,7 @@ msgid ""
 "documentation wants to refer to e.g. C++ and Python classes.  It also "
 "means that extensions that support the documentation of whole new "
 "languages are much easier to write."
-msgstr ""
+msgstr "拥有域意味着当一组文档想要引用时，没有命名问题。 C ++和Python类。这也意味着支持全新语言文档的扩展更容易编写。"
 
 #: ../../glossary.rst:62
 msgid "For more information, refer to :doc:`/usage/restructuredtext/domains`."
@@ -116,7 +118,7 @@ msgstr "有关更多信息，请参阅 :doc:`/usage/restructuredtext/domains` �
 
 #: ../../glossary.rst:63
 msgid "environment"
-msgstr "environment"
+msgstr "环境"
 
 #: ../../glossary.rst:65
 msgid ""
@@ -124,17 +126,17 @@ msgid ""
 "saved, and used for cross-referencing.  The environment is pickled after "
 "the parsing stage, so that successive runs only need to read and parse "
 "new and changed documents."
-msgstr ""
+msgstr "保存根目录下所有文档的信息并用于交叉引用的结构。在解析阶段之后，环境会被腌制，因此连续运行只需要读取和解析新的和已更改的文档。"
 
 #: ../../glossary.rst:69
 msgid "extension"
-msgstr "extension"
+msgstr "扩展"
 
 #: ../../glossary.rst:71
 msgid ""
 "A custom :term:`role`, :term:`directive` or other aspect of Sphinx that "
 "allows users to modify any aspect of the build process within Sphinx."
-msgstr ""
+msgstr "一个自定义 :term:`role` ， :term:`directive` 或Sphinx的其他方面，允许用户修改Sphinx中构建过程的任何方面。"
 
 #: ../../glossary.rst:74
 msgid "For more information, refer to :doc:`/usage/extensions/index`."
@@ -142,7 +144,7 @@ msgstr "有关更多信息，请参阅 :doc:`/usage/extensions/index` 。"
 
 #: ../../glossary.rst:75
 msgid "master document"
-msgstr "master document"
+msgstr "主文件"
 
 #: ../../glossary.rst:77
 msgid "The document that contains the root :rst:dir:`toctree` directive."
@@ -150,14 +152,14 @@ msgstr "包含root的文件 :rst:dir:`toctree` 指令。"
 
 #: ../../glossary.rst:78
 msgid "object"
-msgstr "object"
+msgstr "对象"
 
 #: ../../glossary.rst:80
 msgid ""
 "The basic building block of Sphinx documentation.  Every \"object "
 "directive\" (e.g. :rst:dir:`function` or :rst:dir:`object`) creates such "
 "a block; and most objects can be cross-referenced to."
-msgstr ""
+msgstr "Sphinx文档的基本构建块。每个 \"object directive\" (例如 :rst:dir:`function` 或 :rst:dir:`object`)都会创建一个这样的块;并且大多数对象可以交叉引用。"
 
 #: ../../glossary.rst:83
 msgid "RemoveInSphinxXXXWarning"
@@ -168,11 +170,11 @@ msgid ""
 "The feature which is warned will be removed in Sphinx-XXX version. It "
 "usually caused from Sphinx extensions which is using deprecated. See also"
 " :ref:`when-deprecation-warnings-are-displayed`."
-msgstr ""
+msgstr "警告的功能将在Sphinx-XXX版本中删除。它通常是由使用过时的Sphinx扩展引起的。另见 :ref:`when-deprecation-warnings-are-displayed` 。"
 
 #: ../../glossary.rst:88
 msgid "role"
-msgstr "role"
+msgstr "角色"
 
 #: ../../glossary.rst:90
 msgid ""
@@ -183,7 +185,7 @@ msgstr "一个reStructuredText标记元素，允许标记一段文本。与指�
 
 #: ../../glossary.rst:93
 msgid "source directory"
-msgstr "source directory"
+msgstr "源目录"
 
 #: ../../glossary.rst:95
 msgid ""

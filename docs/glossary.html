@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>词汇表 &#8212; Sphinx 2.1.0+/41035e8f9 文档</title>
+    <title>术语 &#8212; Sphinx 2.1.0+/c6c93cfdb 文档</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/41035e8f9 文档 中搜索"
+          title="在 Sphinx 2.1.0+/c6c93cfdb 文档 中搜索"
           href="_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="genindex.html" />
@@ -149,24 +149,14 @@
           <div class="body" role="main">
             
   <div class="section" id="glossary">
-<span id="id1"></span><h1>词汇表<a class="headerlink" href="#glossary" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1>术语<a class="headerlink" href="#glossary" title="永久链接至标题">¶</a></h1>
 <dl class="glossary">
-<dt id="term-builder">builder</dt><dd><p>A class (inheriting from <a class="reference internal" href="extdev/builderapi.html#sphinx.builders.Builder" title="sphinx.builders.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a>) that takes
-parsed documents and performs an action on them.  Normally, builders
-translate the documents to an output format, but it is also possible to
-use the builder builders that e.g. check for broken links in the
-documentation, or build coverage information.</p>
-<p>See <a class="reference internal" href="usage/builders/index.html"><span class="doc">构建器</span></a> for an overview over Sphinx’s built-in
-builders.</p>
+<dt id="term-builder">构建器</dt><dd><p>一个类(继承自 <a class="reference internal" href="extdev/builderapi.html#sphinx.builders.Builder" title="sphinx.builders.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a> )，它接受已分析的文档并对它们执行操作。通常，构建器将文档转换为输出格式，但也可以使用构建器构建器，例如，检查文档中是否存在损坏的链接，或构建覆盖率信息。</p>
+<p>查看 <a class="reference internal" href="usage/builders/index.html"><span class="doc">构建器</span></a> 有关Sphinx内置构建器的概述。</p>
 </dd>
-<dt id="term-configuration-directory">配置目录</dt><dd><p>The directory containing <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>.  By default, this is the same as
-the <a class="reference internal" href="#term-source-directory"><span class="xref std std-term">source directory</span></a>, but can be set differently with the <strong>-c</strong>
-command-line option.</p>
+<dt id="term-configuration-directory">配置目录</dt><dd><p>该目录包含 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 。 默认情况下，这与 <a class="reference internal" href="#term-source-directory"><span class="xref std std-term">source directory</span></a> 相同，但可以使用 <strong>-c</strong> 命令行选项进行不同设置。</p>
 </dd>
-<dt id="term-directive">directive</dt><dd><p>A reStructuredText markup element that allows marking a block of content
-with special meaning.  Directives are supplied not only by docutils, but
-Sphinx and custom extensions can add their own.  The basic directive
-syntax looks like this:</p>
+<dt id="term-directive">指令</dt><dd><p>一个reStructuredText标记元素，允许标记具有特殊含义的内容块。指令不仅由docutils提供，而且Sphinx和自定义扩展可以添加自己的指令。基本指令语法如下所示:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">directivename</span><span class="p">::</span> argument ...
    <span class="nc">:option:</span> <span class="nf">value</span>
 
@@ -175,49 +165,27 @@ syntax looks like this:</p>
 </div>
 <p>有关更多信息，请参阅 <a class="reference internal" href="usage/restructuredtext/basics.html#rst-directives"><span class="std std-ref">指令</span></a> 。</p>
 </dd>
-<dt id="term-document-name">文件名</dt><dd><p>Since reST source files can have different extensions (some people like
-<code class="docutils literal notranslate"><span class="pre">.txt</span></code>, some like <code class="docutils literal notranslate"><span class="pre">.rst</span></code> – the extension can be configured with
-<a class="reference internal" href="usage/configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a>) and different OSes have different path
-separators, Sphinx abstracts them: <em class="dfn">document names</em> are always
-relative to the <a class="reference internal" href="#term-source-directory"><span class="xref std std-term">source directory</span></a>, the extension is stripped, and
-path separators are converted to slashes.  All values, parameters and such
-referring to “documents” expect such document names.</p>
-<p>Examples for document names are <code class="docutils literal notranslate"><span class="pre">index</span></code>, <code class="docutils literal notranslate"><span class="pre">library/zipfile</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">reference/datamodel/types</span></code>.  Note that there is no leading or trailing
-slash.</p>
+<dt id="term-document-name">文件名</dt><dd><p>由于reST源文件可以有不同的扩展名(有些人喜欢 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> ，有些像 <code class="docutils literal notranslate"><span class="pre">.rst</span></code> – 扩展名可以配置 <a class="reference internal" href="usage/configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a>)，不同的操作系统有不同的路径分隔符， Sphinx抽象它们: <em class="dfn">document names</em> 总是相对于  <a class="reference internal" href="#term-source-directory"><span class="xref std std-term">source directory</span></a> ，扩展被剥离，路径分隔符被转换为斜杠。 所有引用  “documents” 的值，参数等都需要这样的文档名称。</p>
+<p>文档名称的示例是 <code class="docutils literal notranslate"><span class="pre">index</span></code> ， <code class="docutils literal notranslate"><span class="pre">library/zipfile</span></code> 或 <code class="docutils literal notranslate"><span class="pre">reference/datamodel/types</span></code> 。请注意，没有前导或尾随斜杠。</p>
 </dd>
-<dt id="term-domain">domain</dt><dd><p>A domain is a collection of markup (reStructuredText <a class="reference internal" href="#term-directive"><span class="xref std std-term">directive</span></a>s
-and <a class="reference internal" href="#term-role"><span class="xref std std-term">role</span></a>s) to describe and link to <a class="reference internal" href="#term-object"><span class="xref std std-term">object</span></a>s belonging
-together, e.g. elements of a programming language.  Directive and role
-names in a domain have names like <code class="docutils literal notranslate"><span class="pre">domain:name</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">py:function</span></code>.</p>
-<p>Having domains means that there are no naming problems when one set of
-documentation wants to refer to e.g. C++ and Python classes.  It also
-means that extensions that support the documentation of whole new
-languages are much easier to write.</p>
+<dt id="term-domain">域</dt><dd><p>域是标记(reStructuredText <a class="reference internal" href="#term-directive"><span class="xref std std-term">directive</span></a>s 和 <a class="reference internal" href="#term-role"><span class="xref std std-term">role</span></a>s)的集合，用于描述和链接到 <a class="reference internal" href="#term-object"><span class="xref std std-term">object</span></a>s，属于一起，例如:编程语言的元素。域中的指令和角色名称具有  <code class="docutils literal notranslate"><span class="pre">domain:name</span></code> 之类的名称，例如 <code class="docutils literal notranslate"><span class="pre">py:function</span></code> 。</p>
+<p>拥有域意味着当一组文档想要引用时，没有命名问题。 C ++和Python类。这也意味着支持全新语言文档的扩展更容易编写。</p>
 <p>有关更多信息，请参阅 <a class="reference internal" href="usage/restructuredtext/domains.html"><span class="doc">域</span></a> 。</p>
 </dd>
-<dt id="term-environment">environment</dt><dd><p>A structure where information about all documents under the root is saved,
-and used for cross-referencing.  The environment is pickled after the
-parsing stage, so that successive runs only need to read and parse new and
-changed documents.</p>
+<dt id="term-environment">环境</dt><dd><p>保存根目录下所有文档的信息并用于交叉引用的结构。在解析阶段之后，环境会被腌制，因此连续运行只需要读取和解析新的和已更改的文档。</p>
 </dd>
-<dt id="term-extension">extension</dt><dd><p>A custom <a class="reference internal" href="#term-role"><span class="xref std std-term">role</span></a>, <a class="reference internal" href="#term-directive"><span class="xref std std-term">directive</span></a> or other aspect of Sphinx that
-allows users to modify any aspect of the build process within Sphinx.</p>
+<dt id="term-extension">扩展</dt><dd><p>一个自定义 <a class="reference internal" href="#term-role"><span class="xref std std-term">role</span></a> ， <a class="reference internal" href="#term-directive"><span class="xref std std-term">directive</span></a> 或Sphinx的其他方面，允许用户修改Sphinx中构建过程的任何方面。</p>
 <p>有关更多信息，请参阅 <a class="reference internal" href="usage/extensions/index.html"><span class="doc">扩展</span></a> 。</p>
 </dd>
-<dt id="term-master-document">master document</dt><dd><p>包含root的文件 <a class="reference internal" href="usage/restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> 指令。</p>
+<dt id="term-master-document">主文件</dt><dd><p>包含root的文件 <a class="reference internal" href="usage/restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> 指令。</p>
 </dd>
-<dt id="term-object">object</dt><dd><p>The basic building block of Sphinx documentation.  Every “object
-directive” (e.g. <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">function</span></code> or <a class="reference internal" href="usage/restructuredtext/domains.html#directive-object" title="object directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">object</span></code></a>) creates such a
-block; and most objects can be cross-referenced to.</p>
+<dt id="term-object">对象</dt><dd><p>Sphinx文档的基本构建块。每个 “object directive” (例如 <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">function</span></code> 或 <a class="reference internal" href="usage/restructuredtext/domains.html#directive-object" title="object directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">object</span></code></a>)都会创建一个这样的块;并且大多数对象可以交叉引用。</p>
 </dd>
-<dt id="term-removeinsphinxxxxwarning">RemoveInSphinxXXXWarning</dt><dd><p>The feature which is warned will be removed in Sphinx-XXX version.
-It usually caused from Sphinx extensions which is using deprecated.
-See also <a class="reference internal" href="man/sphinx-build.html#when-deprecation-warnings-are-displayed"><span class="std std-ref">弃用警告</span></a>.</p>
+<dt id="term-removeinsphinxxxxwarning">RemoveInSphinxXXXWarning</dt><dd><p>警告的功能将在Sphinx-XXX版本中删除。它通常是由使用过时的Sphinx扩展引起的。另见 <a class="reference internal" href="man/sphinx-build.html#when-deprecation-warnings-are-displayed"><span class="std std-ref">弃用警告</span></a> 。</p>
 </dd>
-<dt id="term-role">role</dt><dd><p>一个reStructuredText标记元素，允许标记一段文本。与指令一样，角色也是可扩展的。基本语法如下所示: <code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code> 。有关详细信息，请参阅 <a class="reference internal" href="usage/restructuredtext/basics.html#rst-inline-markup"><span class="std std-ref">内联标记</span></a> 。</p>
+<dt id="term-role">角色</dt><dd><p>一个reStructuredText标记元素，允许标记一段文本。与指令一样，角色也是可扩展的。基本语法如下所示: <code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code> 。有关详细信息，请参阅 <a class="reference internal" href="usage/restructuredtext/basics.html#rst-inline-markup"><span class="std std-ref">内联标记</span></a> 。</p>
 </dd>
-<dt id="term-source-directory">source directory</dt><dd><p>包含其子目录的目录包含一个Sphinx项目的所有源文件。</p>
+<dt id="term-source-directory">源目录</dt><dd><p>包含其子目录的目录包含一个Sphinx项目的所有源文件。</p>
 </dd>
 <dt id="term-restructuredtext">reStructuredText</dt><dd><p>一个易于阅读，你看到的是什么，你得到的纯文本标记语法和解析器系统。</p>
 </dd>
@@ -252,7 +220,7 @@ See also <a class="reference internal" href="man/sphinx-build.html#when-deprecat
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/41035e8f9 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/c6c93cfdb 创建。
     </div>
   </body>
 </html>

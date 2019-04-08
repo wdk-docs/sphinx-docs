@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>索引 &#8212; Sphinx 2.1.0+/41035e8f9 文档</title>
+    <title>索引 &#8212; Sphinx 2.1.0+/c6c93cfdb 文档</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/41035e8f9 文档 中搜索"
+          title="在 Sphinx 2.1.0+/c6c93cfdb 文档 中搜索"
           href="_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="#" />
@@ -158,8 +158,16 @@
  | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
  | <a href="#X"><strong>X</strong></a>
+ | <a href="#主"><strong>主</strong></a>
+ | <a href="#域"><strong>域</strong></a>
+ | <a href="#对"><strong>对</strong></a>
+ | <a href="#扩"><strong>扩</strong></a>
+ | <a href="#指"><strong>指</strong></a>
  | <a href="#文"><strong>文</strong></a>
+ | <a href="#构"><strong>构</strong></a>
+ | <a href="#源"><strong>源</strong></a>
  | <a href="#环"><strong>环</strong></a>
+ | <a href="#角"><strong>角</strong></a>
  | <a href="#配"><strong>配</strong></a>
  
 </div>
@@ -1118,7 +1126,8 @@
 </li>
       <li><a href="extdev/envapi.html#sphinx.environment.BuildEnvironment">BuildEnvironment (sphinx.environment 中的类)</a>
 </li>
-      <li><a href="glossary.html#term-builder"><strong>builder</strong></a>
+      <li>
+    builder
 
       <ul>
         <li><a href="usage/advanced/setuptools.html#confval-builder">configuration value</a>
@@ -2037,8 +2046,6 @@
 </li>
       <li><a href="usage/extensions/graphviz.html#directive-digraph">digraph (指令)</a>
 </li>
-      <li><a href="glossary.html#term-directive"><strong>directive</strong></a>
-</li>
       <li><a href="extdev/markupapi.html#docutils.parsers.rst.Directive">Directive (docutils.parsers.rst 中的类)</a>
 </li>
       <li><a href="extdev/domainapi.html#sphinx.domains.Domain.directive">directive() (sphinx.domains.Domain 方法)</a>
@@ -2141,8 +2148,6 @@
       </ul></li>
       <li><a href="extdev/markupapi.html#module-docutils.parsers.rst">docutils.parsers.rst (模块)</a>
 </li>
-      <li><a href="glossary.html#term-domain"><strong>domain</strong></a>
-</li>
       <li><a href="extdev/domainapi.html#sphinx.domains.Domain">Domain (sphinx.domains 中的类)</a>
 </li>
       <li><a href="usage/restructuredtext/roles.html#role-download">download (角色)</a>
@@ -2217,8 +2222,6 @@
         <li><a href="extdev/appapi.html#event-env-updated">event</a>
 </li>
       </ul></li>
-      <li><a href="glossary.html#term-environment"><strong>environment</strong></a>
-</li>
       <li><a href="extdev/collectorapi.html#sphinx.environment.collectors.EnvironmentCollector">EnvironmentCollector (sphinx.environment.collectors 中的类)</a>
 </li>
       <li><a href="usage/restructuredtext/domains.html#directive-envvar">envvar (指令)</a>
@@ -2491,8 +2494,6 @@
         <li><a href="usage/configuration.html#confval-exclude_patterns">configuration value</a>
 </li>
       </ul></li>
-      <li><a href="glossary.html#term-extension"><strong>extension</strong></a>
-</li>
       <li><a href="extdev/appapi.html#sphinx.application.ExtensionError">ExtensionError</a>, <a href="extdev/appapi.html#sphinx.errors.ExtensionError">[1]</a>
 </li>
       <li>
@@ -3579,8 +3580,6 @@
       </ul></li>
       <li><a href="usage/builders/index.html#sphinx.builders.manpage.ManualPageBuilder">ManualPageBuilder (sphinx.builders.manpage 中的类)</a>
 </li>
-      <li><a href="glossary.html#term-master-document"><strong>master document</strong></a>
-</li>
       <li>
     master_doc
 
@@ -3911,12 +3910,8 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-object"><strong>object</strong></a>
-
-      <ul>
-        <li><a href="usage/restructuredtext/domains.html#directive-object">(指令)</a>
+      <li><a href="usage/restructuredtext/domains.html#directive-object">object (指令)</a>
 </li>
-      </ul></li>
       <li><a href="extdev/domainapi.html#sphinx.domains.Domain.object_types">object_types (sphinx.domains.Domain 属性)</a>
 </li>
       <li><a href="usage/extensions/autosummary.html#objname">objname (內置变量)</a>
@@ -4220,10 +4215,10 @@
 </li>
       <li><a href="extdev/markupapi.html#docutils.parsers.rst.Directive.required_arguments">required_arguments (docutils.parsers.rst.Directive 属性)</a>
 </li>
-      <li><a href="extdev/domainapi.html#sphinx.domains.Domain.resolve_any_xref">resolve_any_xref() (sphinx.domains.Domain 方法)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="extdev/domainapi.html#sphinx.domains.Domain.resolve_any_xref">resolve_any_xref() (sphinx.domains.Domain 方法)</a>
+</li>
       <li><a href="extdev/domainapi.html#sphinx.domains.Domain.resolve_xref">resolve_xref() (sphinx.domains.Domain 方法)</a>
 </li>
       <li><a href="extdev/projectapi.html#sphinx.project.Project.restore">restore() (sphinx.project.Project 方法)</a>
@@ -4231,8 +4226,6 @@
       <li><a href="glossary.html#term-restructuredtext"><strong>reStructuredText</strong></a>
 </li>
       <li><a href="usage/restructuredtext/roles.html#role-rfc">rfc (角色)</a>
-</li>
-      <li><a href="glossary.html#term-role"><strong>role</strong></a>
 </li>
       <li><a href="extdev/domainapi.html#sphinx.domains.Domain.role">role() (sphinx.domains.Domain 方法)</a>
 </li>
@@ -4348,8 +4341,6 @@
         <li><a href="usage/extensions/doctest.html#index-0">testing</a>
 </li>
       </ul></li>
-      <li><a href="glossary.html#term-source-directory"><strong>source directory</strong></a>
-</li>
       <li>
     source-dir
 
@@ -5103,6 +5094,46 @@
   </ul></td>
 </tr></table>
 
+<h2 id="主">主</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-master-document"><strong>主文件</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="域">域</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-domain"><strong>域</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="对">对</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-object"><strong>对象</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="扩">扩</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-extension"><strong>扩展</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="指">指</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-directive"><strong>指令</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="文">文</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -5111,8 +5142,28 @@
   </ul></td>
 </tr></table>
 
+<h2 id="构">构</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-builder"><strong>构建器</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="源">源</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-source-directory"><strong>源目录</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="环">环</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-environment"><strong>环境</strong></a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     环境变量
@@ -5121,6 +5172,14 @@
         <li><a href="man/sphinx-apidoc.html#envvar-SPHINX_APIDOC_OPTIONS">SPHINX_APIDOC_OPTIONS</a>
 </li>
       </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="角">角</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-role"><strong>角色</strong></a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -5155,7 +5214,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/41035e8f9 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/c6c93cfdb 创建。
     </div>
   </body>
 </html>
