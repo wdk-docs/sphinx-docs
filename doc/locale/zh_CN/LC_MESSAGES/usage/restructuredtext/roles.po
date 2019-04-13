@@ -307,7 +307,7 @@ msgstr "按图号交叉引用数字"
 msgid ""
 "`numref` role can also refer sections. And `numref` allows `{name}` for "
 "the link text."
-msgstr " `numref` 角色也可以参考部分。并且 `numref` 允许链接文本使用 `{name}` 。"
+msgstr "`numref` 角色也可以参考部分。并且 `numref` 允许链接文本使用 `{name}` 。"
 
 #: ../../usage/restructuredtext/roles.rst:224
 msgid ""

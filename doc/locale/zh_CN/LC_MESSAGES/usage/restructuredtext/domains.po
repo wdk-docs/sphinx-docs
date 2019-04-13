@@ -1521,7 +1521,7 @@ msgid ""
 "arguments as optional use square brackets as :ref:`documented "
 "<signatures>` for Python signatures."
 msgstr ""
-"描述JavaScript函数或方法。如果要将参数描述为可选，请使用方括号 :ref:`documentation <signatures>` "
+"描述JavaScript函数或方法。如果要将参数描述为可选，请使用方括号 :ref:`documented <signatures>` "
 "用于Python签名。"
 
 #: ../../usage/restructuredtext/domains.rst:1306
@@ -1588,7 +1588,7 @@ msgstr "描述全局变量或常量。"
 
 #: ../../usage/restructuredtext/domains.rst:1362
 msgid "Describes the attribute *name* of *object*."
-msgstr "描述*object* 的属性 *name*。"
+msgstr "描述 *object* 的属性 *name*。"
 
 #: ../../usage/restructuredtext/domains.rst:1366
 #: ../../usage/restructuredtext/domains.rst:1421

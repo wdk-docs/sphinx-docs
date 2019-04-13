@@ -53,11 +53,11 @@ msgstr "段落(:duref:`ref <paragraph>`)是reST文档中最基本的块。段落
 
 #: ../../usage/restructuredtext/basics.rst:35
 msgid "Inline markup"
-msgstr "内联标记"
+msgstr "行内标记"
 
 #: ../../usage/restructuredtext/basics.rst:37
 msgid "The standard reST inline markup is quite simple: use"
-msgstr "标准的reST内联标记非常简单: 使用"
+msgstr "标准的reST行内标记非常简单: 使用"
 
 #: ../../usage/restructuredtext/basics.rst:39
 msgid "one asterisk: ``*text*`` for emphasis (italics),"
@@ -75,7 +75,7 @@ msgstr "反引号: ````text```` 代码示例( ``code`` )。"
 msgid ""
 "If asterisks or backquotes appear in running text and could be confused "
 "with inline markup delimiters, they have to be escaped with a backslash."
-msgstr "如果星号或反引号出现在正在运行的文本中并且可能与内联标记分隔符混淆，则必须使用反斜杠对其进行转义。"
+msgstr "如果星号或反引号出现在正在运行的文本中并且可能与行内标记分隔符混淆，则必须使用反斜杠对其进行转义。"
 
 #: ../../usage/restructuredtext/basics.rst:46
 msgid "Be aware of some restrictions of this markup:"
@@ -83,17 +83,17 @@ msgstr "请注意此标记的一些限制:"
 
 #: ../../usage/restructuredtext/basics.rst:48
 msgid "it may not be nested,"
-msgstr "它可能不是嵌套的，"
+msgstr "它不能嵌套，"
 
 #: ../../usage/restructuredtext/basics.rst:49
 msgid "content may not start or end with whitespace: ``* text*`` is wrong,"
-msgstr "内容可能无法以空格开头或结尾: ``* text*`` 错误，"
+msgstr "内容无法以空格开头或结尾: ``* text*`` 错误，"
 
 #: ../../usage/restructuredtext/basics.rst:50
 msgid ""
 "it must be separated from surrounding text by non-word characters.  Use a"
 " backslash escaped space to work around that: ``thisis\\ *one*\\ word``."
-msgstr "必须通过非单词字符将其与周围文本分开。使用反斜杠转义空间来解决这个问题: ``thisis\\ *one*\\ word``。"
+msgstr "必须通过非单词字符将其与周围文本分开。使用反斜杠转义空格来解决这个问题: ``thisis\\ *one*\\ word``。"
 
 #: ../../usage/restructuredtext/basics.rst:53
 msgid "These restrictions may be lifted in future versions of the docutils."
@@ -103,11 +103,11 @@ msgstr "在将来的docutils版本中可能会取消这些限制。"
 msgid ""
 "It is also possible to replace or expand upon some of this inline markup "
 "with roles. Refer to :ref:`rst-roles-alt` for more information."
-msgstr "也可以使用角色替换或扩展此内联标记。有关更多信息，请参阅 :ref:`rst-roles-alt` 。"
+msgstr "也可以使用角色替换或扩展此行内标记。有关更多信息，请参阅 :ref:`rst-roles-alt` 。"
 
 #: ../../usage/restructuredtext/basics.rst:60
 msgid "Lists and Quote-like blocks"
-msgstr "列表和引用类似的块"
+msgstr "列表和引用样块"
 
 #: ../../usage/restructuredtext/basics.rst:62
 msgid ""
@@ -262,7 +262,7 @@ msgid ""
 "Use ```Link text <https://domain.invalid/>`_`` for inline web links.  If "
 "the link text should be the web address, you don't need special markup at"
 " all, the parser finds links and mail addresses in ordinary text."
-msgstr "使用 ```链接文本 <https://domain.invalid/>`_`` 进行内联网络链接。如果链接文本应该是Web地址，则根本不需要特殊标记，解析器会在普通文本中查找链接和邮件地址。"
+msgstr "使用 ```链接文本 <https://domain.invalid/>`_`` 进行行内网络链接。如果链接文本应该是Web地址，则根本不需要特殊标记，解析器会在普通文本中查找链接和邮件地址。"
 
 #: ../../usage/restructuredtext/basics.rst:211
 msgid ""
@@ -288,14 +288,14 @@ msgstr "内部链接是通过Sphinx提供的特殊reST角色完成的，请参�
 
 #: ../../usage/restructuredtext/basics.rst:228
 msgid "Sections"
-msgstr "Sections"
+msgstr "章节标题"
 
 #: ../../usage/restructuredtext/basics.rst:230
 msgid ""
 "Section headers (:duref:`ref <sections>`) are created by underlining (and"
 " optionally overlining) the section title with a punctuation character, "
 "at least as long as the text::"
-msgstr "节标题(:duref:`ref <sections>`)是通过用标点字符加下划线(并且可选地覆盖)节标题来创建的，至少与文本一样长::"
+msgstr "通过使用标点符号为节标题(:duref:`ref <sections>`)加下划线(上划线可选)来创建节标题, 至少与文本一样长::"
 
 #: ../../usage/restructuredtext/basics.rst:238
 msgid ""
@@ -369,7 +369,7 @@ msgid ""
 " should be interpreted in a specific way.  Sphinx uses this to provide "
 "semantic markup and cross-referencing of identifiers, as described in the"
 " appropriate section.  The general syntax is ``:rolename:`content```."
-msgstr "角色或 \"自定义解释文本角色\" (:duref:`ref <roles>`)是显式标记的内联部分。它表示应以特定方式解释所附文本。 Sphinx使用它来提供标识符的语义标记和交叉引用，如相应章节中所述。一般语法是 ``:rolename:`content``` 。"
+msgstr "角色或 \"自定义解释文本角色\" (:duref:`ref <roles>`)是显式标记的行内部分。它表示应以特定方式解释所附文本。 Sphinx使用它来提供标识符的语义标记和交叉引用，如相应章节中所述。一般语法是 ``:rolename:`content``` 。"
 
 #: ../../usage/restructuredtext/basics.rst:296
 msgid "Docutils supports the following roles:"
@@ -487,7 +487,7 @@ msgstr ":dudir:`topic` , :dudir:`sidebar` (特别突出的 body 元素)"
 
 #: ../../usage/restructuredtext/basics.rst:353
 msgid ":dudir:`parsed-literal` (literal block that supports inline markup)"
-msgstr ":dudir:`parsed-literal` (支持内联标记的文字块)"
+msgstr ":dudir:`parsed-literal` (支持行内标记的文字块)"
 
 #: ../../usage/restructuredtext/basics.rst:354
 msgid ":dudir:`epigraph` (a block quote with optional attribution line)"
@@ -694,7 +694,7 @@ msgid ""
 "Standard reST citations (:duref:`ref <citations>`) are supported, with "
 "the additional feature that they are \"global\", i.e. all citations can "
 "be referenced from all files.  Use them like so::"
-msgstr "支持标准reST引用(:duref:`ref <citations>`)，其附加功能是\"全局\"，即所有引用都可以从所有文件引用。像这样使用它们::"
+msgstr "支持标准reST引用(:duref:`ref <citations>`)，其附加功能是 \"global\" ，即所有引用都可以从所有文件引用。像这样使用它们::"
 
 #: ../../usage/restructuredtext/basics.rst:490
 msgid ""
@@ -704,7 +704,7 @@ msgstr "引用用法类似于脚注用法，但标签不是数字或以\"＃\"�
 
 #: ../../usage/restructuredtext/basics.rst:495
 msgid "Substitutions"
-msgstr "Substitutions"
+msgstr "替换"
 
 #: ../../usage/restructuredtext/basics.rst:497
 msgid ""
@@ -712,7 +712,7 @@ msgid ""
 "definitions>`), which are pieces of text and/or markup referred to in the"
 " text by ``|name|``.  They are defined like footnotes with explicit "
 "markup blocks, like this::"
-msgstr "reST支持 \"substitutions\"(:duref:`ref <substitution-definitions>`)，它们是文本中引用的文本和/或标记 ``|name|`` 。它们被定义为带有显式标记块的脚注，如下::"
+msgstr "reST支持 \"substitutions\" (:duref:`ref <substitution-definitions>`)，它们是文本中按 ``|name|`` 引用的文本和/或标记。它们被定义为带有显式标记块的脚注，如下::"
 
 #: ../../usage/restructuredtext/basics.rst:503
 msgid "or this::"
@@ -784,13 +784,13 @@ msgid ""
 "be separated from the surrounding text by non-word characters, you have "
 "to use a backslash-escaped space to get around that.  See :duref:`the "
 "reference <substitution-definitions>` for the details."
-msgstr "**内联标记的分离:** 如上所述，内联标记跨度必须通过非单词字符与周围文本分开，您必须使用反斜杠转义空间来绕过它。有关详细信息，请参阅 :duref:`引用 <substitution-definitions>` 。"
+msgstr "**行内标记的分离:** 如上所述，行内标记跨度必须通过非单词字符与周围文本分开，您必须使用反斜杠转义空格来绕过它。有关详细信息，请参阅 :duref:`引用 <substitution-definitions>` 。"
 
 #: ../../usage/restructuredtext/basics.rst:560
 msgid ""
 "**No nested inline markup:** Something like ``*see :func:`foo`*`` is not "
 "possible."
-msgstr "**没有嵌套的内联标记:** 像 ``*see :func:`foo`*`` 这样的东西是不可能的。"
+msgstr "**没有嵌套的行内标记:** 像 ``*see :func:`foo`*`` 这样的东西是不可能的。"
 
 #: ../../usage/restructuredtext/basics.rst:566
 msgid ""
