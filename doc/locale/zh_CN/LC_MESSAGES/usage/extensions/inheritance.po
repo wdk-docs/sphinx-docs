@@ -19,24 +19,24 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:4
 msgid ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
-msgstr ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
+msgstr ":mod:`sphinx.ext.inheritance_diagram` -- 包含继承图"
 
 #: ../../usage/extensions/inheritance.rst:11
 msgid ""
 "This extension allows you to include inheritance diagrams, rendered via "
 "the :mod:`Graphviz extension <sphinx.ext.graphviz>`."
-msgstr ""
+msgstr "此扩展允许您包含继承图，通过 :mod:`Graphviz extension <sphinx.ext.graphviz>` 呈现。"
 
 #: ../../usage/extensions/inheritance.rst:14
 msgid "It adds this directive:"
-msgstr "It adds this directive:"
+msgstr "它添加了这个指令:"
 
 #: ../../usage/extensions/inheritance.rst:18
 msgid ""
 "This directive has one or more arguments, each giving a module or class "
 "name.  Class names can be unqualified; in that case they are taken to "
 "exist in the currently described module (see :rst:dir:`py:module`)."
-msgstr ""
+msgstr "该指令有一个或多个参数，每个参数都给出一个模块或类名。班级名称可以是不合格的;在这种情况下，它们被存在于当前描述的模块中（参见 :rst:dir:`py:module` ）。"
 
 #: ../../usage/extensions/inheritance.rst:22
 msgid ""
@@ -116,21 +116,21 @@ msgstr "Added ``top-classes`` option to limit the scope of inheritance graphs."
 
 #: ../../usage/extensions/inheritance.rst:102
 msgid "Examples"
-msgstr "Examples"
+msgstr "例子"
 
 #: ../../usage/extensions/inheritance.rst:104
 msgid ""
 "The following are different inheritance diagrams for the internal "
 "``InheritanceDiagram`` class that implements the directive."
-msgstr ""
+msgstr "以下是实现该指令的内部 ``InheritanceDiagram`` 类的不同继承图。"
 
 #: ../../usage/extensions/inheritance.rst:107
 msgid "With full names::"
-msgstr "With full names::"
+msgstr "全名::"
 
 #: ../../usage/extensions/inheritance.rst:114
 msgid "Showing class names only::"
-msgstr "Showing class names only::"
+msgstr "仅显示类名::"
 
 #: ../../usage/extensions/inheritance.rst:122
 msgid ""
@@ -141,7 +141,7 @@ msgstr ""
 
 #: ../../usage/extensions/inheritance.rst:137
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/inheritance.rst:141
 msgid "A dictionary of graphviz graph attributes for inheritance diagrams."

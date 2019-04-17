@@ -19,68 +19,68 @@ msgstr ""
 
 #: ../../usage/extensions/todo.rst:2
 msgid ":mod:`sphinx.ext.todo` -- Support for todo items"
-msgstr ":mod:`sphinx.ext.todo` -- Support for todo items"
+msgstr ":mod:`sphinx.ext.todo` -- 支持待办事项"
 
 #: ../../usage/extensions/todo.rst:10
 msgid "There are two additional directives when using this extension:"
-msgstr "There are two additional directives when using this extension:"
+msgstr "使用此扩展时，还有两个附加指令:"
 
 #: ../../usage/extensions/todo.rst:14
 msgid "Use this directive like, for example, :rst:dir:`note`."
-msgstr "Use this directive like, for example, :rst:dir:`note`."
+msgstr "使用此指令，例如， :rst:dir:`note`."
 
 #: ../../usage/extensions/todo.rst:16
 msgid ""
 "It will only show up in the output if :confval:`todo_include_todos` is "
 "``True``."
-msgstr ""
+msgstr "它只会出现在输出中 :confval:`todo_include_todos` 是 ``True`` 。"
 
 #: ../../usage/extensions/todo.rst:19
 msgid ""
 "This directive supports an ``class`` option that determines the class "
 "attribute for HTML output.  If not given, the class defaults to "
 "``admonition-todo``."
-msgstr ""
+msgstr "该指令支持 ``class`` 选项，该选项确定HTML输出的class属性。如果没有给出，该类默认为 ``admonition-todo`` 。"
 
 #: ../../usage/extensions/todo.rst:26
 msgid ""
 "This directive is replaced by a list of all todo directives in the whole "
 "documentation, if :confval:`todo_include_todos` is ``True``."
-msgstr ""
+msgstr "如果出现以下情况，则该指令将替换为整个文档中所有todo指令的列表 :confval:`todo_include_todos` 为 ``True`` 。"
 
 #: ../../usage/extensions/todo.rst:30
 msgid "These can be configured as seen below."
-msgstr "These can be configured as seen below."
+msgstr "这些可以配置如下所示。"
 
 #: ../../usage/extensions/todo.rst:33
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/todo.rst:37
 msgid ""
 "If this is ``True``, :rst:dir:`todo` and :rst:dir:`todolist` produce "
 "output, else they produce nothing.  The default is ``False``."
-msgstr ""
+msgstr "如果这是 ``True`` ，则 :rst:dir:`todo` 和 :rst:dir:`todolist` 产生输出，否则它们什么都不产生。默认为 ``False`` 。"
 
 #: ../../usage/extensions/todo.rst:42
 msgid ""
 "If this is ``True``, :rst:dir:`todo` emits a warning for each TODO "
 "entries. The default is ``False``."
-msgstr ""
+msgstr "如果这是 ``True`` ，则 :rst:dir:`todo` 会为每个TODO条目发出警告。默认为 ``False`` 。"
 
 #: ../../usage/extensions/todo.rst:49
 msgid ""
 "If this is ``True``, :rst:dir:`todolist` produce output without file path"
 " and line, The default is ``False``."
-msgstr ""
+msgstr "如果这是 ``True`` ，则 :rst:dir:`todolist` 产生没有文件路径和行的输出，默认为 ``False`` 。"
 
 #: ../../usage/extensions/todo.rst:54
 msgid "autodoc provides the following an additional event:"
-msgstr "autodoc provides the following an additional event:"
+msgstr "autodoc提供以下附加事件:"
 
 #: ../../usage/extensions/todo.rst:60
 msgid ""
 "Emitted when a todo is defined. *node* is the defined "
 "``sphinx.ext.todo.todo_node`` node."
-msgstr ""
+msgstr "定义todo时发出。 *node* 是定义的 ``sphinx.ext.todo.todo_node`` 节点。"
 

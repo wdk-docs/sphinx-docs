@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.inheritance_diagram – Include inheritance diagrams &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.inheritance_diagram – 包含继承图 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.intersphinx – Link to other projects’ documentation" href="intersphinx.html" />
-    <link rel="prev" title="sphinx.ext.imgconverter – A reference image converter using Imagemagick" href="imgconverter.html" />
+    <link rel="next" title="sphinx.ext.intersphinx – 链接到其他项目的文档" href="intersphinx.html" />
+    <link rel="prev" title="sphinx.ext.imgconverter – 使用Imagemagick的参考图像转换器" href="imgconverter.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="intersphinx.html" title="sphinx.ext.intersphinx – Link to other projects’ documentation"
+          <a href="intersphinx.html" title="sphinx.ext.intersphinx – 链接到其他项目的文档"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="imgconverter.html" title="sphinx.ext.imgconverter – A reference image converter using Imagemagick"
+          <a href="imgconverter.html" title="sphinx.ext.imgconverter – 使用Imagemagick的参考图像转换器"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,19 +120,19 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – Include inheritance diagrams</a><ul>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – 包含继承图</a><ul>
+<li><a class="reference internal" href="#examples">例子</a></li>
+<li><a class="reference internal" href="#configuration">配置</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="imgconverter.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.imgconverter</span></code> – A reference image converter using Imagemagick</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.imgconverter</span></code> – 使用Imagemagick的参考图像转换器</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="intersphinx.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – Link to other projects’ documentation</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – 链接到其他项目的文档</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -159,19 +159,16 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.inheritance_diagram">
-<span id="sphinx-ext-inheritance-diagram-include-inheritance-diagrams"></span><h1><a class="reference internal" href="#module-sphinx.ext.inheritance_diagram" title="sphinx.ext.inheritance_diagram: Support for displaying inheritance diagrams via graphviz."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code></a> – Include inheritance diagrams<a class="headerlink" href="#module-sphinx.ext.inheritance_diagram" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-inheritance-diagram-include-inheritance-diagrams"></span><h1><a class="reference internal" href="#module-sphinx.ext.inheritance_diagram" title="sphinx.ext.inheritance_diagram: Support for displaying inheritance diagrams via graphviz."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code></a> – 包含继承图<a class="headerlink" href="#module-sphinx.ext.inheritance_diagram" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
-<p>This extension allows you to include inheritance diagrams, rendered via the
-<a class="reference internal" href="graphviz.html#module-sphinx.ext.graphviz" title="sphinx.ext.graphviz: Support for Graphviz graphs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">Graphviz</span> <span class="pre">extension</span></code></a>.</p>
-<p>It adds this directive:</p>
+<p>此扩展允许您包含继承图，通过 <a class="reference internal" href="graphviz.html#module-sphinx.ext.graphviz" title="sphinx.ext.graphviz: Support for Graphviz graphs."><code class="xref py py-mod docutils literal notranslate"><span class="pre">Graphviz</span> <span class="pre">extension</span></code></a> 呈现。</p>
+<p>它添加了这个指令:</p>
 <dl class="directive">
 <dt id="directive-inheritance-diagram">
 <code class="descname">.. inheritance-diagram::</code><a class="headerlink" href="#directive-inheritance-diagram" title="永久链接至目标">¶</a></dt>
-<dd><p>This directive has one or more arguments, each giving a module or class
-name.  Class names can be unqualified; in that case they are taken to exist
-in the currently described module (see <a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a>).</p>
+<dd><p>该指令有一个或多个参数，每个参数都给出一个模块或类名。班级名称可以是不合格的;在这种情况下，它们被存在于当前描述的模块中（参见 <a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a> ）。</p>
 <p>For each given class, and each class in each given module, the base classes
 are determined.  Then, from all classes and their base classes, a graph is
 generated which is then rendered via the graphviz extension to a directed
@@ -248,10 +245,9 @@ only the classes you would like to generate the diagram for like this:</p>
 </dd></dl>
 
 <div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>The following are different inheritance diagrams for the internal
-<code class="docutils literal notranslate"><span class="pre">InheritanceDiagram</span></code> class that implements the directive.</p>
-<p>With full names:</p>
+<h2>例子<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<p>以下是实现该指令的内部 <code class="docutils literal notranslate"><span class="pre">InheritanceDiagram</span></code> 类的不同继承图。</p>
+<p>全名:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">inheritance-diagram</span><span class="p">::</span> sphinx.ext.inheritance_diagram.InheritanceDiagram
 </pre></div>
 </div>
@@ -259,7 +255,7 @@ only the classes you would like to generate the diagram for like this:</p>
 <map id="inheritance02ef59160f" name="inheritance02ef59160f">
 <area shape="rect" id="node1" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" target="_top" title="Base class for reStructuredText directives." alt="" coords="5,5,176,27"/>
 <area shape="rect" id="node3" href="../../extdev/utils.html#sphinx.util.docutils.SphinxDirective" target="_top" title="A base class for Sphinx directives." alt="" coords="219,5,424,27"/>
-</map><p>Showing class names only:</p>
+</map><p>仅显示类名:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">inheritance-diagram</span><span class="p">::</span> sphinx.ext.inheritance_diagram.InheritanceDiagram
    <span class="nc">:parts:</span> <span class="nf">1</span>
 </pre></div>
@@ -281,7 +277,7 @@ part (<code class="docutils literal notranslate"><span class="pre">sphinx</span>
 <area shape="rect" id="node2" href="../../extdev/utils.html#sphinx.util.docutils.SphinxDirective" target="_top" title="A base class for Sphinx directives." alt="" coords="5,5,189,29"/>
 </map></div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
 <dl class="confval">
 <dt id="confval-inheritance_graph_attrs">
 <code class="descname">inheritance_graph_attrs</code><a class="headerlink" href="#confval-inheritance_graph_attrs" title="永久链接至目标">¶</a></dt>
@@ -341,10 +337,10 @@ e.g. it’s a private class and should not be instantiated by the user).</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="intersphinx.html" title="sphinx.ext.intersphinx – Link to other projects’ documentation"
+          <a href="intersphinx.html" title="sphinx.ext.intersphinx – 链接到其他项目的文档"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="imgconverter.html" title="sphinx.ext.imgconverter – A reference image converter using Imagemagick"
+          <a href="imgconverter.html" title="sphinx.ext.imgconverter – 使用Imagemagick的参考图像转换器"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -354,7 +350,7 @@ e.g. it’s a private class and should not be instantiated by the user).</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

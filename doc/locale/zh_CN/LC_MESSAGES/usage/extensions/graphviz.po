@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../usage/extensions/graphviz.rst:4
 msgid ":mod:`sphinx.ext.graphviz` -- Add Graphviz graphs"
-msgstr ":mod:`sphinx.ext.graphviz` -- Add Graphviz graphs"
+msgstr ":mod:`sphinx.ext.graphviz` -- 添加Graphviz图表"
 
 #: ../../usage/extensions/graphviz.rst:11
 msgid ""
 "This extension allows you to embed `Graphviz <https://graphviz.org/>`_ "
 "graphs in your documents."
-msgstr ""
+msgstr "此扩展允许您在文档中嵌入 `Graphviz <https://graphviz.org/>`_ 图形。"
 
 #: ../../usage/extensions/graphviz.rst:14
 msgid "It adds these directives:"
-msgstr "It adds these directives:"
+msgstr "它添加了这些指令:"
 
 #: ../../usage/extensions/graphviz.rst:18
 msgid ""

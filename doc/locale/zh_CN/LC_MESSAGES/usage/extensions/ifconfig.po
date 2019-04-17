@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../usage/extensions/ifconfig.rst:4
 msgid ":mod:`sphinx.ext.ifconfig` -- Include content based on configuration"
-msgstr ":mod:`sphinx.ext.ifconfig` -- Include content based on configuration"
+msgstr ":mod:`sphinx.ext.ifconfig` -- 根据配置包含内容"
 
 #: ../../usage/extensions/ifconfig.rst:9
 msgid "This extension is quite simple, and features only one directive:"
-msgstr "This extension is quite simple, and features only one directive:"
+msgstr "这个扩展非常简单，只有一个指令:"
 
 #: ../../usage/extensions/ifconfig.rst:13
 msgid ""
@@ -31,23 +31,23 @@ msgid ""
 "an argument is ``True``, evaluated in the namespace of the project's "
 "configuration (that is, all registered variables from :file:`conf.py` are"
 " available)."
-msgstr ""
+msgstr "仅当作为参数给出的Python表达式为 ``True`` 时，才包含该指令的内容，在项目配置的命名空间中进行评估(即，所有已注册的变量来自 :file:`conf.py` 都可用)。"
 
 #: ../../usage/extensions/ifconfig.rst:18
 msgid "For example, one could write ::"
-msgstr "For example, one could write ::"
+msgstr "例如，人们可以写::"
 
 #: ../../usage/extensions/ifconfig.rst:24
 msgid ""
 "To make a custom config value known to Sphinx, use "
 ":func:`~sphinx.application.Sphinx.add_config_value` in the setup function"
 " in :file:`conf.py`, e.g.::"
-msgstr ""
+msgstr "要使Sphinx知道自定义配置值，请在 :file:`conf.py` 的设置函数中使用 :func:`~sphinx.application.Sphinx.add_config_value`  ，例如::"
 
 #: ../../usage/extensions/ifconfig.rst:31
 msgid ""
 "The second argument is the default value, the third should always be "
 "``'env'`` for such values (it selects if Sphinx re-reads the documents if"
 " the value changes)."
-msgstr ""
+msgstr "第二个参数是默认值，第三个参数应始终为 ``'env'`` 这些值(如果值发生变化，它会选择Sphinx是否重新读取文档)。"
 

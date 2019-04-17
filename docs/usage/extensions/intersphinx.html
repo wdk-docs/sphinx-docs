@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.intersphinx – Link to other projects’ documentation &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.intersphinx – 链接到其他项目的文档 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.linkcode – Add external links to source code" href="linkcode.html" />
-    <link rel="prev" title="sphinx.ext.inheritance_diagram – Include inheritance diagrams" href="inheritance.html" />
+    <link rel="next" title="sphinx.ext.linkcode – 添加外部链接到源代码" href="linkcode.html" />
+    <link rel="prev" title="sphinx.ext.inheritance_diagram – 包含继承图" href="inheritance.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="linkcode.html" title="sphinx.ext.linkcode – Add external links to source code"
+          <a href="linkcode.html" title="sphinx.ext.linkcode – 添加外部链接到源代码"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="inheritance.html" title="sphinx.ext.inheritance_diagram – Include inheritance diagrams"
+          <a href="inheritance.html" title="sphinx.ext.inheritance_diagram – 包含继承图"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,19 +120,19 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – Link to other projects’ documentation</a><ul>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
-<li><a class="reference internal" href="#showing-all-links-of-an-intersphinx-mapping-file">Showing all links of an Intersphinx mapping file</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – 链接到其他项目的文档</a><ul>
+<li><a class="reference internal" href="#configuration">配置</a></li>
+<li><a class="reference internal" href="#showing-all-links-of-an-intersphinx-mapping-file">显示Intersphinx映射文件的所有链接</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="inheritance.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – Include inheritance diagrams</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – 包含继承图</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="linkcode.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – Add external links to source code</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – 添加外部链接到源代码</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -159,37 +159,21 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.intersphinx">
-<span id="sphinx-ext-intersphinx-link-to-other-projects-documentation"></span><h1><a class="reference internal" href="#module-sphinx.ext.intersphinx" title="sphinx.ext.intersphinx: Link to other Sphinx documentation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a> – Link to other projects’ documentation<a class="headerlink" href="#module-sphinx.ext.intersphinx" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-intersphinx-link-to-other-projects-documentation"></span><h1><a class="reference internal" href="#module-sphinx.ext.intersphinx" title="sphinx.ext.intersphinx: Link to other Sphinx documentation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a> – 链接到其他项目的文档<a class="headerlink" href="#module-sphinx.ext.intersphinx" title="永久链接至标题">¶</a></h1>
 <div class="versionadded" id="index-0">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
-<p>This extension can generate automatic links to the documentation of objects in
-other projects.</p>
-<p>Usage is simple: whenever Sphinx encounters a cross-reference that has no
-matching target in the current documentation set, it looks for targets in the
-documentation sets configured in <a class="reference internal" href="#confval-intersphinx_mapping"><code class="xref std std-confval docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a>.  A reference
-like <code class="docutils literal notranslate"><span class="pre">:py:class:`zipfile.ZipFile`</span></code> can then link to the Python documentation
-for the ZipFile class, without you having to specify where it is located
-exactly.</p>
-<p>When using the “new” format (see below), you can even force lookup in a foreign
-set by prefixing the link target appropriately.  A link like <code class="docutils literal notranslate"><span class="pre">:ref:`comparison</span>
-<span class="pre">manual</span> <span class="pre">&lt;python:comparisons&gt;`</span></code> will then link to the label “comparisons” in the
-doc set “python”, if it exists.</p>
-<p>Behind the scenes, this works as follows:</p>
+<p>此扩展可以生成指向其他项目中对象文档的自动链接。</p>
+<p>用法很简单:只要Sphinx遇到当前文档集中没有匹配目标的交叉引用，它就会在配置的文档集中查找目标 <a class="reference internal" href="#confval-intersphinx_mapping"><code class="xref std std-confval docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a> 。然后像 <code class="docutils literal notranslate"><span class="pre">:py:class:`zipfile.ZipFile`</span></code> 这样的引用可以链接到ZipFile类的Python文档，而不必指定它所在的位置。</p>
+<p>使用 “new” 格式（见下文）时，您甚至可以通过为链接目标添加适当的前缀来强制在外部集合中查找。  像 <code class="docutils literal notranslate"><span class="pre">:ref:`comparison</span> <span class="pre">manual</span> <span class="pre">&lt;python:comparisons&gt;`</span></code> 这样的链接将链接到 doc set “python” 中的标签 “comparisons” ，如果它存在的话。</p>
+<p>在幕后，这工作如下:</p>
 <ul class="simple">
-<li><p>Each Sphinx HTML build creates a file named <code class="file docutils literal notranslate"><span class="pre">objects.inv</span></code> that contains
-a mapping from object names to URIs relative to the HTML set’s root.</p></li>
-<li><p>Projects using the Intersphinx extension can specify the location of such
-mapping files in the <a class="reference internal" href="#confval-intersphinx_mapping"><code class="xref std std-confval docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a> config value.  The mapping
-will then be used to resolve otherwise missing references to objects into
-links to the other documentation.</p></li>
-<li><p>By default, the mapping file is assumed to be at the same location as the rest
-of the documentation; however, the location of the mapping file can also be
-specified individually, e.g. if the docs should be buildable without Internet
-access.</p></li>
+<li><p>每个Sphinx HTML构建都会创建一个名为 <code class="file docutils literal notranslate"><span class="pre">objects.inv</span></code> 的文件，其中包含从对象名称到相对于HTML集合根目录的URI的映射。</p></li>
+<li><p>使用Intersphinx扩展的项目可以在 <a class="reference internal" href="#confval-intersphinx_mapping"><code class="xref std std-confval docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a> 配置值中指定此类映射文件的位置。然后，映射将用于解析对象的其他缺失引用，并将其转换为指向其他文档的链接。</p></li>
+<li><p>默认情况下，假定映射文件与文档的其余部分位于同一位置;但是，映射文件的位置也可以单独指定，例如，如果文档应该可以在没有Internet访问的情况下构建。</p></li>
 </ul>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
 <p>To use Intersphinx linking, add <code class="docutils literal notranslate"><span class="pre">'sphinx.ext.intersphinx'</span></code> to your
 <a class="reference internal" href="../configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> config value, and use these config values to activate
 linking:</p>
@@ -282,12 +266,8 @@ seconds.</p>
 
 </div>
 <div class="section" id="showing-all-links-of-an-intersphinx-mapping-file">
-<h2>Showing all links of an Intersphinx mapping file<a class="headerlink" href="#showing-all-links-of-an-intersphinx-mapping-file" title="永久链接至标题">¶</a></h2>
-<p>To show all Intersphinx links and their targets of an Intersphinx mapping file,
-run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-msphinx.ext.intersphinx</span> <span class="pre">url-or-path</span></code>.  This is helpful when
-searching for the root cause of a broken Intersphinx link in a documentation
-project. The following example prints the Intersphinx mapping of the Python 3
-documentation:</p>
+<h2>显示Intersphinx映射文件的所有链接<a class="headerlink" href="#showing-all-links-of-an-intersphinx-mapping-file" title="永久链接至标题">¶</a></h2>
+<p>要显示所有Intersphinx链接及其Intersphinx映射文件的目标，请运行 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-msphinx.ext.intersphinx</span> <span class="pre">url-or-path</span></code> 。  在文档项目中搜索断开的Intersphinx链接的根本原因时，这很有用。 以下示例打印Python 3文档的Intersphinx映射:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -msphinx.ext.intersphinx https://docs.python.org/3/objects.inv
 </pre></div>
 </div>
@@ -310,10 +290,10 @@ documentation:</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="linkcode.html" title="sphinx.ext.linkcode – Add external links to source code"
+          <a href="linkcode.html" title="sphinx.ext.linkcode – 添加外部链接到源代码"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="inheritance.html" title="sphinx.ext.inheritance_diagram – Include inheritance diagrams"
+          <a href="inheritance.html" title="sphinx.ext.inheritance_diagram – 包含继承图"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -323,7 +303,7 @@ documentation:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../../usage/extensions/coverage.rst:2
 msgid ":mod:`sphinx.ext.coverage` -- Collect doc coverage stats"
-msgstr ":mod:`sphinx.ext.coverage` -- Collect doc coverage stats"
+msgstr ":mod:`sphinx.ext.coverage` -- 收集doc覆盖率统计信息"
 
 #: ../../usage/extensions/coverage.rst:7
 msgid ""
 "This extension features one additional builder, the "
 ":class:`CoverageBuilder`."
-msgstr ""
+msgstr "此扩展包含一个额外的构建器， :class:`CoverageBuilder` 。"
 
 #: ../../usage/extensions/coverage.rst:11
 msgid ""
 "To use this builder, activate the coverage extension in your "
 "configuration file and give ``-b coverage`` on the command line."
-msgstr ""
+msgstr "要使用此构建器，请激活配置文件中的 coverage 扩展，并在命令行上提供 ``-b coverage`` 。"
 
 #: ../../usage/extensions/coverage.rst:14
 msgid "待处理"
@@ -39,23 +39,23 @@ msgstr "待处理"
 
 #: ../../usage/extensions/coverage.rst:14
 msgid "Write this section."
-msgstr "Write this section."
+msgstr "写这个部分。"
 
 #: ../../usage/extensions/coverage.rst:16
 msgid ""
 "Several configuration values can be used to specify what the builder "
 "should check:"
-msgstr ""
+msgstr "可以使用多个配置值来指定构建器应检查的内容:"
 
 #: ../../usage/extensions/coverage.rst:33
 msgid "Set to ``False`` to not write headlines."
-msgstr "Set to ``False`` to not write headlines."
+msgstr "设置为 ``False`` 以不写标题。"
 
 #: ../../usage/extensions/coverage.rst:39
 msgid ""
 "Skip objects that are not documented in the source with a docstring. "
 "``False`` by default."
-msgstr ""
+msgstr "使用 docstring 跳过源中未记录的对象。  ``False`` 默认情况下。"
 
 #~ msgid "Todo"
 #~ msgstr ""

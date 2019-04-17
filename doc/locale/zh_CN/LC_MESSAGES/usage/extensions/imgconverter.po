@@ -21,7 +21,7 @@ msgstr ""
 msgid ""
 ":mod:`sphinx.ext.imgconverter` -- A reference image converter using "
 "Imagemagick"
-msgstr ""
+msgstr ":mod:`sphinx.ext.imgconverter` -- 使用Imagemagick的参考图像转换器"
 
 #: ../../usage/extensions/imgconverter.rst:11
 msgid ""
@@ -29,11 +29,11 @@ msgid ""
 " builders.  For example, it allows you to use SVG images with LaTeX "
 "builder. As a result, you don't mind what image format the builder "
 "supports."
-msgstr ""
+msgstr "此扩展将文档中的图像转换为适当的构建器格式。例如，它允许您将SVG图像与LaTeX构建器一起使用。因此，您不介意构建器支持的图像格式。"
 
 #: ../../usage/extensions/imgconverter.rst:15
 msgid "Internally, this extension uses Imagemagick_ to convert images."
-msgstr "Internally, this extension uses Imagemagick_ to convert images."
+msgstr "在内部，此扩展使用 Imagemagick_ 转换图像。"
 
 #: ../../usage/extensions/imgconverter.rst:21
 msgid ""
@@ -41,21 +41,21 @@ msgid ""
 " becomes not scalable.  To avoid that, please use other image converters "
 "like `sphinxcontrib-svg2pdfconverter`__ (which uses Inkscape or ``rsvg-"
 "convert``)."
-msgstr ""
+msgstr "Imagemagick在转换时栅格化SVG图像。 结果，图像变得不可缩放。  为避免这种情况，请使用其他图像转换器，如 `sphinxcontrib-svg2pdfconverter`__ (使用 Inkscape 或 ``rsvg-convert`` )。"
 
 #: ../../usage/extensions/imgconverter.rst:30
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/imgconverter.rst:34
 msgid ""
 "A path to :command:`convert` command.  By default, the imgconverter uses "
 "the command from search paths."
-msgstr ""
+msgstr "路径 :command:`convert` 命令。默认情况下，imgconverter使用搜索路径中的命令。"
 
 #: ../../usage/extensions/imgconverter.rst:39
 msgid ""
 "Additional command-line arguments to give to :command:`convert`, as a "
 "list. The default is an empty list ``[]``."
-msgstr ""
+msgstr "额外的命令行参数，用于 :command:`convert` ，作为列表。默认是一个空列表 ``[]`` 。"
 

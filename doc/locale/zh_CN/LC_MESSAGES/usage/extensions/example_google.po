@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/example_google.rst:6
 msgid "Example Google Style Python Docstrings"
-msgstr "Example Google Style Python Docstrings"
+msgstr "示例Google样式Python Docstrings"
 
 #: ../../usage/extensions/example_google.rst:10
 msgid ":ref:`example_numpy`"
@@ -27,5 +27,5 @@ msgstr ":ref:`example_numpy`"
 
 #: ../../usage/extensions/example_google.rst:14
 msgid "Download: :download:`example_google.py <example_google.py>`"
-msgstr "Download: :download:`example_google.py <example_google.py>`"
+msgstr "下载: :download:`example_google.py <example_google.py>`"
 

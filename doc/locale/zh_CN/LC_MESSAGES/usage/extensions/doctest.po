@@ -19,55 +19,55 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:4
 msgid ":mod:`sphinx.ext.doctest` -- Test snippets in the documentation"
-msgstr ":mod:`sphinx.ext.doctest` -- Test snippets in the documentation"
+msgstr ":mod:`sphinx.ext.doctest` -- 测试文档中的代码片段"
 
 #: ../../usage/extensions/doctest.rst:14
 msgid ""
 "This extension allows you to test snippets in the documentation in a "
 "natural way.  It works by collecting specially-marked up code blocks and "
 "running them as doctest tests."
-msgstr ""
+msgstr "此扩展允许您以自然的方式测试文档中的片段。它的工作原理是收集特别标记的代码块并将它们作为doctest测试运行。"
 
 #: ../../usage/extensions/doctest.rst:18
 msgid ""
 "Within one document, test code is partitioned in *groups*, where each "
 "group consists of:"
-msgstr ""
+msgstr "在一个文档中，测试代码在 *groups* 中分区，其中每个组包含:"
 
 #: ../../usage/extensions/doctest.rst:21
 msgid "zero or more *setup code* blocks (e.g. importing the module to test)"
-msgstr "zero or more *setup code* blocks (e.g. importing the module to test)"
+msgstr "零个或多个 *设置代码* 块（例如导入模块进行测试）"
 
 #: ../../usage/extensions/doctest.rst:22
 msgid "one or more *test* blocks"
-msgstr "one or more *test* blocks"
+msgstr "一个或多个 *test* 块"
 
 #: ../../usage/extensions/doctest.rst:24
 msgid ""
 "When building the docs with the ``doctest`` builder, groups are collected"
 " for each document and run one after the other, first executing setup "
 "code blocks, then the test blocks in the order they appear in the file."
-msgstr ""
+msgstr "在使用 ``doctest`` 构建器构建文档时，将为每个文档收集组并逐个运行，首先执行设置代码块，然后按照它们在文件中出现的顺序执行测试块。"
 
 #: ../../usage/extensions/doctest.rst:28
 msgid "There are two kinds of test blocks:"
-msgstr "There are two kinds of test blocks:"
+msgstr "有两种测试块:"
 
 #: ../../usage/extensions/doctest.rst:30
 msgid ""
 "*doctest-style* blocks mimic interactive sessions by interleaving Python "
 "code (including the interpreter prompt) and output."
-msgstr ""
+msgstr "*doctest-style* 通过交错Python代码（包括解释器提示）和输出来模仿交互式会话。"
 
 #: ../../usage/extensions/doctest.rst:33
 msgid ""
 "*code-output-style* blocks consist of an ordinary piece of Python code, "
 "and optionally, a piece of output for that code."
-msgstr ""
+msgstr "*code-output-style* 块由一段普通的Python代码组成，并且可选地包含该代码的一段输出。"
 
 #: ../../usage/extensions/doctest.rst:38
 msgid "Directives"
-msgstr "Directives"
+msgstr "指令"
 
 #: ../../usage/extensions/doctest.rst:40
 msgid ""
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../../usage/extensions/doctest.rst:202
 msgid "Skipping tests conditionally"
-msgstr "Skipping tests conditionally"
+msgstr "有条件地跳过测试"
 
 #: ../../usage/extensions/doctest.rst:204
 msgid ""
@@ -325,11 +325,11 @@ msgstr "contents.rst"
 
 #: ../../usage/extensions/doctest.rst:277
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/doctest.rst:279
 msgid "The doctest extension uses the following configuration values:"
-msgstr "The doctest extension uses the following configuration values:"
+msgstr "doctest扩展使用以下配置值:"
 
 #: ../../usage/extensions/doctest.rst:283
 msgid "By default, these options are enabled:"

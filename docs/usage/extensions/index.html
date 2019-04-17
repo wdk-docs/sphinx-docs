@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>扩展 &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>扩展 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -162,87 +162,102 @@
             
   <div class="section" id="extensions">
 <h1>扩展<a class="headerlink" href="#extensions" title="永久链接至标题">¶</a></h1>
-<p>Since many projects will need special features in their documentation, Sphinx
-allows adding “extensions” to the build process, each of which can modify
-almost any aspect of document processing.</p>
-<p>This chapter describes the extensions bundled with Sphinx.  For the API
-documentation on writing your own extension, refer to <a class="reference internal" href="../../extdev/index.html#dev-extensions"><span class="std std-ref">为Sphinx开发扩展</span></a>.</p>
+<p>由于许多项目需要在其文档中使用特殊功能，因此Sphinx允许在构建过程中添加 “extensions” ，每个项目都可以修改文档处理的几乎任何方面。</p>
+<p>本章介绍与Sphinx捆绑在一起的扩展。有关编写自己的扩展的API文档，请参阅 <a class="reference internal" href="../../extdev/index.html#dev-extensions"><span class="std std-ref">为Sphinx开发扩展</span></a> 。</p>
 <div class="section" id="built-in-extensions">
 <h2>内置扩展<a class="headerlink" href="#built-in-extensions" title="永久链接至标题">¶</a></h2>
-<p>These extensions are built in and can be activated by respective entries in the
-<a class="reference internal" href="../configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> configuration value:</p>
+<p>这些扩展是内置的，可以通过 <a class="reference internal" href="../configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置值中的相应条目激活:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="autodoc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> – 包括docstrings中的文档</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="autodoc.html#directives">Directives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autodoc.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autodoc.html#docstring-preprocessing">Docstring preprocessing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autodoc.html#skipping-members">Skipping members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autodoc.html#directives">指令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autodoc.html#configuration">配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autodoc.html#docstring-preprocessing">Docstring预处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autodoc.html#skipping-members">跳过会员</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="autosectionlabel.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="autosectionlabel.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autosectionlabel.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – 允许使用其标题的参考部分</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autosectionlabel.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="autosummary.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – Generate autodoc summaries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="autosummary.html#sphinx-autogen-generate-autodoc-stub-pages"><strong class="program">sphinx-autogen</strong> – generate autodoc stub pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autosummary.html#generating-stub-pages-automatically">Generating stub pages automatically</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autosummary.html#customizing-templates">Customizing templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autosummary.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – 生成autodoc摘要</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autosummary.html#sphinx-autogen-generate-autodoc-stub-pages"><strong class="program">sphinx-autogen</strong> – 生成autodoc存根页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosummary.html#generating-stub-pages-automatically">自动生成存根页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autosummary.html#customizing-templates">自定义模板</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="coverage.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – Collect doc coverage stats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="doctest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – Test snippets in the documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="doctest.html#directives">Directives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doctest.html#skipping-tests-conditionally">Skipping tests conditionally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doctest.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coverage.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – 收集doc覆盖率统计信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doctest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – 测试文档中的代码片段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doctest.html#directives">指令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctest.html#skipping-tests-conditionally">有条件地跳过测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctest.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="extlinks.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – Markup to shorten external links</a></li>
-<li class="toctree-l1"><a class="reference internal" href="githubpages.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code> – Publish HTML docs in GitHub Pages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="graphviz.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.graphviz</span></code> – Add Graphviz graphs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ifconfig.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.ifconfig</span></code> – Include content based on configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="imgconverter.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.imgconverter</span></code> – A reference image converter using Imagemagick</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="imgconverter.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extlinks.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – 标记以缩短外部链接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="githubpages.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code> – 在GitHub页面中发布HTML文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphviz.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.graphviz</span></code> – 添加Graphviz图表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifconfig.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.ifconfig</span></code> – 根据配置包含内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imgconverter.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.imgconverter</span></code> – 使用Imagemagick的参考图像转换器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imgconverter.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="inheritance.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – Include inheritance diagrams</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="inheritance.html#examples">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inheritance.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – 包含继承图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inheritance.html#examples">例子</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intersphinx.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – Link to other projects’ documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intersphinx.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file">Showing all links of an Intersphinx mapping file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intersphinx.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – 链接到其他项目的文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intersphinx.html#configuration">配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file">显示Intersphinx映射文件的所有链接</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="linkcode.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – Add external links to source code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linkcode.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkcode.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – 添加外部链接到源代码</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="linkcode.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="math.html">Math support for HTML outputs in Sphinx</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="math.html#module-sphinx.ext.imgmath"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.imgmath</span></code> – Render math as images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math.html#module-sphinx.ext.mathjax"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.mathjax</span></code> – Render math via JavaScript</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math.html#module-sphinx.ext.jsmath"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.jsmath</span></code> – Render math via JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">Sphinx中对HTML输出的数学支持</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="math.html#module-sphinx.ext.imgmath"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.imgmath</span></code> – 将数学渲染为图像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html#module-sphinx.ext.mathjax"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.mathjax</span></code> – 通过JavaScript渲染数学</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html#module-sphinx.ext.jsmath"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.jsmath</span></code> – 通过JavaScript渲染数学</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="napoleon.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> – Support for NumPy and Google style docstrings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="napoleon.html#overview">Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="napoleon.html#getting-started">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="napoleon.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> – 支持NumPy和Google风格的文档字符串</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="napoleon.html#overview">概观</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="napoleon.html#getting-started">入门</a></li>
 <li class="toctree-l3"><a class="reference internal" href="napoleon.html#id1">Docstrings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="napoleon.html#docstring-sections">Docstring Sections</a></li>
-<li class="toctree-l3"><a class="reference internal" href="napoleon.html#google-vs-numpy">Google vs NumPy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="napoleon.html#type-annotations">Type Annotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="napoleon.html#docstring-sections">Docstring部分</a></li>
+<li class="toctree-l3"><a class="reference internal" href="napoleon.html#google-vs-numpy">Google与NumPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="napoleon.html#type-annotations">输入注释</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="napoleon.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="napoleon.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="todo.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – Support for todo items</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="todo.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – 支持待办事项</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="todo.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="viewcode.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> – Add links to highlighted source code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="viewcode.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewcode.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> – 添加突出显示的源代码的链接</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="viewcode.html#configuration">配置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="httpdomain.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code> — 用于记录HTTP API的Sphinx域</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#additional-configuration">附加配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#basic-usage">基本用法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#directives">指令</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="httpdomain.html#options">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#resource-fields">资源字段</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#roles">角色</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-flask-exporting-api-reference-from-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code> — 从Flask应用程序导出API参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-flaskqref-quick-api-reference-for-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flaskqref</span></code> — Flask app的快速API参考</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="httpdomain.html#id138">基本用法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-bottle-exporting-api-reference-from-bottle-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.bottle</span></code> — 从Bottle应用程序导出API参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-tornado-exporting-api-reference-from-tornado-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code> — 从Tornado应用程序导出API参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#author-and-license">作者和许可证</a></li>
 </ul>
 </li>
 </ul>
@@ -252,23 +267,14 @@ documentation on writing your own extension, refer to <a class="reference intern
 <h2>第三方扩展<a class="headerlink" href="#third-party-extensions" title="永久链接至标题">¶</a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">待处理</p>
-<p>这应该现在引用GitHub组织</p>
+<p>这应该现在引用自GitHub组织</p>
 </div>
-<p>You can find several extensions contributed by users in the <a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib">Sphinx Contrib</a>
-repository.  It is open for anyone who wants to maintain an extension publicly;
-just send a short message asking for write permissions.</p>
-<p>There are also several extensions hosted elsewhere.  The <a class="reference external" href="https://sphinxext-survey.readthedocs.io/">Sphinx extension
-survey</a> and <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">awesome-sphinxdoc</a> contains a comprehensive
-list.</p>
-<p>If you write an extension that you think others will find useful or you think
-should be included as a part of Sphinx, please write to the project mailing
-list (<a class="reference external" href="https://groups.google.com/forum/#!forum/sphinx-dev">join here</a>).</p>
+<p>您可以在 <a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib">Sphinx Contrib</a> 存储库中找到用户贡献的几个扩展。它对任何想要公开维护扩展的人开放;只需发送一条要求写入权限的短消息。</p>
+<p>其他地方也有几个扩展。 <a class="reference external" href="https://sphinxext-survey.readthedocs.io/">Sphinx扩展调查</a> 和 <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">awesome-sphinxdoc</a> 包含一个全面的列表。</p>
+<p>如果您编写了一个您认为其他人会认为有用的扩展程序，或者您认为应该将其作为Sphinx的一部分包含在内，请写入项目邮件列表（<a class="reference external" href="https://groups.google.com/forum/#!forum/sphinx-dev">加入这里</a>）。</p>
 <div class="section" id="where-to-put-your-own-extensions">
 <h3>在哪里放置自己的扩展？<a class="headerlink" href="#where-to-put-your-own-extensions" title="永久链接至标题">¶</a></h3>
-<p>Extensions local to a project should be put within the project’s directory
-structure.  Set Python’s module search path, <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>, accordingly so that
-Sphinx can find them.  For example, if your extension <code class="docutils literal notranslate"><span class="pre">foo.py</span></code> lies in the
-<code class="docutils literal notranslate"><span class="pre">exts</span></code> subdirectory of the project root, put into <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<p>项目本地的扩展应放在项目的目录结构中。相应地设置Python的模块搜索路径 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> ，以便Sphinx可以找到它们。例如，如果您的扩展名 <code class="docutils literal notranslate"><span class="pre">foo.py</span></code> 位于项目根目录的 <code class="docutils literal notranslate"><span class="pre">exts</span></code> 子目录中，则放入 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
 
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;exts&#39;</span><span class="p">))</span>
@@ -276,8 +282,7 @@ Sphinx can find them.  For example, if your extension <code class="docutils lite
 <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>You can also install extensions anywhere else on <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>, e.g. in the
-<code class="docutils literal notranslate"><span class="pre">site-packages</span></code> directory.</p>
+<p>您还可以在 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> 上的任何其他位置安装扩展，例如在 <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> 目录中。</p>
 </div>
 </div>
 </div>
@@ -310,7 +315,7 @@ Sphinx can find them.  For example, if your extension <code class="docutils lite
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

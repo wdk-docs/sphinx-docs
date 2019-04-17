@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.doctest – Test snippets in the documentation &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.doctest – 测试文档中的代码片段 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.extlinks – Markup to shorten external links" href="extlinks.html" />
-    <link rel="prev" title="sphinx.ext.coverage – Collect doc coverage stats" href="coverage.html" />
+    <link rel="next" title="sphinx.ext.extlinks – 标记以缩短外部链接" href="extlinks.html" />
+    <link rel="prev" title="sphinx.ext.coverage – 收集doc覆盖率统计信息" href="coverage.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/doctest.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="extlinks.html" title="sphinx.ext.extlinks – Markup to shorten external links"
+          <a href="extlinks.html" title="sphinx.ext.extlinks – 标记以缩短外部链接"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="coverage.html" title="sphinx.ext.coverage – Collect doc coverage stats"
+          <a href="coverage.html" title="sphinx.ext.coverage – 收集doc覆盖率统计信息"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,20 +120,20 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – Test snippets in the documentation</a><ul>
-<li><a class="reference internal" href="#directives">Directives</a></li>
-<li><a class="reference internal" href="#skipping-tests-conditionally">Skipping tests conditionally</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – 测试文档中的代码片段</a><ul>
+<li><a class="reference internal" href="#directives">指令</a></li>
+<li><a class="reference internal" href="#skipping-tests-conditionally">有条件地跳过测试</a></li>
+<li><a class="reference internal" href="#configuration">配置</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="coverage.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – Collect doc coverage stats</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – 收集doc覆盖率统计信息</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="extlinks.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – Markup to shorten external links</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – 标记以缩短外部链接</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -160,28 +160,21 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.doctest">
-<span id="sphinx-ext-doctest-test-snippets-in-the-documentation"></span><h1><a class="reference internal" href="#module-sphinx.ext.doctest" title="sphinx.ext.doctest: Test snippets in the documentation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code></a> – Test snippets in the documentation<a class="headerlink" href="#module-sphinx.ext.doctest" title="永久链接至标题">¶</a></h1>
-<p id="index-0">This extension allows you to test snippets in the documentation in a natural
-way.  It works by collecting specially-marked up code blocks and running them as
-doctest tests.</p>
-<p>Within one document, test code is partitioned in <em>groups</em>, where each group
-consists of:</p>
+<span id="sphinx-ext-doctest-test-snippets-in-the-documentation"></span><h1><a class="reference internal" href="#module-sphinx.ext.doctest" title="sphinx.ext.doctest: Test snippets in the documentation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code></a> – 测试文档中的代码片段<a class="headerlink" href="#module-sphinx.ext.doctest" title="永久链接至标题">¶</a></h1>
+<p id="index-0">此扩展允许您以自然的方式测试文档中的片段。它的工作原理是收集特别标记的代码块并将它们作为doctest测试运行。</p>
+<p>在一个文档中，测试代码在 <em>groups</em> 中分区，其中每个组包含:</p>
 <ul class="simple">
-<li><p>zero or more <em>setup code</em> blocks (e.g. importing the module to test)</p></li>
-<li><p>one or more <em>test</em> blocks</p></li>
+<li><p>零个或多个 <em>设置代码</em> 块（例如导入模块进行测试）</p></li>
+<li><p>一个或多个 <em>test</em> 块</p></li>
 </ul>
-<p>When building the docs with the <code class="docutils literal notranslate"><span class="pre">doctest</span></code> builder, groups are collected for
-each document and run one after the other, first executing setup code blocks,
-then the test blocks in the order they appear in the file.</p>
-<p>There are two kinds of test blocks:</p>
+<p>在使用 <code class="docutils literal notranslate"><span class="pre">doctest</span></code> 构建器构建文档时，将为每个文档收集组并逐个运行，首先执行设置代码块，然后按照它们在文件中出现的顺序执行测试块。</p>
+<p>有两种测试块:</p>
 <ul class="simple">
-<li><p><em>doctest-style</em> blocks mimic interactive sessions by interleaving Python code
-(including the interpreter prompt) and output.</p></li>
-<li><p><em>code-output-style</em> blocks consist of an ordinary piece of Python code, and
-optionally, a piece of output for that code.</p></li>
+<li><p><em>doctest-style</em> 通过交错Python代码（包括解释器提示）和输出来模仿交互式会话。</p></li>
+<li><p><em>code-output-style</em> 块由一段普通的Python代码组成，并且可选地包含该代码的一段输出。</p></li>
 </ul>
 <div class="section" id="directives">
-<h2>Directives<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
+<h2>指令<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
 <p>The <em>group</em> argument below is interpreted as follows: if it is empty, the block
 is assigned to the group named <code class="docutils literal notranslate"><span class="pre">default</span></code>.  If it is <code class="docutils literal notranslate"><span class="pre">*</span></code>, the block is
 assigned to all groups (including the <code class="docutils literal notranslate"><span class="pre">default</span></code> group).  Otherwise, it must be
@@ -345,7 +338,7 @@ This would output:
 </div>
 </div>
 <div class="section" id="skipping-tests-conditionally">
-<h2>Skipping tests conditionally<a class="headerlink" href="#skipping-tests-conditionally" title="永久链接至标题">¶</a></h2>
+<h2>有条件地跳过测试<a class="headerlink" href="#skipping-tests-conditionally" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">skipif</span></code>, a string option, can be used to skip directives conditionally. This
 may be useful e.g. when a different set of tests should be run depending on the
 environment (hardware, network/VPN, optional dependencies or different versions
@@ -423,8 +416,8 @@ used instead.</p>
 </div>
 </div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
-<p>The doctest extension uses the following configuration values:</p>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<p>doctest扩展使用以下配置值:</p>
 <dl class="confval">
 <dt id="confval-doctest_default_flags">
 <code class="descname">doctest_default_flags</code><a class="headerlink" href="#confval-doctest_default_flags" title="永久链接至目标">¶</a></dt>
@@ -532,10 +525,10 @@ to achieve that in all code blocks with Python console content.</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="extlinks.html" title="sphinx.ext.extlinks – Markup to shorten external links"
+          <a href="extlinks.html" title="sphinx.ext.extlinks – 标记以缩短外部链接"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="coverage.html" title="sphinx.ext.coverage – Collect doc coverage stats"
+          <a href="coverage.html" title="sphinx.ext.coverage – 收集doc覆盖率统计信息"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -545,7 +538,7 @@ to achieve that in all code blocks with Python console content.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

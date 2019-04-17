@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/extlinks.rst:2
 msgid ":mod:`sphinx.ext.extlinks` -- Markup to shorten external links"
-msgstr ":mod:`sphinx.ext.extlinks` -- Markup to shorten external links"
+msgstr ":mod:`sphinx.ext.extlinks` -- 标记以缩短外部链接"
 
 #: ../../usage/extensions/extlinks.rst:10
 msgid ""
@@ -28,7 +28,7 @@ msgid ""
 " bug trackers, version control web interfaces, or simply subpages in "
 "other websites.  It does so by providing aliases to base URLs, so that "
 "you only need to give the subpage name when creating a link."
-msgstr ""
+msgstr "此扩展旨在帮助实现具有指向同一站点上的URL的许多外部链接的常见模式，例如，链接到错误跟踪器，版本控制Web界面，或简单的其他网站的子页面。它通过为基本URL提供别名来实现，因此您只需在创建链接时提供子页面名称。"
 
 #: ../../usage/extensions/extlinks.rst:16
 msgid ""
@@ -36,18 +36,18 @@ msgid ""
 "tracker, at :samp:`https://github.com/sphinx-doc/sphinx/issues/{num}`.  "
 "Typing this URL again and again is tedious, so you can use "
 ":mod:`~sphinx.ext.extlinks` to avoid repeating yourself."
-msgstr ""
+msgstr "假设您希望在Sphinx跟踪器中包含许多问题链接，请访问 :samp:`https://github.com/sphinx-doc/sphinx/issues/{num}` 。  一次又一次地输入这个URL很乏味，所以你可以使用 :mod:`~sphinx.ext.extlinks` 来避免重复自己。"
 
 #: ../../usage/extensions/extlinks.rst:21
 msgid "The extension adds a config value:"
-msgstr "The extension adds a config value:"
+msgstr "扩展名添加配置值:"
 
 #: ../../usage/extensions/extlinks.rst:25
 msgid ""
 "This config value must be a dictionary of external sites, mapping unique "
 "short alias names to a base URL and a *prefix*.  For example, to create "
 "an alias for the above mentioned issues, you would add ::"
-msgstr ""
+msgstr "此配置值必须是外部站点的字典，将唯一的短别名映射到基本URL和 *prefix* 。例如，要为上述问题创建别名，您可以添加::"
 
 #: ../../usage/extensions/extlinks.rst:32
 #, python-format
@@ -56,39 +56,39 @@ msgid ""
 "This then inserts a link to https://github.com/sphinx-"
 "doc/sphinx/issues/123. As you can see, the target given in the role is "
 "substituted in the base URL in the place of ``%s``."
-msgstr ""
+msgstr "现在，您可以将别名用作新角色，例如 ``:issue:`123``` 。然后，这会将链接插入 https://github.com/sphinx-doc/sphinx/issues/123 。正如您所看到的，角色中给出的目标在基本URL中替换为 ``%s``。"
 
 #: ../../usage/extensions/extlinks.rst:37
 msgid "The link *caption* depends on the second item in the tuple, the *prefix*:"
-msgstr "The link *caption* depends on the second item in the tuple, the *prefix*:"
+msgstr "链接 *caption* 取决于元组中的第二项，*prefix*:"
 
 #: ../../usage/extensions/extlinks.rst:39
 msgid "If the prefix is ``None``, the link caption is the full URL."
-msgstr "If the prefix is ``None``, the link caption is the full URL."
+msgstr "如果前缀是 ``None`` ，则链接标题是完整的URL。"
 
 #: ../../usage/extensions/extlinks.rst:40
 msgid ""
 "If the prefix is the empty string, the link caption is the partial URL "
 "given in the role content (``123`` in this case.)"
-msgstr ""
+msgstr "如果前缀是空字符串，则链接标题是角色内容中给出的部分URL（在这种情况下为 ``123`` 。）"
 
 #: ../../usage/extensions/extlinks.rst:42
 msgid ""
 "If the prefix is a non-empty string, the link caption is the partial URL,"
 " prepended by the prefix -- in the above example, the link caption would "
 "be ``issue 123``."
-msgstr ""
+msgstr "如果前缀是非空字符串，则链接标题是前缀前缀的部分URL  - 在上面的示例中，链接标题将是 ``issue 123`` 。"
 
 #: ../../usage/extensions/extlinks.rst:46
 msgid ""
 "You can also use the usual \"explicit title\" syntax supported by other "
 "roles that generate links, i.e. ``:issue:`this issue <123>```.  In this "
 "case, the *prefix* is not relevant."
-msgstr ""
+msgstr "您还可以使用生成链接的其他角色支持的通常的“显式标题”语法，即 ``:issue:`this issue <123>``` 。在这种情况下，*prefix* 不相关。"
 
 #: ../../usage/extensions/extlinks.rst:52
 msgid ""
 "Since links are generated from the role in the reading stage, they appear"
 " as ordinary links to e.g. the ``linkcheck`` builder."
-msgstr ""
+msgstr "由于链接是从阅读阶段的角色生成的，因此它们作为普通链接出现在例如 ``linkcheck`` 构建器。"
 

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.napoleon – Support for NumPy and Google style docstrings &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.napoleon – 支持NumPy和Google风格的文档字符串 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.todo – Support for todo items" href="todo.html" />
-    <link rel="prev" title="Math support for HTML outputs in Sphinx" href="math.html" />
+    <link rel="next" title="sphinx.ext.todo – 支持待办事项" href="todo.html" />
+    <link rel="prev" title="Sphinx中对HTML输出的数学支持" href="math.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="todo.html" title="sphinx.ext.todo – Support for todo items"
+          <a href="todo.html" title="sphinx.ext.todo – 支持待办事项"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="math.html" title="Math support for HTML outputs in Sphinx"
+          <a href="math.html" title="Sphinx中对HTML输出的数学支持"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,26 +120,26 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> – Support for NumPy and Google style docstrings</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a><ul>
-<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> – 支持NumPy和Google风格的文档字符串</a><ul>
+<li><a class="reference internal" href="#overview">概观</a><ul>
+<li><a class="reference internal" href="#getting-started">入门</a></li>
 <li><a class="reference internal" href="#id1">Docstrings</a></li>
-<li><a class="reference internal" href="#docstring-sections">Docstring Sections</a></li>
-<li><a class="reference internal" href="#google-vs-numpy">Google vs NumPy</a></li>
-<li><a class="reference internal" href="#type-annotations">Type Annotations</a></li>
+<li><a class="reference internal" href="#docstring-sections">Docstring部分</a></li>
+<li><a class="reference internal" href="#google-vs-numpy">Google与NumPy</a></li>
+<li><a class="reference internal" href="#type-annotations">输入注释</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#configuration">配置</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="math.html"
-                        title="上一章">Math support for HTML outputs in Sphinx</a></p>
+                        title="上一章">Sphinx中对HTML输出的数学支持</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="todo.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – Support for todo items</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – 支持待办事项</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -166,14 +166,14 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.napoleon">
-<span id="sphinx-ext-napoleon-support-for-numpy-and-google-style-docstrings"></span><h1><a class="reference internal" href="#module-sphinx.ext.napoleon" title="sphinx.ext.napoleon: Support for NumPy and Google style docstrings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code></a> – Support for NumPy and Google style docstrings<a class="headerlink" href="#module-sphinx.ext.napoleon" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-napoleon-support-for-numpy-and-google-style-docstrings"></span><h1><a class="reference internal" href="#module-sphinx.ext.napoleon" title="sphinx.ext.napoleon: Support for NumPy and Google style docstrings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code></a> – 支持NumPy和Google风格的文档字符串<a class="headerlink" href="#module-sphinx.ext.napoleon" title="永久链接至标题">¶</a></h1>
 <p><em>模块作者：Rob Ruana</em></p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>Are you tired of writing docstrings that look like this:</p>
+<h2>概观<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
+<p>你是否厌倦了编写看起来像这样的 docstrings 字符串:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>:param path: The path of the file to wrap
 :type path: str
 :param field_storage: The :class:`FileStorage` instance to wrap
@@ -185,9 +185,7 @@
 :rtype: BufferedFileStorage
 </pre></div>
 </div>
-<p><a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> is great, but it creates visually dense, hard to read
-<a class="reference external" href="https://www.python.org/dev/peps/pep-0287/">docstrings</a>. Compare the jumble above to the same thing rewritten
-according to the <a class="reference external" href="https://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a>:</p>
+<p><a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> 很棒，但它创建了视觉密集，难以阅读的 <a class="reference external" href="https://www.python.org/dev/peps/pep-0287/">docstrings</a> 。 将上面的混乱与根据 <cite>Google Python Style Guide</cite> 重写的相同内容进行比较:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Args:
     path (str): The path of the file to wrap
     field_storage (FileStorage): The :class:`FileStorage` instance to wrap
@@ -198,19 +196,13 @@ Returns:
     BufferedFileStorage: A buffered writable file descriptor
 </pre></div>
 </div>
-<p>Much more legible, no?</p>
-<p>Napoleon is a <a class="reference internal" href="../../glossary.html#term-extension"><span class="xref std std-term">extension</span></a> that enables Sphinx to parse both <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a> and
-<a class="reference external" href="https://google.github.io/styleguide/pyguide.html#Comments">Google</a> style docstrings - the style recommended by <a class="reference external" href="https://github.com/Khan/style-guides/blob/master/style/python.md#docstrings">Khan Academy</a>.</p>
-<p>Napoleon is a pre-processor that parses <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a> and <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#Comments">Google</a> style
-docstrings and converts them to reStructuredText before Sphinx attempts to
-parse them. This happens in an intermediate step while Sphinx is processing
-the documentation, so it doesn’t modify any of the docstrings in your actual
-source code files.</p>
+<p>更清晰，没有？</p>
+<p>Napoleon是一个 <a class="reference internal" href="../../glossary.html#term-extension"><span class="xref std std-term">extension</span></a> ，它使Sphinx能够解析 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a> 和 <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#Comments">Google</a> 风格的文档字符串 - 这是 <a class="reference external" href="https://github.com/Khan/style-guides/blob/master/style/python.md#docstrings">Khan Academy</a> 推荐的风格。</p>
+<p>Napoleon是一个预处理器，它解析 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a> 和 <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#Comments">Google</a> 样式的文档字符串，并在Sphinx尝试解析之前将它们转换为reStructuredText。当Sphinx处理文档时，这会在中间步骤中发生，因此它不会修改实际源代码文件中的任何文档字符串。</p>
 <div class="section" id="getting-started">
-<h3>Getting Started<a class="headerlink" href="#getting-started" title="永久链接至标题">¶</a></h3>
+<h3>入门<a class="headerlink" href="#getting-started" title="永久链接至标题">¶</a></h3>
 <ol class="arabic">
-<li><p>After <a class="reference internal" href="../quickstart.html"><span class="doc">setting up Sphinx</span></a> to build your docs,
-enable napoleon in the Sphinx <cite>conf.py</cite> file:</p>
+<li><p>之后 <a class="reference internal" href="../quickstart.html"><span class="doc">设置Sphinx</span></a> 来构建你的文档，在 Sphinx <cite>conf.py</cite> 文件中启用拿破仑:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># conf.py
 
 # Add napoleon to the extensions list
@@ -218,7 +210,7 @@ extensions = [&#39;sphinx.ext.napoleon&#39;]
 </pre></div>
 </div>
 </li>
-<li><p>Use <cite>sphinx-apidoc</cite> to build your API documentation:</p>
+<li><p>使用 <cite>sphinx-apidoc</cite> 来构建您的API文档:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ sphinx-apidoc -f -o docs/source projectdir
 </pre></div>
 </div>
@@ -227,20 +219,16 @@ extensions = [&#39;sphinx.ext.napoleon&#39;]
 </div>
 <div class="section" id="id1">
 <h3>Docstrings<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
-<p>Napoleon interprets every docstring that <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a>
-can find, including docstrings on: <code class="docutils literal notranslate"><span class="pre">modules</span></code>, <code class="docutils literal notranslate"><span class="pre">classes</span></code>, <code class="docutils literal notranslate"><span class="pre">attributes</span></code>,
-<code class="docutils literal notranslate"><span class="pre">methods</span></code>, <code class="docutils literal notranslate"><span class="pre">functions</span></code>, and <code class="docutils literal notranslate"><span class="pre">variables</span></code>. Inside each docstring,
-specially formatted <a class="reference internal" href="#sections">Sections</a> are parsed and converted to
-reStructuredText.</p>
-<p>All standard reStructuredText formatting still works as expected.</p>
+<p>拿破仑解释每一个文档字符串 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a> 可以找到，包括docstrings: <code class="docutils literal notranslate"><span class="pre">modules</span></code> ， <code class="docutils literal notranslate"><span class="pre">classes</span></code> ， <code class="docutils literal notranslate"><span class="pre">attributes</span></code> ， <code class="docutils literal notranslate"><span class="pre">methods</span></code> ， <code class="docutils literal notranslate"><span class="pre">functions</span></code> 和 <code class="docutils literal notranslate"><span class="pre">variables</span></code> 。 在每个docstring中，特殊格式化的 <a class="reference internal" href="#sections">Sections</a> 被解析并转换为 reStructuredText 。</p>
+<p>所有标准的reStructuredText格式仍然按预期工作。</p>
 </div>
 <div class="section" id="docstring-sections">
-<span id="sections"></span><h3>Docstring Sections<a class="headerlink" href="#docstring-sections" title="永久链接至标题">¶</a></h3>
-<p>All of the following section headers are supported:</p>
+<span id="sections"></span><h3>Docstring部分<a class="headerlink" href="#docstring-sections" title="永久链接至标题">¶</a></h3>
+<p>支持以下所有节标题:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Args</span></code> <em>(alias of Parameters)</em></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Arguments</span></code> <em>(alias of Parameters)</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Args</span></code> <em>(参数的别名)</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Arguments</span></code> <em>(参数的别名)</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Attention</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Attributes</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Caution</span></code></p></li>
@@ -250,14 +238,14 @@ reStructuredText.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">Examples</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Hint</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Important</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Keyword</span> <span class="pre">Args</span></code> <em>(alias of Keyword Arguments)</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Keyword</span> <span class="pre">Args</span></code> <em>(关键字参数的别名)</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Keyword</span> <span class="pre">Arguments</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Methods</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Note</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Notes</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Other</span> <span class="pre">Parameters</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Parameters</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Return</span></code> <em>(alias of Returns)</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Return</span></code> <em>(退货的别名)</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Returns</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Raises</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">References</span></code></p></li>
@@ -265,19 +253,17 @@ reStructuredText.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">Tip</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Todo</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Warning</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Warnings</span></code> <em>(alias of Warning)</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Warnings</span></code> <em>(警告的别名)</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Warns</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Yield</span></code> <em>(alias of Yields)</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Yield</span></code> <em>(收益率的别名)</em></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Yields</span></code></p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="google-vs-numpy">
-<h3>Google vs NumPy<a class="headerlink" href="#google-vs-numpy" title="永久链接至标题">¶</a></h3>
-<p>Napoleon supports two styles of docstrings: <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#Comments">Google</a> and <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a>. The
-main difference between the two styles is that Google uses indentation to
-separate sections, whereas NumPy uses underlines.</p>
-<p>Google style:</p>
+<h3>Google与NumPy<a class="headerlink" href="#google-vs-numpy" title="永久链接至标题">¶</a></h3>
+<p>拿破仑支持两种类型的文档字符串: <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#Comments">Google</a> 和 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a> 。 两种风格之间的主要区别在于Google使用缩进来分隔部分，而NumPy使用下划线。</p>
+<p>Google风格:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Summary line.</span>
 
@@ -294,7 +280,7 @@ separate sections, whereas NumPy uses underlines.</p>
     <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>NumPy style:</p>
+<p>NumPy风格:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Summary line.</span>
 
@@ -316,30 +302,22 @@ separate sections, whereas NumPy uses underlines.</p>
     <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>NumPy style tends to require more vertical space, whereas Google style
-tends to use more horizontal space. Google style tends to be easier to
-read for short and simple docstrings, whereas NumPy style tends be easier
-to read for long and in-depth docstrings.</p>
-<p>The <a class="reference external" href="https://github.com/Khan/style-guides/blob/master/style/python.md#docstrings">Khan Academy</a> recommends using Google style.</p>
-<p>The choice between styles is largely aesthetic, but the two styles should
-not be mixed. Choose one style for your project and be consistent with it.</p>
+<p>NumPy风格往往需要更多的垂直空间，而Google风格倾向于使用更多的水平空间。 对于简短的文档字符串，Google风格往往更容易阅读，而对于长而深入的文档字符串，NumPy风格更容易阅读。</p>
+<p><a class="reference external" href="https://github.com/Khan/style-guides/blob/master/style/python.md#docstrings">Khan Academy</a> 建议使用Google风格。</p>
+<p>风格之间的选择很大程度上是审美的，但两种风格不应混为一谈。为您的项目选择一种样式并与之保持一致。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>For complete examples:</p>
+<p>完整的例子:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="example_google.html#example-google"><span class="std std-ref">Example Google Style Python Docstrings</span></a></p></li>
-<li><p><a class="reference internal" href="example_numpy.html#example-numpy"><span class="std std-ref">Example NumPy Style Python Docstrings</span></a></p></li>
+<li><p><a class="reference internal" href="example_google.html#example-google"><span class="std std-ref">示例Google样式Python Docstrings</span></a></p></li>
+<li><p><a class="reference internal" href="example_numpy.html#example-numpy"><span class="std std-ref">示例NumPy样式Python Docstrings</span></a></p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="type-annotations">
-<h3>Type Annotations<a class="headerlink" href="#type-annotations" title="永久链接至标题">¶</a></h3>
-<p><a class="reference external" href="https://www.python.org/dev/peps/pep-0484/">PEP 484</a> introduced a standard way to express types in Python code.
-This is an alternative to expressing types directly in docstrings.
-One benefit of expressing types according to <a class="reference external" href="https://www.python.org/dev/peps/pep-0484/">PEP 484</a> is that
-type checkers and IDEs can take advantage of them for static code
-analysis.</p>
-<p>Google style with Python 3 type annotations:</p>
+<h3>输入注释<a class="headerlink" href="#type-annotations" title="永久链接至标题">¶</a></h3>
+<p><a class="reference external" href="https://www.python.org/dev/peps/pep-0484/">PEP 484</a> 引入了一种在Python代码中表达类型的标准方法。 这是直接在docstrings中表达类型的替代方法。 根据 <a class="reference external" href="https://www.python.org/dev/peps/pep-0484/">PEP 484</a> 表达类型的一个好处是类型检查器和IDE可以利用它们进行静态代码分析。</p>
+<p>采用Python 3类型注释的Google风格:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>def func(arg1: int, arg2: str) -&gt; bool:
     &quot;&quot;&quot;Summary line.
 
@@ -356,7 +334,7 @@ analysis.</p>
     return True
 </pre></div>
 </div>
-<p>Google style with types in docstrings:</p>
+<p>带有文档字符串类型的Google风格:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>def func(arg1, arg2):
     &quot;&quot;&quot;Summary line.
 
@@ -375,16 +353,13 @@ analysis.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p><a class="reference external" href="https://www.python.org/dev/peps/pep-0484/#suggested-syntax-for-python-2-7-and-straddling-code">Python 2/3 compatible annotations</a> aren’t currently
-supported by Sphinx and won’t show up in the docs.</p>
+<p>Sphinx目前不支持 <a class="reference external" href="https://www.python.org/dev/peps/pep-0484/#suggested-syntax-for-python-2-7-and-straddling-code">Python 2/3 compatible annotations</a>   ，并且不会在文档中显示。</p>
 </div>
 </div>
 </div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
-<p>Listed below are all the settings used by napoleon and their default
-values. These settings can be changed in the Sphinx <cite>conf.py</cite> file. Make
-sure that “sphinx.ext.napoleon” is enabled in <cite>conf.py</cite>:</p>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<p>下面列出的是拿破仑使用的所有设置及其默认值。 可以在Sphinx <cite>conf.py</cite> 文件中更改这些设置。 确保在 <cite>conf.py</cite> 中启用了  “sphinx.ext.napoleon”</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># conf.py
 
 # Add any Sphinx extension module names here, as strings
@@ -407,25 +382,20 @@ napoleon_use_rtype = True
 <dl class="confval">
 <dt id="confval-napoleon_google_docstring">
 <code class="descname">napoleon_google_docstring</code><a class="headerlink" href="#confval-napoleon_google_docstring" title="永久链接至目标">¶</a></dt>
-<dd><p>True to parse <a class="reference external" href="https://google.github.io/styleguide/pyguide.html">Google style</a> docstrings. False to disable support
-for Google style docstrings. <em>Defaults to True.</em></p>
+<dd><p>是的，可以解析 <a class="reference external" href="https://google.github.io/styleguide/pyguide.html">Google style</a> docstrings。如果禁用对Google样式文档字符串的支持，则为false。 <em>默认为True。</em></p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-napoleon_numpy_docstring">
 <code class="descname">napoleon_numpy_docstring</code><a class="headerlink" href="#confval-napoleon_numpy_docstring" title="永久链接至目标">¶</a></dt>
-<dd><p>True to parse <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> docstrings. False to disable support
-for NumPy style docstrings. <em>Defaults to True.</em></p>
+<dd><p>是真的解析 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> docstrings。如果禁用对NumPy样式文档字符串的支持，则为false。 <em>默认为True。</em></p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-napoleon_include_init_with_doc">
 <code class="descname">napoleon_include_init_with_doc</code><a class="headerlink" href="#confval-napoleon_include_init_with_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>True to list <code class="docutils literal notranslate"><span class="pre">__init___</span></code> docstrings separately from the class
-docstring. False to fall back to Sphinx’s default behavior, which
-considers the <code class="docutils literal notranslate"><span class="pre">__init___</span></code> docstring as part of the class
-documentation. <em>Defaults to False.</em></p>
-<p><strong>If True</strong>:</p>
+<dd><p>如果将 <code class="docutils literal notranslate"><span class="pre">__init___</span></code> docstrings与类 docstring 分开列出，则为True。 回到Sphinx的默认行为是错误的，它将 <code class="docutils literal notranslate"><span class="pre">__init___</span></code> docstring 视为类文档的一部分。 <em>默认为False。</em></p>
+<p><strong>如果 True</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>def __init__(self):
     \&quot;\&quot;\&quot;
     This will be included in the docs because it has a docstring
@@ -440,10 +410,8 @@ def __init__(self):
 <dl class="confval">
 <dt id="confval-napoleon_include_private_with_doc">
 <code class="descname">napoleon_include_private_with_doc</code><a class="headerlink" href="#confval-napoleon_include_private_with_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>True to include private members (like <code class="docutils literal notranslate"><span class="pre">_membername</span></code>) with docstrings
-in the documentation. False to fall back to Sphinx’s default behavior.
-<em>Defaults to False.</em></p>
-<p><strong>If True</strong>:</p>
+<dd><p>如果包含文档中的docstrings私有成员(如 <code class="docutils literal notranslate"><span class="pre">_membername</span></code>)，则为True。 错误地回归到Sphinx的默认行为。 <em>默认为False。</em></p>
+<p><strong>如果 True</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>def _included(self):
     &quot;&quot;&quot;
     This will be included in the docs because it has a docstring
@@ -460,10 +428,8 @@ def _skipped(self):
 <dl class="confval">
 <dt id="confval-napoleon_include_special_with_doc">
 <code class="descname">napoleon_include_special_with_doc</code><a class="headerlink" href="#confval-napoleon_include_special_with_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>True to include special members (like <code class="docutils literal notranslate"><span class="pre">__membername__</span></code>) with
-docstrings in the documentation. False to fall back to Sphinx’s
-default behavior. <em>Defaults to True.</em></p>
-<p><strong>If True</strong>:</p>
+<dd><p>如果在文档中包含docstrings的特殊成员(例如 <code class="docutils literal notranslate"><span class="pre">__membername__</span></code>)，则为True。 错误地回归到Sphinx的默认行为。 <em>默认为True。</em></p>
+<p><strong>如果 True</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>def __str__(self):
     &quot;&quot;&quot;
     This will be included in the docs because it has a docstring
@@ -480,23 +446,20 @@ def __unicode__(self):
 <dl class="confval">
 <dt id="confval-napoleon_use_admonition_for_examples">
 <code class="descname">napoleon_use_admonition_for_examples</code><a class="headerlink" href="#confval-napoleon_use_admonition_for_examples" title="永久链接至目标">¶</a></dt>
-<dd><p>True to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span></code> directive for the <strong>Example</strong> and
-<strong>Examples</strong> sections. False to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubric::</span></code> directive
-instead. One may look better than the other depending on what HTML
-theme is used. <em>Defaults to False.</em></p>
-<p>This <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> snippet will be converted as follows:</p>
+<dd><p>对于 <strong>Example</strong> 和 <strong>Example</strong> 部分，使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span></code> 指令。 错误地使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubric::</span></code> 指令。根据使用的HTML主题，一个可能看起来比另一个好。 <em>默认为False。</em></p>
+<p>这个 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> 片段将按如下方式转换:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Example
 -------
 This is just a quick example
 </pre></div>
 </div>
-<p><strong>If True</strong>:</p>
+<p><strong>如果 True</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.. admonition:: Example
 
    This is just a quick example
 </pre></div>
 </div>
-<p><strong>If False</strong>:</p>
+<p><strong>如果 False</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.. rubric:: Example
 
 This is just a quick example
@@ -507,12 +470,10 @@ This is just a quick example
 <dl class="confval">
 <dt id="confval-napoleon_use_admonition_for_notes">
 <code class="descname">napoleon_use_admonition_for_notes</code><a class="headerlink" href="#confval-napoleon_use_admonition_for_notes" title="永久链接至目标">¶</a></dt>
-<dd><p>True to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span></code> directive for <strong>Notes</strong> sections.
-False to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubric::</span></code> directive instead. <em>Defaults to False.</em></p>
+<dd><p>对于 <strong>Notes</strong> 部分，使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span></code> 指令。错误地使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubric::</span></code> 指令。 <em>默认为False。</em></p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>The singular <strong>Note</strong> section will always be converted to a
-<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">note::</span></code> directive.</p>
+<p>单数 <strong>Note</strong> 部分将始终转换为 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">note::</span></code> 指令。</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
@@ -523,9 +484,7 @@ False to use the <code class="docutils literal notranslate"><span class="pre">..
 <dl class="confval">
 <dt id="confval-napoleon_use_admonition_for_references">
 <code class="descname">napoleon_use_admonition_for_references</code><a class="headerlink" href="#confval-napoleon_use_admonition_for_references" title="永久链接至目标">¶</a></dt>
-<dd><p>True to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span></code> directive for <strong>References</strong>
-sections. False to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubric::</span></code> directive instead.
-<em>Defaults to False.</em></p>
+<dd><p>对于 <strong>References</strong> 部分，使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span></code> 指令。错误地使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rubric::</span></code> 指令。 <em>默认为False。</em></p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><code class="xref py py-attr docutils literal notranslate"><span class="pre">napoleon_use_admonition_for_examples</span></code></p>
@@ -535,21 +494,20 @@ sections. False to use the <code class="docutils literal notranslate"><span clas
 <dl class="confval">
 <dt id="confval-napoleon_use_ivar">
 <code class="descname">napoleon_use_ivar</code><a class="headerlink" href="#confval-napoleon_use_ivar" title="永久链接至目标">¶</a></dt>
-<dd><p>True to use the <code class="docutils literal notranslate"><span class="pre">:ivar:</span></code> role for instance variables. False to use
-the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">attribute::</span></code> directive instead. <em>Defaults to False.</em></p>
-<p>This <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> snippet will be converted as follows:</p>
+<dd><p>如果为实例变量，则使用 <code class="docutils literal notranslate"><span class="pre">:ivar:</span></code> 角色。错误地使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">attribute::</span></code> 指令。 <em>默认为False。</em></p>
+<p>这个 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> 片段将按如下方式转换:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Attributes
 ----------
 attr1 : int
     Description of `attr1`
 </pre></div>
 </div>
-<p><strong>If True</strong>:</p>
+<p><strong>如果 True</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>:ivar attr1: Description of `attr1`
 :vartype attr1: int
 </pre></div>
 </div>
-<p><strong>If False</strong>:</p>
+<p><strong>如果 False</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.. attribute:: attr1
 
    Description of `attr1`
@@ -562,10 +520,8 @@ attr1 : int
 <dl class="confval">
 <dt id="confval-napoleon_use_param">
 <code class="descname">napoleon_use_param</code><a class="headerlink" href="#confval-napoleon_use_param" title="永久链接至目标">¶</a></dt>
-<dd><p>True to use a <code class="docutils literal notranslate"><span class="pre">:param:</span></code> role for each function parameter. False to
-use a single <code class="docutils literal notranslate"><span class="pre">:parameters:</span></code> role for all the parameters.
-<em>Defaults to True.</em></p>
-<p>This <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> snippet will be converted as follows:</p>
+<dd><p>如果为每个函数参数使用 <code class="docutils literal notranslate"><span class="pre">:param:</span></code> 角色，则为 True。对所有参数使用单个 <code class="docutils literal notranslate"><span class="pre">:parameters:</span></code> 角色为假。 <em>默认为 True。</em></p>
+<p>这个 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> 片段将按如下方式转换:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Parameters
 ----------
 arg1 : str
@@ -574,14 +530,14 @@ arg2 : int, optional
     Description of `arg2`, defaults to 0
 </pre></div>
 </div>
-<p><strong>If True</strong>:</p>
+<p><strong>如果 True</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>:param arg1: Description of `arg1`
 :type arg1: str
 :param arg2: Description of `arg2`, defaults to 0
 :type arg2: int, optional
 </pre></div>
 </div>
-<p><strong>If False</strong>:</p>
+<p><strong>如果 False</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>:parameters: * **arg1** (*str*) --
                Description of `arg1`
              * **arg2** (*int, optional*) --
@@ -593,14 +549,8 @@ arg2 : int, optional
 <dl class="confval">
 <dt id="confval-napoleon_use_keyword">
 <code class="descname">napoleon_use_keyword</code><a class="headerlink" href="#confval-napoleon_use_keyword" title="永久链接至目标">¶</a></dt>
-<dd><p>True to use a <code class="docutils literal notranslate"><span class="pre">:keyword:</span></code> role for each function keyword argument.
-False to use a single <code class="docutils literal notranslate"><span class="pre">:keyword</span> <span class="pre">arguments:</span></code> role for all the
-keywords.
-<em>Defaults to True.</em></p>
-<p>This behaves similarly to  <code class="xref py py-attr docutils literal notranslate"><span class="pre">napoleon_use_param</span></code>. Note unlike docutils,
-<code class="docutils literal notranslate"><span class="pre">:keyword:</span></code> and <code class="docutils literal notranslate"><span class="pre">:param:</span></code> will not be treated the same way - there will
-be a separate “Keyword Arguments” section, rendered in the same fashion as
-“Parameters” section (type links created if possible)</p>
+<dd><p>如果为每个函数关键字参数使用 <code class="docutils literal notranslate"><span class="pre">:keyword:</span></code> 角色，则为 True。对所有关键字使用单个 <code class="docutils literal notranslate"><span class="pre">:keyword</span> <span class="pre">arguments:</span></code> 角色是错误的。 <em>默认为 True。</em></p>
+<p>其行为类似于 <code class="xref py py-attr docutils literal notranslate"><span class="pre">napoleon_use_param</span></code> 。请注意，与docutils不同，<code class="docutils literal notranslate"><span class="pre">:keyword:</span></code> 和 <code class="docutils literal notranslate"><span class="pre">:param:</span></code> 将不会以同样的方式处理 - 将有一个单独的 “关键字参数” 部分，以与“参数 “相同的方式呈现” 部分(如果可能，创建类型链接)</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><code class="xref py py-attr docutils literal notranslate"><span class="pre">napoleon_use_param</span></code></p>
@@ -610,21 +560,20 @@ be a separate “Keyword Arguments” section, rendered in the same fashion as
 <dl class="confval">
 <dt id="confval-napoleon_use_rtype">
 <code class="descname">napoleon_use_rtype</code><a class="headerlink" href="#confval-napoleon_use_rtype" title="永久链接至目标">¶</a></dt>
-<dd><p>True to use the <code class="docutils literal notranslate"><span class="pre">:rtype:</span></code> role for the return type. False to output
-the return type inline with the description. <em>Defaults to True.</em></p>
-<p>This <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> snippet will be converted as follows:</p>
+<dd><p>如果为返回类型，则使用 <code class="docutils literal notranslate"><span class="pre">:rtype:</span></code> 角色。如果输出与描述内联的返回类型，则返回false。 <em>默认为 True。</em></p>
+<p>这个 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy style</a> 片段将按如下方式转换:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Returns
 -------
 bool
     True if successful, False otherwise
 </pre></div>
 </div>
-<p><strong>If True</strong>:</p>
+<p><strong>如果 True</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>:returns: True if successful, False otherwise
 :rtype: bool
 </pre></div>
 </div>
-<p><strong>If False</strong>:</p>
+<p><strong>如果 False</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>:returns: *bool* -- True if successful, False otherwise
 </pre></div>
 </div>
@@ -649,10 +598,10 @@ bool
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="todo.html" title="sphinx.ext.todo – Support for todo items"
+          <a href="todo.html" title="sphinx.ext.todo – 支持待办事项"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="math.html" title="Math support for HTML outputs in Sphinx"
+          <a href="math.html" title="Sphinx中对HTML输出的数学支持"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -662,7 +611,7 @@ bool
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

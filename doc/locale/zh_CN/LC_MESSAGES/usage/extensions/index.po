@@ -26,14 +26,14 @@ msgid ""
 "Since many projects will need special features in their documentation, "
 "Sphinx allows adding \"extensions\" to the build process, each of which "
 "can modify almost any aspect of document processing."
-msgstr ""
+msgstr "由于许多项目需要在其文档中使用特殊功能，因此Sphinx允许在构建过程中添加 \"extensions\" ，每个项目都可以修改文档处理的几乎任何方面。"
 
 #: ../../usage/extensions/index.rst:9
 msgid ""
 "This chapter describes the extensions bundled with Sphinx.  For the API "
 "documentation on writing your own extension, refer to :ref:`dev-"
 "extensions`."
-msgstr ""
+msgstr "本章介绍与Sphinx捆绑在一起的扩展。有关编写自己的扩展的API文档，请参阅 :ref:`dev-extensions` 。"
 
 #: ../../usage/extensions/index.rst:14
 msgid "Built-in extensions"
@@ -43,7 +43,7 @@ msgstr "内置扩展"
 msgid ""
 "These extensions are built in and can be activated by respective entries "
 "in the :confval:`extensions` configuration value:"
-msgstr ""
+msgstr "这些扩展是内置的，可以通过 :confval:`extensions` 配置值中的相应条目激活:"
 
 #: ../../usage/extensions/index.rst:41
 msgid "Third-party extensions"
@@ -55,7 +55,7 @@ msgstr "待处理"
 
 #: ../../usage/extensions/index.rst:43
 msgid "This should reference the GitHub organization now"
-msgstr "这应该现在引用GitHub组织"
+msgstr "这应该现在引用自GitHub组织"
 
 #: ../../usage/extensions/index.rst:45
 msgid ""
@@ -63,7 +63,7 @@ msgid ""
 "Contrib`_ repository.  It is open for anyone who wants to maintain an "
 "extension publicly; just send a short message asking for write "
 "permissions."
-msgstr ""
+msgstr "您可以在 `Sphinx Contrib`_ 存储库中找到用户贡献的几个扩展。它对任何想要公开维护扩展的人开放;只需发送一条要求写入权限的短消息。"
 
 #: ../../usage/extensions/index.rst:49
 msgid ""
@@ -71,7 +71,7 @@ msgid ""
 "extension survey <https://sphinxext-survey.readthedocs.io/>`__ and "
 "`awesome-sphinxdoc <https://github.com/yoloseem/awesome-sphinxdoc>`__ "
 "contains a comprehensive list."
-msgstr ""
+msgstr "其他地方也有几个扩展。 `Sphinx扩展调查 <https://sphinxext-survey.readthedocs.io/>`__ 和 `awesome-sphinxdoc <https://github.com/yoloseem/awesome-sphinxdoc>`__ 包含一个全面的列表。"
 
 #: ../../usage/extensions/index.rst:54
 msgid ""
@@ -79,7 +79,7 @@ msgid ""
 "think should be included as a part of Sphinx, please write to the project"
 " mailing list (`join here <https://groups.google.com/forum/#!forum"
 "/sphinx-dev>`_)."
-msgstr ""
+msgstr "如果您编写了一个您认为其他人会认为有用的扩展程序，或者您认为应该将其作为Sphinx的一部分包含在内，请写入项目邮件列表（`加入这里 <https://groups.google.com/forum/#!forum/sphinx-dev>`_）。"
 
 #: ../../usage/extensions/index.rst:61
 msgid "Where to put your own extensions?"
@@ -92,13 +92,13 @@ msgid ""
 "accordingly so that Sphinx can find them.  For example, if your extension"
 " ``foo.py`` lies in the ``exts`` subdirectory of the project root, put "
 "into :file:`conf.py`::"
-msgstr ""
+msgstr "项目本地的扩展应放在项目的目录结构中。相应地设置Python的模块搜索路径 ``sys.path`` ，以便Sphinx可以找到它们。例如，如果您的扩展名 ``foo.py`` 位于项目根目录的 ``exts`` 子目录中，则放入 :file:`conf.py` ::"
 
 #: ../../usage/extensions/index.rst:74
 msgid ""
 "You can also install extensions anywhere else on ``sys.path``, e.g. in "
 "the ``site-packages`` directory."
-msgstr ""
+msgstr "您还可以在 ``sys.path`` 上的任何其他位置安装扩展，例如在 ``site-packages`` 目录中。"
 
 #~ msgid "Todo"
 #~ msgstr ""

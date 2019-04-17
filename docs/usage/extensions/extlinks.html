@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.extlinks – Markup to shorten external links &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.extlinks – 标记以缩短外部链接 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.githubpages – Publish HTML docs in GitHub Pages" href="githubpages.html" />
-    <link rel="prev" title="sphinx.ext.doctest – Test snippets in the documentation" href="doctest.html" />
+    <link rel="next" title="sphinx.ext.githubpages – 在GitHub页面中发布HTML文档" href="githubpages.html" />
+    <link rel="prev" title="sphinx.ext.doctest – 测试文档中的代码片段" href="doctest.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="githubpages.html" title="sphinx.ext.githubpages – Publish HTML docs in GitHub Pages"
+          <a href="githubpages.html" title="sphinx.ext.githubpages – 在GitHub页面中发布HTML文档"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="doctest.html" title="sphinx.ext.doctest – Test snippets in the documentation"
+          <a href="doctest.html" title="sphinx.ext.doctest – 测试文档中的代码片段"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,10 +120,10 @@
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="doctest.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – Test snippets in the documentation</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – 测试文档中的代码片段</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="githubpages.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code> – Publish HTML docs in GitHub Pages</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code> – 在GitHub页面中发布HTML文档</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -150,53 +150,35 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.extlinks">
-<span id="sphinx-ext-extlinks-markup-to-shorten-external-links"></span><h1><a class="reference internal" href="#module-sphinx.ext.extlinks" title="sphinx.ext.extlinks: Allow inserting external links with common base URLs easily."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code></a> – Markup to shorten external links<a class="headerlink" href="#module-sphinx.ext.extlinks" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-extlinks-markup-to-shorten-external-links"></span><h1><a class="reference internal" href="#module-sphinx.ext.extlinks" title="sphinx.ext.extlinks: Allow inserting external links with common base URLs easily."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code></a> – 标记以缩短外部链接<a class="headerlink" href="#module-sphinx.ext.extlinks" title="永久链接至标题">¶</a></h1>
 <p><em>模块作者：Georg Brandl</em></p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
-<p>This extension is meant to help with the common pattern of having many external
-links that point to URLs on one and the same site, e.g. links to bug trackers,
-version control web interfaces, or simply subpages in other websites.  It does
-so by providing aliases to base URLs, so that you only need to give the subpage
-name when creating a link.</p>
-<p>Let’s assume that you want to include many links to issues at the Sphinx
-tracker, at <code class="samp docutils literal notranslate"><span class="pre">https://github.com/sphinx-doc/sphinx/issues/</span><em><span class="pre">num</span></em></code>.  Typing
-this URL again and again is tedious, so you can use <a class="reference internal" href="#module-sphinx.ext.extlinks" title="sphinx.ext.extlinks: Allow inserting external links with common base URLs easily."><code class="xref py py-mod docutils literal notranslate"><span class="pre">extlinks</span></code></a>
-to avoid repeating yourself.</p>
-<p>The extension adds a config value:</p>
+<p>此扩展旨在帮助实现具有指向同一站点上的URL的许多外部链接的常见模式，例如，链接到错误跟踪器，版本控制Web界面，或简单的其他网站的子页面。它通过为基本URL提供别名来实现，因此您只需在创建链接时提供子页面名称。</p>
+<p>假设您希望在Sphinx跟踪器中包含许多问题链接，请访问 <code class="samp docutils literal notranslate"><span class="pre">https://github.com/sphinx-doc/sphinx/issues/</span><em><span class="pre">num</span></em></code> 。  一次又一次地输入这个URL很乏味，所以你可以使用 <a class="reference internal" href="#module-sphinx.ext.extlinks" title="sphinx.ext.extlinks: Allow inserting external links with common base URLs easily."><code class="xref py py-mod docutils literal notranslate"><span class="pre">extlinks</span></code></a> 来避免重复自己。</p>
+<p>扩展名添加配置值:</p>
 <dl class="confval">
 <dt id="confval-extlinks">
 <code class="descname">extlinks</code><a class="headerlink" href="#confval-extlinks" title="永久链接至目标">¶</a></dt>
-<dd><p>This config value must be a dictionary of external sites, mapping unique
-short alias names to a base URL and a <em>prefix</em>.  For example, to create an
-alias for the above mentioned issues, you would add</p>
+<dd><p>此配置值必须是外部站点的字典，将唯一的短别名映射到基本URL和 <em>prefix</em> 。例如，要为上述问题创建别名，您可以添加:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extlinks</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;issue&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://github.com/sphinx-doc/sphinx/issues/</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
                       <span class="s1">&#39;issue &#39;</span><span class="p">)}</span>
 </pre></div>
 </div>
-<p>Now, you can use the alias name as a new role, e.g. <code class="docutils literal notranslate"><span class="pre">:issue:`123`</span></code>.  This
-then inserts a link to <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues/123">https://github.com/sphinx-doc/sphinx/issues/123</a>.
-As you can see, the target given in the role is substituted in the base URL
-in the place of <code class="docutils literal notranslate"><span class="pre">%s</span></code>.</p>
-<p>The link <em>caption</em> depends on the second item in the tuple, the <em>prefix</em>:</p>
+<p>现在，您可以将别名用作新角色，例如 <code class="docutils literal notranslate"><span class="pre">:issue:`123`</span></code> 。然后，这会将链接插入 <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues/123">https://github.com/sphinx-doc/sphinx/issues/123</a> 。正如您所看到的，角色中给出的目标在基本URL中替换为 <code class="docutils literal notranslate"><span class="pre">%s</span></code>。</p>
+<p>链接 <em>caption</em> 取决于元组中的第二项，<em>prefix</em>:</p>
 <ul class="simple">
-<li><p>If the prefix is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the link caption is the full URL.</p></li>
-<li><p>If the prefix is the empty string, the link caption is the partial URL
-given in the role content (<code class="docutils literal notranslate"><span class="pre">123</span></code> in this case.)</p></li>
-<li><p>If the prefix is a non-empty string, the link caption is the partial URL,
-prepended by the prefix – in the above example, the link caption would be
-<code class="docutils literal notranslate"><span class="pre">issue</span> <span class="pre">123</span></code>.</p></li>
+<li><p>如果前缀是 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，则链接标题是完整的URL。</p></li>
+<li><p>如果前缀是空字符串，则链接标题是角色内容中给出的部分URL（在这种情况下为 <code class="docutils literal notranslate"><span class="pre">123</span></code> 。）</p></li>
+<li><p>如果前缀是非空字符串，则链接标题是前缀前缀的部分URL  - 在上面的示例中，链接标题将是 <code class="docutils literal notranslate"><span class="pre">issue</span> <span class="pre">123</span></code> 。</p></li>
 </ul>
-<p>You can also use the usual “explicit title” syntax supported by other roles
-that generate links, i.e. <code class="docutils literal notranslate"><span class="pre">:issue:`this</span> <span class="pre">issue</span> <span class="pre">&lt;123&gt;`</span></code>.  In this case, the
-<em>prefix</em> is not relevant.</p>
+<p>您还可以使用生成链接的其他角色支持的通常的“显式标题”语法，即 <code class="docutils literal notranslate"><span class="pre">:issue:`this</span> <span class="pre">issue</span> <span class="pre">&lt;123&gt;`</span></code> 。在这种情况下，<em>prefix</em> 不相关。</p>
 </dd></dl>
 
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Since links are generated from the role in the reading stage, they appear as
-ordinary links to e.g. the <code class="docutils literal notranslate"><span class="pre">linkcheck</span></code> builder.</p>
+<p>由于链接是从阅读阶段的角色生成的，因此它们作为普通链接出现在例如 <code class="docutils literal notranslate"><span class="pre">linkcheck</span></code> 构建器。</p>
 </div>
 </div>
 
@@ -216,10 +198,10 @@ ordinary links to e.g. the <code class="docutils literal notranslate"><span clas
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="githubpages.html" title="sphinx.ext.githubpages – Publish HTML docs in GitHub Pages"
+          <a href="githubpages.html" title="sphinx.ext.githubpages – 在GitHub页面中发布HTML文档"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="doctest.html" title="sphinx.ext.doctest – Test snippets in the documentation"
+          <a href="doctest.html" title="sphinx.ext.doctest – 测试文档中的代码片段"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -229,7 +211,7 @@ ordinary links to e.g. the <code class="docutils literal notranslate"><span clas
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

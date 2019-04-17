@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.viewcode – Add links to highlighted source code &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.viewcode – 添加突出显示的源代码的链接 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="HTML" href="../theming.html" />
-    <link rel="prev" title="sphinx.ext.todo – Support for todo items" href="todo.html" />
+    <link rel="next" title="sphinxcontrib.httpdomain — Sphinx domain for documenting HTTP APIs" href="httpdomain.html" />
+    <link rel="prev" title="sphinx.ext.todo – 支持待办事项" href="todo.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="../theming.html" title="HTML"
+          <a href="httpdomain.html" title="sphinxcontrib.httpdomain — Sphinx domain for documenting HTTP APIs"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="todo.html" title="sphinx.ext.todo – Support for todo items"
+          <a href="todo.html" title="sphinx.ext.todo – 支持待办事项"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,18 +120,18 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> – Add links to highlighted source code</a><ul>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> – 添加突出显示的源代码的链接</a><ul>
+<li><a class="reference internal" href="#configuration">配置</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="todo.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – Support for todo items</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – 支持待办事项</a></p>
   <h4>下一个主题</h4>
-  <p class="topless"><a href="../theming.html"
-                        title="下一章">HTML</a></p>
+  <p class="topless"><a href="httpdomain.html"
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code> — Sphinx domain for documenting HTTP APIs</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -158,37 +158,22 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.viewcode">
-<span id="sphinx-ext-viewcode-add-links-to-highlighted-source-code"></span><h1><a class="reference internal" href="#module-sphinx.ext.viewcode" title="sphinx.ext.viewcode: Add links to a highlighted version of the source code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code></a> – Add links to highlighted source code<a class="headerlink" href="#module-sphinx.ext.viewcode" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-viewcode-add-links-to-highlighted-source-code"></span><h1><a class="reference internal" href="#module-sphinx.ext.viewcode" title="sphinx.ext.viewcode: Add links to a highlighted version of the source code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code></a> – 添加突出显示的源代码的链接<a class="headerlink" href="#module-sphinx.ext.viewcode" title="永久链接至标题">¶</a></h1>
 <p><em>模块作者：Georg Brandl</em></p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
-<p>This extension looks at your Python object descriptions (<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">class::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span>
-<span class="pre">function::</span></code> etc.) and tries to find the source files where the objects are
-contained.  When found, a separate HTML page will be output for each module with
-a highlighted version of the source code, and a link will be added to all object
-descriptions that leads to the source code of the described object.  A link back
-from the source to the description will also be inserted.</p>
+<p>这个扩展名查看你的Python对象描述(<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">class::</span></code>, <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">function::</span></code> 等)并尝试查找包含对象的源文件。找到后，将为每个模块输出一个单独的HTML页面，其中包含源代码的突出显示版本，并且链接将添加到所有对象描述中，这些描述将导致所描述对象的源代码。还将插入从源到描述的链接。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Basically, <code class="docutils literal notranslate"><span class="pre">viewcode</span></code> extension will import the modules being linked to.
-If any modules have side effects on import, these will be executed when
-<code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> is run.</p>
-<p>If you document scripts (as opposed to library modules), make sure their
-main routine is protected by a <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> condition.</p>
-<p>In addition, if you don’t want to import the modules by <code class="docutils literal notranslate"><span class="pre">viewcode</span></code>,
-you can tell the location of the location of source code to <code class="docutils literal notranslate"><span class="pre">viewcode</span></code>
-using the <a class="reference internal" href="#event-viewcode-find-source"><code class="xref std std-event docutils literal notranslate"><span class="pre">viewcode-find-source</span></code></a> event.</p>
-<p>If <a class="reference internal" href="#confval-viewcode_follow_imported_members"><code class="xref std std-confval docutils literal notranslate"><span class="pre">viewcode_follow_imported_members</span></code></a> is enabled,
-you will also need to resolve imported attributes
-using the <a class="reference internal" href="#event-viewcode-follow-imported"><code class="xref std std-event docutils literal notranslate"><span class="pre">viewcode-follow-imported</span></code></a> event.</p>
+<p>基本上， <code class="docutils literal notranslate"><span class="pre">viewcode</span></code> 扩展名将导入链接到的模块。如果任何模块在导入时有副作用，那么当运行 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 时会执行这些副作用。</p>
+<p>如果您记录脚本（而不是库模块），请确保它们的主例程受 <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> 条件的保护。</p>
+<p>另外，如果你不想通过 <code class="docutils literal notranslate"><span class="pre">viewcode</span></code> 导入模块，你可以使用 <a class="reference internal" href="#event-viewcode-find-source"><code class="xref std std-event docutils literal notranslate"><span class="pre">viewcode-find-source</span></code></a> 事件来告诉源代码 <code class="docutils literal notranslate"><span class="pre">viewcode</span></code> 的位置。 。</p>
+<p>如果 <a class="reference internal" href="#confval-viewcode_follow_imported_members"><code class="xref std std-confval docutils literal notranslate"><span class="pre">viewcode_follow_imported_members</span></code></a> 已启用，您还需要使用 <a class="reference internal" href="#event-viewcode-follow-imported"><code class="xref std std-event docutils literal notranslate"><span class="pre">viewcode-follow-imported</span></code></a> 事件来解析导入的属性。</p>
 </div>
-<p>This extension works only on HTML related builders like <code class="docutils literal notranslate"><span class="pre">html</span></code>,
-<code class="docutils literal notranslate"><span class="pre">applehelp</span></code>, <code class="docutils literal notranslate"><span class="pre">devhelp</span></code>, <code class="docutils literal notranslate"><span class="pre">htmlhelp</span></code>, <code class="docutils literal notranslate"><span class="pre">qthelp</span></code> and so on except
-<code class="docutils literal notranslate"><span class="pre">singlehtml</span></code>. By default <code class="docutils literal notranslate"><span class="pre">epub</span></code> builder doesn’t
-support this extension (see <a class="reference internal" href="#confval-viewcode_enable_epub"><code class="xref std std-confval docutils literal notranslate"><span class="pre">viewcode_enable_epub</span></code></a>).</p>
+<p>此扩展仅适用于HTML相关的构建器，如 <code class="docutils literal notranslate"><span class="pre">html</span></code> ， <code class="docutils literal notranslate"><span class="pre">applehelp</span></code> ， <code class="docutils literal notranslate"><span class="pre">devhelp</span></code> ， <code class="docutils literal notranslate"><span class="pre">htmlhelp</span></code> ， <code class="docutils literal notranslate"><span class="pre">qthelp</span></code> 等除了 <code class="docutils literal notranslate"><span class="pre">singlehtml</span></code> 。默认情况下， <code class="docutils literal notranslate"><span class="pre">epub</span></code> 构建器不支持此扩展（请参阅 <a class="reference internal" href="#confval-viewcode_enable_epub"><code class="xref std std-confval docutils literal notranslate"><span class="pre">viewcode_enable_epub</span></code></a>）。</p>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
 <dl class="confval">
 <dt id="confval-viewcode_follow_imported_members">
 <code class="descname">viewcode_follow_imported_members</code><a class="headerlink" href="#confval-viewcode_follow_imported_members" title="永久链接至目标">¶</a></dt>
@@ -285,10 +270,10 @@ The type should be one of “class”, “def”, or “other”.</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="../theming.html" title="HTML"
+          <a href="httpdomain.html" title="sphinxcontrib.httpdomain — Sphinx domain for documenting HTTP APIs"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="todo.html" title="sphinx.ext.todo – Support for todo items"
+          <a href="todo.html" title="sphinx.ext.todo – 支持待办事项"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -298,7 +283,7 @@ The type should be one of “class”, “def”, or “other”.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

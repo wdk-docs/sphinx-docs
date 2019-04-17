@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.githubpages – Publish HTML docs in GitHub Pages &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.githubpages – 在GitHub页面中发布HTML文档 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.graphviz – Add Graphviz graphs" href="graphviz.html" />
-    <link rel="prev" title="sphinx.ext.extlinks – Markup to shorten external links" href="extlinks.html" />
+    <link rel="next" title="sphinx.ext.graphviz – 添加Graphviz图表" href="graphviz.html" />
+    <link rel="prev" title="sphinx.ext.extlinks – 标记以缩短外部链接" href="extlinks.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/githubpages.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="graphviz.html" title="sphinx.ext.graphviz – Add Graphviz graphs"
+          <a href="graphviz.html" title="sphinx.ext.graphviz – 添加Graphviz图表"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="extlinks.html" title="sphinx.ext.extlinks – Markup to shorten external links"
+          <a href="extlinks.html" title="sphinx.ext.extlinks – 标记以缩短外部链接"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,10 +120,10 @@
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="extlinks.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – Markup to shorten external links</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – 标记以缩短外部链接</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="graphviz.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.graphviz</span></code> – Add Graphviz graphs</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.graphviz</span></code> – 添加Graphviz图表</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -150,17 +150,15 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.githubpages">
-<span id="sphinx-ext-githubpages-publish-html-docs-in-github-pages"></span><h1><a class="reference internal" href="#module-sphinx.ext.githubpages" title="sphinx.ext.githubpages: Publish HTML docs in GitHub Pages"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code></a> – Publish HTML docs in GitHub Pages<a class="headerlink" href="#module-sphinx.ext.githubpages" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-githubpages-publish-html-docs-in-github-pages"></span><h1><a class="reference internal" href="#module-sphinx.ext.githubpages" title="sphinx.ext.githubpages: Publish HTML docs in GitHub Pages"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code></a> – 在GitHub页面中发布HTML文档<a class="headerlink" href="#module-sphinx.ext.githubpages" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">1.4 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 2.0 版更改: </span>Support <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> file</p>
+<p><span class="versionmodified changed">在 2.0 版更改: </span>支持 <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> 文件</p>
 </div>
-<p>This extension creates <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file on generated HTML directory to publish
-the document on GitHub Pages.</p>
-<p>It also creates a <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> file for custom domains when <a class="reference internal" href="../configuration.html#confval-html_baseurl"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_baseurl</span></code></a>
-set.</p>
+<p>此扩展在生成的HTML目录上创建 <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> 文件，以在GitHub页面上发布文档。</p>
+<p>当 <a class="reference internal" href="../configuration.html#confval-html_baseurl"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_baseurl</span></code></a> 设置时, 它还会在以下情况下为自定义域创建一个 <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> 文件 。</p>
 </div>
 
 
@@ -179,10 +177,10 @@ set.</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="graphviz.html" title="sphinx.ext.graphviz – Add Graphviz graphs"
+          <a href="graphviz.html" title="sphinx.ext.graphviz – 添加Graphviz图表"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="extlinks.html" title="sphinx.ext.extlinks – Markup to shorten external links"
+          <a href="extlinks.html" title="sphinx.ext.extlinks – 标记以缩短外部链接"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -192,7 +190,7 @@ set.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

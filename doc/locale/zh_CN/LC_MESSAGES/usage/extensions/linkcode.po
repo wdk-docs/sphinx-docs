@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/linkcode.rst:2
 msgid ":mod:`sphinx.ext.linkcode` -- Add external links to source code"
-msgstr ":mod:`sphinx.ext.linkcode` -- Add external links to source code"
+msgstr ":mod:`sphinx.ext.linkcode` -- 添加外部链接到源代码"
 
 #: ../../usage/extensions/linkcode.rst:10
 msgid ""
@@ -27,55 +27,55 @@ msgid ""
 "function::`` etc.) and adds external links to code hosted somewhere on "
 "the web. The intent is similar to the ``sphinx.ext.viewcode`` extension, "
 "but assumes the source code can be found somewhere on the Internet."
-msgstr ""
+msgstr "这个扩展名查看你的对象描述(``class ::`` ， ``.. function ::`` 等)，并在Web上某处托管的代码中添加外部链接。意图类似于 ``sphinx.ext.viewcode`` 扩展，但假设源代码可以在Internet上的某处找到。"
 
 #: ../../usage/extensions/linkcode.rst:16
 msgid ""
 "In your configuration, you need to specify a :confval:`linkcode_resolve` "
 "function that returns an URL based on the object."
-msgstr ""
+msgstr "在您的配置中，您需要指定 :confval:`linkcode_resolve` 函数，该函数返回基于对象的URL。"
 
 #: ../../usage/extensions/linkcode.rst:21
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/linkcode.rst:25
 msgid ""
 "This is a function ``linkcode_resolve(domain, info)``, which should "
 "return the URL to source code corresponding to the object in given domain"
 " with given information."
-msgstr ""
+msgstr "这是一个函数 ``linkcode_resolve(domain，info)`` ，它应该返回给定信息给定域中对象的源代码的URL。"
 
 #: ../../usage/extensions/linkcode.rst:29
 msgid "The function should return ``None`` if no link is to be added."
-msgstr "The function should return ``None`` if no link is to be added."
+msgstr "如果不添加链接，该函数应返回“None”。"
 
 #: ../../usage/extensions/linkcode.rst:31
 msgid ""
 "The argument ``domain`` specifies the language domain the object is in. "
 "``info`` is a dictionary with the following keys guaranteed to be present"
 " (dependent on the domain):"
-msgstr ""
+msgstr "参数 ``domain`` 指定对象所在的语言域。 ``info`` 是一个字典，其中保证存在以下键(取决于域)："
 
 #: ../../usage/extensions/linkcode.rst:35
 msgid "``py``: ``module`` (name of the module), ``fullname`` (name of the object)"
-msgstr "``py``: ``module`` (name of the module), ``fullname`` (name of the object)"
+msgstr "``py``: ``module`` (模块的名称), ``fullname`` (对象的名称)"
 
 #: ../../usage/extensions/linkcode.rst:36
 msgid "``c``: ``names`` (list of names for the object)"
-msgstr "``c``: ``names`` (list of names for the object)"
+msgstr "``c``: ``names`` (对象的名称列表)"
 
 #: ../../usage/extensions/linkcode.rst:37
 msgid "``cpp``: ``names`` (list of names for the object)"
-msgstr "``cpp``: ``names`` (list of names for the object)"
+msgstr "``cpp``: ``names`` (对象的名称列表)"
 
 #: ../../usage/extensions/linkcode.rst:38
 msgid ""
 "``javascript``: ``object`` (name of the object), ``fullname`` (name of "
 "the item)"
-msgstr ""
+msgstr "``javascript``: ``object`` (对象的名称), ``fullname`` (项目名称)"
 
 #: ../../usage/extensions/linkcode.rst:41
 msgid "Example:"
-msgstr "Example:"
+msgstr "例:"
 

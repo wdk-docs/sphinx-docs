@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.autodoc – 包括docstrings中的文档 &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.autodoc – 包括docstrings中的文档 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,12 +16,12 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.autosectionlabel – Allow reference sections using its title" href="autosectionlabel.html" />
+    <link rel="next" title="sphinx.ext.autosectionlabel – 允许使用其标题的参考部分" href="autosectionlabel.html" />
     <link rel="prev" title="扩展" href="index.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html" />
 
@@ -105,7 +105,7 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – Allow reference sections using its title"
+          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – 允许使用其标题的参考部分"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="index.html" title="扩展"
@@ -121,10 +121,10 @@
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> – 包括docstrings中的文档</a><ul>
-<li><a class="reference internal" href="#directives">Directives</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
-<li><a class="reference internal" href="#docstring-preprocessing">Docstring preprocessing</a></li>
-<li><a class="reference internal" href="#skipping-members">Skipping members</a></li>
+<li><a class="reference internal" href="#directives">指令</a></li>
+<li><a class="reference internal" href="#configuration">配置</a></li>
+<li><a class="reference internal" href="#docstring-preprocessing">Docstring预处理</a></li>
+<li><a class="reference internal" href="#skipping-members">跳过会员</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
                         title="上一章">扩展</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="autosectionlabel.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – 允许使用其标题的参考部分</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -162,45 +162,24 @@
             
   <div class="section" id="module-sphinx.ext.autodoc">
 <span id="sphinx-ext-autodoc-include-documentation-from-docstrings"></span><h1><a class="reference internal" href="#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> – 包括docstrings中的文档<a class="headerlink" href="#module-sphinx.ext.autodoc" title="永久链接至标题">¶</a></h1>
-<p id="index-0">This extension can import the modules you are documenting, and pull in
-documentation from docstrings in a semi-automatic way.</p>
+<p id="index-0">此扩展可以导入您正在记录的模块，并以半自动方式从文档字符串中提取文档。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>For Sphinx (actually, the Python interpreter that executes Sphinx) to find
-your module, it must be importable.  That means that the module or the
-package must be in one of the directories on <code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code> – adapt your
-<code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code> in the configuration file accordingly.</p>
+<p>对于Sphinx（实际上是执行Sphinx的Python解释器）来查找模块，它必须是可导入的。  这意味着模块或包必须位于以下目录之一 <code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code> - 相应地调整配置文件中的 <code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code> 。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p><a class="reference internal" href="#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a> <strong>imports</strong> the modules to be documented.  If any
-modules have side effects on import, these will be executed by <code class="docutils literal notranslate"><span class="pre">autodoc</span></code>
-when <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> is run.</p>
-<p>If you document scripts (as opposed to library modules), make sure their main
-routine is protected by a <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> condition.</p>
+<p><a class="reference internal" href="#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a> <strong>导入</strong> 要记录的模块。如果任何模块对导入有副作用，那么当运行 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 时，这些将由 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> 执行。</p>
+<p>如果您记录脚本（而不是库模块），请确保它们的主例程受 <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> 条件的保护。</p>
 </div>
-<p>For this to work, the docstrings must of course be written in correct
-reStructuredText.  You can then use all of the usual Sphinx markup in the
-docstrings, and it will end up correctly in the documentation.  Together with
-hand-written documentation, this technique eases the pain of having to maintain
-two locations for documentation, while at the same time avoiding
-auto-generated-looking pure API documentation.</p>
-<p>If you prefer <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a> or <a class="reference external" href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings">Google</a> style docstrings over reStructuredText,
-you can also enable the <a class="reference internal" href="napoleon.html#module-sphinx.ext.napoleon" title="sphinx.ext.napoleon: Support for NumPy and Google style docstrings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">napoleon</span></code></a> extension.
-<a class="reference internal" href="napoleon.html#module-sphinx.ext.napoleon" title="sphinx.ext.napoleon: Support for NumPy and Google style docstrings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">napoleon</span></code></a> is a preprocessor that converts your
-docstrings to correct reStructuredText before <code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code> processes them.</p>
+<p>为了实现这一点，文档字符串当然必须用正确的reStructuredText编写。然后，您可以在文档字符串中使用所有常用的Sphinx标记，它最终会在文档中正确显示。与手写文档一起，这种技术减轻了必须维护两个文档位置的痛苦，同时避免了自动生成的纯API文档。</p>
+<p>如果您更喜欢 <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">NumPy</a> 或 <a class="reference external" href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings">Google</a> 样式文档字符串而不是 reStructuredText，您还可以启用 <a class="reference internal" href="napoleon.html#module-sphinx.ext.napoleon" title="sphinx.ext.napoleon: Support for NumPy and Google style docstrings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">napoleon</span></code></a> 扩展名。  <a class="reference internal" href="napoleon.html#module-sphinx.ext.napoleon" title="sphinx.ext.napoleon: Support for NumPy and Google style docstrings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">napoleon</span></code></a> 是一个预处理器，可以将你的文档字符串转换为正确的reStructuredText <code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code> 处理它们。</p>
 <div class="section" id="directives">
-<h2>Directives<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
-<p><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code> provides several directives that are versions of the usual
-<a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a>, <a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a> and so forth.  On parsing time, they
-import the corresponding module and extract the docstring of the given objects,
-inserting them into the page source under a suitable <a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a>,
-<a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a> etc.  directive.</p>
+<h2>指令<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
+<p><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code> 提供了几个通常版本的指令 <a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a> ， <a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a> 等等。在解析时，他们导入相应的模块并提取给定对象的文档字符串，将它们插入适当的页面源 <a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a> ， <a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a> 等。指示。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Just as <a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a> respects the current <a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a>,
-<a class="reference internal" href="#directive-autoclass" title="autoclass directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autoclass</span></code></a> will also do so.  Likewise, <a class="reference internal" href="#directive-automethod" title="automethod directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">automethod</span></code></a> will
-respect the current <a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a>.</p>
+<p>就像 <a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a> 尊重当前 <a class="reference internal" href="../restructuredtext/domains.html#directive-py:module" title="py:module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:module</span></code></a> ， <a class="reference internal" href="#directive-autoclass" title="autoclass directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autoclass</span></code></a> 也会这样做。同样地， <a class="reference internal" href="#directive-automethod" title="automethod directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">automethod</span></code></a> 将尊重当前 <a class="reference internal" href="../restructuredtext/domains.html#directive-py:class" title="py:class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">py:class</span></code></a> 。</p>
 </div>
 <dl class="directive">
 <dt id="directive-automodule">
@@ -209,22 +188,18 @@ respect the current <a class="reference internal" href="../restructuredtext/doma
 <code class="descname">.. autoclass::</code><a class="headerlink" href="#directive-autoclass" title="永久链接至目标">¶</a></dt>
 <dt id="directive-autoexception">
 <code class="descname">.. autoexception::</code><a class="headerlink" href="#directive-autoexception" title="永久链接至目标">¶</a></dt>
-<dd><p>Document a module, class or exception.  All three directives will by default
-only insert the docstring of the object itself:</p>
+<dd><p>记录模块，类或异常。  默认情况下，所有三个指令都只插入对象本身的docstring:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> Noodle
 </pre></div>
 </div>
-<p>will produce source like this:</p>
+<p>会产生这样的来源:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> Noodle
 
    Noodle&#39;s docstring.
 </pre></div>
 </div>
-<p>The “auto” directives can also contain content of their own, it will be
-inserted into the resulting non-auto directive source after the docstring
-(but before any automatic member documentation).</p>
-<p>Therefore, you can also mix automatic and non-automatic member documentation,
-like so:</p>
+<p>“auto” 指令也可以包含自己的内容，它将在docstring之后插入到生成的非自动指令源中（但在任何自动成员文档之前）。</p>
+<p>因此，您还可以混合使用自动和非自动成员文档，例如:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> Noodle
    <span class="nc">:members:</span> <span class="nf">eat, slurp</span>
 
@@ -233,54 +208,44 @@ like so:</p>
       Boil the noodle <span class="ge">*time*</span> minutes.
 </pre></div>
 </div>
-<p><strong>Options and advanced usage</strong></p>
+<p><strong>选项和高级用法</strong></p>
 <ul>
-<li><p>If you want to automatically document members, there’s a <code class="docutils literal notranslate"><span class="pre">members</span></code>
-option:</p>
+<li><p>如果你想自动记录成员，那就有一个 <code class="docutils literal notranslate"><span class="pre">members</span></code> 选项:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> noodle
    <span class="nc">:members:</span>
 </pre></div>
 </div>
-<p>will document all module members (recursively), and</p>
+<p>将记录所有模块成员（递归），:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> Noodle
    <span class="nc">:members:</span>
 </pre></div>
 </div>
-<p>will document all non-private member functions and properties (that is,
-those whose name doesn’t start with <code class="docutils literal notranslate"><span class="pre">_</span></code>).</p>
-<p>For modules, <code class="docutils literal notranslate"><span class="pre">__all__</span></code> will be respected when looking for members unless
-you give the <code class="docutils literal notranslate"><span class="pre">ignore-module-all</span></code> flag option.  Without
-<code class="docutils literal notranslate"><span class="pre">ignore-module-all</span></code>, the order of the members will also be the order in
-<code class="docutils literal notranslate"><span class="pre">__all__</span></code>.</p>
-<p>You can also give an explicit list of members; only these will then be
-documented:</p>
+<p>将记录所有非私有成员函数和属性（即名称不以 <code class="docutils literal notranslate"><span class="pre">_</span></code> 开头的那些）。</p>
+<p>对于模块，除非你给出 <code class="docutils literal notranslate"><span class="pre">ignore-module-all</span></code> 标志选项，否则在查找成员时将会尊重 <code class="docutils literal notranslate"><span class="pre">__all__</span></code> 。没有 <code class="docutils literal notranslate"><span class="pre">ignore-module-all</span></code> ，成员的顺序也将是 <code class="docutils literal notranslate"><span class="pre">__all__</span></code> 中的顺序。</p>
+<p>您还可以提供明确的成员列表;只有这些将被记录:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> Noodle
    <span class="nc">:members:</span> <span class="nf">eat, slurp</span>
 </pre></div>
 </div>
 </li>
-<li><p>If you want to make the <code class="docutils literal notranslate"><span class="pre">members</span></code> option (or other options described
-below) the default, see <a class="reference internal" href="#confval-autodoc_default_options"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autodoc_default_options</span></code></a>.</p>
+<li><p>如果你想使 <code class="docutils literal notranslate"><span class="pre">members</span></code> 选项（或下面描述的其他选项）成为默认选项，请参阅 <a class="reference internal" href="#confval-autodoc_default_options"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autodoc_default_options</span></code></a> 。</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>You can use a negated form, <code class="samp docutils literal notranslate"><span class="pre">'no-</span><em><span class="pre">flag</span></em><span class="pre">'</span></code>, as an option of
-autodoc directive, to disable it temporarily.  For example:</p>
+<p>你可以使用一个否定的形式 <code class="samp docutils literal notranslate"><span class="pre">'no-</span> <em><span class="pre">flag</span></em><span class="pre">'</span></code> 作为autodoc指令的一个选项，暂时禁用它。例如:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> foo
    <span class="nc">:no-undoc-members:</span>
 </pre></div>
 </div>
 </div>
 </li>
-<li><p>Members without docstrings will be left out, unless you give the
-<code class="docutils literal notranslate"><span class="pre">undoc-members</span></code> flag option:</p>
+<li><p>没有docstrings的成员将被省略，除非你给出``undoc-members`` 标志选项:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> noodle
    <span class="nc">:members:</span>
    <span class="nc">:undoc-members:</span>
 </pre></div>
 </div>
 </li>
-<li><p>“Private” members (that is, those named like <code class="docutils literal notranslate"><span class="pre">_private</span></code> or <code class="docutils literal notranslate"><span class="pre">__private</span></code>)
-will be included if the <code class="docutils literal notranslate"><span class="pre">private-members</span></code> flag option is given.</p>
+<li><p>如果给出 <code class="docutils literal notranslate"><span class="pre">private-members</span></code> flag选项，将包含 <code class="docutils literal notranslate"><span class="pre">Private</span></code> 成员（即名为 <code class="docutils literal notranslate"><span class="pre">_private</span></code> 或 <code class="docutils literal notranslate"><span class="pre">__private</span></code> 的成员）。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -474,8 +439,8 @@ well-behaved decorating functions.</p>
 
 </div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
-<p>There are also config values that you can set:</p>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<p>您还可以设置配置值:</p>
 <dl class="confval">
 <dt id="confval-autoclass_content">
 <code class="descname">autoclass_content</code><a class="headerlink" href="#confval-autoclass_content" title="永久链接至目标">¶</a></dt>
@@ -516,7 +481,7 @@ source code available.</p>
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.0 版更改: </span>Support for <code class="docutils literal notranslate"><span class="pre">'bysource'</span></code>.</p>
+<p><span class="versionmodified changed">在 1.0 版更改: </span>支持 <code class="docutils literal notranslate"><span class="pre">'bysource'</span></code>.</p>
 </div>
 </dd></dl>
 
@@ -636,8 +601,8 @@ addition:</p>
 
 </div>
 <div class="section" id="docstring-preprocessing">
-<h2>Docstring preprocessing<a class="headerlink" href="#docstring-preprocessing" title="永久链接至标题">¶</a></h2>
-<p>autodoc provides the following additional events:</p>
+<h2>Docstring预处理<a class="headerlink" href="#docstring-preprocessing" title="永久链接至标题">¶</a></h2>
+<p>autodoc提供以下附加事件:</p>
 <dl class="event">
 <dt id="event-autodoc-process-docstring">
 <code class="descname">autodoc-process-docstring</code><span class="sig-paren">(</span><em>app</em>, <em>what</em>, <em>name</em>, <em>obj</em>, <em>options</em>, <em>lines</em><span class="sig-paren">)</span><a class="headerlink" href="#event-autodoc-process-docstring" title="永久链接至目标">¶</a></dt>
@@ -650,17 +615,12 @@ can modify <strong>in place</strong> to change what Sphinx puts into the output.
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>app</strong> – the Sphinx application object</p></li>
-<li><p><strong>what</strong> – the type of the object which the docstring belongs to (one of
-<code class="docutils literal notranslate"><span class="pre">&quot;module&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;class&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;exception&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;function&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;method&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;attribute&quot;</span></code>)</p></li>
-<li><p><strong>name</strong> – the fully qualified name of the object</p></li>
-<li><p><strong>obj</strong> – the object itself</p></li>
-<li><p><strong>options</strong> – the options given to the directive: an object with attributes
-<code class="docutils literal notranslate"><span class="pre">inherited_members</span></code>, <code class="docutils literal notranslate"><span class="pre">undoc_members</span></code>, <code class="docutils literal notranslate"><span class="pre">show_inheritance</span></code> and
-<code class="docutils literal notranslate"><span class="pre">noindex</span></code> that are true if the flag option of same name was given to the
-auto directive</p></li>
-<li><p><strong>lines</strong> – the lines of the docstring, see above</p></li>
+<li><p><strong>app</strong> – Sphinx应用程序对象</p></li>
+<li><p><strong>what</strong> – docstring属于它的对象的类型 (之一 <code class="docutils literal notranslate"><span class="pre">&quot;module&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;class&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;exception&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;function&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;method&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;attribute&quot;</span></code>)</p></li>
+<li><p><strong>name</strong> – 对象的完全限定名称</p></li>
+<li><p><strong>obj</strong> – 对象本身</p></li>
+<li><p><strong>options</strong> – 指令的选项:具有属性 <code class="docutils literal notranslate"><span class="pre">inherited_members</span></code> ， <code class="docutils literal notranslate"><span class="pre">undoc_members</span></code> ， <code class="docutils literal notranslate"><span class="pre">show_inheritance</span></code> 和 <code class="docutils literal notranslate"><span class="pre">noindex</span></code> 的对象，如果为auto指令赋予了相同名称的flag选项，则为 true</p></li>
+<li><p><strong>lines</strong> – 文档字符串的行，见上文</p></li>
 </ul>
 </dd>
 </dl>
@@ -672,22 +632,15 @@ auto directive</p></li>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
-<p>Emitted when autodoc has formatted a signature for an object. The event
-handler can return a new tuple <code class="docutils literal notranslate"><span class="pre">(signature,</span> <span class="pre">return_annotation)</span></code> to change
-what Sphinx puts into the output.</p>
+<p>autodoc格式化对象的签名时发出。事件处理程序可以返回一个新的元组 <code class="docutils literal notranslate"><span class="pre">(signature,</span> <span class="pre">return_annotation)</span></code> 来改变Sphinx放入输出的内容。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>app</strong> – the Sphinx application object</p></li>
-<li><p><strong>what</strong> – the type of the object which the docstring belongs to (one of
-<code class="docutils literal notranslate"><span class="pre">&quot;module&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;class&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;exception&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;function&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;method&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;attribute&quot;</span></code>)</p></li>
-<li><p><strong>name</strong> – the fully qualified name of the object</p></li>
-<li><p><strong>obj</strong> – the object itself</p></li>
-<li><p><strong>options</strong> – the options given to the directive: an object with attributes
-<code class="docutils literal notranslate"><span class="pre">inherited_members</span></code>, <code class="docutils literal notranslate"><span class="pre">undoc_members</span></code>, <code class="docutils literal notranslate"><span class="pre">show_inheritance</span></code> and
-<code class="docutils literal notranslate"><span class="pre">noindex</span></code> that are true if the flag option of same name was given to the
-auto directive</p></li>
+<li><p><strong>app</strong> – Sphinx应用程序对象</p></li>
+<li><p><strong>what</strong> – docstring属于它的对象的类型 (之一 <code class="docutils literal notranslate"><span class="pre">&quot;module&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;class&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;exception&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;function&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;method&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;attribute&quot;</span></code>)</p></li>
+<li><p><strong>name</strong> – 对象的完全限定名称</p></li>
+<li><p><strong>obj</strong> – 对象本身</p></li>
+<li><p><strong>options</strong> – 指令的选项:具有属性 <code class="docutils literal notranslate"><span class="pre">inherited_members</span></code> ， <code class="docutils literal notranslate"><span class="pre">undoc_members</span></code> ， <code class="docutils literal notranslate"><span class="pre">show_inheritance</span></code> 和 <code class="docutils literal notranslate"><span class="pre">noindex</span></code> 的对象，如果为auto指令赋予了相同名称的flag选项，则为 true</p></li>
 <li><p><strong>signature</strong> – function signature, as a string of the form
 <code class="docutils literal notranslate"><span class="pre">&quot;(parameter_1,</span> <span class="pre">parameter_2)&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if introspection didn’t
 succeed and signature wasn’t specified in the directive.</p></li>
@@ -727,37 +680,25 @@ be processed.</p>
 
 </div>
 <div class="section" id="skipping-members">
-<h2>Skipping members<a class="headerlink" href="#skipping-members" title="永久链接至标题">¶</a></h2>
-<p>autodoc allows the user to define a custom method for determining whether a
-member should be included in the documentation by using the following event:</p>
+<h2>跳过会员<a class="headerlink" href="#skipping-members" title="永久链接至标题">¶</a></h2>
+<p>autodoc允许用户使用以下事件定义一个自定义方法，以确定是否应将成员包含在文档中:</p>
 <dl class="event">
 <dt id="event-autodoc-skip-member">
 <code class="descname">autodoc-skip-member</code><span class="sig-paren">(</span><em>app</em>, <em>what</em>, <em>name</em>, <em>obj</em>, <em>skip</em>, <em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#event-autodoc-skip-member" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">0.5 新版功能.</span></p>
 </div>
-<p>Emitted when autodoc has to decide whether a member should be included in the
-documentation.  The member is excluded if a handler returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.  It is
-included if the handler returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>If more than one enabled extension handles the <code class="docutils literal notranslate"><span class="pre">autodoc-skip-member</span></code>
-event, autodoc will use the first non-<code class="docutils literal notranslate"><span class="pre">None</span></code> value returned by a handler.
-Handlers should return <code class="docutils literal notranslate"><span class="pre">None</span></code> to fall back to the skipping behavior of
-autodoc and other enabled extensions.</p>
+<p>autodoc必须决定是否应将成员包含在文档中时发出。如果处理程序返回 <code class="docutils literal notranslate"><span class="pre">True</span></code>，则排除该成员。如果处理程序返回 <code class="docutils literal notranslate"><span class="pre">False</span></code> ，则包含它。</p>
+<p>如果多个启用的扩展处理 <code class="docutils literal notranslate"><span class="pre">autodoc-skip-member</span></code> 事件，autodoc将使用处理程序返回的第一个 non-<code class="docutils literal notranslate"><span class="pre">None</span></code> 值。处理程序应返回 <code class="docutils literal notranslate"><span class="pre">None</span></code>  以回退到autodoc和其他已启用扩展的跳过行为。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>app</strong> – the Sphinx application object</p></li>
-<li><p><strong>what</strong> – the type of the object which the docstring belongs to (one of
-<code class="docutils literal notranslate"><span class="pre">&quot;module&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;class&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;exception&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;function&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;method&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;attribute&quot;</span></code>)</p></li>
-<li><p><strong>name</strong> – the fully qualified name of the object</p></li>
-<li><p><strong>obj</strong> – the object itself</p></li>
-<li><p><strong>skip</strong> – a boolean indicating if autodoc will skip this member if the
-user handler does not override the decision</p></li>
-<li><p><strong>options</strong> – the options given to the directive: an object with attributes
-<code class="docutils literal notranslate"><span class="pre">inherited_members</span></code>, <code class="docutils literal notranslate"><span class="pre">undoc_members</span></code>, <code class="docutils literal notranslate"><span class="pre">show_inheritance</span></code> and
-<code class="docutils literal notranslate"><span class="pre">noindex</span></code> that are true if the flag option of same name was given to the
-auto directive</p></li>
+<li><p><strong>app</strong> – Sphinx应用程序对象</p></li>
+<li><p><strong>what</strong> – docstring属于它的对象的类型 (之一 <code class="docutils literal notranslate"><span class="pre">&quot;module&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;class&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;exception&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;function&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;method&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;attribute&quot;</span></code>)</p></li>
+<li><p><strong>name</strong> – 对象的完全限定名称</p></li>
+<li><p><strong>obj</strong> – 对象本身</p></li>
+<li><p><strong>skip</strong> – 一个布尔值，指示如果用户处理程序未覆盖该决定，autodoc是否将跳过此成员</p></li>
+<li><p><strong>options</strong> – 指令的选项:具有属性 <code class="docutils literal notranslate"><span class="pre">inherited_members</span></code> ， <code class="docutils literal notranslate"><span class="pre">undoc_members</span></code> ， <code class="docutils literal notranslate"><span class="pre">show_inheritance</span></code> 和 <code class="docutils literal notranslate"><span class="pre">noindex</span></code> 的对象，如果为auto指令赋予了相同名称的flag选项，则为 true</p></li>
 </ul>
 </dd>
 </dl>
@@ -782,7 +723,7 @@ auto directive</p></li>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – Allow reference sections using its title"
+          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – 允许使用其标题的参考部分"
              >下一页</a> |</li>
         <li class="right" >
           <a href="index.html" title="扩展"
@@ -795,7 +736,7 @@ auto directive</p></li>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

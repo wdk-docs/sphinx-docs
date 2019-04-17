@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:4
 msgid ":mod:`sphinx.ext.autosummary` -- Generate autodoc summaries"
-msgstr ":mod:`sphinx.ext.autosummary` -- Generate autodoc summaries"
+msgstr ":mod:`sphinx.ext.autosummary` -- 生成autodoc摘要"
 
 #: ../../usage/extensions/autosummary.rst:11
 msgid ""
@@ -27,18 +27,18 @@ msgid ""
 " to those output e.g. by Epydoc and other API doc generation tools.  This"
 " is especially useful when your docstrings are long and detailed, and "
 "putting each one of them on a separate page makes them easier to read."
-msgstr ""
+msgstr "此扩展生成功能/方法/属性摘要列表，类似于那些输出，例如通过Epydoc和其他API doc生成工具。当您的文档字符串冗长而详细时，这一点尤其有用，并且将每个文档字符串放在单独的页面上会使它们更易于阅读。"
 
 #: ../../usage/extensions/autosummary.rst:16
 msgid "The :mod:`sphinx.ext.autosummary` extension does this in two parts:"
-msgstr "The :mod:`sphinx.ext.autosummary` extension does this in two parts:"
+msgstr ":mod:`sphinx.ext.autosummary` 扩展分为两部分:"
 
 #: ../../usage/extensions/autosummary.rst:18
 msgid ""
 "There is an :rst:dir:`autosummary` directive for generating summary "
 "listings that contain links to the documented items, and short summary "
 "blurbs extracted from their docstrings."
-msgstr ""
+msgstr "有一个 :rst:dir:`autosummary` 指令，用于生成包含指向文档项的链接的摘要列表，以及从其文档字符串中提取的简短摘要模糊。"
 
 #: ../../usage/extensions/autosummary.rst:22
 msgid ""
@@ -48,38 +48,38 @@ msgid ""
 " directives. These files by default contain only the corresponding "
 ":mod:`sphinx.ext.autodoc` directive, but can be customized with "
 "templates."
-msgstr ""
+msgstr "可选地，方便脚本 :program:`sphinx-autogen` 或 new :confval:`autosummary_generate` 配置值可用于为以下列出的条目生成短 \"stub \" 文件 :rst:dir:`autosummary` 指令。默认情况下，这些文件仅包含相应的 :mod:`sphinx.ext.autodoc` 指令，但可以使用模板进行自定义。"
 
 #: ../../usage/extensions/autosummary.rst:30
 msgid ""
 "Insert a table that contains links to documented items, and a short "
 "summary blurb (the first sentence of the docstring) for each of them."
-msgstr ""
+msgstr "插入一个包含文档项链接的表，以及每个文章的简短摘要blurb（文档字符串的第一句）。"
 
 #: ../../usage/extensions/autosummary.rst:33
 msgid ""
 "The :rst:dir:`autosummary` directive can also optionally serve as a "
 ":rst:dir:`toctree` entry for the included items. Optionally, stub "
 "``.rst`` files for these items can also be automatically generated."
-msgstr ""
+msgstr ":rst:dir:`autosummary` 指令也可以选择作为 :rst:dir:`toctree` 条目包含的项目。或者，也可以自动生成这些项目的存根“.rst”文件。"
 
 #: ../../usage/extensions/autosummary.rst:37
 msgid "For example, ::"
-msgstr "For example, ::"
+msgstr "例如， ::"
 
 #: ../../usage/extensions/autosummary.rst:46
 msgid "produces a table like this:"
-msgstr "produces a table like this:"
+msgstr "生成这样的表格:"
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid ""
 ":obj:`environment.BuildEnvironment "
 "<sphinx.environment.BuildEnvironment>`\\ \\(\\[app\\]\\)"
-msgstr ""
+msgstr ":obj:`environment.BuildEnvironment <sphinx.environment.BuildEnvironment>`\\ \\(\\[app\\]\\)"
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid "The environment in which the ReST files are translated."
-msgstr "The environment in which the ReST files are translated."
+msgstr "翻译ReST文件的环境。"
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid ":obj:`util.relative_uri <sphinx.util.relative_uri>`\\ \\(base\\, to\\)"
@@ -87,18 +87,18 @@ msgstr ":obj:`util.relative_uri <sphinx.util.relative_uri>`\\ \\(base\\, to\\)"
 
 #: ../../usage/extensions/autosummary.rst:54:<autosummary>:1
 msgid "Return a relative URL from ``base`` to ``to``."
-msgstr "Return a relative URL from ``base`` to ``to``."
+msgstr "将相对URL从 ``base`` 返回到 ``to`` ."
 
 #: ../../usage/extensions/autosummary.rst:57
 msgid ""
 "Autosummary preprocesses the docstrings and signatures with the same "
 ":event:`autodoc-process-docstring` and :event:`autodoc-process-signature`"
 " hooks as :mod:`~sphinx.ext.autodoc`."
-msgstr ""
+msgstr "Autosummary使用相同的方法预处理文档字符串和签名 :event:`autodoc-process-docstring` 和 :event:`autodoc-process-signature`  hooks as :mod:`~sphinx.ext.autodoc` 。"
 
 #: ../../usage/extensions/autosummary.rst:61
 msgid "**Options**"
-msgstr "**Options**"
+msgstr "**选项**"
 
 #: ../../usage/extensions/autosummary.rst:63
 msgid ""
@@ -137,7 +137,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:104
 msgid ":program:`sphinx-autogen` -- generate autodoc stub pages"
-msgstr ":program:`sphinx-autogen` -- generate autodoc stub pages"
+msgstr ":program:`sphinx-autogen` -- 生成autodoc存根页面"
 
 #: ../../usage/extensions/autosummary.rst:106
 msgid ""
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:109
 msgid "For example, the command ::"
-msgstr "For example, the command ::"
+msgstr "例如，命令::"
 
 #: ../../usage/extensions/autosummary.rst:113
 msgid ""
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:131
 msgid "Generating stub pages automatically"
-msgstr "Generating stub pages automatically"
+msgstr "自动生成存根页面"
 
 #: ../../usage/extensions/autosummary.rst:133
 msgid ""
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:141
 msgid "Can also be a list of documents for which stub pages should be generated."
-msgstr "Can also be a list of documents for which stub pages should be generated."
+msgstr "也可以是应为其生成存根页面的文档列表。"
 
 #: ../../usage/extensions/autosummary.rst:143
 msgid ""
@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:153
 msgid "Customizing templates"
-msgstr "Customizing templates"
+msgstr "自定义模板"
 
 #: ../../usage/extensions/autosummary.rst:157
 msgid ""
@@ -223,27 +223,27 @@ msgstr ""
 
 #: ../../usage/extensions/autosummary.rst:167
 msgid "Autosummary uses the following Jinja template files:"
-msgstr "Autosummary uses the following Jinja template files:"
+msgstr "Autosummary使用以下Jinja模板文件:"
 
 #: ../../usage/extensions/autosummary.rst:169
 msgid ":file:`autosummary/base.rst` -- fallback template"
-msgstr ":file:`autosummary/base.rst` -- fallback template"
+msgstr ":file:`autosummary/base.rst` -- 后备模板"
 
 #: ../../usage/extensions/autosummary.rst:170
 msgid ":file:`autosummary/module.rst` -- template for modules"
-msgstr ":file:`autosummary/module.rst` -- template for modules"
+msgstr ":file:`autosummary/module.rst` -- 模块的模板"
 
 #: ../../usage/extensions/autosummary.rst:171
 msgid ":file:`autosummary/class.rst` -- template for classes"
-msgstr ":file:`autosummary/class.rst` -- template for classes"
+msgstr ":file:`autosummary/class.rst` -- 课程模板"
 
 #: ../../usage/extensions/autosummary.rst:172
 msgid ":file:`autosummary/function.rst` -- template for functions"
-msgstr ":file:`autosummary/function.rst` -- template for functions"
+msgstr ":file:`autosummary/function.rst` -- 功能模板"
 
 #: ../../usage/extensions/autosummary.rst:173
 msgid ":file:`autosummary/attribute.rst` -- template for class attributes"
-msgstr ":file:`autosummary/attribute.rst` -- template for class attributes"
+msgstr ":file:`autosummary/attribute.rst` -- 类属性的模板"
 
 #: ../../usage/extensions/autosummary.rst:174
 msgid ":file:`autosummary/method.rst` -- template for class methods"
@@ -251,23 +251,23 @@ msgstr ":file:`autosummary/method.rst` -- template for class methods"
 
 #: ../../usage/extensions/autosummary.rst:176
 msgid "The following variables available in the templates:"
-msgstr "The following variables available in the templates:"
+msgstr "模板中提供以下变量:"
 
 #: ../../usage/extensions/autosummary.rst:182
 msgid "Name of the documented object, excluding the module and class parts."
-msgstr "Name of the documented object, excluding the module and class parts."
+msgstr "已记录对象的名称，不包括模块和类部件。"
 
 #: ../../usage/extensions/autosummary.rst:186
 msgid "Name of the documented object, excluding the module parts."
-msgstr "Name of the documented object, excluding the module parts."
+msgstr "已记录对象的名称，不包括模块部件。"
 
 #: ../../usage/extensions/autosummary.rst:190
 msgid "Full name of the documented object, including module and class parts."
-msgstr "Full name of the documented object, including module and class parts."
+msgstr "已记录对象的全名，包括模块和类部件。"
 
 #: ../../usage/extensions/autosummary.rst:194
 msgid "Name of the module the documented object belongs to."
-msgstr "Name of the module the documented object belongs to."
+msgstr "记录的对象所属的模块的名称。"
 
 #: ../../usage/extensions/autosummary.rst:198
 msgid ""
@@ -310,44 +310,44 @@ msgstr ""
 msgid ""
 "List containing names of \"public\" exceptions in the module.  Only "
 "available for modules."
-msgstr ""
+msgstr "包含模块中 \"public\" 异常名称的列表。仅适用于模块。"
 
 #: ../../usage/extensions/autosummary.rst:236
 msgid ""
 "List containing names of \"public\" methods in the class.  Only available"
 " for classes."
-msgstr ""
+msgstr "包含类中 \"public\" 方法名称的列表。仅适用于课程。"
 
 #: ../../usage/extensions/autosummary.rst:241
 msgid ""
 "List containing names of \"public\" attributes in the class.  Only "
 "available for classes."
-msgstr ""
+msgstr "包含类中 \"public\" 属性名称的列表。仅适用于课程。"
 
 #: ../../usage/extensions/autosummary.rst:245
 msgid "Additionally, the following filters are available"
-msgstr "Additionally, the following filters are available"
+msgstr "此外，还提供以下过滤器"
 
 #: ../../usage/extensions/autosummary.rst:249
 msgid ""
 "Escape any special characters in the text to be used in formatting RST "
 "contexts. For instance, this prevents asterisks making things bold. This "
 "replaces the builtin Jinja `escape filter`_ that does html-escaping."
-msgstr ""
+msgstr "转义要在格式化RST上下文中使用的文本中的任何特殊字符。例如，这可以防止星号使事情变得大胆。这取代了内置的 Jinja `escape filter`_ ，它可以进行 html-escaping 。"
 
 #: ../../usage/extensions/autosummary.rst:255
 msgid "Add a title underline to a piece of text."
-msgstr "Add a title underline to a piece of text."
+msgstr "为一段文本添加标题下划线。"
 
 #: ../../usage/extensions/autosummary.rst:257
 msgid ""
 "For instance, ``{{ fullname | escape | underline }}`` should be used to "
 "produce the title of a page."
-msgstr ""
+msgstr "例如， ``{{ fullname | escape | underline }}`` 应该用于生成页面的标题。"
 
 #: ../../usage/extensions/autosummary.rst:262
 msgid ""
 "You can use the :rst:dir:`autosummary` directive in the stub pages. Stub "
 "pages are generated also based on these directives."
-msgstr ""
+msgstr "您可以在存根页面中使用 :rst:dir:`autosummary` 指令。存根页面也是基于这些指令生成的。"
 

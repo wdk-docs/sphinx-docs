@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/extensions/viewcode.rst:2
 msgid ":mod:`sphinx.ext.viewcode` -- Add links to highlighted source code"
-msgstr ":mod:`sphinx.ext.viewcode` -- Add links to highlighted source code"
+msgstr ":mod:`sphinx.ext.viewcode` -- 添加突出显示的源代码的链接"
 
 #: ../../usage/extensions/viewcode.rst:10
 msgid ""
@@ -30,34 +30,34 @@ msgid ""
 " will be added to all object descriptions that leads to the source code "
 "of the described object.  A link back from the source to the description "
 "will also be inserted."
-msgstr ""
+msgstr "这个扩展名查看你的Python对象描述(``.. class::``, ``.. function::`` 等)并尝试查找包含对象的源文件。找到后，将为每个模块输出一个单独的HTML页面，其中包含源代码的突出显示版本，并且链接将添加到所有对象描述中，这些描述将导致所描述对象的源代码。还将插入从源到描述的链接。"
 
 #: ../../usage/extensions/viewcode.rst:19
 msgid ""
 "Basically, ``viewcode`` extension will import the modules being linked "
 "to. If any modules have side effects on import, these will be executed "
 "when ``sphinx-build`` is run."
-msgstr ""
+msgstr "基本上， ``viewcode`` 扩展名将导入链接到的模块。如果任何模块在导入时有副作用，那么当运行 ``sphinx-build`` 时会执行这些副作用。"
 
 #: ../../usage/extensions/viewcode.rst:23
 msgid ""
 "If you document scripts (as opposed to library modules), make sure their "
 "main routine is protected by a ``if __name__ == '__main__'`` condition."
-msgstr ""
+msgstr "如果您记录脚本（而不是库模块），请确保它们的主例程受 ``if __name__ == '__main__'`` 条件的保护。"
 
 #: ../../usage/extensions/viewcode.rst:26
 msgid ""
 "In addition, if you don't want to import the modules by ``viewcode``, you"
 " can tell the location of the location of source code to ``viewcode`` "
 "using the :event:`viewcode-find-source` event."
-msgstr ""
+msgstr "另外，如果你不想通过 ``viewcode`` 导入模块，你可以使用 :event:`viewcode-find-source` 事件来告诉源代码 ``viewcode`` 的位置。 。"
 
 #: ../../usage/extensions/viewcode.rst:30
 msgid ""
 "If :confval:`viewcode_follow_imported_members` is enabled, you will also "
 "need to resolve imported attributes using the :event:`viewcode-follow-"
 "imported` event."
-msgstr ""
+msgstr "如果 :confval:`viewcode_follow_imported_members` 已启用，您还需要使用 :event:`viewcode-follow-imported` 事件来解析导入的属性。"
 
 #: ../../usage/extensions/viewcode.rst:34
 msgid ""
@@ -65,11 +65,11 @@ msgid ""
 "``applehelp``, ``devhelp``, ``htmlhelp``, ``qthelp`` and so on except "
 "``singlehtml``. By default ``epub`` builder doesn't support this "
 "extension (see :confval:`viewcode_enable_epub`)."
-msgstr ""
+msgstr "此扩展仅适用于HTML相关的构建器，如 ``html`` ， ``applehelp`` ， ``devhelp`` ， ``htmlhelp`` ， ``qthelp`` 等除了 ``singlehtml`` 。默认情况下， ``epub`` 构建器不支持此扩展（请参阅 :confval:`viewcode_enable_epub`）。"
 
 #: ../../usage/extensions/viewcode.rst:40
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/viewcode.rst:44
 msgid ""

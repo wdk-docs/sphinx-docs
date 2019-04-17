@@ -21,17 +21,17 @@ msgstr ""
 msgid ""
 ":mod:`sphinx.ext.autosectionlabel` -- Allow reference sections using its "
 "title"
-msgstr ""
+msgstr ":mod:`sphinx.ext.autosectionlabel` -- 允许使用其标题的参考部分"
 
 #: ../../usage/extensions/autosectionlabel.rst:11
 msgid ""
 "This extension allows you to refer sections its title.  This affects to "
 "the reference role (:rst:role:`ref`)."
-msgstr ""
+msgstr "此扩展程序允许您引用其标题部分。这会影响参考角色（:rst:role:`ref`）。"
 
 #: ../../usage/extensions/autosectionlabel.rst:14
 msgid "For example::"
-msgstr "For example::"
+msgstr "例如::"
 
 #: ../../usage/extensions/autosectionlabel.rst:24
 msgid ""
@@ -40,11 +40,11 @@ msgid ""
 "target by default. The ``autosectionlabel_prefix_document`` configuration"
 " variable can be used to make headings which appear multiple times but in"
 " different documents unique."
-msgstr ""
+msgstr "在内部，此扩展为每个部分生成标签。如果在整个文档中使用相同的节名，则默认情况下任何一个都用于目标。  ``autosectionlabel_prefix_document`` 配置变量可用于制作多次出现但在不同文档中唯一的标题。"
 
 #: ../../usage/extensions/autosectionlabel.rst:32
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/autosectionlabel.rst:36
 msgid ""
@@ -53,7 +53,7 @@ msgid ""
 "called ``Introduction`` that appears in document ``index.rst``.  Useful "
 "for avoiding ambiguity when the same section heading appears in different"
 " documents."
-msgstr ""
+msgstr "如果为True，则为每个部分标签添加其所在文档的名称，后跟冒号。例如，``index:Introduction`` 是一个名为 ``Introduction`` 的部分，出现在文档 ``index.rst`` 中。当相同的标题出现在不同的文档中时，可用于避免歧义。"
 
 #: ../../usage/extensions/autosectionlabel.rst:44
 msgid ""
@@ -61,5 +61,5 @@ msgid ""
 "For example, when set 1 to ``autosectionlabel_maxdepth``, labels are "
 "generated only for top level sections, and deeper sections are not "
 "labeled.  It defaults to ``None`` (disabled)."
-msgstr ""
+msgstr "如果设置，自动选择标签会根据其深度选择要标记的部分。例如，当将1设置为 ``autosectionlabel_maxdepth`` 时，仅为顶级部分生成标签，而不标记更深的部分。它默认为 ``None`` （禁用）。"
 

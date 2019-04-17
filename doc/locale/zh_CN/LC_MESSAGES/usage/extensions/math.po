@@ -19,23 +19,23 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:6
 msgid "Math support for HTML outputs in Sphinx"
-msgstr "Math support for HTML outputs in Sphinx"
+msgstr "Sphinx中对HTML输出的数学支持"
 
 #: ../../usage/extensions/math.rst:14
 msgid ""
 "Math support for non-HTML builders is integrated to sphinx-core. So "
 "mathbase extension is no longer needed."
-msgstr ""
+msgstr "非HTML构建器的数学支持已集成到sphinx-core中。因此不再需要mathbase扩展。"
 
 #: ../../usage/extensions/math.rst:17
 msgid ""
 "Since mathematical notation isn't natively supported by HTML in any way, "
 "Sphinx gives a math support to HTML document with several extensions."
-msgstr ""
+msgstr "由于HTML本身不支持数学符号，因此Sphinx为具有多个扩展的HTML文档提供了数学支持。"
 
 #: ../../usage/extensions/math.rst:21
 msgid ":mod:`sphinx.ext.imgmath` -- Render math as images"
-msgstr ":mod:`sphinx.ext.imgmath` -- Render math as images"
+msgstr ":mod:`sphinx.ext.imgmath` -- 将数学渲染为图像"
 
 #: ../../usage/extensions/math.rst:28
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 msgid ""
 "There are various config values you can set to influence how the images "
 "are built:"
-msgstr ""
+msgstr "您可以设置各种配置值来影响图像的构建方式:"
 
 #: ../../usage/extensions/math.rst:37
 msgid ""
@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:122
 msgid ":mod:`sphinx.ext.mathjax` -- Render math via JavaScript"
-msgstr ":mod:`sphinx.ext.mathjax` -- Render math via JavaScript"
+msgstr ":mod:`sphinx.ext.mathjax` -- 通过JavaScript渲染数学"
 
 #: ../../usage/extensions/math.rst:129
 msgid ""
@@ -205,48 +205,48 @@ msgstr ""
 
 #: ../../usage/extensions/math.rst:158
 msgid "You can also give a full ``https://`` URL different from the CDN URL."
-msgstr "You can also give a full ``https://`` URL different from the CDN URL."
+msgstr "您还可以提供与CDN URL不同的完整 ``https://`` URL。"
 
 #: ../../usage/extensions/math.rst:162
 msgid ""
 "The options to script tag for mathjax.  For example, you can set "
 "integrity option with following setting::"
-msgstr ""
+msgstr "mathjax的脚本标记选项。例如，您可以使用以下设置设置完整性选项::"
 
 #: ../../usage/extensions/math.rst:169
 msgid "The default is empty (``{}``)."
-msgstr "The default is empty (``{}``)."
+msgstr "默认为空 (``{}``)."
 
 #: ../../usage/extensions/math.rst:173
 msgid ""
 "The inline configuration options for mathjax.  The value is used as a "
 "parameter of ``MathJax.Hub.Config()``.  For more information, please read"
 " `Using in-line configuration options`_."
-msgstr ""
+msgstr "mathjax的内联配置选项。该值用作 ``MathJax.Hub.Config（）`` 的参数。 有关更多信息，请阅读 `Using in-line configuration options`_ 。"
 
 #: ../../usage/extensions/math.rst:177
 msgid "For example::"
-msgstr "For example::"
+msgstr "例如::"
 
 #: ../../usage/extensions/math.rst:184
 msgid "The default is empty (not configured)."
-msgstr "The default is empty (not configured)."
+msgstr "默认值为空（未配置）。"
 
 #: ../../usage/extensions/math.rst:189
 msgid ":mod:`sphinx.ext.jsmath` -- Render math via JavaScript"
-msgstr ":mod:`sphinx.ext.jsmath` -- Render math via JavaScript"
+msgstr ":mod:`sphinx.ext.jsmath` -- 通过JavaScript渲染数学"
 
 #: ../../usage/extensions/math.rst:194
 msgid ""
 "This extension works just as the MathJax extension does, but uses the "
 "older package jsMath_.  It provides this config value:"
-msgstr ""
+msgstr "此扩展名与MathJax扩展名一样，但使用较旧的包 jsMath_ 。它提供此配置值:"
 
 #: ../../usage/extensions/math.rst:199
 msgid ""
 "The path to the JavaScript file to include in the HTML files in order to "
 "load JSMath.  There is no default."
-msgstr ""
+msgstr "要包含在HTML文件中以加载JSMath的JavaScript文件的路径。没有默认值。"
 
 #: ../../usage/extensions/math.rst:205
 msgid ""
@@ -254,5 +254,5 @@ msgid ""
 "this value would be ``jsMath/easy/load.js``.  If you host more than one "
 "Sphinx documentation set on one server, it is advisable to install jsMath"
 " in a shared location."
-msgstr ""
+msgstr "例如，如果将JSMath放入Sphinx文档的静态路径中，则此值将为 ``jsMath/easy/load.js`` 。 如果在一台服务器上托管多个Sphinx文档集，建议在共享位置安装jsMath。"
 

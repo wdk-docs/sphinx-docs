@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.autosectionlabel – Allow reference sections using its title &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.autosectionlabel – 允许使用其标题的参考部分 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,12 +16,12 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.autosummary – Generate autodoc summaries" href="autosummary.html" />
+    <link rel="next" title="sphinx.ext.autosummary – 生成autodoc摘要" href="autosummary.html" />
     <link rel="prev" title="sphinx.ext.autodoc – 包括docstrings中的文档" href="autodoc.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html" />
 
@@ -105,7 +105,7 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="autosummary.html" title="sphinx.ext.autosummary – Generate autodoc summaries"
+          <a href="autosummary.html" title="sphinx.ext.autosummary – 生成autodoc摘要"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="autodoc.html" title="sphinx.ext.autodoc – 包括docstrings中的文档"
@@ -120,8 +120,8 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a><ul>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – 允许使用其标题的参考部分</a><ul>
+<li><a class="reference internal" href="#configuration">配置</a></li>
 </ul>
 </li>
 </ul>
@@ -131,7 +131,7 @@
                         title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> – 包括docstrings中的文档</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="autosummary.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – Generate autodoc summaries</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – 生成autodoc摘要</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -158,13 +158,12 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.autosectionlabel">
-<span id="sphinx-ext-autosectionlabel-allow-reference-sections-using-its-title"></span><h1><a class="reference internal" href="#module-sphinx.ext.autosectionlabel" title="sphinx.ext.autosectionlabel: Allow reference section its title."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code></a> – Allow reference sections using its title<a class="headerlink" href="#module-sphinx.ext.autosectionlabel" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-autosectionlabel-allow-reference-sections-using-its-title"></span><h1><a class="reference internal" href="#module-sphinx.ext.autosectionlabel" title="sphinx.ext.autosectionlabel: Allow reference section its title."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code></a> – 允许使用其标题的参考部分<a class="headerlink" href="#module-sphinx.ext.autosectionlabel" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">1.4 新版功能.</span></p>
 </div>
-<p>This extension allows you to refer sections its title.  This affects to the
-reference role (<a class="reference internal" href="../restructuredtext/roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a>).</p>
-<p>For example:</p>
+<p>此扩展程序允许您引用其标题部分。这会影响参考角色（<a class="reference internal" href="../restructuredtext/roles.html#role-ref" title="ref role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">ref</span></code></a>）。</p>
+<p>例如:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="gh">A Plain Title</span>
 <span class="gh">-------------</span>
 
@@ -173,30 +172,19 @@ This is the text of the section.
 It refers to the section title, see <span class="na">:ref:</span><span class="nv">`A Plain Title`</span>.
 </pre></div>
 </div>
-<p>Internally, this extension generates the labels for each section.  If same
-section names are used in whole of document, any one is used for a target by
-default. The <code class="docutils literal notranslate"><span class="pre">autosectionlabel_prefix_document</span></code> configuration variable can be
-used to make headings which appear multiple times but in different documents
-unique.</p>
+<p>在内部，此扩展为每个部分生成标签。如果在整个文档中使用相同的节名，则默认情况下任何一个都用于目标。  <code class="docutils literal notranslate"><span class="pre">autosectionlabel_prefix_document</span></code> 配置变量可用于制作多次出现但在不同文档中唯一的标题。</p>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
 <dl class="confval">
 <dt id="confval-autosectionlabel_prefix_document">
 <code class="descname">autosectionlabel_prefix_document</code><a class="headerlink" href="#confval-autosectionlabel_prefix_document" title="永久链接至目标">¶</a></dt>
-<dd><p>True to prefix each section label with the name of the document it is in,
-followed by a colon. For example, <code class="docutils literal notranslate"><span class="pre">index:Introduction</span></code> for a section
-called <code class="docutils literal notranslate"><span class="pre">Introduction</span></code> that appears in document <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>.  Useful for
-avoiding ambiguity when the same section heading appears in different
-documents.</p>
+<dd><p>如果为True，则为每个部分标签添加其所在文档的名称，后跟冒号。例如，<code class="docutils literal notranslate"><span class="pre">index:Introduction</span></code> 是一个名为 <code class="docutils literal notranslate"><span class="pre">Introduction</span></code> 的部分，出现在文档 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> 中。当相同的标题出现在不同的文档中时，可用于避免歧义。</p>
 </dd></dl>
 
 <dl class="confval">
 <dt id="confval-autosectionlabel_maxdepth">
 <code class="descname">autosectionlabel_maxdepth</code><a class="headerlink" href="#confval-autosectionlabel_maxdepth" title="永久链接至目标">¶</a></dt>
-<dd><p>If set, autosectionlabel chooses the sections for labeling by its depth. For
-example, when set 1 to <code class="docutils literal notranslate"><span class="pre">autosectionlabel_maxdepth</span></code>, labels are generated
-only for top level sections, and deeper sections are not labeled.  It
-defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> (disabled).</p>
+<dd><p>如果设置，自动选择标签会根据其深度选择要标记的部分。例如，当将1设置为 <code class="docutils literal notranslate"><span class="pre">autosectionlabel_maxdepth</span></code> 时，仅为顶级部分生成标签，而不标记更深的部分。它默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code> （禁用）。</p>
 </dd></dl>
 
 </div>
@@ -218,7 +206,7 @@ defaults to <code class="docutils literal notranslate"><span class="pre">None</s
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="autosummary.html" title="sphinx.ext.autosummary – Generate autodoc summaries"
+          <a href="autosummary.html" title="sphinx.ext.autosummary – 生成autodoc摘要"
              >下一页</a> |</li>
         <li class="right" >
           <a href="autodoc.html" title="sphinx.ext.autodoc – 包括docstrings中的文档"
@@ -231,7 +219,7 @@ defaults to <code class="docutils literal notranslate"><span class="pre">None</s
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

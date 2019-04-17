@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.coverage – Collect doc coverage stats &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.coverage – 收集doc覆盖率统计信息 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.doctest – Test snippets in the documentation" href="doctest.html" />
-    <link rel="prev" title="sphinx.ext.autosummary – Generate autodoc summaries" href="autosummary.html" />
+    <link rel="next" title="sphinx.ext.doctest – 测试文档中的代码片段" href="doctest.html" />
+    <link rel="prev" title="sphinx.ext.autosummary – 生成autodoc摘要" href="autosummary.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/coverage.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="doctest.html" title="sphinx.ext.doctest – Test snippets in the documentation"
+          <a href="doctest.html" title="sphinx.ext.doctest – 测试文档中的代码片段"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="autosummary.html" title="sphinx.ext.autosummary – Generate autodoc summaries"
+          <a href="autosummary.html" title="sphinx.ext.autosummary – 生成autodoc摘要"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,10 +120,10 @@
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="autosummary.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – Generate autodoc summaries</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – 生成autodoc摘要</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="doctest.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – Test snippets in the documentation</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – 测试文档中的代码片段</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -150,21 +150,19 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.coverage">
-<span id="sphinx-ext-coverage-collect-doc-coverage-stats"></span><h1><a class="reference internal" href="#module-sphinx.ext.coverage" title="sphinx.ext.coverage: Check Python modules and C API for coverage in the documentation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code></a> – Collect doc coverage stats<a class="headerlink" href="#module-sphinx.ext.coverage" title="永久链接至标题">¶</a></h1>
-<p>This extension features one additional builder, the <a class="reference internal" href="#sphinx.ext.coverage.CoverageBuilder" title="sphinx.ext.coverage.CoverageBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoverageBuilder</span></code></a>.</p>
+<span id="sphinx-ext-coverage-collect-doc-coverage-stats"></span><h1><a class="reference internal" href="#module-sphinx.ext.coverage" title="sphinx.ext.coverage: Check Python modules and C API for coverage in the documentation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code></a> – 收集doc覆盖率统计信息<a class="headerlink" href="#module-sphinx.ext.coverage" title="永久链接至标题">¶</a></h1>
+<p>此扩展包含一个额外的构建器， <a class="reference internal" href="#sphinx.ext.coverage.CoverageBuilder" title="sphinx.ext.coverage.CoverageBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">CoverageBuilder</span></code></a> 。</p>
 <dl class="class">
 <dt id="sphinx.ext.coverage.CoverageBuilder">
 <em class="property">class </em><code class="descclassname">sphinx.ext.coverage.</code><code class="descname">CoverageBuilder</code><a class="reference internal" href="../../_modules/sphinx/ext/coverage.html#CoverageBuilder"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.ext.coverage.CoverageBuilder" title="永久链接至目标">¶</a></dt>
-<dd><p>To use this builder, activate the coverage extension in your configuration
-file and give <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">coverage</span></code> on the command line.</p>
+<dd><p>要使用此构建器，请激活配置文件中的 coverage 扩展，并在命令行上提供 <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">coverage</span></code> 。</p>
 </dd></dl>
 
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">待处理</p>
-<p>Write this section.</p>
+<p>写这个部分。</p>
 </div>
-<p>Several configuration values can be used to specify what the builder
-should check:</p>
+<p>可以使用多个配置值来指定构建器应检查的内容:</p>
 <dl class="confval">
 <dt id="confval-coverage_ignore_modules">
 <code class="descname">coverage_ignore_modules</code><a class="headerlink" href="#confval-coverage_ignore_modules" title="永久链接至目标">¶</a></dt>
@@ -198,7 +196,7 @@ should check:</p>
 <dl class="confval">
 <dt id="confval-coverage_write_headline">
 <code class="descname">coverage_write_headline</code><a class="headerlink" href="#confval-coverage_write_headline" title="永久链接至目标">¶</a></dt>
-<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">False</span></code> to not write headlines.</p>
+<dd><p>设置为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 以不写标题。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -207,8 +205,7 @@ should check:</p>
 <dl class="confval">
 <dt id="confval-coverage_skip_undoc_in_source">
 <code class="descname">coverage_skip_undoc_in_source</code><a class="headerlink" href="#confval-coverage_skip_undoc_in_source" title="永久链接至目标">¶</a></dt>
-<dd><p>Skip objects that are not documented in the source with a docstring.
-<code class="docutils literal notranslate"><span class="pre">False</span></code> by default.</p>
+<dd><p>使用 docstring 跳过源中未记录的对象。  <code class="docutils literal notranslate"><span class="pre">False</span></code> 默认情况下。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
@@ -232,10 +229,10 @@ should check:</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="doctest.html" title="sphinx.ext.doctest – Test snippets in the documentation"
+          <a href="doctest.html" title="sphinx.ext.doctest – 测试文档中的代码片段"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="autosummary.html" title="sphinx.ext.autosummary – Generate autodoc summaries"
+          <a href="autosummary.html" title="sphinx.ext.autosummary – 生成autodoc摘要"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -245,7 +242,7 @@ should check:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.linkcode – Add external links to source code &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.linkcode – 添加外部链接到源代码 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="Math support for HTML outputs in Sphinx" href="math.html" />
-    <link rel="prev" title="sphinx.ext.intersphinx – Link to other projects’ documentation" href="intersphinx.html" />
+    <link rel="next" title="Sphinx中对HTML输出的数学支持" href="math.html" />
+    <link rel="prev" title="sphinx.ext.intersphinx – 链接到其他项目的文档" href="intersphinx.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/linkcode.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="math.html" title="Math support for HTML outputs in Sphinx"
+          <a href="math.html" title="Sphinx中对HTML输出的数学支持"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="intersphinx.html" title="sphinx.ext.intersphinx – Link to other projects’ documentation"
+          <a href="intersphinx.html" title="sphinx.ext.intersphinx – 链接到其他项目的文档"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,18 +120,18 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – Add external links to source code</a><ul>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – 添加外部链接到源代码</a><ul>
+<li><a class="reference internal" href="#configuration">配置</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="intersphinx.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – Link to other projects’ documentation</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – 链接到其他项目的文档</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="math.html"
-                        title="下一章">Math support for HTML outputs in Sphinx</a></p>
+                        title="下一章">Sphinx中对HTML输出的数学支持</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -158,38 +158,28 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.linkcode">
-<span id="sphinx-ext-linkcode-add-external-links-to-source-code"></span><h1><a class="reference internal" href="#module-sphinx.ext.linkcode" title="sphinx.ext.linkcode: Add external links to source code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code></a> – Add external links to source code<a class="headerlink" href="#module-sphinx.ext.linkcode" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-linkcode-add-external-links-to-source-code"></span><h1><a class="reference internal" href="#module-sphinx.ext.linkcode" title="sphinx.ext.linkcode: Add external links to source code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code></a> – 添加外部链接到源代码<a class="headerlink" href="#module-sphinx.ext.linkcode" title="永久链接至标题">¶</a></h1>
 <p><em>模块作者：Pauli Virtanen</em></p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.2 新版功能.</span></p>
 </div>
-<p>This extension looks at your object descriptions (<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">class::</span></code>,
-<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">function::</span></code> etc.) and adds external links to code hosted
-somewhere on the web. The intent is similar to the
-<code class="docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> extension, but assumes the source code can be
-found somewhere on the Internet.</p>
-<p>In your configuration, you need to specify a <a class="reference internal" href="#confval-linkcode_resolve"><code class="xref std std-confval docutils literal notranslate"><span class="pre">linkcode_resolve</span></code></a>
-function that returns an URL based on the object.</p>
+<p>这个扩展名查看你的对象描述(<code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">::</span></code> ， <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">function</span> <span class="pre">::</span></code> 等)，并在Web上某处托管的代码中添加外部链接。意图类似于 <code class="docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> 扩展，但假设源代码可以在Internet上的某处找到。</p>
+<p>在您的配置中，您需要指定 <a class="reference internal" href="#confval-linkcode_resolve"><code class="xref std std-confval docutils literal notranslate"><span class="pre">linkcode_resolve</span></code></a> 函数，该函数返回基于对象的URL。</p>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
 <dl class="confval">
 <dt id="confval-linkcode_resolve">
 <code class="descname">linkcode_resolve</code><a class="headerlink" href="#confval-linkcode_resolve" title="永久链接至目标">¶</a></dt>
-<dd><p>This is a function <code class="docutils literal notranslate"><span class="pre">linkcode_resolve(domain,</span> <span class="pre">info)</span></code>,
-which should return the URL to source code corresponding to
-the object in given domain with given information.</p>
-<p>The function should return <code class="docutils literal notranslate"><span class="pre">None</span></code> if no link is to be added.</p>
-<p>The argument <code class="docutils literal notranslate"><span class="pre">domain</span></code> specifies the language domain the object is
-in. <code class="docutils literal notranslate"><span class="pre">info</span></code> is a dictionary with the following keys guaranteed to
-be present (dependent on the domain):</p>
+<dd><p>这是一个函数 <code class="docutils literal notranslate"><span class="pre">linkcode_resolve(domain，info)</span></code> ，它应该返回给定信息给定域中对象的源代码的URL。</p>
+<p>如果不添加链接，该函数应返回“None”。</p>
+<p>参数 <code class="docutils literal notranslate"><span class="pre">domain</span></code> 指定对象所在的语言域。 <code class="docutils literal notranslate"><span class="pre">info</span></code> 是一个字典，其中保证存在以下键(取决于域)：</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">py</span></code>: <code class="docutils literal notranslate"><span class="pre">module</span></code> (name of the module), <code class="docutils literal notranslate"><span class="pre">fullname</span></code> (name of the object)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code>: <code class="docutils literal notranslate"><span class="pre">names</span></code> (list of names for the object)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cpp</span></code>: <code class="docutils literal notranslate"><span class="pre">names</span></code> (list of names for the object)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">javascript</span></code>: <code class="docutils literal notranslate"><span class="pre">object</span></code> (name of the object), <code class="docutils literal notranslate"><span class="pre">fullname</span></code>
-(name of the item)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">py</span></code>: <code class="docutils literal notranslate"><span class="pre">module</span></code> (模块的名称), <code class="docutils literal notranslate"><span class="pre">fullname</span></code> (对象的名称)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code>: <code class="docutils literal notranslate"><span class="pre">names</span></code> (对象的名称列表)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpp</span></code>: <code class="docutils literal notranslate"><span class="pre">names</span></code> (对象的名称列表)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">javascript</span></code>: <code class="docutils literal notranslate"><span class="pre">object</span></code> (对象的名称), <code class="docutils literal notranslate"><span class="pre">fullname</span></code> (项目名称)</p></li>
 </ul>
-<p>Example:</p>
+<p>例:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">linkcode_resolve</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">domain</span> <span class="o">!=</span> <span class="s1">&#39;py&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">None</span>
@@ -220,10 +210,10 @@ be present (dependent on the domain):</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="math.html" title="Math support for HTML outputs in Sphinx"
+          <a href="math.html" title="Sphinx中对HTML输出的数学支持"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="intersphinx.html" title="sphinx.ext.intersphinx – Link to other projects’ documentation"
+          <a href="intersphinx.html" title="sphinx.ext.intersphinx – 链接到其他项目的文档"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -233,7 +223,7 @@ be present (dependent on the domain):</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.ext.autosummary – Generate autodoc summaries &#8212; Sphinx 2.1.0+/ec574630c 文档</title>
+    <title>sphinx.ext.autosummary – 生成autodoc摘要 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/ec574630c 文档 中搜索"
+          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="sphinx.ext.coverage – Collect doc coverage stats" href="coverage.html" />
-    <link rel="prev" title="sphinx.ext.autosectionlabel – Allow reference sections using its title" href="autosectionlabel.html" />
+    <link rel="next" title="sphinx.ext.coverage – 收集doc覆盖率统计信息" href="coverage.html" />
+    <link rel="prev" title="sphinx.ext.autosectionlabel – 允许使用其标题的参考部分" href="autosectionlabel.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -105,10 +105,10 @@
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="coverage.html" title="sphinx.ext.coverage – Collect doc coverage stats"
+          <a href="coverage.html" title="sphinx.ext.coverage – 收集doc覆盖率统计信息"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – Allow reference sections using its title"
+          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – 允许使用其标题的参考部分"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -120,20 +120,20 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – Generate autodoc summaries</a><ul>
-<li><a class="reference internal" href="#sphinx-autogen-generate-autodoc-stub-pages"><strong class="program">sphinx-autogen</strong> – generate autodoc stub pages</a></li>
-<li><a class="reference internal" href="#generating-stub-pages-automatically">Generating stub pages automatically</a></li>
-<li><a class="reference internal" href="#customizing-templates">Customizing templates</a></li>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – 生成autodoc摘要</a><ul>
+<li><a class="reference internal" href="#sphinx-autogen-generate-autodoc-stub-pages"><strong class="program">sphinx-autogen</strong> – 生成autodoc存根页面</a></li>
+<li><a class="reference internal" href="#generating-stub-pages-automatically">自动生成存根页面</a></li>
+<li><a class="reference internal" href="#customizing-templates">自定义模板</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
   <p class="topless"><a href="autosectionlabel.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a></p>
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – 允许使用其标题的参考部分</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="coverage.html"
-                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – Collect doc coverage stats</a></p>
+                        title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – 收集doc覆盖率统计信息</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -160,34 +160,22 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.ext.autosummary">
-<span id="sphinx-ext-autosummary-generate-autodoc-summaries"></span><h1><a class="reference internal" href="#module-sphinx.ext.autosummary" title="sphinx.ext.autosummary: Generate autodoc summaries"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code></a> – Generate autodoc summaries<a class="headerlink" href="#module-sphinx.ext.autosummary" title="永久链接至标题">¶</a></h1>
+<span id="sphinx-ext-autosummary-generate-autodoc-summaries"></span><h1><a class="reference internal" href="#module-sphinx.ext.autosummary" title="sphinx.ext.autosummary: Generate autodoc summaries"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code></a> – 生成autodoc摘要<a class="headerlink" href="#module-sphinx.ext.autosummary" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
-<p>This extension generates function/method/attribute summary lists, similar to
-those output e.g. by Epydoc and other API doc generation tools.  This is
-especially useful when your docstrings are long and detailed, and putting each
-one of them on a separate page makes them easier to read.</p>
-<p>The <a class="reference internal" href="#module-sphinx.ext.autosummary" title="sphinx.ext.autosummary: Generate autodoc summaries"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code></a> extension does this in two parts:</p>
+<p>此扩展生成功能/方法/属性摘要列表，类似于那些输出，例如通过Epydoc和其他API doc生成工具。当您的文档字符串冗长而详细时，这一点尤其有用，并且将每个文档字符串放在单独的页面上会使它们更易于阅读。</p>
+<p><a class="reference internal" href="#module-sphinx.ext.autosummary" title="sphinx.ext.autosummary: Generate autodoc summaries"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code></a> 扩展分为两部分:</p>
 <ol class="arabic simple">
-<li><p>There is an <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> directive for generating summary listings
-that contain links to the documented items, and short summary blurbs
-extracted from their docstrings.</p></li>
-<li><p>Optionally, the convenience script <strong class="program">sphinx-autogen</strong> or the new
-<a class="reference internal" href="#confval-autosummary_generate"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autosummary_generate</span></code></a> config value can be used to generate short
-“stub” files for the entries listed in the <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> directives.
-These files by default contain only the corresponding
-<a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> directive, but can be customized with templates.</p></li>
+<li><p>有一个 <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> 指令，用于生成包含指向文档项的链接的摘要列表，以及从其文档字符串中提取的简短摘要模糊。</p></li>
+<li><p>可选地，方便脚本 <strong class="program">sphinx-autogen</strong> 或 new <a class="reference internal" href="#confval-autosummary_generate"><code class="xref std std-confval docutils literal notranslate"><span class="pre">autosummary_generate</span></code></a> 配置值可用于为以下列出的条目生成短 “stub ” 文件 <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> 指令。默认情况下，这些文件仅包含相应的 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 指令，但可以使用模板进行自定义。</p></li>
 </ol>
 <dl class="directive">
 <dt id="directive-autosummary">
 <code class="descname">.. autosummary::</code><a class="headerlink" href="#directive-autosummary" title="永久链接至目标">¶</a></dt>
-<dd><p>Insert a table that contains links to documented items, and a short summary
-blurb (the first sentence of the docstring) for each of them.</p>
-<p>The <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> directive can also optionally serve as a
-<a class="reference internal" href="../restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> entry for the included items. Optionally, stub
-<code class="docutils literal notranslate"><span class="pre">.rst</span></code> files for these items can also be automatically generated.</p>
-<p>For example,</p>
+<dd><p>插入一个包含文档项链接的表，以及每个文章的简短摘要blurb（文档字符串的第一句）。</p>
+<p><a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> 指令也可以选择作为 <a class="reference internal" href="../restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> 条目包含的项目。或者，也可以自动生成这些项目的存根“.rst”文件。</p>
+<p>例如，</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">currentmodule</span><span class="p">::</span> sphinx
 
 <span class="p">..</span> <span class="ow">autosummary</span><span class="p">::</span>
@@ -196,7 +184,7 @@ blurb (the first sentence of the docstring) for each of them.</p>
    util.relative_uri
 </pre></div>
 </div>
-<p>produces a table like this:</p>
+<p>生成这样的表格:</p>
 <blockquote>
 <div><table class="longtable docutils align-center">
 <colgroup>
@@ -205,18 +193,16 @@ blurb (the first sentence of the docstring) for each of them.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../extdev/envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">environment.BuildEnvironment</span></code></a>([app])</p></td>
-<td><p>The environment in which the ReST files are translated.</p></td>
+<td><p>翻译ReST文件的环境。</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.relative_uri</span></code>(base, to)</p></td>
-<td><p>Return a relative URL from <code class="docutils literal notranslate"><span class="pre">base</span></code> to <code class="docutils literal notranslate"><span class="pre">to</span></code>.</p></td>
+<td><p>将相对URL从 <code class="docutils literal notranslate"><span class="pre">base</span></code> 返回到 <code class="docutils literal notranslate"><span class="pre">to</span></code> .</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
-<p>Autosummary preprocesses the docstrings and signatures with the same
-<a class="reference internal" href="autodoc.html#event-autodoc-process-docstring"><code class="xref std std-event docutils literal notranslate"><span class="pre">autodoc-process-docstring</span></code></a> and <a class="reference internal" href="autodoc.html#event-autodoc-process-signature"><code class="xref std std-event docutils literal notranslate"><span class="pre">autodoc-process-signature</span></code></a>
-hooks as <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a>.</p>
-<p><strong>Options</strong></p>
+<p>Autosummary使用相同的方法预处理文档字符串和签名 <a class="reference internal" href="autodoc.html#event-autodoc-process-docstring"><code class="xref std std-event docutils literal notranslate"><span class="pre">autodoc-process-docstring</span></code></a> 和 <a class="reference internal" href="autodoc.html#event-autodoc-process-signature"><code class="xref std std-event docutils literal notranslate"><span class="pre">autodoc-process-signature</span></code></a>  hooks as <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">autodoc</span></code></a> 。</p>
+<p><strong>选项</strong></p>
 <ul>
 <li><p>If you want the <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> table to also serve as a
 <a class="reference internal" href="../restructuredtext/directives.html#directive-toctree" title="toctree directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">toctree</span></code></a> entry, use the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> option, for example:</p>
@@ -263,10 +249,10 @@ listed. See <a class="reference internal" href="#customizing-templates">Customiz
 </dd></dl>
 
 <div class="section" id="sphinx-autogen-generate-autodoc-stub-pages">
-<h2><strong class="program">sphinx-autogen</strong> – generate autodoc stub pages<a class="headerlink" href="#sphinx-autogen-generate-autodoc-stub-pages" title="永久链接至标题">¶</a></h2>
+<h2><strong class="program">sphinx-autogen</strong> – 生成autodoc存根页面<a class="headerlink" href="#sphinx-autogen-generate-autodoc-stub-pages" title="永久链接至标题">¶</a></h2>
 <p>The <strong class="program">sphinx-autogen</strong> script can be used to conveniently generate stub
 documentation pages for items included in <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> listings.</p>
-<p>For example, the command</p>
+<p>例如，命令:</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>$ sphinx-autogen -o generated *.rst
 </pre></div>
 </div>
@@ -285,7 +271,7 @@ directories specified in the <code class="docutils literal notranslate"><span cl
 <p>For more information, refer to the <a class="reference internal" href="../../man/sphinx-autogen.html"><span class="doc">sphinx-autogen documentation</span></a></p>
 </div>
 <div class="section" id="generating-stub-pages-automatically">
-<h2>Generating stub pages automatically<a class="headerlink" href="#generating-stub-pages-automatically" title="永久链接至标题">¶</a></h2>
+<h2>自动生成存根页面<a class="headerlink" href="#generating-stub-pages-automatically" title="永久链接至标题">¶</a></h2>
 <p>If you do not want to create stub pages with <strong class="program">sphinx-autogen</strong>, you can
 also use these config values:</p>
 <dl class="confval">
@@ -293,7 +279,7 @@ also use these config values:</p>
 <code class="descname">autosummary_generate</code><a class="headerlink" href="#confval-autosummary_generate" title="永久链接至目标">¶</a></dt>
 <dd><p>Boolean indicating whether to scan all found documents for autosummary
 directives, and to generate stub pages for each.</p>
-<p>Can also be a list of documents for which stub pages should be generated.</p>
+<p>也可以是应为其生成存根页面的文档列表。</p>
 <p>The new files will be placed in the directories specified in the
 <code class="docutils literal notranslate"><span class="pre">:toctree:</span></code> options of the directives.</p>
 </dd></dl>
@@ -308,7 +294,7 @@ directives, and to generate stub pages for each.</p>
 
 </div>
 <div class="section" id="customizing-templates">
-<h2>Customizing templates<a class="headerlink" href="#customizing-templates" title="永久链接至标题">¶</a></h2>
+<h2>自定义模板<a class="headerlink" href="#customizing-templates" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -321,38 +307,38 @@ is not supported.)</p>
 may indicate that it’s a better idea to write custom narrative documentation
 instead.</p>
 </div>
-<p>Autosummary uses the following Jinja template files:</p>
+<p>Autosummary使用以下Jinja模板文件:</p>
 <ul class="simple">
-<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/base.rst</span></code> – fallback template</p></li>
-<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/module.rst</span></code> – template for modules</p></li>
-<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/class.rst</span></code> – template for classes</p></li>
-<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/function.rst</span></code> – template for functions</p></li>
-<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/attribute.rst</span></code> – template for class attributes</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/base.rst</span></code> – 后备模板</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/module.rst</span></code> – 模块的模板</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/class.rst</span></code> – 课程模板</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/function.rst</span></code> – 功能模板</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/attribute.rst</span></code> – 类属性的模板</p></li>
 <li><p><code class="file docutils literal notranslate"><span class="pre">autosummary/method.rst</span></code> – template for class methods</p></li>
 </ul>
-<p>The following variables available in the templates:</p>
+<p>模板中提供以下变量:</p>
 <dl class="data">
 <dt id="name">
 <code class="descname">name</code><a class="headerlink" href="#name" title="永久链接至目标">¶</a></dt>
-<dd><p>Name of the documented object, excluding the module and class parts.</p>
+<dd><p>已记录对象的名称，不包括模块和类部件。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="objname">
 <code class="descname">objname</code><a class="headerlink" href="#objname" title="永久链接至目标">¶</a></dt>
-<dd><p>Name of the documented object, excluding the module parts.</p>
+<dd><p>已记录对象的名称，不包括模块部件。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="fullname">
 <code class="descname">fullname</code><a class="headerlink" href="#fullname" title="永久链接至目标">¶</a></dt>
-<dd><p>Full name of the documented object, including module and class parts.</p>
+<dd><p>已记录对象的全名，包括模块和类部件。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="module">
 <code class="descname">module</code><a class="headerlink" href="#module" title="永久链接至目标">¶</a></dt>
-<dd><p>Name of the module the documented object belongs to.</p>
+<dd><p>记录的对象所属的模块的名称。</p>
 </dd></dl>
 
 <dl class="data">
@@ -404,45 +390,38 @@ modules.</p>
 <dl class="data">
 <dt id="exceptions">
 <code class="descname">exceptions</code><a class="headerlink" href="#exceptions" title="永久链接至目标">¶</a></dt>
-<dd><p>List containing names of “public” exceptions in the module.  Only available
-for modules.</p>
+<dd><p>包含模块中 “public” 异常名称的列表。仅适用于模块。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="methods">
 <code class="descname">methods</code><a class="headerlink" href="#methods" title="永久链接至目标">¶</a></dt>
-<dd><p>List containing names of “public” methods in the class.  Only available for
-classes.</p>
+<dd><p>包含类中 “public” 方法名称的列表。仅适用于课程。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="attributes">
 <code class="descname">attributes</code><a class="headerlink" href="#attributes" title="永久链接至目标">¶</a></dt>
-<dd><p>List containing names of “public” attributes in the class.  Only available
-for classes.</p>
+<dd><p>包含类中 “public” 属性名称的列表。仅适用于课程。</p>
 </dd></dl>
 
-<p>Additionally, the following filters are available</p>
+<p>此外，还提供以下过滤器</p>
 <dl class="function">
 <dt id="escape">
 <code class="descname">escape</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#escape" title="永久链接至目标">¶</a></dt>
-<dd><p>Escape any special characters in the text to be used in formatting RST
-contexts. For instance, this prevents asterisks making things bold. This
-replaces the builtin Jinja <a class="reference external" href="http://jinja.pocoo.org/docs/2.9/templates/#escape">escape filter</a> that does html-escaping.</p>
+<dd><p>转义要在格式化RST上下文中使用的文本中的任何特殊字符。例如，这可以防止星号使事情变得大胆。这取代了内置的 Jinja <a class="reference external" href="http://jinja.pocoo.org/docs/2.9/templates/#escape">escape filter</a> ，它可以进行 html-escaping 。</p>
 </dd></dl>
 
 <dl class="function">
 <dt>
 <code class="descname">underline</code><span class="sig-paren">(</span><em>s</em>, <em>line='='</em><span class="sig-paren">)</span></dt>
-<dd><p>Add a title underline to a piece of text.</p>
+<dd><p>为一段文本添加标题下划线。</p>
 </dd></dl>
 
-<p>For instance, <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">fullname</span> <span class="pre">|</span> <span class="pre">escape</span> <span class="pre">|</span> <span class="pre">underline</span> <span class="pre">}}</span></code> should be used to produce
-the title of a page.</p>
+<p>例如， <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">fullname</span> <span class="pre">|</span> <span class="pre">escape</span> <span class="pre">|</span> <span class="pre">underline</span> <span class="pre">}}</span></code> 应该用于生成页面的标题。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>You can use the <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> directive in the stub pages.
-Stub pages are generated also based on these directives.</p>
+<p>您可以在存根页面中使用 <a class="reference internal" href="#directive-autosummary" title="autosummary directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">autosummary</span></code></a> 指令。存根页面也是基于这些指令生成的。</p>
 </div>
 </div>
 </div>
@@ -463,10 +442,10 @@ Stub pages are generated also based on these directives.</p>
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="coverage.html" title="sphinx.ext.coverage – Collect doc coverage stats"
+          <a href="coverage.html" title="sphinx.ext.coverage – 收集doc覆盖率统计信息"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – Allow reference sections using its title"
+          <a href="autosectionlabel.html" title="sphinx.ext.autosectionlabel – 允许使用其标题的参考部分"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
@@ -476,7 +455,7 @@ Stub pages are generated also based on these directives.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/ec574630c 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
     </div>
   </body>
 </html>

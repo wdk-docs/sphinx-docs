@@ -19,13 +19,13 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:2
 msgid ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation"
-msgstr ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation"
+msgstr ":mod:`sphinx.ext.intersphinx` -- 链接到其他项目的文档"
 
 #: ../../usage/extensions/intersphinx.rst:11
 msgid ""
 "This extension can generate automatic links to the documentation of "
 "objects in other projects."
-msgstr ""
+msgstr "此扩展可以生成指向其他项目中对象文档的自动链接。"
 
 #: ../../usage/extensions/intersphinx.rst:14
 msgid ""
@@ -35,7 +35,7 @@ msgid ""
 "A reference like ``:py:class:`zipfile.ZipFile``` can then link to the "
 "Python documentation for the ZipFile class, without you having to specify"
 " where it is located exactly."
-msgstr ""
+msgstr "用法很简单:只要Sphinx遇到当前文档集中没有匹配目标的交叉引用，它就会在配置的文档集中查找目标 :confval:`intersphinx_mapping` 。然后像 ``:py:class:`zipfile.ZipFile``` 这样的引用可以链接到ZipFile类的Python文档，而不必指定它所在的位置。"
 
 #: ../../usage/extensions/intersphinx.rst:21
 msgid ""
@@ -43,18 +43,18 @@ msgid ""
 " foreign set by prefixing the link target appropriately.  A link like "
 "``:ref:`comparison manual <python:comparisons>``` will then link to the "
 "label \"comparisons\" in the doc set \"python\", if it exists."
-msgstr ""
+msgstr "使用 \"new\" 格式（见下文）时，您甚至可以通过为链接目标添加适当的前缀来强制在外部集合中查找。  像 ``:ref:`comparison manual <python:comparisons>``` 这样的链接将链接到 doc set \"python\" 中的标签 \"comparisons\" ，如果它存在的话。"
 
 #: ../../usage/extensions/intersphinx.rst:26
 msgid "Behind the scenes, this works as follows:"
-msgstr "Behind the scenes, this works as follows:"
+msgstr "在幕后，这工作如下:"
 
 #: ../../usage/extensions/intersphinx.rst:28
 msgid ""
 "Each Sphinx HTML build creates a file named :file:`objects.inv` that "
 "contains a mapping from object names to URIs relative to the HTML set's "
 "root."
-msgstr ""
+msgstr "每个Sphinx HTML构建都会创建一个名为 :file:`objects.inv` 的文件，其中包含从对象名称到相对于HTML集合根目录的URI的映射。"
 
 #: ../../usage/extensions/intersphinx.rst:31
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 " mapping files in the :confval:`intersphinx_mapping` config value.  The "
 "mapping will then be used to resolve otherwise missing references to "
 "objects into links to the other documentation."
-msgstr ""
+msgstr "使用Intersphinx扩展的项目可以在 :confval:`intersphinx_mapping` 配置值中指定此类映射文件的位置。然后，映射将用于解析对象的其他缺失引用，并将其转换为指向其他文档的链接。"
 
 #: ../../usage/extensions/intersphinx.rst:36
 msgid ""
@@ -70,11 +70,11 @@ msgid ""
 " rest of the documentation; however, the location of the mapping file can"
 " also be specified individually, e.g. if the docs should be buildable "
 "without Internet access."
-msgstr ""
+msgstr "默认情况下，假定映射文件与文档的其余部分位于同一位置;但是，映射文件的位置也可以单独指定，例如，如果文档应该可以在没有Internet访问的情况下构建。"
 
 #: ../../usage/extensions/intersphinx.rst:43
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: ../../usage/extensions/intersphinx.rst:45
 msgid ""
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../usage/extensions/intersphinx.rst:142
 msgid "Showing all links of an Intersphinx mapping file"
-msgstr "Showing all links of an Intersphinx mapping file"
+msgstr "显示Intersphinx映射文件的所有链接"
 
 #: ../../usage/extensions/intersphinx.rst:144
 msgid ""
@@ -218,5 +218,5 @@ msgid ""
 "helpful when searching for the root cause of a broken Intersphinx link in"
 " a documentation project. The following example prints the Intersphinx "
 "mapping of the Python 3 documentation::"
-msgstr ""
+msgstr "要显示所有Intersphinx链接及其Intersphinx映射文件的目标，请运行 ``python -msphinx.ext.intersphinx url-or-path`` 。  在文档项目中搜索断开的Intersphinx链接的根本原因时，这很有用。 以下示例打印Python 3文档的Intersphinx映射::"
 
