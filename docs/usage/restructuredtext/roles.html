@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>角色 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
+    <title>角色 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
+          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -133,7 +133,7 @@
 </li>
 <li><a class="reference internal" href="#math">Math</a></li>
 <li><a class="reference internal" href="#other-semantic-markup">其他语义标记</a></li>
-<li><a class="reference internal" href="#substitutions">Substitutions</a></li>
+<li><a class="reference internal" href="#substitutions">替换</a></li>
 </ul>
 </li>
 </ul>
@@ -276,8 +276,8 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
 <dl class="role">
 <dt id="role-doc">
 <code class="descname">:doc:</code><a class="headerlink" href="#role-doc" title="永久链接至目标">¶</a></dt>
-<dd><p>链接到指定的文件;文档名称可以绝对或相对方式指定。例如，如果引用 <code class="docutils literal notranslate"><span class="pre">:doc:`parrot`</span></code> 出现在文档 <code class="docutils literal notranslate"><span class="pre">sketches</span> <span class="pre">/</span> <span class="pre">index</span></code> 中，则链接引用 <code class="docutils literal notranslate"><span class="pre">sketches</span> <span class="pre">/</span> <span class="pre">parrot</span></code> 。如果引用是 <code class="docutils literal notranslate"><span class="pre">:doc:`/</span> <span class="pre">people`</span></code> 或 <code class="docutils literal notranslate"><span class="pre">:doc:`../</span> <span class="pre">people`</span></code> ，则链接引用``people``。</p>
-<p>如果没有给出明确的链接文本(比如通常: <code class="docutils literal notranslate"><span class="pre">:doc:`Monty</span> <span class="pre">Python成员&lt;/</span> <span class="pre">people&gt;`</span></code> )，链接标题将是给定文档的标题。</p>
+<dd><p>链接到指定的文件;文档名称可以绝对或相对方式指定。 例如，如果引用 <code class="docutils literal notranslate"><span class="pre">:doc:`parrot`</span></code> 出现在文档 <code class="docutils literal notranslate"><span class="pre">sketches/index</span></code> 中，则链接引用 <code class="docutils literal notranslate"><span class="pre">sketches/parrot</span></code> 。  如果引用是 <code class="docutils literal notranslate"><span class="pre">:doc:`/people`</span></code> 或 <code class="docutils literal notranslate"><span class="pre">:doc:`../people`</span></code>，则链接引用 <code class="docutils literal notranslate"><span class="pre">people</span></code> 。</p>
+<p>如果没有给出明确的链接文本(比如通常:  <code class="docutils literal notranslate"><span class="pre">:doc:`Monty</span> <span class="pre">Python</span> <span class="pre">members</span> <span class="pre">&lt;/people&gt;`</span></code>)，链接标题将是给定文档的标题。</p>
 </dd></dl>
 
 </div>
@@ -312,13 +312,13 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.5 版更改: </span><cite>numref</cite> 角色也可以参考部分。并且 <cite>numref</cite> 允许链接文本使用 <cite>{name}</cite> 。</p>
+<p><span class="versionmodified changed">在 1.5 版更改: </span><cite>numref</cite> 角色也可以参考段落。并且 <cite>numref</cite> 允许链接文本使用 <cite>{name}</cite> 。</p>
 </div>
 <dl class="role">
 <dt id="role-numref">
 <code class="descname">:numref:</code><a class="headerlink" href="#role-numref" title="永久链接至目标">¶</a></dt>
 <dd><p>链接到指定的数字，表格，代码块和部分;使用标准的reST标签。当您使用此角色时，它将插入带有链接文本的图形的引用，其图形编号如 “图1.1” 。</p>
-<p>如果给出了明确的链接文本(像往常一样: <code class="docutils literal notranslate"><span class="pre">:numref:`Sphinx的图像(图。％s)&lt;my-figure&gt;`</span></code> )，链接标题将作为引用的标题。作为占位符， <cite>％s`和`{number}</cite> 被图形标题替换为图形编号和 <cite>{name}</cite> 。如果没有给出明确的链接文本，则 <a class="reference internal" href="../configuration.html#confval-numfig_format"><code class="xref std std-confval docutils literal notranslate"><span class="pre">numfig_format</span></code></a> 设置用作后备默认值。</p>
+<p>如果给出了明确的链接文本(像往常一样: <code class="docutils literal notranslate"><span class="pre">:numref:`Image</span> <span class="pre">of</span> <span class="pre">Sphinx</span> <span class="pre">(Fig.</span> <span class="pre">%s)</span> <span class="pre">&lt;my-figure&gt;`</span></code>)，链接标题将作为引用的标题。作为占位符， <cite>％s</cite> 和 <cite>{number}</cite> 被图形标题替换为图形编号和 <cite>{name}</cite> 。如果没有给出明确的链接文本，则 <a class="reference internal" href="../configuration.html#confval-numfig_format"><code class="xref std std-confval docutils literal notranslate"><span class="pre">numfig_format</span></code></a> 设置用作后备默认值。</p>
 <p>如果 <a class="reference internal" href="../configuration.html#confval-numfig"><code class="xref std std-confval docutils literal notranslate"><span class="pre">numfig</span></code></a> 是 <code class="docutils literal notranslate"><span class="pre">False</span></code> ，数字没有编号，所以这个角色不插入引用，而是插入标签或链接文本。</p>
 </dd></dl>
 
@@ -507,13 +507,13 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
 <dl class="role">
 <dt id="role-rfc">
 <code class="descname">:rfc:</code><a class="headerlink" href="#role-rfc" title="永久链接至目标">¶</a></dt>
-<dd><p>对Internet请求注释的引用。这会生成适当的索引条目。生成文本 “RFC <em>number</em>” ;在HTML输出中，此文本是指向指定RFC的联机副本的超链接。你可以通过说 <code class="docutils literal notranslate"><span class="pre">:rfc:`number＃anchor`</span></code> 链接到特定的部分。</p>
+<dd><p>对Internet请求注释的引用。这会生成适当的索引条目。生成文本 “RFC <em>number</em>” ; 在HTML输出中，此文本是指向指定RFC的联机副本的超链接。你可以通过说 <code class="docutils literal notranslate"><span class="pre">:rfc:`number#anchor`</span></code> 链接到特定的部分。</p>
 </dd></dl>
 
 <p>请注意，包含超链接没有特殊角色，因为您可以使用标准reST标记来实现此目的。</p>
 </div>
 <div class="section" id="substitutions">
-<span id="default-substitutions"></span><h2>Substitutions<a class="headerlink" href="#substitutions" title="永久链接至标题">¶</a></h2>
+<span id="default-substitutions"></span><h2>替换<a class="headerlink" href="#substitutions" title="永久链接至标题">¶</a></h2>
 <p>文档系统提供默认定义的三个替换。它们在构建配置文件中设置。</p>
 <dl class="describe">
 <dt>
@@ -565,7 +565,7 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
     </div>
   </body>
 </html>

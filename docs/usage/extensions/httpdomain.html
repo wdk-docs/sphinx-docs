@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域 &#8212; Sphinx 2.1.0+/cb9d9e59e 文档</title>
+    <title>sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/cb9d9e59e 文档 中搜索"
+          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -234,7 +234,7 @@
 <p><span class="versionmodified added">1.3.0 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">http_strict_mode</span></code></dt><dd><p>当 <code class="docutils literal notranslate"><span class="pre">True</span></code> （默认）在状态代码，方法和标题看起来非标准时发出构建错误:</p>
+<dt><code class="docutils literal notranslate"><span class="pre">http_strict_mode</span></code></dt><dd><p>当 <code class="docutils literal notranslate"><span class="pre">True</span></code> (默认)在状态代码，方法和标题看起来非标准时发出构建错误:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http_strict_mode</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
@@ -409,8 +409,7 @@
 <dt><code class="docutils literal notranslate"><span class="pre">param</span></code>, <code class="docutils literal notranslate"><span class="pre">parameter</span></code>, <code class="docutils literal notranslate"><span class="pre">arg</span></code>, <code class="docutils literal notranslate"><span class="pre">argument</span></code></dt><dd><p>URL参数的描述。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">queryparameter</span></code>, <code class="docutils literal notranslate"><span class="pre">queryparam</span></code>, <code class="docutils literal notranslate"><span class="pre">qparam</span></code>, <code class="docutils literal notranslate"><span class="pre">query</span></code></dt><dd><p>请求查询字符串传递的参数说明。</p>
-<p>It optionally can be typed, all the query parameters will have obviously
-string types though.  But it’s useful if there’s conventions for it.</p>
+<p>它可以选择键入，但所有查询参数都有明显的字符串类型。但是如果有它的约定它是有用的。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 1.1.9 版更改: </span>它可以是打字的:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:query string title:</span> <span class="nf">the post title</span>
@@ -420,15 +419,11 @@ string types though.  But it’s useful if there’s conventions for it.</p>
 </div>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">formparameter</span></code>, <code class="docutils literal notranslate"><span class="pre">formparam</span></code>, <code class="docutils literal notranslate"><span class="pre">fparam</span></code>, <code class="docutils literal notranslate"><span class="pre">form</span></code></dt><dd><p>Description of parameter passed by request content body, encoded in
-<em class="mimetype">application/x-www-form-urlencoded</em> or
-<em class="mimetype">multipart/form-data</em>.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">formparameter</span></code>, <code class="docutils literal notranslate"><span class="pre">formparam</span></code>, <code class="docutils literal notranslate"><span class="pre">fparam</span></code>, <code class="docutils literal notranslate"><span class="pre">form</span></code></dt><dd><p>由请求内容体传递的参数的描述，编码在 <em class="mimetype">application/x-www-form-urlencoded</em> 或 <em class="mimetype">multipart/form-data</em> 。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">jsonparameter</span></code>, <code class="docutils literal notranslate"><span class="pre">jsonparam</span></code>, <code class="docutils literal notranslate"><span class="pre">json</span></code></dt><dd><p>Description of a parameter passed by request content body, encoded in
-<em class="mimetype">application/json</em>.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">jsonparameter</span></code>, <code class="docutils literal notranslate"><span class="pre">jsonparam</span></code>, <code class="docutils literal notranslate"><span class="pre">json</span></code></dt><dd><p>请求内容体传递的参数的描述，编码在 <em class="mimetype">application/json</em> 。</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">1.3.0 版后已移除: </span>Use <code class="docutils literal notranslate"><span class="pre">reqjsonobj</span></code>/<code class="docutils literal notranslate"><span class="pre">reqjson</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;jsonobj</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;json</span></code> and
-<code class="docutils literal notranslate"><span class="pre">reqjsonarr</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;jsonarr</span></code> instead.</p>
+<p><span class="versionmodified deprecated">1.3.0 版后已移除: </span>使用 <code class="docutils literal notranslate"><span class="pre">reqjsonobj</span></code>/<code class="docutils literal notranslate"><span class="pre">reqjson</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;jsonobj</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;json</span></code> 和 <code class="docutils literal notranslate"><span class="pre">reqjsonarr</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;jsonarr</span></code> 代替.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1.8 新版功能.</span></p>
@@ -442,9 +437,7 @@ string types though.  But it’s useful if there’s conventions for it.</p>
 </div>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">reqjsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">reqjson</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;jsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;json</span></code></dt><dd><p>Description of a single field of JSON object passed by request body,
-encoded in <em class="mimetype">application/json</em>. The key difference from <code class="docutils literal notranslate"><span class="pre">json</span></code> is
-explicitly defined use-case (request/response) of the described object.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">reqjsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">reqjson</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;jsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;json</span></code></dt><dd><p>请求体传递的JSON对象的单个字段的描述，编码在 <em class="mimetype">application/json</em> 。与 <code class="docutils literal notranslate"><span class="pre">json</span></code> 的主要区别在于明确定义了所描述对象的用例(请求/响应)。</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:&lt;json string title:</span> <span class="nf">the post title</span>
 <span class="nc">:&lt;json string body:</span> <span class="nf">the post body</span>
 <span class="nc">:&lt;json boolean sticky:</span> <span class="nf">whether it&#39;s sticky or not</span>
@@ -454,8 +447,7 @@ explicitly defined use-case (request/response) of the described object.</p>
 <p><span class="versionmodified added">1.3.0 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">resjsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">resjson</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;jsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;json</span></code></dt><dd><p>Description of a single field of JSON object returned with response body,
-encoded in <em class="mimetype">application/json</em>.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">resjsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">resjson</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;jsonobj</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;json</span></code></dt><dd><p>与响应体一起返回的JSON对象的单个字段的描述，编码在 <em class="mimetype">application/json</em> 。</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:&gt;json boolean ok:</span> <span class="nf">Operation status</span>
 </pre></div>
 </div>
@@ -467,8 +459,7 @@ encoded in <em class="mimetype">application/json</em>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">reqjsonarr</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;jsonarr</span></code>
 <code class="docutils literal notranslate"><span class="pre">resjsonarr</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;jsonarr</span></code></p>
 <blockquote>
-<div><p>Similar to <code class="docutils literal notranslate"><span class="pre">&lt;json</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;json</span></code> respectively, but uses for describing
-objects schema inside of returned array.</p>
+<div><p>类似于 <code class="docutils literal notranslate"><span class="pre">&lt;json</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">json</span></code> ，但用于描述返回数组内的对象模式。</p>
 <p>假设响应包含以下数据:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="s2">&quot;forbidden&quot;</span><span class="p">,</span> <span class="s2">&quot;reason&quot;</span><span class="o">:</span> <span class="s2">&quot;sorry&quot;</span><span class="p">}]</span>
 </pre></div>
@@ -488,12 +479,12 @@ objects schema inside of returned array.</p>
 </pre></div>
 </div>
 <dl>
-<dt><code class="docutils literal notranslate"><span class="pre">requestheader</span></code>, <code class="docutils literal notranslate"><span class="pre">reqheader</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;header</span></code></dt><dd><p>Description of request header field.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">requestheader</span></code>, <code class="docutils literal notranslate"><span class="pre">reqheader</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;header</span></code></dt><dd><p>请求标头字段的描述。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1.9 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">responseheader</span></code>, <code class="docutils literal notranslate"><span class="pre">resheader</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;header</span></code></dt><dd><p>Description of response header field.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">responseheader</span></code>, <code class="docutils literal notranslate"><span class="pre">resheader</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;header</span></code></dt><dd><p>响应头字段的描述。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1.9 新版功能.</span></p>
 </div>
@@ -629,8 +620,7 @@ objects schema inside of returned array.</p>
 <dl class="role">
 <dt id="role-mimetype">
 <code class="descname">:mimetype:</code><a class="headerlink" href="#role-mimetype" title="永久链接至目标">¶</a></dt>
-<dd><p>Exactly it doesn’t belong to HTTP domain, but standard domain. It refers
-to the MIME type like <em class="mimetype">text/html</em>.</p>
+<dd><p>确切地说，它不属于HTTP域，而是属于标准域。它指的是MIME类型，如 <em class="mimetype">text/html</em> 。</p>
 </dd></dl>
 
 <dl class="role">
@@ -644,12 +634,9 @@ to the MIME type like <em class="mimetype">text/html</em>.</p>
 <dl class="role">
 <dt id="role-http:header">
 <code class="descname">:http:header:</code><a class="headerlink" href="#role-http:header" title="永久链接至目标">¶</a></dt>
-<dd><p>Similar to <a class="reference internal" href="#role-mimetype" title="mimetype role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">mimetype</span></code></a> role, it doesn’t belong to HTTP domain,
-but standard domain. It refers to the HTTP request/response header field
-like <a href="#id32"><span class="problematic" id="id33">:http:header:`Content-Type`</span></a>.</p>
-<p>If the HTTP header is known, the text is a hyperlink to a web reference of
-the specified header.</p>
-<p>Known HTTP headers:</p>
+<dd><p>类似于 <a class="reference internal" href="#role-mimetype" title="mimetype role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">mimetype</span></code></a> 角色，它不属于HTTP域，而属于标准域。它引用HTTP请求/响应头字段，如 <a href="#id1"><span class="problematic" id="id2">:http:header:`Content-Type`</span></a> 。</p>
+<p>如果HTTP标头已知，则文本是指向指定标头的Web引用的超链接。</p>
+<p>已知的HTTP标头:</p>
 <ul class="simple">
 <li><p><a href="#id34"><span class="problematic" id="id35">:http:header:`Accept`</span></a></p></li>
 <li><p><a href="#id36"><span class="problematic" id="id37">:http:header:`Accept-Charset`</span></a></p></li>
@@ -708,7 +695,7 @@ the specified header.</p>
 <p><span class="versionmodified added">1.3.0 新版功能.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.5.0 版更改: </span>No longer emits warnings for unrecognized headers</p>
+<p><span class="versionmodified changed">在 1.5.0 版更改: </span>不再针对无法识别的标头发出警告</p>
 </div>
 </dd></dl>
 
@@ -718,10 +705,8 @@ the specified header.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
-<p>It generates RESTful HTTP API reference documentation from a <a class="reference external" href="http://flask.pocoo.org/">Flask</a>
-application’s routing table, similar to <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a>.</p>
-<p>In order to use it, add <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a> into
-<code class="xref py py-data docutils literal notranslate"><span class="pre">extensions</span></code> list of your Sphinx configuration (<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>) file:</p>
+<p>它从 <a class="reference external" href="http://flask.pocoo.org/">Flask</a> 应用程序的路由表生成RESTful HTTP API参考文档，类似于 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 。</p>
+<p>为了使用它，将 <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a> 添加到 <code class="xref py py-data docutils literal notranslate"><span class="pre">extensions</span></code> 列表中的Sphinx配置(<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>)文件:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.autohttp.flask&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -739,109 +724,95 @@ application’s routing table, similar to <a class="reference internal" href="au
 <dd><div class="versionadded">
 <p><span class="versionmodified added">1.1 新版功能.</span></p>
 </div>
-<p>Generates HTTP API references from a Flask application. It takes an
-import name, like:</p>
+<p>从Flask应用程序生成HTTP API引用。它需要一个导入名称，比如:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">your</span><span class="o">.</span><span class="n">webapplication</span><span class="o">.</span><span class="n">module</span><span class="p">:</span><span class="n">app</span>
 </pre></div>
 </div>
-<p>Colon character (<code class="docutils literal notranslate"><span class="pre">:</span></code>) separates module path and application variable.
-Latter part can be more complex:</p>
+<p>冒号字符(<code class="docutils literal notranslate"><span class="pre">:</span></code>)分隔模块路径和应用程序变量。后期部分可能更复杂:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">your</span><span class="o">.</span><span class="n">webapplication</span><span class="o">.</span><span class="n">module</span><span class="p">:</span><span class="n">create_app</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;default.cfg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>It’s useful when a Flask application is created from the factory function
-(<code class="xref py py-func docutils literal notranslate"><span class="pre">create_app()</span></code>, in the above example).</p>
-<p>It takes several flag options as well.</p>
+<p>当从工厂函数(<code class="xref py py-func docutils literal notranslate"><span class="pre">create_app()</span></code>, 在上面的例子中)创建Flask应用程序时，它很有用。</p>
+<p>它也需要几个标志选项。</p>
 <dl>
-<dt><code class="docutils literal notranslate"><span class="pre">endpoints</span></code></dt><dd><p>Endpoints to generate a reference.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">endpoints</span></code></dt><dd><p>端点生成引用。</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoflask</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span> <span class="nf">user, post, friends</span>
 </pre></div>
 </div>
-<p>will document <code class="xref py py-func docutils literal notranslate"><span class="pre">user()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code>, and <code class="xref py py-func docutils literal notranslate"><span class="pre">friends()</span></code>
-view functions, and</p>
+<p>将记录 <code class="xref py py-func docutils literal notranslate"><span class="pre">user()</span></code> ， <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code> ，和 <code class="xref py py-func docutils literal notranslate"><span class="pre">friends()</span></code> 查看函数，以及</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoflask</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span>
 </pre></div>
 </div>
-<p>will document all endpoints in the flask app.</p>
-<p>For compatibility, omitting this option will produce the same effect
-like above.</p>
+<p>将记录烧瓶应用程序中的所有端点。</p>
+<p>为了兼容性，省略此选项将产生与上面相同的效果。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1.8 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code></dt><dd><p>Excludes specified endpoints from generated references.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code></dt><dd><p>从生成的引用中排除指定的端点。</p>
 <p>例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoflask</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:undoc-endpoints:</span> <span class="nf">admin, admin_login</span>
 </pre></div>
 </div>
-<p>will exclude <code class="xref py py-func docutils literal notranslate"><span class="pre">admin()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">admin_login()</span></code> view functions.</p>
+<p>将排除 <code class="xref py py-func docutils literal notranslate"><span class="pre">admin()</span></code> ， <code class="xref py py-func docutils literal notranslate"><span class="pre">admin_login()</span></code> 查看函数。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>It is worth noting that the names of endpoints that are applied to
-blueprints are prefixed with the blueprint’s name (e.g.
-blueprint.endpoint).</p>
+<p>值得注意的是，应用于蓝图的端点名称以蓝图的名称为前缀(例如 blueprint.endpoint )。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>While the <a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/autodoc.html#directive-automodule">undoc-members</a> flag of <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> extension
-includes members without docstrings, <code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code> option has
-nothing to do with docstrings. It just excludes specified endpoints.</p>
+<p>虽然 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 扩展的 <a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/autodoc.html#directive-automodule">undoc-members</a> 标志包含没有 docstrings 的成员，但 <code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code> 选项与docstrings无关。它只是排除了指定的端点。</p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">blueprints</span></code></dt><dd><p>Only include specified blueprints in generated references.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">blueprints</span></code></dt><dd><p>仅在生成的引用中包含指定的蓝图。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1.9 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">undoc-blueprints</span></code></dt><dd><p>Excludes specified blueprints from generated references.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-blueprints</span></code></dt><dd><p>从生成的引用中排除指定的蓝图。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1.8 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">modules</span></code></dt><dd><p>Only include specified view modules in generated references.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">modules</span></code></dt><dd><p>仅在生成的引用中包含指定的视图模块。</p>
 <p>例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoflask</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:modules:</span> <span class="nf">yourwebapp.views.admin</span>
 </pre></div>
 </div>
-<p>will include only views in <code class="docutils literal notranslate"><span class="pre">yourwebapp.views.admin</span></code> module</p>
+<p>将仅包含 <code class="docutils literal notranslate"><span class="pre">yourwebapp.views.admin</span></code> 模块中的视图</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5.0 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">undoc-modules</span></code></dt><dd><p>Excludes specified view modules from generated references.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-modules</span></code></dt><dd><p>从生成的引用中排除指定的视图模块。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5.0 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">undoc-static</span></code></dt><dd><p>Excludes a view function that serves static files, which is included
-in Flask by default.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-static</span></code></dt><dd><p>排除提供静态文件的视图函数，默认情况下包含在Flask中。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">order</span></code></dt><dd><p>Determines the order in which endpoints are listed. Currently only
-<code class="docutils literal notranslate"><span class="pre">path</span></code> is supported.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">order</span></code></dt><dd><p>确定列出端点的顺序。目前只支持 <code class="docutils literal notranslate"><span class="pre">path</span></code> 。</p>
 <p>例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autoflask</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span>
    <span class="nc">:order:</span> <span class="nf">path</span>
 </pre></div>
 </div>
-<p>will document all endpoints in the flask app, ordered by their route
-paths.</p>
+<p>将记录烧瓶应用中的所有端点，按其路径路径排序。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5.0 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">groupby</span></code></dt><dd><p>Determines the strategy to group paths. Currently only <code class="docutils literal notranslate"><span class="pre">view</span></code> is
-supported. Specified this will group paths by their view functions.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">groupby</span></code></dt><dd><p>确定分组路径的策略。目前只支持 <code class="docutils literal notranslate"><span class="pre">view</span></code> 。指定它将按视图函数对路径进行分组。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.6.0 新版功能.</span></p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">include-empty-docstring</span></code></dt><dd><p>View functions that don’t have docstring (<code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>) are excluded
-by default. If this flag option has given, they become included also.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">include-empty-docstring</span></code></dt><dd><p>默认情况下排除没有 docstring (<code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>) 的视图函数。如果给出了这个标志选项，它们也会被包括在内。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.1.2 新版功能.</span></p>
 </div>
@@ -855,10 +826,8 @@ by default. If this flag option has given, they become included also.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.5.0 新版功能.</span></p>
 </div>
-<p>This generates a quick API reference table for the route documentation
-produced by <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a></p>
-<p>To use it, both <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a> and <a class="reference internal" href="#module-sphinxcontrib.autohttp.flaskqref" title="sphinxcontrib.autohttp.flaskqref"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flaskqref</span></code></a> need to be added into the extensions
-of your configuration (<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>) file:</p>
+<p>这将为以下生成的路径文档生成一个快速API参考表 <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a></p>
+<p>要使用它，两者 <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a> 和 <a class="reference internal" href="#module-sphinxcontrib.autohttp.flaskqref" title="sphinxcontrib.autohttp.flaskqref"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flaskqref</span></code></a> 需要添加到配置(<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>)文件的扩展名中:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.autohttp.flask&#39;</span><span class="p">,</span>
               <span class="s1">&#39;sphinxcontrib.autohttp.flaskqref&#39;</span><span class="p">]</span>
 </pre></div>
@@ -869,34 +838,24 @@ of your configuration (<code class="file docutils literal notranslate"><span cla
 <dd><div class="versionadded">
 <p><span class="versionmodified added">1.5.0 新版功能.</span></p>
 </div>
-<p>Generates HTTP API references from a Flask application and places these
-in a list-table with quick reference links. The usage and options are identical
-to that of <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a> with the addition of the
-<code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> option.</p>
+<p>从Flask应用程序生成HTTP API引用，并将它们放在带有快速引用链接的列表表中。用法和选项与 <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a> 相同，增加了 <code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> 选项。</p>
 </dd></dl>
 
 <div class="section" id="id138">
 <h3>基本用法<a class="headerlink" href="#id138" title="永久链接至标题">¶</a></h3>
-<p>You typically would place the quick reference table near the top of your docco
-and use <em>.. autoflask::</em> further down.</p>
-<p>Unless you use the <code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> option, routes that are to be included in
-the quick reference table require the following rst comment to be added to their
-doc string:</p>
+<p>您通常会将快速参考表放在docco顶部附近并使用 <em>.. autoflask::</em> 进一步向下。</p>
+<p>除非使用 <code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> 选项，否则要包含在快速参考表中的路由需要将以下第一条注释添加到其文档字符串中:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. :quickref: [&lt;resource&gt;;] &lt;short description&gt;</span>
 </pre></div>
 </div>
-<p>&lt;resource&gt; is optional, if used a semi-colon separates it from &lt;short description&gt;
-The table is grouped and sorted by &lt;resource&gt;.</p>
+<p>&lt;resource&gt; 是可选的，如果使用分号，则将其与 &lt;short description&gt; 分开。该表按 &lt;resource&gt; 分组和排序。</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">&lt;resource&gt;</span></code></dt><dd><p>This is the resource name of the operation.  The name maybe the same for a number
-of operations and enables grouping these together.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">&lt;resource&gt;</span></code></dt><dd><p>这是操作的资源名称。对于许多操作，名称可能相同，并且可以将这些组合在一起。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">&lt;short</span> <span class="pre">description&gt;</span></code></dt><dd><p>A brief description what the operation does.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">&lt;short</span> <span class="pre">description&gt;</span></code></dt><dd><p>简要说明操作的作用。</p>
 </dd>
 </dl>
-<p>If you use the <code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> option, all routes must be inside blueprints.
-The <code class="docutils literal notranslate"><span class="pre">&lt;resource&gt;</span></code> will be set to the blueprint’s name, and the <code class="docutils literal notranslate"><span class="pre">&lt;short</span>
-<span class="pre">description&gt;</span></code> will be set to the first line of the docstring.</p>
+<p>如果使用 <code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> 选项，则所有路径都必须在蓝图内。 <code class="docutils literal notranslate"><span class="pre">&lt;resource&gt;</span></code> 将被设置为蓝图的名称， <code class="docutils literal notranslate"><span class="pre">&lt;short</span> <span class="pre">description&gt;</span></code> 将被设置为 docstring 的第一行。</p>
 <p>例如:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&lt;user&gt;&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">user</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
@@ -909,23 +868,20 @@ The <code class="docutils literal notranslate"><span class="pre">&lt;resource&gt
     <span class="k">return</span> <span class="s1">&#39;hi, &#39;</span> <span class="o">+</span> <span class="n">user</span>
 </pre></div>
 </div>
-<p>The quick reference table is defined as:</p>
+<p>快速参考表定义为:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">qrefflask</span><span class="p">::</span> autoflask_sampleapp:app
    <span class="nc">:undoc-static:</span>
 </pre></div>
 </div>
-<p>Using the autoflask_sampleapp with <em>.. :quickref:</em> annotations,
-this is rendered as:</p>
+<p>使用带有 <em>.. :quickref:</em> 注释的 autoflask_sampleapp ，将其呈现为:</p>
 <blockquote>
 <div></div></blockquote>
 <span class="target" id="module-sphinxcontrib.autohttp.bottle"></span></div>
 </div>
 <div class="section" id="sphinxcontrib-autohttp-bottle-exporting-api-reference-from-bottle-app">
 <h2><a class="reference internal" href="#module-sphinxcontrib.autohttp.bottle" title="sphinxcontrib.autohttp.bottle"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.bottle</span></code></a> — 从Bottle应用程序导出API参考<a class="headerlink" href="#sphinxcontrib-autohttp-bottle-exporting-api-reference-from-bottle-app" title="永久链接至标题">¶</a></h2>
-<p>It generates RESTful HTTP API reference documentation from a <a class="reference external" href="http://bottlepy.org/">Bottle</a>
-application’s routing table, similar to <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a>.</p>
-<p>In order to use it, add <a class="reference internal" href="#module-sphinxcontrib.autohttp.bottle" title="sphinxcontrib.autohttp.bottle"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.bottle</span></code></a> into
-<code class="xref py py-data docutils literal notranslate"><span class="pre">extensions</span></code> list of your Sphinx configuration (<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>) file:</p>
+<p>它从 <a class="reference external" href="http://bottlepy.org/">Bottle</a> 应用程序的路由表生成RESTful HTTP API参考文档，类似于 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 。</p>
+<p>为了使用它，将 <a class="reference internal" href="#module-sphinxcontrib.autohttp.bottle" title="sphinxcontrib.autohttp.bottle"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.bottle</span></code></a> 添加到 <code class="xref py py-data docutils literal notranslate"><span class="pre">extensions</span></code> 列表中的Sphinx配置(<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>)文件:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.autohttp.bottle&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -939,51 +895,43 @@ application’s routing table, similar to <a class="reference internal" href="au
 <dl class="directive">
 <dt id="directive-autobottle">
 <code class="descname">.. autobottle::</code><code class="descclassname"> module:app</code><a class="headerlink" href="#directive-autobottle" title="永久链接至目标">¶</a></dt>
-<dd><p>Generates HTTP API references from a Bottle application. It takes an
-import name, like:</p>
+<dd><p>从Bottle应用程序生成HTTP API引用。它需要一个导入名称，比如:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">your</span><span class="o">.</span><span class="n">webapplication</span><span class="o">.</span><span class="n">module</span><span class="p">:</span><span class="n">app</span>
 </pre></div>
 </div>
-<p>Colon character (<code class="docutils literal notranslate"><span class="pre">:</span></code>) separates module path and application variable.
-Latter part can be more complex:</p>
+<p>冒号字符(<code class="docutils literal notranslate"><span class="pre">:</span></code>)分隔模块路径和应用程序变量。后期部分可能更复杂:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">your</span><span class="o">.</span><span class="n">webapplication</span><span class="o">.</span><span class="n">module</span><span class="p">:</span><span class="n">create_app</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s1">&#39;default.cfg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>It’s useful when a Bottle application is created from the factory function
-(<code class="xref py py-func docutils literal notranslate"><span class="pre">create_app()</span></code>, in the above example).</p>
-<p>It takes several flag options as well.</p>
+<p>从工厂函数(<code class="xref py py-func docutils literal notranslate"><span class="pre">create_app()</span></code>, 在上例中)创建Bottle应用程序时，它很有用。</p>
+<p>它也需要几个标志选项。</p>
 <dl>
-<dt><code class="docutils literal notranslate"><span class="pre">endpoints</span></code></dt><dd><p>Endpoints to generate a reference.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">endpoints</span></code></dt><dd><p>端点生成引用。</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autobottle</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span> <span class="nf">user, post, friends</span>
 </pre></div>
 </div>
-<p>will document <code class="xref py py-func docutils literal notranslate"><span class="pre">user()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code>, and <code class="xref py py-func docutils literal notranslate"><span class="pre">friends()</span></code>
-view functions, and</p>
+<p>将记录 <code class="xref py py-func docutils literal notranslate"><span class="pre">user()</span></code> ， <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code> ，和 <code class="xref py py-func docutils literal notranslate"><span class="pre">friends()</span></code> 查看函数，以及</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autobottle</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span>
 </pre></div>
 </div>
-<p>will document all endpoints in the bottle app.</p>
-<p>For compatibility, omitting this option will produce the same effect
-like above.</p>
+<p>将记录瓶子应用程序中的所有端点。</p>
+<p>为了兼容性，省略此选项将产生与上面相同的效果。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code></dt><dd><p>Excludes specified endpoints from generated references.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code></dt><dd><p>从生成的引用中排除指定的端点。</p>
 <p>例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autobottle</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:undoc-endpoints:</span> <span class="nf">admin, admin_login</span>
 </pre></div>
 </div>
-<p>will exclude <code class="xref py py-func docutils literal notranslate"><span class="pre">admin()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">admin_login()</span></code> view functions.</p>
+<p>将排除 <code class="xref py py-func docutils literal notranslate"><span class="pre">admin()</span></code> ， <code class="xref py py-func docutils literal notranslate"><span class="pre">admin_login()</span></code> 查看函数。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>While the <a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/autodoc.html#directive-automodule">undoc-members</a> flag of <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> extension
-includes members without docstrings, <code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code> option has
-nothing to do with docstrings. It just excludes specified endpoints.</p>
+<p>虽然 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 扩展的 <a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/autodoc.html#directive-automodule">undoc-members</a> 标志包含没有 docstrings 的成员，但 <code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code> 选项与docstrings无关。它只是排除了指定的端点。</p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">include-empty-docstring</span></code></dt><dd><p>View functions that don’t have docstring (<code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>) are excluded
-by default. If this flag option has given, they become included also.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">include-empty-docstring</span></code></dt><dd><p>默认情况下排除没有 docstring (<code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>) 的视图函数。如果给出了这个标志选项，它们也会被包括在内。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -991,10 +939,8 @@ by default. If this flag option has given, they become included also.</p>
 <span class="target" id="module-sphinxcontrib.autohttp.tornado"></span></div>
 <div class="section" id="sphinxcontrib-autohttp-tornado-exporting-api-reference-from-tornado-app">
 <h2><a class="reference internal" href="#module-sphinxcontrib.autohttp.tornado" title="sphinxcontrib.autohttp.tornado"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code></a> — 从Tornado应用程序导出API参考<a class="headerlink" href="#sphinxcontrib-autohttp-tornado-exporting-api-reference-from-tornado-app" title="永久链接至标题">¶</a></h2>
-<p>It generates RESTful HTTP API reference documentation from a <a class="reference external" href="http://www.tornadoweb.org/">Tornado</a>
-application’s routing table, similar to <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a>.</p>
-<p>In order to use it, add <a class="reference internal" href="#module-sphinxcontrib.autohttp.tornado" title="sphinxcontrib.autohttp.tornado"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code></a> into
-<code class="xref py py-data docutils literal notranslate"><span class="pre">extensions</span></code> list of your Sphinx configuration (<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>) file:</p>
+<p>它从Tornado_应用程序的路由表生成RESTful HTTP API参考文档，类似于 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 。</p>
+<p>为了使用它，将 <a class="reference internal" href="#module-sphinxcontrib.autohttp.tornado" title="sphinxcontrib.autohttp.tornado"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code></a> 添加到 <code class="xref py py-data docutils literal notranslate"><span class="pre">extensions</span></code> 列表中的Sphinx配置(<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>)文件:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.autohttp.tornado&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1008,46 +954,39 @@ application’s routing table, similar to <a class="reference internal" href="au
 <dl class="directive">
 <dt id="directive-autotornado">
 <code class="descname">.. autotornado::</code><code class="descclassname"> module:app</code><a class="headerlink" href="#directive-autotornado" title="永久链接至目标">¶</a></dt>
-<dd><p>Generates HTTP API references from a Tornado application. It takes an
-import name, like:</p>
+<dd><p>从Tornado应用程序生成HTTP API引用。它需要一个导入名称，比如:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">your</span><span class="o">.</span><span class="n">webapplication</span><span class="o">.</span><span class="n">module</span><span class="p">:</span><span class="n">app</span>
 </pre></div>
 </div>
-<p>Colon character (<code class="docutils literal notranslate"><span class="pre">:</span></code>) separates module path and application variable.</p>
-<p>It takes several flag options as well.</p>
+<p>冒号字符(<code class="docutils literal notranslate"><span class="pre">:</span></code>)分隔模块路径和应用程序变量。</p>
+<p>它也需要几个标志选项。</p>
 <dl>
-<dt><code class="docutils literal notranslate"><span class="pre">endpoints</span></code></dt><dd><p>Endpoints to generate a reference.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">endpoints</span></code></dt><dd><p>端点生成引用。</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autotornado</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span> <span class="nf">User.get, User.post, Friends.get</span>
 </pre></div>
 </div>
-<p>will document the <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code> methods of the
-<code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">RequestHandler</span></code> and the <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> method
-of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Friend</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">RequestHandler</span></code>, while</p>
+<p>将记录 <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code> 方法 <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code><code class="xref py py-class docutils literal notranslate"><span class="pre">RequestHandler</span></code> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> 方法 <code class="xref py py-class docutils literal notranslate"><span class="pre">Friend</span></code>:class :<cite>RequestHandler</cite> ，而</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autotornado</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span>
 </pre></div>
 </div>
-<p>will document all endpoints in the tornado app.</p>
-<p>For compatibility, omitting this option will produce the same effect
-like above.</p>
+<p>将记录龙卷风应用程序中的所有端点。</p>
+<p>为了兼容性，省略此选项将产生与上面相同的效果。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code></dt><dd><p>Excludes specified endpoints from generated references.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code></dt><dd><p>从生成的引用中排除指定的端点。</p>
 <p>例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autotornado</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:undoc-endpoints:</span> <span class="nf">admin, admin_login</span>
 </pre></div>
 </div>
-<p>will exclude <code class="xref py py-func docutils literal notranslate"><span class="pre">admin()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">admin_login()</span></code> view functions.</p>
+<p>将排除 <code class="xref py py-func docutils literal notranslate"><span class="pre">admin()</span></code> ， <code class="xref py py-func docutils literal notranslate"><span class="pre">admin_login()</span></code> 查看函数。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>While the <a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/autodoc.html#directive-automodule">undoc-members</a> flag of <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> extension
-includes members without docstrings, <code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code> option has
-nothing to do with docstrings. It just excludes specified endpoints.</p>
+<p>虽然 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 扩展的 <a class="reference external" href="http://www.sphinx-doc.org/en/stable/ext/autodoc.html#directive-automodule">undoc-members</a> 标志包含没有 docstrings 的成员，但 <code class="docutils literal notranslate"><span class="pre">undoc-endpoints</span></code> 选项与docstrings无关。它只是排除了指定的端点。</p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">include-empty-docstring</span></code></dt><dd><p>View functions that don’t have docstring (<code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>) are excluded
-by default. If this flag option has given, they become included also.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">include-empty-docstring</span></code></dt><dd><p>默认情况下排除没有 docstring (<code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code>) 的视图函数。如果给出了这个标志选项，它们也会被包括在内。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1055,11 +994,8 @@ by default. If this flag option has given, they become included also.</p>
 </div>
 <div class="section" id="author-and-license">
 <h2>作者和许可证<a class="headerlink" href="#author-and-license" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference internal" href="#module-sphinxcontrib.httpdomain" title="sphinxcontrib.httpdomain"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code></a> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp</span></code>,
-parts of <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib</span></code>, are written by <a class="reference external" href="https://hongminhee.org/">Hong Minhee</a>
-and distributed under BSD license.</p>
-<p>The source code is maintained under <a class="reference external" href="https://github.com/sphinx-contrib">the sphinx-contrib project</a>
-in the <a class="reference external" href="https://github.com/sphinx-contrib/httpdomain">httpdomain</a> repository</p>
+<p><a class="reference internal" href="#module-sphinxcontrib.httpdomain" title="sphinxcontrib.httpdomain"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code></a> 和 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp</span></code> ，部分 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib</span></code> ，由 <a class="reference external" href="https://hongminhee.org/">Hong Minhee</a> 编写，并在BSD许可下发布。</p>
+<p>源代码在 <a class="reference external" href="https://github.com/sphinx-contrib/httpdomain">httpdomain</a> 存储库中的 <a class="reference external" href="https://github.com/sphinx-contrib">sphinx-contrib project</a> 下维护</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/sphinx-contrib/httpdomain.git
 <span class="gp">$</span> <span class="nb">cd</span> httpdomain
 </pre></div>
@@ -1096,7 +1032,7 @@ in the <a class="reference external" href="https://github.com/sphinx-contrib/htt
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/cb9d9e59e 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
     </div>
   </body>
 </html>

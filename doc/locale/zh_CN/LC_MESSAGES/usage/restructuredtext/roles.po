@@ -249,14 +249,14 @@ msgid ""
 "link refers to ``sketches/parrot``.  If the reference is "
 "``:doc:`/people``` or ``:doc:`../people```, the link refers to "
 "``people``."
-msgstr "链接到指定的文件;文档名称可以绝对或相对方式指定。例如，如果引用 ``:doc:`parrot``` 出现在文档 ``sketches / index`` 中，则链接引用 ``sketches / parrot`` 。如果引用是 ``:doc:`/ people``` 或 ``:doc:`../ people``` ，则链接引用``people``。"
+msgstr "链接到指定的文件;文档名称可以绝对或相对方式指定。 例如，如果引用 ``:doc:`parrot``` 出现在文档 ``sketches/index`` 中，则链接引用 ``sketches/parrot`` 。  如果引用是 ``:doc:`/people``` 或 ``:doc:`../people```，则链接引用 ``people`` 。"
 
 #: ../../usage/restructuredtext/roles.rst:176
 msgid ""
 "If no explicit link text is given (like usual: ``:doc:`Monty Python "
 "members </people>```), the link caption will be the title of the given "
 "document."
-msgstr "如果没有给出明确的链接文本(比如通常: ``:doc:`Monty Python成员</ people>``` )，链接标题将是给定文档的标题。"
+msgstr "如果没有给出明确的链接文本(比如通常:  ``:doc:`Monty Python members </people>```)，链接标题将是给定文档的标题。"
 
 #: ../../usage/restructuredtext/roles.rst:181
 msgid "Referencing downloadable files"
@@ -307,7 +307,7 @@ msgstr "按图号交叉引用数字"
 msgid ""
 "`numref` role can also refer sections. And `numref` allows `{name}` for "
 "the link text."
-msgstr "`numref` 角色也可以参考部分。并且 `numref` 允许链接文本使用 `{name}` 。"
+msgstr "`numref` 角色也可以参考段落。并且 `numref` 允许链接文本使用 `{name}` 。"
 
 #: ../../usage/restructuredtext/roles.rst:224
 msgid ""
@@ -326,7 +326,7 @@ msgid ""
 "figure number and  `{name}` by the figure caption. If no explicit link "
 "text is given, the :confval:`numfig_format` setting is used as fall-back "
 "default."
-msgstr "如果给出了明确的链接文本(像往常一样: ``:numref:`Sphinx的图像(图。％s)<my-figure>``` )，链接标题将作为引用的标题。作为占位符， `％s`和`{number}` 被图形标题替换为图形编号和 `{name}` 。如果没有给出明确的链接文本，则 :confval:`numfig_format` 设置用作后备默认值。"
+msgstr "如果给出了明确的链接文本(像往常一样: ``:numref:`Image of Sphinx (Fig. %s) <my-figure>```)，链接标题将作为引用的标题。作为占位符， `％s` 和 `{number}` 被图形标题替换为图形编号和 `{name}` 。如果没有给出明确的链接文本，则 :confval:`numfig_format` 设置用作后备默认值。"
 
 #: ../../usage/restructuredtext/roles.rst:235
 msgid ""
@@ -590,7 +590,7 @@ msgid ""
 "the HTML output, this text is a hyperlink to an online copy of the "
 "specified RFC.  You can link to a specific section by saying "
 "``:rfc:`number#anchor```."
-msgstr "对Internet请求注释的引用。这会生成适当的索引条目。生成文本 \"RFC *number*\\ \" ;在HTML输出中，此文本是指向指定RFC的联机副本的超链接。你可以通过说 ``:rfc:`number＃anchor``` 链接到特定的部分。"
+msgstr "对Internet请求注释的引用。这会生成适当的索引条目。生成文本 \"RFC *number*\\ \" ; 在HTML输出中，此文本是指向指定RFC的联机副本的超链接。你可以通过说 ``:rfc:`number#anchor``` 链接到特定的部分。"
 
 #: ../../usage/restructuredtext/roles.rst:445
 msgid ""
@@ -600,7 +600,7 @@ msgstr "请注意，包含超链接没有特殊角色，因为您可以使用标
 
 #: ../../usage/restructuredtext/roles.rst:452
 msgid "Substitutions"
-msgstr "Substitutions"
+msgstr "替换"
 
 #: ../../usage/restructuredtext/roles.rst:454
 msgid ""

@@ -124,7 +124,7 @@ msgstr "``http_strict_mode``"
 msgid ""
 "When ``True`` (default) emits build errors when status codes, methods and"
 " headers are looks non-standard::"
-msgstr "当 ``True`` （默认）在状态代码，方法和标题看起来非标准时发出构建错误::"
+msgstr "当 ``True`` (默认)在状态代码，方法和标题看起来非标准时发出构建错误::"
 
 #: ../../usage/extensions/httpdomain.rst:96
 #: ../../usage/extensions/httpdomain.rst:817
@@ -288,7 +288,7 @@ msgstr "请求查询字符串传递的参数说明。"
 msgid ""
 "It optionally can be typed, all the query parameters will have obviously "
 "string types though.  But it's useful if there's conventions for it."
-msgstr ""
+msgstr "它可以选择键入，但所有查询参数都有明显的字符串类型。但是如果有它的约定它是有用的。"
 
 #: ../../usage/extensions/httpdomain.rst:323
 #: ../../usage/extensions/httpdomain.rst:348
@@ -304,7 +304,7 @@ msgid ""
 "Description of parameter passed by request content body, encoded in "
 ":mimetype:`application/x-www-form-urlencoded` or :mimetype:`multipart"
 "/form-data`."
-msgstr ""
+msgstr "由请求内容体传递的参数的描述，编码在 :mimetype:`application/x-www-form-urlencoded` 或 :mimetype:`multipart/form-data` 。"
 
 #: ../../usage/extensions/httpdomain.rst:354
 msgid "``jsonparameter``, ``jsonparam``, ``json``"
@@ -314,13 +314,13 @@ msgstr "``jsonparameter``, ``jsonparam``, ``json``"
 msgid ""
 "Description of a parameter passed by request content body, encoded in "
 ":mimetype:`application/json`."
-msgstr ""
+msgstr "请求内容体传递的参数的描述，编码在 :mimetype:`application/json` 。"
 
 #: ../../usage/extensions/httpdomain.rst:340
 msgid ""
 "Use ``reqjsonobj``/``reqjson``/``<jsonobj``/``<json`` and "
 "``reqjsonarr``/``<jsonarr`` instead."
-msgstr ""
+msgstr "使用 ``reqjsonobj``/``reqjson``/``<jsonobj``/``<json`` 和 ``reqjsonarr``/``<jsonarr`` 代替."
 
 #: ../../usage/extensions/httpdomain.rst:367
 msgid "``reqjsonobj``, ``reqjson``, ``<jsonobj``, ``<json``"
@@ -332,7 +332,7 @@ msgid ""
 "encoded in :mimetype:`application/json`. The key difference from ``json``"
 " is explicitly defined use-case (request/response) of the described "
 "object."
-msgstr ""
+msgstr "请求体传递的JSON对象的单个字段的描述，编码在 :mimetype:`application/json` 。与 ``json`` 的主要区别在于明确定义了所描述对象的用例(请求/响应)。"
 
 #: ../../usage/extensions/httpdomain.rst:377
 msgid "``resjsonobj``, ``resjson``, ``>jsonobj``, ``>json``"
@@ -342,7 +342,7 @@ msgstr "``resjsonobj``, ``resjson``, ``>jsonobj``, ``>json``"
 msgid ""
 "Description of a single field of JSON object returned with response body,"
 " encoded in :mimetype:`application/json`."
-msgstr ""
+msgstr "与响应体一起返回的JSON对象的单个字段的描述，编码在 :mimetype:`application/json` 。"
 
 #: ../../usage/extensions/httpdomain.rst:379
 msgid "``reqjsonarr``, ``<jsonarr`` ``resjsonarr``, ``>jsonarr``"
@@ -352,7 +352,7 @@ msgstr "``reqjsonarr``, ``<jsonarr`` ``resjsonarr``, ``>jsonarr``"
 msgid ""
 "Similar to ``<json`` and ``>json`` respectively, but uses for describing "
 "objects schema inside of returned array."
-msgstr ""
+msgstr "类似于 ``<json`` 和 ``> json`` ，但用于描述返回数组内的对象模式。"
 
 #: ../../usage/extensions/httpdomain.rst:385
 msgid "Let's say, the response contains the following data:"
@@ -368,7 +368,7 @@ msgstr "``requestheader``, ``reqheader``, ``>header``"
 
 #: ../../usage/extensions/httpdomain.rst:407
 msgid "Description of request header field."
-msgstr "Description of request header field."
+msgstr "请求标头字段的描述。"
 
 #: ../../usage/extensions/httpdomain.rst:414
 msgid "``responseheader``, ``resheader``, ``<header``"
@@ -376,7 +376,7 @@ msgstr "``responseheader``, ``resheader``, ``<header``"
 
 #: ../../usage/extensions/httpdomain.rst:412
 msgid "Description of response header field."
-msgstr "Description of response header field."
+msgstr "响应头字段的描述。"
 
 #: ../../usage/extensions/httpdomain.rst:417
 msgid "``statuscode``, ``status``, ``code``"
@@ -483,7 +483,7 @@ msgstr "它只接受 :http:method:`post` 。"
 msgid ""
 "Exactly it doesn't belong to HTTP domain, but standard domain. It refers "
 "to the MIME type like :mimetype:`text/html`."
-msgstr ""
+msgstr "确切地说，它不属于HTTP域，而是属于标准域。它指的是MIME类型，如 :mimetype:`text/html` 。"
 
 #: ../../usage/extensions/httpdomain.rst:557
 msgid "Use :rst:role:`http:header` instead."
@@ -494,17 +494,17 @@ msgid ""
 "Similar to :rst:role:`mimetype` role, it doesn't belong to HTTP domain, "
 "but standard domain. It refers to the HTTP request/response header field "
 "like :http:header:`Content-Type`."
-msgstr ""
+msgstr "类似于 :rst:role:`mimetype` 角色，它不属于HTTP域，而属于标准域。它引用HTTP请求/响应头字段，如 :http:header:`Content-Type` 。"
 
 #: ../../usage/extensions/httpdomain.rst:566
 msgid ""
 "If the HTTP header is known, the text is a hyperlink to a web reference "
 "of the specified header."
-msgstr ""
+msgstr "如果HTTP标头已知，则文本是指向指定标头的Web引用的超链接。"
 
 #: ../../usage/extensions/httpdomain.rst:569
 msgid "Known HTTP headers:"
-msgstr "Known HTTP headers:"
+msgstr "已知的HTTP标头:"
 
 #: ../../usage/extensions/httpdomain.rst:571
 msgid ":http:header:`Accept`"
@@ -716,7 +716,7 @@ msgstr ":http:header:`Warning`"
 
 #: ../../usage/extensions/httpdomain.rst:628
 msgid "No longer emits warnings for unrecognized headers"
-msgstr "No longer emits warnings for unrecognized headers"
+msgstr "不再针对无法识别的标头发出警告"
 
 #: ../../usage/extensions/httpdomain.rst:633
 msgid ""
@@ -728,39 +728,39 @@ msgstr ":mod:`sphinxcontrib.autohttp.flask` --- 从Flask应用程序导出API参
 msgid ""
 "It generates RESTful HTTP API reference documentation from a Flask_ "
 "application's routing table, similar to :mod:`sphinx.ext.autodoc`."
-msgstr ""
+msgstr "它从 Flask_ 应用程序的路由表生成RESTful HTTP API参考文档，类似于 :mod:`sphinx.ext.autodoc` 。"
 
 #: ../../usage/extensions/httpdomain.rst:640
 msgid ""
 "In order to use it, add :mod:`sphinxcontrib.autohttp.flask` into "
 ":data:`extensions` list of your Sphinx configuration (:file:`conf.py`) "
 "file::"
-msgstr ""
+msgstr "为了使用它，将 :mod:`sphinxcontrib.autohttp.flask` 添加到 :data:`extensions` 列表中的Sphinx配置(:file:`conf.py`)文件::"
 
 #: ../../usage/extensions/httpdomain.rst:661
 msgid ""
 "Generates HTTP API references from a Flask application. It takes an "
 "import name, like::"
-msgstr ""
+msgstr "从Flask应用程序生成HTTP API引用。它需要一个导入名称，比如::"
 
 #: ../../usage/extensions/httpdomain.rst:666
 #: ../../usage/extensions/httpdomain.rst:903
 msgid ""
 "Colon character (``:``) separates module path and application variable. "
 "Latter part can be more complex::"
-msgstr ""
+msgstr "冒号字符(``:``)分隔模块路径和应用程序变量。后期部分可能更复杂::"
 
 #: ../../usage/extensions/httpdomain.rst:671
 msgid ""
 "It's useful when a Flask application is created from the factory function"
 " (:func:`create_app`, in the above example)."
-msgstr ""
+msgstr "当从工厂函数(:func:`create_app`, 在上面的例子中)创建Flask应用程序时，它很有用。"
 
 #: ../../usage/extensions/httpdomain.rst:674
 #: ../../usage/extensions/httpdomain.rst:911
 #: ../../usage/extensions/httpdomain.rst:992
 msgid "It takes several flag options as well."
-msgstr "It takes several flag options as well."
+msgstr "它也需要几个标志选项。"
 
 #: ../../usage/extensions/httpdomain.rst:697
 #: ../../usage/extensions/httpdomain.rst:932
@@ -772,18 +772,18 @@ msgstr "``endpoints``"
 #: ../../usage/extensions/httpdomain.rst:914
 #: ../../usage/extensions/httpdomain.rst:995
 msgid "Endpoints to generate a reference."
-msgstr "Endpoints to generate a reference."
+msgstr "端点生成引用。"
 
 #: ../../usage/extensions/httpdomain.rst:684
 #: ../../usage/extensions/httpdomain.rst:921
 msgid ""
 "will document :func:`user`, :func:`post`, and :func:`friends` view "
 "functions, and"
-msgstr ""
+msgstr "将记录 :func:`user` ， :func:`post` ，和 :func:`friends` 查看函数，以及"
 
 #: ../../usage/extensions/httpdomain.rst:692
 msgid "will document all endpoints in the flask app."
-msgstr "will document all endpoints in the flask app."
+msgstr "将记录烧瓶应用程序中的所有端点。"
 
 #: ../../usage/extensions/httpdomain.rst:694
 #: ../../usage/extensions/httpdomain.rst:931
@@ -791,7 +791,7 @@ msgstr "will document all endpoints in the flask app."
 msgid ""
 "For compatibility, omitting this option will produce the same effect like"
 " above."
-msgstr ""
+msgstr "为了兼容性，省略此选项将产生与上面相同的效果。"
 
 #: ../../usage/extensions/httpdomain.rst:723
 #: ../../usage/extensions/httpdomain.rst:952
@@ -803,20 +803,20 @@ msgstr "``undoc-endpoints``"
 #: ../../usage/extensions/httpdomain.rst:935
 #: ../../usage/extensions/httpdomain.rst:1017
 msgid "Excludes specified endpoints from generated references."
-msgstr "Excludes specified endpoints from generated references."
+msgstr "从生成的引用中排除指定的端点。"
 
 #: ../../usage/extensions/httpdomain.rst:709
 #: ../../usage/extensions/httpdomain.rst:944
 #: ../../usage/extensions/httpdomain.rst:1026
 msgid "will exclude :func:`admin`, :func:`admin_login` view functions."
-msgstr "will exclude :func:`admin`, :func:`admin_login` view functions."
+msgstr "将排除 :func:`admin` ， :func:`admin_login` 查看函数。"
 
 #: ../../usage/extensions/httpdomain.rst:713
 msgid ""
 "It is worth noting that the names of endpoints that are applied to "
 "blueprints are prefixed with the blueprint's name (e.g. "
 "blueprint.endpoint)."
-msgstr ""
+msgstr "值得注意的是，应用于蓝图的端点名称以蓝图的名称为前缀(例如 blueprint.endpoint )。"
 
 #: ../../usage/extensions/httpdomain.rst:719
 #: ../../usage/extensions/httpdomain.rst:948
@@ -825,7 +825,7 @@ msgid ""
 "While the `undoc-members`_ flag of :mod:`sphinx.ext.autodoc` extension "
 "includes members without docstrings, ``undoc-endpoints`` option has "
 "nothing to do with docstrings. It just excludes specified endpoints."
-msgstr ""
+msgstr "虽然 :mod:`sphinx.ext.autodoc` 扩展的 `undoc-members`_ 标志包含没有 docstrings 的成员，但 ``undoc-endpoints`` 选项与docstrings无关。它只是排除了指定的端点。"
 
 #: ../../usage/extensions/httpdomain.rst:728
 msgid "``blueprints``"
@@ -833,7 +833,7 @@ msgstr "``blueprints``"
 
 #: ../../usage/extensions/httpdomain.rst:726
 msgid "Only include specified blueprints in generated references."
-msgstr "Only include specified blueprints in generated references."
+msgstr "仅在生成的引用中包含指定的蓝图。"
 
 #: ../../usage/extensions/httpdomain.rst:733
 msgid "``undoc-blueprints``"
@@ -841,7 +841,7 @@ msgstr "``undoc-blueprints``"
 
 #: ../../usage/extensions/httpdomain.rst:731
 msgid "Excludes specified blueprints from generated references."
-msgstr "Excludes specified blueprints from generated references."
+msgstr "从生成的引用中排除指定的蓝图。"
 
 #: ../../usage/extensions/httpdomain.rst:747
 msgid "``modules``"
@@ -849,11 +849,11 @@ msgstr "``modules``"
 
 #: ../../usage/extensions/httpdomain.rst:736
 msgid "Only include specified view modules in generated references."
-msgstr "Only include specified view modules in generated references."
+msgstr "仅在生成的引用中包含指定的视图模块。"
 
 #: ../../usage/extensions/httpdomain.rst:745
 msgid "will include only views in ``yourwebapp.views.admin`` module"
-msgstr "will include only views in ``yourwebapp.views.admin`` module"
+msgstr "将仅包含 ``yourwebapp.views.admin`` 模块中的视图"
 
 #: ../../usage/extensions/httpdomain.rst:752
 msgid "``undoc-modules``"
@@ -861,7 +861,7 @@ msgstr "``undoc-modules``"
 
 #: ../../usage/extensions/httpdomain.rst:750
 msgid "Excludes specified view modules from generated references."
-msgstr "Excludes specified view modules from generated references."
+msgstr "从生成的引用中排除指定的视图模块。"
 
 #: ../../usage/extensions/httpdomain.rst:756
 msgid "``undoc-static``"
@@ -871,7 +871,7 @@ msgstr "``undoc-static``"
 msgid ""
 "Excludes a view function that serves static files, which is included in "
 "Flask by default."
-msgstr ""
+msgstr "排除提供静态文件的视图函数，默认情况下包含在Flask中。"
 
 #: ../../usage/extensions/httpdomain.rst:773
 msgid "``order``"
@@ -881,13 +881,13 @@ msgstr "``order``"
 msgid ""
 "Determines the order in which endpoints are listed. Currently only "
 "``path`` is supported."
-msgstr ""
+msgstr "确定列出端点的顺序。目前只支持 ``path`` 。"
 
 #: ../../usage/extensions/httpdomain.rst:770
 msgid ""
 "will document all endpoints in the flask app, ordered by their route "
 "paths."
-msgstr ""
+msgstr "将记录烧瓶应用中的所有端点，按其路径路径排序。"
 
 #: ../../usage/extensions/httpdomain.rst:779
 msgid "``groupby``"
@@ -897,7 +897,7 @@ msgstr "``groupby``"
 msgid ""
 "Determines the strategy to group paths. Currently only ``view`` is "
 "supported. Specified this will group paths by their view functions."
-msgstr ""
+msgstr "确定分组路径的策略。目前只支持 ``view`` 。指定它将按视图函数对路径进行分组。"
 
 #: ../../usage/extensions/httpdomain.rst:784
 #: ../../usage/extensions/httpdomain.rst:955
@@ -911,7 +911,7 @@ msgstr "``include-empty-docstring``"
 msgid ""
 "View functions that don't have docstring (:attr:`__doc__`) are excluded "
 "by default. If this flag option has given, they become included also."
-msgstr ""
+msgstr "默认情况下排除没有 docstring (:attr:`__doc__`) 的视图函数。如果给出了这个标志选项，它们也会被包括在内。"
 
 #: ../../usage/extensions/httpdomain.rst:793
 msgid ""
@@ -923,14 +923,14 @@ msgstr ":mod:`sphinxcontrib.autohttp.flaskqref` --- Flask app的快速API参考"
 msgid ""
 "This generates a quick API reference table for the route documentation "
 "produced by :mod:`sphinxcontrib.autohttp.flask`"
-msgstr ""
+msgstr "这将为以下生成的路径文档生成一个快速API参考表 :mod:`sphinxcontrib.autohttp.flask` "
 
 #: ../../usage/extensions/httpdomain.rst:800
 msgid ""
 "To use it, both :mod:`sphinxcontrib.autohttp.flask` and "
 ":mod:`sphinxcontrib.autohttp.flaskqref` need to be added into the "
 "extensions of your configuration (:file:`conf.py`) file::"
-msgstr ""
+msgstr "要使用它，两者 :mod:`sphinxcontrib.autohttp.flask` 和 :mod:`sphinxcontrib.autohttp.flaskqref` 需要添加到配置(:file:`conf.py`)文件的扩展名中::"
 
 #: ../../usage/extensions/httpdomain.rst:810
 msgid ""
@@ -938,26 +938,26 @@ msgid ""
 "in a list-table with quick reference links. The usage and options are "
 "identical to that of :mod:`sphinxcontrib.autohttp.flask` with the "
 "addition of the ``autoquickref`` option."
-msgstr ""
+msgstr "从Flask应用程序生成HTTP API引用，并将它们放在带有快速引用链接的列表表中。用法和选项与 :mod:`sphinxcontrib.autohttp.flask` 相同，增加了 ``autoquickref`` 选项。"
 
 #: ../../usage/extensions/httpdomain.rst:819
 msgid ""
 "You typically would place the quick reference table near the top of your "
 "docco and use *.. autoflask::* further down."
-msgstr ""
+msgstr "您通常会将快速参考表放在docco顶部附近并使用 *.. autoflask::* 进一步向下。"
 
 #: ../../usage/extensions/httpdomain.rst:822
 msgid ""
 "Unless you use the ``autoquickref`` option, routes that are to be "
 "included in the quick reference table require the following rst comment "
 "to be added to their doc string:"
-msgstr ""
+msgstr "除非使用 ``autoquickref`` 选项，否则要包含在快速参考表中的路由需要将以下第一条注释添加到其文档字符串中:"
 
 #: ../../usage/extensions/httpdomain.rst:830
 msgid ""
 "<resource> is optional, if used a semi-colon separates it from <short "
 "description> The table is grouped and sorted by <resource>."
-msgstr ""
+msgstr "<resource> 是可选的，如果使用分号，则将其与 <short description> 分开。该表按 <resource> 分组和排序。"
 
 #: ../../usage/extensions/httpdomain.rst:835
 msgid "``<resource>``"
@@ -967,7 +967,7 @@ msgstr "``<resource>``"
 msgid ""
 "This is the resource name of the operation.  The name maybe the same for "
 "a number of operations and enables grouping these together."
-msgstr ""
+msgstr "这是操作的资源名称。对于许多操作，名称可能相同，并且可以将这些组合在一起。"
 
 #: ../../usage/extensions/httpdomain.rst:838
 msgid "``<short description>``"
@@ -975,7 +975,7 @@ msgstr "``<short description>``"
 
 #: ../../usage/extensions/httpdomain.rst:838
 msgid "A brief description what the operation does."
-msgstr "A brief description what the operation does."
+msgstr "简要说明操作的作用。"
 
 #: ../../usage/extensions/httpdomain.rst:840
 msgid ""
@@ -983,17 +983,17 @@ msgid ""
 "blueprints. The ``<resource>`` will be set to the blueprint's name, and "
 "the ``<short description>`` will be set to the first line of the "
 "docstring."
-msgstr ""
+msgstr "如果使用 ``autoquickref`` 选项，则所有路径都必须在蓝图内。 ``<resource>`` 将被设置为蓝图的名称， ``<short description>`` 将被设置为 docstring 的第一行。"
 
 #: ../../usage/extensions/httpdomain.rst:859
 msgid "The quick reference table is defined as:"
-msgstr "The quick reference table is defined as:"
+msgstr "快速参考表定义为:"
 
 #: ../../usage/extensions/httpdomain.rst:866
 msgid ""
 "Using the autoflask_sampleapp with *.. :quickref:* annotations, this is "
 "rendered as:"
-msgstr ""
+msgstr "使用带有 *.. :quickref:* 注释的 autoflask_sampleapp ，将其呈现为:"
 
 #: ../../usage/extensions/httpdomain.rst:876
 msgid ""
@@ -1005,30 +1005,30 @@ msgstr ":mod:`sphinxcontrib.autohttp.bottle` --- 从Bottle应用程序导出API�
 msgid ""
 "It generates RESTful HTTP API reference documentation from a Bottle_ "
 "application's routing table, similar to :mod:`sphinx.ext.autodoc`."
-msgstr ""
+msgstr "它从 Bottle_ 应用程序的路由表生成RESTful HTTP API参考文档，类似于 :mod:`sphinx.ext.autodoc` 。"
 
 #: ../../usage/extensions/httpdomain.rst:881
 msgid ""
 "In order to use it, add :mod:`sphinxcontrib.autohttp.bottle` into "
 ":data:`extensions` list of your Sphinx configuration (:file:`conf.py`) "
 "file::"
-msgstr ""
+msgstr "为了使用它，将 :mod:`sphinxcontrib.autohttp.bottle` 添加到 :data:`extensions` 列表中的Sphinx配置(:file:`conf.py`)文件::"
 
 #: ../../usage/extensions/httpdomain.rst:898
 msgid ""
 "Generates HTTP API references from a Bottle application. It takes an "
 "import name, like::"
-msgstr ""
+msgstr "从Bottle应用程序生成HTTP API引用。它需要一个导入名称，比如::"
 
 #: ../../usage/extensions/httpdomain.rst:908
 msgid ""
 "It's useful when a Bottle application is created from the factory "
 "function (:func:`create_app`, in the above example)."
-msgstr ""
+msgstr "从工厂函数(:func:`create_app`, 在上例中)创建Bottle应用程序时，它很有用。"
 
 #: ../../usage/extensions/httpdomain.rst:929
 msgid "will document all endpoints in the bottle app."
-msgstr "will document all endpoints in the bottle app."
+msgstr "将记录瓶子应用程序中的所有端点。"
 
 #: ../../usage/extensions/httpdomain.rst:963
 msgid ""
@@ -1040,35 +1040,35 @@ msgstr ":mod:`sphinxcontrib.autohttp.tornado` --- 从Tornado应用程序导出AP
 msgid ""
 "It generates RESTful HTTP API reference documentation from a Tornado_ "
 "application's routing table, similar to :mod:`sphinx.ext.autodoc`."
-msgstr ""
+msgstr "它从Tornado_应用程序的路由表生成RESTful HTTP API参考文档，类似于 :mod:`sphinx.ext.autodoc` 。"
 
 #: ../../usage/extensions/httpdomain.rst:968
 msgid ""
 "In order to use it, add :mod:`sphinxcontrib.autohttp.tornado` into "
 ":data:`extensions` list of your Sphinx configuration (:file:`conf.py`) "
 "file::"
-msgstr ""
+msgstr "为了使用它，将 :mod:`sphinxcontrib.autohttp.tornado` 添加到 :data:`extensions` 列表中的Sphinx配置(:file:`conf.py`)文件::"
 
 #: ../../usage/extensions/httpdomain.rst:985
 msgid ""
 "Generates HTTP API references from a Tornado application. It takes an "
 "import name, like::"
-msgstr ""
+msgstr "从Tornado应用程序生成HTTP API引用。它需要一个导入名称，比如::"
 
 #: ../../usage/extensions/httpdomain.rst:990
 msgid "Colon character (``:``) separates module path and application variable."
-msgstr "Colon character (``:``) separates module path and application variable."
+msgstr "冒号字符(``:``)分隔模块路径和应用程序变量。"
 
 #: ../../usage/extensions/httpdomain.rst:1002
 msgid ""
 "will document the :func:`get` and :func:`post` methods of the "
 ":class:`User` :class:`RequestHandler` and the :func:`get` method of the "
 ":class:`Friend` :class:`RequestHandler`, while"
-msgstr ""
+msgstr "将记录 :func:`get` 和 :func:`post` 方法 :class:`User`:class:`RequestHandler` 和 :func:`get` 方法 :class:`Friend`:class :`RequestHandler` ，而"
 
 #: ../../usage/extensions/httpdomain.rst:1011
 msgid "will document all endpoints in the tornado app."
-msgstr "will document all endpoints in the tornado app."
+msgstr "将记录龙卷风应用程序中的所有端点。"
 
 #: ../../usage/extensions/httpdomain.rst:1044
 msgid "Author and License"
@@ -1079,11 +1079,11 @@ msgid ""
 "The :mod:`sphinxcontrib.httpdomain` and :mod:`sphinxcontrib.autohttp`, "
 "parts of :mod:`sphinxcontrib`, are written by `Hong Minhee`_ and "
 "distributed under BSD license."
-msgstr ""
+msgstr ":mod:`sphinxcontrib.httpdomain` 和 :mod:`sphinxcontrib.autohttp` ，部分 :mod:`sphinxcontrib` ，由 `Hong Minhee`_ 编写，并在BSD许可下发布。"
 
 #: ../../usage/extensions/httpdomain.rst:1050
 msgid ""
 "The source code is maintained under `the sphinx-contrib project`__ in the"
 " `httpdomain`_ repository"
-msgstr ""
+msgstr "源代码在 `httpdomain`_ 存储库中的 `sphinx-contrib project`__ 下维护"
 
