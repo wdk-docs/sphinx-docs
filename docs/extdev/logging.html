@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Logging API &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>记录API &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="i18n API" href="i18n.html" />
-    <link rel="prev" title="Doctree node classes added by Sphinx" href="nodes.html" />
+    <link rel="prev" title="由Sphinx添加的Doctree节点类" href="nodes.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/logging.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -102,25 +102,28 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
           <a href="i18n.html" title="i18n API"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="nodes.html" title="Doctree node classes added by Sphinx"
+          <a href="nodes.html" title="由Sphinx添加的Doctree节点类"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发扩展</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="nodes.html"
-                        title="上一章">Doctree node classes added by Sphinx</a></p>
+                        title="上一章">由Sphinx添加的Doctree节点类</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="i18n.html"
                         title="下一章">i18n API</a></p>
@@ -150,15 +153,13 @@
           <div class="body" role="main">
             
   <div class="section" id="logging-api">
-<span id="id1"></span><h1>Logging API<a class="headerlink" href="#logging-api" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1>记录API<a class="headerlink" href="#logging-api" title="永久链接至标题">¶</a></h1>
 <dl class="function">
 <dt id="sphinx.util.logging.getLogger">
 <code class="descclassname">sphinx.util.logging.</code><code class="descname">getLogger</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/util/logging.html#getLogger"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.logging.getLogger" title="永久链接至目标">¶</a></dt>
-<dd><p>Get logger wrapped by <a class="reference internal" href="#sphinx.util.logging.SphinxLoggerAdapter" title="sphinx.util.logging.SphinxLoggerAdapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.util.logging.SphinxLoggerAdapter</span></code></a>.</p>
-<p>Sphinx logger always uses <code class="docutils literal notranslate"><span class="pre">sphinx.*</span></code> namespace to be independent from
-settings of root logger.  It ensures logging is consistent even if a
-third-party extension or imported application resets logger settings.</p>
-<p>Example usage:</p>
+<dd><p>获取记录器包装 <a class="reference internal" href="#sphinx.util.logging.SphinxLoggerAdapter" title="sphinx.util.logging.SphinxLoggerAdapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.util.logging.SphinxLoggerAdapter</span></code></a> 。</p>
+<p>Sphinx记录器总是使用 <code class="docutils literal notranslate"><span class="pre">sphinx.*</span></code> 命名空间独立于root logger的设置。即使第三方扩展或导入的应用程序重置记录器设置，它也可确保记录一致。</p>
+<p>用法示例:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sphinx.util</span> <span class="k">import</span> <span class="n">logging</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Hello, this is an extension!&#39;</span><span class="p">)</span>
@@ -170,7 +171,7 @@ third-party extension or imported application resets logger settings.</p>
 <dl class="class">
 <dt id="sphinx.util.logging.SphinxLoggerAdapter">
 <em class="property">class </em><code class="descclassname">sphinx.util.logging.</code><code class="descname">SphinxLoggerAdapter</code><span class="sig-paren">(</span><em>logging.LoggerAdapter</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/util/logging.html#SphinxLoggerAdapter"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.logging.SphinxLoggerAdapter" title="永久链接至目标">¶</a></dt>
-<dd><p>LoggerAdapter allowing <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">subtype</span></code> keywords.</p>
+<dd><p>LoggerAdapter允许 <code class="docutils literal notranslate"><span class="pre">type</span></code> 和 <code class="docutils literal notranslate"><span class="pre">subtype</span></code> 关键字。</p>
 <dl class="method">
 <dt id="sphinx.util.logging.SphinxLoggerAdapter.error">
 <code class="descname">error</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sphinx.util.logging.SphinxLoggerAdapter.error" title="永久链接至目标">¶</a></dt>
@@ -184,16 +185,12 @@ third-party extension or imported application resets logger settings.</p>
 <dl class="method">
 <dt id="sphinx.util.logging.SphinxLoggerAdapter.warning">
 <code class="descname">warning</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sphinx.util.logging.SphinxLoggerAdapter.warning" title="永久链接至目标">¶</a></dt>
-<dd><p>Logs a message on this logger with the specified level.
-Basically, the arguments are as with python’s logging module.</p>
-<p>In addition, Sphinx logger supports following keyword arguments:</p>
+<dd><p>使用指定的级别在此记录器上记录消息。基本上，参数与python的日志记录模块一样。</p>
+<p>此外，Sphinx记录器支持以下关键字参数:</p>
 <dl>
-<dt><strong>type</strong>, <strong>*subtype*</strong></dt><dd><p>Categories of warning logs.  It is used to suppress
-warnings by <a class="reference internal" href="../usage/configuration.html#confval-suppress_warnings"><code class="xref std std-confval docutils literal notranslate"><span class="pre">suppress_warnings</span></code></a> setting.</p>
+<dt><strong>type</strong>, <strong>*subtype*</strong></dt><dd><p>警告日志的类别。它用于通过以下方式抑制警告 <a class="reference internal" href="../usage/configuration.html#confval-suppress_warnings"><code class="xref std std-confval docutils literal notranslate"><span class="pre">suppress_warnings</span></code></a> 设置。</p>
 </dd>
-<dt><strong>location</strong></dt><dd><p>Where the warning happened.  It is used to include
-the path and line number in each log.  It allows docname,
-tuple of docname and line number and nodes:</p>
+<dt><strong>location</strong></dt><dd><p>发生警告的地方。它用于包括每个日志中的路径和行号。它允许docname，docname和行号和节点的元组:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span> <span class="o">=</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Warning happened!&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
 <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Warning happened!&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;chapter1/index&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -201,9 +198,7 @@ tuple of docname and line number and nodes:</p>
 </pre></div>
 </div>
 </dd>
-<dt><strong>color</strong></dt><dd><p>The color of logs.  By default, error level logs are colored as
-<code class="docutils literal notranslate"><span class="pre">&quot;darkred&quot;</span></code>, critical level ones is not colored, and warning level
-ones are colored as <code class="docutils literal notranslate"><span class="pre">&quot;red&quot;</span></code>.</p>
+<dt><strong>color</strong></dt><dd><p>日志的颜色。默认情况下，错误级别日志的颜色为“黑色”，“关键级别”没有着色，警告级别日志的颜色为“红色”“红色”。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -226,18 +221,14 @@ ones are colored as <code class="docutils literal notranslate"><span class="pre"
 <dl class="method">
 <dt id="sphinx.util.logging.SphinxLoggerAdapter.debug">
 <code class="descname">debug</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sphinx.util.logging.SphinxLoggerAdapter.debug" title="永久链接至目标">¶</a></dt>
-<dd><p>Logs a message to this logger with the specified level.
-Basically, the arguments are as with python’s logging module.</p>
-<p>In addition, Sphinx logger supports following keyword arguments:</p>
+<dd><p>使用指定的级别将消息记录到此记录器。基本上，参数与python的日志记录模块一样。</p>
+<p>此外，Sphinx记录器支持以下关键字参数:</p>
 <dl class="simple">
-<dt><strong>nonl</strong></dt><dd><p>If true, the logger does not fold lines at the end of the log message.
-The default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>nonl</strong></dt><dd><p>如果为true，则记录器不会在日志消息的末尾折叠行。默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 </dd>
-<dt><strong>location</strong></dt><dd><p>Where the message emitted.  For more detail, see
-<a class="reference internal" href="#sphinx.util.logging.SphinxLoggerAdapter.warning" title="sphinx.util.logging.SphinxLoggerAdapter.warning"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SphinxLoggerAdapter.warning()</span></code></a>.</p>
+<dt><strong>location</strong></dt><dd><p>发出消息的地方。有关更多详细信息，请参阅 <a class="reference internal" href="#sphinx.util.logging.SphinxLoggerAdapter.warning" title="sphinx.util.logging.SphinxLoggerAdapter.warning"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SphinxLoggerAdapter.warning()</span></code></a> 。</p>
 </dd>
-<dt><strong>color</strong></dt><dd><p>The color of logs.  By default, info and verbose level logs are not colored,
-and debug level ones are colored as <code class="docutils literal notranslate"><span class="pre">&quot;darkgray&quot;</span></code>.</p>
+<dt><strong>color</strong></dt><dd><p>日志的颜色。默认情况下，信息和详细级别日志不会着色，调试级别日志会显示为 <code class="docutils literal notranslate"><span class="pre">&quot;darkgray&quot;</span></code> 。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -247,8 +238,8 @@ and debug level ones are colored as <code class="docutils literal notranslate"><
 <dl class="function">
 <dt id="sphinx.util.logging.pending_logging">
 <code class="descclassname">sphinx.util.logging.</code><code class="descname">pending_logging</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/util/logging.html#pending_logging"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.logging.pending_logging" title="永久链接至目标">¶</a></dt>
-<dd><p>Contextmanager to pend logging all logs temporary.</p>
-<p>For example:</p>
+<dd><p>Contextmanager挂起临时记录所有日志。</p>
+<p>例如:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">pending_logging</span><span class="p">():</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Warning message!&#39;</span><span class="p">)</span>  <span class="c1"># not flushed yet</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="n">some_long_process</span><span class="p">()</span>
@@ -261,15 +252,15 @@ and debug level ones are colored as <code class="docutils literal notranslate"><
 <dl class="function">
 <dt id="sphinx.util.logging.pending_warnings">
 <code class="descclassname">sphinx.util.logging.</code><code class="descname">pending_warnings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/util/logging.html#pending_warnings"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.logging.pending_warnings" title="永久链接至目标">¶</a></dt>
-<dd><p>Contextmanager to pend logging warnings temporary.</p>
-<p>Similar to <a class="reference internal" href="#sphinx.util.logging.pending_logging" title="sphinx.util.logging.pending_logging"><code class="xref py py-func docutils literal notranslate"><span class="pre">pending_logging()</span></code></a>.</p>
+<dd><p>Contextmanager暂时挂起日志记录警告。</p>
+<p>类似于 <a class="reference internal" href="#sphinx.util.logging.pending_logging" title="sphinx.util.logging.pending_logging"><code class="xref py py-func docutils literal notranslate"><span class="pre">pending_logging()</span></code></a> 。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sphinx.util.logging.prefixed_warnings">
 <code class="descclassname">sphinx.util.logging.</code><code class="descname">prefixed_warnings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/util/logging.html#prefixed_warnings"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.logging.prefixed_warnings" title="永久链接至目标">¶</a></dt>
-<dd><p>Prepend prefix to all records for a while.</p>
-<p>For example:</p>
+<dd><p>将前缀添加到所有记录一段时间。</p>
+<p>例如:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">prefixed_warnings</span><span class="p">(</span><span class="s2">&quot;prefix:&quot;</span><span class="p">):</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Warning message!&#39;</span><span class="p">)</span>  <span class="c1"># =&gt; prefix: Warning message!</span>
 </pre></div>
@@ -294,23 +285,26 @@ and debug level ones are colored as <code class="docutils literal notranslate"><
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
           <a href="i18n.html" title="i18n API"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="nodes.html" title="Doctree node classes added by Sphinx"
+          <a href="nodes.html" title="由Sphinx添加的Doctree节点类"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发扩展</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

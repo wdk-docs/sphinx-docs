@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Environment Collector API &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>环境收集器API &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Docutils markup API" href="markupapi.html" />
-    <link rel="prev" title="Builder API" href="builderapi.html" />
+    <link rel="next" title="Docutils标记API" href="markupapi.html" />
+    <link rel="prev" title="生成器API" href="builderapi.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/collectorapi.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -102,28 +102,31 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="markupapi.html" title="Docutils markup API"
+          <a href="markupapi.html" title="Docutils标记API"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="builderapi.html" title="Builder API"
+          <a href="builderapi.html" title="生成器API"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发扩展</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="builderapi.html"
-                        title="上一章">Builder API</a></p>
+                        title="上一章">生成器API</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="markupapi.html"
-                        title="下一章">Docutils markup API</a></p>
+                        title="下一章">Docutils标记API</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -150,47 +153,44 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.environment.collectors">
-<span id="environment-collector-api"></span><span id="collector-api"></span><h1>Environment Collector API<a class="headerlink" href="#module-sphinx.environment.collectors" title="永久链接至标题">¶</a></h1>
+<span id="environment-collector-api"></span><span id="collector-api"></span><h1>环境收集器API<a class="headerlink" href="#module-sphinx.environment.collectors" title="永久链接至标题">¶</a></h1>
 <dl class="class">
 <dt id="sphinx.environment.collectors.EnvironmentCollector">
 <em class="property">class </em><code class="descclassname">sphinx.environment.collectors.</code><code class="descname">EnvironmentCollector</code><a class="reference internal" href="../_modules/sphinx/environment/collectors.html#EnvironmentCollector"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector" title="永久链接至目标">¶</a></dt>
-<dd><p>An EnvironmentCollector is a specific data collector from each document.</p>
-<p>It gathers data and stores <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> as a database.  Examples of specific
-data would be images, download files, section titles, metadatas, index
-entries and toctrees, etc.</p>
+<dd><p>EnvironmentCollector是每个文档的特定数据收集器。</p>
+<p>它收集数据和存储 <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> 作为数据库。  具体数据的示例包括图像，下载文件，部分标题，元数据，索引条目和toctrees等。</p>
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.clear_doc">
 <code class="descname">clear_doc</code><span class="sig-paren">(</span><em>app</em>, <em>env</em>, <em>docname</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/environment/collectors.html#EnvironmentCollector.clear_doc"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.clear_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>Remove specified data of a document.</p>
-<p>This method is called on the removal of the document.</p>
+<dd><p>删除文档的指定数据。</p>
+<p>在删除文档时调用此方法。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs">
 <code class="descname">get_outdated_docs</code><span class="sig-paren">(</span><em>app</em>, <em>env</em>, <em>added</em>, <em>changed</em>, <em>removed</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/environment/collectors.html#EnvironmentCollector.get_outdated_docs"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a list of docnames to re-read.</p>
-<p>This methods is called before reading the documents.</p>
+<dd><p>返回要重新阅读的文档名列表。</p>
+<p>在阅读文档之前调用此方法。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.get_updated_docs">
 <code class="descname">get_updated_docs</code><span class="sig-paren">(</span><em>app</em>, <em>env</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/environment/collectors.html#EnvironmentCollector.get_updated_docs"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.get_updated_docs" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a list of docnames to re-read.</p>
-<p>This methods is called after reading the whole of documents (experimental).</p>
+<dd><p>返回要重新阅读的文档名列表。</p>
+<p>在阅读完整个文档（实验）后调用此方法。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.merge_other">
 <code class="descname">merge_other</code><span class="sig-paren">(</span><em>app</em>, <em>env</em>, <em>docnames</em>, <em>other</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/environment/collectors.html#EnvironmentCollector.merge_other"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.merge_other" title="永久链接至目标">¶</a></dt>
-<dd><p>Merge in specified data regarding docnames from a different <cite>BuildEnvironment</cite>
-object which coming from a subprocess in parallel builds.</p>
+<dd><p>合并来自不同`BuildEnvironment`对象的文档名的指定数据，该对象来自并行构建中的子进程。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.process_doc">
 <code class="descname">process_doc</code><span class="sig-paren">(</span><em>app</em>, <em>doctree</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/environment/collectors.html#EnvironmentCollector.process_doc"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.process_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>Process a document and gather specific data from it.</p>
-<p>This method is called after the document is read.</p>
+<dd><p>处理文档并从中收集特定数据。</p>
+<p>在读取文档后调用此方法。</p>
 </dd></dl>
 
 </dd></dl>
@@ -210,23 +210,26 @@ object which coming from a subprocess in parallel builds.</p>
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="markupapi.html" title="Docutils markup API"
+          <a href="markupapi.html" title="Docutils标记API"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="builderapi.html" title="Builder API"
+          <a href="builderapi.html" title="生成器API"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发扩展</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

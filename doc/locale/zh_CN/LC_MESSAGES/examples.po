@@ -27,13 +27,13 @@ msgid ""
 "are experimenting with using it for their documentation.  If you like to "
 "be included, please mail to `the Google group "
 "<https://groups.google.com/forum/#!forum/sphinx-users>`_."
-msgstr ""
+msgstr "这是一个（不完整的）按字母顺序排列的项目列表，这些项目使用Sphinx或正在尝试将其用于文档。  如果您想加入，请发送邮件至 `Google群组 <https://groups.google.com/forum/#!forum/sphinx-users>`_ 。"
 
 #: ../../../EXAMPLES:9
 msgid ""
 "I've grouped the list into sections to make it easier to find interesting"
 " examples."
-msgstr ""
+msgstr "我已将列表分组为多个部分，以便更容易找到有趣的示例。"
 
 #: ../../../EXAMPLES:13
 msgid "Documentation using the alabaster theme"
@@ -65,7 +65,7 @@ msgstr "`CodePy <https://documen.tician.de/codepy/>`__"
 
 #: ../../../EXAMPLES:21
 msgid "`Eve <https://docs.python-eve.org/>`__ (Python REST API framework)"
-msgstr "`Eve <https://docs.python-eve.org/>`__ (Python REST API framework)"
+msgstr "`Eve <https://docs.python-eve.org/>`__ (Python REST API框架)"
 
 #: ../../../EXAMPLES:22
 msgid "`Fabric <https://docs.fabfile.org/>`__"
@@ -93,7 +93,7 @@ msgstr "`Jinja <http://jinja.pocoo.org/docs/>`__"
 
 #: ../../../EXAMPLES:28
 msgid "`Lino <http://www.lino-framework.org/>`__ (customized)"
-msgstr "`Lino <http://www.lino-framework.org/>`__ (customized)"
+msgstr "`Lino <http://www.lino-framework.org/>`__ (定制)"
 
 #: ../../../EXAMPLES:29
 msgid "`marbl <https://getmarbl.readthedocs.io/>`__"
@@ -101,7 +101,7 @@ msgstr "`marbl <https://getmarbl.readthedocs.io/>`__"
 
 #: ../../../EXAMPLES:30
 msgid "`MDAnalysis <https://www.mdanalysis.org/docs/>`__ (customized)"
-msgstr "`MDAnalysis <https://www.mdanalysis.org/docs/>`__ (customized)"
+msgstr "`MDAnalysis <https://www.mdanalysis.org/docs/>`__ (定制)"
 
 #: ../../../EXAMPLES:31
 msgid "`MeshPy <https://documen.tician.de/meshpy/>`__"
@@ -125,7 +125,7 @@ msgstr "`PyLangAcq <http://pylangacq.org/>`__"
 
 #: ../../../EXAMPLES:36
 msgid "`pytest <https://docs.pytest.org/>`__ (customized)"
-msgstr "`pytest <https://docs.pytest.org/>`__ (customized)"
+msgstr "`pytest <https://docs.pytest.org/>`__ (定制)"
 
 #: ../../../EXAMPLES:37
 msgid "`python-apt <https://apt.alioth.debian.org/python-apt-doc/>`__"
@@ -145,7 +145,7 @@ msgstr "`searx <https://asciimoo.github.io/searx/>`__"
 
 #: ../../../EXAMPLES:41
 msgid "`Spyder <https://docs.spyder-ide.org/>`__ (customized)"
-msgstr "`Spyder <https://docs.spyder-ide.org/>`__ (customized)"
+msgstr "`Spyder <https://docs.spyder-ide.org/>`__ (定制)"
 
 #: ../../../EXAMPLES:42
 msgid "`Tablib <http://docs.python-tablib.org/>`__"
@@ -153,11 +153,11 @@ msgstr "`Tablib <http://docs.python-tablib.org/>`__"
 
 #: ../../../EXAMPLES:43
 msgid "`urllib3 <https://urllib3.readthedocs.io/>`__ (customized)"
-msgstr "`urllib3 <https://urllib3.readthedocs.io/>`__ (customized)"
+msgstr "`urllib3 <https://urllib3.readthedocs.io/>`__ (定制)"
 
 #: ../../../EXAMPLES:44
 msgid "`Werkzeug <http://werkzeug.pocoo.org/docs/>`__ (customized)"
-msgstr "`Werkzeug <http://werkzeug.pocoo.org/docs/>`__ (customized)"
+msgstr "`Werkzeug <http://werkzeug.pocoo.org/docs/>`__ (定制)"
 
 #: ../../../EXAMPLES:47
 msgid "Documentation using the classic theme"
@@ -167,11 +167,11 @@ msgstr "使用经典主题的文档"
 msgid ""
 "`Advanced Generic Widgets "
 "<http://xoomer.virgilio.it/infinity77/AGW_Docs/>`__ (customized)"
-msgstr ""
+msgstr "`Advanced Generic Widgets <http://xoomer.virgilio.it/infinity77/AGW_Docs/>`__ (定制)"
 
 #: ../../../EXAMPLES:50
 msgid "`Apache CouchDB <http://docs.couchdb.org/>`__ (customized)"
-msgstr "`Apache CouchDB <http://docs.couchdb.org/>`__ (customized)"
+msgstr "`Apache CouchDB <http://docs.couchdb.org/>`__ (定制)"
 
 #: ../../../EXAMPLES:51
 msgid "`APSW <https://rogerbinns.github.io/apsw/>`__"
@@ -183,7 +183,7 @@ msgstr "`Arb <http://arblib.org/>`__"
 
 #: ../../../EXAMPLES:53
 msgid "`Bazaar <http://doc.bazaar.canonical.com/>`__ (customized)"
-msgstr "`Bazaar <http://doc.bazaar.canonical.com/>`__ (customized)"
+msgstr "`Bazaar <http://doc.bazaar.canonical.com/>`__ (定制)"
 
 #: ../../../EXAMPLES:54
 msgid ""
@@ -205,11 +205,11 @@ msgstr "`Buildbot <https://docs.buildbot.net/latest/>`__"
 
 #: ../../../EXAMPLES:58
 msgid "`CMake <https://cmake.org/documentation/>`__ (customized)"
-msgstr "`CMake <https://cmake.org/documentation/>`__ (customized)"
+msgstr "`CMake <https://cmake.org/documentation/>`__ (定制)"
 
 #: ../../../EXAMPLES:59
 msgid "`Chaco <https://docs.enthought.com/chaco/>`__ (customized)"
-msgstr "`Chaco <https://docs.enthought.com/chaco/>`__ (customized)"
+msgstr "`Chaco <https://docs.enthought.com/chaco/>`__ (定制)"
 
 #: ../../../EXAMPLES:60
 msgid "`CORE <https://downloads.pf.itd.nrl.navy.mil/docs/core/core-html/>`__"
@@ -227,7 +227,7 @@ msgstr "`Cormoran <http://cormoran.nhopkg.org/docs/>`__"
 
 #: ../../../EXAMPLES:63
 msgid "`DEAP <https://deap.readthedocs.io/>`__ (customized)"
-msgstr "`DEAP <https://deap.readthedocs.io/>`__ (customized)"
+msgstr "`DEAP <https://deap.readthedocs.io/>`__ (定制)"
 
 #: ../../../EXAMPLES:64
 msgid "`Director <https://pythonhosted.org/director/>`__"

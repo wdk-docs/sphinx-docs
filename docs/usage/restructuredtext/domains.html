@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>域 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>域 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -101,6 +101,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
         <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
@@ -210,7 +213,7 @@
 <p>虽然这总是可行的，但现在通过为每个此类目的提供 <strong>domain</strong> ，可以更轻松地轻松支持使用不同编程语言的项目文档，甚至是主要Sphinx发行版不支持的项目文档。</p>
 <p>域是一组标签(reStructuredText <a class="reference internal" href="../../glossary.html#term-directive"><span class="xref std std-term">directive</span></a>s and <a class="reference internal" href="../../glossary.html#term-role"><span class="xref std std-term">role</span></a>s)，用于描述和链接 <a class="reference internal" href="../../glossary.html#term-object"><span class="xref std std-term">object</span></a>s ，属于一起，例如编程语言的元素。域中的指令和角色名称具有诸如 <code class="docutils literal notranslate"><span class="pre">domain:name</span></code> 之类的名称，例如 <code class="docutils literal notranslate"><span class="pre">py:function</span></code> 。域还可以提供自定义索引(例如Python模块索引)。</p>
 <p>拥有域意味着当一组文档想要引用时，没有命名问题。 C++ 和 Python 类。这也意味着支持全新语言文档的扩展更容易编写。</p>
-<p>本节介绍Sphinx提供的域名。域API也在以下部分中记录 <a class="reference internal" href="../../extdev/domainapi.html#domain-api"><span class="std std-ref">Domain API</span></a> 。</p>
+<p>本节介绍Sphinx提供的域名。域API也在以下部分中记录 <a class="reference internal" href="../../extdev/domainapi.html#domain-api"><span class="std std-ref">域API</span></a> 。</p>
 <div class="section" id="basic-markup">
 <span id="basic-domain-markup"></span><h2>基本标记<a class="headerlink" href="#basic-markup" title="永久链接至标题">¶</a></h2>
 <p>大多数域提供了许多 <em class="dfn">object description directives</em> ，用于描述模块提供的特定对象。每个指令都需要一个或多个签名来提供有关所描述内容的基本信息，内容应该是描述。基本版本在一般索引中生成条目;如果不需要索引条目，可以给出指令选项标志 <code class="docutils literal notranslate"><span class="pre">:noindex:</span></code> 。使用Python域指令的示例:</p>
@@ -1451,7 +1454,7 @@ A type: <span class="na">:cpp:expr:</span><span class="nv">`const MySortedContai
 <li><p><strong>errback</strong> – 在请求失败的情况下调用。还有很多其他文字，所以我们需要多行。</p></li>
 </ul>
 </dd>
-<dt class="field-even">抛出SomeError</dt>
+<dt class="field-even">Throws SomeError</dt>
 <dd class="field-even"><p>无论出于何种原因。</p>
 </dd>
 <dt class="field-odd">返回</dt>
@@ -1630,6 +1633,9 @@ most beautiful mathematical formulas.
           <a href="../../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -1646,7 +1652,7 @@ most beautiful mathematical formulas.
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

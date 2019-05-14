@@ -26,7 +26,7 @@ msgid ""
 "This document provides information about creating your own theme. If you "
 "simply wish to use a pre-existing HTML themes, refer to "
 ":doc:`/usage/theming`."
-msgstr ""
+msgstr "本文档提供有关创建自己的主题的信息。 如果您只想使用预先存在的HTML主题，请参阅 :doc:`/usage/theming` 。"
 
 #: ../../theming.rst:14
 msgid ""
@@ -35,13 +35,13 @@ msgid ""
 "static files. Additionally, it has a configuration file which specifies "
 "from which theme to inherit, which highlighting style to use, and what "
 "options exist for customizing the theme's look and feel."
-msgstr ""
+msgstr "Sphinx支持通过 *themes* 更改其HTML输出的外观。  主题是HTML模板，样式表和其他静态文件的集合。此外，它还有一个配置文件，用于指定要继承的主题，要使用的突出显示样式以及用于自定义主题外观的选项。"
 
 #: ../../theming.rst:20
 msgid ""
 "Themes are meant to be project-unaware, so they can be used for different"
 " projects without change."
-msgstr ""
+msgstr "主题意味着项目不知情，因此它们可以用于不同的项目而无需改变。"
 
 #: ../../theming.rst:25
 msgid "Creating themes"
@@ -51,7 +51,7 @@ msgstr "创建主题"
 msgid ""
 "Themes take the form of either a directory or a zipfile (whose name is "
 "the theme name), containing the following:"
-msgstr ""
+msgstr "主题采用目录或zipfile(其名称为主题名称)的形式，包含以下内容:"
 
 #: ../../theming.rst:30
 msgid "A :file:`theme.conf` file."
@@ -66,14 +66,14 @@ msgid ""
 "A ``static/`` directory containing any static files that will be copied "
 "to the output static directory on build.  These can be images, styles, "
 "script files."
-msgstr ""
+msgstr "一个 ``static/`` 目录，包含将在构建时复制到输出静态目录的所有静态文件。  这些可以是图像，样式，脚本文件。"
 
 #: ../../theming.rst:35
 msgid ""
 "The :file:`theme.conf` file is in INI format [1]_ (readable by the "
 "standard Python :mod:`ConfigParser` module) and has the following "
 "structure:"
-msgstr ""
+msgstr ":file:`theme.conf` 文件是INI格式 [1]_ (可由标准Python :mod:`ConfigParser` 模块读取)并具有以下结构:"
 
 #: ../../theming.rst:49
 msgid ""
@@ -83,7 +83,7 @@ msgid ""
 "theme), its options will be inherited, and all of its static files will "
 "be used as well. If you want to also inherit the stylesheet, include it "
 "via CSS' ``@import`` in your own."
-msgstr ""
+msgstr "**inherit** 设置给出了“基本主题”或“无”的名称。  基本主题将用于查找缺少的模板(大多数主题如果使用 ``basic`` 作为基本主题，则不必提供大多数模板)，其选项将被继承，并且其所有静态文件将用作好。 如果你还想继承样式表，可以在你自己的CSS' ``@import`` 中包含它。"
 
 #: ../../theming.rst:55
 msgid ""
@@ -93,21 +93,21 @@ msgid ""
 "HTML template that adds ``<link rel=\"stylesheet\">`` tags as necessary."
 "  Setting the :confval:`html_style` config value will override this "
 "setting."
-msgstr ""
+msgstr "**stylesheet** 设置给出了将在HTML标头中引用的CSS文件的名称。  如果您需要多个CSS文件，可以通过CSS' ``@import`` 包含另一个CSS文件，或者使用自定义HTML模板，根据需要添加 ``<link rel = \"stylesheet\">`` 标签。 设置 :confval:`html_style` 配置值将覆盖此设置。"
 
 #: ../../theming.rst:61
 msgid ""
 "The **pygments_style** setting gives the name of a Pygments style to use "
 "for highlighting.  This can be overridden by the user in the "
 ":confval:`pygments_style` config value."
-msgstr ""
+msgstr "**pygments_style** 设置给出了用于突出显示的Pygments样式的名称。  这可以由用户在 :confval:`pygments_style` 配置值中覆盖。"
 
 #: ../../theming.rst:65
 msgid ""
 "The **sidebars** setting gives the comma separated list of sidebar "
 "templates for constructing sidebars.  This can be overridden by the user "
 "in the :confval:`html_sidebars` config value."
-msgstr ""
+msgstr "**sidebars** 设置给出了逗号分隔的侧边栏模板列表，用于构建侧边栏。  这可以由用户在 :confval:`html_sidebars` 配置值中覆盖。"
 
 #: ../../theming.rst:69
 msgid ""
@@ -115,7 +115,7 @@ msgid ""
 "values. These options can be overridden by the user in "
 ":confval:`html_theme_options` and are accessible from all templates as "
 "``theme_<name>``."
-msgstr ""
+msgstr "**选项** 部分包含变量名称和默认值对。 这些选项可以被用户覆盖 :confval:`html_theme_options` ，并且可以从所有模板访问为 ``theme_<name>`` 。"
 
 #: ../../theming.rst:73
 msgid "sidebar settings"
@@ -129,7 +129,7 @@ msgstr "将您的主题分发为Python包"
 msgid ""
 "As a way to distribute your theme, you can use Python package.  Python "
 "package brings to users easy setting up ways."
-msgstr ""
+msgstr "作为分发主题的一种方法，您可以使用Python包。  Python包为用户带来了简单的设置方式。"
 
 #: ../../theming.rst:85
 msgid ""
@@ -137,25 +137,25 @@ msgid ""
 "point called ``sphinx.html_themes`` in your ``setup.py`` file, and write "
 "a ``setup()`` function to register your themes using ``add_html_theme()``"
 " API in it::"
-msgstr ""
+msgstr "要将您的主题分发为Python包，请在 ``setup.py`` 文件中定义一个名为 ``sphinx.html_themes`` 的入口点，并编写一个 ``setup()`` 函数来使用注册您的主题 ``add_html_theme()`` API::"
 
 #: ../../theming.rst:106
 msgid ""
 "If your theme package contains two or more themes, please call "
 "``add_html_theme()`` twice or more."
-msgstr ""
+msgstr "如果您的主题包包含两个或更多主题，请调用两次或更多次 ``add_html_theme()`` 。"
 
 #: ../../theming.rst:109
 msgid "'sphinx_themes' entry_points feature."
-msgstr "'sphinx_themes'entry_points功能。"
+msgstr "'sphinx_themes'entry_points 功能。"
 
 #: ../../theming.rst:112
 msgid "``sphinx_themes`` entry_points has been deprecated."
-msgstr "``sphinx_themes`` entry_points has been deprecated."
+msgstr "``sphinx_themes`` entry_points 已被弃用。"
 
 #: ../../theming.rst:115
 msgid "``sphinx.html_themes`` entry_points feature."
-msgstr "``sphinx.html_themes`` entry_points feature."
+msgstr "``sphinx.html_themes`` entry_points 功能。"
 
 #: ../../theming.rst:120
 msgid "Templating"
@@ -166,11 +166,11 @@ msgid ""
 "The :doc:`guide to templating <templating>` is helpful if you want to "
 "write your own templates.  What is important to keep in mind is the order"
 " in which Sphinx searches for templates:"
-msgstr ""
+msgstr "如果你想编写自己的模板， :doc:`模板指南 <templating>` 指南很有用。  重要的是要记住Sphinx搜索模板的顺序:"
 
 #: ../../theming.rst:126
 msgid "First, in the user's ``templates_path`` directories."
-msgstr "First, in the user's ``templates_path`` directories."
+msgstr "首先，在用户的 ``templates_path`` 目录中。"
 
 #: ../../theming.rst:127
 msgid "Then, in the selected theme."
@@ -187,7 +187,7 @@ msgid ""
 "theme name as an explicit directory: ``{% extends \"basic/layout.html\" "
 "%}``.  From a user ``templates_path`` template, you can still use the "
 "\"exclamation mark\" syntax as described in the templating document."
-msgstr ""
+msgstr "在基本主题中扩展具有相同名称的模板时，请使用主题名称作为显式目录: ``{％extends \"basiclayout.html\" ％}`` 。  从用户 ``templates_path`` 模板，您仍然可以使用模板文档中描述的 \"exclamation mark\" 语法。"
 
 #: ../../theming.rst:136
 msgid "Static templates"
@@ -199,7 +199,7 @@ msgid ""
 "easily, without having to write a custom stylesheet, it is necessary to "
 "be able to template static files as well as HTML files.  Therefore, "
 "Sphinx supports so-called \"static templates\", like this:"
-msgstr ""
+msgstr "由于主题选项旨在让用户更轻松地配置主题，而无需编写自定义样式表，因此必须能够模拟静态文件以及HTML文件。  因此，Sphinx支持所谓的“静态模板”，就像这样:"
 
 #: ../../theming.rst:143
 msgid ""
@@ -211,12 +211,12 @@ msgid ""
 "into the stylesheet.  When a documentation is built with the classic "
 "theme, the output directory will contain a ``_static/classic.css`` file "
 "where all template tags have been processed."
-msgstr ""
+msgstr "如果主题的 ``static/`` 目录中的文件名(或用户的静态路径中的文件名)以 ``_t`` 结尾，则它将由模板引擎处理。 ``_t`` 将从最终文件名中删除。  例如， *classic* 主题有一个文件 ``static/classic.css_t`` ，它使用模板将颜色选项放入样式表中。  使用经典主题构建文档时，输出目录将包含一个 ``_static/classic.css`` 文件，其中已处理所有模板标记。"
 
 #: ../../theming.rst:151
 msgid ""
 "It is not an executable Python file, as opposed to :file:`conf.py`, "
 "because that would pose an unnecessary security risk if themes are "
 "shared."
-msgstr ""
+msgstr "它不是可执行的Python文件，而不是 :file:`conf.py` ，因为如果共享主题，这将带来不必要的安全风险。"
 

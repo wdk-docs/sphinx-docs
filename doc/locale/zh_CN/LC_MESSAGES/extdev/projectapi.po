@@ -19,49 +19,49 @@ msgstr ""
 
 #: ../../extdev/projectapi.rst:4
 msgid "Project API"
-msgstr ""
+msgstr "项目API"
 
 #: of sphinx.project.Project:1
 msgid "A project is source code set of Sphinx document."
-msgstr ""
+msgstr "项目是Sphinx文档的源代码集。"
 
 #: of sphinx.project.Project.discover:1
 msgid ""
 "Find all document files in the source directory and put them in "
 ":attr:`docnames`."
-msgstr ""
+msgstr "查找源目录中的所有文档文件并将它们放在 :attr:`docnames` 中。"
 
 #: of sphinx.project.Project.doc2path:1
 msgid "Return the filename for the document name."
-msgstr ""
+msgstr "返回文档名称的文件名。"
 
 #: of sphinx.project.Project.doc2path:3
 msgid ""
 "If *basedir* is True, return as an absolute path. Else, return as a "
 "relative path to the source directory."
-msgstr ""
+msgstr "如果 *basedir* 为True，则返回绝对路径。否则，返回作为源目录的相对路径。"
 
 #: of sphinx.project.Project.path2doc:1
 msgid "Return the docname for the filename if the file is document."
-msgstr ""
+msgstr "如果文件是文档，则返回文件名的docname。"
 
 #: of sphinx.project.Project.path2doc:3
 msgid "*filename* should be absolute or relative to the source directory."
-msgstr ""
+msgstr "* filename *应该是绝对的或相对于源目录。"
 
 #: of sphinx.project.Project.restore:1
 msgid "Take over a result of last build."
-msgstr ""
+msgstr "接管上一次构建的结果。"
 
 #: of sphinx.project.Project.docnames:1
 msgid "The name of documents belongs to this project."
-msgstr ""
+msgstr "文档名称属于此项目。"
 
 #: of sphinx.project.Project.source_suffix:1
 msgid "source_suffix. Same as :confval:`source_suffix`."
-msgstr ""
+msgstr "source_suffix。与 :confval:`source_suffix` 相同。"
 
 #: of sphinx.project.Project.srcdir:1
 msgid "Source directory."
-msgstr ""
+msgstr "源目录。"
 

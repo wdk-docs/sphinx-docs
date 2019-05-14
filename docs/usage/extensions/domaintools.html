@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>域工具 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/domaintools.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../installation.html">安装</a></li>
+    <li><a href="../../contents.html">文档</a></li>
+    <li><a href="../../develop.html">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">域工具</a><ul>
+<li><a class="reference internal" href="#installation">安装</a></li>
+<li><a class="reference internal" href="#usage">用法</a></li>
+<li><a class="reference internal" href="#reference">参考</a></li>
+<li><a class="reference internal" href="#license">许可证</a></li>
+<li><a class="reference internal" href="#author">作者</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/usage/extensions/domaintools.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="domain-tools">
+<h1>域工具<a class="headerlink" href="#domain-tools" title="永久链接至标题">¶</a></h1>
+<p>这个 <a class="reference external" href="http://sphinx-doc.org">Sphinx extension</a> 提供了一个简单的 <a class="reference external" href="http://sphinx-doc.org/domains.html">sphinx domain</a> 创建工具。</p>
+<div class="section" id="installation">
+<h2>安装<a class="headerlink" href="#installation" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">domaintools</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h2>
+<p>在这个例子中，为 <a class="reference external" href="http://www.gnu.org/software/make/">GNU Make</a> 创建了一个简单的域:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.domaintools</span> <span class="k">import</span> <span class="n">custom_domain</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_domain</span><span class="p">(</span><span class="n">custom_domain</span><span class="p">(</span><span class="s1">&#39;GnuMakeDomain&#39;</span><span class="p">,</span>
+        <span class="n">name</span>  <span class="o">=</span> <span class="s1">&#39;make&#39;</span><span class="p">,</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;GNU Make&quot;</span><span class="p">,</span>
+
+        <span class="n">elements</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+                <span class="n">objname</span>      <span class="o">=</span> <span class="s2">&quot;Make Target&quot;</span><span class="p">,</span>
+                <span class="n">indextemplate</span> <span class="o">=</span> <span class="s2">&quot;pair: </span><span class="si">%s</span><span class="s2">; Make Target&quot;</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">var</span>   <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+                <span class="n">objname</span> <span class="o">=</span> <span class="s2">&quot;Make Variable&quot;</span><span class="p">,</span>
+                <span class="n">indextemplate</span> <span class="o">=</span> <span class="s2">&quot;pair: </span><span class="si">%s</span><span class="s2">; Make Variable&quot;</span>
+            <span class="p">),</span>
+        <span class="p">)))</span>
+</pre></div>
+</div>
+<p>您可以在 <a href="#id1"><span class="problematic" id="id2">`sphinxcontrib.makedomain`_</span></a> 包中找到完整的示例。</p>
+<p>您可以在 <a class="reference external" href="http://bitbucket.org/klorenz/sphinxcontrib-cmakedomain">sphinxcontrib-cmakedomain</a> 包中找到更复杂的示例。</p>
+</div>
+<div class="section" id="reference">
+<h2>参考<a class="headerlink" href="#reference" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="descname">custom_domain(class_name, name='', label='', elements = {}):</code></dt>
+<dd><p>创建自定义域。</p>
+<p>对于每个给定元素，都创建了一个指令和一个引用和索引的角色。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>class_name</strong> – 您新域的ClassName(例如 <cite>GnuMakeDomain</cite>)</p>
+</dd>
+</dl>
+<p>:param name      : 域简称(指令的一部分，例如 <cite>make</cite>) :param label     : 域长名(例如 <cite>GNU Make</cite>) :param elements  :</p>
+<blockquote>
+<div><p>域指令/角色的字典</p>
+<p>元素值是包含以下可能条目的字典:</p>
+<ul class="simple">
+<li><p><cite>objname</cite> - 条目的长名称，默认为条目的密钥</p></li>
+<li><p><cite>role</cite> - 角色名称，默认为条目的密钥</p></li>
+<li><p><cite>indextemplate</cite> - e.g. <code class="docutils literal notranslate"><span class="pre">pair:</span> <span class="pre">%s;</span> <span class="pre">Make</span> <span class="pre">Target</span></code>, 其中％s将是您角色的匹配部分。 您可以将此保留为空，默认为 <code class="docutils literal notranslate"><span class="pre">pair:</span> <span class="pre">%s;</span> <span class="pre">&lt;objname&gt;</span></code></p></li>
+<li><p><cite>parse_node</cite> - 带有签名 <code class="docutils literal notranslate"><span class="pre">(env，sig，signode)</span></code> 的函数，默认为 <cite>None</cite> 。</p></li>
+<li><p><cite>fields</cite> - 解析字段映射到的字段列表。这将作为 <cite>doc_field_types</cite> 参数传递给Domain。</p></li>
+<li><p><cite>ref_nodeclass</cite> - 作为 XRefRole 的 innernodeclass 传递的类，默认为 <cite>None</cite> 。</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="license">
+<h2>许可证<a class="headerlink" href="#license" title="永久链接至标题">¶</a></h2>
+<p>新的BSD许可证。</p>
+</div>
+<div class="section" id="author">
+<h2>作者<a class="headerlink" href="#author" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="mailto:kiwi&#37;&#52;&#48;franka&#46;dyndns&#46;org">Kay-Uwe (Kiwi) Lorenz</a> (<a class="reference external" href="http://quelltexter.org">http://quelltexter.org</a>)</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
+    </div>
+  </body>
+</html>

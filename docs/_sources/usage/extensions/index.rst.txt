@@ -35,8 +35,6 @@ These extensions are built in and can be activated by respective entries in the
    napoleon
    todo
    viewcode
-   httpdomain
-
 
 Third-party extensions
 ----------------------
@@ -57,6 +55,11 @@ should be included as a part of Sphinx, please write to the project mailing
 list (`join here <https://groups.google.com/forum/#!forum/sphinx-dev>`_).
 
 .. _Sphinx Contrib: https://bitbucket.org/birkenfeld/sphinx-contrib
+
+
+.. toctree::
+
+   httpdomain
 
 Where to put your own extensions?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

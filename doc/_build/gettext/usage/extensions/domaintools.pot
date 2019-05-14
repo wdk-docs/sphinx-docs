@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2019, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 2.1.0+/e678b9c34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/extensions/domaintools.rst:4
+msgid "Domain Tools"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:6
+msgid "This `Sphinx extension`_ provides a tool for easy `sphinx domain`_ creation."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:13
+msgid "Installation"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:21
+msgid "Usage"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:23
+msgid "In this example there is created a simple domain for `GNU Make`_::"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:45
+msgid "Complete example you find in `sphinxcontrib.makedomain`_ package."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:47
+msgid "A more complex example you can find in `sphinxcontrib-cmakedomain`_ package."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:54
+msgid "Reference"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:58
+msgid "Create a custom domain."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:60
+msgid "For each given element there are created a directive and a role for referencing and indexing."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:63
+msgid "ClassName of your new domain (e.g. `GnuMakeDomain`)"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:64
+msgid ":param name      : short name of your domain (part of directives, e.g. `make`) :param label     : Long name of your domain (e.g. `GNU Make`) :param elements  :"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:67
+msgid "dictionary of your domain directives/roles"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:69
+msgid "An element value is a dictionary with following possible entries:"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:71
+msgid "`objname` - Long name of the entry, defaults to entry's key"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:73
+msgid "`role` - role name, defaults to entry's key"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:75
+msgid "`indextemplate` - e.g. ``pair: %s; Make Target``, where %s will be the matched part of your role.  You may leave this empty, defaults to ``pair: %s; <objname>``"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:79
+msgid "`parse_node` - a function with signature ``(env, sig, signode)``, defaults to `None`."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:82
+msgid "`fields` - A list of fields where parsed fields are mapped to. this is passed to Domain as `doc_field_types` parameter."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:85
+msgid "`ref_nodeclass` - class passed as XRefRole's innernodeclass, defaults to `None`."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:90
+msgid "License"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:92
+msgid "New BSD License."
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:96
+msgid "Author"
+msgstr ""
+
+#: ../../usage/extensions/domaintools.rst:98
+msgid "`Kay-Uwe (Kiwi) Lorenz <kiwi@franka.dyndns.org>`_ (http://quelltexter.org)"
+msgstr ""
+

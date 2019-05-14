@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2019, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 2.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-10 14:45+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../usage/extensions/domaintools.rst:2
+msgid "Domain Tools"
+msgstr "域工具"
+
+#: ../../usage/extensions/domaintools.rst:4
+msgid ""
+"This `Sphinx extension`_ provides a tool for easy `sphinx domain`_ "
+"creation."
+msgstr "这个 `Sphinx extension`_ 提供了一个简单的 `sphinx domain`_ 创建工具。"
+
+#: ../../usage/extensions/domaintools.rst:11
+msgid "Installation"
+msgstr "安装"
+
+#: ../../usage/extensions/domaintools.rst:19
+msgid "Usage"
+msgstr "用法"
+
+#: ../../usage/extensions/domaintools.rst:21
+msgid "In this example there is created a simple domain for `GNU Make`_::"
+msgstr "在这个例子中，为 `GNU Make`_ 创建了一个简单的域::"
+
+#: ../../usage/extensions/domaintools.rst:43
+msgid "Complete example you find in `sphinxcontrib.makedomain`_ package."
+msgstr "您可以在 `sphinxcontrib.makedomain`_ 包中找到完整的示例。"
+
+#: ../../usage/extensions/domaintools.rst:45
+msgid ""
+"A more complex example you can find in `sphinxcontrib-cmakedomain`_ "
+"package."
+msgstr "您可以在 `sphinxcontrib-cmakedomain`_ 包中找到更复杂的示例。"
+
+#: ../../usage/extensions/domaintools.rst:52
+msgid "Reference"
+msgstr "参考"
+
+#: ../../usage/extensions/domaintools.rst:56
+msgid "Create a custom domain."
+msgstr "创建自定义域。"
+
+#: ../../usage/extensions/domaintools.rst:58
+msgid ""
+"For each given element there are created a directive and a role for "
+"referencing and indexing."
+msgstr "对于每个给定元素，都创建了一个指令和一个引用和索引的角色。"
+
+#: ../../usage/extensions/domaintools.rst
+msgid "参数"
+msgstr "参数"
+
+#: ../../usage/extensions/domaintools.rst:61
+msgid "ClassName of your new domain (e.g. `GnuMakeDomain`)"
+msgstr "您新域的ClassName(例如 `GnuMakeDomain`)"
+
+#: ../../usage/extensions/domaintools.rst:62
+msgid ""
+":param name      : short name of your domain (part of directives, e.g. "
+"`make`) :param label     : Long name of your domain (e.g. `GNU Make`) "
+":param elements  :"
+msgstr ""
+":param name      : 域简称(指令的一部分，例如 `make`) "
+":param label     : 域长名(例如 `GNU Make`) "
+":param elements  :"
+
+#: ../../usage/extensions/domaintools.rst:65
+msgid "dictionary of your domain directives/roles"
+msgstr "域指令/角色的字典"
+
+#: ../../usage/extensions/domaintools.rst:67
+msgid "An element value is a dictionary with following possible entries:"
+msgstr "元素值是包含以下可能条目的字典:"
+
+#: ../../usage/extensions/domaintools.rst:69
+msgid "`objname` - Long name of the entry, defaults to entry's key"
+msgstr "`objname` - 条目的长名称，默认为条目的密钥"
+
+#: ../../usage/extensions/domaintools.rst:71
+msgid "`role` - role name, defaults to entry's key"
+msgstr "`role` - 角色名称，默认为条目的密钥"
+
+#: ../../usage/extensions/domaintools.rst:73
+#, python-format
+msgid ""
+"`indextemplate` - e.g. ``pair: %s; Make Target``, where %s will be the "
+"matched part of your role.  You may leave this empty, defaults to ``pair:"
+" %s; <objname>``"
+msgstr "`indextemplate` - e.g. ``pair: %s; Make Target``, 其中％s将是您角色的匹配部分。 您可以将此保留为空，默认为 ``pair: %s; <objname>``"
+
+#: ../../usage/extensions/domaintools.rst:77
+msgid ""
+"`parse_node` - a function with signature ``(env, sig, signode)``, "
+"defaults to `None`."
+msgstr "`parse_node` - 带有签名 ``(env，sig，signode)`` 的函数，默认为 `None` 。"
+
+#: ../../usage/extensions/domaintools.rst:80
+msgid ""
+"`fields` - A list of fields where parsed fields are mapped to. this is "
+"passed to Domain as `doc_field_types` parameter."
+msgstr "`fields` - 解析字段映射到的字段列表。这将作为 `doc_field_types` 参数传递给Domain。"
+
+#: ../../usage/extensions/domaintools.rst:83
+msgid ""
+"`ref_nodeclass` - class passed as XRefRole's innernodeclass, defaults to "
+"`None`."
+msgstr "`ref_nodeclass` - 作为 XRefRole 的 innernodeclass 传递的类，默认为 `None` 。"
+
+#: ../../usage/extensions/domaintools.rst:88
+msgid "License"
+msgstr "许可证"
+
+#: ../../usage/extensions/domaintools.rst:90
+msgid "New BSD License."
+msgstr "新的BSD许可证。"
+
+#: ../../usage/extensions/domaintools.rst:94
+msgid "Author"
+msgstr "作者"
+
+#: ../../usage/extensions/domaintools.rst:96
+msgid "`Kay-Uwe (Kiwi) Lorenz <kiwi@franka.dyndns.org>`_ (http://quelltexter.org)"
+msgstr "`Kay-Uwe (Kiwi) Lorenz <kiwi@franka.dyndns.org>`_ (http://quelltexter.org)"
+

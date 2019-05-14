@@ -30,11 +30,11 @@ msgid ""
 "documentation system used by developers to document systems used by other"
 " developers to develop other systems that may also be documented using "
 "Sphinx."
-msgstr ""
+msgstr "本文档描述了Sphinx的开发过程，Sphinx是开发人员用来记录其他开发人员用于开发其他系统的系统的文档系统，这些系统也可以使用Sphinx进行记录。"
 
 #: ../../../CONTRIBUTING.rst:15
 msgid "The Sphinx source code is managed using Git and is hosted on GitHub."
-msgstr "The Sphinx source code is managed using Git and is hosted on GitHub."
+msgstr "Sphinx源代码使用Git进行管理，并托管在GitHub上。"
 
 #: ../../../CONTRIBUTING.rst:17
 msgid "git clone git://github.com/sphinx-doc/sphinx"
@@ -42,7 +42,7 @@ msgstr "git clone git://github.com/sphinx-doc/sphinx"
 
 #: ../../../CONTRIBUTING.rst:20
 msgid "Community"
-msgstr "Community"
+msgstr "社区"
 
 #: ../../../CONTRIBUTING.rst:22
 msgid "sphinx-users <sphinx-users@googlegroups.com>"
@@ -50,7 +50,7 @@ msgstr "sphinx-users <sphinx-users@googlegroups.com>"
 
 #: ../../../CONTRIBUTING.rst:22
 msgid "Mailing list for user support."
-msgstr "Mailing list for user support."
+msgstr "用户支持的邮件列表。"
 
 #: ../../../CONTRIBUTING.rst:25
 msgid "sphinx-dev <sphinx-dev@googlegroups.com>"
@@ -58,7 +58,7 @@ msgstr "sphinx-dev <sphinx-dev@googlegroups.com>"
 
 #: ../../../CONTRIBUTING.rst:25
 msgid "Mailing list for development related discussions."
-msgstr "Mailing list for development related discussions."
+msgstr "发展相关讨论的邮件列表。"
 
 #: ../../../CONTRIBUTING.rst:29
 msgid "#sphinx-doc on irc.freenode.net"
@@ -66,7 +66,7 @@ msgstr "#sphinx-doc on irc.freenode.net"
 
 #: ../../../CONTRIBUTING.rst:28
 msgid "IRC channel for development questions and user support."
-msgstr "IRC channel for development questions and user support."
+msgstr "IRC频道用于开发问题和用户支持。"
 
 #: ../../../CONTRIBUTING.rst:32
 msgid "Bug Reports and Feature Requests"
@@ -77,7 +77,7 @@ msgid ""
 "If you have encountered a problem with Sphinx or have an idea for a new "
 "feature, please submit it to the `issue tracker`_ on GitHub or discuss it"
 " on the `sphinx-dev`_ mailing list."
-msgstr ""
+msgstr "如果您遇到了Sphinx的问题或者对新功能有所了解，请将其提交给GitHub上的 `issue tracker`_ 或在 `sphinx-dev`_ 邮件列表中进行讨论。"
 
 #: ../../../CONTRIBUTING.rst:38
 msgid ""
@@ -85,14 +85,14 @@ msgid ""
 "process and also the log file Sphinx creates after it encounters an "
 "unhandled exception.  The location of this file should be shown towards "
 "the end of the error message."
-msgstr ""
+msgstr "对于错误报告，请包括构建过程中产生的输出以及Sphinx遇到未处理异常后创建的日志文件。应在错误消息的末尾显示此文件的位置。"
 
 #: ../../../CONTRIBUTING.rst:43
 msgid ""
 "Including or providing a link to the source files involved may help us "
 "fix the issue.  If possible, try to create a minimal project that "
 "produces the error and post that instead."
-msgstr ""
+msgstr "包含或提供所涉及的源文件的链接可以帮助我们解决问题。如果可能的话，尝试创建一个产生错误的最小项目，然后发布它。"
 
 #: ../../../CONTRIBUTING.rst:52
 msgid "Contributing to Sphinx"
@@ -105,39 +105,39 @@ msgid ""
 "committing the changes.  The pull request will then need to be approved "
 "by one of the core developers before it is merged into the main "
 "repository."
-msgstr ""
+msgstr "新贡献者向Sphinx提交代码的推荐方法是在GitHub上分割存储库，然后在提交更改后提交拉取请求。然后，在将请求合并到主存储库之前，需要由其中一个核心开发人员批准。"
 
 #: ../../../CONTRIBUTING.rst:59
 msgid ""
 "Check for open issues or open a fresh issue to start a discussion around "
 "a feature idea or a bug."
-msgstr ""
+msgstr "检查未解决的问题或打开一个新问题，以围绕功能创意或错误开始讨论。"
 
 #: ../../../CONTRIBUTING.rst:61
 msgid ""
 "If you feel uncomfortable or uncertain about an issue or your changes, "
 "feel free to email the *sphinx-dev* mailing list."
-msgstr ""
+msgstr "如果您对某个问题或更改感到不安或不确定，请随时给 *sphinx-dev* 邮件列表发送电子邮件。"
 
 #: ../../../CONTRIBUTING.rst:63
 msgid ""
 "Fork `the repository`_ on GitHub to start making your changes to the "
 "``master`` branch for next MAJOR version, or ``X.Y`` branch for next "
 "MINOR version (see `Branch Model`_)."
-msgstr ""
+msgstr "在GitHub上使用 `the repository`_ 来开始对下一个 MAJOR 版本的 ``master`` 分支进行更改，或者对下一个MINOR版本进行 ``X.Y`` 分支(参见 `Branch Model`_)。"
 
 #: ../../../CONTRIBUTING.rst:66
 msgid ""
 "Write a test which shows that the bug was fixed or that the feature works"
 " as expected."
-msgstr ""
+msgstr "编写一个测试，显示错误已修复或该功能按预期工作。"
 
 #: ../../../CONTRIBUTING.rst:68
 msgid ""
 "Send a pull request and bug the maintainer until it gets merged and "
 "published. Make sure to add yourself to AUTHORS_ and the change to "
 "CHANGES_."
-msgstr ""
+msgstr "发送拉取请求并对维护者提出错误，直到它被合并并发布。 确保将自己添加到 AUTHORS_ 并将更改添加到 CHANGES_ 。"
 
 #: ../../../CONTRIBUTING.rst:78
 msgid "Getting Started"
@@ -145,7 +145,7 @@ msgstr "入门"
 
 #: ../../../CONTRIBUTING.rst:80
 msgid "These are the basic steps needed to start developing on Sphinx."
-msgstr "These are the basic steps needed to start developing on Sphinx."
+msgstr "这些是开始在Sphinx上开发所需的基本步骤。"
 
 #: ../../../CONTRIBUTING.rst:82
 msgid "Create an account on GitHub."
@@ -155,7 +155,7 @@ msgstr "在GitHub上创建一个帐户。"
 msgid ""
 "Fork the main Sphinx repository (`sphinx-doc/sphinx <https://github.com"
 "/sphinx-doc/sphinx>`_) using the GitHub interface."
-msgstr ""
+msgstr "使用GitHub接口分叉主要的Sphinx存储库(`sphinx-doc/sphinx <https://github.com/sphinx-doc/sphinx>`_)。"
 
 #: ../../../CONTRIBUTING.rst:87
 msgid "Clone the forked repository to your machine. ::"
@@ -174,19 +174,19 @@ msgid ""
 "For changes that preserves backwards-compatibility of API and features, "
 "they should be included in the next MINOR release, use the ``X.Y`` "
 "branch. ::"
-msgstr ""
+msgstr "对于保留API和功能的向后兼容性的更改，它们应该包含在下一个MINOR版本中，使用 ``X.Y`` 分支。::"
 
 #: ../../../CONTRIBUTING.rst:102
 msgid ""
 "For incompatible or other substantial changes that should wait until the "
 "next MAJOR release, use the ``master`` branch."
-msgstr ""
+msgstr "对于应该等到下一个MAJOR版本的不兼容或其他实质性更改，请使用 ``master`` 分支。"
 
 #: ../../../CONTRIBUTING.rst:105
 msgid ""
 "For urgent release, a new PATCH branch must be branched from the newest "
 "release tag (see `Branch Model`_ for detail)."
-msgstr ""
+msgstr "对于紧急发布，必须从最新的发布标记分支新的PATCH分支(有关详细信息，请参阅`Branch Model`_)。"
 
 #: ../../../CONTRIBUTING.rst:108
 msgid "Setup a virtual environment."
@@ -197,7 +197,7 @@ msgid ""
 "This is not necessary for unit testing, thanks to ``tox``, but it is "
 "necessary if you wish to run ``sphinx-build`` locally or run unit tests "
 "without the help of ``tox``. ::"
-msgstr ""
+msgstr "这对于单元测试来说不是必需的，这要归功于 ``tox`` ，但是如果你想在本地运行 ``sphinx-build`` 或者在没有 ``tox`` 的帮助下运行单元测试，这是必要的。::"
 
 #: ../../../CONTRIBUTING.rst:118
 msgid "Create a new working branch.  Choose any name you like. ::"
@@ -219,7 +219,7 @@ msgstr "测试，测试，测试。"
 msgid ""
 "Testing is best done through ``tox``, which provides a number of targets "
 "and allows testing against multiple different Python environments:"
-msgstr ""
+msgstr "测试最好通过 ``tox`` 来完成，它提供了许多目标，并允许针对多种不同的Python环境进行测试:"
 
 #: ../../../CONTRIBUTING.rst:131
 msgid "To list all possible targets::"
@@ -233,7 +233,7 @@ msgstr "为特定的Python版本运行单元测试，例如 3.6::"
 msgid ""
 "To run unit tests for a specific Python version and turn on deprecation "
 "warnings on so they're shown in the test output::"
-msgstr ""
+msgstr "要运行特定Python版本的单元测试并启用弃用警告，以便它们显示在测试输出中::"
 
 #: ../../../CONTRIBUTING.rst:144
 msgid "To run code style and type checks::"
@@ -243,7 +243,7 @@ msgstr "运行代码样式和类型 checks::"
 msgid ""
 "Arguments to ``pytest`` can be passed via ``tox``, e.g. in order to run a"
 " particular test::"
-msgstr ""
+msgstr "``pytest`` 的参数可以通过 ``tox`` 传递，例如为了进行特定的测试::"
 
 #: ../../../CONTRIBUTING.rst:154
 msgid "To build the documentation::"
@@ -258,7 +258,7 @@ msgid ""
 "To run JavaScript tests with `Karma <https://karma-runner.github.io>`_, "
 "execute the following commands (requires `Node.js "
 "<https://nodejs.org>`_)::"
-msgstr ""
+msgstr "要使用 `Karma <https://karma-runner.github.io>`_ 运行JavaScript测试，请执行以下命令(需要 `Node.js <https://nodejs.org>`_)::"
 
 #: ../../../CONTRIBUTING.rst:168
 msgid "You can also test by installing dependencies in your local environment. ::"
@@ -268,13 +268,13 @@ msgstr "您还可以通过在本地环境中安装依赖项来进行测试。 ::
 msgid ""
 "New unit tests should be included in the ``tests`` directory where "
 "necessary:"
-msgstr ""
+msgstr "必要时，新的单元测试应包含在 ``tests`` 目录中:"
 
 #: ../../../CONTRIBUTING.rst:175
 msgid ""
 "For bug fixes, first add a test that fails without your changes and "
 "passes after they are applied."
-msgstr ""
+msgstr "对于错误修复，首先添加一个在没有更改的情况下失败的测试，并在应用后通过。"
 
 #: ../../../CONTRIBUTING.rst:178
 msgid ""
@@ -282,19 +282,19 @@ msgid ""
 " existing test modules if possible.  New tests that to ``@with_app`` and "
 "then ``build_all`` for a few assertions are not good since *the test "
 "suite should not take more than a minute to run*."
-msgstr ""
+msgstr "如果可能的话，需要将 ``sphinx-build`` 运行的测试集成到现有测试模块中。  对于 ``@with_app`` 然后 ``build_all`` 进行一些断言的新测试并不好，因为 *测试套件运行时间不应超过一分钟* 。"
 
 #: ../../../CONTRIBUTING.rst:183
 msgid ""
 "Please add a bullet point to :file:`CHANGES` if the fix or feature is not"
 " trivial (small doc updates, typo fixes).  Then commit::"
-msgstr ""
+msgstr "如果修复或功能不重要(小文档更新，拼写错误修复)，请添加一个项目符号 :file:`CHANGES` 。  然后提交::"
 
 #: ../../../CONTRIBUTING.rst:188
 msgid ""
 "GitHub recognizes certain phrases that can be used to automatically "
 "update the issue tracker."
-msgstr ""
+msgstr "GitHub识别可用于自动更新问题跟踪器的某些短语。"
 
 #: ../../../CONTRIBUTING.rst:191
 msgid "For example::"
@@ -302,21 +302,21 @@ msgstr "例如::"
 
 #: ../../../CONTRIBUTING.rst:195
 msgid "would close issue #42."
-msgstr "would close issue #42."
+msgstr "会关闭第42期。"
 
 #: ../../../CONTRIBUTING.rst:197
 msgid "Push changes in the branch to your forked repository on GitHub. ::"
-msgstr "Push changes in the branch to your forked repository on GitHub. ::"
+msgstr "将分支中的更改推送到GitHub上的分叉存储库。 ::"
 
 #: ../../../CONTRIBUTING.rst:201
 msgid ""
 "Submit a pull request from your branch to the respective branch "
 "(``master`` or ``X.Y``)."
-msgstr ""
+msgstr "从您的分支机构向相应的分支机构提交拉取请求(``master`` 或 ``X.Y``)。"
 
 #: ../../../CONTRIBUTING.rst:204
 msgid "Wait for a core developer to review your changes."
-msgstr "Wait for a core developer to review your changes."
+msgstr "等待核心开发人员审核您的更改。"
 
 #: ../../../CONTRIBUTING.rst:208
 msgid "Core Developers"
@@ -327,7 +327,7 @@ msgid ""
 "The core developers of Sphinx have write access to the main repository.  "
 "They can commit changes, accept/reject pull requests, and manage items on"
 " the issue tracker."
-msgstr ""
+msgstr "Sphinx的核心开发人员具有对主存储库的写访问权。他们可以提交更改，接受/拒绝拉取请求以及管理问题跟踪器上的项目。"
 
 #: ../../../CONTRIBUTING.rst:214
 msgid ""
@@ -335,32 +335,32 @@ msgid ""
 "involved in the development of Sphinx.  You can submit patches or create "
 "pull requests from forked repositories and have a core developer add the "
 "changes for you."
-msgstr ""
+msgstr "您不需要成为核心开发人员或具有写入权限以参与Sphinx的开发。您可以从分叉存储库提交补丁或创建拉取请求，并让核心开发人员为您添加更改。"
 
 #: ../../../CONTRIBUTING.rst:218
 msgid "The following are some general guidelines for core developers:"
-msgstr "The following are some general guidelines for core developers:"
+msgstr "以下是核心开发人员的一些一般准则:"
 
 #: ../../../CONTRIBUTING.rst:220
 msgid ""
 "Questionable or extensive changes should be submitted as a pull request "
 "instead of being committed directly to the main repository.  The pull "
 "request should be reviewed by another core developer before it is merged."
-msgstr ""
+msgstr "应将可疑或广泛的更改作为拉取请求提交，而不是直接提交到主存储库. 拉取请求应在合并之前由其他核心开发人员审核。"
 
 #: ../../../CONTRIBUTING.rst:224
 msgid ""
 "Trivial changes can be committed directly but be sure to keep the "
 "repository in a good working state and that all tests pass before pushing"
 " your changes."
-msgstr ""
+msgstr "可以直接提交简单的更改，但一定要保持存储库处于良好的工作状态，并且在推送更改之前所有测试都会通过。"
 
 #: ../../../CONTRIBUTING.rst:227
 msgid ""
 "When committing code written by someone else, please attribute the "
 "original author in the commit message and any relevant :file:`CHANGES` "
 "entry."
-msgstr ""
+msgstr "在提交由其他人编写的代码时，请在提交消息和任何相关的 :file:`CHANGES` 条目中归因于原作者。"
 
 #: ../../../CONTRIBUTING.rst:232
 msgid "Locale updates"
@@ -371,44 +371,44 @@ msgid ""
 "The parts of messages in Sphinx that go into builds are translated into "
 "several locales.  The translations are kept as gettext ``.po`` files "
 "translated from the master template ``sphinx/locale/sphinx.pot``."
-msgstr ""
+msgstr "Sphinx中进入构建的消息部分被转换为多个语言环境。翻译保存为从主模板 ``sphinx/locale/sphinx.pot`` 翻译的 gettext ``.po`` 文件。"
 
 #: ../../../CONTRIBUTING.rst:238
 msgid ""
 "Sphinx uses `Babel <http://babel.pocoo.org/en/latest/>`_ to extract "
 "messages and maintain the catalog files.  It is integrated in "
 "``setup.py``:"
-msgstr ""
+msgstr "Sphinx使用 `Babel <http://babel.pocoo.org/en/latest/>`_ 来提取消息并维护目录文件。  它集成在 ``setup.py`` 中:"
 
 #: ../../../CONTRIBUTING.rst:241
 msgid "Use ``python setup.py extract_messages`` to update the ``.pot`` template."
-msgstr "Use ``python setup.py extract_messages`` to update the ``.pot`` template."
+msgstr "使用 ``python setup.py extract_messages`` 来更新 ``.pot`` 模板。"
 
 #: ../../../CONTRIBUTING.rst:242
 msgid ""
 "Use ``python setup.py update_catalog`` to update all existing language "
 "catalogs in ``sphinx/locale/*/LC_MESSAGES`` with the current messages in "
 "the template file."
-msgstr ""
+msgstr "使用 ``python setup.py update_catalog`` 使用模板文件中的当前消息更新 ``sphinx/locale/*/LC_MESSAGES`` 中的所有现有语言目录。"
 
 #: ../../../CONTRIBUTING.rst:245
 msgid ""
 "Use ``python setup.py compile_catalog`` to compile the ``.po`` files to "
 "binary ``.mo`` files and ``.js`` files."
-msgstr ""
+msgstr "使用 ``python setup.py compile_catalog`` 将 ``.po`` 文件编译为二进制 ``.mo`` 文件和 ``.js`` 文件。"
 
 #: ../../../CONTRIBUTING.rst:248
 msgid ""
 "When an updated ``.po`` file is submitted, run compile_catalog to commit "
 "both the source and the compiled catalogs."
-msgstr ""
+msgstr "当提交更新的 ``.po`` 文件时，运行 compile_catalog 以提交源和已编译的目录。"
 
 #: ../../../CONTRIBUTING.rst:251
 msgid ""
 "When a new locale is submitted, add a new directory with the ISO 639-1 "
 "language identifier and put ``sphinx.po`` in there.  Don't forget to "
 "update the possible values for :confval:`language` in ``doc/config.rst``."
-msgstr ""
+msgstr "提交新的语言环境时，添加一个带有ISO 639-1语言标识符的新目录，并在其中放置 ``sphinx.po`` 。不要忘记在 ``doc/config.rst`` 中更新 :confval:`language` 的可能值。"
 
 #: ../../../CONTRIBUTING.rst:255
 msgid ""
@@ -420,7 +420,7 @@ msgid ""
 "existing language identifier.  It is good practice to run ``python "
 "setup.py update_catalog`` afterwards to make sure the ``.po`` file has "
 "the canonical Babel formatting."
-msgstr ""
+msgstr "Sphinx核心消息也可以在 `Transifex <https://www.transifex.com/>`_ 上翻译。在Python包 \"transifex_client\" 中存在一个名为 ``tx`` 的客户端工具，它可用于从Transifex中以 ``.po`` 格式提取翻译。  为此，请转到 ``sphinx/locale`` 然后运行 ``tx pull -f -l LANG`` ，其中LANG是现有的语言标识符。  最好在之后运行 ``python setup.py update_catalog`` 以确保 ``.po`` 文件具有规范的Babel格式。"
 
 #: ../../../CONTRIBUTING.rst:265
 msgid "Coding Guide"
@@ -430,30 +430,30 @@ msgstr "编码指南"
 msgid ""
 "Try to use the same code style as used in the rest of the project.  See "
 "the `Pocoo Styleguide`__ for more information."
-msgstr ""
+msgstr "尝试使用与项目其余部分相同的代码样式。  有关更多信息，请参阅 `Pocoo Styleguide`__ 。"
 
 #: ../../../CONTRIBUTING.rst:272
 msgid ""
 "For non-trivial changes, please update the :file:`CHANGES` file.  If your"
 " changes alter existing behavior, please document this."
-msgstr ""
+msgstr "对于非平凡的更改，请更新 :file:`CHANGES` 文件。如果您的更改改变了现有行为，请记录下来。"
 
 #: ../../../CONTRIBUTING.rst:275
 msgid ""
 "New features should be documented.  Include examples and use cases where "
 "appropriate.  If possible, include a sample that is displayed in the "
 "generated output."
-msgstr ""
+msgstr "应记录新功能。在适当的地方包括示例和用例。  如果可能，请包括生成的输出中显示的样本。"
 
 #: ../../../CONTRIBUTING.rst:279
 msgid ""
 "When adding a new configuration variable, be sure to document it and "
 "update :file:`sphinx/cmd/quickstart.py` if it's important enough."
-msgstr ""
+msgstr "添加新的配置变量时，请务必记录并更新 :file:`sphinx/cmd/quickstart.py` ，如果它足够重要的话。"
 
 #: ../../../CONTRIBUTING.rst:282
 msgid "Add appropriate unit tests."
-msgstr "Add appropriate unit tests."
+msgstr "添加适当的单元测试。"
 
 #: ../../../CONTRIBUTING.rst:286
 msgid "Debugging Tips"
@@ -464,35 +464,35 @@ msgid ""
 "Delete the build cache before building documents if you make changes in "
 "the code by running the command ``make clean`` or using the :option"
 ":`sphinx-build -E` option."
-msgstr ""
+msgstr "如果通过运行命令 ``make clean`` 或使用 :option:`sphinx-build -E` 选项在代码中进行更改，则在构建文档之前删除构建缓存。"
 
 #: ../../../CONTRIBUTING.rst:292
 msgid "Use the :option:`sphinx-build -P` option to run ``pdb`` on exceptions."
-msgstr "Use the :option:`sphinx-build -P` option to run ``pdb`` on exceptions."
+msgstr "使用 :option:`sphinx-build -P` 选项在异常上运行 ``pdb`` 。"
 
 #: ../../../CONTRIBUTING.rst:294
 msgid ""
 "Use ``node.pformat()`` and ``node.asdom().toxml()`` to generate a "
 "printable representation of the document structure."
-msgstr ""
+msgstr "使用 ``node.pformat()`` 和 ``node.asdom().toxml()`` 生成文档结构的可打印表示。"
 
 #: ../../../CONTRIBUTING.rst:297
 msgid ""
 "Set the configuration variable :confval:`keep_warnings` to ``True`` so "
 "warnings will be displayed in the generated output."
-msgstr ""
+msgstr "将配置变量 :confval:`keep_warnings` 设置为 ``True`` ，以便在生成的输出中显示警告。"
 
 #: ../../../CONTRIBUTING.rst:300
 msgid ""
 "Set the configuration variable :confval:`nitpicky` to ``True`` so that "
 "Sphinx will complain about references without a known target."
-msgstr ""
+msgstr "将配置变量 :confval:`nitpicky` 设置为 ``True`` ，以便Sphinx会抱怨没有已知目标的引用。"
 
 #: ../../../CONTRIBUTING.rst:303
 msgid ""
 "Set the debugging options in the `Docutils configuration file "
 "<http://docutils.sourceforge.net/docs/user/config.html>`_."
-msgstr ""
+msgstr "在 `Docutils配置文件中设置调试选项 <http://docutils.sourceforge.net/docs/user/config.html>`_."
 
 #: ../../../CONTRIBUTING.rst:306
 msgid ""
@@ -502,7 +502,7 @@ msgid ""
 "<https://jsx.github.io/>`_ files are in `this repository "
 "<https://github.com/shibukawa/snowball-stemmer.jsx>`_. You can get the "
 "resulting JavaScript files using the following command::"
-msgstr ""
+msgstr "``sphinx/search/*.py`` (除了 ``en.py``)中的JavaScript词干算法是由这个 `修改过的snowballcode生成器 <https://github.com/shibukawa/snowball>`_ 生成的。 生成的 `JSX <https://jsx.github.io/>`_ 文件位于 `此存储库 <https://github.com/shibukawa/snowball-stemmer.jsx>`_ 。您可以使用以下命令获取生成的JavaScript文件::"
 
 #: ../../../CONTRIBUTING.rst:318
 msgid "Branch Model"
@@ -512,7 +512,7 @@ msgstr "分支模型"
 msgid ""
 "Sphinx project uses following branches for developing that conforms to "
 "Semantic Versioning 2.0.0 (refs: https://semver.org/ )."
-msgstr ""
+msgstr "Sphinx项目使用以下分支进行开发，符合Semantic Versioning 2.0.0 (refs: https://semver.org/ )."
 
 #: ../../../CONTRIBUTING.rst:326
 msgid "``master``"
@@ -522,7 +522,7 @@ msgstr "``master``"
 msgid ""
 "Development for MAJOR version. All changes including incompatible "
 "behaviors and public API updates are allowed."
-msgstr ""
+msgstr "开发MAJOR版本。允许所有更改，包括不兼容的行为和公共API更新。"
 
 #: ../../../CONTRIBUTING.rst:335
 msgid "``X.Y``"
@@ -533,14 +533,14 @@ msgid ""
 "Where ``X.Y`` is the ``MAJOR.MINOR`` release.  Used to maintain current "
 "MINOR release. All changes are allowed if the change preserves backwards-"
 "compatibility of API and features."
-msgstr ""
+msgstr "其中 ``X.Y`` 是 ``MAJOR.MINOR`` 。用于维持当前的MINOR版本。如果更改保留了API和功能的向后兼容性，则允许所有更改。"
 
 #: ../../../CONTRIBUTING.rst:333
 msgid ""
 "Only the most recent ``MAJOR.MINOR`` branch is currently retained. When a"
 " new MAJOR version is released, the old ``MAJOR.MINOR`` branch will be "
 "deleted and replaced by an equivalent tag."
-msgstr ""
+msgstr "目前仅保留最新的 ``MAJOR.MINOR`` 分支。当一个新的MAJOR版本发布时，旧的 ``MAJOR.MINOR`` 分支将被删除并被等效标记取代。"
 
 #: ../../../CONTRIBUTING.rst:346
 msgid "``X.Y.Z``"
@@ -551,7 +551,7 @@ msgid ""
 "Where ``X.Y.Z`` is the ``MAJOR.MINOR.PATCH`` release.  Only backwards-"
 "compatible bug fixes are allowed. In Sphinx project, PATCH version is "
 "used for urgent bug fix."
-msgstr ""
+msgstr "其中 ``X.Y.Z`` 是 ``MAJOR.MINOR.PATCH`` 。只允许向后兼容的错误修复。在Sphinx项目中，PATCH版本用于紧急错误修复。"
 
 #: ../../../CONTRIBUTING.rst:342
 msgid ""
@@ -559,7 +559,7 @@ msgid ""
 "release tag (ex. make 2.3.1 that branched from v2.3.0) when a urgent "
 "release is needed. When new PATCH version is released, the branch will be"
 " deleted and replaced by an equivalent tag (ex. v2.3.1)."
-msgstr ""
+msgstr "当需要紧急释放时，``MAJOR.MINOR.PATCH`` 分支将从 ``v`` 前缀释放标记(例如，从2.3版本分支的make 2.3.1)分支出来。当发布新的PATCH版本时，分支将被删除并替换为等效标记(例如v2.3.1)。"
 
 #: ../../../CONTRIBUTING.rst:349
 msgid "Deprecating a feature"
@@ -567,13 +567,13 @@ msgstr "弃用某个功能"
 
 #: ../../../CONTRIBUTING.rst:351
 msgid "There are a couple reasons that code in Sphinx might be deprecated:"
-msgstr "There are a couple reasons that code in Sphinx might be deprecated:"
+msgstr "有几个原因导致Sphinx中的代码可能被弃用:"
 
 #: ../../../CONTRIBUTING.rst:353
 msgid ""
 "If a feature has been improved or modified in a backwards-incompatible "
 "way, the old feature or behavior will be deprecated."
-msgstr ""
+msgstr "如果某项功能以向后兼容的方式进行了改进或修改，则旧功能或行为将被弃用。"
 
 #: ../../../CONTRIBUTING.rst:356
 msgid ""
@@ -581,7 +581,7 @@ msgid ""
 "included in a version of Python that Sphinx currently supports. When "
 "Sphinx no longer needs to support the older version of Python that "
 "doesn't include the library, the library will be deprecated in Sphinx."
-msgstr ""
+msgstr "有时，Sphinx将包含一个Python库的后端，该库未包含在Sphinx目前支持的Python版本中。当Sphinx不再需要支持不包含该库的旧版Python时，将在Sphinx中弃用该库。"
 
 #: ../../../CONTRIBUTING.rst:361
 msgid ""
@@ -591,13 +591,13 @@ msgid ""
 "the feature will be removed) when the deprecated feature is invoked. "
 "Assuming we have good test coverage, these warnings are converted to "
 "errors when running the test suite with warnings enabled::"
-msgstr ""
+msgstr "正如 :ref:`deprecation-policy` 所描述的，Sphinx的第一个版本弃用了一个特性(``AB``)应该引发一个 ``RemovedInSphinxXXWarning`` (其中 ``XX`` 是Sphinx版本的特征将被删除)调用已弃用的功能时。假设我们具有良好的测试覆盖率，则在运行启用了警告的测试套件时，这些警告会转换为错误::"
 
 #: ../../../CONTRIBUTING.rst:370
 msgid ""
 "Thus, when adding a ``RemovedInSphinxXXWarning`` you need to eliminate or"
 " silence any warnings generated when running the tests."
-msgstr ""
+msgstr "因此，在添加 ``RemovedInSphinxXXWarning`` 时，您需要消除或消除运行测试时生成的任何警告。"
 
 #: ../../../CONTRIBUTING.rst:376
 msgid "Deprecation policy"
@@ -611,33 +611,33 @@ msgid ""
 "to work in all B.x.x versions but raise deprecation warnings. Deprecated "
 "features will be removed at the C.0.0. It means the deprecated feature "
 "will work during 2 MAJOR releases at least."
-msgstr ""
+msgstr "MAJOR 和 MINOR版本可能会弃用先前版本中的某些功能。 如果在版本A.x中不推荐使用某个功能，它将继续适用于所有A.x.x版本(适用于所有版本的x)。 它将继续在所有B.x.x版本中工作，但会引发弃用警告。 不推荐使用的功能将在C.0.0中删除。这意味着已弃用的功能至少在2个MAJOR版本中有效。"
 
 #: ../../../CONTRIBUTING.rst:385
 msgid ""
 "So, for example, if we decided to start the deprecation of a function in "
 "Sphinx 2.x:"
-msgstr ""
+msgstr "所以，例如，如果我们决定在Sphinx 2.x中开始弃用函数:"
 
 #: ../../../CONTRIBUTING.rst:388
 msgid ""
 "Sphinx 2.x will contain a backwards-compatible replica of the function "
 "which will raise a ``RemovedInSphinx40Warning``."
-msgstr ""
+msgstr "Sphinx 2.x将包含一个向后兼容的函数副本，它将引发一个 ``RemovedInSphinx40Warning`` 。"
 
 #: ../../../CONTRIBUTING.rst:391
 msgid "Sphinx 3.x will still contain the backwards-compatible replica."
-msgstr "Sphinx 3.x will still contain the backwards-compatible replica."
+msgstr "Sphinx 3.x 仍将包含向后兼容的副本。"
 
 #: ../../../CONTRIBUTING.rst:393
 msgid "Sphinx 4.0 will remove the feature outright."
-msgstr "Sphinx 4.0 will remove the feature outright."
+msgstr "Sphinx 4.0 将彻底删除该功能。"
 
 #: ../../../CONTRIBUTING.rst:395
 msgid ""
 "The warnings are displayed by default. You can turn off display of these "
 "warnings with:"
-msgstr ""
+msgstr "默认情况下会显示警告。您可以使用以下命令关闭这些警告的显示:"
 
 #: ../../../CONTRIBUTING.rst:398
 msgid "``PYTHONWARNINGS= make html`` (Linux/Mac)"
@@ -662,25 +662,25 @@ msgid ""
 "testing are provided in ``sphinx.testing``. If you are a developer of "
 "Sphinx extensions, you can write unit tests with using pytest. At this "
 "time, ``sphinx.testing`` will help your test implementation."
-msgstr ""
+msgstr "Sphinx已经过pytest runner的测试。 Sphinx开发人员使用pytest表示法编写单元测试。 用于测试的实用函数和pytest夹具在 ``sphinx.testing`` 中提供。 如果您是Sphinx扩展的开发人员，可以使用pytest编写单元测试。 这时， ``sphinx.testing`` 将帮助您进行测试。"
 
 #: ../../../CONTRIBUTING.rst:411
 msgid ""
 "How to use pytest fixtures that are provided by ``sphinx.testing``? You "
 "can require ``'sphinx.testing.fixtures'`` in your test modules or "
 "``conftest.py`` files like this::"
-msgstr ""
+msgstr "如何使用 ``sphinx.testing`` 提供的pytest灯具？您可以在测试模块中使用 ``'sphinx.testing.fixtures'`` 或像这样的 ``conftest.py`` 文件::"
 
 #: ../../../CONTRIBUTING.rst:417
 msgid ""
 "If you want to know more detailed usage, please refer to "
 "``tests/conftest.py`` and other ``test_*.py`` files under ``tests`` "
 "directory."
-msgstr ""
+msgstr "如果你想了解更详细的用法，请参考 ``tests`` 目录下的 ``tests/conftest.py`` 和其他 ``test_*.py`` 文件。"
 
 #: ../../../CONTRIBUTING.rst:422
 msgid "Prior to Sphinx - 1.5.2, Sphinx was running the test with nose."
-msgstr "Prior to Sphinx - 1.5.2, Sphinx was running the test with nose."
+msgstr "在Sphinx  -  1.5.2之前，Sphinx正在进行鼻子测试。"
 
 #: ../../../CONTRIBUTING.rst:424
 msgid "``sphinx.testing`` as a experimental."

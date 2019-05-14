@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>为Sphinx开发扩展 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>开发扩展 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,12 +16,12 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Application API" href="appapi.html" />
+    <link rel="next" title="应用程序API" href="appapi.html" />
     <link rel="prev" title="LaTeX 定制" href="../latex.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/index.html" />
 
@@ -102,10 +102,13 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="appapi.html" title="Application API"
+          <a href="appapi.html" title="应用程序API"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="../latex.html" title="LaTeX 定制"
@@ -119,8 +122,8 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">为Sphinx开发扩展</a><ul>
-<li><a class="reference internal" href="#discovery-of-builders-by-entry-point">通过切入点发现生成器</a></li>
+<li><a class="reference internal" href="#">开发扩展</a><ul>
+<li><a class="reference internal" href="#discovery-of-builders-by-entry-point">通过切入点发现构建器</a></li>
 <li><a class="reference internal" href="#important-objects">重要的对象</a></li>
 <li><a class="reference internal" href="#build-phases">建立阶段</a></li>
 <li><a class="reference internal" href="#extension-metadata">扩展元数据</a></li>
@@ -134,7 +137,7 @@
                         title="上一章">LaTeX 定制</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="appapi.html"
-                        title="下一章">Application API</a></p>
+                        title="下一章">应用程序API</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -161,36 +164,18 @@
           <div class="body" role="main">
             
   <div class="section" id="developing-extensions-for-sphinx">
-<span id="dev-extensions"></span><h1>为Sphinx开发扩展<a class="headerlink" href="#developing-extensions-for-sphinx" title="永久链接至标题">¶</a></h1>
-<p>Since many projects will need special features in their documentation, Sphinx is
-designed to be extensible on several levels.</p>
-<p>This is what you can do in an extension: First, you can add new
-<a class="reference internal" href="../glossary.html#term-builder"><span class="xref std std-term">builder</span></a>s to support new output formats or actions on the parsed
-documents.  Then, it is possible to register custom reStructuredText roles and
-directives, extending the markup.  And finally, there are so-called “hook
-points” at strategic places throughout the build process, where an extension can
-register a hook and run specialized code.</p>
-<p>An extension is simply a Python module.  When an extension is loaded, Sphinx
-imports this module and executes its <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function, which in turn
-notifies Sphinx of everything the extension offers – see the extension tutorial
-for examples.</p>
-<p>The configuration file itself can be treated as an extension if it contains a
-<code class="docutils literal notranslate"><span class="pre">setup()</span></code> function.  All other extensions to load must be listed in the
-<a class="reference internal" href="../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> configuration value.</p>
+<span id="dev-extensions"></span><h1>开发扩展<a class="headerlink" href="#developing-extensions-for-sphinx" title="永久链接至标题">¶</a></h1>
+<p>由于许多项目在其文档中需要特殊功能, 因此Sphinx可以在多个级别上进行扩展.</p>
+<p>这是您可以在扩展中执行的操作:首先, 您可以添加新 <a class="reference internal" href="../glossary.html#term-builder"><span class="xref std std-term">builder</span></a>s 以支持解析文档上的新输出格式或操作.然后, 可以注册自定义的reStructuredText角色和指令, 从而扩展标记.最后, 在整个构建过程中的战略位置都有所谓的 “hook points”, 扩展可以注册一个钩子并运行专门的代码.</p>
+<p>扩展只是一个Python模块.加载扩展时, Sphinx会导入该模块并执行其 <code class="docutils literal notranslate"><span class="pre">setup()</span></code> 函数, 该函数又会向Sphinx通知扩展提供的所有内容 - 请参阅扩展教程中的示例.</p>
+<p>如果配置文件包含一个 <code class="docutils literal notranslate"><span class="pre">setup()</span></code> 函数, 它可以被视为扩展.  加载的所有其他扩展必须列在 <a class="reference internal" href="../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置值中.</p>
 <div class="section" id="discovery-of-builders-by-entry-point">
-<h2>通过切入点发现生成器<a class="headerlink" href="#discovery-of-builders-by-entry-point" title="永久链接至标题">¶</a></h2>
+<h2>通过切入点发现构建器<a class="headerlink" href="#discovery-of-builders-by-entry-point" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">1.6 新版功能.</span></p>
 </div>
-<p><a class="reference internal" href="../glossary.html#term-builder"><span class="xref std std-term">Builder</span></a> extensions can be discovered by means of <a class="reference external" href="https://setuptools.readthedocs.io/en/latest/setuptools.html#dynamic-discovery-of-services-and-plugins">entry points</a> so
-that they do not have to be listed in the <a class="reference internal" href="../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> configuration
-value.</p>
-<p>Builder extensions should define an entry point in the <code class="docutils literal notranslate"><span class="pre">sphinx.builders</span></code>
-group. The name of the entry point needs to match your builder’s
-<a class="reference internal" href="builderapi.html#sphinx.builders.Builder.name" title="sphinx.builders.Builder.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a> attribute, which is the name passed to the
-<a class="reference internal" href="../man/sphinx-build.html#cmdoption-sphinx-build-b"><code class="xref std std-option docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span></code></a> option. The entry point value should equal the
-dotted name of the extension module. Here is an example of how an entry point
-for ‘mybuilder’ can be defined in the extension’s <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>:</p>
+<p><a class="reference internal" href="../glossary.html#term-builder"><span class="xref std std-term">Builder</span></a> 扩展可以通过 <a class="reference external" href="https://setuptools.readthedocs.io/en/latest/setuptools.html#dynamic-discovery-of-services-and-plugins">entry points</a> 来发现, 这样它们就不必列在 <a class="reference internal" href="../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置值中.</p>
+<p>Builder扩展应该在 <code class="docutils literal notranslate"><span class="pre">sphinx.builders</span></code> 组中定义一个入口点. 入口点的名称需要与构建器的匹配 <code class="xref py py-attr docutils literal notranslate"><span class="pre">〜.Builder.name</span></code> 属性, 这是传递给 <a class="reference internal" href="../man/sphinx-build.html#cmdoption-sphinx-build-b"><code class="xref std std-option docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span></code></a> 选项的名称. 入口点值应等于扩展模块的虚线名称.这是一个例子, 说明如何在扩展名的 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 中定义 ‘mybuilder’ 的入口点.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="p">(</span>
     <span class="c1"># ...</span>
     <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
@@ -201,169 +186,117 @@ for ‘mybuilder’ can be defined in the extension’s <code class="docutils li
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Note that it is still necessary to register the builder using
-<a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_builder" title="sphinx.application.Sphinx.add_builder"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_builder()</span></code></a> in the extension’s <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code> function.</p>
+<p>请注意, 仍然需要在扩展名 <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code> 函数中使用 <code class="xref py py-meth docutils literal notranslate"><span class="pre">〜.Sphinx.add_builder()</span></code> 注册构建器.</p>
 </div>
 <div class="section" id="important-objects">
 <span id="id1"></span><h2>重要的对象<a class="headerlink" href="#important-objects" title="永久链接至标题">¶</a></h2>
-<p>There are several key objects whose API you will use while writing an
-extension. These are:</p>
+<p>在编写扩展时, 您将使用几个关键对象的API.这些是:</p>
 <dl>
-<dt><strong>应用</strong></dt><dd><p>The application object (usually called <code class="docutils literal notranslate"><span class="pre">app</span></code>) is an instance of
-<a class="reference internal" href="appapi.html#sphinx.application.Sphinx" title="sphinx.application.Sphinx"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sphinx</span></code></a>.  It controls most high-level functionality, such as the
-setup of extensions, event dispatching and producing output (logging).</p>
-<p>If you have the environment object, the application is available as
-<code class="docutils literal notranslate"><span class="pre">env.app</span></code>.</p>
+<dt><strong>应用</strong></dt><dd><p>应用程序对象(通常称为 <code class="docutils literal notranslate"><span class="pre">app</span></code>)是一个实例 <a class="reference internal" href="appapi.html#sphinx.application.Sphinx" title="sphinx.application.Sphinx"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sphinx</span></code></a> .  它控制着大多数高级功能, 例如扩展设置, 事件调度和生成输出(日志记录).</p>
+<p>如果你有环境对象, 那么应用程序就可以作为 <code class="docutils literal notranslate"><span class="pre">env.app</span></code> .</p>
 </dd>
-<dt><strong>环境</strong></dt><dd><p>The build environment object (usually called <code class="docutils literal notranslate"><span class="pre">env</span></code>) is an instance of
-<a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a>.  It is responsible for parsing the source
-documents, stores all metadata about the document collection and is
-serialized to disk after each build.</p>
-<p>Its API provides methods to do with access to metadata, resolving references,
-etc.  It can also be used by extensions to cache information that should
-persist for incremental rebuilds.</p>
-<p>If you have the application or builder object, the environment is available
-as <code class="docutils literal notranslate"><span class="pre">app.env</span></code> or <code class="docutils literal notranslate"><span class="pre">builder.env</span></code>.</p>
+<dt><strong>环境</strong></dt><dd><p>构建环境对象(通常称为 <code class="docutils literal notranslate"><span class="pre">env</span></code>)是一个实例 <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> .  它负责解析源文档, 存储有关文档集合的所有元数据, 并在每次构建后序列化到磁盘.</p>
+<p>它的API提供了访问元数据, 解析引用等方法.扩展还可以使用它来缓存应该持续进行增量重建的信息.</p>
+<p>如果您有应用程序或构建器对象, 则该环境可用作 <code class="docutils literal notranslate"><span class="pre">app.env</span></code> 或 <code class="docutils literal notranslate"><span class="pre">builder.env</span></code> .</p>
 </dd>
-<dt><strong>生成器</strong></dt><dd><p>The builder object (usually called <code class="docutils literal notranslate"><span class="pre">builder</span></code>) is an instance of a specific
-subclass of <a class="reference internal" href="builderapi.html#sphinx.builders.Builder" title="sphinx.builders.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a>.  Each builder class knows how to convert the
-parsed documents into an output format, or otherwise process them (e.g. check
-external links).</p>
-<p>If you have the application object, the builder is available as
-<code class="docutils literal notranslate"><span class="pre">app.builder</span></code>.</p>
+<dt><strong>生成器</strong></dt><dd><p>构建器对象(通常称为 <code class="docutils literal notranslate"><span class="pre">builder</span></code>)是特定子类的实例 <a class="reference internal" href="builderapi.html#sphinx.builders.Builder" title="sphinx.builders.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a> .  每个构建器类都知道如何将解析的文档转换为输出格式, 或以其他方式处理它们(例如, 检查外部链接).</p>
+<p>如果您有应用程序对象, 则构建器可用作 <code class="docutils literal notranslate"><span class="pre">app.builder</span></code>.</p>
 </dd>
-<dt><strong>配置</strong></dt><dd><p>The config object (usually called <code class="docutils literal notranslate"><span class="pre">config</span></code>) provides the values of
-configuration values set in <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> as attributes.  It is an instance
-of <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a>.</p>
-<p>配置可用作 <code class="docutils literal notranslate"><span class="pre">app.config</span></code> 或 <code class="docutils literal notranslate"><span class="pre">env.config</span></code> 。</p>
+<dt><strong>配置</strong></dt><dd><p>config对象(通常称为 <code class="docutils literal notranslate"><span class="pre">config</span></code>)提供在 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 中设置的配置值的值作为属性.  它是一个实例 <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> .</p>
+<p>配置可用作 <code class="docutils literal notranslate"><span class="pre">app.config</span></code> 或 <code class="docutils literal notranslate"><span class="pre">env.config</span></code> .</p>
 </dd>
 </dl>
-<p>To see an example of use of these objects, refer to <a class="reference internal" href="../development/tutorials/index.html"><span class="doc">扩展教程</span></a>.</p>
+<p>要查看使用这些对象的示例, 请参阅 <a class="reference internal" href="../development/tutorials/index.html"><span class="doc">扩展教程</span></a> .</p>
 </div>
 <div class="section" id="build-phases">
 <span id="id2"></span><h2>建立阶段<a class="headerlink" href="#build-phases" title="永久链接至标题">¶</a></h2>
-<p>One thing that is vital in order to understand extension mechanisms is the way
-in which a Sphinx project is built: this works in several phases.</p>
-<p><strong>第零阶段：初始化</strong></p>
+<p>对于理解扩展机制至关重要的一件事是构建Sphinx项目的方式:这在几个阶段中起作用.</p>
+<p><strong>阶段0:初始化</strong></p>
 <blockquote>
-<div><p>In this phase, almost nothing of interest to us happens.  The source
-directory is searched for source files, and extensions are initialized.
-Should a stored build environment exist, it is loaded, otherwise a new one is
-created.</p>
+<div><p>在这个阶段, 我们几乎没有任何兴趣发生.搜索源目录以查找源文件, 并初始化扩展.如果存在存储的构建环境, 则会加载它, 否则会创建一个新的构建环境.</p>
 </div></blockquote>
-<p><strong>第一阶段：阅读</strong></p>
+<p><strong>阶段1: 阅读</strong></p>
 <blockquote>
-<div><p>In Phase 1, all source files (and on subsequent builds, those that are new or
-changed) are read and parsed.  This is the phase where directives and roles
-are encountered by docutils, and the corresponding code is executed.  The
-output of this phase is a <em>doctree</em> for each source file; that is a tree of
-docutils nodes.  For document elements that aren’t fully known until all
-existing files are read, temporary nodes are created.</p>
-<p>There are nodes provided by docutils, which are documented <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/doctree.html">in the docutils
-documentation</a>.
-Additional nodes are provided by Sphinx and <a class="reference internal" href="nodes.html#nodes"><span class="std std-ref">documented here</span></a>.</p>
-<p>During reading, the build environment is updated with all meta- and cross
-reference data of the read documents, such as labels, the names of headings,
-described Python objects and index entries.  This will later be used to
-replace the temporary nodes.</p>
-<p>The parsed doctrees are stored on the disk, because it is not possible to
-hold all of them in memory.</p>
+<div><p>在阶段1中, 将读取和解析所有源文件(以及后续构建, 新的或更改的源文件). 这是docutils遇到指令和角色的阶段, 并执行相应的代码. 此阶段的输出是每个源文件的 <em>doctree</em> ;这是一个docutils节点的树. 对于在读取所有现有文件之前未完全知晓的文档元素, 将创建临时节点.</p>
+<p>docutils提供了一些节点, 这些节点在 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/doctree.html">docutils文档中</a> 记录. 其他节点由Sphinx提供, 并且 <a class="reference internal" href="nodes.html#nodes"><span class="std std-ref">此处记录</span></a>.</p>
+<p>在阅读期间, 使用所读取文档的所有元数据和交叉引用数据更新构建环境, 例如标签, 标题名称, 描述的Python对象和索引条目.  这将在以后用于替换临时节点.</p>
+<p>解析后的doctree存储在磁盘上, 因为无法将所有这些都保存在内存中.</p>
 </div></blockquote>
-<p><strong>第二阶段：一致性检查</strong></p>
+<p><strong>阶段2: 一致性检查</strong></p>
 <blockquote>
-<div><p>Some checking is done to ensure no surprises in the built documents.</p>
+<div><p>进行一些检查以确保构建文档中没有意外.</p>
 </div></blockquote>
-<p><strong>第三阶段：解决</strong></p>
+<p><strong>阶段3: 解决</strong></p>
 <blockquote>
-<div><p>Now that the metadata and cross-reference data of all existing documents is
-known, all temporary nodes are replaced by nodes that can be converted into
-output using components called transforms.  For example, links are created for
-object references that exist, and simple literal nodes are created for those
-that don’t.</p>
+<div><p>现在已知所有现有文档的元数据和交叉引用数据, 所有临时节点都被可以使用称为变换的组件转换为输出的节点替换. 例如, 为存在的对象引用创建链接, 并为不存在的对象引用创建简单的文字节点.</p>
 </div></blockquote>
-<p><strong>第四阶段：写作</strong></p>
+<p><strong>阶段4: 编辑</strong></p>
 <blockquote>
-<div><p>This phase converts the resolved doctrees to the desired output format, such
-as HTML or LaTeX.  This happens via a so-called docutils writer that visits
-the individual nodes of each doctree and produces some output in the process.</p>
+<div><p>此阶段将已解析的doctree转换为所需的输出格式, 例如HTML或LaTeX. 这通过所谓的docutils编写器发生, 该编写器访问每个doctree的各个节点并在该过程中产生一些输出.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Some builders deviate from this general build plan, for example, the builder
-that checks external links does not need anything more than the parsed
-doctrees and therefore does not have phases 2–4.</p>
+<p>某些构建器偏离此常规构建计划, 例如, 检查外部链接的构建器不需要比解析的doctree更多的内容, 因此没有阶段2–4.</p>
 </div>
-<p>To see an example of application, refer to <a class="reference internal" href="../development/tutorials/todo.html"><span class="doc">开发 “TODO” 扩展</span></a>.</p>
+<p>要查看应用程序示例, 请参阅 <a class="reference internal" href="../development/tutorials/todo.html"><span class="doc">开发 “TODO” 扩展</span></a>.</p>
 </div>
 <div class="section" id="extension-metadata">
 <span id="ext-metadata"></span><h2>扩展元数据<a class="headerlink" href="#extension-metadata" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function can return a dictionary.  This is treated by Sphinx
-as metadata of the extension.  Metadata keys currently recognized are:</p>
+<p><code class="docutils literal notranslate"><span class="pre">setup()</span></code> 函数可以返回一个字典. 这被Sphinx视为扩展的元数据. 当前识别的元数据键是:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'version'</span></code>: a string that identifies the extension version.  It is used for
-extension version requirement checking (see <a class="reference internal" href="../usage/configuration.html#confval-needs_extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">needs_extensions</span></code></a>) and
-informational purposes.  If not given, <code class="docutils literal notranslate"><span class="pre">&quot;unknown</span> <span class="pre">version&quot;</span></code> is substituted.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'env_version'</span></code>: an integer that identifies the version of env data
-structure if the extension stores any data to environment.  It is used to
-detect the data structure has been changed from last build.  The extensions
-have to increment the version when data structure has changed.  If not given,
-Sphinx considers the extension does not stores any data to environment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'parallel_read_safe'</span></code>: a boolean that specifies if parallel reading of
-source files can be used when the extension is loaded.  It defaults to
-<code class="docutils literal notranslate"><span class="pre">False</span></code>, i.e. you have to explicitly specify your extension to be
-parallel-read-safe after checking that it is.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'parallel_write_safe'</span></code>: a boolean that specifies if parallel writing of
-output files can be used when the extension is loaded.  Since extensions
-usually don’t negatively influence the process, this defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'version'</span></code>: 标识扩展版本的字符串. 它用于扩展版本要求检查(请参阅 <a class="reference internal" href="../usage/configuration.html#confval-needs_extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">needs_extensions</span></code></a>)和信息用途. 如果没有给出, <code class="docutils literal notranslate"><span class="pre">&quot;unknown</span> <span class="pre">version&quot;</span></code> 被替换.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'env_version'</span></code>: 如果扩展将任何数据存储到环境, 则标识env数据结构版本的整数. 它用于检测从上次构建更改的数据结构. 扩展必须在数据结构发生变化时增加版本. 如果没有给出, Sphinx认为扩展不会将任何数据存储到环境中.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'parallel_read_safe'</span></code>: 一个布尔值, 指定在加载扩展时是否可以使用源文件的并行读取. 它默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> , 即你必须在检查它之后明确指定你的扩展是并行读取安全的.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'parallel_write_safe'</span></code>: 一个布尔值, 指定在加载扩展时是否可以使用输出文件的并行写入. 由于扩展通常不会对进程产生负面影响, 因此默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
 </ul>
 </div>
 <div class="section" id="apis-used-for-writing-extensions">
 <h2>用于编写扩展的API<a class="headerlink" href="#apis-used-for-writing-extensions" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="appapi.html">Application API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#extension-setup">Extension setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#emitting-events">Emitting events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#sphinx-runtime-information">Sphinx runtime information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#sphinx-core-events">Sphinx core events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#checking-the-sphinx-version">Checking the Sphinx version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#the-config-object">The Config object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#the-template-bridge">The template bridge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="appapi.html#exceptions">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appapi.html">应用程序API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#extension-setup">扩展设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#emitting-events">发出事件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#sphinx-runtime-information">Sphinx运行时信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#sphinx-core-events">狮身人面像核心事件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#checking-the-sphinx-version">检查Sphinx版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#the-config-object">Config对象</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#the-template-bridge">模板桥</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appapi.html#exceptions">例外</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="projectapi.html">Project API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="envapi.html">Build environment API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="builderapi.html">Builder API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collectorapi.html">Environment Collector API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markupapi.html">Docutils markup API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="markupapi.html#roles">Roles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markupapi.html#directives">Directives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectapi.html">项目API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="envapi.html">构建环境API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builderapi.html">生成器API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collectorapi.html">环境收集器API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markupapi.html">Docutils标记API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="markupapi.html#roles">角色</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markupapi.html#directives">指令</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="domainapi.html">Domain API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parserapi.html">Parser API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Doctree node classes added by Sphinx</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nodes.html#nodes-for-domain-specific-object-descriptions">Nodes for domain-specific object descriptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nodes.html#new-admonition-like-constructs">New admonition-like constructs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nodes.html#other-paragraph-level-nodes">Other paragraph-level nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nodes.html#new-inline-nodes">New inline nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nodes.html#special-nodes">Special nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="domainapi.html">域API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parserapi.html">解析器API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">由Sphinx添加的Doctree节点类</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html#nodes-for-domain-specific-object-descriptions">特定于域的对象描述的节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html#new-admonition-like-constructs">新的告诫式结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html#other-paragraph-level-nodes">其他段落级节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html#new-inline-nodes">新的内联节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html#special-nodes">特殊节点</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">记录API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="i18n.html">i18n API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="i18n.html#extension-internationalization-i18n-and-localization-l10n-using-i18n-api">Extension internationalization (<cite>i18n</cite>) and localization (<cite>l10n</cite>) using i18n API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html#extension-internationalization-i18n-and-localization-l10n-using-i18n-api">使用 i18n API 扩展国际化(<cite>i18n</cite>)和本地化(<cite>l10n</cite>)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#base-classes-for-components">Base classes for components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">实用工具</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#base-classes-for-components">组件的基类</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deprecated.html">Deprecated APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deprecated.html">弃用 APIs</a></li>
 </ul>
 </div>
 </div>
@@ -382,10 +315,13 @@ usually don’t negatively influence the process, this defaults to <code class="
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="appapi.html" title="Application API"
+          <a href="appapi.html" title="应用程序API"
              >下一页</a> |</li>
         <li class="right" >
           <a href="../latex.html" title="LaTeX 定制"
@@ -397,7 +333,7 @@ usually don’t negatively influence the process, this defaults to <code class="
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

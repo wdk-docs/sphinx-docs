@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/cb9d9e59e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-17 15:00+0800\n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,7 +72,9 @@ msgid ""
 "In order to use it, add :mod:`sphinxcontrib.httpdomain` into "
 ":data:`extensions` list of your Sphinx configuration file "
 "(:file:`conf.py`)::"
-msgstr "为了使用它，将 :mod:`sphinxcontrib.httpdomain` 添加到 Sphinx 配置文件(:file:`conf.py`)的 :data:`extensions` 列表中::"
+msgstr ""
+"为了使用它，将 :mod:`sphinxcontrib.httpdomain` 添加到 Sphinx 配置文件(:file:`conf.py`)的"
+" :data:`extensions` 列表中::"
 
 #: ../../usage/extensions/httpdomain.rst:51
 msgid "Additional Configuration"
@@ -145,6 +147,89 @@ msgstr "提供了几个 :ref:`directives <directives>` 来描述HTTP资源。"
 msgid "will be rendered as:"
 msgstr "将呈现为:"
 
+#: ../../usage/extensions/httpdomain.rst:153
+msgid "The posts tagged with `tag` that the user (`user_id`) wrote."
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:155
+msgid "**Example request**:"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:163
+msgid "**Example response**:"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "query sort"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:186
+msgid "one of ``hit``, ``created-at``"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "query offset"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:187
+msgid "offset number. default is 0"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "query limit"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:188
+msgid "limit number. default is 30"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "reqheader Accept"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:189
+#: ../../usage/extensions/httpdomain.rst:455
+msgid "the response content type depends on :mailheader:`Accept` header"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+#, fuzzy
+msgid "reqheader Authorization"
+msgstr ":http:header:`Authorization`"
+
+#: ../../usage/extensions/httpdomain.rst:191
+#: ../../usage/extensions/httpdomain.rst:457
+msgid "optional OAuth token to authenticate"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+#, fuzzy
+msgid "resheader Content-Type"
+msgstr ":http:header:`Content-Type`"
+
+#: ../../usage/extensions/httpdomain.rst:192
+#: ../../usage/extensions/httpdomain.rst:458
+msgid "this depends on :mailheader:`Accept` header of request"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+#, fuzzy
+msgid "statuscode 200"
+msgstr ":http:statuscode:`200 OK`"
+
+#: ../../usage/extensions/httpdomain.rst:194
+msgid "no error"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+#, fuzzy
+msgid "statuscode 404"
+msgstr ":http:statuscode:`404`"
+
+#: ../../usage/extensions/httpdomain.rst:195
+msgid "there's no user"
+msgstr ""
+
 #: ../../usage/extensions/httpdomain.rst:197
 msgid ""
 "Of course, :ref:`roles <roles>` that refer the directives as well. For "
@@ -167,7 +252,9 @@ msgstr "指令"
 msgid ""
 "Describes a HTTP resource's :http:method:`OPTIONS` method. It can also be"
 " referred by :rst:role:`http:options` role."
-msgstr "描述HTTP资源的 :http:method:`OPTIONS` 方法。它也可以通过以下方式引用 :rst:role:`http:options` 角色。"
+msgstr ""
+"描述HTTP资源的 :http:method:`OPTIONS` 方法。它也可以通过以下方式引用 :rst:role:`http:options`"
+" 角色。"
 
 #: ../../usage/extensions/httpdomain.rst:221
 msgid ""
@@ -203,7 +290,9 @@ msgstr "描述HTTP资源的 :http:method:`PATCH` 方法。它也可以通过以�
 msgid ""
 "Describes a HTTP resource's :http:method:`DELETE` method. It can also be "
 "referred by :rst:role:`http:delete` role."
-msgstr "描述HTTP资源的 :http:method:`DELETE` 方法。它也可以通过以下方式引用 :rst:role:`http:delete` 角色。"
+msgstr ""
+"描述HTTP资源的 :http:method:`DELETE` 方法。它也可以通过以下方式引用 :rst:role:`http:delete` "
+"角色。"
 
 #: ../../usage/extensions/httpdomain.rst:251
 msgid ""
@@ -223,7 +312,10 @@ msgid ""
 ":http:method:`ANY` method. Useful for cases when requested resource "
 "proxying the request to some other location keeping original request "
 "context. It can also be referred by :rst:role:`http:any` role."
-msgstr "描述一个HTTP资源，它接受请求 :http:method:`ANY` 方法。对于请求资源将请求代理到保留原始请求上下文的某个其他位置的情况很有用。它也可以通过以下方式引用 :rst:role:`http:any` 角色。"
+msgstr ""
+"描述一个HTTP资源，它接受请求 :http:method:`ANY` "
+"方法。对于请求资源将请求代理到保留原始请求上下文的某个其他位置的情况很有用。它也可以通过以下方式引用 :rst:role:`http:any` "
+"角色。"
 
 #: ../../usage/extensions/httpdomain.rst:272
 msgid "Options"
@@ -304,7 +396,9 @@ msgid ""
 "Description of parameter passed by request content body, encoded in "
 ":mimetype:`application/x-www-form-urlencoded` or :mimetype:`multipart"
 "/form-data`."
-msgstr "由请求内容体传递的参数的描述，编码在 :mimetype:`application/x-www-form-urlencoded` 或 :mimetype:`multipart/form-data` 。"
+msgstr ""
+"由请求内容体传递的参数的描述，编码在 :mimetype:`application/x-www-form-urlencoded` 或 "
+":mimetype:`multipart/form-data` 。"
 
 #: ../../usage/extensions/httpdomain.rst:354
 msgid "``jsonparameter``, ``jsonparam``, ``json``"
@@ -320,7 +414,9 @@ msgstr "请求内容体传递的参数的描述，编码在 :mimetype:`applicati
 msgid ""
 "Use ``reqjsonobj``/``reqjson``/``<jsonobj``/``<json`` and "
 "``reqjsonarr``/``<jsonarr`` instead."
-msgstr "使用 ``reqjsonobj``/``reqjson``/``<jsonobj``/``<json`` 和 ``reqjsonarr``/``<jsonarr`` 代替."
+msgstr ""
+"使用 ``reqjsonobj``/``reqjson``/``<jsonobj``/``<json`` 和 "
+"``reqjsonarr``/``<jsonarr`` 代替."
 
 #: ../../usage/extensions/httpdomain.rst:367
 msgid "``reqjsonobj``, ``reqjson``, ``<jsonobj``, ``<json``"
@@ -332,7 +428,9 @@ msgid ""
 "encoded in :mimetype:`application/json`. The key difference from ``json``"
 " is explicitly defined use-case (request/response) of the described "
 "object."
-msgstr "请求体传递的JSON对象的单个字段的描述，编码在 :mimetype:`application/json` 。与 ``json`` 的主要区别在于明确定义了所描述对象的用例(请求/响应)。"
+msgstr ""
+"请求体传递的JSON对象的单个字段的描述，编码在 :mimetype:`application/json` 。与 ``json`` "
+"的主要区别在于明确定义了所描述对象的用例(请求/响应)。"
 
 #: ../../usage/extensions/httpdomain.rst:377
 msgid "``resjsonobj``, ``resjson``, ``>jsonobj``, ``>json``"
@@ -406,6 +504,58 @@ msgstr "例如:"
 msgid "It will render like this:"
 msgstr "它会像这样渲染:"
 
+#: ../../usage/extensions/httpdomain.rst:449
+msgid "Replies a comment to the post."
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "参数"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:451
+msgid "post's unique id"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "form email"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:453
+msgid "author email address"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "form body"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:454
+msgid "comment body"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "status 302"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:460
+msgid "and then redirects to :http:get:`/posts/(int:post_id)`"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst
+msgid "status 400"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:461
+msgid "when form parameters are missing"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:465
+msgid "Fetches the post"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:467
+msgid "(...)"
+msgstr ""
+
 #: ../../usage/extensions/httpdomain.rst:472
 msgid "Roles"
 msgstr "角色"
@@ -455,7 +605,9 @@ msgid ""
 "A reference to a HTTP status code. The text \"`code` `Status Name`\" is "
 "generated; in the HTML output, this text is a hyperlink to a web "
 "reference of the specified status code."
-msgstr "对HTTP状态代码的引用。生成文本 \"`code` `Status Name`\" ;在HTML输出中，此文本是指向指定状态代码的Web引用的超链接。"
+msgstr ""
+"对HTTP状态代码的引用。生成文本 \"`code` `Status Name`\" "
+";在HTML输出中，此文本是指向指定状态代码的Web引用的超链接。"
 
 #: ../../usage/extensions/httpdomain.rst:529
 msgid ":http:statuscode:`404`"
@@ -494,7 +646,9 @@ msgid ""
 "Similar to :rst:role:`mimetype` role, it doesn't belong to HTTP domain, "
 "but standard domain. It refers to the HTTP request/response header field "
 "like :http:header:`Content-Type`."
-msgstr "类似于 :rst:role:`mimetype` 角色，它不属于HTTP域，而属于标准域。它引用HTTP请求/响应头字段，如 :http:header:`Content-Type` 。"
+msgstr ""
+"类似于 :rst:role:`mimetype` 角色，它不属于HTTP域，而属于标准域。它引用HTTP请求/响应头字段，如 "
+":http:header:`Content-Type` 。"
 
 #: ../../usage/extensions/httpdomain.rst:566
 msgid ""
@@ -735,7 +889,9 @@ msgid ""
 "In order to use it, add :mod:`sphinxcontrib.autohttp.flask` into "
 ":data:`extensions` list of your Sphinx configuration (:file:`conf.py`) "
 "file::"
-msgstr "为了使用它，将 :mod:`sphinxcontrib.autohttp.flask` 添加到 :data:`extensions` 列表中的Sphinx配置(:file:`conf.py`)文件::"
+msgstr ""
+"为了使用它，将 :mod:`sphinxcontrib.autohttp.flask` 添加到 :data:`extensions` "
+"列表中的Sphinx配置(:file:`conf.py`)文件::"
 
 #: ../../usage/extensions/httpdomain.rst:661
 msgid ""
@@ -825,7 +981,9 @@ msgid ""
 "While the `undoc-members`_ flag of :mod:`sphinx.ext.autodoc` extension "
 "includes members without docstrings, ``undoc-endpoints`` option has "
 "nothing to do with docstrings. It just excludes specified endpoints."
-msgstr "虽然 :mod:`sphinx.ext.autodoc` 扩展的 `undoc-members`_ 标志包含没有 docstrings 的成员，但 ``undoc-endpoints`` 选项与docstrings无关。它只是排除了指定的端点。"
+msgstr ""
+"虽然 :mod:`sphinx.ext.autodoc` 扩展的 `undoc-members`_ 标志包含没有 docstrings 的成员，但"
+" ``undoc-endpoints`` 选项与docstrings无关。它只是排除了指定的端点。"
 
 #: ../../usage/extensions/httpdomain.rst:728
 msgid "``blueprints``"
@@ -930,7 +1088,9 @@ msgid ""
 "To use it, both :mod:`sphinxcontrib.autohttp.flask` and "
 ":mod:`sphinxcontrib.autohttp.flaskqref` need to be added into the "
 "extensions of your configuration (:file:`conf.py`) file::"
-msgstr "要使用它，两者 :mod:`sphinxcontrib.autohttp.flask` 和 :mod:`sphinxcontrib.autohttp.flaskqref` 需要添加到配置(:file:`conf.py`)文件的扩展名中::"
+msgstr ""
+"要使用它，两者 :mod:`sphinxcontrib.autohttp.flask` 和 "
+":mod:`sphinxcontrib.autohttp.flaskqref` 需要添加到配置(:file:`conf.py`)文件的扩展名中::"
 
 #: ../../usage/extensions/httpdomain.rst:810
 msgid ""
@@ -938,7 +1098,9 @@ msgid ""
 "in a list-table with quick reference links. The usage and options are "
 "identical to that of :mod:`sphinxcontrib.autohttp.flask` with the "
 "addition of the ``autoquickref`` option."
-msgstr "从Flask应用程序生成HTTP API引用，并将它们放在带有快速引用链接的列表表中。用法和选项与 :mod:`sphinxcontrib.autohttp.flask` 相同，增加了 ``autoquickref`` 选项。"
+msgstr ""
+"从Flask应用程序生成HTTP API引用，并将它们放在带有快速引用链接的列表表中。用法和选项与 "
+":mod:`sphinxcontrib.autohttp.flask` 相同，增加了 ``autoquickref`` 选项。"
 
 #: ../../usage/extensions/httpdomain.rst:819
 msgid ""
@@ -983,7 +1145,9 @@ msgid ""
 "blueprints. The ``<resource>`` will be set to the blueprint's name, and "
 "the ``<short description>`` will be set to the first line of the "
 "docstring."
-msgstr "如果使用 ``autoquickref`` 选项，则所有路径都必须在蓝图内。 ``<resource>`` 将被设置为蓝图的名称， ``<short description>`` 将被设置为 docstring 的第一行。"
+msgstr ""
+"如果使用 ``autoquickref`` 选项，则所有路径都必须在蓝图内。 ``<resource>`` 将被设置为蓝图的名称， "
+"``<short description>`` 将被设置为 docstring 的第一行。"
 
 #: ../../usage/extensions/httpdomain.rst:859
 msgid "The quick reference table is defined as:"
@@ -1012,7 +1176,9 @@ msgid ""
 "In order to use it, add :mod:`sphinxcontrib.autohttp.bottle` into "
 ":data:`extensions` list of your Sphinx configuration (:file:`conf.py`) "
 "file::"
-msgstr "为了使用它，将 :mod:`sphinxcontrib.autohttp.bottle` 添加到 :data:`extensions` 列表中的Sphinx配置(:file:`conf.py`)文件::"
+msgstr ""
+"为了使用它，将 :mod:`sphinxcontrib.autohttp.bottle` 添加到 :data:`extensions` "
+"列表中的Sphinx配置(:file:`conf.py`)文件::"
 
 #: ../../usage/extensions/httpdomain.rst:898
 msgid ""
@@ -1040,14 +1206,16 @@ msgstr ":mod:`sphinxcontrib.autohttp.tornado` --- 从Tornado应用程序导出AP
 msgid ""
 "It generates RESTful HTTP API reference documentation from a Tornado_ "
 "application's routing table, similar to :mod:`sphinx.ext.autodoc`."
-msgstr "它从Tornado_应用程序的路由表生成RESTful HTTP API参考文档，类似于 :mod:`sphinx.ext.autodoc` 。"
+msgstr "它从 Tornado_ 应用程序的路由表生成RESTful HTTP API参考文档，类似于 :mod:`sphinx.ext.autodoc` 。"
 
 #: ../../usage/extensions/httpdomain.rst:968
 msgid ""
 "In order to use it, add :mod:`sphinxcontrib.autohttp.tornado` into "
 ":data:`extensions` list of your Sphinx configuration (:file:`conf.py`) "
 "file::"
-msgstr "为了使用它，将 :mod:`sphinxcontrib.autohttp.tornado` 添加到 :data:`extensions` 列表中的Sphinx配置(:file:`conf.py`)文件::"
+msgstr ""
+"为了使用它，将 :mod:`sphinxcontrib.autohttp.tornado` 添加到 :data:`extensions` "
+"列表中的Sphinx配置(:file:`conf.py`)文件::"
 
 #: ../../usage/extensions/httpdomain.rst:985
 msgid ""
@@ -1064,7 +1232,9 @@ msgid ""
 "will document the :func:`get` and :func:`post` methods of the "
 ":class:`User` :class:`RequestHandler` and the :func:`get` method of the "
 ":class:`Friend` :class:`RequestHandler`, while"
-msgstr "将记录 :func:`get` 和 :func:`post` 方法 :class:`User`:class:`RequestHandler` 和 :func:`get` 方法 :class:`Friend`:class :`RequestHandler` ，而"
+msgstr ""
+"将记录 :func:`get` 和 :func:`post` 方法 :class:`User` :class:`RequestHandler` 和"
+" :func:`get` 方法  :class:`Friend` :class:`RequestHandler` ，而"
 
 #: ../../usage/extensions/httpdomain.rst:1011
 msgid "will document all endpoints in the tornado app."
@@ -1079,11 +1249,31 @@ msgid ""
 "The :mod:`sphinxcontrib.httpdomain` and :mod:`sphinxcontrib.autohttp`, "
 "parts of :mod:`sphinxcontrib`, are written by `Hong Minhee`_ and "
 "distributed under BSD license."
-msgstr ":mod:`sphinxcontrib.httpdomain` 和 :mod:`sphinxcontrib.autohttp` ，部分 :mod:`sphinxcontrib` ，由 `Hong Minhee`_ 编写，并在BSD许可下发布。"
+msgstr ""
+":mod:`sphinxcontrib.httpdomain` 和 :mod:`sphinxcontrib.autohttp` ，部分 "
+":mod:`sphinxcontrib` ，由 `Hong Minhee`_ 编写，并在BSD许可下发布。"
 
 #: ../../usage/extensions/httpdomain.rst:1050
 msgid ""
 "The source code is maintained under `the sphinx-contrib project`__ in the"
 " `httpdomain`_ repository"
 msgstr "源代码在 `httpdomain`_ 存储库中的 `sphinx-contrib project`__ 下维护"
+
+#~ msgid "Query Parameters"
+#~ msgstr ""
+
+#~ msgid "Request Headers"
+#~ msgstr ""
+
+#~ msgid "Response Headers"
+#~ msgstr ""
+
+#~ msgid "Status Codes"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Form Parameters"
+#~ msgstr ""
 

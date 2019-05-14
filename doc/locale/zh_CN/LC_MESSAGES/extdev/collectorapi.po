@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../extdev/collectorapi.rst:4
 msgid "Environment Collector API"
-msgstr ""
+msgstr "环境收集器API"
 
 #: of sphinx.environment.collectors.EnvironmentCollector:1
 msgid "An EnvironmentCollector is a specific data collector from each document."
-msgstr ""
+msgstr "EnvironmentCollector是每个文档的特定数据收集器。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector:3
 msgid ""
@@ -31,43 +31,43 @@ msgid ""
 "<sphinx.environment.BuildEnvironment>` as a database.  Examples of "
 "specific data would be images, download files, section titles, metadatas,"
 " index entries and toctrees, etc."
-msgstr ""
+msgstr "它收集数据和存储 :py:class:`BuildEnvironment <sphinx.environment.BuildEnvironment>` 作为数据库。  具体数据的示例包括图像，下载文件，部分标题，元数据，索引条目和toctrees等。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.clear_doc:1
 msgid "Remove specified data of a document."
-msgstr ""
+msgstr "删除文档的指定数据。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.clear_doc:3
 msgid "This method is called on the removal of the document."
-msgstr ""
+msgstr "在删除文档时调用此方法。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs:1
 #: sphinx.environment.collectors.EnvironmentCollector.get_updated_docs:1
 msgid "Return a list of docnames to re-read."
-msgstr ""
+msgstr "返回要重新阅读的文档名列表。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs:3
 msgid "This methods is called before reading the documents."
-msgstr ""
+msgstr "在阅读文档之前调用此方法。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.get_updated_docs:3
 msgid ""
 "This methods is called after reading the whole of documents "
 "(experimental)."
-msgstr ""
+msgstr "在阅读完整个文档（实验）后调用此方法。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.merge_other:1
 msgid ""
 "Merge in specified data regarding docnames from a different "
 "`BuildEnvironment` object which coming from a subprocess in parallel "
 "builds."
-msgstr ""
+msgstr "合并来自不同`BuildEnvironment`对象的文档名的指定数据，该对象来自并行构建中的子进程。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.process_doc:1
 msgid "Process a document and gather specific data from it."
-msgstr ""
+msgstr "处理文档并从中收集特定数据。"
 
 #: of sphinx.environment.collectors.EnvironmentCollector.process_doc:3
 msgid "This method is called after the document is read."
-msgstr ""
+msgstr "在读取文档后调用此方法。"
 

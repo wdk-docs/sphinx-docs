@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/restructuredtext/basics.rst:7
 msgid "reStructuredText Primer"
-msgstr "reStructuredText 初级读本"
+msgstr "RST初级读本"
 
 #: ../../usage/restructuredtext/basics.rst:9
 msgid ""
@@ -447,7 +447,7 @@ msgid ""
 ":dudir:`tip`, :dudir:`warning` and the generic :dudir:`admonition "
 "<admonitions>`.  (Most themes style only \"note\" and \"warning\" "
 "specially.)"
-msgstr "忠告: :dudir:`attention`，:dudir:`caution`，:dudir:`danger`，:dudir:`error`，:dudir:`hint`，:dudir:`important`，:dudir:`note` ，:dudir:`tip`，:dudir:`warning` 和泛型 :dudir:`admonition <admonitions>` 。 (大多数主题仅限于 \"note\" 和 \"warning\" 。)"
+msgstr "忠告: :dudir:`注意(attention) <attention>`，:dudir:`警告(caution) <caution>`，:dudir:`危险(danger) <danger>`，:dudir:`错误(error) <error>`，:dudir:`暗示(hint) <hint>`，:dudir:`重要(important) <important>`，:dudir:`注释(note) <note>` ，:dudir:`技巧(tip) <tip>`，:dudir:`警告(warning) <warning>` 和泛型 :dudir:`警告(admonitions) <admonitions>` 。 (大多数主题仅限于 \"note\" 和 \"warning\" 。)"
 
 #: ../../usage/restructuredtext/basics.rst:340
 msgid "Images:"

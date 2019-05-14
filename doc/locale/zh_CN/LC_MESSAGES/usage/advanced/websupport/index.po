@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../usage/advanced/websupport/index.rst:4
 msgid "Sphinx Web Support"
-msgstr "Sphinx Web支持"
+msgstr "Web支持"
 
 #: ../../usage/advanced/websupport/index.rst:8
 msgid ""

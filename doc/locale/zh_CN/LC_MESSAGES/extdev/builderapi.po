@@ -19,139 +19,139 @@ msgstr ""
 
 #: ../../extdev/builderapi.rst:4
 msgid "Builder API"
-msgstr ""
+msgstr "生成器API"
 
 #: ../../extdev/builderapi.rst:6
 msgid "待处理"
-msgstr ""
+msgstr "待处理"
 
 #: ../../extdev/builderapi.rst:6
 msgid "Expand this."
-msgstr ""
+msgstr "展开这个。"
 
 #: ../../extdev/builderapi.rst:12
 msgid "This is the base class for all builders."
-msgstr ""
+msgstr "这是所有构建器的基类。"
 
 #: ../../extdev/builderapi.rst:14
 msgid "These attributes should be set on builder classes:"
-msgstr ""
+msgstr "应在构建器类上设置这些属性:"
 
 #: of sphinx.builders.Builder.name:1
 msgid "The builder's name, for the -b command line option."
-msgstr ""
+msgstr "构建器的名称，用于 -b 命令行选项。"
 
 #: of sphinx.builders.Builder.format:1
 msgid "The builder's output format, or '' if no document output is produced."
-msgstr ""
+msgstr "构建器的输出格式，或者“如果没有生成文档输出”。"
 
 #: of sphinx.builders.Builder.epilog:1
 msgid ""
 "The message emitted upon successful build completion. This can be a "
 "printf-style template string with the following keys: ``outdir``, "
 "``project``"
-msgstr ""
+msgstr "成功构建完成后发出的消息。 这可以是一个printf样式的模板字符串，其中包含以下键: ``outdir`` ， ``project`` "
 
 #: of sphinx.builders.Builder.supported_image_types:1
 msgid ""
 "The list of MIME types of image formats supported by the builder. Image "
 "files are searched in the order in which they appear here."
-msgstr ""
+msgstr "构建器支持的图像格式的MIME类型列表。将按照图像文件在此处显示的顺序搜索图像文件。"
 
 #: of sphinx.builders.Builder.supported_remote_images:1
 msgid "The builder supports remote images or not."
-msgstr ""
+msgstr "构建器是否支持远程图像。"
 
 #: of sphinx.builders.Builder.supported_data_uri_images:1
 msgid "The builder supports data URIs or not."
-msgstr ""
+msgstr "构建器是否支持数据URI。"
 
 #: of sphinx.builders.Builder.default_translator_class:1
 msgid ""
 "default translator class for the builder.  This can be overridden by "
 ":py:meth:`app.set_translator()`."
-msgstr ""
+msgstr "构建器的默认转换器类。  这可以被覆盖 :py:meth:`app.set_translator()` 。"
 
 #: ../../extdev/builderapi.rst:24
 msgid "These methods are predefined and will be called from the application:"
-msgstr ""
+msgstr "这些方法是预定义的，将从应用程序中调用:"
 
 #: of sphinx.builders.Builder.get_relative_uri:1
 msgid "Return a relative URI between two source filenames."
-msgstr ""
+msgstr "返回两个源文件名之间的相对URI。"
 
 #: of sphinx.builders.Builder.get_relative_uri:3
 msgid "May raise environment.NoUri if there's no way to return a sensible URI."
-msgstr ""
+msgstr "如果没有办法返回合理的URI，可能会引发环境.NoUri。"
 
 #: of sphinx.builders.Builder.build_all:1
 msgid "Build all source files."
-msgstr ""
+msgstr "构建所有源文件。"
 
 #: of sphinx.builders.Builder.build_specific:1
 msgid "Only rebuild as much as needed for changes in the *filenames*."
-msgstr ""
+msgstr "仅重建 *filenames* 中的更改所需的内容。"
 
 #: of sphinx.builders.Builder.build_update:1
 msgid "Only rebuild what was changed or added since last build."
-msgstr ""
+msgstr "仅重建自上次构建以来更改或添加的内容。"
 
 #: of sphinx.builders.Builder.build:1
 msgid "Main build method."
-msgstr ""
+msgstr "主要构建方法。"
 
 #: of sphinx.builders.Builder.build:3
 msgid "First updates the environment, and then calls :meth:`write`."
-msgstr ""
+msgstr "首先更新环境，然后调用 :meth:`write` 。"
 
 #: ../../extdev/builderapi.rst:32
 msgid "These methods can be overridden in concrete builder classes:"
-msgstr ""
+msgstr "可以在具体构建器类中重写这些方法:"
 
 #: of sphinx.builders.Builder.init:1
 msgid ""
 "Load necessary templates and perform initialization.  The default "
 "implementation does nothing."
-msgstr ""
+msgstr "加载必要的模板并执行初始化。  默认实现什么都不做。"
 
 #: of sphinx.builders.Builder.get_outdated_docs:1
 msgid ""
 "Return an iterable of output files that are outdated, or a string "
 "describing what an update build will build."
-msgstr ""
+msgstr "返回过时的可迭代输出文件，或者描述更新构建将构建的字符串。"
 
 #: of sphinx.builders.Builder.get_outdated_docs:4
 msgid ""
 "If the builder does not output individual files corresponding to source "
 "files, return a string here.  If it does, return an iterable of those "
 "files that need to be written."
-msgstr ""
+msgstr "如果构建器未输出与源文件对应的单个文件，请在此处返回一个字符串。  如果是，则返回需要写入的那些文件的可迭代。"
 
 #: of sphinx.builders.Builder.get_target_uri:1
 msgid "Return the target URI for a document name."
-msgstr ""
+msgstr "返回文档名称的目标URI。"
 
 #: of sphinx.builders.Builder.get_target_uri:3
 msgid ""
 "*typ* can be used to qualify the link characteristic for individual "
 "builders."
-msgstr ""
+msgstr "*typ* 可用于限定各个构建器的链接特性。"
 
 #: of sphinx.builders.Builder.prepare_writing:1
 msgid "A place where you can add logic before :meth:`write_doc` is run"
-msgstr ""
+msgstr "你可以在之前添加逻辑的地方 :meth:`write_doc` 运行"
 
 #: of sphinx.builders.Builder.write_doc:1
 msgid "Where you actually write something to the filesystem."
-msgstr ""
+msgstr "你真正在文件系统中写东西的地方。"
 
 #: of sphinx.builders.Builder.finish:1
 msgid "Finish the building process."
-msgstr ""
+msgstr "完成建设过程。"
 
 #: of sphinx.builders.Builder.finish:3
 msgid "The default implementation does nothing."
-msgstr ""
+msgstr "默认实现什么都不做。"
 
 #~ msgid "Todo"
 #~ msgstr ""

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Utilities &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>实用工具 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,12 +16,12 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Deprecated APIs" href="deprecated.html" />
+    <link rel="next" title="弃用 APIs" href="deprecated.html" />
     <link rel="prev" title="i18n API" href="i18n.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/utils.html" />
 
@@ -102,10 +102,13 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="deprecated.html" title="Deprecated APIs"
+          <a href="deprecated.html" title="弃用 APIs"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="i18n.html" title="i18n API"
@@ -113,15 +116,15 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发扩展</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Utilities</a><ul>
-<li><a class="reference internal" href="#base-classes-for-components">Base classes for components</a></li>
+<li><a class="reference internal" href="#">实用工具</a><ul>
+<li><a class="reference internal" href="#base-classes-for-components">组件的基类</a></li>
 </ul>
 </li>
 </ul>
@@ -131,7 +134,7 @@
                         title="上一章">i18n API</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="deprecated.html"
-                        title="下一章">Deprecated APIs</a></p>
+                        title="下一章">弃用 APIs</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -158,39 +161,36 @@
           <div class="body" role="main">
             
   <div class="section" id="utilities">
-<h1>Utilities<a class="headerlink" href="#utilities" title="永久链接至标题">¶</a></h1>
-<p>Sphinx provides utility classes and functions to develop extensions.</p>
+<h1>实用工具<a class="headerlink" href="#utilities" title="永久链接至标题">¶</a></h1>
+<p>Sphinx提供实用程序类和函数来开发扩展。</p>
 <div class="section" id="base-classes-for-components">
-<h2>Base classes for components<a class="headerlink" href="#base-classes-for-components" title="永久链接至标题">¶</a></h2>
-<p>These base classes are useful to allow your extensions to obtain Sphinx
-components (e.g. <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a>, <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> and so on) easily.</p>
+<h2>组件的基类<a class="headerlink" href="#base-classes-for-components" title="永久链接至标题">¶</a></h2>
+<p>这些基类有助于您的扩展轻松获取Sphinx组件(例如 <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a>, <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> 等)。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>The subclasses of them might not work with bare docutils because they
-are strongly coupled with Sphinx.</p>
+<p>它们的子类可能不适用于裸的docutils，因为它们与Sphinx强烈耦合。</p>
 </div>
 <dl class="class">
 <dt id="sphinx.transforms.SphinxTransform">
 <em class="property">class </em><code class="descclassname">sphinx.transforms.</code><code class="descname">SphinxTransform</code><span class="sig-paren">(</span><em>document</em>, <em>startnode=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/transforms.html#SphinxTransform"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.transforms.SphinxTransform" title="永久链接至目标">¶</a></dt>
-<dd><p>A base class of Transforms.</p>
-<p>Compared with <code class="docutils literal notranslate"><span class="pre">docutils.transforms.Transform</span></code>, this class improves accessibility to
-Sphinx APIs.</p>
+<dd><p>变换的基类。</p>
+<p>与 <code class="docutils literal notranslate"><span class="pre">docutils.transforms.Transform</span></code> 相比，该类提高了Sphinx API的可访问性。</p>
 <dl class="attribute">
 <dt id="sphinx.transforms.SphinxTransform.app">
 <code class="descname">app</code><a class="headerlink" href="#sphinx.transforms.SphinxTransform.app" title="永久链接至目标">¶</a></dt>
-<dd><p>Reference to the <a class="reference internal" href="appapi.html#sphinx.application.Sphinx" title="sphinx.application.Sphinx"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sphinx</span></code></a> object.</p>
+<dd><p>引用 <a class="reference internal" href="appapi.html#sphinx.application.Sphinx" title="sphinx.application.Sphinx"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sphinx</span></code></a> 对象。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.transforms.SphinxTransform.config">
 <code class="descname">config</code><a class="headerlink" href="#sphinx.transforms.SphinxTransform.config" title="永久链接至目标">¶</a></dt>
-<dd><p>Reference to the <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> object.</p>
+<dd><p>引用 <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> 对象。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.transforms.SphinxTransform.env">
 <code class="descname">env</code><a class="headerlink" href="#sphinx.transforms.SphinxTransform.env" title="永久链接至目标">¶</a></dt>
-<dd><p>Reference to the <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> object.</p>
+<dd><p>引用 <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> 对象。</p>
 </dd></dl>
 
 </dd></dl>
@@ -226,12 +226,11 @@ formats and so on.  This class helps to implement these post transforms.</p>
 <dl class="class">
 <dt id="sphinx.util.docutils.SphinxDirective">
 <em class="property">class </em><code class="descclassname">sphinx.util.docutils.</code><code class="descname">SphinxDirective</code><span class="sig-paren">(</span><em>name</em>, <em>arguments</em>, <em>options</em>, <em>content</em>, <em>lineno</em>, <em>content_offset</em>, <em>block_text</em>, <em>state</em>, <em>state_machine</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/util/docutils.html#SphinxDirective"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.docutils.SphinxDirective" title="永久链接至目标">¶</a></dt>
-<dd><p>A base class for Sphinx directives.</p>
-<p>This class provides helper methods for Sphinx directives.</p>
+<dd><p>Sphinx指令的基类。</p>
+<p>该类为Sphinx指令提供了辅助方法。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>The subclasses of this class might not work with docutils.
-This class is strongly coupled with Sphinx.</p>
+<p>此类的子类可能不适用于docutils。这个类与Sphinx强烈结合。</p>
 </div>
 <dl class="method">
 <dt id="sphinx.util.docutils.SphinxDirective.set_source_info">
@@ -242,13 +241,13 @@ This class is strongly coupled with Sphinx.</p>
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxDirective.config">
 <code class="descname">config</code><a class="headerlink" href="#sphinx.util.docutils.SphinxDirective.config" title="永久链接至目标">¶</a></dt>
-<dd><p>Reference to the <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> object.</p>
+<dd><p>引用 <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> 对象。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxDirective.env">
 <code class="descname">env</code><a class="headerlink" href="#sphinx.util.docutils.SphinxDirective.env" title="永久链接至目标">¶</a></dt>
-<dd><p>Reference to the <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> object.</p>
+<dd><p>引用 <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> 对象。</p>
 </dd></dl>
 
 </dd></dl>
@@ -256,29 +255,28 @@ This class is strongly coupled with Sphinx.</p>
 <dl class="class">
 <dt id="sphinx.util.docutils.SphinxRole">
 <em class="property">class </em><code class="descclassname">sphinx.util.docutils.</code><code class="descname">SphinxRole</code><a class="reference internal" href="../_modules/sphinx/util/docutils.html#SphinxRole"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.docutils.SphinxRole" title="永久链接至目标">¶</a></dt>
-<dd><p>A base class for Sphinx roles.</p>
-<p>This class provides helper methods for Sphinx roles.</p>
+<dd><p>Sphinx角色的基类。</p>
+<p>此类为Sphinx角色提供帮助方法。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>The subclasses of this class might not work with docutils.
-This class is strongly coupled with Sphinx.</p>
+<p>此类的子类可能不适用于docutils。这个类与Sphinx强烈结合。</p>
 </div>
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.config">
 <code class="descname">config</code><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.config" title="永久链接至目标">¶</a></dt>
-<dd><p>Reference to the <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> object.</p>
+<dd><p>引用 <a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a> 对象。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.content">
 <code class="descname">content</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.content" title="永久链接至目标">¶</a></dt>
-<dd><p>A list of strings, the directive content for customization</p>
+<dd><p>字符串列表，用于自定义的指令内容</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.env">
 <code class="descname">env</code><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.env" title="永久链接至目标">¶</a></dt>
-<dd><p>Reference to the <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> object.</p>
+<dd><p>引用 <a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></a> 对象。</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -290,31 +288,31 @@ This class is strongly coupled with Sphinx.</p>
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.lineno">
 <code class="descname">lineno</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.lineno" title="永久链接至目标">¶</a></dt>
-<dd><p>The line number where the interpreted text begins.</p>
+<dd><p>解释文本开始的行号。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.name" title="永久链接至目标">¶</a></dt>
-<dd><p>The role name actually used in the document.</p>
+<dd><p>文档中实际使用的角色名称。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.options">
 <code class="descname">options</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.options" title="永久链接至目标">¶</a></dt>
-<dd><p>A dictionary of directive options for customization</p>
+<dd><p>用于自定义的指令选项字典</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.rawtext">
 <code class="descname">rawtext</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.rawtext" title="永久链接至目标">¶</a></dt>
-<dd><p>A string containing the entire interpreted text input.</p>
+<dd><p>包含整个解释文本输入的字符串。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.SphinxRole.text">
 <code class="descname">text</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.SphinxRole.text" title="永久链接至目标">¶</a></dt>
-<dd><p>The interpreted text content.</p>
+<dd><p>解释的文本内容。</p>
 </dd></dl>
 
 </dd></dl>
@@ -322,26 +320,24 @@ This class is strongly coupled with Sphinx.</p>
 <dl class="class">
 <dt id="sphinx.util.docutils.ReferenceRole">
 <em class="property">class </em><code class="descclassname">sphinx.util.docutils.</code><code class="descname">ReferenceRole</code><a class="reference internal" href="../_modules/sphinx/util/docutils.html#ReferenceRole"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.util.docutils.ReferenceRole" title="永久链接至目标">¶</a></dt>
-<dd><p>A base class for reference roles.</p>
-<p>The reference roles can accpet <code class="docutils literal notranslate"><span class="pre">link</span> <span class="pre">title</span> <span class="pre">&lt;target&gt;</span></code> style as a text for
-the role.  The parsed result; link title and target will be stored to
-<code class="docutils literal notranslate"><span class="pre">self.title</span></code> and <code class="docutils literal notranslate"><span class="pre">self.target</span></code>.</p>
+<dd><p>参考角色的基类。</p>
+<p>引用角色可以接受 <code class="docutils literal notranslate"><span class="pre">link</span> <span class="pre">title</span> <span class="pre">&lt;target&gt;</span></code> style 作为角色的文本。  解析后的结果;链接标题和目标将存储到 <code class="docutils literal notranslate"><span class="pre">self.title</span></code> 和 <code class="docutils literal notranslate"><span class="pre">self.target</span></code> 。</p>
 <dl class="attribute">
 <dt id="sphinx.util.docutils.ReferenceRole.has_explicit_title">
 <code class="descname">has_explicit_title</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.ReferenceRole.has_explicit_title" title="永久链接至目标">¶</a></dt>
-<dd><p>A boolean indicates the role has explicit title or not.</p>
+<dd><p>布尔值表示角色具有明确的标题。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.ReferenceRole.target">
 <code class="descname">target</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.ReferenceRole.target" title="永久链接至目标">¶</a></dt>
-<dd><p>The link target for the interpreted text.</p>
+<dd><p>解释文本的链接目标。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.util.docutils.ReferenceRole.title">
 <code class="descname">title</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.util.docutils.ReferenceRole.title" title="永久链接至目标">¶</a></dt>
-<dd><p>The link title for the interpreted text.</p>
+<dd><p>解释文本的链接标题。</p>
 </dd></dl>
 
 </dd></dl>
@@ -349,43 +345,32 @@ the role.  The parsed result; link title and target will be stored to
 <dl class="class">
 <dt id="sphinx.transforms.post_transforms.images.ImageConverter">
 <em class="property">class </em><code class="descclassname">sphinx.transforms.post_transforms.images.</code><code class="descname">ImageConverter</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/transforms/post_transforms/images.html#ImageConverter"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.transforms.post_transforms.images.ImageConverter" title="永久链接至目标">¶</a></dt>
-<dd><p>A base class for image converters.</p>
-<p>An image converter is kind of Docutils transform module.  It is used to
-convert image files which does not supported by builder to appropriate
-format for that builder.</p>
-<p>For example, <a class="reference internal" href="../usage/builders/index.html#sphinx.builders.latex.LaTeXBuilder" title="sphinx.builders.latex.LaTeXBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">LaTeX</span> <span class="pre">builder</span></code></a> supports PDF,
-PNG and JPEG as image formats.  However it does not support SVG images.
-For such case, to use image converters allows to embed these
-unsupported images into the document.  One of image converters;
-<a class="reference internal" href="../usage/extensions/imgconverter.html#sphinx-ext-imgconverter"><span class="std std-ref">sphinx.ext.imgconverter</span></a> can convert
-a SVG image to PNG format using Imagemagick internally.</p>
-<p>There are three steps to make your custom image converter:</p>
+<dd><p>图像转换器的基类。</p>
+<p>图像转换器是一种Docutils转换模块。  它用于将构建器不支持的图像文件转换为该构建器的适当格式。</p>
+<p>例如，<a class="reference internal" href="../usage/builders/index.html#sphinx.builders.latex.LaTeXBuilder" title="sphinx.builders.latex.LaTeXBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">LaTeX</span> <span class="pre">builder</span></code></a> 支持PDF，PNG和JPEG作为图像格式。  但是它不支持SVG图像。对于这种情况，使用图像转换器允许将这些不支持的图像嵌入到文档中。  一个图像转换器;  <a class="reference internal" href="../usage/extensions/imgconverter.html#sphinx-ext-imgconverter"><span class="std std-ref">sphinx.ext.imgconverter</span></a> 可以在内部使用Imagemagick将SVG图像转换为PNG格式。</p>
+<p>制作自定义图像转换器有三个步骤:</p>
 <ol class="arabic simple">
-<li><p>Make a subclass of <code class="docutils literal notranslate"><span class="pre">ImageConverter</span></code> class</p></li>
-<li><p>Override <code class="docutils literal notranslate"><span class="pre">conversion_rules</span></code>, <code class="docutils literal notranslate"><span class="pre">is_available()</span></code> and <code class="docutils literal notranslate"><span class="pre">convert()</span></code></p></li>
-<li><p>Register your image converter to Sphinx using
-<a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_post_transform" title="sphinx.application.Sphinx.add_post_transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.add_post_transform()</span></code></a></p></li>
+<li><p>创建 <code class="docutils literal notranslate"><span class="pre">ImageConverter</span></code> 类的子类</p></li>
+<li><p>覆盖 <code class="docutils literal notranslate"><span class="pre">conversion_rules</span></code>, <code class="docutils literal notranslate"><span class="pre">is_available()</span></code> 和 <code class="docutils literal notranslate"><span class="pre">convert()</span></code></p></li>
+<li><p>使用以下命令将图像转换器注册到Sphinx <a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_post_transform" title="sphinx.application.Sphinx.add_post_transform"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.add_post_transform()</span></code></a></p></li>
 </ol>
 <dl class="method">
 <dt id="sphinx.transforms.post_transforms.images.ImageConverter.convert">
 <code class="descname">convert</code><span class="sig-paren">(</span><em>_from</em>, <em>_to</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/transforms/post_transforms/images.html#ImageConverter.convert"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.transforms.post_transforms.images.ImageConverter.convert" title="永久链接至目标">¶</a></dt>
-<dd><p>Convert a image file to expected format.</p>
-<p><em>_from</em> is a path for source image file, and <em>_to</em> is a path for
-destination file.</p>
+<dd><p>将图像文件转换为预期格式。</p>
+<p><em>_from</em> 是源图像文件的路径，<em>_to</em> 是目标文件的路径。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.transforms.post_transforms.images.ImageConverter.is_available">
 <code class="descname">is_available</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/transforms/post_transforms/images.html#ImageConverter.is_available"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.transforms.post_transforms.images.ImageConverter.is_available" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the image converter is available or not.</p>
+<dd><p>返回图像转换器是否可用。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.transforms.post_transforms.images.ImageConverter.conversion_rules">
 <code class="descname">conversion_rules</code><em class="property"> = []</em><a class="headerlink" href="#sphinx.transforms.post_transforms.images.ImageConverter.conversion_rules" title="永久链接至目标">¶</a></dt>
-<dd><p>A conversion rules the image converter supports.
-It is represented as a list of pair of source image format (mimetype) and
-destination one:</p>
+<dd><p>图像转换器支持的转换规则。它表示为源图像格式(mimetype)和目标图像对的列表:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conversion_rules</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">(</span><span class="s1">&#39;image/svg+xml&#39;</span><span class="p">,</span> <span class="s1">&#39;image/png&#39;</span><span class="p">),</span>
     <span class="p">(</span><span class="s1">&#39;image/gif&#39;</span><span class="p">,</span> <span class="s1">&#39;image/png&#39;</span><span class="p">),</span>
@@ -413,10 +398,13 @@ destination one:</p>
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="deprecated.html" title="Deprecated APIs"
+          <a href="deprecated.html" title="弃用 APIs"
              >下一页</a> |</li>
         <li class="right" >
           <a href="i18n.html" title="i18n API"
@@ -424,12 +412,12 @@ destination one:</p>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发扩展</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

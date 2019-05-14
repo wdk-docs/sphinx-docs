@@ -23,20 +23,20 @@ msgstr "LaTeX 定制"
 
 #: ../../latex.rst:29
 msgid "The *latex* target does not benefit from prepared themes."
-msgstr "The *latex* target does not benefit from prepared themes."
+msgstr "*latex* 目标不会从准备好的主题中受益."
 
 #: ../../latex.rst:31
 msgid ""
 "The :ref:`latex-options`, and particularly among them the "
 ":ref:`latex_elements <latex_elements_confval>` variable provides much of "
 "the interface for customization."
-msgstr ""
+msgstr ":ref:`latex-options` ,特别是 :ref:`latex_elements <latex_elements_confval>` 变量提供了很多自定义界面."
 
 #: ../../latex.rst:35
 msgid ""
 "For some details of the LaTeX/PDF builder command line invocation, refer "
 "to :py:class:`~sphinx.builders.latex.LaTeXBuilder`."
-msgstr ""
+msgstr "有关LaTeX/PDF构建器命令行调用的一些详细信息,请参阅 :py:class:`~sphinx.builders.latex.LaTeXBuilder` ."
 
 #: ../../latex.rst:41
 msgid "Example"
@@ -47,7 +47,7 @@ msgid ""
 "Keep in mind that backslashes must be doubled in Python string literals "
 "to avoid interpretation as escape sequences, or use raw strings (as is "
 "done here)."
-msgstr ""
+msgstr "请记住,反斜杠必须在Python字符串文字中加倍,以避免解释为转义序列,或使用原始字符串(如此处所做)."
 
 #: ../../latex.rst:73
 msgid "The latex_elements configuration setting"
@@ -58,11 +58,11 @@ msgid ""
 "A dictionary that contains LaTeX snippets overriding those Sphinx usually"
 " puts into the generated ``.tex`` files.  Its ``'sphinxsetup'`` key is "
 "described :ref:`separately <latexsphinxsetup>`."
-msgstr ""
+msgstr "包含覆盖那些Sphinx的LaTeX片段的字典通常会放入生成的 ``.tex`` 文件中.它的 ``'sphinxsetup'`` 键被描述为 :ref:`separate <latexsphinxsetup>` ."
 
 #: ../../latex.rst:79
 msgid "Keys that you may want to override include:"
-msgstr "Keys that you may want to override include:"
+msgstr "您可能想要覆盖的键包括:"
 
 #: ../../latex.rst:83
 msgid "``'papersize'``"
@@ -72,7 +72,7 @@ msgstr "``'papersize'``"
 msgid ""
 "Paper size option of the document class (``'a4paper'`` or "
 "``'letterpaper'``), default ``'letterpaper'``."
-msgstr ""
+msgstr "文件类的纸张尺寸选项(``'a4paper'`` 或 ``'letterpaper'``),默认为 ``'letterpaper'`` ."
 
 #: ../../latex.rst:87
 msgid "``'pointsize'``"
@@ -82,7 +82,7 @@ msgstr "``'pointsize'``"
 msgid ""
 "Point size option of the document class (``'10pt'``, ``'11pt'`` or "
 "``'12pt'``), default ``'10pt'``."
-msgstr ""
+msgstr "文档类的点大小选项(``'10pt'``, ``'11pt'`` 或 ``'12pt'``), 默认为 ``'10pt'``."
 
 #: ../../latex.rst:98
 msgid "``'pxunit'``"
@@ -97,7 +97,7 @@ msgid ""
 "more precise value, due to the smaller unit used in the specification); "
 "for ``72px=1in``, simply use ``'1bp'``; for ``90px=1in``, use ``'0.8bp'``"
 " or ``'0.803pt'``."
-msgstr ""
+msgstr "在图像属性 ``width`` 和 ``height`` 中使用 ``px`` 的值.默认值是 ``'0.75bp'`` , 它实现了 ``96px = 1in`` (在TeX ``1in = 72bp = 72.27pt`` 中).例如,要获得 ``100px = 1in`` , 请使用 ``'0.01in'`` 或 ``'0.7227pt'`` (后者导致TeX计算更精确的值,因为规范中使用的单位更小);对于 ``72px = 1in`` ,只需使用 ``'1bp'`` ;对于 ``90px = 1in`` ,使用 ``'0.8bp'`` 或 ``'0.803pt'`` ."
 
 #: ../../latex.rst:104
 msgid "``'passoptionstopackages'``"
@@ -108,7 +108,7 @@ msgid ""
 "A string which will be positioned early in the preamble, designed to "
 "contain ``\\\\PassOptionsToPackage{options}{foo}`` commands. Default "
 "empty."
-msgstr ""
+msgstr "一个字符串,它将位于序言的早期,旨在包含 ``\\\\PassOptionsToPackage{options}{foo}`` 命令.默认为空."
 
 #: ../../latex.rst:133
 msgid "``'babel'``"
@@ -120,7 +120,7 @@ msgid ""
 "suitable document language string is passed as class option, and "
 "``english`` is used if no language.) For Japanese documents, the default "
 "is the empty string."
-msgstr ""
+msgstr "\"babel\" 包包含,默认 ``'\\\\ usepackage {babel}'`` (合适的文档语言字符串作为类选项传递,如果没有语言则使用 ``english`` .)对于日语文件,默认是空字符串."
 
 #: ../../latex.rst:112
 msgid ""
@@ -128,30 +128,30 @@ msgid ""
 "`polyglossia`_, but one should be aware that current `babel`_ has "
 "improved its support for Unicode engines in recent years and for some "
 "languages it may make sense to prefer ``babel`` over ``polyglossia``."
-msgstr ""
+msgstr "使用XeLaTeX和LuaLaTeX,Sphinx将LaTeX文档配置为使用`polyglossia`_,但是应该知道当前`babel`_近年来已经改进了对Unicode引擎的支持,对于某些语言,更喜欢 ``babel`` 在 ``polyglossia``."
 
 #: ../../latex.rst:119
 msgid ""
 "After modifiying a core LaTeX key like this one, clean up the LaTeX build"
 " repertory before next PDF build, else left-over auxiliary files are "
 "likely to break the build."
-msgstr ""
+msgstr "在修改了像这样的核心LaTeX密钥之后,在下一个PDF构建之前清理LaTeX构建库,否则剩下的辅助文件可能会破坏构建."
 
 #: ../../latex.rst:126
 msgid ""
 "For :confval:`latex_engine` set to ``'xelatex'``, the default is "
 "``'\\\\usepackage{polyglossia}\\n\\\\setmainlanguage{<language>}'``."
-msgstr ""
+msgstr "对于 :confval:`latex_engine` 设置为 ``'xelatex'`` ,默认为 ``'\\\\usepackage{polyglossia}\\n\\\\setmainlanguage{<language>}'``."
 
 #: ../../latex.rst:129
 msgid "``'lualatex'`` uses same default setting as ``'xelatex'``"
-msgstr "``'lualatex'`` uses same default setting as ``'xelatex'``"
+msgstr "``'lualatex'``使用与``'xelatex'``相同的默认设置"
 
 #: ../../latex.rst:131
 msgid ""
 "For French, ``xelatex`` and ``lualatex`` default to using ``babel``, not "
 "``polyglossia``."
-msgstr ""
+msgstr "对于法语,``xelatex``和``lualatex``默认使用``babel``,而不是``polyglossia``."
 
 #: ../../latex.rst:187
 msgid "``'fontpkg'``"
@@ -161,11 +161,11 @@ msgstr "``'fontpkg'``"
 msgid ""
 "Font package inclusion, the default is ``'\\\\usepackage{times}'`` which "
 "uses Times for text, Helvetica for sans serif and Courier for monospace."
-msgstr ""
+msgstr "字体包包含,默认为``'\\\\ usepackage {times}'``使用Times代表文本,Helvetica代表sans serif,Courier代表monospace."
 
 #: ../../latex.rst:139
 msgid "Defaults to ``''`` when the :confval:`language` uses the Cyrillic script."
-msgstr "当 :confval:`language` 使用西里尔文脚本时，默认为 ``''`` 。"
+msgstr "当 :confval:`language` 使用西里尔文脚本时,默认为 ``''`` ."
 
 #: ../../latex.rst:142
 msgid "Support for individual Greek and Cyrillic letters:"
@@ -177,7 +177,7 @@ msgid ""
 "(Σωματιδιακή φυσική) in a document whose language is English or a  Latin "
 "European one, the default set-up is enhanced (only for ``'pdflatex'`` "
 "engine) to do:"
-msgstr ""
+msgstr "字体包中包含,默认为``'\\\\ usepackage {times}'``使用Times代表文本,Helvetica代表sans serif,Courier代表monospace."
 
 #: ../../latex.rst:160
 msgid ""
@@ -187,14 +187,14 @@ msgid ""
 "language, this ``'fontpkg'`` key must be used as \"times\" package has no"
 " direct support for it; then keep only ``LGR`` lines from the above, if "
 "support is needed for Greek in the text)."
-msgstr ""
+msgstr "但只有在``'fontenc'``键被配置为加载``LGR``(希腊语)和/或``X2``(西里尔语)pdflatex-font编码(如果: confval:`language`设置为西里尔语,这个'`'fontpkg'``键必须用作\"times \"包没有直接支持;然后只保留``LGR``行,如果文中希腊语需要支持)."
 
 #: ../../latex.rst:168
 msgid ""
 "The ``\\substitutefont`` command is from the eponymous LaTeX package, "
 "which is loaded by Sphinx if needed (on Ubuntu xenial it is part of "
 "``texlive-latex-extra`` which is a Sphinx requirement)."
-msgstr ""
+msgstr "``\\ codefont``命令来自同名的LaTeX包,如果需要,它由Sphinx加载(在Ubuntu xenial上它是``texlive-latex-extra``的一部分,这是Sphinx的要求)."
 
 #: ../../latex.rst:173
 msgid ""
@@ -203,7 +203,7 @@ msgid ""
 " requirements for the PDF build.  On Ubuntu xenial, ``texlive-lang-"
 "greek``, ``texlive-lang-cyrillic``, and (with the above choice of fonts) "
 "the ``cm-super`` (or ``cm-super-minimal``) package."
-msgstr ""
+msgstr "仅当文档实际上包含Unicode希腊字母(文本)或西里尔字母时,上述默认设置才会导致PDF构建的其他要求.在Ubuntu xenial上,``texlive-lang-greek``, ``texlive-lang-cyrillic``,和(用上面选择的字体)``cm-super``(或``cm-super-minimal ``)包."
 
 #: ../../latex.rst:180
 msgid ""
@@ -212,13 +212,13 @@ msgid ""
 "scripts and is available as separate Ubuntu xenial package ``fonts-"
 "freefont-otf``, it is not needed to install the big package ``texlive-"
 "fonts-extra``."
-msgstr ""
+msgstr "如果文档实际包含Unicode希腊字母(文本)或西里尔字母,则上述默认设置仅会对PDF构建产生其他要求.在Ubuntu xenial上,``texlive-lang-greek``, ``texlive-lang-cyrillic``,和(使用上面选择的字体)``cm-super``(或``cm-super-minimal`` )包."
 
 #: ../../latex.rst:186
 msgid ""
 "``'platex'`` (Japanese documents) engine supports individual Cyrillic and"
 " Greek letters with no need of extra user set-up."
-msgstr ""
+msgstr "``'platex'``(日文文档)引擎支持单独的西里尔字母和希腊字母,无需额外的用户设置."
 
 #: ../../latex.rst:198
 msgid "``'fncychap'``"
@@ -234,11 +234,11 @@ msgid ""
 "\"fncychap\" styles you can try are \"Lenny\", \"Glenn\", \"Conny\", "
 "\"Rejne\" and \"Bjornstrup\".  You can also set this to ``''`` to disable"
 " fncychap."
-msgstr ""
+msgstr "包含\"fncychap \"包(制作花哨的章节标题),默认为`''\\\\ usepackage [Bjarne] {fncychap}'``用于英文文档(此选项由Sphinx稍微定制),`` '\\\\ usepackage [Sonny] {fncychap}'``用于国际化文档(因为\"Bjarne \"风格使用英文拼写的数字).您可以尝试的其他"fncychap"风格是"Lenny","Glenn","Conny","Rejne"和"Bjornstrup".您也可以将其设置为``''``以禁用fncychap."
 
 #: ../../latex.rst:198
 msgid "The default is ``''`` for Japanese documents."
-msgstr "The default is ``''`` for Japanese documents."
+msgstr "对于日文文档,默认为``'```"
 
 #: ../../latex.rst:213
 msgid "``'preamble'``"
@@ -249,13 +249,13 @@ msgid ""
 "Additional preamble content, default empty.  One may move all needed "
 "macros into some file :file:`mystyle.tex.txt` of the project source "
 "repertory, and get LaTeX to import it at run time::"
-msgstr ""
+msgstr "附加前导内容,默认为空.可以将所有需要的宏移动到某个文件:file:项目源库的`mystyle.tex.txt`,并让LaTeX在运行时导入它::"
 
 #: ../../latex.rst:209
 msgid ""
 "It is then needed to set appropriately :confval:`latex_additional_files`,"
 " for example::"
-msgstr ""
+msgstr "然后需要适当地设置:confval:`latex_additional_files`,例如::"
 
 #: ../../latex.rst:222
 msgid "``'figure_align'``"
@@ -268,7 +268,7 @@ msgid ""
 " into the next page but may be preceded by any other text. If you don't "
 "like this behavior, use 'H' which will disable floating and position "
 "figures strictly in the order they appear in the source."
-msgstr ""
+msgstr "乳胶图浮动对齐,默认为'htbp'(此处,顶部,底部,页面).每当图像不适合当前页面时,它将"浮动"到下一页,但可能在任何其他文本之前.如果您不喜欢这种行为,请使用"H",它将严格按照它们在源中出现的顺序禁用浮动和位置数字."
 
 #: ../../latex.rst:227
 msgid "``'atendofbody'``"
@@ -276,7 +276,7 @@ msgstr "``'atendofbody'``"
 
 #: ../../latex.rst:225
 msgid "Additional document content (right before the indices), default empty."
-msgstr "Additional document content (right before the indices), default empty."
+msgstr "附加文档内容(在索引之前),默认为空."
 
 #: ../../latex.rst:233
 msgid "``'footer'``"
@@ -284,7 +284,7 @@ msgstr "``'footer'``"
 
 #: ../../latex.rst:230
 msgid "Additional footer content (before the indices), default empty."
-msgstr "额外的页脚内容（在索引之前），默认为空。"
+msgstr "额外的页脚内容(在索引之前),默认为空."
 
 #: ../../latex.rst:232
 msgid "Use ``'atendofbody'`` key instead."
@@ -292,7 +292,7 @@ msgstr "Use ``'atendofbody'`` key instead."
 
 #: ../../latex.rst:235
 msgid "Keys that don't need to be overridden unless in special cases are:"
-msgstr "除非在特殊情况下，否则不需要覆盖的键是:"
+msgstr "除非在特殊情况下,否则不需要覆盖的键是:"
 
 #: ../../latex.rst:244
 msgid "``'extraclassoptions'``"
@@ -303,11 +303,11 @@ msgid ""
 "The default is the empty string. Example: ``'extraclassoptions': "
 "'openany'`` will allow chapters (for documents of the ``'manual'`` type) "
 "to start on any page."
-msgstr ""
+msgstr "默认为空字符串.例如:``'extraclassoptions':'openany'``将允许章节(对于``''手册'``类型的文档)在任何页面上开始."
 
 #: ../../latex.rst:243
 msgid "Added this documentation."
-msgstr "添加了此文档。"
+msgstr "添加了此文档."
 
 #: ../../latex.rst:262
 msgid "``'maxlistdepth'``"
@@ -320,20 +320,20 @@ msgid ""
 "Setting this key for example to ``'10'`` (as a string) will allow up to "
 "10 nested levels (of all sorts). Leaving it to the empty string means to "
 "obey the LaTeX default."
-msgstr ""
+msgstr "对于嵌套列表和类似报价的环境,LaTeX默认允许最多6个级别,最多包含4个枚举列表和4个项目符号列表.例如将此键设置为"''10'``(作为字符串)将允许最多10个嵌套级别(各种类型).将它留给空字符串意味着遵守LaTeX默认值."
 
 #: ../../latex.rst:255
 msgid ""
 "Using this key may prove incompatible with some LaTeX packages or special"
 " document classes which do their own list customization."
-msgstr ""
+msgstr "使用此密钥可能证明与某些LaTeX软件包或进行自己的列表自定义的特殊文档类不兼容."
 
 #: ../../latex.rst:258
 msgid ""
 "The key setting is silently *ignored* if ``\\usepackage{enumitem}`` is "
 "executed inside the document preamble. Use then rather the dedicated "
 "commands of this LaTeX package."
-msgstr ""
+msgstr "如果在文档前导码中执行``\\ usepackage {enumitem}``,则默认*忽略键设置.然后使用此LaTeX包的专用命令."
 
 #: ../../latex.rst:271
 msgid "``'inputenc'``"
@@ -344,13 +344,13 @@ msgid ""
 "\"inputenc\" package inclusion, defaults to "
 "``'\\\\usepackage[utf8]{inputenc}'`` when using pdflatex. Otherwise "
 "empty."
-msgstr ""
+msgstr "\"inputenc \"包包含,默认为``'\\\\ usepackage [utf8] {inputenc}'``使用pdflatex时.否则是空的."
 
 #: ../../latex.rst:269
 msgid ""
 "Previously ``'\\\\usepackage[utf8]{inputenc}'`` was used for all "
 "compilers."
-msgstr ""
+msgstr "以前`''\\\\ usepackage [utf8] {inputenc}'``用于所有编译器."
 
 #: ../../latex.rst:276
 msgid "``'cmappkg'``"
@@ -358,7 +358,7 @@ msgstr "``'cmappkg'``"
 
 #: ../../latex.rst:274
 msgid "\"cmap\" package inclusion, default ``'\\\\usepackage{cmap}'``."
-msgstr "\"cmap\" package inclusion, default ``'\\\\usepackage{cmap}'``."
+msgstr "包含的"cmap"包,默认为``'\\\\ usepackage {cmap}'``."
 
 #: ../../latex.rst:318
 msgid "``'fontenc'``"
@@ -368,21 +368,21 @@ msgstr "``'fontenc'``"
 msgid ""
 "\"fontenc\" package inclusion, defaults to "
 "``'\\\\usepackage[T1]{fontenc}'``."
-msgstr ""
+msgstr "\"fontenc \"包包含,默认为``'\\\\ usepackage [T1] {fontenc}'``."
 
 #: ../../latex.rst:282
 msgid ""
 "If ``'pdflatex'`` is the :confval:`latex_engine`, one can add ``LGR`` for"
 " support of Greek letters in the document, and also ``X2`` (or ``T2A``) "
 "for Cyrillic letters, like this:"
-msgstr ""
+msgstr "如果``'pdflatex'``是:confval:`latex_engine`,可以添加``LGR``来支持文档中的希腊字母,还可以添加``X2``(或``T2A``)西里尔字母,像这样:"
 
 #: ../../latex.rst:292
 msgid ""
 "Prior to 2.0, Unicode Greek letters were escaped to use LaTeX math mark-"
 "up.  This is not the case anymore, and the above must be used (only in "
 "case of ``'pdflatex'`` engine) if the source contains such Unicode Greek."
-msgstr ""
+msgstr "在2.0之前,Unicode希腊字母被转义为使用LaTeX数学标记.情况已经不是这样了,如果源包含这样的Unicode希腊语,则必须使用上述内容(仅限于``'pdflatex'``引擎)."
 
 #: ../../latex.rst:297
 msgid ""
@@ -392,13 +392,13 @@ msgid ""
 "smaller ``cm-super-minimal``, but it requires the LaTeX document to "
 "execute ``\\usepackage[10pt]{type1ec}`` before loading ``fontenc``.  "
 "Thus, use this key with this extra at its start if needed."
-msgstr ""
+msgstr "在Ubuntu xenial上,包含``texlive-lang-greek``和``cm-super``(对于后者,只有当'`'fontpkg'``设置保留为默认值时)才需要``LGR ``工作.代替``cm-super``,可以安装较小的``cm-super-minimal``,但它需要LaTeX文件在加载``fontenc之前执行``\\ usepackage [10pt] {type1ec}`` ``.因此,如果需要,可以在启动时使用此密钥."
 
 #: ../../latex.rst:305
 msgid ""
 "Defaults to ``'\\\\usepackage{fontspec}'`` when :confval:`latex_engine` "
 "is ``'xelatex'``."
-msgstr ""
+msgstr "Defaults to ``'\\\\usepackage{fontspec}'`` when :confval:`latex_engine` is ``'xelatex'``."
 
 #: ../../latex.rst:308
 msgid "``'lualatex'`` uses ``fontspec`` per default like ``'xelatex'``."
@@ -409,7 +409,7 @@ msgid ""
 "``'lualatex'`` executes "
 "``\\defaultfontfeatures[\\rmfamily,\\sffamily]{}`` to disable TeX "
 "ligatures."
-msgstr ""
+msgstr "``'lualatex'`` executes ``\\defaultfontfeatures[\\rmfamily,\\sffamily]{}`` to disable TeX ligatures."
 
 #: ../../latex.rst:314
 msgid ""
@@ -417,7 +417,7 @@ msgid ""
 "Greek or Cyrillic (``'pdflatex'`` only, as this support is provided "
 "natively by ``'platex'`` and only requires suitable font with "
 "``'xelatex'/'lualatex'``)."
-msgstr ""
+msgstr "检测到``LGR``, ``T2A``, ``X2``以触发支持偶尔的希腊语或西里尔语(仅仅是``'pdflatex'``,因为这种支持是由``'platex'本身提供的. `并且只需要合适的字体``'xelatex'/'lualatex'``)."
 
 #: ../../latex.rst:340
 msgid "``'textgreek'``"
@@ -428,14 +428,14 @@ msgid ""
 "The default (``'pdflatex'`` only) is ``'\\\\usepackage{textalpha}'``, but"
 " only if ``'fontenc'`` was modified by user to include ``LGR`` option.  "
 "If not, the key value will be forced to be the empty string."
-msgstr ""
+msgstr "默认(仅限``'pdflatex'``)是`''\\\\ usepackage {textalpha}'``,但只有当用户修改``'fontenc'``以包含``LGR``选项时.如果不是,则键值将被强制为空字符串."
 
 #: ../../latex.rst:326
 msgid ""
 "This is needed for ``pdfLaTeX`` to support Unicode input of Greek letters"
 " such as φύσις.  Expert users may want to load the ``textalpha`` package "
 "with its option ``normalize-symbols``."
-msgstr ""
+msgstr "这需要``pdfLaTeX``来支持希腊字母的Unicode输入,例如φύσις.专家用户可能希望使用选项``normalize-symbols``加载``textalpha``包."
 
 #: ../../latex.rst:332
 msgid ""
@@ -444,13 +444,13 @@ msgid ""
 "``r'\\usepackage{textalpha,alphabeta}'``.  Then ``:math:`α``` (U+03B1) "
 "will render as :math:`\\alpha`.  For wider Unicode support in math input,"
 " see the discussion of :confval:`latex_engine`."
-msgstr ""
+msgstr "Unicode希腊语(但没有其他Unicode符号):rst:dir:`math`可以通过``'pdflatex'`来支持将此键设置为``r'\\ usepackage {textalpha,alphabeta}'``.然后``:math:`α```(U + 03B1)将呈现为:math:`\\ alpha`.有关数学输入中更广泛的Unicode支持,请参阅讨论:confval:`latex_engine`."
 
 #: ../../latex.rst:338
 msgid ""
 "With ``'platex'`` (Japanese),  ``'xelatex'`` or ``'lualatex'``, this key "
 "is ignored."
-msgstr ""
+msgstr "使用``'platex'``(日语),``'xelatex'``或``'lualatex'``,这个键被忽略."
 
 #: ../../latex.rst:371
 msgid "``'geometry'``"
@@ -458,7 +458,7 @@ msgstr "``'geometry'``"
 
 #: ../../latex.rst:343
 msgid "\"geometry\" package inclusion, the default definition is:"
-msgstr "\"geometry\" package inclusion, the default definition is:"
+msgstr "\"geometry \"包包含,默认定义是:"
 
 #: ../../latex.rst:345
 msgid "``'\\\\usepackage{geometry}'``"
@@ -468,7 +468,7 @@ msgstr "``'\\\\usepackage{geometry}'``"
 msgid ""
 "with an additional ``[dvipdfm]`` for Japanese documents. The Sphinx LaTeX"
 " style file executes:"
-msgstr ""
+msgstr "还有一个日语文件``[dvipdfm]``. Sphinx LaTeX样式文件执行:"
 
 #: ../../latex.rst:350
 msgid "``\\PassOptionsToPackage{hmargin=1in,vmargin=1in,marginpar=0.5in}{geometry}``"
@@ -478,15 +478,15 @@ msgstr "``\\PassOptionsToPackage{hmargin=1in,vmargin=1in,marginpar=0.5in}{geomet
 msgid ""
 "which can be customized via corresponding :ref:`'sphinxsetup' options "
 "<latexsphinxsetup>`."
-msgstr ""
+msgstr "可以通过相应的方式定制:ref:`'sphinxsetup'选项<latexsphinxsetup>`."
 
 #: ../../latex.rst:357
 msgid "``dvipdfm`` option if :confval:`latex_engine` is ``'platex'``."
-msgstr "``dvipdfm`` option if :confval:`latex_engine` is ``'platex'``."
+msgstr "``dvipdfm``选项if:confval:`latex_engine`是``'platex'``."
 
 #: ../../latex.rst:360
 msgid "The :ref:`'sphinxsetup' keys for the margins <latexsphinxsetuphmargin>`."
-msgstr "The :ref:`'sphinxsetup' keys for the margins <latexsphinxsetuphmargin>`."
+msgstr ":ref:`'sphinxsetup'键为边距<latexsphinxsetuphmargin>."
 
 #: ../../latex.rst:364
 msgid ""
@@ -497,7 +497,7 @@ msgid ""
 "will be set to an integer multiple of the *zenkaku* width, and the text "
 "height to an integer multiple of the baseline. See the :ref:`hmargin "
 "<latexsphinxsetuphmargin>` documentation for more."
-msgstr ""
+msgstr "LaTeX文件中的位置已经移到``\\ usepackage {sphinx}``和``\\ sphinxsetup {..}``之后,因此也插入``'fontpkg'``键.这是为了以日本文档的特殊方式处理纸张布局选项:文本宽度将设置为* zenkaku *宽度的整数倍,文本高度将设置为基线的整数倍.有关更多信息,请参阅:ref:`hmargin <latexsphinxsetuphmargin>`文档."
 
 #: ../../latex.rst:383
 msgid "``'hyperref'``"
@@ -508,15 +508,15 @@ msgid ""
 "\"hyperref\" package inclusion; also loads package \"hypcap\" and issues "
 "``\\urlstyle{same}``. This is done after :file:`sphinx.sty` file is "
 "loaded and before executing the contents of ``'preamble'`` key."
-msgstr ""
+msgstr "\"hyperref \"包包含;还会加载package \"hypcap \"并发出``\\ urlstyle {same}``.这是在以下之后完成的:file:`sphinx.sty`文件被加载并且在执行``'preamble'``键的内容之前."
 
 #: ../../latex.rst:380
 msgid "Loading of packages \"hyperref\" and \"hypcap\" is mandatory."
-msgstr "Loading of packages \"hyperref\" and \"hypcap\" is mandatory."
+msgstr "加载包\"hyperref \"和\"hypcap \"是必需的."
 
 #: ../../latex.rst:382
 msgid "Previously this was done from inside :file:`sphinx.sty`."
-msgstr "Previously this was done from inside :file:`sphinx.sty`."
+msgstr "以前这是从内部完成的:文件:`sphinx.sty`."
 
 #: ../../latex.rst:401
 msgid "``'maketitle'``"
@@ -526,26 +526,26 @@ msgstr "``'maketitle'``"
 msgid ""
 "\"maketitle\" call, default ``'\\\\sphinxmaketitle'``. Override if you "
 "want to generate a differently styled title page."
-msgstr ""
+msgstr "\"maketitle \"来电,默认``'\\\\ sphinxmaketitle'``.如果要生成不同样式的标题页,请覆盖."
 
 #: ../../latex.rst:391
 msgid ""
 "If the key value is set to ``r'\\newcommand\\sphinxbackoftitlepage{<Extra"
 " material>}\\sphinxmaketitle'``, then ``<Extra material>`` will be "
 "typeset on back of title page (``'manual'`` docclass only)."
-msgstr ""
+msgstr "如果键值设置为"r"\\ newcommand \\ sphinxbackoftitlepage {<Extra material>} \\ sphinxmaketitle```,那么``<Extra material>``将在标题页背面排版(``` 'manual'`` docclass only)."
 
 #: ../../latex.rst:396
 msgid ""
 "Original ``\\maketitle`` from document class is not overwritten, hence is"
 " re-usable as part of some custom setting for this key."
-msgstr ""
+msgstr "文档类中的原始``\\ maketitle``不会被覆盖,因此可以作为此键的某些自定义设置的一部分重复使用."
 
 #: ../../latex.rst:399
 msgid ""
 "``\\sphinxbackoftitlepage`` optional macro.  It can also be defined "
 "inside ``'preamble'`` key rather than this one."
-msgstr ""
+msgstr "``\\ sphinxbackoftitlepage``可选宏.它也可以在``'preamble'``键中定义,而不是在这个键中."
 
 #: ../../latex.rst:406
 msgid "``'releasename'``"
@@ -556,7 +556,7 @@ msgid ""
 "value that prefixes ``'release'`` element on title page, default "
 "``'Release'``. As for *title* and *author* used in the tuples of "
 ":confval:`latex_documents`, it is inserted as LaTeX markup."
-msgstr ""
+msgstr "在标题页上加上前缀``'release'``元素的值,默认为``'Release'``.对于在* confval:`latex_documents`的元组中使用的* title *和* author *,它作为LaTeX标记插入."
 
 #: ../../latex.rst:419
 msgid "``'tableofcontents'``"
@@ -569,14 +569,14 @@ msgid ""
 "customized by user loaded packages.) Override if you want to generate a "
 "different table of contents or put content between the title page and the"
 " TOC."
-msgstr ""
+msgstr "\"tableofcontents \"调用,默认``'\\\\ sphinxtableofcontents'``(它是未修改的``\\ tableofcontents``的包装,它本身可以由用户加载的包自定义.)如果你想要覆盖生成不同的目录或在标题页和TOC之间放置内容."
 
 #: ../../latex.rst:416
 msgid ""
 "Previously the meaning of ``\\tableofcontents`` itself was modified by "
 "Sphinx. This created an incompatibility with dedicated packages modifying"
 " it also such as \"tocloft\" or \"etoc\"."
-msgstr ""
+msgstr "以前,"\\ tableofcontents`"本身的含义是由Sphinx修改的.这与修改它的专用包创建了不兼容性,例如\"tocloft \"或\"etoc \"."
 
 #: ../../latex.rst:428
 msgid "``'transition'``"
@@ -587,11 +587,11 @@ msgid ""
 "Commands used to display transitions, default "
 "``'\\n\\n\\\\bigskip\\\\hrule\\\\bigskip\\n\\n'``.  Override if you want "
 "to display transitions differently."
-msgstr ""
+msgstr "用于显示转换的命令,默认为``'\\ n \\ n \\\\ bigskip \\\\ hrule \\\\ bigskip \\ n \\ n'``.如果要以不同方式显示转换,请覆盖."
 
 #: ../../latex.rst:427
 msgid "Remove unneeded ``{}`` after ``\\\\hrule``."
-msgstr "Remove unneeded ``{}`` after ``\\\\hrule``."
+msgstr "在``\\\\ hrule``之后删除不需要的``{}``."
 
 #: ../../latex.rst:435
 msgid "``'printindex'``"
@@ -604,7 +604,7 @@ msgid ""
 "differently or append some content after the index. For example "
 "``'\\\\footnotesize\\\\raggedright\\\\printindex'`` is advisable when the"
 " index is full of long entries."
-msgstr ""
+msgstr "\"printindex \"调用,文件中的最后一件事,默认为``'\\\\ printindex'``.如果要以不同方式生成索引或在索引后附加一些内容,请覆盖.例如,当索引充满长条目时,建议使用``'\\\\ footnotesize \\\\ raggedright \\\\ printindex'``."
 
 #: ../../latex.rst:447
 msgid "``'fvset'``"
@@ -616,26 +616,26 @@ msgid ""
 "``'fvset': '\\\\fvset{fontsize=\\\\small}'``, to adjust for the large "
 "character width of the monospace font, used in code-blocks. You may need "
 "to modify this if you use custom fonts."
-msgstr ""
+msgstr "自定义``fancyvrb`` LaTeX包. Sphinx默认执行``'fvset':'\\\\ fvset {fontsize = \\\\ small}'``,以调整代码块中使用的等宽字体的大字符宽度.如果使用自定义字体,则可能需要修改此项."
 
 #: ../../latex.rst:444
 msgid ""
 "Due to new default font choice for ``'xelatex'`` and ``'lualatex'`` "
 "(FreeFont), Sphinx does ``\\\\fvset{fontsize=\\\\small}`` also with these"
 " engines (and not ``\\\\fvset{fontsize=auto}``)."
-msgstr ""
+msgstr "由于``'xelatex'``和``'lualatex'``(FreeFont)的新默认字体选择,Sphinx对这些引擎也做了`'\\\\ fvset {fontsize = \\\\ small}`` (而不是``\\\\ fvset {fontsize = auto}``)."
 
 #: ../../latex.rst:449
 msgid ""
 "Keys that are set by other options and therefore should not be overridden"
 " are:"
-msgstr ""
+msgstr "由其他选项设置但因此不应被覆盖的键是:"
 
 #: ../../latex.rst:452
 msgid ""
 "``'docclass'`` ``'classoptions'`` ``'title'`` ``'release'`` ``'author'`` "
 "``'makeindex'``"
-msgstr ""
+msgstr "``'docclass'`` ``'classoptions'`` ``'title'`` ``'release'`` ``'author'`` ``'makeindex'``"
 
 #: ../../latex.rst:463
 msgid "\\\\'sphinxsetup\\\\' key"
@@ -645,13 +645,13 @@ msgstr "\\\\'sphinxsetup\\\\' 键"
 msgid ""
 "The ``'sphinxsetup'`` key of :ref:`latex_elements "
 "<latex_elements_confval>` provides a LaTeX-type customization interface::"
-msgstr ""
+msgstr "`''sphinxsetup'``键:ref:`latex_elements <latex_elements_confval>`提供了一个LaTeX类型的自定义接口::"
 
 #: ../../latex.rst:472
 msgid ""
 "It defaults to empty.  If non-empty, it will be passed as argument to the"
 " ``\\sphinxsetup`` macro inside the document preamble, like this::"
-msgstr ""
+msgstr "它默认为空.如果非空,它将作为参数传递给文档前导码中的``\\ sphinxsetup``宏,如下::"
 
 #: ../../latex.rst:482
 msgid ""
@@ -659,28 +659,28 @@ msgid ""
 "macro directly into the body of the document, via the help of the "
 ":rst:dir:`raw` directive.  Here is how this present chapter is styled in "
 "the PDF output::"
-msgstr ""
+msgstr "通过:rst:dir:`raw`指令,可以将``\\ sphinxsetup`` LaTeX宏的更多用法直接插入到文档正文中.以下是本章如何在PDF输出中设置样式::"
 
 #: ../../latex.rst:503
 msgid "at the start of the chapter and::"
-msgstr "at the start of the chapter and::"
+msgstr "在本章的开头和::"
 
 #: ../../latex.rst:509
 msgid "at its end."
-msgstr "at its end."
+msgstr "在它的结尾."
 
 #: ../../latex.rst:511
 msgid ""
 "The colors used in the above are provided by the ``svgnames`` option of "
 "the \"xcolor\" package::"
-msgstr ""
+msgstr "上面使用的颜色由\"xcolor \"包的``svgnames``选项提供::"
 
 #: ../../latex.rst:519
 msgid ""
 "LaTeX boolean keys require *lowercase* ``true`` or ``false`` values. "
 "Spaces around the commas and equal signs are ignored, spaces inside LaTeX"
 " macros may be significant."
-msgstr ""
+msgstr "LaTeX布尔键需要* lowercase *``true``或``false``值.逗号和等号周围的空格被忽略,LaTeX宏中的空格可能很重要."
 
 #: ../../latex.rst:548
 msgid "``hmargin, vmargin``"
@@ -691,7 +691,7 @@ msgid ""
 "The dimensions of the horizontal (resp. vertical) margins, passed as "
 "``hmargin`` (resp. ``vmargin``) option to the ``geometry`` package. The "
 "default is ``1in``, which is equivalent to ``{1in,1in}``. Example::"
-msgstr ""
+msgstr "水平(相应的垂直)边距的尺寸,作为``hmargin``(resp.``vmargin``)选项传递给``geometry``包.默认为``1in``,相当于``{1in,1in}``.例::"
 
 #: ../../latex.rst:533
 msgid ""
@@ -700,7 +700,7 @@ msgid ""
 "options to get the text width set to an exact multiple of the *zenkaku* "
 "width, and the text height set to an integer multiple of the "
 "baselineskip, with the closest fit for the margins."
-msgstr ""
+msgstr "日文文档目前仅接受这些参数的一维格式.然后将``geometry``包传递给合适的选项,以将文本宽度设置为* zenkaku * width的精确倍数,并将文本高度设置为baselineskip的整数倍,最接近边距."
 
 #: ../../latex.rst:541
 msgid ""
@@ -708,7 +708,7 @@ msgid ""
 "use the ``nomag`` extra document class option (cf. "
 "``'extraclassoptions'`` key of :confval:`latex_elements`) or so-called "
 "TeX \"true\" units::"
-msgstr ""
+msgstr "日文文档目前只接受这些参数的一维格式.然后将``geometry``包传递给相应的选项,将文本宽度设置为* zenkaku * width的精确倍数,并将文本高度设置为baselineskip的整数倍,最接近边距."
 
 #: ../../latex.rst:555
 msgid "``marginpar``"
@@ -719,7 +719,7 @@ msgid ""
 "The ``\\marginparwidth`` LaTeX dimension, defaults to ``0.5in``. For "
 "Japanese documents, the value is modified to be the closest integer "
 "multiple of the *zenkaku* width."
-msgstr ""
+msgstr "``\\ marginparwidth`` LaTeX维度,默认为``0.5in``.对于日文文档,该值被修改为* zenkaku * width的最接近的整数倍."
 
 #: ../../latex.rst:561
 msgid "``verbatimwithframe``"
@@ -731,7 +731,7 @@ msgid ""
 "literal includes are framed. Setting it to ``false`` does not deactivate "
 "use of package \"framed\", because it is still in use for the optional "
 "background colour."
-msgstr ""
+msgstr "默认``true``. Boolean用于指定if:rst:dir:`code-block` \\ s和literal includes是否为框架.将其设置为"false"不会停用package \"framed \"的使用,因为它仍然用于可选的背景颜色."
 
 #: ../../latex.rst:565
 msgid "``verbatimwrapslines``"
@@ -741,7 +741,7 @@ msgstr "``verbatimwrapslines``"
 msgid ""
 "default ``true``. Tells whether long lines in :rst:dir:`code-block`\\ 's "
 "contents should wrap."
-msgstr ""
+msgstr "默认``true``.告诉长行是否:rst:dir:`code-block` \\的内容应该换行."
 
 #: ../../latex.rst:571
 msgid "``literalblockcappos``"
@@ -751,7 +751,7 @@ msgstr "``literalblockcappos``"
 msgid ""
 "default ``t`` for \"top\". Decides the caption position. Alternative is "
 "``b`` (\"bottom\")."
-msgstr ""
+msgstr "默认``t``为\"top \".决定标题位置.替代方案是``b``(\"bottom \")."
 
 #: ../../latex.rst:579
 msgid "``verbatimhintsturnover``"
@@ -761,11 +761,11 @@ msgstr "``verbatimhintsturnover``"
 msgid ""
 "default ``true``. If ``true``, code-blocks display \"continued on next "
 "page\", \"continued from previous page\" hints in case of pagebreaks."
-msgstr ""
+msgstr "默认``true``.如果``true``,代码块显示"继续下一页","继续从上一页"提示,如果是分页."
 
 #: ../../latex.rst:578
 msgid "the default changed from ``false`` to ``true``."
-msgstr "the default changed from ``false`` to ``true``."
+msgstr "默认值从``false``变为``true``."
 
 #: ../../latex.rst:585
 msgid "``verbatimcontinuedalign``, ``verbatimcontinuesalign``"
@@ -775,7 +775,7 @@ msgstr "``verbatimcontinuedalign``, ``verbatimcontinuesalign``"
 msgid ""
 "default ``r``. Horizontal position relative to the framed contents: "
 "either ``l`` (left aligned), ``r`` (right aligned) or ``c`` (centered)."
-msgstr ""
+msgstr "默认``r``.相对于框架内容的水平位置:"l"(左对齐),"r"(右对齐)或"c"(居中)."
 
 #: ../../latex.rst:592
 msgid "``parsedliteralwraps``"
@@ -785,11 +785,11 @@ msgstr "``parsedliteralwraps``"
 msgid ""
 "default ``true``. Tells whether long lines in :dudir:`parsed-literal`\\ "
 "'s contents should wrap."
-msgstr ""
+msgstr "默认``true``.判断是否有长行:dudir:`parsed-literal` \\的内容应该换行."
 
 #: ../../latex.rst:591 ../../latex.rst:601
 msgid "set this option value to ``false`` to recover former behaviour."
-msgstr "set this option value to ``false`` to recover former behaviour."
+msgstr "将此选项值设置为"false"以恢复以前的行为."
 
 #: ../../latex.rst:602
 msgid "``inlineliteralwraps``"
@@ -802,7 +802,7 @@ msgid ""
 "or for hyphenation) are currently inserted only after the characters ``. "
 ", ; ? ! /``. Due to TeX internals, white space in the line will be "
 "stretched (or shrunk) in order to accomodate the linebreak."
-msgstr ""
+msgstr "默认``true``.允许内联文字内部的换行符:但是当前只在字符"`之后插入了额外的潜在断点(除了LaTeX在空格或连字符允许的断点). ,; ？ ！ /``.由于TeX内部,线路中的空白区域将被拉伸(或缩小)以适应线路断裂."
 
 #: ../../latex.rst:607
 msgid "``verbatimvisiblespace``"
@@ -813,7 +813,7 @@ msgid ""
 "default ``\\textcolor{red}{\\textvisiblespace}``. When a long code line "
 "is split, the last space character from the source code line right before"
 " the linebreak location is typeset using this."
-msgstr ""
+msgstr "默认``\\ textcolor {red} {\\ t​​extvisiblespace}``.分割长代码行时,使用此代码排版在换行符位置之前的源代码行中的最后一个空格字符."
 
 #: ../../latex.rst:618
 msgid "``verbatimcontinued``"
@@ -824,14 +824,14 @@ msgid ""
 "A LaTeX macro inserted at start of continuation code lines. Its "
 "(complicated...) default typesets a small red hook pointing to the "
 "right::"
-msgstr ""
+msgstr "在连续代码行的开头插入一个LaTeX宏.它(复杂的...)默认排版一个指向右边的小红钩::"
 
 #: ../../latex.rst:615
 msgid ""
 "The breaking of long code lines was added at 1.4.2. The default "
 "definition of the continuation symbol was changed at 1.5 to accomodate "
 "various font sizes (e.g. code-blocks can be in footnotes)."
-msgstr ""
+msgstr "在1.4.2处添加了长代码行的分解.连续符号的默认定义在1.5处更改以适应各种字体大小(例如,代码块可以在脚注中)."
 
 #: ../../latex.rst:622
 msgid "``TitleColor``"
@@ -841,13 +841,13 @@ msgstr "``TitleColor``"
 msgid ""
 "default ``{rgb}{0.126,0.263,0.361}``. The colour for titles (as "
 "configured via use of package \"titlesec\".)"
-msgstr ""
+msgstr "默认``{rgb} {0.126,0.263,0.361}``.标题的颜色(通过使用package \"titlesec \"进行配置.)"
 
 #: ../../latex.rst:626
 msgid ""
 "Colours set via ``'sphinxsetup'``  must obey the syntax of the argument "
 "of the ``color/xcolor`` packages ``\\definecolor`` command."
-msgstr ""
+msgstr "通过``'sphinxsetup'``设置的颜色必须遵循``color/xcolor``包``\\ definecolor``命令的参数的语法."
 
 #: ../../latex.rst:631
 msgid "``InnerLinkColor``"
@@ -857,7 +857,7 @@ msgstr "``InnerLinkColor``"
 msgid ""
 "default ``{rgb}{0.208,0.374,0.486}``. A colour passed to ``hyperref`` as "
 "value of ``linkcolor``  and ``citecolor``."
-msgstr ""
+msgstr "默认``{rgb} {0.208,0.374,0.486}``.一种颜色传递给``hyperref``作为``linkcolor``和``citecolor``的值."
 
 #: ../../latex.rst:635
 msgid "``OuterLinkColor``"
@@ -867,7 +867,7 @@ msgstr "``OuterLinkColor``"
 msgid ""
 "default ``{rgb}{0.216,0.439,0.388}``. A colour passed to ``hyperref`` as "
 "value of ``filecolor``, ``menucolor``, and ``urlcolor``."
-msgstr ""
+msgstr "默认``{rgb} {0.216,0.439,0.388}``.一种颜色传递给``hyperref``作为``filecolor``, ``menucolor``和``urlcolor``的值."
 
 #: ../../latex.rst:639
 msgid "``VerbatimColor``"
@@ -877,7 +877,7 @@ msgstr "``VerbatimColor``"
 msgid ""
 "default ``{rgb}{1,1,1}``. The background colour for :rst:dir:`code-"
 "block`\\ s. The default is white."
-msgstr ""
+msgstr "默认``{rgb} {1,1,1}``.背景颜色:rst:dir:`code-block` \\ s.默认为白色."
 
 #: ../../latex.rst:642
 msgid "``VerbatimBorderColor``"
@@ -885,7 +885,7 @@ msgstr "``VerbatimBorderColor``"
 
 #: ../../latex.rst:642
 msgid "default ``{rgb}{0,0,0}``. The frame color, defaults to black."
-msgstr "default ``{rgb}{0,0,0}``. The frame color, defaults to black."
+msgstr "默认``{rgb} {0,0,0}``.框架颜色,默认为黑色."
 
 #: ../../latex.rst:647
 msgid "``VerbatimHighlightColor``"
@@ -893,13 +893,13 @@ msgstr "``VerbatimHighlightColor``"
 
 #: ../../latex.rst:645
 msgid "default ``{rgb}{0.878,1,1}``. The color for highlighted lines."
-msgstr "default ``{rgb}{0.878,1,1}``. The color for highlighted lines."
+msgstr "默认``{rgb} {0.878,1,1}``.突出显示的线条的颜色."
 
 #: ../../latex.rst:651
 msgid ""
 "Starting with this colour key, and for all others coming next, the actual"
 " names declared to \"color\" or \"xcolor\" are prefixed with \"sphinx\"."
-msgstr ""
+msgstr "从这个颜色键开始,对于接下来的所有其他颜色键,声明为"color"或\"xcolor \"的实际名称以"sphinx"为前缀."
 
 #: ../../latex.rst:655
 msgid "``verbatimsep``"
@@ -907,7 +907,7 @@ msgstr "``verbatimsep``"
 
 #: ../../latex.rst:655
 msgid "default ``\\fboxsep``. The separation between code lines and the frame."
-msgstr "default ``\\fboxsep``. The separation between code lines and the frame."
+msgstr "默认``\\ fboxsep``.代码行与框架之间的分离."
 
 #: ../../latex.rst:659
 msgid "``verbatimborder``"
@@ -917,7 +917,7 @@ msgstr "``verbatimborder``"
 msgid ""
 "default ``\\fboxrule``. The width of the frame around :rst:dir:`code-"
 "block`\\ s."
-msgstr ""
+msgstr "默认``\\ fboxrule``.框架的宽度:rst:dir:`code-block` \\ s."
 
 #: ../../latex.rst:663
 msgid "``shadowsep``"
@@ -927,7 +927,7 @@ msgstr "``shadowsep``"
 msgid ""
 "default ``5pt``. The separation between contents and frame for "
 ":dudir:`contents` and :dudir:`topic` boxes."
-msgstr ""
+msgstr "默认``5pt``.内容和框架之间的分离:dudir:`contents`和:dudir:`topic`框."
 
 #: ../../latex.rst:666
 msgid "``shadowsize``"
@@ -935,7 +935,7 @@ msgstr "``shadowsize``"
 
 #: ../../latex.rst:666
 msgid "default ``4pt``. The width of the lateral \"shadow\" to the right."
-msgstr "default ``4pt``. The width of the lateral \"shadow\" to the right."
+msgstr "默认``4pt``.横向"阴影"的宽度向右."
 
 #: ../../latex.rst:669
 msgid "``shadowrule``"
@@ -945,7 +945,7 @@ msgstr "``shadowrule``"
 msgid ""
 "default ``\\fboxrule``. The width of the frame around :dudir:`topic` "
 "boxes."
-msgstr ""
+msgstr "默认``\\ fboxrule``.框架的宽度:dudir:`topic`框."
 
 #: ../../latex.rst:673
 msgid "|notebdcolors|"
@@ -955,7 +955,7 @@ msgstr "|notebdcolors|"
 msgid ""
 "default ``{rgb}{0,0,0}`` (black). The colour for the two horizontal rules"
 " used by Sphinx in LaTeX for styling a :dudir:`note` type admonition."
-msgstr ""
+msgstr "默认``{rgb} {0,0,0}``(黑色). Sphinx在LaTeX中用于样式化的两个水平规则的颜色:dudir:`note`类型的警告."
 
 #: ../../latex.rst:676
 msgid "``noteborder``, ``hintborder``, ``importantborder``, ``tipborder``"
@@ -963,7 +963,7 @@ msgstr "``noteborder``, ``hintborder``, ``importantborder``, ``tipborder``"
 
 #: ../../latex.rst:676
 msgid "default ``0.5pt``. The width of the two horizontal rules."
-msgstr "default ``0.5pt``. The width of the two horizontal rules."
+msgstr "默认``0.5pt``.两个水平规则的宽度."
 
 #: ../../latex.rst:680
 msgid "|warningbdcolors|"
@@ -971,7 +971,7 @@ msgstr "|warningbdcolors|"
 
 #: ../../latex.rst:681 ../../latex.rst:686
 msgid "default ``{rgb}{0,0,0}`` (black). The colour for the admonition frame."
-msgstr "default ``{rgb}{0,0,0}`` (black). The colour for the admonition frame."
+msgstr "默认``{rgb} {0,0,0}``(黑色).告诫框架的颜色."
 
 #: ../../latex.rst:685
 msgid "|wgbdcolorslatex|"
@@ -985,7 +985,7 @@ msgstr "|warningbgcolors|"
 msgid ""
 "default ``{rgb}{1,1,1}`` (white). The background colours for the "
 "respective admonitions."
-msgstr ""
+msgstr "默认``{rgb} {1,1,1}``(白色).各种警告的背景颜色."
 
 #: ../../latex.rst:693
 msgid "|warningborders|"
@@ -993,7 +993,7 @@ msgstr "|warningborders|"
 
 #: ../../latex.rst:693
 msgid "default ``1pt``. The width of the frame."
-msgstr "default ``1pt``. The width of the frame."
+msgstr "默认``1pt``.框架的宽度."
 
 #: ../../latex.rst:697
 msgid "``AtStartFootnote``"
@@ -1003,7 +1003,7 @@ msgstr "``AtStartFootnote``"
 msgid ""
 "default ``\\mbox{ }``. LaTeX macros inserted at the start of the footnote"
 " text at bottom of page, after the footnote number."
-msgstr ""
+msgstr "默认``\\ mbox {}``.在脚注编号后面的页脚底部的脚注文本开头插入了LaTeX宏."
 
 #: ../../latex.rst:704
 msgid "``BeforeFootnote``"
@@ -1014,7 +1014,7 @@ msgid ""
 "default ``\\leavevmode\\unskip``. LaTeX macros inserted before the "
 "footnote mark. The default removes possible space before it (else, TeX "
 "could insert a linebreak there)."
-msgstr ""
+msgstr "默认``\\ leavevmode \\ unskip``.在脚注标记之前插入了LaTeX宏.默认情况下会删除之前的可能空间(否则,TeX可能会在那里插入换行符)."
 
 #: ../../latex.rst:708
 msgid "``HeaderFamily``"
@@ -1022,7 +1022,7 @@ msgstr "``HeaderFamily``"
 
 #: ../../latex.rst:707
 msgid "default ``\\sffamily\\bfseries``. Sets the font used by headings."
-msgstr "default ``\\sffamily\\bfseries``. Sets the font used by headings."
+msgstr "默认``\\ sffamily \\ bfseries``.设置标题使用的字体."
 
 #: ../../latex.rst:732
 msgid "LaTeX macros and environments"
@@ -1034,7 +1034,7 @@ msgid ""
 "files :file:`sphinxhowto.cls`, :file:`sphinxmanual.cls`, which have "
 "public names thus allowing redefinitions. Check the respective files for "
 "the defaults."
-msgstr ""
+msgstr "以下是包文件中的一些宏:file:`sphinx.sty`和类文件:file:`sphinxhowto.cls`,:file:`sphinxmanual.cls`,它们具有公共名称,因此允许重新定义.检查相应的文件以获取默认值."
 
 #: ../../latex.rst:741
 msgid "Macros"
@@ -1046,13 +1046,13 @@ msgid ""
 "``strong``, ``bfcode``, ``email``, ``tablecontinued``, ``titleref``, "
 "``menuselection``, ``accelerator``, ``crossref``, ``termref``, "
 "``optional``."
-msgstr ""
+msgstr "文本样式命令``\\ sphinx <foo>`````<foo>``是``strong``, ``bfcode``, ``email``, ``tablecontinued``, `` titleref``, ``menuselection``, ``accelerator``, ``crossref``, ``termref``, ``optional``."
 
 #: ../../latex.rst:747
 msgid ""
 "Use of ``\\sphinx`` prefixed macro names to limit possibilities of "
 "conflict with LaTeX packages."
-msgstr ""
+msgstr "使用``\\ sphinx``前缀宏名称来限制与LaTeX包冲突的可能性."
 
 #: ../../latex.rst:750
 msgid ""
@@ -1062,19 +1062,19 @@ msgid ""
 "``emphasis``, ``literalemphasis``, ``strong``, ``literalstrong``, "
 "``abbreviation``, ``literalintitle``, ``codecontinued``, "
 "``codecontinues``"
-msgstr ""
+msgstr "更多文字样式:``\\ sphinxstyle <bar>`````<bar>````indexentry``, ``indexextra``, ``indexpageref``, ``topictitle``, `` sidebartitle``, ``othertitle``, ``sidebarsubtitle``, ``theadfamily``, ``emphasis``, ``literalemphasis``, ``strong``, ``literalstrong``, ``abbreviation` `,``literalintitle``, ``codecontinued``, ``codecontinues``"
 
 #: ../../latex.rst:756
 msgid ""
 "these macros were formerly hard-coded as non customizable ``\\texttt``, "
 "``\\emph``, etc..."
-msgstr ""
+msgstr "这些宏以前硬编码为不可自定义的``\\ texttt``, ``\\ emph``等..."
 
 #: ../../latex.rst:759
 msgid ""
 "``\\sphinxstyletheadfamily`` which defaults to ``\\sffamily`` and allows "
 "multiple paragraphs in header cells of tables."
-msgstr ""
+msgstr "``\\ sphinxstyletheadfamily``默认为``\\ sffamily``,并允许表格的标题单元格中有多个段落."
 
 #: ../../latex.rst:762
 msgid "``\\sphinxstylecodecontinued`` and ``\\sphinxstylecodecontinues``."
@@ -1087,11 +1087,11 @@ msgid ""
 ":file:`sphinxmanual.cls`) of standard ``\\tableofcontents``.  The macro "
 "``\\sphinxtableofcontentshook`` is executed during its expansion right "
 "before ``\\tableofcontents`` itself."
-msgstr ""
+msgstr "目录是通过``\\ sphinxtableofcontents``排版的,它是标准``\\ tableofcontents`的包装器(在文件:`sphinxhowto.cls`和:file:`sphinxmanual.cls`中定义不同) .宏``\\ sphinxtableofcontentshook``在``\\ tableofcontents``之前的扩展期间执行."
 
 #: ../../latex.rst:770
 msgid "formerly, the meaning of ``\\tableofcontents`` was modified by Sphinx."
-msgstr "formerly, the meaning of ``\\tableofcontents`` was modified by Sphinx."
+msgstr "以前,"\\ tableofcontents`"的含义是由Sphinx修改的."
 
 #: ../../latex.rst:772
 msgid ""
@@ -1099,20 +1099,20 @@ msgid ""
 "formerly done during loading of ``'manual'`` docclass are now executed "
 "later via ``\\sphinxtableofcontentshook``.  This macro is also executed "
 "by the ``'howto'`` docclass, but defaults to empty with it."
-msgstr ""
+msgstr "以前在加载``'manual'``docclass时完成的``\\ l @ section``和``\\ l @ subsection``的硬编码重新定义现在稍后通过``\\ sphinxtableofcontentshook``执行.这个宏也由'`'howto'``docclass执行,但默认为空."
 
 #: ../../latex.rst:777
 msgid ""
 "a custom ``\\sphinxmaketitle`` is defined in the class files "
 ":file:`sphinxmanual.cls` and :file:`sphinxhowto.cls` and is used as "
 "default setting of ``'maketitle'`` :confval:`latex_elements` key."
-msgstr ""
+msgstr "自定义``\\ sphinxmaketitle``在类文件中定义:file:`sphinxmanual.cls`和:file:`sphinxhowto.cls`并用作``'maketitle'``的默认设置:confval:` latex_elements`键."
 
 #: ../../latex.rst:781
 msgid ""
 "formerly, ``\\maketitle`` from LaTeX document class was modified by "
 "Sphinx."
-msgstr ""
+msgstr "以前,来自LaTeX文档类的``\\ maketitle``被Sphinx修改."
 
 #: ../../latex.rst:784
 msgid ""
@@ -1121,13 +1121,13 @@ msgid ""
 "``\\clearpage``.  Use either the ``'maketitle'`` key or the "
 "``'preamble'`` key of :confval:`latex_elements` to add a custom "
 "definition of ``\\sphinxbackoftitlepage``."
-msgstr ""
+msgstr "对于`''manual'``docclass一个宏``\\ sphinxbackoftitlepage``,如果已定义,则在最后的``\\ clearpage``之前在``\\ sphinxmaketitle``的末尾执行.使用``'maketitle'``键或``''preamble'``键:confval:`latex_elements`来添加``\\ sphinxbackoftitlepage``的自定义定义."
 
 #: ../../latex.rst:791
 msgid ""
 "the citation reference is typeset via ``\\sphinxcite`` which is a wrapper"
 " of standard ``\\cite``."
-msgstr ""
+msgstr "引文引用是通过``\\ sphinxcite``排版的,它是标准``\\ cite``的包装."
 
 #: ../../latex.rst:795
 msgid "Environments"
@@ -1138,13 +1138,13 @@ msgid ""
 "a :dudir:`figure` may have an optional legend with arbitrary body "
 "elements: they are rendered in a ``sphinxlegend`` environment. The "
 "default definition issues ``\\small``, and ends with ``\\par``."
-msgstr ""
+msgstr "a:dudir:`figure`可能有一个带有任意body元素的可选图例:它们在``sphinxlegend``环境中呈现.默认定义发出``\\ small``,以``\\ par``结尾."
 
 #: ../../latex.rst:801
 msgid ""
 "formerly, the ``\\small`` was hardcoded in LaTeX writer and the ending "
 "``\\par`` was lacking."
-msgstr ""
+msgstr "以前,'\\ small``在LaTeX编写器中是硬编码的,结尾的``\\ par``缺乏."
 
 #: ../../latex.rst:804
 msgid ""
@@ -1157,29 +1157,29 @@ msgid ""
 "*sphinxlightbox* environments, configured to use the parameters (colours,"
 " border thickness) specific to each type, which can be set via "
 "``'sphinxsetup'`` string."
-msgstr ""
+msgstr "对于每个告诫类型``<foo>``,使用的环境名为``sphinx <foo>``.它们可能是单独的"更新环境",然后必须用一个参数定义(它是通知的标题,例如``Warning:``for:dudir:`warning`指令,如果是英语是文档语言).它们的默认定义使用* sphinxheavybox *(对于第一个列出的指令)或* sphinxlightbox *环境,配置为使用特定于每种类型的参数(颜色,边框粗细),可以通过``'sphinxsetup'设置. `字符串."
 
 #: ../../latex.rst:813
 msgid ""
 "use of public environment names, separate customizability of the "
 "parameters, such as ``noteBorderColor``, ``noteborder``, "
 "``warningBgColor``, ``warningBorderColor``, ``warningborder``, ..."
-msgstr ""
+msgstr "使用公共环境名称,单独定制参数,例如``noteBorderColor``, ``noteborder``, ``warningBgColor``, ``warningBorderColor``, ``warningborder``,..."
 
 #: ../../latex.rst:817
 msgid ""
 "the :dudir:`contents` directive (with ``:local:`` option) and the "
 ":dudir:`topic` directive are implemented by environment "
 "``sphinxShadowBox``."
-msgstr ""
+msgstr "使用公共环境名称单独自定义参数,例如``noteBorderColor``, ``noteborder``, ``warningBgColor``, ``warningBorderColor``, ``warningborder``,..."
 
 #: ../../latex.rst:820
 msgid "former code refactored into an environment allowing page breaks."
-msgstr "former code refactored into an environment allowing page breaks."
+msgstr "以前的代码重构为允许分页的环境."
 
 #: ../../latex.rst:822
 msgid "options ``shadowsep``, ``shadowsize``,  ``shadowrule``."
-msgstr "options ``shadowsep``, ``shadowsize``,  ``shadowrule``."
+msgstr "选项``shadowsep``, ``shadowsize``, ``shadowrule``."
 
 #: ../../latex.rst:824
 msgid ""
@@ -1190,20 +1190,20 @@ msgid ""
 "pagebreaks. Inside tables the used environment is "
 "``sphinxVerbatimintable`` (it does not draw a frame, but allows a "
 "caption)."
-msgstr ""
+msgstr "文字块(通过``::``或:rst:dir:`code-block`)是使用``sphinxVerbatim``环境实现的,它是包``fancyvrb'的``Verbatim``环境的包装. sty``.它增加了顶部标题的处理和长行的包装,以及允许分页的框架.在表格中,使用的环境是``sphinxVerbatimintable``(它不绘制框架,但允许使用标题)."
 
 #: ../../latex.rst:832
 msgid ""
 "``Verbatim`` keeps exact same meaning as in ``fancyvrb.sty`` (also under "
 "the name ``OriginalVerbatim``); ``sphinxVerbatimintable`` is used inside "
 "tables."
-msgstr ""
+msgstr "``Verbatim``与``fancyvrb.sty``(也名为``OriginalVerbatim``)的含义完全相同;在表格中使用``sphinxVerbatimintable``."
 
 #: ../../latex.rst:836
 msgid ""
 "options ``verbatimwithframe``, ``verbatimwrapslines``, ``verbatimsep``, "
 "``verbatimborder``."
-msgstr ""
+msgstr "选项``verbatimwithframe``, ``verbatimwrapslines``, ``verbatimsep``, ``verbatimborder``."
 
 #: ../../latex.rst:839
 msgid "support for ``:emphasize-lines:`` option"
@@ -1213,7 +1213,7 @@ msgstr "support for ``:emphasize-lines:`` option"
 msgid ""
 "easier customizability of the formatting via exposed to user LaTeX macros"
 " such as ``\\sphinxVerbatimHighlightLine``."
-msgstr ""
+msgstr "通过暴露给用户LaTeX宏(例如`\\ sphinxVerbatimHighlightLine``),可以更轻松地自定义格式化."
 
 #: ../../latex.rst:844
 msgid ""
@@ -1222,11 +1222,11 @@ msgid ""
 "environments are wrappers of the ``thebibliography`` and respectively "
 "``theindex`` environments as provided by the document class (or "
 "packages)."
-msgstr ""
+msgstr "参考书目使用``sphinxthebibliography``和Python模块索引以及一般索引都使用``sphinxtheindex``;这些环境是文档类(或包)提供的``thebibliography``和``theindex``环境的包装器."
 
 #: ../../latex.rst:849
 msgid "formerly, the original environments were modified by Sphinx."
-msgstr "formerly, the original environments were modified by Sphinx."
+msgstr "以前,Sphinx修改了原始环境."
 
 #: ../../latex.rst:853
 msgid "Miscellany"
@@ -1236,7 +1236,7 @@ msgstr "杂记"
 msgid ""
 "the section, subsection, ...  headings are set using  *titlesec*'s "
 "``\\titleformat`` command."
-msgstr ""
+msgstr "section, subsection, ... 标题是使用 *titlesec* 的 ``\\titleformat`` 命令设置的."
 
 #: ../../latex.rst:857
 msgid ""
@@ -1244,29 +1244,29 @@ msgid ""
 "using *fncychap*'s commands ``\\ChNameVar``, ``\\ChNumVar``, "
 "``\\ChTitleVar``. File :file:`sphinx.sty` has custom re-definitions in "
 "case of *fncychap* option ``Bjarne``."
-msgstr ""
+msgstr "对于 ``'manual'`` docclass , 章节标题可以使用 *fncychap* 的命令 ``\\ChNameVar`` , ``\\ChNumVar`` , ``\\ChTitleVar`` 来定制.文件 :file:`sphinx.sty` 在 *fncychap* 选项 ``Bjarne`` 的情况下有自定义重新定义."
 
 #: ../../latex.rst:862
 msgid ""
 "formerly, use of *fncychap* with other styles than ``Bjarne`` was "
 "dysfunctional."
-msgstr ""
+msgstr "以前,使用 *fncychap* 与其他风格比 ``Bjarne`` 功能失调."
 
 #: ../../latex.rst:868
 msgid ""
 "As an experimental feature, Sphinx can use user-defined template file for"
 " LaTeX source if you have a file named ``_templates/latex.tex_t`` in your"
 " project."
-msgstr ""
+msgstr "作为一个实验性功能,如果您的项目中有一个名为 ``_templates/latex.tex_t`` 的文件,Sphinx可以将用户定义的模板文件用于LaTeX源代码."
 
 #: ../../latex.rst:872 ../../latex.rst:879
 msgid "currently all template variables are unstable and undocumented."
-msgstr "currently all template variables are unstable and undocumented."
+msgstr "目前,所有模板变量都不稳定且未记录."
 
 #: ../../latex.rst:875
 msgid ""
 "Additional files ``longtable.tex_t``, ``tabulary.tex_t`` and "
 "``tabular.tex_t`` can be added to ``_templates/`` to configure some "
 "aspects of table rendering (such as the caption position)."
-msgstr ""
+msgstr "可以在 ``_templates/`` 中添加附加文件 ``longtable.tex_t`` , ``tabulary.tex_t`` 和 ``tabular.tex_t`` 来配置表呈现的某些方面(例如标题位置)."
 

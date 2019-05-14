@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../extdev/domainapi.rst:4
 msgid "Domain API"
-msgstr ""
+msgstr "域API"
 
 #: of sphinx.domains.Domain:1
 msgid ""
@@ -28,6 +28,8 @@ msgid ""
 " to them.  Examples would be Python modules, classes, functions etc., "
 "elements of a templating language, Sphinx roles and directives, etc."
 msgstr ""
+"域意味着是一组具有类似性质的对象的“对象”描述指令, 以及用于创建对它们的引用的相应角色。  "
+"示例包括Python模块, 类, 函数等, 模板语言的元素, Sphinx角色和指令等。"
 
 #: of sphinx.domains.Domain:6
 msgid ""
@@ -37,6 +39,8 @@ msgid ""
 "information in a uniform way to parts of Sphinx that allow the user to "
 "reference or search for objects in a domain-agnostic way."
 msgstr ""
+"每个域都有一个单独的存储空间, 用于存储有关现有对象的信息, 以及如何在 `self.data` 中引用它们, 它必须是字典。  "
+"它还必须实现几个函数, 这些函数以统一的方式将对象信息暴露给Sphinx的部分, 允许用户以域无关的方式引用或搜索对象。"
 
 #: of sphinx.domains.Domain:12
 msgid ""
@@ -49,153 +53,169 @@ msgid ""
 "class' :attr:`data_version` attribute.  Otherwise, `OSError` is raised "
 "and the pickled environment is discarded."
 msgstr ""
+"关于`self.data`:由于所有对象和交叉引用信息都存储在BuildEnvironment实例中,  `domain.data` 对象也存储在 "
+"`domain.name` 键下的`env.domaindata` 字典中。  在构建过程开始之前, 每个活动域都被实例化并被赋予环境对象;那么 "
+"`domaindata` 字典必须是不存在的, 或者是 'version' 键等于域类 attr:`data_version` "
+"属性的字典。否则, 引发 `OSError` 并丢弃pickle环境。"
 
 #: of sphinx.domains.Domain.add_object_type:1
 msgid "Add an object type."
-msgstr ""
+msgstr "添加对象类型。"
 
 #: of sphinx.domains.Domain.check_consistency:1
 msgid "Do consistency checks (**experimental**)."
-msgstr ""
+msgstr "进行一致性检查(**实验**)。"
 
 #: of sphinx.domains.Domain.clear_doc:1
 msgid "Remove traces of a document in the domain-specific inventories."
-msgstr ""
+msgstr "删除特定于域的清单中的文档痕迹。"
 
 #: of sphinx.domains.Domain.directive:1
 msgid ""
 "Return a directive adapter class that always gives the registered "
 "directive its full name ('domain:name') as ``self.name``."
-msgstr ""
+msgstr "返回一个指令适配器类, 它始终将注册指令的全名('domain:name')作为 ``self.name``."
 
 #: of sphinx.domains.Domain.get_enumerable_node_type:1
 msgid "Get type of enumerable nodes (experimental)."
-msgstr ""
+msgstr "获取可枚举节点的类型(实验性)。"
 
 #: of sphinx.domains.Domain.get_full_qualified_name:1
 msgid "Return full qualified name for given node."
-msgstr ""
+msgstr "返回给定节点的完全限定名称。"
 
 #: of sphinx.domains.Domain.get_objects:1
+#, fuzzy
 msgid "Return an iterable of \"object descriptions\"."
-msgstr ""
+msgstr "对象描述是包含六个项目的元组:"
 
 #: of sphinx.domains.Domain.get_objects:3
+#, fuzzy
 msgid "Object descriptions are tuples with six items:"
-msgstr ""
+msgstr "对象描述是包含六个项目的元组:"
 
 #: of sphinx.domains.Domain.get_objects:6 sphinx.domains.Index.generate:20
 msgid "``name``"
-msgstr ""
+msgstr "``name``"
 
 #: of sphinx.domains.Domain.get_objects:6
+#, fuzzy
 msgid "Fully qualified name."
-msgstr ""
+msgstr "完全限定名称。"
 
 #: of sphinx.domains.Domain.get_objects:9
 msgid "``dispname``"
-msgstr ""
+msgstr "``dispname``"
 
 #: of sphinx.domains.Domain.get_objects:9
+#, fuzzy
 msgid "Name to display when searching/linking."
-msgstr ""
+msgstr "搜索/链接时显示的名称。"
 
 #: of sphinx.domains.Domain.get_objects:12
 msgid "``type``"
-msgstr ""
+msgstr "``type``"
 
 #: of sphinx.domains.Domain.get_objects:12
+#, fuzzy
 msgid "Object type, a key in ``self.object_types``."
-msgstr ""
+msgstr "对象类型, ``self.object_types``中的一个键。"
 
 #: of sphinx.domains.Domain.get_objects:15 sphinx.domains.Index.generate:33
 msgid "``docname``"
-msgstr ""
+msgstr "``docname``"
 
 #: of sphinx.domains.Domain.get_objects:15
+#, fuzzy
 msgid "The document where it is to be found."
-msgstr ""
+msgstr "找到它的文件。"
 
 #: of sphinx.domains.Domain.get_objects:18 sphinx.domains.Index.generate:36
 msgid "``anchor``"
-msgstr ""
+msgstr "``anchor``"
 
 #: of sphinx.domains.Domain.get_objects:18
+#, fuzzy
 msgid "The anchor name for the object."
-msgstr ""
+msgstr "对象的锚名称。"
 
 #: of sphinx.domains.Domain.get_objects:30
 msgid "``priority``"
-msgstr ""
+msgstr "``priority``"
 
 #: of sphinx.domains.Domain.get_objects:21
+#, fuzzy
 msgid ""
 "How \"important\" the object is (determines placement in search results)."
 " One of:"
-msgstr ""
+msgstr "对象的“重要性”(确定搜索结果中的位置)。之一:"
 
 #: of sphinx.domains.Domain.get_objects:24 sphinx.domains.Index.generate:27
 msgid "``1``"
-msgstr ""
+msgstr "``1``"
 
 #: of sphinx.domains.Domain.get_objects:25
+#, fuzzy
 msgid "Default priority (placed before full-text matches)."
-msgstr ""
+msgstr "默认优先级(放置在全文匹配之前)。"
 
 #: of sphinx.domains.Domain.get_objects:26 sphinx.domains.Index.generate:25
 msgid "``0``"
-msgstr ""
+msgstr "``0``"
 
 #: of sphinx.domains.Domain.get_objects:27
+#, fuzzy
 msgid "Object is important (placed before default-priority objects)."
-msgstr ""
+msgstr "对象很重要(放在默认优先级对象之前)。"
 
 #: of sphinx.domains.Domain.get_objects:28 sphinx.domains.Index.generate:30
 msgid "``2``"
-msgstr ""
+msgstr "``2``"
 
 #: of sphinx.domains.Domain.get_objects:29
+#, fuzzy
 msgid "Object is unimportant (placed after full-text matches)."
-msgstr ""
+msgstr "对象不重要(放置在全文匹配之后)。"
 
 #: of sphinx.domains.Domain.get_objects:30
 msgid "``-1``"
-msgstr ""
+msgstr "``-1``"
 
 #: of sphinx.domains.Domain.get_objects:31
+#, fuzzy
 msgid "Object should not show up in search at all."
-msgstr ""
+msgstr "对象不应该出现在搜索中。"
 
 #: of sphinx.domains.Domain.get_type_name:1
 msgid "Return full name for given ObjType."
-msgstr ""
+msgstr "返回给定 ObjType 的全名。"
 
 #: of sphinx.domains.Domain.merge_domaindata:1
 msgid ""
 "Merge in data regarding *docnames* from a different domaindata inventory "
 "(coming from a subprocess in parallel builds)."
-msgstr ""
+msgstr "合并来自不同 domaindata 库存的 *docnames* 数据(来自并行构建中的子流程)。"
 
 #: of sphinx.domains.Domain.process_doc:1
 msgid "Process a document after it is read by the environment."
-msgstr ""
+msgstr "在环境读取文档后处理文档。"
 
 #: of sphinx.domains.Domain.process_field_xref:1
 msgid ""
 "Process a pending xref created in a doc field. For example, attach "
 "information about the current scope."
-msgstr ""
+msgstr "处理在doc字段中创建的待处理外部参照。例如, 附加有关当前范围的信息。"
 
 #: of sphinx.domains.Domain.resolve_any_xref:1
 msgid "Resolve the pending_xref *node* with the given *target*."
-msgstr ""
+msgstr "使用给定的 *target* 解析 pending_xref *node*."
 
 #: of sphinx.domains.Domain.resolve_any_xref:3
 msgid ""
 "The reference comes from an \"any\" or similar role, which means that we "
 "don't know the type.  Otherwise, the arguments are the same as for "
 ":meth:`resolve_xref`."
-msgstr ""
+msgstr "引用来自 \"any\" 或类似的角色, 这意味着我们不知道类型。否则, 参数与 :meth:`resolve_xref` 相同。"
 
 #: of sphinx.domains.Domain.resolve_any_xref:7
 msgid ""
@@ -204,17 +224,18 @@ msgid ""
 "role that could have created the same reference, e.g. ``'py:func'``. "
 "``newnode`` is what :meth:`resolve_xref` would return."
 msgstr ""
+"该方法必须返回一个列表(可能为空)的元组 ``('domain:role', newnode)``, 其中 ``'domain:role'`` 是一个可以创建相同引用的角色的名称, 例如 ``'py:func'``. ``newnode`` 是什么 :meth:`resolve_xref` 会返回。"
 
 #: of sphinx.domains.Domain.resolve_xref:1
 msgid "Resolve the pending_xref *node* with the given *typ* and *target*."
-msgstr ""
+msgstr "使用给定的* type *和* target *解析挂起的外部参照*节点*。"
 
 #: of sphinx.domains.Domain.resolve_xref:3
 msgid ""
 "This method should return a new node, to replace the xref node, "
 "containing the *contnode* which is the markup content of the cross-"
 "reference."
-msgstr ""
+msgstr "此方法应返回一个新节点, 以替换xref节点, 其中包含 *contnode* , 它是交叉引用的标记内容。"
 
 #: of sphinx.domains.Domain.resolve_xref:7
 msgid ""
@@ -222,81 +243,85 @@ msgid ""
 "then given to the :event:`missing-reference` event, and if that yields no"
 " resolution, replaced by *contnode*."
 msgstr ""
+"如果找不到解决方案, 则无法返回;然后, 外部参照节点将被赋予:event:`missing-reference`事件, 如果没有产生分辨率, 则替换为 "
+"*contnode*."
 
 #: of sphinx.domains.Domain.resolve_xref:11
 msgid ""
 "The method can also raise :exc:`sphinx.environment.NoUri` to suppress the"
 " :event:`missing-reference` event being emitted."
 msgstr ""
+"该方法还可以引发 :exc:`sphinx.environment.NoUri` 来抑制 :event:`missing-reference` "
+"事件被发出。"
 
 #: of sphinx.domains.Domain.role:1
 msgid ""
 "Return a role adapter function that always gives the registered role its "
 "full name ('domain:name') as the first argument."
-msgstr ""
+msgstr "返回角色适配器函数, 该函数始终为注册角色提供其全名('domain:name')作为第一个参数。"
 
 #: of sphinx.domains.Domain.dangling_warnings:1
 msgid "role name -> a warning message if reference is missing"
-msgstr ""
+msgstr "角色名称 - >如果缺少引用, 则显示警告消息"
 
 #: of sphinx.domains.Domain.data:1
 msgid "data value"
-msgstr ""
+msgstr "data value"
 
 #: of sphinx.domains.Domain.data_version:1
 msgid "data version, bump this when the format of `self.data` changes"
-msgstr ""
+msgstr "数据版本, 当 `self.data` 的格式发生变化时, 请对此进行修改"
 
 #: of sphinx.domains.Domain.directives:1
 msgid "directive name -> directive class"
-msgstr ""
+msgstr "指令名称 - >指令类"
 
 #: of sphinx.domains.Domain.enumerable_nodes:1
 msgid "node_class -> (enum_node_type, title_getter)"
-msgstr ""
+msgstr "node_class -> (enum_node_type, title_getter)"
 
 #: of sphinx.domains.Domain.indices:1
 msgid "a list of Index subclasses"
-msgstr ""
+msgstr "索引子类列表"
 
 #: of sphinx.domains.Domain.initial_data:1
 msgid "data value for a fresh environment"
-msgstr ""
+msgstr "新环境的数据价值"
 
 #: of sphinx.domains.Domain.label:1
 msgid "domain label: longer, more descriptive (used in messages)"
-msgstr ""
+msgstr "域名标签:更长, 更具描述性(用于邮件)"
 
 #: of sphinx.domains.Domain.name:1
 msgid "domain name: should be short, but unique"
-msgstr ""
+msgstr "域名:应该简短, 但要独一无二"
 
 #: of sphinx.domains.Domain.object_types:1
 msgid "type (usually directive) name -> ObjType instance"
-msgstr ""
+msgstr "type(通常是指令) name -> ObjType 实例"
 
 #: of sphinx.domains.Domain.roles:1
 msgid "role name -> role callable"
-msgstr ""
+msgstr "角色名称 -> 角色可调用"
 
 #: of sphinx.domains.ObjType:1
 msgid ""
 "An ObjType is the description for a type of object that a domain can "
 "document.  In the object_types attribute of Domain subclasses, object "
 "type names are mapped to instances of this class."
-msgstr ""
+msgstr "ObjType是域可以记录的对象类型的描述。在Domain子类的 object_types 属性中, 对象类型名称映射到此类的实例。"
 
 #: of sphinx.domains.ObjType:5
 msgid "Constructor arguments:"
-msgstr ""
+msgstr "构造函数参数:"
 
 #: of sphinx.domains.ObjType:7
 msgid "*lname*: localized name of the type (do not include domain name)"
-msgstr ""
+msgstr "*lname*: 类型的本地化名称(不包括域名)"
 
 #: of sphinx.domains.ObjType:8
 msgid "*roles*: all the roles that can refer to an object of this type"
-msgstr ""
+msgstr "*roles*: 可以引用此类对象的所有角色"
 
 #: of sphinx.domains.ObjType:9
 msgid ""
@@ -304,26 +329,28 @@ msgid ""
 "which defines the object's priority in the full-text search index, see "
 ":meth:`Domain.get_objects()`."
 msgstr ""
+"*attrs*: 对象属性 - 目前只有\\“searchprio \\”是已知的, 它定义了全文搜索索引中对象的优先级, 参见 "
+":meth:`Domain.get_objects()`."
 
 #: of sphinx.domains.Index:1
 msgid ""
 "An Index is the description for a domain-specific index.  To add an index"
 " to a domain, subclass Index, overriding the three name attributes:"
-msgstr ""
+msgstr "索引是特定于域的索引的描述。要向域添加索引, 请将索引子类化, 覆盖三个名称属性:"
 
 #: of sphinx.domains.Index:4
 msgid "`name` is an identifier used for generating file names."
-msgstr ""
+msgstr "`name` 是用于生成文件名的标识符。"
 
 #: of sphinx.domains.Index:5
 msgid "`localname` is the section title for the index."
-msgstr ""
+msgstr "`localname` 是索引的节标题。"
 
 #: of sphinx.domains.Index:6
 msgid ""
 "`shortname` is a short name for the index, for use in the relation bar in"
 " HTML output.  Can be empty to disable entries in the relation bar."
-msgstr ""
+msgstr "`shortname` 是索引的简称, 用于HTML输出中的关系栏。可以为空以禁用关系栏中的条目。"
 
 #: of sphinx.domains.Index:9
 msgid ""
@@ -331,32 +358,36 @@ msgid ""
 "your domain's `indices` list.  Extensions can add indices to existing "
 "domains using :meth:`~sphinx.application.Sphinx.add_index_to_domain()`."
 msgstr ""
+"并提供 :meth:`generate()` 方法。然后, 将索引类添加到域的 `indices` 列表中。扩展可以使用 "
+":meth:`~sphinx.application.Sphinx.add_index_to_domain()` 为现有域添加索引。"
 
 #: of sphinx.domains.Index.generate:1
 msgid "Get entries for the index."
-msgstr ""
+msgstr "Get entries for the index."
 
 #: of sphinx.domains.Index.generate:3
+#, fuzzy
 msgid "If ``docnames`` is given, restrict to entries referring to these docnames."
-msgstr ""
+msgstr "如果给出 ``docnames`` , 则限制引用这些文档名的条目。"
 
 #: of sphinx.domains.Index.generate:6
 msgid "The return value is a tuple of ``(content, collapse)``:"
-msgstr ""
+msgstr "The return value is a tuple of ``(content, collapse)``:"
 
 #: of sphinx.domains.Index.generate:10
 msgid "``collapse``"
-msgstr ""
+msgstr "``collapse``"
 
 #: of sphinx.domains.Index.generate:9
+#, fuzzy
 msgid ""
 "A boolean that determines if sub-entries should start collapsed (for "
 "output formats that support collapsing sub-entries)."
-msgstr ""
+msgstr "一个布尔值, 用于确定子条目是否应该开始折叠(对于支持折叠子条目的输出格式)。"
 
 #: of sphinx.domains.Index.generate:45
 msgid "``content``:"
-msgstr ""
+msgstr "``content``:"
 
 #: of sphinx.domains.Index.generate:13
 msgid ""
@@ -365,67 +396,170 @@ msgid ""
 "``entries`` is a sequence of single entries. Each entry is a sequence "
 "``[name, subtype, docname, anchor, extra, qualifier, descr]``. The items "
 "in this sequence have the following meaning:"
-msgstr ""
+msgstr "一系列 ``(letter，entries)`` 元组，其中 ``letter`` 是给定 ``entries`` 的 \"heading\", 通常是起始字母, ``entries`` 是一个序列单个条目。 每个条目都是一个序列 ``[name，subtype，docname，anchor，extra，qualifier，descr]``. 此序列中的项目具有以下含义:"
 
 #: of sphinx.domains.Index.generate:20
+#, fuzzy
 msgid "The name of the index entry to be displayed."
-msgstr ""
+msgstr "要显示的索引条目的名称。"
 
 #: of sphinx.domains.Index.generate:30
 msgid "``subtype``"
-msgstr ""
+msgstr "``subtype``"
 
 #: of sphinx.domains.Index.generate:23
 msgid "The sub-entry related type. One of:"
-msgstr ""
+msgstr "子条目相关类型。之一:"
 
 #: of sphinx.domains.Index.generate:26
 msgid "A normal entry."
-msgstr ""
+msgstr "正常进入。"
 
 #: of sphinx.domains.Index.generate:28
 msgid "An entry with sub-entries."
-msgstr ""
+msgstr "包含子条目的条目。"
 
 #: of sphinx.domains.Index.generate:30
 msgid "A sub-entry."
-msgstr ""
+msgstr "一个子条目。"
 
 #: of sphinx.domains.Index.generate:33
+#, fuzzy
 msgid "*docname* where the entry is located."
-msgstr ""
+msgstr "*docname* 条目所在的位置。"
 
 #: of sphinx.domains.Index.generate:36
+#, fuzzy
 msgid "Anchor for the entry within ``docname``"
-msgstr ""
+msgstr "锚定 ``docname`` 中的条目"
 
 #: of sphinx.domains.Index.generate:39
 msgid "``extra``"
-msgstr ""
+msgstr "``extra``"
 
 #: of sphinx.domains.Index.generate:39
+#, fuzzy
 msgid "Extra info for the entry."
-msgstr ""
+msgstr "该条目的额外信息。"
 
 #: of sphinx.domains.Index.generate:42
 msgid "``qualifier``"
-msgstr ""
+msgstr "``qualifier``"
 
 #: of sphinx.domains.Index.generate:42
+#, fuzzy
 msgid "Qualifier for the description."
-msgstr ""
+msgstr "描述限定符。"
 
 #: of sphinx.domains.Index.generate:45
 msgid "``descr``"
-msgstr ""
+msgstr "``descr``"
 
 #: of sphinx.domains.Index.generate:45
+#, fuzzy
 msgid "Description for the entry."
-msgstr ""
+msgstr "条目说明。"
 
 #: of sphinx.domains.Index.generate:47
+#, fuzzy
 msgid ""
 "Qualifier and description are not rendered for some output formats such "
 "as LaTeX."
-msgstr ""
+msgstr "对于某些输出格式(如LaTeX), 不会呈现限定符和描述。"
+
+#~ msgid "Return an iterable of \"object descriptions\"."
+#~ msgstr "返回一个可迭代的 \"对象描述\"."
+
+#~ msgid "``name``"
+#~ msgstr "``name``"
+
+#~ msgid "``dispname``"
+#~ msgstr "``dispname``"
+
+#~ msgid "``type``"
+#~ msgstr "``type``"
+
+#~ msgid "``docname``"
+#~ msgstr "``docname``"
+
+#~ msgid "``anchor``"
+#~ msgstr "``anchor``"
+
+#~ msgid "``priority``"
+#~ msgstr "``priority``"
+
+#~ msgid "``1``"
+#~ msgstr "``1``"
+
+#~ msgid "``0``"
+#~ msgstr "``0``"
+
+#~ msgid "``2``"
+#~ msgstr "``2``"
+
+#~ msgid "``-1``"
+#~ msgstr "``-1``"
+
+#~ msgid "Get entries for the index."
+#~ msgstr "获取索引的条目。"
+
+#~ msgid "The return value is a tuple of ``(content, collapse)``:"
+#~ msgstr "返回值是 ``(content, collapse)`` 的元组:"
+
+#~ msgid "``collapse``"
+#~ msgstr "``collapse``"
+
+#~ msgid "``content``:"
+#~ msgstr "``content``:"
+
+#~ msgid "``subtype``"
+#~ msgstr "``subtype``"
+
+#~ msgid "The sub-entry related type. One of:"
+#~ msgstr "子条目相关类型。之一:"
+
+#~ msgid "A normal entry."
+#~ msgstr "正常进入。"
+
+#~ msgid "An entry with sub-entries."
+#~ msgstr "包含子条目的条目。"
+
+#~ msgid "A sub-entry."
+#~ msgstr "一个子条目。"
+
+#~ msgid "``extra``"
+#~ msgstr "``extra``"
+
+#~ msgid "``qualifier``"
+#~ msgstr "``qualifier``"
+
+#~ msgid "``descr``"
+#~ msgstr "``descr``"
+
+#~ msgid ""
+#~ "*content* is a sequence of ``(letter,"
+#~ " entries)`` tuples, where *letter* is "
+#~ "the \"heading\" for the given *entries*,"
+#~ " usually the starting letter."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*entries* is a sequence of single "
+#~ "entries, where a single entry is a"
+#~ " sequence ``[name, subtype, docname, "
+#~ "anchor, extra, qualifier, descr]``. The "
+#~ "items in this sequence have the "
+#~ "following meaning:"
+#~ msgstr ""
+#~ "一系列 ``(letter, entries)`` 元组, 其中 ``letter`` 是给定"
+#~ " ``entries`` 的 \"heading\" , 通常是起始字母, ``entries``"
+#~ " 是一个序列单个条目。每个条目都是一个序列 ``[name, subtype, docname,"
+#~ " anchor, extra, qualifier, descr]`` "
+#~ "。此序列中的项目具有以下含义:"
+
+#~ msgid ""
+#~ "`subtype` -- sub-entry related type: "
+#~ "0 -- normal entry 1 -- entry "
+#~ "with sub-entries 2 -- sub-entry"
+#~ msgstr ""
 

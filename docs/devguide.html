@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Sphinx开发人员指南 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>Sphinx开发人员指南 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="genindex.html" />
@@ -102,6 +102,9 @@
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -174,9 +177,7 @@
 <h1>Sphinx开发人员指南<a class="headerlink" href="#sphinx-developer-s-guide" title="永久链接至标题">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Abstract</p>
-<p>This document describes the development process of Sphinx, a documentation
-system used by developers to document systems used by other developers to
-develop other systems that may also be documented using Sphinx.</p>
+<p>本文档描述了Sphinx的开发过程，Sphinx是开发人员用来记录其他开发人员用于开发其他系统的系统的文档系统，这些系统也可以使用Sphinx进行记录。</p>
 </div>
 <div class="contents local topic" id="id1">
 <ul class="simple">
@@ -199,58 +200,41 @@ develop other systems that may also be documented using Sphinx.</p>
 <li><p><a class="reference internal" href="#unit-testing" id="id14">单元测试</a></p></li>
 </ul>
 </div>
-<p>The Sphinx source code is managed using Git and is hosted on GitHub.</p>
+<p>Sphinx源代码使用Git进行管理，并托管在GitHub上。</p>
 <blockquote>
 <div><p>git clone git://github.com/sphinx-doc/sphinx</p>
 </div></blockquote>
-<p class="rubric">Community</p>
+<p class="rubric">社区</p>
 <dl class="simple">
-<dt>sphinx-users &lt;<a class="reference external" href="mailto:sphinx-users&#37;&#52;&#48;googlegroups&#46;com">sphinx-users<span>&#64;</span>googlegroups<span>&#46;</span>com</a>&gt;</dt><dd><p>Mailing list for user support.</p>
+<dt>sphinx-users &lt;<a class="reference external" href="mailto:sphinx-users&#37;&#52;&#48;googlegroups&#46;com">sphinx-users<span>&#64;</span>googlegroups<span>&#46;</span>com</a>&gt;</dt><dd><p>用户支持的邮件列表。</p>
 </dd>
-<dt>sphinx-dev &lt;<a class="reference external" href="mailto:sphinx-dev&#37;&#52;&#48;googlegroups&#46;com">sphinx-dev<span>&#64;</span>googlegroups<span>&#46;</span>com</a>&gt;</dt><dd><p>Mailing list for development related discussions.</p>
+<dt>sphinx-dev &lt;<a class="reference external" href="mailto:sphinx-dev&#37;&#52;&#48;googlegroups&#46;com">sphinx-dev<span>&#64;</span>googlegroups<span>&#46;</span>com</a>&gt;</dt><dd><p>发展相关讨论的邮件列表。</p>
 </dd>
-<dt>#sphinx-doc on irc.freenode.net</dt><dd><p>IRC channel for development questions and user support.</p>
+<dt>#sphinx-doc on irc.freenode.net</dt><dd><p>IRC频道用于开发问题和用户支持。</p>
 </dd>
 </dl>
 <div class="section" id="bug-reports-and-feature-requests">
 <h2><a class="toc-backref" href="#id4">错误报告和功能请求</a><a class="headerlink" href="#bug-reports-and-feature-requests" title="永久链接至标题">¶</a></h2>
-<p>If you have encountered a problem with Sphinx or have an idea for a new
-feature, please submit it to the <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues">issue tracker</a> on GitHub or discuss it
-on the <a class="reference external" href="mailto:sphinx-dev&#37;&#52;&#48;googlegroups&#46;com">sphinx-dev</a> mailing list.</p>
-<p>For bug reports, please include the output produced during the build process
-and also the log file Sphinx creates after it encounters an unhandled
-exception.  The location of this file should be shown towards the end of the
-error message.</p>
-<p>Including or providing a link to the source files involved may help us fix the
-issue.  If possible, try to create a minimal project that produces the error
-and post that instead.</p>
+<p>如果您遇到了Sphinx的问题或者对新功能有所了解，请将其提交给GitHub上的 <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues">issue tracker</a> 或在 <a class="reference external" href="mailto:sphinx-dev&#37;&#52;&#48;googlegroups&#46;com">sphinx-dev</a> 邮件列表中进行讨论。</p>
+<p>对于错误报告，请包括构建过程中产生的输出以及Sphinx遇到未处理异常后创建的日志文件。应在错误消息的末尾显示此文件的位置。</p>
+<p>包含或提供所涉及的源文件的链接可以帮助我们解决问题。如果可能的话，尝试创建一个产生错误的最小项目，然后发布它。</p>
 </div>
 <div class="section" id="contributing-to-sphinx">
 <h2><a class="toc-backref" href="#id5">为Sphinx做贡献</a><a class="headerlink" href="#contributing-to-sphinx" title="永久链接至标题">¶</a></h2>
-<p>The recommended way for new contributors to submit code to Sphinx is to fork
-the repository on GitHub and then submit a pull request after
-committing the changes.  The pull request will then need to be approved by one
-of the core developers before it is merged into the main repository.</p>
+<p>新贡献者向Sphinx提交代码的推荐方法是在GitHub上分割存储库，然后在提交更改后提交拉取请求。然后，在将请求合并到主存储库之前，需要由其中一个核心开发人员批准。</p>
 <ol class="arabic simple">
-<li><p>Check for open issues or open a fresh issue to start a discussion around a
-feature idea or a bug.</p></li>
-<li><p>If you feel uncomfortable or uncertain about an issue or your changes, feel
-free to email the <em>sphinx-dev</em> mailing list.</p></li>
-<li><p>Fork <a class="reference external" href="https://github.com/sphinx-doc/sphinx">the repository</a> on GitHub to start making your changes to the
-<code class="docutils literal notranslate"><span class="pre">master</span></code> branch for next MAJOR version, or <code class="docutils literal notranslate"><span class="pre">X.Y</span></code> branch for next
-MINOR version (see <a class="reference internal" href="#branch-model">Branch Model</a>).</p></li>
-<li><p>Write a test which shows that the bug was fixed or that the feature works
-as expected.</p></li>
-<li><p>Send a pull request and bug the maintainer until it gets merged and
-published. Make sure to add yourself to <a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/master/AUTHORS">AUTHORS</a> and the change to
-<a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/master/CHANGES">CHANGES</a>.</p></li>
+<li><p>检查未解决的问题或打开一个新问题，以围绕功能创意或错误开始讨论。</p></li>
+<li><p>如果您对某个问题或更改感到不安或不确定，请随时给 <em>sphinx-dev</em> 邮件列表发送电子邮件。</p></li>
+<li><p>在GitHub上使用 <a class="reference external" href="https://github.com/sphinx-doc/sphinx">the repository</a> 来开始对下一个 MAJOR 版本的 <code class="docutils literal notranslate"><span class="pre">master</span></code> 分支进行更改，或者对下一个MINOR版本进行 <code class="docutils literal notranslate"><span class="pre">X.Y</span></code> 分支(参见 <a class="reference internal" href="#branch-model">Branch Model</a>)。</p></li>
+<li><p>编写一个测试，显示错误已修复或该功能按预期工作。</p></li>
+<li><p>发送拉取请求并对维护者提出错误，直到它被合并并发布。 确保将自己添加到 <a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/master/AUTHORS">AUTHORS</a> 并将更改添加到 <a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/master/CHANGES">CHANGES</a> 。</p></li>
 </ol>
 <div class="section" id="getting-started">
 <h3><a class="toc-backref" href="#id6">入门</a><a class="headerlink" href="#getting-started" title="永久链接至标题">¶</a></h3>
-<p>These are the basic steps needed to start developing on Sphinx.</p>
+<p>这些是开始在Sphinx上开发所需的基本步骤。</p>
 <ol class="arabic">
 <li><p>在GitHub上创建一个帐户。</p></li>
-<li><p>Fork the main Sphinx repository (<a class="reference external" href="https://github.com/sphinx-doc/sphinx">sphinx-doc/sphinx</a>) using the GitHub interface.</p></li>
+<li><p>使用GitHub接口分叉主要的Sphinx存储库(<a class="reference external" href="https://github.com/sphinx-doc/sphinx">sphinx-doc/sphinx</a>)。</p></li>
 <li><p>将分叉的存储库克隆到您的计算机。</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/USERNAME/sphinx</span>
 <span class="go">cd sphinx</span>
@@ -259,20 +243,15 @@ published. Make sure to add yourself to <a class="reference external" href="http
 </li>
 <li><p>签出适当的分支。</p>
 <p>Sphinx采用语义版本2.0.0 (refs: <a class="reference external" href="https://semver.org/">https://semver.org/</a> ).</p>
-<p>For changes that preserves backwards-compatibility of API and features,
-they should be included in the next MINOR release, use the <code class="docutils literal notranslate"><span class="pre">X.Y</span></code> branch.</p>
+<p>对于保留API和功能的向后兼容性的更改，它们应该包含在下一个MINOR版本中，使用 <code class="docutils literal notranslate"><span class="pre">X.Y</span></code> 分支。:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout X.Y</span>
 </pre></div>
 </div>
-<p>For incompatible or other substantial changes that should wait until the
-next MAJOR release, use the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
-<p>For urgent release, a new PATCH branch must be branched from the newest
-release tag (see <a class="reference internal" href="#branch-model">Branch Model</a> for detail).</p>
+<p>对于应该等到下一个MAJOR版本的不兼容或其他实质性更改，请使用 <code class="docutils literal notranslate"><span class="pre">master</span></code> 分支。</p>
+<p>对于紧急发布，必须从最新的发布标记分支新的PATCH分支(有关详细信息，请参阅`Branch Model`_)。</p>
 </li>
 <li><p>设置虚拟环境。</p>
-<p>This is not necessary for unit testing, thanks to <code class="docutils literal notranslate"><span class="pre">tox</span></code>, but it is
-necessary if you wish to run <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> locally or run unit tests
-without the help of <code class="docutils literal notranslate"><span class="pre">tox</span></code>.</p>
+<p>这对于单元测试来说不是必需的，这要归功于 <code class="docutils literal notranslate"><span class="pre">tox</span></code> ，但是如果你想在本地运行 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 或者在没有 <code class="docutils literal notranslate"><span class="pre">tox</span></code> 的帮助下运行单元测试，这是必要的。:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">virtualenv ~/.venv</span>
 <span class="go">. ~/.venv/bin/activate</span>
 <span class="go">pip install -e .</span>
@@ -288,8 +267,7 @@ without the help of <code class="docutils literal notranslate"><span class="pre"
 <p>有关使用代码的提示，请参阅 <a class="reference internal" href="#coding-guide">Coding Guide</a>.</p>
 </li>
 <li><p>测试，测试，测试。</p>
-<p>Testing is best done through <code class="docutils literal notranslate"><span class="pre">tox</span></code>, which provides a number of targets and
-allows testing against multiple different Python environments:</p>
+<p>测试最好通过 <code class="docutils literal notranslate"><span class="pre">tox</span></code> 来完成，它提供了许多目标，并允许针对多种不同的Python环境进行测试:</p>
 <ul>
 <li><p>列出所有可能的 targets:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tox -av</span>
@@ -301,8 +279,7 @@ allows testing against multiple different Python environments:</p>
 </pre></div>
 </div>
 </li>
-<li><p>To run unit tests for a specific Python version and turn on deprecation
-warnings on so they’re shown in the test output:</p>
+<li><p>要运行特定Python版本的单元测试并启用弃用警告，以便它们显示在测试输出中:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PYTHONWARNINGS=all tox -e py36</span>
 </pre></div>
 </div>
@@ -313,8 +290,7 @@ warnings on so they’re shown in the test output:</p>
 </pre></div>
 </div>
 </li>
-<li><p>Arguments to <code class="docutils literal notranslate"><span class="pre">pytest</span></code> can be passed via <code class="docutils literal notranslate"><span class="pre">tox</span></code>, e.g. in order to run a
-particular test:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> 的参数可以通过 <code class="docutils literal notranslate"><span class="pre">tox</span></code> 传递，例如为了进行特定的测试:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tox -e py36 tests/test_module.py::test_new_feature</span>
 </pre></div>
 </div>
@@ -329,8 +305,7 @@ particular test:</p>
 </pre></div>
 </div>
 </li>
-<li><p>To run JavaScript tests with <a class="reference external" href="https://karma-runner.github.io">Karma</a>,
-execute the following commands (requires <a class="reference external" href="https://nodejs.org">Node.js</a>):</p>
+<li><p>要使用 <a class="reference external" href="https://karma-runner.github.io">Karma</a> 运行JavaScript测试，请执行以下命令(需要 <a class="reference external" href="https://nodejs.org">Node.js</a>):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">npm install</span>
 <span class="go">npm run test</span>
 </pre></div>
@@ -341,122 +316,77 @@ execute the following commands (requires <a class="reference external" href="htt
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install .[test]</span>
 </pre></div>
 </div>
-<p>New unit tests should be included in the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory where
-necessary:</p>
+<p>必要时，新的单元测试应包含在 <code class="docutils literal notranslate"><span class="pre">tests</span></code> 目录中:</p>
 <ul class="simple">
-<li><p>For bug fixes, first add a test that fails without your changes and passes
-after they are applied.</p></li>
-<li><p>Tests that need a <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> run should be integrated in one of the
-existing test modules if possible.  New tests that to <code class="docutils literal notranslate"><span class="pre">&#64;with_app</span></code> and
-then <code class="docutils literal notranslate"><span class="pre">build_all</span></code> for a few assertions are not good since <em>the test suite
-should not take more than a minute to run</em>.</p></li>
+<li><p>对于错误修复，首先添加一个在没有更改的情况下失败的测试，并在应用后通过。</p></li>
+<li><p>如果可能的话，需要将 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 运行的测试集成到现有测试模块中。  对于 <code class="docutils literal notranslate"><span class="pre">&#64;with_app</span></code> 然后 <code class="docutils literal notranslate"><span class="pre">build_all</span></code> 进行一些断言的新测试并不好，因为 <em>测试套件运行时间不应超过一分钟</em> 。</p></li>
 </ul>
 </li>
-<li><p>Please add a bullet point to <code class="file docutils literal notranslate"><span class="pre">CHANGES</span></code> if the fix or feature is not
-trivial (small doc updates, typo fixes).  Then commit:</p>
+<li><p>如果修复或功能不重要(小文档更新，拼写错误修复)，请添加一个项目符号 <code class="file docutils literal notranslate"><span class="pre">CHANGES</span></code> 。  然后提交:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git commit -m &#39;#42: Add useful new feature that does this.&#39;</span>
 </pre></div>
 </div>
-<p>GitHub recognizes certain phrases that can be used to automatically
-update the issue tracker.</p>
+<p>GitHub识别可用于自动更新问题跟踪器的某些短语。</p>
 <p>例如:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git commit -m &#39;Closes #42: Fix invalid markup in docstring of Foo.bar.&#39;</span>
 </pre></div>
 </div>
-<p>would close issue #42.</p>
+<p>会关闭第42期。</p>
 </li>
-<li><p>Push changes in the branch to your forked repository on GitHub.</p>
+<li><p>将分支中的更改推送到GitHub上的分叉存储库。</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push origin feature-xyz</span>
 </pre></div>
 </div>
 </li>
-<li><p>Submit a pull request from your branch to the respective branch (<code class="docutils literal notranslate"><span class="pre">master</span></code>
-or <code class="docutils literal notranslate"><span class="pre">X.Y</span></code>).</p></li>
-<li><p>Wait for a core developer to review your changes.</p></li>
+<li><p>从您的分支机构向相应的分支机构提交拉取请求(<code class="docutils literal notranslate"><span class="pre">master</span></code> 或 <code class="docutils literal notranslate"><span class="pre">X.Y</span></code>)。</p></li>
+<li><p>等待核心开发人员审核您的更改。</p></li>
 </ol>
 </div>
 <div class="section" id="core-developers">
 <h3><a class="toc-backref" href="#id7">核心开发人员</a><a class="headerlink" href="#core-developers" title="永久链接至标题">¶</a></h3>
-<p>The core developers of Sphinx have write access to the main repository.  They
-can commit changes, accept/reject pull requests, and manage items on the issue
-tracker.</p>
-<p>You do not need to be a core developer or have write access to be involved in
-the development of Sphinx.  You can submit patches or create pull requests
-from forked repositories and have a core developer add the changes for you.</p>
-<p>The following are some general guidelines for core developers:</p>
+<p>Sphinx的核心开发人员具有对主存储库的写访问权。他们可以提交更改，接受/拒绝拉取请求以及管理问题跟踪器上的项目。</p>
+<p>您不需要成为核心开发人员或具有写入权限以参与Sphinx的开发。您可以从分叉存储库提交补丁或创建拉取请求，并让核心开发人员为您添加更改。</p>
+<p>以下是核心开发人员的一些一般准则:</p>
 <ul class="simple">
-<li><p>Questionable or extensive changes should be submitted as a pull request
-instead of being committed directly to the main repository.  The pull
-request should be reviewed by another core developer before it is merged.</p></li>
-<li><p>Trivial changes can be committed directly but be sure to keep the repository
-in a good working state and that all tests pass before pushing your changes.</p></li>
-<li><p>When committing code written by someone else, please attribute the original
-author in the commit message and any relevant <code class="file docutils literal notranslate"><span class="pre">CHANGES</span></code> entry.</p></li>
+<li><p>应将可疑或广泛的更改作为拉取请求提交，而不是直接提交到主存储库. 拉取请求应在合并之前由其他核心开发人员审核。</p></li>
+<li><p>可以直接提交简单的更改，但一定要保持存储库处于良好的工作状态，并且在推送更改之前所有测试都会通过。</p></li>
+<li><p>在提交由其他人编写的代码时，请在提交消息和任何相关的 <code class="file docutils literal notranslate"><span class="pre">CHANGES</span></code> 条目中归因于原作者。</p></li>
 </ul>
 </div>
 <div class="section" id="locale-updates">
 <h3><a class="toc-backref" href="#id8">区域设置更新</a><a class="headerlink" href="#locale-updates" title="永久链接至标题">¶</a></h3>
-<p>The parts of messages in Sphinx that go into builds are translated into several
-locales.  The translations are kept as gettext <code class="docutils literal notranslate"><span class="pre">.po</span></code> files translated from the
-master template <code class="docutils literal notranslate"><span class="pre">sphinx/locale/sphinx.pot</span></code>.</p>
-<p>Sphinx uses <a class="reference external" href="http://babel.pocoo.org/en/latest/">Babel</a> to extract messages
-and maintain the catalog files.  It is integrated in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>:</p>
+<p>Sphinx中进入构建的消息部分被转换为多个语言环境。翻译保存为从主模板 <code class="docutils literal notranslate"><span class="pre">sphinx/locale/sphinx.pot</span></code> 翻译的 gettext <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件。</p>
+<p>Sphinx使用 <a class="reference external" href="http://babel.pocoo.org/en/latest/">Babel</a> 来提取消息并维护目录文件。  它集成在 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 中:</p>
 <ul class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">extract_messages</span></code> to update the <code class="docutils literal notranslate"><span class="pre">.pot</span></code> template.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">update_catalog</span></code> to update all existing language
-catalogs in <code class="docutils literal notranslate"><span class="pre">sphinx/locale/*/LC_MESSAGES</span></code> with the current messages in the
-template file.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">compile_catalog</span></code> to compile the <code class="docutils literal notranslate"><span class="pre">.po</span></code> files to binary
-<code class="docutils literal notranslate"><span class="pre">.mo</span></code> files and <code class="docutils literal notranslate"><span class="pre">.js</span></code> files.</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">extract_messages</span></code> 来更新 <code class="docutils literal notranslate"><span class="pre">.pot</span></code> 模板。</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">update_catalog</span></code> 使用模板文件中的当前消息更新 <code class="docutils literal notranslate"><span class="pre">sphinx/locale/*/LC_MESSAGES</span></code> 中的所有现有语言目录。</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">compile_catalog</span></code> 将 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件编译为二进制 <code class="docutils literal notranslate"><span class="pre">.mo</span></code> 文件和 <code class="docutils literal notranslate"><span class="pre">.js</span></code> 文件。</p></li>
 </ul>
-<p>When an updated <code class="docutils literal notranslate"><span class="pre">.po</span></code> file is submitted, run compile_catalog to commit both
-the source and the compiled catalogs.</p>
-<p>When a new locale is submitted, add a new directory with the ISO 639-1 language
-identifier and put <code class="docutils literal notranslate"><span class="pre">sphinx.po</span></code> in there.  Don’t forget to update the possible
-values for <a class="reference internal" href="usage/configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> in <code class="docutils literal notranslate"><span class="pre">doc/config.rst</span></code>.</p>
-<p>The Sphinx core messages can also be translated on <a class="reference external" href="https://www.transifex.com/">Transifex</a>.  There exists a client tool named <code class="docutils literal notranslate"><span class="pre">tx</span></code> in the
-Python package “transifex_client”, which can be used to pull translations in
-<code class="docutils literal notranslate"><span class="pre">.po</span></code> format from Transifex.  To do this, go to <code class="docutils literal notranslate"><span class="pre">sphinx/locale</span></code> and then run
-<code class="docutils literal notranslate"><span class="pre">tx</span> <span class="pre">pull</span> <span class="pre">-f</span> <span class="pre">-l</span> <span class="pre">LANG</span></code> where LANG is an existing language identifier.  It is
-good practice to run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">update_catalog</span></code> afterwards to make sure
-the <code class="docutils literal notranslate"><span class="pre">.po</span></code> file has the canonical Babel formatting.</p>
+<p>当提交更新的 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件时，运行 compile_catalog 以提交源和已编译的目录。</p>
+<p>提交新的语言环境时，添加一个带有ISO 639-1语言标识符的新目录，并在其中放置 <code class="docutils literal notranslate"><span class="pre">sphinx.po</span></code> 。不要忘记在 <code class="docutils literal notranslate"><span class="pre">doc/config.rst</span></code> 中更新 <a class="reference internal" href="usage/configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 的可能值。</p>
+<p>Sphinx核心消息也可以在 <a class="reference external" href="https://www.transifex.com/">Transifex</a> 上翻译。在Python包 “transifex_client” 中存在一个名为 <code class="docutils literal notranslate"><span class="pre">tx</span></code> 的客户端工具，它可用于从Transifex中以 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 格式提取翻译。  为此，请转到 <code class="docutils literal notranslate"><span class="pre">sphinx/locale</span></code> 然后运行 <code class="docutils literal notranslate"><span class="pre">tx</span> <span class="pre">pull</span> <span class="pre">-f</span> <span class="pre">-l</span> <span class="pre">LANG</span></code> ，其中LANG是现有的语言标识符。  最好在之后运行 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">update_catalog</span></code> 以确保 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件具有规范的Babel格式。</p>
 </div>
 </div>
 <div class="section" id="coding-guide">
 <h2><a class="toc-backref" href="#id9">编码指南</a><a class="headerlink" href="#coding-guide" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><p>Try to use the same code style as used in the rest of the project.  See the
-<a class="reference external" href="http://flask.pocoo.org/docs/styleguide/">Pocoo Styleguide</a> for more information.</p>
+<li><p>尝试使用与项目其余部分相同的代码样式。  有关更多信息，请参阅 <a class="reference external" href="http://flask.pocoo.org/docs/styleguide/">Pocoo Styleguide</a> 。</p>
 </li>
-<li><p>For non-trivial changes, please update the <code class="file docutils literal notranslate"><span class="pre">CHANGES</span></code> file.  If your
-changes alter existing behavior, please document this.</p></li>
-<li><p>New features should be documented.  Include examples and use cases where
-appropriate.  If possible, include a sample that is displayed in the
-generated output.</p></li>
-<li><p>When adding a new configuration variable, be sure to document it and update
-<code class="file docutils literal notranslate"><span class="pre">sphinx/cmd/quickstart.py</span></code> if it’s important enough.</p></li>
-<li><p>Add appropriate unit tests.</p></li>
+<li><p>对于非平凡的更改，请更新 <code class="file docutils literal notranslate"><span class="pre">CHANGES</span></code> 文件。如果您的更改改变了现有行为，请记录下来。</p></li>
+<li><p>应记录新功能。在适当的地方包括示例和用例。  如果可能，请包括生成的输出中显示的样本。</p></li>
+<li><p>添加新的配置变量时，请务必记录并更新 <code class="file docutils literal notranslate"><span class="pre">sphinx/cmd/quickstart.py</span></code> ，如果它足够重要的话。</p></li>
+<li><p>添加适当的单元测试。</p></li>
 </ul>
 <div class="section" id="debugging-tips">
 <h3><a class="toc-backref" href="#id10">调试技巧</a><a class="headerlink" href="#debugging-tips" title="永久链接至标题">¶</a></h3>
 <ul>
-<li><p>Delete the build cache before building documents if you make changes in the
-code by running the command <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> or using the
-<a class="reference internal" href="man/sphinx-build.html#cmdoption-sphinx-build-e"><code class="xref std std-option docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-E</span></code></a> option.</p></li>
-<li><p>Use the <a class="reference internal" href="man/sphinx-build.html#cmdoption-sphinx-build-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-P</span></code></a> option to run <code class="docutils literal notranslate"><span class="pre">pdb</span></code> on exceptions.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">node.pformat()</span></code> and <code class="docutils literal notranslate"><span class="pre">node.asdom().toxml()</span></code> to generate a printable
-representation of the document structure.</p></li>
-<li><p>Set the configuration variable <a class="reference internal" href="usage/configuration.html#confval-keep_warnings"><code class="xref std std-confval docutils literal notranslate"><span class="pre">keep_warnings</span></code></a> to <code class="docutils literal notranslate"><span class="pre">True</span></code> so
-warnings will be displayed in the generated output.</p></li>
-<li><p>Set the configuration variable <a class="reference internal" href="usage/configuration.html#confval-nitpicky"><code class="xref std std-confval docutils literal notranslate"><span class="pre">nitpicky</span></code></a> to <code class="docutils literal notranslate"><span class="pre">True</span></code> so that Sphinx
-will complain about references without a known target.</p></li>
-<li><p>Set the debugging options in the <a class="reference external" href="http://docutils.sourceforge.net/docs/user/config.html">Docutils configuration file</a>.</p></li>
-<li><p>JavaScript stemming algorithms in <code class="docutils literal notranslate"><span class="pre">sphinx/search/*.py</span></code> (except <code class="docutils literal notranslate"><span class="pre">en.py</span></code>) are
-generated by this
-<a class="reference external" href="https://github.com/shibukawa/snowball">modified snowballcode generator</a>.
-Generated <a class="reference external" href="https://jsx.github.io/">JSX</a> files are
-in <a class="reference external" href="https://github.com/shibukawa/snowball-stemmer.jsx">this repository</a>.
-You can get the resulting JavaScript files using the following command:</p>
+<li><p>如果通过运行命令 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> 或使用 <a class="reference internal" href="man/sphinx-build.html#cmdoption-sphinx-build-e"><code class="xref std std-option docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-E</span></code></a> 选项在代码中进行更改，则在构建文档之前删除构建缓存。</p></li>
+<li><p>使用 <a class="reference internal" href="man/sphinx-build.html#cmdoption-sphinx-build-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-P</span></code></a> 选项在异常上运行 <code class="docutils literal notranslate"><span class="pre">pdb</span></code> 。</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">node.pformat()</span></code> 和 <code class="docutils literal notranslate"><span class="pre">node.asdom().toxml()</span></code> 生成文档结构的可打印表示。</p></li>
+<li><p>将配置变量 <a class="reference internal" href="usage/configuration.html#confval-keep_warnings"><code class="xref std std-confval docutils literal notranslate"><span class="pre">keep_warnings</span></code></a> 设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，以便在生成的输出中显示警告。</p></li>
+<li><p>将配置变量 <a class="reference internal" href="usage/configuration.html#confval-nitpicky"><code class="xref std std-confval docutils literal notranslate"><span class="pre">nitpicky</span></code></a> 设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，以便Sphinx会抱怨没有已知目标的引用。</p></li>
+<li><p>在 <a class="reference external" href="http://docutils.sourceforge.net/docs/user/config.html">Docutils配置文件中设置调试选项</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx/search/*.py</span></code> (除了 <code class="docutils literal notranslate"><span class="pre">en.py</span></code>)中的JavaScript词干算法是由这个 <a class="reference external" href="https://github.com/shibukawa/snowball">修改过的snowballcode生成器</a> 生成的。 生成的 <a class="reference external" href="https://jsx.github.io/">JSX</a> 文件位于 <a class="reference external" href="https://github.com/shibukawa/snowball-stemmer.jsx">此存储库</a> 。您可以使用以下命令获取生成的JavaScript文件:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">npm install</span>
 <span class="go">node_modules/.bin/grunt build # -&gt; dest/*.global.js</span>
 </pre></div>
@@ -467,71 +397,41 @@ You can get the resulting JavaScript files using the following command:</p>
 </div>
 <div class="section" id="branch-model">
 <h2><a class="toc-backref" href="#id11">分支模型</a><a class="headerlink" href="#branch-model" title="永久链接至标题">¶</a></h2>
-<p>Sphinx project uses following branches for developing that conforms to Semantic
-Versioning 2.0.0 (refs: <a class="reference external" href="https://semver.org/">https://semver.org/</a> ).</p>
+<p>Sphinx项目使用以下分支进行开发，符合Semantic Versioning 2.0.0 (refs: <a class="reference external" href="https://semver.org/">https://semver.org/</a> ).</p>
 <dl>
-<dt><code class="docutils literal notranslate"><span class="pre">master</span></code></dt><dd><p>Development for MAJOR version.
-All changes including incompatible behaviors and public API updates are
-allowed.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">master</span></code></dt><dd><p>开发MAJOR版本。允许所有更改，包括不兼容的行为和公共API更新。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">X.Y</span></code></dt><dd><p>Where <code class="docutils literal notranslate"><span class="pre">X.Y</span></code> is the <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> release.  Used to maintain current
-MINOR release. All changes are allowed if the change preserves
-backwards-compatibility of API and features.</p>
-<p>Only the most recent <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> branch is currently retained. When a
-new MAJOR version is released, the old <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> branch will be
-deleted and replaced by an equivalent tag.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">X.Y</span></code></dt><dd><p>其中 <code class="docutils literal notranslate"><span class="pre">X.Y</span></code> 是 <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> 。用于维持当前的MINOR版本。如果更改保留了API和功能的向后兼容性，则允许所有更改。</p>
+<p>目前仅保留最新的 <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> 分支。当一个新的MAJOR版本发布时，旧的 <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> 分支将被删除并被等效标记取代。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">X.Y.Z</span></code></dt><dd><p>Where <code class="docutils literal notranslate"><span class="pre">X.Y.Z</span></code> is the <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code> release.  Only
-backwards-compatible bug fixes are allowed. In Sphinx project, PATCH
-version is used for urgent bug fix.</p>
-<p><code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code> branch will be branched from the <code class="docutils literal notranslate"><span class="pre">v</span></code> prefixed
-release tag (ex. make 2.3.1 that branched from v2.3.0) when a urgent
-release is needed. When new PATCH version is released, the branch will be
-deleted and replaced by an equivalent tag (ex. v2.3.1).</p>
+<dt><code class="docutils literal notranslate"><span class="pre">X.Y.Z</span></code></dt><dd><p>其中 <code class="docutils literal notranslate"><span class="pre">X.Y.Z</span></code> 是 <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code> 。只允许向后兼容的错误修复。在Sphinx项目中，PATCH版本用于紧急错误修复。</p>
+<p>当需要紧急释放时，<code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code> 分支将从 <code class="docutils literal notranslate"><span class="pre">v</span></code> 前缀释放标记(例如，从2.3版本分支的make 2.3.1)分支出来。当发布新的PATCH版本时，分支将被删除并替换为等效标记(例如v2.3.1)。</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="deprecating-a-feature">
 <h2><a class="toc-backref" href="#id12">弃用某个功能</a><a class="headerlink" href="#deprecating-a-feature" title="永久链接至标题">¶</a></h2>
-<p>There are a couple reasons that code in Sphinx might be deprecated:</p>
+<p>有几个原因导致Sphinx中的代码可能被弃用:</p>
 <ul class="simple">
-<li><p>If a feature has been improved or modified in a backwards-incompatible way,
-the old feature or behavior will be deprecated.</p></li>
-<li><p>Sometimes Sphinx will include a backport of a Python library that’s not
-included in a version of Python that Sphinx currently supports. When Sphinx
-no longer needs to support the older version of Python that doesn’t include
-the library, the library will be deprecated in Sphinx.</p></li>
+<li><p>如果某项功能以向后兼容的方式进行了改进或修改，则旧功能或行为将被弃用。</p></li>
+<li><p>有时，Sphinx将包含一个Python库的后端，该库未包含在Sphinx目前支持的Python版本中。当Sphinx不再需要支持不包含该库的旧版Python时，将在Sphinx中弃用该库。</p></li>
 </ul>
-<p>As the <a class="reference internal" href="#deprecation-policy"><span class="std std-ref">弃用政策</span></a> describes, the first release of Sphinx that
-deprecates a feature (<code class="docutils literal notranslate"><span class="pre">A.B</span></code>) should raise a <code class="docutils literal notranslate"><span class="pre">RemovedInSphinxXXWarning</span></code>
-(where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the Sphinx version where the feature will be removed) when the
-deprecated feature is invoked. Assuming we have good test coverage, these
-warnings are converted to errors when running the test suite with warnings
-enabled:</p>
+<p>正如 <a class="reference internal" href="#deprecation-policy"><span class="std std-ref">弃用政策</span></a> 所描述的，Sphinx的第一个版本弃用了一个特性(<code class="docutils literal notranslate"><span class="pre">AB</span></code>)应该引发一个 <code class="docutils literal notranslate"><span class="pre">RemovedInSphinxXXWarning</span></code> (其中 <code class="docutils literal notranslate"><span class="pre">XX</span></code> 是Sphinx版本的特征将被删除)调用已弃用的功能时。假设我们具有良好的测试覆盖率，则在运行启用了警告的测试套件时，这些警告会转换为错误:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest -Wall</span>
 </pre></div>
 </div>
-<p>Thus, when adding a <code class="docutils literal notranslate"><span class="pre">RemovedInSphinxXXWarning</span></code> you need to eliminate or
-silence any warnings generated when running the tests.</p>
+<p>因此，在添加 <code class="docutils literal notranslate"><span class="pre">RemovedInSphinxXXWarning</span></code> 时，您需要消除或消除运行测试时生成的任何警告。</p>
 </div>
 <div class="section" id="deprecation-policy">
 <span id="id3"></span><h2><a class="toc-backref" href="#id13">弃用政策</a><a class="headerlink" href="#deprecation-policy" title="永久链接至标题">¶</a></h2>
-<p>MAJOR and MINOR releases may deprecate certain features from previous
-releases. If a feature is deprecated in a release A.x, it will continue to
-work in all A.x.x versions (for all versions of x). It will continue to work
-in all B.x.x versions but raise deprecation warnings. Deprecated features
-will be removed at the C.0.0. It means the deprecated feature will work during
-2 MAJOR releases at least.</p>
-<p>So, for example, if we decided to start the deprecation of a function in
-Sphinx 2.x:</p>
+<p>MAJOR 和 MINOR版本可能会弃用先前版本中的某些功能。 如果在版本A.x中不推荐使用某个功能，它将继续适用于所有A.x.x版本(适用于所有版本的x)。 它将继续在所有B.x.x版本中工作，但会引发弃用警告。 不推荐使用的功能将在C.0.0中删除。这意味着已弃用的功能至少在2个MAJOR版本中有效。</p>
+<p>所以，例如，如果我们决定在Sphinx 2.x中开始弃用函数:</p>
 <ul class="simple">
-<li><p>Sphinx 2.x will contain a backwards-compatible replica of the function
-which will raise a <code class="docutils literal notranslate"><span class="pre">RemovedInSphinx40Warning</span></code>.</p></li>
-<li><p>Sphinx 3.x will still contain the backwards-compatible replica.</p></li>
-<li><p>Sphinx 4.0 will remove the feature outright.</p></li>
+<li><p>Sphinx 2.x将包含一个向后兼容的函数副本，它将引发一个 <code class="docutils literal notranslate"><span class="pre">RemovedInSphinx40Warning</span></code> 。</p></li>
+<li><p>Sphinx 3.x 仍将包含向后兼容的副本。</p></li>
+<li><p>Sphinx 4.0 将彻底删除该功能。</p></li>
 </ul>
-<p>The warnings are displayed by default. You can turn off display of these
-warnings with:</p>
+<p>默认情况下会显示警告。您可以使用以下命令关闭这些警告的显示:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">PYTHONWARNINGS=</span> <span class="pre">make</span> <span class="pre">html</span></code> (Linux/Mac)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHONWARNINGS=</span></code> and do <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> (Linux/Mac)</p></li>
@@ -540,22 +440,15 @@ warnings with:</p>
 </div>
 <div class="section" id="unit-testing">
 <h2><a class="toc-backref" href="#id14">单元测试</a><a class="headerlink" href="#unit-testing" title="永久链接至标题">¶</a></h2>
-<p>Sphinx has been tested with pytest runner. Sphinx developers write unit tests
-using pytest notation. Utility functions and pytest fixtures for testing are
-provided in <code class="docutils literal notranslate"><span class="pre">sphinx.testing</span></code>. If you are a developer of Sphinx extensions,
-you can write unit tests with using pytest. At this time, <code class="docutils literal notranslate"><span class="pre">sphinx.testing</span></code>
-will help your test implementation.</p>
-<p>How to use pytest fixtures that are provided by <code class="docutils literal notranslate"><span class="pre">sphinx.testing</span></code>?
-You can require <code class="docutils literal notranslate"><span class="pre">'sphinx.testing.fixtures'</span></code> in your test modules or
-<code class="docutils literal notranslate"><span class="pre">conftest.py</span></code> files like this:</p>
+<p>Sphinx已经过pytest runner的测试。 Sphinx开发人员使用pytest表示法编写单元测试。 用于测试的实用函数和pytest夹具在 <code class="docutils literal notranslate"><span class="pre">sphinx.testing</span></code> 中提供。 如果您是Sphinx扩展的开发人员，可以使用pytest编写单元测试。 这时， <code class="docutils literal notranslate"><span class="pre">sphinx.testing</span></code> 将帮助您进行测试。</p>
+<p>如何使用 <code class="docutils literal notranslate"><span class="pre">sphinx.testing</span></code> 提供的pytest灯具？您可以在测试模块中使用 <code class="docutils literal notranslate"><span class="pre">'sphinx.testing.fixtures'</span></code> 或像这样的 <code class="docutils literal notranslate"><span class="pre">conftest.py</span></code> 文件:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pytest_plugins = &#39;sphinx.testing.fixtures&#39;</span>
 </pre></div>
 </div>
-<p>If you want to know more detailed usage, please refer to <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code>
-and other <code class="docutils literal notranslate"><span class="pre">test_*.py</span></code> files under <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory.</p>
+<p>如果你想了解更详细的用法，请参考 <code class="docutils literal notranslate"><span class="pre">tests</span></code> 目录下的 <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code> 和其他 <code class="docutils literal notranslate"><span class="pre">test_*.py</span></code> 文件。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Prior to Sphinx - 1.5.2, Sphinx was running the test with nose.</p>
+<p>在Sphinx  -  1.5.2之前，Sphinx正在进行鼻子测试。</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">1.6 新版功能: </span><code class="docutils literal notranslate"><span class="pre">sphinx.testing</span></code> 作为实验.</p>
@@ -579,6 +472,9 @@ and other <code class="docutils literal notranslate"><span class="pre">test_*.py
           <a href="genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -594,7 +490,7 @@ and other <code class="docutils literal notranslate"><span class="pre">test_*.py
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

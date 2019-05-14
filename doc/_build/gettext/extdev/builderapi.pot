@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/cb9d9e59e\n"
+"Project-Id-Version: Sphinx 2.1.0+/e678b9c34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-17 15:00+0800\n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,31 +36,31 @@ msgstr ""
 msgid "These attributes should be set on builder classes:"
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.name:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.name:1
 msgid "The builder's name, for the -b command line option."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.format:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.format:1
 msgid "The builder's output format, or '' if no document output is produced."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.epilog:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.epilog:1
 msgid "The message emitted upon successful build completion. This can be a printf-style template string with the following keys: ``outdir``, ``project``"
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.supported_image_types:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.supported_image_types:1
 msgid "The list of MIME types of image formats supported by the builder. Image files are searched in the order in which they appear here."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.supported_remote_images:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.supported_remote_images:1
 msgid "The builder supports remote images or not."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.supported_data_uri_images:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.supported_data_uri_images:1
 msgid "The builder supports data URIs or not."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.default_translator_class:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.default_translator_class:1
 msgid "default translator class for the builder.  This can be overridden by :py:meth:`app.set_translator()`."
 msgstr ""
 
@@ -68,31 +68,31 @@ msgstr ""
 msgid "These methods are predefined and will be called from the application:"
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_relative_uri:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_relative_uri:1
 msgid "Return a relative URI between two source filenames."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_relative_uri:3
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_relative_uri:3
 msgid "May raise environment.NoUri if there's no way to return a sensible URI."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build_all:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build_all:1
 msgid "Build all source files."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build_specific:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build_specific:1
 msgid "Only rebuild as much as needed for changes in the *filenames*."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build_update:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build_update:1
 msgid "Only rebuild what was changed or added since last build."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build:1
 msgid "Main build method."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build:3
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.build:3
 msgid "First updates the environment, and then calls :meth:`write`."
 msgstr ""
 
@@ -100,39 +100,39 @@ msgstr ""
 msgid "These methods can be overridden in concrete builder classes:"
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.init:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.init:1
 msgid "Load necessary templates and perform initialization.  The default implementation does nothing."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_outdated_docs:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_outdated_docs:1
 msgid "Return an iterable of output files that are outdated, or a string describing what an update build will build."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_outdated_docs:4
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_outdated_docs:4
 msgid "If the builder does not output individual files corresponding to source files, return a string here.  If it does, return an iterable of those files that need to be written."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_target_uri:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_target_uri:1
 msgid "Return the target URI for a document name."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_target_uri:3
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.get_target_uri:3
 msgid "*typ* can be used to qualify the link characteristic for individual builders."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.prepare_writing:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.prepare_writing:1
 msgid "A place where you can add logic before :meth:`write_doc` is run"
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.write_doc:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.write_doc:1
 msgid "Where you actually write something to the filesystem."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.finish:1
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.finish:1
 msgid "Finish the building process."
 msgstr ""
 
-#: ../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.finish:3
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/builders/__init__.py:docstring of sphinx.builders.Builder.finish:3
 msgid "The default implementation does nothing."
 msgstr ""
 

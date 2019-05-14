@@ -19,55 +19,55 @@ msgstr ""
 
 #: ../../extdev/envapi.rst:2
 msgid "Build environment API"
-msgstr ""
+msgstr "构建环境API"
 
 #: ../../extdev/envapi.rst:8
 msgid "**Attributes**"
-msgstr ""
+msgstr "**属性**"
 
 #: ../../extdev/envapi.rst:12
 msgid "Reference to the :class:`.Sphinx` (application) object."
-msgstr ""
+msgstr "引用 :class:`.Sphinx` (应用程序) 对象。"
 
 #: ../../extdev/envapi.rst:16
 msgid "Reference to the :class:`.Config` object."
-msgstr ""
+msgstr "引用 :class:`.Config` 对象。"
 
 #: ../../extdev/envapi.rst:20
 msgid "Target project.  See :class:`.Project`."
-msgstr ""
+msgstr "目标项目。见 :class:`。Project` 。"
 
 #: ../../extdev/envapi.rst:24
 msgid "Source directory."
-msgstr ""
+msgstr "源目录。"
 
 #: ../../extdev/envapi.rst:28
 msgid "Directory for storing pickled doctrees."
-msgstr ""
+msgstr "存储酸洗 doctree 的目录。"
 
 #: ../../extdev/envapi.rst:32
 msgid "A set of all existing docnames."
-msgstr ""
+msgstr "一组所有现有的文档名称。"
 
 #: ../../extdev/envapi.rst:36
 msgid "Dictionary mapping docnames to \"metadata\" (see :ref:`metadata`)."
-msgstr ""
+msgstr "字典映射文档名称为 \"元数据\" (参见 :ref:`metadata`) 。"
 
 #: ../../extdev/envapi.rst:40
 msgid "Dictionary mapping docnames to the docutils node for their main title."
-msgstr ""
+msgstr "字典将docnames映射到docutils节点以获取其主标题。"
 
 #: of sphinx.environment.BuildEnvironment.docname:1
 msgid "Returns the docname of the document currently being parsed."
-msgstr ""
+msgstr "返回当前正在解析的文档的docname。"
 
 #: ../../extdev/envapi.rst:44
 msgid "**Utility methods**"
-msgstr ""
+msgstr "**实用方法**"
 
 #: of sphinx.environment.BuildEnvironment.doc2path:1
 msgid "Return the filename for the document name."
-msgstr ""
+msgstr "返回文档名称的文件名。"
 
 #: of sphinx.environment.BuildEnvironment.doc2path:3
 msgid ""
@@ -75,44 +75,44 @@ msgid ""
 "None, return relative path to self.srcdir. If *base* is a path string, "
 "return absolute path under that. If *suffix* is not None, add it instead "
 "of config.source_suffix."
-msgstr ""
+msgstr "如果 *base* 为True，则返回 self.srcdir 下的绝对路径。如果 *base* 为 None ，则返回 self.srcdir 的相对路径。 如果 *base* 是路径字符串，则返回其下的绝对路径。如果 *suffix* 不是None，则添加它而不是 config.source_suffix 。"
 
 #: of sphinx.environment.BuildEnvironment.relfn2path:1
 msgid ""
 "Return paths to a file referenced from a document, relative to "
 "documentation root and absolute."
-msgstr ""
+msgstr "返回从文档引用的文件的路径，相对于文档根目录和绝对路径。"
 
 #: of sphinx.environment.BuildEnvironment.relfn2path:4
 msgid ""
 "In the input \"filename\", absolute filenames are taken as relative to "
 "the source dir, while relative filenames are relative to the dir of the "
 "containing document."
-msgstr ""
+msgstr "在输入 \"filename\" 中，绝对文件名被视为相对于源目录，而相对文件名是相对于包含文档的目录。"
 
 #: of sphinx.environment.BuildEnvironment.note_dependency:1
 msgid "Add *filename* as a dependency of the current document."
-msgstr ""
+msgstr "添加 *filename* 作为当前文档的依赖项。"
 
 #: of sphinx.environment.BuildEnvironment.note_dependency:3
 msgid "This means that the document will be rebuilt if this file changes."
-msgstr ""
+msgstr "这意味着如果此文件更改，将重建文档。"
 
 #: of sphinx.environment.BuildEnvironment.note_dependency:5
 msgid "*filename* should be absolute or relative to the source directory."
-msgstr ""
+msgstr "*filename* 应该是绝对的或相对于源目录。"
 
 #: of sphinx.environment.BuildEnvironment.new_serialno:1
 msgid "Return a serial number, e.g. for index entry targets."
-msgstr ""
+msgstr "返回序列号，例如用于索引条目目标。"
 
 #: of sphinx.environment.BuildEnvironment.new_serialno:3
 msgid "The number is guaranteed to be unique in the current document."
-msgstr ""
+msgstr "该数字保证在当前文档中是唯一的。"
 
 #: of sphinx.environment.BuildEnvironment.note_reread:1
 msgid ""
 "Add the current document to the list of documents that will automatically"
 " be re-read at the next build."
-msgstr ""
+msgstr "将当前文档添加到将在下一次构建时自动重新读取的文档列表中。"
 

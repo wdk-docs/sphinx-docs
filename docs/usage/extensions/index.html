@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>扩展 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>扩展 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -102,6 +102,9 @@
           <a href="../../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -163,7 +166,7 @@
   <div class="section" id="extensions">
 <h1>扩展<a class="headerlink" href="#extensions" title="永久链接至标题">¶</a></h1>
 <p>由于许多项目需要在其文档中使用特殊功能，因此Sphinx允许在构建过程中添加 “extensions” ，每个项目都可以修改文档处理的几乎任何方面。</p>
-<p>本章介绍与Sphinx捆绑在一起的扩展。有关编写自己的扩展的API文档，请参阅 <a class="reference internal" href="../../extdev/index.html#dev-extensions"><span class="std std-ref">为Sphinx开发扩展</span></a> 。</p>
+<p>本章介绍与Sphinx捆绑在一起的扩展。有关编写自己的扩展的API文档，请参阅 <a class="reference internal" href="../../extdev/index.html#dev-extensions"><span class="std std-ref">开发扩展</span></a> 。</p>
 <div class="section" id="built-in-extensions">
 <h2>内置扩展<a class="headerlink" href="#built-in-extensions" title="永久链接至标题">¶</a></h2>
 <p>这些扩展是内置的，可以通过 <a class="reference internal" href="../configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置值中的相应条目激活:</p>
@@ -241,25 +244,6 @@
 <li class="toctree-l2"><a class="reference internal" href="viewcode.html#configuration">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="httpdomain.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code> — 用于记录HTTP API的Sphinx域</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#additional-configuration">附加配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#basic-usage">基本用法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#directives">指令</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="httpdomain.html#options">选项</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#resource-fields">资源字段</a></li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#roles">角色</a></li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-flask-exporting-api-reference-from-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code> — 从Flask应用程序导出API参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-flaskqref-quick-api-reference-for-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flaskqref</span></code> — Flask app的快速API参考</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="httpdomain.html#id138">基本用法</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-bottle-exporting-api-reference-from-bottle-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.bottle</span></code> — 从Bottle应用程序导出API参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-tornado-exporting-api-reference-from-tornado-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code> — 从Tornado应用程序导出API参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#author-and-license">作者和许可证</a></li>
-</ul>
-</li>
 </ul>
 </div>
 </div>
@@ -272,6 +256,29 @@
 <p>您可以在 <a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib">Sphinx Contrib</a> 存储库中找到用户贡献的几个扩展。它对任何想要公开维护扩展的人开放;只需发送一条要求写入权限的短消息。</p>
 <p>其他地方也有几个扩展。 <a class="reference external" href="https://sphinxext-survey.readthedocs.io/">Sphinx扩展调查</a> 和 <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">awesome-sphinxdoc</a> 包含一个全面的列表。</p>
 <p>如果您编写了一个您认为其他人会认为有用的扩展程序，或者您认为应该将其作为Sphinx的一部分包含在内，请写入项目邮件列表（<a class="reference external" href="https://groups.google.com/forum/#!forum/sphinx-dev">加入这里</a>）。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="httpdomain.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code> — 用于记录HTTP API的Sphinx域</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#additional-configuration">附加配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#basic-usage">基本用法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#directives">指令</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="httpdomain.html#options">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#resource-fields">资源字段</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#roles">角色</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-flask-exporting-api-reference-from-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code> — 从Flask应用程序导出API参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-flaskqref-quick-api-reference-for-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flaskqref</span></code> — Flask app的快速API参考</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="httpdomain.html#id4">基本用法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-bottle-exporting-api-reference-from-bottle-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.bottle</span></code> — 从Bottle应用程序导出API参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#sphinxcontrib-autohttp-tornado-exporting-api-reference-from-tornado-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code> — 从Tornado应用程序导出API参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="httpdomain.html#author-and-license">作者和许可证</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="where-to-put-your-own-extensions">
 <h3>在哪里放置自己的扩展？<a class="headerlink" href="#where-to-put-your-own-extensions" title="永久链接至标题">¶</a></h3>
 <p>项目本地的扩展应放在项目的目录结构中。相应地设置Python的模块搜索路径 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> ，以便Sphinx可以找到它们。例如，如果您的扩展名 <code class="docutils literal notranslate"><span class="pre">foo.py</span></code> 位于项目根目录的 <code class="docutils literal notranslate"><span class="pre">exts</span></code> 子目录中，则放入 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code></p>
@@ -300,6 +307,9 @@
           <a href="../../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -315,7 +325,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

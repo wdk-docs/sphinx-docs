@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>模板 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>模板 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="genindex.html" />
@@ -102,6 +102,9 @@
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -166,49 +169,24 @@
             
   <div class="section" id="templating">
 <span id="id1"></span><h1>模板<a class="headerlink" href="#templating" title="永久链接至标题">¶</a></h1>
-<p>Sphinx uses the <a class="reference external" href="http://jinja.pocoo.org">Jinja</a> templating engine for its HTML
-templates.  Jinja is a text-based engine, and inspired by Django templates, so
-anyone having used Django will already be familiar with it.  It also has
-excellent documentation for those who need to make themselves familiar with it.</p>
+<p>Sphinx使用 <a class="reference external" href="http://jinja.pocoo.org">Jinja</a> 模板引擎作为其HTML模板.  Jinja是一个基于文本的引擎, 受到Django模板的启发, 因此任何使用过Django的人都会熟悉它.  它还为那些需要熟悉它的人提供了出色的文档.</p>
 <div class="section" id="do-i-need-to-use-sphinx-s-templates-to-produce-html">
 <h2>我是否需要使用Sphinx的模板来生成HTML？<a class="headerlink" href="#do-i-need-to-use-sphinx-s-templates-to-produce-html" title="永久链接至标题">¶</a></h2>
-<p>不，您还有其他几种选择:</p>
+<p>不, 您还有其他几种选择:</p>
 <ul class="simple">
-<li><p>You can write a <a class="reference internal" href="extdev/appapi.html#sphinx.application.TemplateBridge" title="sphinx.application.TemplateBridge"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemplateBridge</span></code></a> subclass that
-calls your template engine of choice, and set the <a class="reference internal" href="usage/configuration.html#confval-template_bridge"><code class="xref std std-confval docutils literal notranslate"><span class="pre">template_bridge</span></code></a>
-configuration value accordingly.</p></li>
-<li><p>You can <a class="reference internal" href="extdev/builderapi.html#writing-builders"><span class="std std-ref">write a custom builder</span></a> that derives from
-<a class="reference internal" href="usage/builders/index.html#sphinx.builders.html.StandaloneHTMLBuilder" title="sphinx.builders.html.StandaloneHTMLBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">StandaloneHTMLBuilder</span></code></a> and calls your template
-engine of choice.</p></li>
-<li><p>You can use the <code class="xref py py-class docutils literal notranslate"><span class="pre">PickleHTMLBuilder</span></code> that produces
-pickle files with the page contents, and postprocess them using a custom tool,
-or use them in your Web application.</p></li>
+<li><p>你可以编写一个 <a class="reference internal" href="extdev/appapi.html#sphinx.application.TemplateBridge" title="sphinx.application.TemplateBridge"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemplateBridge</span></code></a> 子类来调用你选择的模板引擎, 并相应地设置 <a class="reference internal" href="usage/configuration.html#confval-template_bridge"><code class="xref std std-confval docutils literal notranslate"><span class="pre">template_bridge</span></code></a> 配置值.</p></li>
+<li><p>您可以 <a class="reference internal" href="extdev/builderapi.html#writing-builders"><span class="std std-ref">编写一个自定义构建器</span></a>, 它派生自 <a class="reference internal" href="usage/builders/index.html#sphinx.builders.html.StandaloneHTMLBuilder" title="sphinx.builders.html.StandaloneHTMLBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">StandaloneHTMLBuilder</span></code></a> 并调用您选择的模板引擎.</p></li>
+<li><p>您可以使用 <code class="xref py py-class docutils literal notranslate"><span class="pre">PickleHTMLBuilder</span></code> 生成带有页面内容的 pickle 文件, 并使用自定义工具对其进行后处理, 或者在Web应用程序中使用它们.</p></li>
 </ul>
 </div>
 <div class="section" id="jinja-sphinx-templating-primer">
 <h2>Jinja/Sphinx 模板入门<a class="headerlink" href="#jinja-sphinx-templating-primer" title="永久链接至标题">¶</a></h2>
-<p>The default templating language in Sphinx is Jinja.  It’s Django/Smarty inspired
-and easy to understand.  The most important concept in Jinja is <em class="dfn">template
-inheritance</em>, which means that you can overwrite only specific blocks within a
-template, customizing it while also keeping the changes at a minimum.</p>
-<p>To customize the output of your documentation you can override all the templates
-(both the layout templates and the child templates) by adding files with the
-same name as the original filename into the template directory of the structure
-the Sphinx quickstart generated for you.</p>
-<p>Sphinx will look for templates in the folders of <a class="reference internal" href="usage/configuration.html#confval-templates_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">templates_path</span></code></a>
-first, and if it can’t find the template it’s looking for there, it falls back
-to the selected theme’s templates.</p>
-<p>A template contains <strong>variables</strong>, which are replaced with values when the
-template is evaluated, <strong>tags</strong>, which control the logic of the template and
-<strong>blocks</strong> which are used for template inheritance.</p>
-<p>Sphinx’s <em>basic</em> theme provides base templates with a couple of blocks it will
-fill with data.  These are located in the <code class="file docutils literal notranslate"><span class="pre">themes/basic</span></code> subdirectory of
-the Sphinx installation directory, and used by all builtin Sphinx themes.
-Templates with the same name in the <a class="reference internal" href="usage/configuration.html#confval-templates_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">templates_path</span></code></a> override templates
-supplied by the selected theme.</p>
-<p>For example, to add a new link to the template area containing related links all
-you have to do is to add a new template called <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> with the
-following contents:</p>
+<p>Sphinx中的默认模板语言是Jinja. 这是 Django/Smarty 的灵感和易于理解.  Jinja中最重要的概念是 <em class="dfn">template inheritance</em> , 这意味着您只能覆盖模板中的特定块, 自定义它, 同时将更改保持在最低限度.</p>
+<p>要自定义文档的输出, 可以通过将与原始文件名同名的文件添加到Sphinx快速入门为您生成的结构的模板目录中来覆盖所有模板(布局模板和子模板).</p>
+<p>Sphinx将首先在 <a class="reference internal" href="usage/configuration.html#confval-templates_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">templates_path</span></code></a> 文件夹中查找模板, 如果找不到它正在寻找的模板, 它将回退到所选主题的模板.</p>
+<p>模板包含 <strong>variables</strong>: 在评估模板时将其替换为值, <strong>tags</strong>: 用于控制模板的逻辑, 以及 <strong>blocks</strong>: 用于模板继承.</p>
+<p>Sphinx的 <em>basic</em> 主题为基本模板提供了几个块, 它将填充数据. 它们位于Sphinx安装目录的 <code class="file docutils literal notranslate"><span class="pre">themes/basic</span></code> 子目录中, 并由所有内置Sphinx主题使用. 在 <a class="reference internal" href="usage/configuration.html#confval-templates_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">templates_path</span></code></a> 中具有相同名称的模板会覆盖所选主题提供的模板.</p>
+<p>例如, 要向包含相关链接的模板区域添加新链接, 您所要做的就是添加一个名为 <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> 的新模板, 其中包含以下内容:</p>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!layout.html&quot;</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">rootrellink</span> <span class="cp">%}</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://project.invalid/&quot;</span><span class="p">&gt;</span>Project Homepage<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="ni">&amp;raquo;</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -216,88 +194,61 @@ following contents:</p>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 </pre></div>
 </div>
-<p>By prefixing the name of the overridden template with an exclamation mark,
-Sphinx will load the layout template from the underlying HTML theme.</p>
-<p><strong>Important</strong>: If you override a block, call <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">super()</span> <span class="pre">}}</span></code> somewhere to
-render the block’s original content in the extended template – unless you
-don’t want that content to show up.</p>
+<p>通过在带有感叹号的被覆盖模板的名称前面加上前缀, Sphinx将从底层HTML主题加载布局模板.</p>
+<p><strong>重要</strong>: 如果覆盖一个块, 请在某处调用 <code class="docutils literal notranslate"><span class="pre">{{super()}}</span></code> 以在扩展模板中呈现块的原始内容 - 除非您不希望显示该内容.</p>
 </div>
 <div class="section" id="working-with-the-builtin-templates">
 <h2>使用内置模板<a class="headerlink" href="#working-with-the-builtin-templates" title="永久链接至标题">¶</a></h2>
-<p>The builtin <strong>basic</strong> theme supplies the templates that all builtin Sphinx
-themes are based on.  It has the following elements you can override or use:</p>
+<p>内置 <strong>基本</strong> 主题提供所有内置Sphinx主题所基于的模板. 它具有以下可以覆盖或使用的元素:</p>
 <div class="section" id="blocks">
 <h3>Blocks<a class="headerlink" href="#blocks" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">layout.html</span></code> 模板中存在以下块:</p>
 <dl>
-<dt><cite>doctype</cite></dt><dd><p>输出格式的doctype。默认情况下，这是XHTML 1.0 Transitional，因为它最接近Sphinx和Docutils生成的内容，除非您想要切换到HTML 5或不同但兼容的XHTML doctype，否则最好不要更改它。</p>
+<dt><cite>doctype</cite></dt><dd><p>输出格式的doctype. 默认情况下, 这是XHTML 1.0 Transitional, 因为它最接近Sphinx和Docutils生成的内容, 除非您想要切换到HTML 5或不同但兼容的XHTML doctype, 否则最好不要更改它.</p>
 </dd>
-<dt><cite>linktags</cite></dt><dd><p>这个块在模板的head部分添加了几个 <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> 标签。</p>
+<dt><cite>linktags</cite></dt><dd><p>这个块在模板的head部分添加了几个 <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> 标签.</p>
 </dd>
-<dt><cite>extrahead</cite></dt><dd><p>This block is empty by default and can be used to add extra contents into
-the <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> tag of the generated HTML file.  This is the right place to
-add references to JavaScript or extra CSS files.</p>
+<dt><cite>extrahead</cite></dt><dd><p>默认情况下, 此块为空, 可用于将额外内容添加到生成的HTML文件的 <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> 标记中. 这是添加对JavaScript或额外CSS文件的引用的正确位置.</p>
 </dd>
-<dt><cite>relbar1</cite> / <cite>relbar2</cite></dt><dd><p>This block contains the <em>relation bar</em>, the list of related links (the
-parent documents on the left, and the links to index, modules etc. on the
-right).  <cite>relbar1</cite> appears before the document, <cite>relbar2</cite> after the
-document.  By default, both blocks are filled; to show the relbar only
-before the document, you would override <cite>relbar2</cite> like this:</p>
+<dt><cite>relbar1</cite> / <cite>relbar2</cite></dt><dd><p>该块包含*关系栏*, 相关链接列表(左侧的父文档, 右侧的索引链接, 模块等).  <cite>relbar1</cite> 出现在文档之前, <cite>relbar2</cite> 出现在文档之后. 默认情况下, 两个块都已填充;要在文档之前显示relbar, 你可以像这样重写 <cite>relbar2</cite></p>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">relbar2</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 </pre></div>
 </div>
 </dd>
-<dt><cite>rootrellink</cite> / <cite>relbaritems</cite></dt><dd><p>Inside the relbar there are three sections: The <cite>rootrellink</cite>, the links
-from the documentation and the custom <cite>relbaritems</cite>.  The <cite>rootrellink</cite> is a
-block that by default contains a list item pointing to the master document
-by default, the <cite>relbaritems</cite> is an empty block.  If you override them to
-add extra links into the bar make sure that they are list items and end with
-the <a class="reference internal" href="#reldelim1" title="reldelim1"><code class="xref py py-data docutils literal notranslate"><span class="pre">reldelim1</span></code></a>.</p>
+<dt><cite>rootrellink</cite> / <cite>relbaritems</cite></dt><dd><p>在relbar里面有三个部分: <cite>rootrellink</cite>, 文档中的链接和自定义 <cite>relbaritems</cite>.  <cite>rootrellink</cite> 是一个默认包含指向主文档的列表项的块, <cite>relbaritems</cite> 是一个空块. 如果覆盖它们以在条形图中添加额外的链接, 请确保它们是列表项并以 <a class="reference internal" href="#reldelim1" title="reldelim1"><code class="xref py py-data docutils literal notranslate"><span class="pre">reldelim1</span></code></a> 结束.</p>
 </dd>
-<dt><cite>文档</cite></dt><dd><p>The contents of the document itself.  It contains the block “body” where the
-individual content is put by subtemplates like <code class="docutils literal notranslate"><span class="pre">page.html</span></code>.</p>
+<dt><cite>文档</cite></dt><dd><p>文件本身的内容. 它包含块 “body” , 其中单个内容由 <code class="docutils literal notranslate"><span class="pre">page.html</span></code> 等子模板放置.</p>
 </dd>
-<dt><cite>sidebar1</cite> / <cite>sidebar2</cite></dt><dd><p>A possible location for a sidebar.  <cite>sidebar1</cite> appears before the document
-and is empty by default, <cite>sidebar2</cite> after the document and contains the
-default sidebar.  If you want to swap the sidebar location override this and
-call the <cite>sidebar</cite> helper:</p>
+<dt><cite>sidebar1</cite> / <cite>sidebar2</cite></dt><dd><p>侧边栏的可能位置.  <cite>sidebar1</cite> 出现在文档之前, 默认为空, 在文档后面是`sidebar2`并包含默认侧边栏. 如果你想交换边栏位置覆盖它并调用 <cite>sidebar</cite> 帮助器:</p>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">sidebar1</span> <span class="cp">%}{{</span> <span class="nv">sidebar</span><span class="o">()</span> <span class="cp">}}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">sidebar2</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 </pre></div>
 </div>
-<p>(The <cite>sidebar2</cite> location for the sidebar is needed by the <code class="docutils literal notranslate"><span class="pre">sphinxdoc.css</span></code>
-stylesheet, for example.)</p>
+<p>(例如, <code class="docutils literal notranslate"><span class="pre">sphinxdoc.css</span></code> 样式表需要侧边栏的 <cite>sidebar2</cite> 位置. )</p>
 </dd>
-<dt><cite>sidebarlogo</cite></dt><dd><p>The logo location within the sidebar.  Override this if you want to place
-some content at the top of the sidebar.</p>
+<dt><cite>sidebarlogo</cite></dt><dd><p>侧栏内的徽标位置. 如果要在边栏顶部放置一些内容, 请覆盖此项.</p>
 </dd>
-<dt><cite>页脚</cite></dt><dd><p>The block for the footer div.  If you want a custom footer or markup before
-or after it, override this one.</p>
+<dt><cite>页脚</cite></dt><dd><p>页脚div的块. 如果您想在其之前或之后使用自定义页脚或标记, 请覆盖此页脚.</p>
 </dd>
 </dl>
-<p>The following four blocks are <em>only</em> used for pages that do not have assigned a
-list of custom sidebars in the <a class="reference internal" href="usage/configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a> config value.  Their use
-is deprecated in favor of separate sidebar templates, which can be included via
-<a class="reference internal" href="usage/configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a>.</p>
+<p>以下四个块 <em>仅</em> 用于未在 <a class="reference internal" href="usage/configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a> 配置值中分配自定义侧边栏列表的页面. 它们的使用已被弃用, 有利于单独的侧边栏模板, 可以通过以下方式包含 <a class="reference internal" href="usage/configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a> .</p>
 <dl>
-<dt><cite>sidebartoc</cite></dt><dd><p>侧栏内的目录。</p>
+<dt><cite>sidebartoc</cite></dt><dd><p>侧栏内的目录.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">1.0 版后已移除.</span></p>
 </div>
 </dd>
-<dt><cite>sidebarrel</cite></dt><dd><p>边栏内的关系链接（上一个，下一个文档）。</p>
+<dt><cite>sidebarrel</cite></dt><dd><p>边栏内的关系链接(上一个, 下一个文档).</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">1.0 版后已移除.</span></p>
 </div>
 </dd>
-<dt><cite>sidebarsourcelink</cite></dt><dd><p>The “Show source” link within the sidebar (normally only shown if this is
-enabled by <a class="reference internal" href="usage/configuration.html#confval-html_show_sourcelink"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_show_sourcelink</span></code></a>).</p>
+<dt><cite>sidebarsourcelink</cite></dt><dd><p>侧边栏中的“显示源”链接(通常仅在以下情况下显示 <a class="reference internal" href="usage/configuration.html#confval-html_show_sourcelink"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_show_sourcelink</span></code></a>).</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">1.0 版后已移除.</span></p>
 </div>
 </dd>
-<dt><cite>sidebarsearch</cite></dt><dd><p>The search box within the sidebar.  Override this if you want to place some
-content at the bottom of the sidebar.</p>
+<dt><cite>sidebarsearch</cite></dt><dd><p>侧边栏内的搜索框. 如果要在侧边栏的底部放置一些内容, 请覆盖此项.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">1.0 版后已移除.</span></p>
 </div>
@@ -306,22 +257,17 @@ content at the bottom of the sidebar.</p>
 </div>
 <div class="section" id="configuration-variables">
 <h3>配置变量<a class="headerlink" href="#configuration-variables" title="永久链接至标题">¶</a></h3>
-<p>Inside templates you can set a couple of variables used by the layout template
-using the <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">set</span> <span class="pre">%}</span></code> tag:</p>
+<p>在模板内部, 您可以使用 <code class="docutils literal notranslate"><span class="pre">{％set％}</span></code> 标签设置布局模板使用的几个变量:</p>
 <dl class="data">
 <dt id="reldelim1">
 <code class="descname">reldelim1</code><a class="headerlink" href="#reldelim1" title="永久链接至目标">¶</a></dt>
-<dd><p>The delimiter for the items on the left side of the related bar.  This
-defaults to <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">&amp;raquo;'</span></code> Each item in the related bar ends with the value
-of this variable.</p>
+<dd><p>相关栏左侧项目的分隔符. 这默认为 <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">&amp;raquo;'</span></code> 相关栏中的每个项目都以此变量的值结束.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="reldelim2">
 <code class="descname">reldelim2</code><a class="headerlink" href="#reldelim2" title="永久链接至目标">¶</a></dt>
-<dd><p>The delimiter for the items on the right side of the related bar.  This
-defaults to <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">|'</span></code>.  Each item except of the last one in the related bar
-ends with the value of this variable.</p>
+<dd><p>相关栏右侧项目的分隔符. 这默认为 <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">|'</span></code>. 除相关栏中最后一个项目之外的每个项目都以此变量的值结束.</p>
 </dd></dl>
 
 <p>覆盖就是这样的:</p>
@@ -332,7 +278,7 @@ ends with the value of this variable.</p>
 <dl class="data">
 <dt id="script_files">
 <code class="descname">script_files</code><a class="headerlink" href="#script_files" title="永久链接至目标">¶</a></dt>
-<dd><p>在这里添加其他脚本文件，如下所示:</p>
+<dd><p>在这里添加其他脚本文件, 如下所示:</p>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">script_files</span> <span class="o">=</span> <span class="nv">script_files</span> <span class="o">+</span> <span class="o">[</span><span class="s2">&quot;_static/myscript.js&quot;</span><span class="o">]</span> <span class="cp">%}</span>
 </pre></div>
 </div>
@@ -344,116 +290,105 @@ ends with the value of this variable.</p>
 </div>
 <div class="section" id="helper-functions">
 <h3>助手功能<a class="headerlink" href="#helper-functions" title="永久链接至标题">¶</a></h3>
-<p>Sphinx provides various Jinja functions as helpers in the template.  You can use
-them to generate links or output multiply used elements.</p>
+<p>Sphinx在模板中提供各种Jinja函数作为帮助程序. 您可以使用它们来生成链接或输出多次使用的元素.</p>
 <dl class="function">
 <dt id="pathto">
 <code class="descname">pathto</code><span class="sig-paren">(</span><em>document</em><span class="sig-paren">)</span><a class="headerlink" href="#pathto" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the path to a Sphinx document as a URL.  Use this to refer to built
-documents.</p>
+<dd><p>将路径返回到Sphinx文档作为URL. 用它来引用构建的文档.</p>
 </dd></dl>
 
 <dl class="function">
 <dt>
 <code class="descname">pathto</code><span class="sig-paren">(</span><em>file</em>, <em>1</em><span class="sig-paren">)</span></dt>
-<dd><p>Return the path to a <em>file</em> which is a filename relative to the root of the
-generated output.  Use this to refer to static files.</p>
+<dd><p>将路径返回到*文件*, 该文件是相对于生成的输出的根的文件名. 用它来引用静态文件.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="hasdoc">
 <code class="descname">hasdoc</code><span class="sig-paren">(</span><em>document</em><span class="sig-paren">)</span><a class="headerlink" href="#hasdoc" title="永久链接至目标">¶</a></dt>
-<dd><p>检查是否存在名为 <em>document</em> 的文档。</p>
+<dd><p>检查是否存在名为 <em>document</em> 的文档.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sidebar">
 <code class="descname">sidebar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sidebar" title="永久链接至目标">¶</a></dt>
-<dd><p>返回渲染的侧边栏。</p>
+<dd><p>返回渲染的侧边栏.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="relbar">
 <code class="descname">relbar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#relbar" title="永久链接至目标">¶</a></dt>
-<dd><p>返回渲染的关系栏。</p>
+<dd><p>返回渲染的关系栏.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="warning">
 <code class="descname">warning</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#warning" title="永久链接至目标">¶</a></dt>
-<dd><p>发出警告信息。</p>
+<dd><p>发出警告信息.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="global-variables">
 <h3>全局变量<a class="headerlink" href="#global-variables" title="永久链接至标题">¶</a></h3>
-<p>These global variables are available in every template and are safe to use.
-There are more, but most of them are an implementation detail and might change
-in the future.</p>
+<p>这些全局变量在每个模板中都可用, 并且可以安全使用. 还有更多, 但大多数都是实现细节, 将来可能会发生变化.</p>
 <dl class="data">
 <dt id="builder">
 <code class="descname">builder</code><a class="headerlink" href="#builder" title="永久链接至目标">¶</a></dt>
-<dd><p>The name of the builder (e.g. <code class="docutils literal notranslate"><span class="pre">html</span></code> or <code class="docutils literal notranslate"><span class="pre">htmlhelp</span></code>).</p>
+<dd><p>构建器的名称(例如``html``或``htmlhelp``).</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="copyright">
 <code class="descname">copyright</code><a class="headerlink" href="#copyright" title="永久链接至目标">¶</a></dt>
-<dd><p>价值 <a class="reference internal" href="usage/configuration.html#confval-copyright"><code class="xref std std-confval docutils literal notranslate"><span class="pre">copyright</span></code></a> 。</p>
+<dd><p>价值 <a class="reference internal" href="usage/configuration.html#confval-copyright"><code class="xref std std-confval docutils literal notranslate"><span class="pre">copyright</span></code></a> .</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="docstitle">
 <code class="descname">docstitle</code><a class="headerlink" href="#docstitle" title="永久链接至目标">¶</a></dt>
-<dd><p>The title of the documentation (the value of <a class="reference internal" href="usage/configuration.html#confval-html_title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_title</span></code></a>), except
-when the “single-file” builder is used, when it is set to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dd><p>文档的标题(值 <a class="reference internal" href="usage/configuration.html#confval-html_title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_title</span></code></a>), 除非使用“单文件”构建器, 否则设置为“无”.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="embedded">
 <code class="descname">embedded</code><a class="headerlink" href="#embedded" title="永久链接至目标">¶</a></dt>
-<dd><p>True if the built HTML is meant to be embedded in some viewing application
-that handles navigation, not the web browser, such as for HTML help or Qt
-help formats.  In this case, the sidebar is not included.</p>
+<dd><p>如果构建的HTML旨在嵌入到处理导航的某个查看应用程序中, 而不是Web浏览器(例如HTML帮助或Qt帮助格式), 则为True. 在这种情况下, 侧边栏不包括在内.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="favicon">
 <code class="descname">favicon</code><a class="headerlink" href="#favicon" title="永久链接至目标">¶</a></dt>
-<dd><p>静态路径中 HTML favicon 的路径，或者 <code class="docutils literal notranslate"><span class="pre">''</span></code>。</p>
+<dd><p>静态路径中 HTML favicon 的路径, 或者 <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="file_suffix">
 <code class="descname">file_suffix</code><a class="headerlink" href="#file_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>The value of the builder’s <a class="reference internal" href="usage/builders/index.html#sphinxcontrib.serializinghtml.SerializingHTMLBuilder.out_suffix" title="sphinxcontrib.serializinghtml.SerializingHTMLBuilder.out_suffix"><code class="xref py py-attr docutils literal notranslate"><span class="pre">out_suffix</span></code></a>
-attribute, i.e. the file name extension that the output files will get.  For
-a standard HTML builder, this is usually <code class="docutils literal notranslate"><span class="pre">.html</span></code>.</p>
+<dd><p>构建器的值 <code class="xref py py-attr docutils literal notranslate"><span class="pre">〜.SerializingHTMLBuilder.out_suffix</span></code> 属性, 即输出文件将获得的文件扩展名. 对于标准的HTML构建器, 这通常是 <code class="docutils literal notranslate"><span class="pre">.html</span></code>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="has_source">
 <code class="descname">has_source</code><a class="headerlink" href="#has_source" title="永久链接至目标">¶</a></dt>
-<dd><p>True if the reST document sources are copied (if <a class="reference internal" href="usage/configuration.html#confval-html_copy_source"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_copy_source</span></code></a>
-is <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
+<dd><p>如果复制了reST文档源, 则为True(如果 <code class="xref std std-confval docutils literal notranslate"><span class="pre">html_copy_source`为``True`</span></code>).</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="language">
 <code class="descname">language</code><a class="headerlink" href="#language" title="永久链接至目标">¶</a></dt>
-<dd><p><a class="reference internal" href="usage/configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 的值 。</p>
+<dd><p><a class="reference internal" href="usage/configuration.html#confval-language"><code class="xref std std-confval docutils literal notranslate"><span class="pre">language</span></code></a> 的值 .</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="last_updated">
 <code class="descname">last_updated</code><a class="headerlink" href="#last_updated" title="永久链接至目标">¶</a></dt>
-<dd><p>构建日期。</p>
+<dd><p>构建日期.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="logo">
 <code class="descname">logo</code><a class="headerlink" href="#logo" title="永久链接至目标">¶</a></dt>
-<dd><p>The path to the HTML logo image in the static path, or <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p>
+<dd><p>静态路径中HTML徽标图像的路径, 或者``’<a href="#id1"><span class="problematic" id="id2">``</span></a>.</p>
 </dd></dl>
 
 <dl class="data">
@@ -465,112 +400,99 @@ is <code class="docutils literal notranslate"><span class="pre">True</span></cod
 <dl class="data">
 <dt id="pagename">
 <code class="descname">pagename</code><a class="headerlink" href="#pagename" title="永久链接至目标">¶</a></dt>
-<dd><p>The “page name” of the current file, i.e. either the document name if the
-file is generated from a reST source, or the equivalent hierarchical name
-relative to the output directory (<code class="docutils literal notranslate"><span class="pre">[directory/]filename_without_extension</span></code>).</p>
+<dd><p>当前文件的“页面名称”, 即文件名(如果文件是从reST源生成的), 或者是相对于输出目录的等效层次名称(<code class="docutils literal notranslate"><span class="pre">[directory/]</span> <span class="pre">filename_without_extension</span></code>).</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="project">
 <code class="descname">project</code><a class="headerlink" href="#project" title="永久链接至目标">¶</a></dt>
-<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-project"><code class="xref std std-confval docutils literal notranslate"><span class="pre">project</span></code></a>。</p>
+<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-project"><code class="xref std std-confval docutils literal notranslate"><span class="pre">project</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="release">
 <code class="descname">release</code><a class="headerlink" href="#release" title="永久链接至目标">¶</a></dt>
-<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-release"><code class="xref std std-confval docutils literal notranslate"><span class="pre">release</span></code></a>。</p>
+<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-release"><code class="xref std std-confval docutils literal notranslate"><span class="pre">release</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="rellinks">
 <code class="descname">rellinks</code><a class="headerlink" href="#rellinks" title="永久链接至目标">¶</a></dt>
-<dd><p>A list of links to put at the left side of the relbar, next to “next” and
-“prev”.  This usually contains links to the general index and other indices,
-such as the Python module index.  If you add something yourself, it must be a
-tuple <code class="docutils literal notranslate"><span class="pre">(pagename,</span> <span class="pre">link</span> <span class="pre">title,</span> <span class="pre">accesskey,</span> <span class="pre">link</span> <span class="pre">text)</span></code>.</p>
+<dd><p>放置在relbar左侧,  “next” 和 “prev” 旁边的链接列表. 这通常包含指向常规索引和其他索引的链接, 例如Python模块索引. 如果你自己添加一些东西, 它必须是一个元组 <code class="docutils literal notranslate"><span class="pre">(页面名称,</span> <span class="pre">链接标题,</span> <span class="pre">访问键,</span> <span class="pre">链接文本)</span></code>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="shorttitle">
 <code class="descname">shorttitle</code><a class="headerlink" href="#shorttitle" title="永久链接至目标">¶</a></dt>
-<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-html_short_title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_short_title</span></code></a>。</p>
+<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-html_short_title"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_short_title</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="show_source">
 <code class="descname">show_source</code><a class="headerlink" href="#show_source" title="永久链接至目标">¶</a></dt>
-<dd><p>True if <a class="reference internal" href="usage/configuration.html#confval-html_show_sourcelink"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_show_sourcelink</span></code></a> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dd><p>如果 <a class="reference internal" href="usage/configuration.html#confval-html_show_sourcelink"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_show_sourcelink</span></code></a> 是 <code class="docutils literal notranslate"><span class="pre">True</span></code> , 则为真.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sphinx_version">
 <code class="descname">sphinx_version</code><a class="headerlink" href="#sphinx_version" title="永久链接至目标">¶</a></dt>
-<dd><p>用于构建的Sphinx版本。</p>
+<dd><p>用于构建的Sphinx版本.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="style">
 <code class="descname">style</code><a class="headerlink" href="#style" title="永久链接至目标">¶</a></dt>
-<dd><p>The name of the main stylesheet, as given by the theme or
-<a class="reference internal" href="usage/configuration.html#confval-html_style"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_style</span></code></a>.</p>
+<dd><p>主要样式表的名称, 由主题或 <a class="reference internal" href="usage/configuration.html#confval-html_style"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_style</span></code></a> 给出.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="title">
 <code class="descname">title</code><a class="headerlink" href="#title" title="永久链接至目标">¶</a></dt>
-<dd><p>当前文档的标题，在 <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code> 标签中使用。</p>
+<dd><p>当前文档的标题, 在 <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code> 标签中使用.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="use_opensearch">
 <code class="descname">use_opensearch</code><a class="headerlink" href="#use_opensearch" title="永久链接至目标">¶</a></dt>
-<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-html_use_opensearch"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_use_opensearch</span></code></a>。</p>
+<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-html_use_opensearch"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_use_opensearch</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="version">
 <code class="descname">version</code><a class="headerlink" href="#version" title="永久链接至目标">¶</a></dt>
-<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-html_use_opensearch"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_use_opensearch</span></code></a>。</p>
+<dd><p>值 <a class="reference internal" href="usage/configuration.html#confval-html_use_opensearch"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_use_opensearch</span></code></a>.</p>
 </dd></dl>
 
-<p>In addition to these values, there are also all <strong>theme options</strong> available
-(prefixed by <code class="docutils literal notranslate"><span class="pre">theme_</span></code>), as well as the values given by the user in
-<a class="reference internal" href="usage/configuration.html#confval-html_context"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_context</span></code></a>.</p>
-<p>In documents that are created from source files (as opposed to
-automatically-generated files like the module index, or documents that already
-are in HTML form), these variables are also available:</p>
+<p>除了这些值之外, 还有所有 <strong>主题选项</strong> (以 <code class="docutils literal notranslate"><span class="pre">theme_</span></code> 为前缀), 以及用户在 <a class="reference internal" href="usage/configuration.html#confval-html_context"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_context</span></code></a> 中给出的值.</p>
+<p>在从源文件创建的文档中(与自动生成的文件(如模块索引或已经是HTML格式的文档)相反), 这些变量也可用:</p>
 <dl class="data">
 <dt id="body">
 <code class="descname">body</code><a class="headerlink" href="#body" title="永久链接至目标">¶</a></dt>
-<dd><p>A string containing the content of the page in HTML form as produced by the HTML builder,
-before the theme is applied.</p>
+<dd><p>在应用主题之前, 包含HTML构建器生成的HTML表单内容的字符串.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="display_toc">
 <code class="descname">display_toc</code><a class="headerlink" href="#display_toc" title="永久链接至目标">¶</a></dt>
-<dd><p>如果toc包含多个条目，则为布尔值为True。</p>
+<dd><p>如果toc包含多个条目, 则为布尔值为True.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="meta">
 <code class="descname">meta</code><a class="headerlink" href="#meta" title="永久链接至目标">¶</a></dt>
-<dd><p>文档元数据（字典），请参阅 <a class="reference internal" href="usage/restructuredtext/field-lists.html#metadata"><span class="std std-ref">File-wide metadata</span></a>。</p>
+<dd><p>文档元数据(字典), 请参阅 <a class="reference internal" href="usage/restructuredtext/field-lists.html#metadata"><span class="std std-ref">File-wide metadata</span></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="metatags">
 <code class="descname">metatags</code><a class="headerlink" href="#metatags" title="永久链接至目标">¶</a></dt>
-<dd><p>包含页面HTML <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#meta">meta</a> 标签的字符串。</p>
+<dd><p>包含页面HTML <a class="reference external" href="https://wdk-docs.github.io/docutils-docs/ref/rst/directives.html#meta">meta</a> 标签的字符串.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="next">
 <code class="descname">next</code><a class="headerlink" href="#next" title="永久链接至目标">¶</a></dt>
-<dd><p>The next document for the navigation.  This variable is either false or has
-two attributes <cite>link</cite> and <cite>title</cite>.  The title contains HTML markup.  For
-example, to generate a link to the next page, you can use this snippet:</p>
+<dd><p>导航的下一个文档. 这个变量要么是假的, 要么有两个属性 <cite>link</cite> 和 <cite>title</cite>. 标题包含HTML标记. 例如, 要生成指向下一页的链接, 您可以使用此代码段:</p>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">next</span> <span class="cp">%}</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">next.link</span><span class="o">|</span><span class="nf">e</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">next.title</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
@@ -581,58 +503,48 @@ example, to generate a link to the next page, you can use this snippet:</p>
 <dl class="data">
 <dt id="page_source_suffix">
 <code class="descname">page_source_suffix</code><a class="headerlink" href="#page_source_suffix" title="永久链接至目标">¶</a></dt>
-<dd><p>The suffix of the file that was rendered. Since we support a list of <a class="reference internal" href="usage/configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a>,
-this will allow you to properly link to the original source file.</p>
+<dd><p>已呈现文件的后缀. 由于我们支持以下列表 <a class="reference internal" href="usage/configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a>, 这将允许您正确链接到原始源文件.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="parents">
 <code class="descname">parents</code><a class="headerlink" href="#parents" title="永久链接至目标">¶</a></dt>
-<dd><p>A list of parent documents for navigation, structured like the <a class="reference internal" href="#next" title="next"><code class="xref py py-data docutils literal notranslate"><span class="pre">next</span></code></a>
-item.</p>
+<dd><p>用于导航的父文档列表, 结构类似于 <a class="reference internal" href="#next" title="next"><code class="xref py py-data docutils literal notranslate"><span class="pre">next</span></code></a> 项.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="prev">
 <code class="descname">prev</code><a class="headerlink" href="#prev" title="永久链接至目标">¶</a></dt>
-<dd><p>喜欢 <a class="reference internal" href="#next" title="next"><code class="xref py py-data docutils literal notranslate"><span class="pre">next</span></code></a>，但是对于上一页。</p>
+<dd><p>喜欢 <a class="reference internal" href="#next" title="next"><code class="xref py py-data docutils literal notranslate"><span class="pre">next</span></code></a>, 但是对于上一页.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sourcename">
 <code class="descname">sourcename</code><a class="headerlink" href="#sourcename" title="永久链接至目标">¶</a></dt>
-<dd><p>The name of the copied source file for the current document.  This is only
-nonempty if the <a class="reference internal" href="usage/configuration.html#confval-html_copy_source"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_copy_source</span></code></a> value is <code class="docutils literal notranslate"><span class="pre">True</span></code>.
-This has empty value on creating automatically-generated files.</p>
+<dd><p>当前文档的复制源文件的名称. 如果 <a class="reference internal" href="usage/configuration.html#confval-html_copy_source"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_copy_source</span></code></a> 值为 <code class="docutils literal notranslate"><span class="pre">True</span></code>, 则这只是非空的. 这对于创建自动生成的文件没有空白价值.</p>
 </dd></dl>
 
 <dl class="data">
 <dt>
 <code class="descname">title</code></dt>
-<dd><p>页面标题。</p>
+<dd><p>页面标题.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="toc">
 <code class="descname">toc</code><a class="headerlink" href="#toc" title="永久链接至目标">¶</a></dt>
-<dd><p>The local table of contents for the current page, rendered as HTML bullet
-lists.</p>
+<dd><p>当前页面的本地目录, 呈现为HTML项目符号列表.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="toctree">
 <code class="descname">toctree</code><a class="headerlink" href="#toctree" title="永久链接至目标">¶</a></dt>
-<dd><p>A callable yielding the global TOC tree containing the current page, rendered
-as HTML bullet lists.  Optional keyword arguments:</p>
+<dd><p>一个可调用的, 产生包含当前页面的全局TOC树, 呈现为HTML项目符号列表. 可选关键字参数:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">collapse</span></code> (<code class="docutils literal notranslate"><span class="pre">True</span></code> by default): if true, all TOC entries that are not
-ancestors of the current page are collapsed</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> (defaults to the max depth selected in the toctree directive):
-the maximum depth of the tree; set it to <code class="docutils literal notranslate"><span class="pre">-1</span></code> to allow unlimited depth</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">titles_only</span></code> (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default): if true, put only toplevel document
-titles in the tree</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includehidden</span></code> (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default): if true, the TOC tree will also
-contain hidden entries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">collapse</span></code> (默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code>):如果为true, 则表示当前页面不是祖先的所有TOC条目都将折叠</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> (默认为toctree指令中选择的最大深度):树的最大深度;将它设置为 <code class="docutils literal notranslate"><span class="pre">-1</span></code> 以允许无限深度</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">titles_only``(默认为</span> <span class="pre">``False</span></code>):如果为true, 则只在树中放入文档标题</p></li>
+<li><p><cite>includehidden``(默认为 ``False`</cite>): 如果为true, TOC树也将包含隐藏的条目.</p></li>
 </ul>
 </dd></dl>
 
@@ -653,6 +565,9 @@ contain hidden entries.</p></li>
           <a href="genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -668,7 +583,7 @@ contain hidden entries.</p></li>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

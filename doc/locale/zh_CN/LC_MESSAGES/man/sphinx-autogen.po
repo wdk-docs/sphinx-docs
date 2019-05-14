@@ -48,7 +48,7 @@ msgid ""
 "*sourcefile* is the path to one or more reStructuredText documents "
 "containing :rst:dir:`autosummary` entries with the ``:toctree::`` option "
 "set. *sourcefile* can be an :py:mod:`fnmatch`-style pattern."
-msgstr "*sourcefile* 是一个或多个reStructuredText文档的路径，其中包含 :rst:dir:`autosummary` 条目，其中设置了 ``:toctree ::`` 选项。 *sourcefile* 可以是 :py:mod:`fnmatch` 样式。"
+msgstr "*sourcefile* 是一个或多个reStructuredText文档的路径，其中包含 :rst:dir:`autosummary` 条目，其中设置了 ``:toctree::`` 选项。 *sourcefile* 可以是 :py:mod:`fnmatch` 样式。"
 
 #: ../../man/sphinx-autogen.rst:21
 msgid "Options"

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinx.application &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>sphinx.application &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -99,6 +99,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
         <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
@@ -847,7 +850,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="n">override</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sphinx.override_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.override_domain">[文档]</a>    <span class="k">def</span> <span class="nf">override_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">override_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">):</span>
         <span class="c1"># type: (Type[Domain]) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Override a registered domain.</span>
 
@@ -862,7 +865,7 @@
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;app.override_domain() is deprecated. &#39;</span>
                       <span class="s1">&#39;Use app.add_domain() with override option instead.&#39;</span><span class="p">,</span>
                       <span class="n">RemovedInSphinx30Warning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">add_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Sphinx.add_directive_to_domain"><a class="viewcode-back" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive_to_domain">[文档]</a>    <span class="k">def</span> <span class="nf">add_directive_to_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">has_content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">argument_spec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                                 <span class="n">override</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">option_spec</span><span class="p">):</span>
@@ -1397,6 +1400,9 @@
           <a href="../../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
@@ -1407,7 +1413,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

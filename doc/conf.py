@@ -5,9 +5,17 @@ import re
 import sphinx
 
 
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
-              'sphinx.ext.autosummary', 'sphinx.ext.extlinks',
-              'sphinx.ext.viewcode', 'sphinx.ext.inheritance_diagram', 'sphinx.ext.githubpages']
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.todo',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.extlinks',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.inheritance_diagram',
+    'sphinx.ext.githubpages',
+    'sphinxcontrib.httpdomain'
+]
 
 master_doc = 'contents'
 templates_path = ['_templates']
@@ -83,12 +91,9 @@ latex_use_xindy = True
 
 autodoc_member_order = 'groupwise'
 todo_include_todos = True
-extlinks = {'duref': ('http://docutils.sourceforge.net/docs/ref/rst/'
-                      'restructuredtext.html#%s', ''),
-            'durole': ('http://docutils.sourceforge.net/docs/ref/rst/'
-                       'roles.html#%s', ''),
-            'dudir': ('http://docutils.sourceforge.net/docs/ref/rst/'
-                      'directives.html#%s', '')}
+extlinks = {'duref': ('https://wdk-docs.github.io/docutils-docs/ref/rst/restructuredtext.html#%s', ''),
+            'durole': ('https://wdk-docs.github.io/docutils-docs/ref/rst/roles.html#%s', ''),
+            'dudir': ('https://wdk-docs.github.io/docutils-docs/ref/rst/directives.html#%s', '')}
 
 man_pages = [
     ('contents', 'sphinx-all', 'Sphinx documentation generator system manual',

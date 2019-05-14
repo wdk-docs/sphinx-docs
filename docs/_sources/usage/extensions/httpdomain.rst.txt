@@ -1058,6 +1058,3 @@ in the `httpdomain`_ repository
 .. _Hong Minhee: https://hongminhee.org/
 __ https://github.com/sphinx-contrib
 .. _httpdomain: https://github.com/sphinx-contrib/httpdomain
-
-
-.. include:: changelog.rst

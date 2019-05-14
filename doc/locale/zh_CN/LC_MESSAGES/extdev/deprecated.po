@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:4
 msgid "Deprecated APIs"
-msgstr ""
+msgstr "弃用 APIs"
 
 #: ../../extdev/deprecated.rst:6
 msgid ""
@@ -28,35 +28,35 @@ msgid ""
 "reasons.  In such cases, we've marked them as deprecated. And they are "
 "kept during the two major versions (for more details, please see :ref"
 ":`deprecation-policy`)."
-msgstr ""
+msgstr "在开发Sphinx时，我们始终注意API的兼容性。 但是，有时候，由于某些原因需要改变界面。  在这种情况下，我们已将其标记为已弃用。它们保留在两个主要版本中(有关详细信息，请参阅 :ref:`deprecation-policy`)。"
 
 #: ../../extdev/deprecated.rst:11
 msgid "The following is a list of deprecated interfaces."
-msgstr ""
+msgstr "以下是不推荐使用的接口列表。"
 
 #: ../../extdev/deprecated.rst:19
 msgid "deprecated APIs"
-msgstr ""
+msgstr "deprecated APIs"
 
 #: ../../extdev/deprecated.rst:24
 msgid "Target"
-msgstr ""
+msgstr "目标"
 
 #: ../../extdev/deprecated.rst:25
 msgid "|LaTeXHyphenate|\\ Deprecated"
-msgstr ""
+msgstr "|LaTeXHyphenate|\\ 弃用"
 
 #: ../../extdev/deprecated.rst:26
 msgid "(will be) Removed"
-msgstr ""
+msgstr "(将)删除"
 
 #: ../../extdev/deprecated.rst:27
 msgid "Alternatives"
-msgstr ""
+msgstr "备择方案"
 
 #: ../../extdev/deprecated.rst:29
 msgid "``sphinx.builders.latex.LaTeXBuilder.apply_transforms()``"
-msgstr ""
+msgstr "``sphinx.builders.latex.LaTeXBuilder.apply_transforms()``"
 
 #: ../../extdev/deprecated.rst:30 ../../extdev/deprecated.rst:35
 #: ../../extdev/deprecated.rst:40 ../../extdev/deprecated.rst:45
@@ -73,7 +73,7 @@ msgstr ""
 #: ../../extdev/deprecated.rst:150 ../../extdev/deprecated.rst:155
 #: ../../extdev/deprecated.rst:160 ../../extdev/deprecated.rst:165
 msgid "2.1"
-msgstr ""
+msgstr "2.1"
 
 #: ../../extdev/deprecated.rst:31 ../../extdev/deprecated.rst:36
 #: ../../extdev/deprecated.rst:41 ../../extdev/deprecated.rst:46
@@ -122,7 +122,7 @@ msgstr ""
 #: ../../extdev/deprecated.rst:533 ../../extdev/deprecated.rst:538
 #: ../../extdev/deprecated.rst:543 ../../extdev/deprecated.rst:548
 msgid "4.0"
-msgstr ""
+msgstr "4.0"
 
 #: ../../extdev/deprecated.rst:32 ../../extdev/deprecated.rst:175
 #: ../../extdev/deprecated.rst:182 ../../extdev/deprecated.rst:187
@@ -157,219 +157,219 @@ msgstr ""
 #: ../../extdev/deprecated.rst:746 ../../extdev/deprecated.rst:751
 #: ../../extdev/deprecated.rst:844
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: ../../extdev/deprecated.rst:34
 msgid "``sphinx.directives.Acks``"
-msgstr ""
+msgstr "``sphinx.directives.Acks``"
 
 #: ../../extdev/deprecated.rst:37
 msgid "``sphinx.directives.other.Acks``"
-msgstr ""
+msgstr "``sphinx.directives.other.Acks``"
 
 #: ../../extdev/deprecated.rst:39
 msgid "``sphinx.directives.Author``"
-msgstr ""
+msgstr "``sphinx.directives.Author``"
 
 #: ../../extdev/deprecated.rst:42
 msgid "``sphinx.directives.other.Author``"
-msgstr ""
+msgstr "``sphinx.directives.other.Author``"
 
 #: ../../extdev/deprecated.rst:44
 msgid "``sphinx.directives.Centered``"
-msgstr ""
+msgstr "``sphinx.directives.Centered``"
 
 #: ../../extdev/deprecated.rst:47
 msgid "``sphinx.directives.other.Centered``"
-msgstr ""
+msgstr "``sphinx.directives.other.Centered``"
 
 #: ../../extdev/deprecated.rst:49
 msgid "``sphinx.directives.Class``"
-msgstr ""
+msgstr "``sphinx.directives.Class``"
 
 #: ../../extdev/deprecated.rst:52
 msgid "``sphinx.directives.other.Class``"
-msgstr ""
+msgstr "``sphinx.directives.other.Class``"
 
 #: ../../extdev/deprecated.rst:54
 msgid "``sphinx.directives.CodeBlock``"
-msgstr ""
+msgstr "``sphinx.directives.CodeBlock``"
 
 #: ../../extdev/deprecated.rst:57
 msgid "``sphinx.directives.code.CodeBlock``"
-msgstr ""
+msgstr "``sphinx.directives.code.CodeBlock``"
 
 #: ../../extdev/deprecated.rst:59
 msgid "``sphinx.directives.Figure``"
-msgstr ""
+msgstr "``sphinx.directives.Figure``"
 
 #: ../../extdev/deprecated.rst:62
 msgid "``sphinx.directives.patches.Figure``"
-msgstr ""
+msgstr "``sphinx.directives.patches.Figure``"
 
 #: ../../extdev/deprecated.rst:64
 msgid "``sphinx.directives.HList``"
-msgstr ""
+msgstr "``sphinx.directives.HList``"
 
 #: ../../extdev/deprecated.rst:67
 msgid "``sphinx.directives.other.HList``"
-msgstr ""
+msgstr "``sphinx.directives.other.HList``"
 
 #: ../../extdev/deprecated.rst:69
 msgid "``sphinx.directives.Highlight``"
-msgstr ""
+msgstr "``sphinx.directives.Highlight``"
 
 #: ../../extdev/deprecated.rst:72
 msgid "``sphinx.directives.code.Highlight``"
-msgstr ""
+msgstr "``sphinx.directives.code.Highlight``"
 
 #: ../../extdev/deprecated.rst:74
 msgid "``sphinx.directives.Include``"
-msgstr ""
+msgstr "``sphinx.directives.Include``"
 
 #: ../../extdev/deprecated.rst:77
 msgid "``sphinx.directives.other.Include``"
-msgstr ""
+msgstr "``sphinx.directives.other.Include``"
 
 #: ../../extdev/deprecated.rst:79
 msgid "``sphinx.directives.Index``"
-msgstr ""
+msgstr "``sphinx.directives.Index``"
 
 #: ../../extdev/deprecated.rst:82
 msgid "``sphinx.directives.other.Index``"
-msgstr ""
+msgstr "``sphinx.directives.other.Index``"
 
 #: ../../extdev/deprecated.rst:84
 msgid "``sphinx.directives.LiteralInclude``"
-msgstr ""
+msgstr "``sphinx.directives.LiteralInclude``"
 
 #: ../../extdev/deprecated.rst:87
 msgid "``sphinx.directives.code.LiteralInclude``"
-msgstr ""
+msgstr "``sphinx.directives.code.LiteralInclude``"
 
 #: ../../extdev/deprecated.rst:89
 msgid "``sphinx.directives.Meta``"
-msgstr ""
+msgstr "``sphinx.directives.Meta``"
 
 #: ../../extdev/deprecated.rst:92
 msgid "``sphinx.directives.patches.Meta``"
-msgstr ""
+msgstr "``sphinx.directives.patches.Meta``"
 
 #: ../../extdev/deprecated.rst:94
 msgid "``sphinx.directives.Only``"
-msgstr ""
+msgstr "``sphinx.directives.Only``"
 
 #: ../../extdev/deprecated.rst:97
 msgid "``sphinx.directives.other.Only``"
-msgstr ""
+msgstr "``sphinx.directives.other.Only``"
 
 #: ../../extdev/deprecated.rst:99
 msgid "``sphinx.directives.SeeAlso``"
-msgstr ""
+msgstr "``sphinx.directives.SeeAlso``"
 
 #: ../../extdev/deprecated.rst:102
 msgid "``sphinx.directives.other.SeeAlso``"
-msgstr ""
+msgstr "``sphinx.directives.other.SeeAlso``"
 
 #: ../../extdev/deprecated.rst:104
 msgid "``sphinx.directives.TabularColumns``"
-msgstr ""
+msgstr "``sphinx.directives.TabularColumns``"
 
 #: ../../extdev/deprecated.rst:107
 msgid "``sphinx.directives.other.TabularColumns``"
-msgstr ""
+msgstr "``sphinx.directives.other.TabularColumns``"
 
 #: ../../extdev/deprecated.rst:109
 msgid "``sphinx.directives.TocTree``"
-msgstr ""
+msgstr "``sphinx.directives.TocTree``"
 
 #: ../../extdev/deprecated.rst:112
 msgid "``sphinx.directives.other.TocTree``"
-msgstr ""
+msgstr "``sphinx.directives.other.TocTree``"
 
 #: ../../extdev/deprecated.rst:114
 msgid "``sphinx.directives.VersionChange``"
-msgstr ""
+msgstr "``sphinx.directives.VersionChange``"
 
 #: ../../extdev/deprecated.rst:117
 msgid "``sphinx.directives.other.VersionChange``"
-msgstr ""
+msgstr "``sphinx.directives.other.VersionChange``"
 
 #: ../../extdev/deprecated.rst:119
 msgid "``sphinx.environment.NoUri``"
-msgstr ""
+msgstr "``sphinx.environment.NoUri``"
 
 #: ../../extdev/deprecated.rst:122
 msgid "``sphinx.errors.NoUri``"
-msgstr ""
+msgstr "``sphinx.errors.NoUri``"
 
 #: ../../extdev/deprecated.rst:124
 msgid "``sphinx.ext.autodoc.importer.MockFinder``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.importer.MockFinder``"
 
 #: ../../extdev/deprecated.rst:127
 msgid "``sphinx.ext.autodoc.mock.MockFinder``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.mock.MockFinder``"
 
 #: ../../extdev/deprecated.rst:129
 msgid "``sphinx.ext.autodoc.importer.MockLoader``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.importer.MockLoader``"
 
 #: ../../extdev/deprecated.rst:132
 msgid "``sphinx.ext.autodoc.mock.MockLoader``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.mock.MockLoader``"
 
 #: ../../extdev/deprecated.rst:134
 msgid "``sphinx.ext.autodoc.importer.mock()``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.importer.mock()``"
 
 #: ../../extdev/deprecated.rst:137
 msgid "``sphinx.ext.autodoc.mock.mock()``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.mock.mock()``"
 
 #: ../../extdev/deprecated.rst:139
 msgid "``sphinx.ext.autosummary.autolink_role()``"
-msgstr ""
+msgstr "``sphinx.ext.autosummary.autolink_role()``"
 
 #: ../../extdev/deprecated.rst:142
 msgid "``sphinx.ext.autosummary.AutoLink``"
-msgstr ""
+msgstr "``sphinx.ext.autosummary.AutoLink``"
 
 #: ../../extdev/deprecated.rst:144
 msgid "``sphinx.util.docfields.DocFieldTransformer.preprocess_fieldtypes()``"
-msgstr ""
+msgstr "``sphinx.util.docfields.DocFieldTransformer.preprocess_fieldtypes()``"
 
 #: ../../extdev/deprecated.rst:147
 msgid "``sphinx.directives.ObjectDescription.get_field_type_map()``"
-msgstr ""
+msgstr "``sphinx.directives.ObjectDescription.get_field_type_map()``"
 
 #: ../../extdev/deprecated.rst:149
 msgid "``sphinx.util.node.find_source_node()``"
-msgstr ""
+msgstr "``sphinx.util.node.find_source_node()``"
 
 #: ../../extdev/deprecated.rst:152
 msgid "``sphinx.util.node.get_node_source()``"
-msgstr ""
+msgstr "``sphinx.util.node.get_node_source()``"
 
 #: ../../extdev/deprecated.rst:154
 msgid "``sphinx.util.i18n.find_catalog()``"
-msgstr ""
+msgstr "``sphinx.util.i18n.find_catalog()``"
 
 #: ../../extdev/deprecated.rst:157
 msgid "``sphinx.util.i18n.docname_to_domain()``"
-msgstr ""
+msgstr "``sphinx.util.i18n.docname_to_domain()``"
 
 #: ../../extdev/deprecated.rst:159
 msgid "``sphinx.util.i18n.find_catalog_files()``"
-msgstr ""
+msgstr "``sphinx.util.i18n.find_catalog_files()``"
 
 #: ../../extdev/deprecated.rst:162 ../../extdev/deprecated.rst:167
 msgid "``sphinx.util.i18n.CatalogRepository``"
-msgstr ""
+msgstr "``sphinx.util.i18n.CatalogRepository``"
 
 #: ../../extdev/deprecated.rst:164
 msgid "``sphinx.util.i18n.find_catalog_source_files()``"
-msgstr ""
+msgstr "``sphinx.util.i18n.find_catalog_source_files()``"
 
 #: ../../extdev/deprecated.rst:169
 msgid ""
@@ -424,7 +424,7 @@ msgstr ""
 #: ../../extdev/deprecated.rst:988 ../../extdev/deprecated.rst:993
 #: ../../extdev/deprecated.rst:998
 msgid "2.0"
-msgstr ""
+msgstr "2.0"
 
 #: ../../extdev/deprecated.rst:177
 msgid ""
@@ -435,7 +435,7 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:184
 msgid "arguments of ``Epub3Builder.build_navigation_doc()``"
-msgstr ""
+msgstr "arguments of ``Epub3Builder.build_navigation_doc()``"
 
 #: ../../extdev/deprecated.rst:189
 msgid ""
@@ -445,240 +445,240 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:195
 msgid "``suffix`` argument of ``BuildEnvironment.doc2path()``"
-msgstr ""
+msgstr "``suffix`` argument of ``BuildEnvironment.doc2path()``"
 
 #: ../../extdev/deprecated.rst:200
 msgid "string style ``base`` argument of ``BuildEnvironment.doc2path()``"
-msgstr ""
+msgstr "string style ``base`` argument of ``BuildEnvironment.doc2path()``"
 
 #: ../../extdev/deprecated.rst:203
 msgid "``os.path.join()``"
-msgstr ""
+msgstr "``os.path.join()``"
 
 #: ../../extdev/deprecated.rst:205
 msgid "``sphinx.addnodes.abbreviation``"
-msgstr ""
+msgstr "``sphinx.addnodes.abbreviation``"
 
 #: ../../extdev/deprecated.rst:208
 msgid "``docutils.nodes.abbreviation``"
-msgstr ""
+msgstr "``docutils.nodes.abbreviation``"
 
 #: ../../extdev/deprecated.rst:210
 msgid "``sphinx.builders.applehelp``"
-msgstr ""
+msgstr "``sphinx.builders.applehelp``"
 
 #: ../../extdev/deprecated.rst:213
 msgid "``sphinxcontrib.applehelp``"
-msgstr ""
+msgstr "``sphinxcontrib.applehelp``"
 
 #: ../../extdev/deprecated.rst:215
 msgid "``sphinx.builders.devhelp``"
-msgstr ""
+msgstr "``sphinx.builders.devhelp``"
 
 #: ../../extdev/deprecated.rst:218
 msgid "``sphinxcontrib.devhelp``"
-msgstr ""
+msgstr "``sphinxcontrib.devhelp``"
 
 #: ../../extdev/deprecated.rst:220
 msgid "``sphinx.builders.epub3.Epub3Builder.validate_config_value()``"
-msgstr ""
+msgstr "``sphinx.builders.epub3.Epub3Builder.validate_config_value()``"
 
 #: ../../extdev/deprecated.rst:223
 msgid "``sphinx.builders.epub3.validate_config_values()``"
-msgstr ""
+msgstr "``sphinx.builders.epub3.validate_config_values()``"
 
 #: ../../extdev/deprecated.rst:225
 msgid "``sphinx.builders.html.JSONHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.html.JSONHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:228
 msgid "``sphinx.builders.serializinghtml.JSONHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.serializinghtml.JSONHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:230
 msgid "``sphinx.builders.html.PickleHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.html.PickleHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:233 ../../extdev/deprecated.rst:248
 msgid "``sphinx.builders.serializinghtml.PickleHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.serializinghtml.PickleHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:235
 msgid "``sphinx.builders.html.SerializingHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.html.SerializingHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:238
 msgid "``sphinx.builders.serializinghtml.SerializingHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.serializinghtml.SerializingHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:240
 msgid "``sphinx.builders.html.SingleFileHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.html.SingleFileHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:243
 msgid "``sphinx.builders.singlehtml.SingleFileHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.singlehtml.SingleFileHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:245
 msgid "``sphinx.builders.html.WebHTMLBuilder``"
-msgstr ""
+msgstr "``sphinx.builders.html.WebHTMLBuilder``"
 
 #: ../../extdev/deprecated.rst:250
 msgid "``sphinx.builders.htmlhelp``"
-msgstr ""
+msgstr "``sphinx.builders.htmlhelp``"
 
 #: ../../extdev/deprecated.rst:253
 msgid "``sphinxcontrib.htmlhelp``"
-msgstr ""
+msgstr "``sphinxcontrib.htmlhelp``"
 
 #: ../../extdev/deprecated.rst:255
 msgid "``sphinx.builders.htmlhelp.HTMLHelpBuilder.open_file()``"
-msgstr ""
+msgstr "``sphinx.builders.htmlhelp.HTMLHelpBuilder.open_file()``"
 
 #: ../../extdev/deprecated.rst:258
 msgid "``open()``"
-msgstr ""
+msgstr "``open()``"
 
 #: ../../extdev/deprecated.rst:260
 msgid "``sphinx.builders.qthelp``"
-msgstr ""
+msgstr "``sphinx.builders.qthelp``"
 
 #: ../../extdev/deprecated.rst:263
 msgid "``sphinxcontrib.qthelp``"
-msgstr ""
+msgstr "``sphinxcontrib.qthelp``"
 
 #: ../../extdev/deprecated.rst:265
 msgid "``sphinx.cmd.quickstart.term_decode()``"
-msgstr ""
+msgstr "``sphinx.cmd.quickstart.term_decode()``"
 
 #: ../../extdev/deprecated.rst:270
 msgid "``sphinx.cmd.quickstart.TERM_ENCODING``"
-msgstr ""
+msgstr "``sphinx.cmd.quickstart.TERM_ENCODING``"
 
 #: ../../extdev/deprecated.rst:273
 msgid "``sys.stdin.encoding``"
-msgstr ""
+msgstr "``sys.stdin.encoding``"
 
 #: ../../extdev/deprecated.rst:275 ../../extdev/deprecated.rst:766
 msgid "``sphinx.config.check_unicode()``"
-msgstr ""
+msgstr "``sphinx.config.check_unicode()``"
 
 #: ../../extdev/deprecated.rst:280
 msgid "``sphinx.config.string_classes``"
-msgstr ""
+msgstr "``sphinx.config.string_classes``"
 
 #: ../../extdev/deprecated.rst:283
 msgid "``[str]``"
-msgstr ""
+msgstr "``[str]``"
 
 #: ../../extdev/deprecated.rst:285
 msgid "``sphinx.domains.cpp.DefinitionError.description``"
-msgstr ""
+msgstr "``sphinx.domains.cpp.DefinitionError.description``"
 
 #: ../../extdev/deprecated.rst:288 ../../extdev/deprecated.rst:293
 #: ../../extdev/deprecated.rst:298
 msgid "``str(exc)``"
-msgstr ""
+msgstr "``str(exc)``"
 
 #: ../../extdev/deprecated.rst:290
 msgid "``sphinx.domains.cpp.NoOldIdError.description``"
-msgstr ""
+msgstr "``sphinx.domains.cpp.NoOldIdError.description``"
 
 #: ../../extdev/deprecated.rst:295
 msgid "``sphinx.domains.cpp.UnsupportedMultiCharacterCharLiteral.decoded``"
-msgstr ""
+msgstr "``sphinx.domains.cpp.UnsupportedMultiCharacterCharLiteral.decoded``"
 
 #: ../../extdev/deprecated.rst:300
 msgid "``sphinx.ext.autosummary.Autosummary.warn()``"
-msgstr ""
+msgstr "``sphinx.ext.autosummary.Autosummary.warn()``"
 
 #: ../../extdev/deprecated.rst:305
 msgid "``sphinx.ext.autosummary.Autosummary.genopt``"
-msgstr ""
+msgstr "``sphinx.ext.autosummary.Autosummary.genopt``"
 
 #: ../../extdev/deprecated.rst:310
 msgid "``sphinx.ext.autosummary.Autosummary.warnings``"
-msgstr ""
+msgstr "``sphinx.ext.autosummary.Autosummary.warnings``"
 
 #: ../../extdev/deprecated.rst:315
 msgid "``sphinx.ext.autosummary.Autosummary.result``"
-msgstr ""
+msgstr "``sphinx.ext.autosummary.Autosummary.result``"
 
 #: ../../extdev/deprecated.rst:320
 msgid "``sphinx.ext.doctest.doctest_encode()``"
-msgstr ""
+msgstr "``sphinx.ext.doctest.doctest_encode()``"
 
 #: ../../extdev/deprecated.rst:325
 msgid "``sphinx.ext.jsmath``"
-msgstr ""
+msgstr "``sphinx.ext.jsmath``"
 
 #: ../../extdev/deprecated.rst:328
 msgid "``sphinxcontrib.jsmath``"
-msgstr ""
+msgstr "``sphinxcontrib.jsmath``"
 
 #: ../../extdev/deprecated.rst:330
 msgid "``sphinx.roles.abbr_role()``"
-msgstr ""
+msgstr "``sphinx.roles.abbr_role()``"
 
 #: ../../extdev/deprecated.rst:333
 msgid "``sphinx.roles.Abbreviation``"
-msgstr ""
+msgstr "``sphinx.roles.Abbreviation``"
 
 #: ../../extdev/deprecated.rst:335
 msgid "``sphinx.roles.emph_literal_role()``"
-msgstr ""
+msgstr "``sphinx.roles.emph_literal_role()``"
 
 #: ../../extdev/deprecated.rst:338
 msgid "``sphinx.roles.EmphasizedLiteral``"
-msgstr ""
+msgstr "``sphinx.roles.EmphasizedLiteral``"
 
 #: ../../extdev/deprecated.rst:340
 msgid "``sphinx.roles.menusel_role()``"
-msgstr ""
+msgstr "``sphinx.roles.menusel_role()``"
 
 #: ../../extdev/deprecated.rst:343
 msgid "``sphinx.roles.GUILabel`` or ``sphinx.roles.MenuSelection``"
-msgstr ""
+msgstr "``sphinx.roles.GUILabel`` or ``sphinx.roles.MenuSelection``"
 
 #: ../../extdev/deprecated.rst:345
 msgid "``sphinx.roles.index_role()``"
-msgstr ""
+msgstr "``sphinx.roles.index_role()``"
 
 #: ../../extdev/deprecated.rst:348
 msgid "``sphinx.roles.Index``"
-msgstr ""
+msgstr "``sphinx.roles.Index``"
 
 #: ../../extdev/deprecated.rst:350
 msgid "``sphinx.roles.indexmarkup_role()``"
-msgstr ""
+msgstr "``sphinx.roles.indexmarkup_role()``"
 
 #: ../../extdev/deprecated.rst:353
 msgid "``sphinx.roles.PEP`` or ``sphinx.roles.RFC``"
-msgstr ""
+msgstr "``sphinx.roles.PEP`` or ``sphinx.roles.RFC``"
 
 #: ../../extdev/deprecated.rst:355
 msgid "``sphinx.testing.util.remove_unicode_literal()``"
-msgstr ""
+msgstr "``sphinx.testing.util.remove_unicode_literal()``"
 
 #: ../../extdev/deprecated.rst:360
 msgid "``sphinx.util.attrdict``"
-msgstr ""
+msgstr "``sphinx.util.attrdict``"
 
 #: ../../extdev/deprecated.rst:365
 msgid "``sphinx.util.force_decode()``"
-msgstr ""
+msgstr "``sphinx.util.force_decode()``"
 
 #: ../../extdev/deprecated.rst:370
 msgid "``sphinx.util.get_matching_docs()``"
-msgstr ""
+msgstr "``sphinx.util.get_matching_docs()``"
 
 #: ../../extdev/deprecated.rst:373
 msgid "``sphinx.util.get_matching_files()``"
-msgstr ""
+msgstr "``sphinx.util.get_matching_files()``"
 
 #: ../../extdev/deprecated.rst:375
 msgid "``sphinx.util.inspect.Parameter``"
-msgstr ""
+msgstr "``sphinx.util.inspect.Parameter``"
 
 #: ../../extdev/deprecated.rst:377 ../../extdev/deprecated.rst:473
 #: ../../extdev/deprecated.rst:478 ../../extdev/deprecated.rst:483
@@ -723,115 +723,115 @@ msgstr ""
 #: ../../extdev/deprecated.rst:903 ../../extdev/deprecated.rst:908
 #: ../../extdev/deprecated.rst:913 ../../extdev/deprecated.rst:918
 msgid "3.0"
-msgstr ""
+msgstr "3.0"
 
 #: ../../extdev/deprecated.rst:380
 msgid "``sphinx.util.jsonimpl``"
-msgstr ""
+msgstr "``sphinx.util.jsonimpl``"
 
 #: ../../extdev/deprecated.rst:383
 msgid "``sphinxcontrib.serializinghtml.jsonimpl``"
-msgstr ""
+msgstr "``sphinxcontrib.serializinghtml.jsonimpl``"
 
 #: ../../extdev/deprecated.rst:385
 msgid "``sphinx.util.osutil.EEXIST``"
-msgstr ""
+msgstr "``sphinx.util.osutil.EEXIST``"
 
 #: ../../extdev/deprecated.rst:388
 msgid "``errno.EEXIST`` or ``FileExistsError``"
-msgstr ""
+msgstr "``errno.EEXIST`` or ``FileExistsError``"
 
 #: ../../extdev/deprecated.rst:390
 msgid "``sphinx.util.osutil.EINVAL``"
-msgstr ""
+msgstr "``sphinx.util.osutil.EINVAL``"
 
 #: ../../extdev/deprecated.rst:393
 msgid "``errno.EINVAL``"
-msgstr ""
+msgstr "``errno.EINVAL``"
 
 #: ../../extdev/deprecated.rst:395
 msgid "``sphinx.util.osutil.ENOENT``"
-msgstr ""
+msgstr "``sphinx.util.osutil.ENOENT``"
 
 #: ../../extdev/deprecated.rst:398
 msgid "``errno.ENOENT`` or ``FileNotFoundError``"
-msgstr ""
+msgstr "``errno.ENOENT`` or ``FileNotFoundError``"
 
 #: ../../extdev/deprecated.rst:400
 msgid "``sphinx.util.osutil.EPIPE``"
-msgstr ""
+msgstr "``sphinx.util.osutil.EPIPE``"
 
 #: ../../extdev/deprecated.rst:403
 msgid "``errno.ENOENT`` or ``BrokenPipeError``"
-msgstr ""
+msgstr "``errno.ENOENT`` or ``BrokenPipeError``"
 
 #: ../../extdev/deprecated.rst:405
 msgid "``sphinx.util.osutil.walk()``"
-msgstr ""
+msgstr "``sphinx.util.osutil.walk()``"
 
 #: ../../extdev/deprecated.rst:408
 msgid "``os.walk()``"
-msgstr ""
+msgstr "``os.walk()``"
 
 #: ../../extdev/deprecated.rst:410
 msgid "``sphinx.util.pycompat.NoneType``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.NoneType``"
 
 #: ../../extdev/deprecated.rst:413
 msgid "``sphinx.util.typing.NoneType``"
-msgstr ""
+msgstr "``sphinx.util.typing.NoneType``"
 
 #: ../../extdev/deprecated.rst:415
 msgid "``sphinx.util.pycompat.TextIOWrapper``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.TextIOWrapper``"
 
 #: ../../extdev/deprecated.rst:418
 msgid "``io.TextIOWrapper``"
-msgstr ""
+msgstr "``io.TextIOWrapper``"
 
 #: ../../extdev/deprecated.rst:420
 msgid "``sphinx.util.pycompat.UnicodeMixin``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.UnicodeMixin``"
 
 #: ../../extdev/deprecated.rst:425
 msgid "``sphinx.util.pycompat.htmlescape()``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.htmlescape()``"
 
 #: ../../extdev/deprecated.rst:428
 msgid "``html.escape()``"
-msgstr ""
+msgstr "``html.escape()``"
 
 #: ../../extdev/deprecated.rst:430
 msgid "``sphinx.util.pycompat.indent()``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.indent()``"
 
 #: ../../extdev/deprecated.rst:433
 msgid "``textwrap.indent()``"
-msgstr ""
+msgstr "``textwrap.indent()``"
 
 #: ../../extdev/deprecated.rst:435
 msgid "``sphinx.util.pycompat.sys_encoding``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.sys_encoding``"
 
 #: ../../extdev/deprecated.rst:438
 msgid "``sys.getdefaultencoding()``"
-msgstr ""
+msgstr "``sys.getdefaultencoding()``"
 
 #: ../../extdev/deprecated.rst:440
 msgid "``sphinx.util.pycompat.terminal_safe()``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.terminal_safe()``"
 
 #: ../../extdev/deprecated.rst:443
 msgid "``sphinx.util.console.terminal_safe()``"
-msgstr ""
+msgstr "``sphinx.util.console.terminal_safe()``"
 
 #: ../../extdev/deprecated.rst:445
 msgid "``sphinx.util.pycompat.u``"
-msgstr ""
+msgstr "``sphinx.util.pycompat.u``"
 
 #: ../../extdev/deprecated.rst:450
 msgid "``sphinx.util.PeekableIterator``"
-msgstr ""
+msgstr "``sphinx.util.PeekableIterator``"
 
 #: ../../extdev/deprecated.rst:455
 msgid ""
@@ -841,71 +841,71 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:459
 msgid "``IndexBuilder.feed(docname, filename, title, doctree)``"
-msgstr ""
+msgstr "``IndexBuilder.feed(docname, filename, title, doctree)``"
 
 #: ../../extdev/deprecated.rst:461
 msgid "``sphinx.writers.latex.ExtBabel``"
-msgstr ""
+msgstr "``sphinx.writers.latex.ExtBabel``"
 
 #: ../../extdev/deprecated.rst:464
 msgid "``sphinx.builders.latex.util.ExtBabel``"
-msgstr ""
+msgstr "``sphinx.builders.latex.util.ExtBabel``"
 
 #: ../../extdev/deprecated.rst:466
 msgid "``sphinx.writers.latex.LaTeXTranslator.babel_defmacro()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.babel_defmacro()``"
 
 #: ../../extdev/deprecated.rst:471
 msgid "``sphinx.application.Sphinx._setting_up_extension``"
-msgstr ""
+msgstr "``sphinx.application.Sphinx._setting_up_extension``"
 
 #: ../../extdev/deprecated.rst:476
 msgid "The ``importer`` argument of ``sphinx.ext.autodoc.importer._MockModule``"
-msgstr ""
+msgstr "The ``importer`` argument of ``sphinx.ext.autodoc.importer._MockModule``"
 
 #: ../../extdev/deprecated.rst:481
 msgid "``sphinx.ext.autodoc.importer._MockImporter``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.importer._MockImporter``"
 
 #: ../../extdev/deprecated.rst:486
 msgid "``sphinx.io.SphinxBaseFileInput``"
-msgstr ""
+msgstr "``sphinx.io.SphinxBaseFileInput``"
 
 #: ../../extdev/deprecated.rst:491
 msgid "``sphinx.io.SphinxFileInput.supported``"
-msgstr ""
+msgstr "``sphinx.io.SphinxFileInput.supported``"
 
 #: ../../extdev/deprecated.rst:496
 msgid "``sphinx.io.SphinxRSTFileInput``"
-msgstr ""
+msgstr "``sphinx.io.SphinxRSTFileInput``"
 
 #: ../../extdev/deprecated.rst:501
 msgid "``sphinx.registry.SphinxComponentRegistry.add_source_input()``"
-msgstr ""
+msgstr "``sphinx.registry.SphinxComponentRegistry.add_source_input()``"
 
 #: ../../extdev/deprecated.rst:506
 msgid "``sphinx.writers.latex.LaTeXTranslator._make_visit_admonition()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator._make_visit_admonition()``"
 
 #: ../../extdev/deprecated.rst:511
 msgid "``sphinx.writers.latex.LaTeXTranslator.collect_footnotes()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.collect_footnotes()``"
 
 #: ../../extdev/deprecated.rst:516
 msgid "``sphinx.writers.texinfo.TexinfoTranslator._make_visit_admonition()``"
-msgstr ""
+msgstr "``sphinx.writers.texinfo.TexinfoTranslator._make_visit_admonition()``"
 
 #: ../../extdev/deprecated.rst:521
 msgid "``sphinx.writers.text.TextTranslator._make_depart_admonition()``"
-msgstr ""
+msgstr "``sphinx.writers.text.TextTranslator._make_depart_admonition()``"
 
 #: ../../extdev/deprecated.rst:526
 msgid "``sphinx.writers.latex.LaTeXTranslator.generate_numfig_format()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.generate_numfig_format()``"
 
 #: ../../extdev/deprecated.rst:531
 msgid ":rst:dir:`highlightlang`"
-msgstr ""
+msgstr ":rst:dir:`highlightlang`"
 
 #: ../../extdev/deprecated.rst:532 ../../extdev/deprecated.rst:537
 #: ../../extdev/deprecated.rst:542 ../../extdev/deprecated.rst:547
@@ -947,39 +947,39 @@ msgstr ""
 #: ../../extdev/deprecated.rst:907 ../../extdev/deprecated.rst:912
 #: ../../extdev/deprecated.rst:1002 ../../extdev/deprecated.rst:1003
 msgid "1.8"
-msgstr ""
+msgstr "1.8"
 
 #: ../../extdev/deprecated.rst:534
 msgid ":rst:dir:`highlight`"
-msgstr ""
+msgstr ":rst:dir:`highlight`"
 
 #: ../../extdev/deprecated.rst:536 ../../extdev/deprecated.rst:999
 msgid ":meth:`~sphinx.application.Sphinx.add_stylesheet()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_stylesheet()`"
 
 #: ../../extdev/deprecated.rst:539
 msgid ":meth:`~sphinx.application.Sphinx.add_css_file()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_css_file()`"
 
 #: ../../extdev/deprecated.rst:541
 msgid ":meth:`~sphinx.application.Sphinx.add_javascript()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_javascript()`"
 
 #: ../../extdev/deprecated.rst:544
 msgid ":meth:`~sphinx.application.Sphinx.add_js_file()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_js_file()`"
 
 #: ../../extdev/deprecated.rst:546
 msgid ":confval:`autodoc_default_flags`"
-msgstr ""
+msgstr ":confval:`autodoc_default_flags`"
 
 #: ../../extdev/deprecated.rst:549
 msgid ":confval:`autodoc_default_options`"
-msgstr ""
+msgstr ":confval:`autodoc_default_options`"
 
 #: ../../extdev/deprecated.rst:551
 msgid "``content`` arguments of ``sphinx.util.image.guess_mimetype()``"
-msgstr ""
+msgstr "``content`` arguments of ``sphinx.util.image.guess_mimetype()``"
 
 #: ../../extdev/deprecated.rst:556
 msgid ""
@@ -989,267 +989,267 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:562
 msgid "``sphinx.io.SphinxI18nReader.set_lineno_for_reporter()``"
-msgstr ""
+msgstr "``sphinx.io.SphinxI18nReader.set_lineno_for_reporter()``"
 
 #: ../../extdev/deprecated.rst:567
 msgid "``sphinx.io.SphinxI18nReader.line``"
-msgstr ""
+msgstr "``sphinx.io.SphinxI18nReader.line``"
 
 #: ../../extdev/deprecated.rst:572
 msgid "``sphinx.directives.other.VersionChanges``"
-msgstr ""
+msgstr "``sphinx.directives.other.VersionChanges``"
 
 #: ../../extdev/deprecated.rst:575
 msgid "``sphinx.domains.changeset.VersionChanges``"
-msgstr ""
+msgstr "``sphinx.domains.changeset.VersionChanges``"
 
 #: ../../extdev/deprecated.rst:577
 msgid "``sphinx.highlighting.PygmentsBridge.unhighlight()``"
-msgstr ""
+msgstr "``sphinx.highlighting.PygmentsBridge.unhighlight()``"
 
 #: ../../extdev/deprecated.rst:582
 msgid "``trim_doctest_flags`` arguments of ``sphinx.highlighting.PygmentsBridge``"
-msgstr ""
+msgstr "``trim_doctest_flags`` arguments of ``sphinx.highlighting.PygmentsBridge``"
 
 #: ../../extdev/deprecated.rst:588
 msgid "``sphinx.ext.mathbase``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase``"
 
 #: ../../extdev/deprecated.rst:593
 msgid "``sphinx.ext.mathbase.MathDomain``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.MathDomain``"
 
 #: ../../extdev/deprecated.rst:596
 msgid "``sphinx.domains.math.MathDomain``"
-msgstr ""
+msgstr "``sphinx.domains.math.MathDomain``"
 
 #: ../../extdev/deprecated.rst:598
 msgid "``sphinx.ext.mathbase.MathDirective``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.MathDirective``"
 
 #: ../../extdev/deprecated.rst:601
 msgid "``sphinx.directives.patches.MathDirective``"
-msgstr ""
+msgstr "``sphinx.directives.patches.MathDirective``"
 
 #: ../../extdev/deprecated.rst:603
 msgid "``sphinx.ext.mathbase.math_role()``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.math_role()``"
 
 #: ../../extdev/deprecated.rst:606
 msgid "``docutils.parsers.rst.roles.math_role()``"
-msgstr ""
+msgstr "``docutils.parsers.rst.roles.math_role()``"
 
 #: ../../extdev/deprecated.rst:608
 msgid "``sphinx.ext.mathbase.setup_math()``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.setup_math()``"
 
 #: ../../extdev/deprecated.rst:611
 msgid ":meth:`~sphinx.application.Sphinx.add_html_math_renderer()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_html_math_renderer()`"
 
 #: ../../extdev/deprecated.rst:613
 msgid "``sphinx.ext.mathbase.is_in_section_title()``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.is_in_section_title()``"
 
 #: ../../extdev/deprecated.rst:618
 msgid "``sphinx.ext.mathbase.get_node_equation_number()``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.get_node_equation_number()``"
 
 #: ../../extdev/deprecated.rst:621
 msgid "``sphinx.util.math.get_node_equation_number()``"
-msgstr ""
+msgstr "``sphinx.util.math.get_node_equation_number()``"
 
 #: ../../extdev/deprecated.rst:623
 msgid "``sphinx.ext.mathbase.wrap_displaymath()``"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.wrap_displaymath()``"
 
 #: ../../extdev/deprecated.rst:626
 msgid "``sphinx.util.math.wrap_displaymath()``"
-msgstr ""
+msgstr "``sphinx.util.math.wrap_displaymath()``"
 
 #: ../../extdev/deprecated.rst:628
 msgid "``sphinx.ext.mathbase.math`` (node)"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.math`` (node)"
 
 #: ../../extdev/deprecated.rst:631
 msgid "``docutils.nodes.math``"
-msgstr ""
+msgstr "``docutils.nodes.math``"
 
 #: ../../extdev/deprecated.rst:633
 msgid "``sphinx.ext.mathbase.displaymath`` (node)"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.displaymath`` (node)"
 
 #: ../../extdev/deprecated.rst:636
 msgid "``docutils.nodes.math_block``"
-msgstr ""
+msgstr "``docutils.nodes.math_block``"
 
 #: ../../extdev/deprecated.rst:638
 msgid "``sphinx.ext.mathbase.eqref`` (node)"
-msgstr ""
+msgstr "``sphinx.ext.mathbase.eqref`` (node)"
 
 #: ../../extdev/deprecated.rst:641
 msgid "``sphinx.builders.latex.nodes.math_reference``"
-msgstr ""
+msgstr "``sphinx.builders.latex.nodes.math_reference``"
 
 #: ../../extdev/deprecated.rst:643
 msgid "``viewcode_import`` (config value)"
-msgstr ""
+msgstr "``viewcode_import`` (config value)"
 
 #: ../../extdev/deprecated.rst:646
 msgid ":confval:`viewcode_follow_imported_members`"
-msgstr ""
+msgstr ":confval:`viewcode_follow_imported_members`"
 
 #: ../../extdev/deprecated.rst:648
 msgid "``sphinx.writers.latex.Table.caption_footnotetexts``"
-msgstr ""
+msgstr "``sphinx.writers.latex.Table.caption_footnotetexts``"
 
 #: ../../extdev/deprecated.rst:653
 msgid "``sphinx.writers.latex.Table.header_footnotetexts``"
-msgstr ""
+msgstr "``sphinx.writers.latex.Table.header_footnotetexts``"
 
 #: ../../extdev/deprecated.rst:658
 msgid "``sphinx.writers.latex.LaTeXTranslator.footnotestack``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.footnotestack``"
 
 #: ../../extdev/deprecated.rst:663
 msgid "``sphinx.writers.latex.LaTeXTranslator.in_container_literal_block``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.in_container_literal_block``"
 
 #: ../../extdev/deprecated.rst:668
 msgid "``sphinx.writers.latex.LaTeXTranslator.next_section_ids``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.next_section_ids``"
 
 #: ../../extdev/deprecated.rst:673
 msgid "``sphinx.writers.latex.LaTeXTranslator.next_hyperlink_ids``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.next_hyperlink_ids``"
 
 #: ../../extdev/deprecated.rst:678
 msgid "``sphinx.writers.latex.LaTeXTranslator.restrict_footnote()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.restrict_footnote()``"
 
 #: ../../extdev/deprecated.rst:683
 msgid "``sphinx.writers.latex.LaTeXTranslator.unrestrict_footnote()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.unrestrict_footnote()``"
 
 #: ../../extdev/deprecated.rst:688
 msgid "``sphinx.writers.latex.LaTeXTranslator.push_hyperlink_ids()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.push_hyperlink_ids()``"
 
 #: ../../extdev/deprecated.rst:693
 msgid "``sphinx.writers.latex.LaTeXTranslator.pop_hyperlink_ids()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.pop_hyperlink_ids()``"
 
 #: ../../extdev/deprecated.rst:698
 msgid "``sphinx.writers.latex.LaTeXTranslator.bibitems``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.bibitems``"
 
 #: ../../extdev/deprecated.rst:703
 msgid "``sphinx.writers.latex.LaTeXTranslator.hlsettingstack``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.hlsettingstack``"
 
 #: ../../extdev/deprecated.rst:708
 msgid "``sphinx.writers.latex.ExtBabel.get_shorthandoff()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.ExtBabel.get_shorthandoff()``"
 
 #: ../../extdev/deprecated.rst:713
 msgid "``sphinx.writers.html.HTMLTranslator.highlightlang()``"
-msgstr ""
+msgstr "``sphinx.writers.html.HTMLTranslator.highlightlang()``"
 
 #: ../../extdev/deprecated.rst:718
 msgid "``sphinx.writers.html.HTMLTranslator.highlightlang_base()``"
-msgstr ""
+msgstr "``sphinx.writers.html.HTMLTranslator.highlightlang_base()``"
 
 #: ../../extdev/deprecated.rst:723
 msgid "``sphinx.writers.html.HTMLTranslator.highlightlangopts()``"
-msgstr ""
+msgstr "``sphinx.writers.html.HTMLTranslator.highlightlangopts()``"
 
 #: ../../extdev/deprecated.rst:728
 msgid "``sphinx.writers.html.HTMLTranslator.highlightlinenothreshold()``"
-msgstr ""
+msgstr "``sphinx.writers.html.HTMLTranslator.highlightlinenothreshold()``"
 
 #: ../../extdev/deprecated.rst:733
 msgid "``sphinx.writers.html5.HTMLTranslator.highlightlang()``"
-msgstr ""
+msgstr "``sphinx.writers.html5.HTMLTranslator.highlightlang()``"
 
 #: ../../extdev/deprecated.rst:738
 msgid "``sphinx.writers.html5.HTMLTranslator.highlightlang_base()``"
-msgstr ""
+msgstr "``sphinx.writers.html5.HTMLTranslator.highlightlang_base()``"
 
 #: ../../extdev/deprecated.rst:743
 msgid "``sphinx.writers.html5.HTMLTranslator.highlightlangopts()``"
-msgstr ""
+msgstr "``sphinx.writers.html5.HTMLTranslator.highlightlangopts()``"
 
 #: ../../extdev/deprecated.rst:748
 msgid "``sphinx.writers.html5.HTMLTranslator.highlightlinenothreshold()``"
-msgstr ""
+msgstr "``sphinx.writers.html5.HTMLTranslator.highlightlinenothreshold()``"
 
 #: ../../extdev/deprecated.rst:753
 msgid "``sphinx.writers.latex.LaTeXTranslator.check_latex_elements()``"
-msgstr ""
+msgstr "``sphinx.writers.latex.LaTeXTranslator.check_latex_elements()``"
 
 #: ../../extdev/deprecated.rst:756
 msgid "Nothing"
-msgstr ""
+msgstr "Nothing"
 
 #: ../../extdev/deprecated.rst:758
 msgid "``sphinx.application.CONFIG_FILENAME``"
-msgstr ""
+msgstr "``sphinx.application.CONFIG_FILENAME``"
 
 #: ../../extdev/deprecated.rst:761
 msgid "``sphinx.config.CONFIG_FILENAME``"
-msgstr ""
+msgstr "``sphinx.config.CONFIG_FILENAME``"
 
 #: ../../extdev/deprecated.rst:763
 msgid "``Config.check_unicode()``"
-msgstr ""
+msgstr "``Config.check_unicode()``"
 
 #: ../../extdev/deprecated.rst:768
 msgid "``Config.check_types()``"
-msgstr ""
+msgstr "``Config.check_types()``"
 
 #: ../../extdev/deprecated.rst:771
 msgid "``sphinx.config.check_confval_types()``"
-msgstr ""
+msgstr "``sphinx.config.check_confval_types()``"
 
 #: ../../extdev/deprecated.rst:773
 msgid "``dirname``, ``filename`` and ``tags`` arguments of ``Config.__init__()``"
-msgstr ""
+msgstr "``dirname``, ``filename`` and ``tags`` arguments of ``Config.__init__()``"
 
 #: ../../extdev/deprecated.rst:777
 msgid "``Config.read()``"
-msgstr ""
+msgstr "``Config.read()``"
 
 #: ../../extdev/deprecated.rst:779
 msgid "The value of :confval:`html_search_options`"
-msgstr ""
+msgstr "The value of :confval:`html_search_options`"
 
 #: ../../extdev/deprecated.rst:782
 msgid "see :confval:`html_search_options`"
-msgstr ""
+msgstr "see :confval:`html_search_options`"
 
 #: ../../extdev/deprecated.rst:784
 msgid "``sphinx.versioning.prepare()``"
-msgstr ""
+msgstr "``sphinx.versioning.prepare()``"
 
 #: ../../extdev/deprecated.rst:787
 msgid "``sphinx.versioning.UIDTransform``"
-msgstr ""
+msgstr "``sphinx.versioning.UIDTransform``"
 
 #: ../../extdev/deprecated.rst:789
 msgid "``Sphinx.override_domain()``"
-msgstr ""
+msgstr "``Sphinx.override_domain()``"
 
 #: ../../extdev/deprecated.rst:792
 msgid ":meth:`~sphinx.application.Sphinx.add_domain()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_domain()`"
 
 #: ../../extdev/deprecated.rst:794
 msgid "``Sphinx.import_object()``"
-msgstr ""
+msgstr "``Sphinx.import_object()``"
 
 #: ../../extdev/deprecated.rst:797
 msgid "``sphinx.util.import_object()``"
-msgstr ""
+msgstr "``sphinx.util.import_object()``"
 
 #: ../../extdev/deprecated.rst:799
 msgid ""
@@ -1259,173 +1259,173 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:803
 msgid ":meth:`~sphinx.application.Sphinx.add_source_suffix()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_source_suffix()`"
 
 #: ../../extdev/deprecated.rst:806
 msgid "``BuildEnvironment.load()``"
-msgstr ""
+msgstr "``BuildEnvironment.load()``"
 
 #: ../../extdev/deprecated.rst:809 ../../extdev/deprecated.rst:819
 msgid "``pickle.load()``"
-msgstr ""
+msgstr "``pickle.load()``"
 
 #: ../../extdev/deprecated.rst:811
 msgid "``BuildEnvironment.loads()``"
-msgstr ""
+msgstr "``BuildEnvironment.loads()``"
 
 #: ../../extdev/deprecated.rst:814
 msgid "``pickle.loads()``"
-msgstr ""
+msgstr "``pickle.loads()``"
 
 #: ../../extdev/deprecated.rst:816
 msgid "``BuildEnvironment.frompickle()``"
-msgstr ""
+msgstr "``BuildEnvironment.frompickle()``"
 
 #: ../../extdev/deprecated.rst:821
 msgid "``BuildEnvironment.dump()``"
-msgstr ""
+msgstr "``BuildEnvironment.dump()``"
 
 #: ../../extdev/deprecated.rst:824 ../../extdev/deprecated.rst:834
 msgid "``pickle.dump()``"
-msgstr ""
+msgstr "``pickle.dump()``"
 
 #: ../../extdev/deprecated.rst:826
 msgid "``BuildEnvironment.dumps()``"
-msgstr ""
+msgstr "``BuildEnvironment.dumps()``"
 
 #: ../../extdev/deprecated.rst:829
 msgid "``pickle.dumps()``"
-msgstr ""
+msgstr "``pickle.dumps()``"
 
 #: ../../extdev/deprecated.rst:831
 msgid "``BuildEnvironment.topickle()``"
-msgstr ""
+msgstr "``BuildEnvironment.topickle()``"
 
 #: ../../extdev/deprecated.rst:836
 msgid "``BuildEnvironment._nitpick_ignore``"
-msgstr ""
+msgstr "``BuildEnvironment._nitpick_ignore``"
 
 #: ../../extdev/deprecated.rst:839
 msgid ":confval:`nitpick_ignore`"
-msgstr ""
+msgstr ":confval:`nitpick_ignore`"
 
 #: ../../extdev/deprecated.rst:841
 msgid "``BuildEnvironment.versionchanges``"
-msgstr ""
+msgstr "``BuildEnvironment.versionchanges``"
 
 #: ../../extdev/deprecated.rst:846
 msgid "``BuildEnvironment.update()``"
-msgstr ""
+msgstr "``BuildEnvironment.update()``"
 
 #: ../../extdev/deprecated.rst:849 ../../extdev/deprecated.rst:859
 #: ../../extdev/deprecated.rst:864
 msgid "``Builder.read()``"
-msgstr ""
+msgstr "``Builder.read()``"
 
 #: ../../extdev/deprecated.rst:851
 msgid "``BuildEnvironment.read_doc()``"
-msgstr ""
+msgstr "``BuildEnvironment.read_doc()``"
 
 #: ../../extdev/deprecated.rst:854
 msgid "``Builder.read_doc()``"
-msgstr ""
+msgstr "``Builder.read_doc()``"
 
 #: ../../extdev/deprecated.rst:856
 msgid "``BuildEnvironment._read_serial()``"
-msgstr ""
+msgstr "``BuildEnvironment._read_serial()``"
 
 #: ../../extdev/deprecated.rst:861
 msgid "``BuildEnvironment._read_parallel()``"
-msgstr ""
+msgstr "``BuildEnvironment._read_parallel()``"
 
 #: ../../extdev/deprecated.rst:866
 msgid "``BuildEnvironment.write_doctree()``"
-msgstr ""
+msgstr "``BuildEnvironment.write_doctree()``"
 
 #: ../../extdev/deprecated.rst:869
 msgid "``Builder.write_doctree()``"
-msgstr ""
+msgstr "``Builder.write_doctree()``"
 
 #: ../../extdev/deprecated.rst:871
 msgid "``BuildEnvironment.note_versionchange()``"
-msgstr ""
+msgstr "``BuildEnvironment.note_versionchange()``"
 
 #: ../../extdev/deprecated.rst:874
 msgid "``ChangesDomain.note_changeset()``"
-msgstr ""
+msgstr "``ChangesDomain.note_changeset()``"
 
 #: ../../extdev/deprecated.rst:876
 msgid "``warn()`` (template helper function)"
-msgstr ""
+msgstr "``warn()`` (template helper function)"
 
 #: ../../extdev/deprecated.rst:879
 msgid "``warning()``"
-msgstr ""
+msgstr "``warning()``"
 
 #: ../../extdev/deprecated.rst:881
 msgid ":confval:`source_parsers`"
-msgstr ""
+msgstr ":confval:`source_parsers`"
 
 #: ../../extdev/deprecated.rst:884
 msgid ":meth:`~sphinx.application.Sphinx.add_source_parser()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_source_parser()`"
 
 #: ../../extdev/deprecated.rst:886 ../../extdev/deprecated.rst:1019
 msgid "``sphinx.util.docutils.directive_helper()``"
-msgstr ""
+msgstr "``sphinx.util.docutils.directive_helper()``"
 
 #: ../../extdev/deprecated.rst:889
 msgid "``Directive`` class of docutils"
-msgstr ""
+msgstr "``Directive`` class of docutils"
 
 #: ../../extdev/deprecated.rst:891
 msgid "``sphinx.cmdline``"
-msgstr ""
+msgstr "``sphinx.cmdline``"
 
 #: ../../extdev/deprecated.rst:894
 msgid "``sphinx.cmd.build``"
-msgstr ""
+msgstr "``sphinx.cmd.build``"
 
 #: ../../extdev/deprecated.rst:896
 msgid "``sphinx.make_mode``"
-msgstr ""
+msgstr "``sphinx.make_mode``"
 
 #: ../../extdev/deprecated.rst:899
 msgid "``sphinx.cmd.make_mode``"
-msgstr ""
+msgstr "``sphinx.cmd.make_mode``"
 
 #: ../../extdev/deprecated.rst:901
 msgid "``sphinx.locale.l_()``"
-msgstr ""
+msgstr "``sphinx.locale.l_()``"
 
 #: ../../extdev/deprecated.rst:904 ../../extdev/deprecated.rst:909
 #: ../../extdev/deprecated.rst:914
 msgid ":func:`sphinx.locale._()`"
-msgstr ""
+msgstr ":func:`sphinx.locale._()`"
 
 #: ../../extdev/deprecated.rst:906
 msgid "``sphinx.locale.lazy_gettext()``"
-msgstr ""
+msgstr "``sphinx.locale.lazy_gettext()``"
 
 #: ../../extdev/deprecated.rst:911
 msgid "``sphinx.locale.mygettext()``"
-msgstr ""
+msgstr "``sphinx.locale.mygettext()``"
 
 #: ../../extdev/deprecated.rst:916
 msgid "``sphinx.util.copy_static_entry()``"
-msgstr ""
+msgstr "``sphinx.util.copy_static_entry()``"
 
 #: ../../extdev/deprecated.rst:917
 msgid "1.5"
-msgstr ""
+msgstr "1.5"
 
 #: ../../extdev/deprecated.rst:919
 msgid "``sphinx.util.fileutil.copy_asset()``"
-msgstr ""
+msgstr "``sphinx.util.fileutil.copy_asset()``"
 
 #: ../../extdev/deprecated.rst:921
 msgid "``sphinx.build_main()``"
-msgstr ""
+msgstr "``sphinx.build_main()``"
 
 #: ../../extdev/deprecated.rst:922 ../../extdev/deprecated.rst:927
 #: ../../extdev/deprecated.rst:932 ../../extdev/deprecated.rst:937
@@ -1435,63 +1435,63 @@ msgstr ""
 #: ../../extdev/deprecated.rst:1018 ../../extdev/deprecated.rst:1023
 #: ../../extdev/deprecated.rst:1028
 msgid "1.7"
-msgstr ""
+msgstr "1.7"
 
 #: ../../extdev/deprecated.rst:924
 msgid "``sphinx.cmd.build.build_main()``"
-msgstr ""
+msgstr "``sphinx.cmd.build.build_main()``"
 
 #: ../../extdev/deprecated.rst:926
 msgid "``sphinx.ext.intersphinx.debug()``"
-msgstr ""
+msgstr "``sphinx.ext.intersphinx.debug()``"
 
 #: ../../extdev/deprecated.rst:929
 msgid "``sphinx.ext.intersphinx.inspect_main()``"
-msgstr ""
+msgstr "``sphinx.ext.intersphinx.inspect_main()``"
 
 #: ../../extdev/deprecated.rst:931
 msgid "``sphinx.ext.autodoc.format_annotation()``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.format_annotation()``"
 
 #: ../../extdev/deprecated.rst:934 ../../extdev/deprecated.rst:939
 msgid "``sphinx.util.inspect.Signature``"
-msgstr ""
+msgstr "``sphinx.util.inspect.Signature``"
 
 #: ../../extdev/deprecated.rst:936
 msgid "``sphinx.ext.autodoc.formatargspec()``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.formatargspec()``"
 
 #: ../../extdev/deprecated.rst:941
 msgid "``sphinx.ext.autodoc.AutodocReporter``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.AutodocReporter``"
 
 #: ../../extdev/deprecated.rst:944
 msgid "``sphinx.util.docutils.switch_source_input()``"
-msgstr ""
+msgstr "``sphinx.util.docutils.switch_source_input()``"
 
 #: ../../extdev/deprecated.rst:946
 msgid "``sphinx.ext.autodoc.add_documenter()``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.add_documenter()``"
 
 #: ../../extdev/deprecated.rst:949 ../../extdev/deprecated.rst:954
 msgid ":meth:`~sphinx.application.Sphinx.add_autodocumenter()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_autodocumenter()`"
 
 #: ../../extdev/deprecated.rst:951
 msgid "``sphinx.ext.autodoc.AutoDirective._register``"
-msgstr ""
+msgstr "``sphinx.ext.autodoc.AutoDirective._register``"
 
 #: ../../extdev/deprecated.rst:956
 msgid "``AutoDirective._special_attrgetters``"
-msgstr ""
+msgstr "``AutoDirective._special_attrgetters``"
 
 #: ../../extdev/deprecated.rst:959
 msgid ":meth:`~sphinx.application.Sphinx.add_autodoc_attrgetter()`"
-msgstr ""
+msgstr ":meth:`~sphinx.application.Sphinx.add_autodoc_attrgetter()`"
 
 #: ../../extdev/deprecated.rst:961
 msgid "``Sphinx.warn()``, ``Sphinx.info()``"
-msgstr ""
+msgstr "``Sphinx.warn()``, ``Sphinx.info()``"
 
 #: ../../extdev/deprecated.rst:962 ../../extdev/deprecated.rst:967
 #: ../../extdev/deprecated.rst:972 ../../extdev/deprecated.rst:977
@@ -1501,43 +1501,43 @@ msgstr ""
 #: ../../extdev/deprecated.rst:1017 ../../extdev/deprecated.rst:1022
 #: ../../extdev/deprecated.rst:1027
 msgid "1.6"
-msgstr ""
+msgstr "1.6"
 
 #: ../../extdev/deprecated.rst:964 ../../extdev/deprecated.rst:969
 msgid ":ref:`logging-api`"
-msgstr ""
+msgstr ":ref:`logging-api`"
 
 #: ../../extdev/deprecated.rst:966
 msgid "``BuildEnvironment.set_warnfunc()``"
-msgstr ""
+msgstr "``BuildEnvironment.set_warnfunc()``"
 
 #: ../../extdev/deprecated.rst:971
 msgid "``BuildEnvironment.note_toctree()``"
-msgstr ""
+msgstr "``BuildEnvironment.note_toctree()``"
 
 #: ../../extdev/deprecated.rst:974
 msgid "``Toctree.note()`` (in ``sphinx.environment.adapters.toctree``)"
-msgstr ""
+msgstr "``Toctree.note()`` (in ``sphinx.environment.adapters.toctree``)"
 
 #: ../../extdev/deprecated.rst:976
 msgid "``BuildEnvironment.get_toc_for()``"
-msgstr ""
+msgstr "``BuildEnvironment.get_toc_for()``"
 
 #: ../../extdev/deprecated.rst:979
 msgid "``Toctree.get_toc_for()`` (in ``sphinx.environment.adapters.toctree``)"
-msgstr ""
+msgstr "``Toctree.get_toc_for()`` (in ``sphinx.environment.adapters.toctree``)"
 
 #: ../../extdev/deprecated.rst:981
 msgid "``BuildEnvironment.get_toctree_for()``"
-msgstr ""
+msgstr "``BuildEnvironment.get_toctree_for()``"
 
 #: ../../extdev/deprecated.rst:984
 msgid "``Toctree.get_toctree_for()`` (in ``sphinx.environment.adapters.toctree``)"
-msgstr ""
+msgstr "``Toctree.get_toctree_for()`` (in ``sphinx.environment.adapters.toctree``)"
 
 #: ../../extdev/deprecated.rst:986
 msgid "``BuildEnvironment.create_index()``"
-msgstr ""
+msgstr "``BuildEnvironment.create_index()``"
 
 #: ../../extdev/deprecated.rst:989
 msgid ""
@@ -1547,7 +1547,7 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:991
 msgid "``sphinx.websupport``"
-msgstr ""
+msgstr "``sphinx.websupport``"
 
 #: ../../extdev/deprecated.rst:994
 msgid ""
@@ -1557,55 +1557,55 @@ msgstr ""
 
 #: ../../extdev/deprecated.rst:996
 msgid "``StandaloneHTMLBuilder.css_files``"
-msgstr ""
+msgstr "``StandaloneHTMLBuilder.css_files``"
 
 #: ../../extdev/deprecated.rst:1001
 msgid "``document.settings.gettext_compact``"
-msgstr ""
+msgstr "``document.settings.gettext_compact``"
 
 #: ../../extdev/deprecated.rst:1004
 msgid ":confval:`gettext_compact`"
-msgstr ""
+msgstr ":confval:`gettext_compact`"
 
 #: ../../extdev/deprecated.rst:1006
 msgid "``Sphinx.status_iterator()``"
-msgstr ""
+msgstr "``Sphinx.status_iterator()``"
 
 #: ../../extdev/deprecated.rst:1009
 msgid "``sphinx.util.status_iterator()``"
-msgstr ""
+msgstr "``sphinx.util.status_iterator()``"
 
 #: ../../extdev/deprecated.rst:1011
 msgid "``Sphinx.old_status_iterator()``"
-msgstr ""
+msgstr "``Sphinx.old_status_iterator()``"
 
 #: ../../extdev/deprecated.rst:1014
 msgid "``sphinx.util.old_status_iterator()``"
-msgstr ""
+msgstr "``sphinx.util.old_status_iterator()``"
 
 #: ../../extdev/deprecated.rst:1016
 msgid "``Sphinx._directive_helper()``"
-msgstr ""
+msgstr "``Sphinx._directive_helper()``"
 
 #: ../../extdev/deprecated.rst:1021
 msgid "``sphinx.util.compat.Directive``"
-msgstr ""
+msgstr "``sphinx.util.compat.Directive``"
 
 #: ../../extdev/deprecated.rst:1024
 msgid "``docutils.parsers.rst.Directive``"
-msgstr ""
+msgstr "``docutils.parsers.rst.Directive``"
 
 #: ../../extdev/deprecated.rst:1026
 msgid "``sphinx.util.compat.docutils_version``"
-msgstr ""
+msgstr "``sphinx.util.compat.docutils_version``"
 
 #: ../../extdev/deprecated.rst:1029
 msgid "``sphinx.util.docutils.__version_info__``"
-msgstr ""
+msgstr "``sphinx.util.docutils.__version_info__``"
 
 #: ../../extdev/deprecated.rst:1031
 msgid ""
 "On deprecating on public APIs (internal functions and classes), we also "
 "follow the policy as much as possible."
-msgstr ""
+msgstr "在弃用公共API(内部函数和类)时，我们也尽可能遵循该策略。"
 

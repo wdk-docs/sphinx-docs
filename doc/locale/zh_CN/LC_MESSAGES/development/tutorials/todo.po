@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:20
 msgid "We want the extension to add the following to Sphinx:"
-msgstr ""
+msgstr "We want the extension to add the following to Sphinx:"
 
 #: ../../development/tutorials/todo.rst:22
 msgid ""
@@ -62,11 +62,11 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:29
 msgid "For that, we will need to add the following elements to Sphinx:"
-msgstr ""
+msgstr "For that, we will need to add the following elements to Sphinx:"
 
 #: ../../development/tutorials/todo.rst:31
 msgid "New directives, called ``todo`` and ``todolist``."
-msgstr ""
+msgstr "New directives, called ``todo`` and ``todolist``."
 
 #: ../../development/tutorials/todo.rst:33
 msgid ""
@@ -111,15 +111,15 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:57
 msgid "Create an :file:`_ext` folder in :file:`source`"
-msgstr ""
+msgstr "Create an :file:`_ext` folder in :file:`source`"
 
 #: ../../development/tutorials/todo.rst:58
 msgid "Create a new Python file in the :file:`_ext` folder called :file:`todo.py`"
-msgstr ""
+msgstr "Create a new Python file in the :file:`_ext` folder called :file:`todo.py`"
 
 #: ../../development/tutorials/todo.rst:60
 msgid "Here is an example of the folder structure you might obtain:"
-msgstr ""
+msgstr "Here is an example of the folder structure you might obtain:"
 
 #: ../../development/tutorials/todo.rst:76
 msgid "Writing the extension"
@@ -140,11 +140,11 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:90
 msgid "The node classes"
-msgstr ""
+msgstr "The node classes"
 
 #: ../../development/tutorials/todo.rst:91
 msgid "Let's start with the node classes:"
-msgstr ""
+msgstr "Let's start with the node classes:"
 
 #: ../../development/tutorials/todo.rst:98
 msgid ""
@@ -164,7 +164,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:111
 msgid "The directive classes"
-msgstr ""
+msgstr "The directive classes"
 
 #: ../../development/tutorials/todo.rst:112
 msgid ""
@@ -177,7 +177,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:118
 msgid "Looking first at the ``TodolistDirective`` directive:"
-msgstr ""
+msgstr "Looking first at the ``TodolistDirective`` directive:"
 
 #: ../../development/tutorials/todo.rst:125
 msgid ""
@@ -228,11 +228,11 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:162
 msgid "The node structure that the directive returns looks like this::"
-msgstr ""
+msgstr "The node structure that the directive returns looks like this::"
 
 #: ../../development/tutorials/todo.rst:179
 msgid "The event handlers"
-msgstr ""
+msgstr "The event handlers"
 
 #: ../../development/tutorials/todo.rst:180
 msgid ""
@@ -261,7 +261,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:201
 msgid "The other handler belongs to the :event:`doctree-resolved` event:"
-msgstr ""
+msgstr "The other handler belongs to the :event:`doctree-resolved` event:"
 
 #: ../../development/tutorials/todo.rst:208
 msgid ""
@@ -284,7 +284,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:224
 msgid "The ``setup`` function"
-msgstr ""
+msgstr "The ``setup`` function"
 
 #: ../../development/tutorials/todo.rst:227
 msgid ""
@@ -341,7 +341,7 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:259
 msgid "With this, our extension is complete."
-msgstr ""
+msgstr "With this, our extension is complete."
 
 #: ../../development/tutorials/todo.rst:263
 msgid "Using the extension"
@@ -373,23 +373,23 @@ msgstr ""
 
 #: ../../development/tutorials/todo.rst:277
 msgid "For example:"
-msgstr ""
+msgstr "For example:"
 
 #: ../../development/tutorials/todo.rst:290
 msgid "You can now use the extension throughout your project. For example:"
-msgstr ""
+msgstr "You can now use the extension throughout your project. For example:"
 
 #: ../../development/tutorials/todo.rst:292
 msgid "index.rst"
-msgstr ""
+msgstr "index.rst"
 
 #: ../../development/tutorials/todo.rst:306
 msgid "somefile.rst"
-msgstr ""
+msgstr "somefile.rst"
 
 #: ../../development/tutorials/todo.rst:316
 msgid "someotherfile.rst"
-msgstr ""
+msgstr "someotherfile.rst"
 
 #: ../../development/tutorials/todo.rst:326
 msgid ""

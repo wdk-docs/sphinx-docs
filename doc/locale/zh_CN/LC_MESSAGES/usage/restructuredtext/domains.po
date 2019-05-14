@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:15+0800\n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -248,9 +248,10 @@ msgid ""
 "sections -- one location has the :rst:dir:`py:module` directive, the "
 "others only :rst:dir:`py:currentmodule`."
 msgstr ""
-"该指令告诉Sphinx，这里记录的类，函数等都在给定的模块中(如 :rst:dir:`py:module`)，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标"
-" :rst:role:`py:mod` 。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 "
-":rst:dir:`py:module` 指令，其他只有 :rst:dir:`py:currentmodule` 。"
+"该指令告诉Sphinx，这里记录的类，函数等都在给定的模块中(如 "
+":rst:dir:`py:module`)，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标 :rst:role:`py:mod` "
+"。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 :rst:dir:`py:module` 指令，其他只有 "
+":rst:dir:`py:currentmodule` 。"
 
 #: ../../usage/restructuredtext/domains.rst:153
 msgid "The following directives are provided for module and class contents:"
@@ -1047,7 +1048,9 @@ msgstr "表达式: :cpp:expr:`a * f(a)` (或文本: :cpp:texpr:`a * f(a)`)。"
 msgid ""
 "A type: :cpp:expr:`const MySortedContainer<int>&` (or as text "
 ":cpp:texpr:`const MySortedContainer<int>&`)."
-msgstr "类型: :cpp:expr:`const MySortedContainer<int>&` (或作为文本 :cpp:texpr:`const MySortedContainer<int>&`)。"
+msgstr ""
+"类型: :cpp:expr:`const MySortedContainer<int>&` (或作为文本 :cpp:texpr:`const "
+"MySortedContainer<int>&`)。"
 
 #: ../../usage/restructuredtext/domains.rst:936
 msgid "The :rst:role:`cpp:expr` role."
@@ -1316,7 +1319,8 @@ msgid ""
 "Currently the lookup only succeed if the template parameter identifiers "
 "are equal strings. That is, ``template\\<typename UOuter> "
 "Wrapper::Outer`` will not work."
-msgstr "目前，如果模板参数标识符是相等的字符串，则查找仅成功。也就是说，``template\\<typename UOuter> Wrapper :: "
+msgstr ""
+"目前，如果模板参数标识符是相等的字符串，则查找仅成功。也就是说，``template\\<typename UOuter> Wrapper :: "
 "Outer`` 将不起作用。"
 
 #: ../../usage/restructuredtext/domains.rst:1139
@@ -1552,7 +1556,7 @@ msgstr "在请求失败的情况下调用。还有很多其他文字，所以我
 
 #: ../../usage/restructuredtext/domains.rst
 msgid "throws SomeError"
-msgstr "抛出SomeError"
+msgstr ""
 
 #: ../../usage/restructuredtext/domains.rst:1329
 msgid "For whatever reason in that case."
@@ -1672,5 +1676,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "域"
+#~ msgstr ""
+
+#~ msgid "throws SomeError"
+#~ msgstr "抛出SomeError"
+
+#~ msgid "抛出"
 #~ msgstr ""
 

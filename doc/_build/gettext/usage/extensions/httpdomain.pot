@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/cb9d9e59e\n"
+"Project-Id-Version: Sphinx 2.1.0+/e678b9c34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-17 15:00+0800\n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -127,6 +127,88 @@ msgstr ""
 #: ../../usage/extensions/httpdomain.rst:892
 #: ../../usage/extensions/httpdomain.rst:979
 msgid "will be rendered as:"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:153
+msgid "The posts tagged with `tag` that the user (`user_id`) wrote."
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:155
+msgid "**Example request**:"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:163
+msgid "**Example response**:"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "query sort"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:186
+msgid "one of ``hit``, ``created-at``"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "query offset"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:187
+msgid "offset number. default is 0"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "query limit"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:188
+msgid "limit number. default is 30"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "reqheader Accept"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:189
+#: ../../usage/extensions/httpdomain.rst:455
+msgid "the response content type depends on :mailheader:`Accept` header"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "reqheader Authorization"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:191
+#: ../../usage/extensions/httpdomain.rst:457
+msgid "optional OAuth token to authenticate"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "resheader Content-Type"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:192
+#: ../../usage/extensions/httpdomain.rst:458
+msgid "this depends on :mailheader:`Accept` header of request"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "statuscode 200"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:194
+msgid "no error"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "statuscode 404"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:195
+msgid "there's no user"
 msgstr ""
 
 #: ../../usage/extensions/httpdomain.rst:197
@@ -344,6 +426,58 @@ msgstr ""
 #: ../../usage/extensions/httpdomain.rst:445
 #: ../../usage/extensions/httpdomain.rst:546
 msgid "It will render like this:"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:449
+msgid "Replies a comment to the post."
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:451
+msgid "post's unique id"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "form email"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:453
+msgid "author email address"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "form body"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:454
+msgid "comment body"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "status 302"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:460
+msgid "and then redirects to :http:get:`/posts/(int:post_id)`"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:0
+msgid "status 400"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:461
+msgid "when form parameters are missing"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:465
+msgid "Fetches the post"
+msgstr ""
+
+#: ../../usage/extensions/httpdomain.rst:467
+msgid "(...)"
 msgstr ""
 
 #: ../../usage/extensions/httpdomain.rst:472

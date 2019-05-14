@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域 &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -102,6 +102,9 @@
           <a href="../../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -131,7 +134,7 @@
 <li><a class="reference internal" href="#roles">角色</a></li>
 <li><a class="reference internal" href="#sphinxcontrib-autohttp-flask-exporting-api-reference-from-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code> — 从Flask应用程序导出API参考</a></li>
 <li><a class="reference internal" href="#sphinxcontrib-autohttp-flaskqref-quick-api-reference-for-flask-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flaskqref</span></code> — Flask app的快速API参考</a><ul>
-<li><a class="reference internal" href="#id138">基本用法</a></li>
+<li><a class="reference internal" href="#id4">基本用法</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#sphinxcontrib-autohttp-bottle-exporting-api-reference-from-bottle-app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.bottle</span></code> — 从Bottle应用程序导出API参考</a></li>
@@ -296,64 +299,125 @@
 </div>
 <p>将呈现为:</p>
 <blockquote>
-<div></div></blockquote>
+<div><dl class="get">
+<dt id="get--users-(int-user_id)-posts-(tag)">
+<code class="descname">GET </code><code class="descname">/users/</code><span class="sig-paren">(</span><em class="property">int: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/posts/</code><span class="sig-paren">(</span><em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#get--users-(int-user_id)-posts-(tag)" title="永久链接至目标">¶</a></dt>
+<dd><p>The posts tagged with <cite>tag</cite> that the user (<cite>user_id</cite>) wrote.</p>
+<p><strong>Example request</strong>:</p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">GET</span> <span class="nn">/users/123/posts/web</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Vary</span><span class="o">:</span> <span class="l">Accept</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
+
+<span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;post_id&quot;</span><span class="o">:</span> <span class="mi">12345</span><span class="p">,</span>
+    <span class="s2">&quot;author_id&quot;</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span>
+    <span class="s2">&quot;tags&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;server&quot;</span><span class="p">,</span> <span class="s2">&quot;web&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;subject&quot;</span><span class="o">:</span> <span class="s2">&quot;I tried Nginx&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;post_id&quot;</span><span class="o">:</span> <span class="mi">12346</span><span class="p">,</span>
+    <span class="s2">&quot;author_id&quot;</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span>
+    <span class="s2">&quot;tags&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;html5&quot;</span><span class="p">,</span> <span class="s2">&quot;standards&quot;</span><span class="p">,</span> <span class="s2">&quot;web&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;subject&quot;</span><span class="o">:</span> <span class="s2">&quot;We go to HTML 5&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Query sort</dt>
+<dd class="field-odd"><p>one of <code class="docutils literal notranslate"><span class="pre">hit</span></code>, <code class="docutils literal notranslate"><span class="pre">created-at</span></code></p>
+</dd>
+<dt class="field-even">Query offset</dt>
+<dd class="field-even"><p>offset number. default is 0</p>
+</dd>
+<dt class="field-odd">Query limit</dt>
+<dd class="field-odd"><p>limit number. default is 30</p>
+</dd>
+<dt class="field-even">Reqheader Accept</dt>
+<dd class="field-even"><p>the response content type depends on
+<em class="mailheader">Accept</em> header</p>
+</dd>
+<dt class="field-odd">Reqheader Authorization</dt>
+<dd class="field-odd"><p>optional OAuth token to authenticate</p>
+</dd>
+<dt class="field-even">Resheader Content-Type</dt>
+<dd class="field-even"><p>this depends on <em class="mailheader">Accept</em>
+header of request</p>
+</dd>
+<dt class="field-odd">Statuscode 200</dt>
+<dd class="field-odd"><p>no error</p>
+</dd>
+<dt class="field-even">Statuscode 404</dt>
+<dd class="field-even"><p>there’s no user</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div></blockquote>
 <p>当然， <a class="reference internal" href="#roles"><span class="std std-ref">roles</span></a> 也可以引用指令。 例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:http:get:</span><span class="nv">`/users/(int:user_id)/posts/(tag)`</span>
 </pre></div>
 </div>
 <p>将渲染像:</p>
 <blockquote>
-<div><p><a href="#id1"><span class="problematic" id="id2">:http:get:`/users/(int:user_id)/posts/(tag)`</span></a></p>
+<div><p><a class="reference internal" href="#get--users-(int-user_id)-posts-(tag)" title="GET /users/(int:user_id)/posts/(tag)"><code class="xref http http-get docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/users/(int:user_id)/posts/(tag)</span></code></a></p>
 </div></blockquote>
 </div>
 <div class="section" id="directives">
-<span id="id3"></span><h2>指令<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
+<span id="id1"></span><h2>指令<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
 <dl class="directive">
 <dt id="directive-http:options">
 <code class="descname">.. http:options::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:options" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`OPTIONS`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:options" title="http:options role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:options</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.7">OPTIONS</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:options" title="http:options role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:options</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
 <dt id="directive-http:head">
 <code class="descname">.. http:head::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:head" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`HEAD`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:head" title="http:head role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:head</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.2">HEAD</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:head" title="http:head role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:head</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
 <dt id="directive-http:post">
 <code class="descname">.. http:post::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:post" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`POST`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:post" title="http:post role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:post</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.3">POST</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:post" title="http:post role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:post</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
 <dt id="directive-http:get">
 <code class="descname">.. http:get::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:get" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`GET`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:get" title="http:get role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:get</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.1">GET</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:get" title="http:get role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:get</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
 <dt id="directive-http:put">
 <code class="descname">.. http:put::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:put" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`PUT`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:put" title="http:put role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:put</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.4">PUT</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:put" title="http:put role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:put</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
 <dt id="directive-http:patch">
 <code class="descname">.. http:patch::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:patch" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`PATCH`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:patch" title="http:patch role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:patch</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc5789#section-2">PATCH</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:patch" title="http:patch role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:patch</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
 <dt id="directive-http:delete">
 <code class="descname">.. http:delete::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:delete" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`DELETE`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:delete" title="http:delete role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:delete</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.5">DELETE</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:delete" title="http:delete role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:delete</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
 <dt id="directive-http:trace">
 <code class="descname">.. http:trace::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:trace" title="永久链接至目标">¶</a></dt>
-<dd><p>描述HTTP资源的 <a href="#id1"><span class="problematic" id="id2">:http:method:`TRACE`</span></a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:trace" title="http:trace role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:trace</span></code></a> 角色。</p>
+<dd><p>描述HTTP资源的 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.8">TRACE</a> 方法。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:trace" title="http:trace role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:trace</span></code></a> 角色。</p>
 </dd></dl>
 
 <dl class="directive">
@@ -368,7 +432,7 @@
 <dl class="directive">
 <dt id="directive-http:any">
 <code class="descname">.. http:any::</code><code class="descclassname"> path</code><a class="headerlink" href="#directive-http:any" title="永久链接至目标">¶</a></dt>
-<dd><p>描述一个HTTP资源，它接受请求 <a href="#id1"><span class="problematic" id="id2">:http:method:`ANY`</span></a> 方法。对于请求资源将请求代理到保留原始请求上下文的某个其他位置的情况很有用。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:any" title="http:any role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:any</span></code></a> 角色。</p>
+<dd><p>描述一个HTTP资源，它接受请求 <em>any</em> 方法。对于请求资源将请求代理到保留原始请求上下文的某个其他位置的情况很有用。它也可以通过以下方式引用 <a class="reference internal" href="#role-http:any" title="http:any role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">http:any</span></code></a> 角色。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3.0 新版功能.</span></p>
 </div>
@@ -403,7 +467,7 @@
 </div>
 </div>
 <div class="section" id="resource-fields">
-<span id="id24"></span><h2>资源字段<a class="headerlink" href="#resource-fields" title="永久链接至标题">¶</a></h2>
+<span id="id2"></span><h2>资源字段<a class="headerlink" href="#resource-fields" title="永久链接至标题">¶</a></h2>
 <p>内部HTTP资源描述指令如 <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">get</span></code> ，带有这些字段的reStructuredText字段列表可以很好地识别和格式化:</p>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">param</span></code>, <code class="docutils literal notranslate"><span class="pre">parameter</span></code>, <code class="docutils literal notranslate"><span class="pre">arg</span></code>, <code class="docutils literal notranslate"><span class="pre">argument</span></code></dt><dd><p>URL参数的描述。</p>
@@ -518,10 +582,51 @@
 </div>
 <p>它会像这样渲染:</p>
 <blockquote>
-<div></div></blockquote>
+<div><dl class="post">
+<dt id="post--posts-(int-post_id)">
+<code class="descname">POST </code><code class="descname">/posts/</code><span class="sig-paren">(</span><em class="property">int: </em><em>post_id</em><span class="sig-paren">)</span><a class="headerlink" href="#post--posts-(int-post_id)" title="永久链接至目标">¶</a></dt>
+<dd><p>Replies a comment to the post.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>post_id</strong> (<em>int</em>) – post’s unique id</p>
+</dd>
+<dt class="field-even">Form email</dt>
+<dd class="field-even"><p>author email address</p>
+</dd>
+<dt class="field-odd">Form body</dt>
+<dd class="field-odd"><p>comment body</p>
+</dd>
+<dt class="field-even">Reqheader Accept</dt>
+<dd class="field-even"><p>the response content type depends on
+<em class="mailheader">Accept</em> header</p>
+</dd>
+<dt class="field-odd">Reqheader Authorization</dt>
+<dd class="field-odd"><p>optional OAuth token to authenticate</p>
+</dd>
+<dt class="field-even">Resheader Content-Type</dt>
+<dd class="field-even"><p>this depends on <em class="mailheader">Accept</em>
+header of request</p>
+</dd>
+<dt class="field-odd">Status 302</dt>
+<dd class="field-odd"><p>and then redirects to <a class="reference internal" href="#get--posts-(int-post_id)" title="GET /posts/(int:post_id)"><code class="xref http http-get docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/posts/(int:post_id)</span></code></a></p>
+</dd>
+<dt class="field-even">Status 400</dt>
+<dd class="field-even"><p>when form parameters are missing</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--posts-(int-post_id)">
+<code class="descname">GET </code><code class="descname">/posts/</code><span class="sig-paren">(</span><em class="property">int: </em><em>post_id</em><span class="sig-paren">)</span><a class="headerlink" href="#get--posts-(int-post_id)" title="永久链接至目标">¶</a></dt>
+<dd><p>Fetches the post</p>
+<p>(…)</p>
+</dd></dl>
+
+</div></blockquote>
 </div>
 <div class="section" id="roles">
-<span id="id25"></span><h2>角色<a class="headerlink" href="#roles" title="永久链接至标题">¶</a></h2>
+<span id="id3"></span><h2>角色<a class="headerlink" href="#roles" title="永久链接至标题">¶</a></h2>
 <dl class="role">
 <dt id="role-http:options">
 <code class="descname">:http:options:</code><a class="headerlink" href="#role-http:options" title="永久链接至目标">¶</a></dt>
@@ -594,8 +699,8 @@
 <p>将呈现为:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a href="#id26"><span class="problematic" id="id27">:http:statuscode:`404`</span></a></p></li>
-<li><p><a href="#id28"><span class="problematic" id="id29">:http:statuscode:`200 OK`</span></a></p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a></p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></p></li>
 </ul>
 </div></blockquote>
 <div class="versionchanged">
@@ -613,7 +718,7 @@
 </div>
 <p>它会像这样渲染:</p>
 <blockquote>
-<div><p>它只接受 <a href="#id1"><span class="problematic" id="id2">:http:method:`post`</span></a> 。</p>
+<div><p>它只接受 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-4.3.3">POST</a> 。</p>
 </div></blockquote>
 </dd></dl>
 
@@ -634,62 +739,62 @@
 <dl class="role">
 <dt id="role-http:header">
 <code class="descname">:http:header:</code><a class="headerlink" href="#role-http:header" title="永久链接至目标">¶</a></dt>
-<dd><p>类似于 <a class="reference internal" href="#role-mimetype" title="mimetype role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">mimetype</span></code></a> 角色，它不属于HTTP域，而属于标准域。它引用HTTP请求/响应头字段，如 <a href="#id1"><span class="problematic" id="id2">:http:header:`Content-Type`</span></a> 。</p>
+<dd><p>类似于 <a class="reference internal" href="../restructuredtext/roles.html#role-mimetype" title="mimetype role"><code class="xref rst rst-role docutils literal notranslate"><span class="pre">mimetype</span></code></a> 角色，它不属于HTTP域，而属于标准域。它引用HTTP请求/响应头字段，如 <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> 。</p>
 <p>如果HTTP标头已知，则文本是指向指定标头的Web引用的超链接。</p>
 <p>已知的HTTP标头:</p>
 <ul class="simple">
-<li><p><a href="#id34"><span class="problematic" id="id35">:http:header:`Accept`</span></a></p></li>
-<li><p><a href="#id36"><span class="problematic" id="id37">:http:header:`Accept-Charset`</span></a></p></li>
-<li><p><a href="#id38"><span class="problematic" id="id39">:http:header:`Accept-Encoding`</span></a></p></li>
-<li><p><a href="#id40"><span class="problematic" id="id41">:http:header:`Accept-Language`</span></a></p></li>
-<li><p><a href="#id42"><span class="problematic" id="id43">:http:header:`Accept-Ranges`</span></a></p></li>
-<li><p><a href="#id44"><span class="problematic" id="id45">:http:header:`Age`</span></a></p></li>
-<li><p><a href="#id46"><span class="problematic" id="id47">:http:header:`Allow`</span></a></p></li>
-<li><p><a href="#id48"><span class="problematic" id="id49">:http:header:`Authorization`</span></a></p></li>
-<li><p><a href="#id50"><span class="problematic" id="id51">:http:header:`Cache-Control`</span></a></p></li>
-<li><p><a href="#id52"><span class="problematic" id="id53">:http:header:`Connection`</span></a></p></li>
-<li><p><a href="#id54"><span class="problematic" id="id55">:http:header:`Content-Encoding`</span></a></p></li>
-<li><p><a href="#id56"><span class="problematic" id="id57">:http:header:`Content-Language`</span></a></p></li>
-<li><p><a href="#id58"><span class="problematic" id="id59">:http:header:`Content-Length`</span></a></p></li>
-<li><p><a href="#id60"><span class="problematic" id="id61">:http:header:`Content-Location`</span></a></p></li>
-<li><p><a href="#id62"><span class="problematic" id="id63">:http:header:`Content-MD5`</span></a></p></li>
-<li><p><a href="#id64"><span class="problematic" id="id65">:http:header:`Content-Range`</span></a></p></li>
-<li><p><a href="#id66"><span class="problematic" id="id67">:http:header:`Content-Type`</span></a></p></li>
-<li><p><a href="#id68"><span class="problematic" id="id69">:http:header:`Cookie`</span></a></p></li>
-<li><p><a href="#id70"><span class="problematic" id="id71">:http:header:`Date`</span></a></p></li>
-<li><p><a href="#id72"><span class="problematic" id="id73">:http:header:`Destination`</span></a></p></li>
-<li><p><a href="#id74"><span class="problematic" id="id75">:http:header:`ETag`</span></a></p></li>
-<li><p><a href="#id76"><span class="problematic" id="id77">:http:header:`Expect`</span></a></p></li>
-<li><p><a href="#id78"><span class="problematic" id="id79">:http:header:`Expires`</span></a></p></li>
-<li><p><a href="#id80"><span class="problematic" id="id81">:http:header:`From`</span></a></p></li>
-<li><p><a href="#id82"><span class="problematic" id="id83">:http:header:`Host`</span></a></p></li>
-<li><p><a href="#id84"><span class="problematic" id="id85">:http:header:`If-Match`</span></a></p></li>
-<li><p><a href="#id86"><span class="problematic" id="id87">:http:header:`If-Modified-Since`</span></a></p></li>
-<li><p><a href="#id88"><span class="problematic" id="id89">:http:header:`If-None-Match`</span></a></p></li>
-<li><p><a href="#id90"><span class="problematic" id="id91">:http:header:`If-Range`</span></a></p></li>
-<li><p><a href="#id92"><span class="problematic" id="id93">:http:header:`If-Unmodified-Since`</span></a></p></li>
-<li><p><a href="#id94"><span class="problematic" id="id95">:http:header:`Last-Modified`</span></a></p></li>
-<li><p><a href="#id96"><span class="problematic" id="id97">:http:header:`Last-Event-ID`</span></a></p></li>
-<li><p><a href="#id98"><span class="problematic" id="id99">:http:header:`Link`</span></a></p></li>
-<li><p><a href="#id100"><span class="problematic" id="id101">:http:header:`Location`</span></a></p></li>
-<li><p><a href="#id102"><span class="problematic" id="id103">:http:header:`Max-Forwards`</span></a></p></li>
-<li><p><a href="#id104"><span class="problematic" id="id105">:http:header:`Pragma`</span></a></p></li>
-<li><p><a href="#id106"><span class="problematic" id="id107">:http:header:`Proxy-Authenticate`</span></a></p></li>
-<li><p><a href="#id108"><span class="problematic" id="id109">:http:header:`Proxy-Authorization`</span></a></p></li>
-<li><p><a href="#id110"><span class="problematic" id="id111">:http:header:`Range`</span></a></p></li>
-<li><p><a href="#id112"><span class="problematic" id="id113">:http:header:`Referer`</span></a></p></li>
-<li><p><a href="#id114"><span class="problematic" id="id115">:http:header:`Retry-After`</span></a></p></li>
-<li><p><a href="#id116"><span class="problematic" id="id117">:http:header:`Server`</span></a></p></li>
-<li><p><a href="#id118"><span class="problematic" id="id119">:http:header:`Set-Cookie`</span></a></p></li>
-<li><p><a href="#id120"><span class="problematic" id="id121">:http:header:`TE`</span></a></p></li>
-<li><p><a href="#id122"><span class="problematic" id="id123">:http:header:`Trailer`</span></a></p></li>
-<li><p><a href="#id124"><span class="problematic" id="id125">:http:header:`Transfer-Encoding`</span></a></p></li>
-<li><p><a href="#id126"><span class="problematic" id="id127">:http:header:`Upgrade`</span></a></p></li>
-<li><p><a href="#id128"><span class="problematic" id="id129">:http:header:`User-Agent`</span></a></p></li>
-<li><p><a href="#id130"><span class="problematic" id="id131">:http:header:`Vary`</span></a></p></li>
-<li><p><a href="#id132"><span class="problematic" id="id133">:http:header:`Via`</span></a></p></li>
-<li><p><a href="#id134"><span class="problematic" id="id135">:http:header:`WWW-Authenticate`</span></a></p></li>
-<li><p><a href="#id136"><span class="problematic" id="id137">:http:header:`Warning`</span></a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.2">Accept</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.3">Accept-Charset</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.4">Accept-Encoding</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.3.5">Accept-Language</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7233#section-2.3">Accept-Ranges</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.1">Age</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-7.4.1">Allow</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.2">Authorization</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.2">Cache-Control</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-6.1">Connection</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2">Content-Encoding</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">Content-Language</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-3.3.2">Content-Length</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.4.2">Content-Location</a></p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.15">Content-MD5</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7233#section-4.2">Content-Range</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc2109#section-4.3.4">Cookie</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-7.1.1.2">Date</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc2518#section-9.3">Destination</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7232#section-2.3">ETag</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.1.1">Expect</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.3">Expires</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.5.2">From</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-5.4">Host</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7232#section-3.1">If-Match</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7232#section-3.3">If-Modified-Since</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7232#section-3.2">If-None-Match</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7233#section-3.2">If-Range</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7232#section-3.4">If-Unmodified-Since</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7232#section-2.2">Last-Modified</a></p></li>
+<li><p><a class="reference external" href="http://www.w3.org/TR/eventsource/#last-event-id">Last-Event-ID</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc5988#section-5">Link</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-7.1.2">Location</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.1.2">Max-Forwards</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.4">Pragma</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.3">Proxy-Authenticate</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.4">Proxy-Authorization</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7233#section-3.1">Range</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.5.2">Referer</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-7.1.3">Retry-After</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-7.4.2">Server</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc2109#section-4.2.2">Set-Cookie</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-4.3">TE</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-4.4">Trailer</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-3.3.1">Transfer-Encoding</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-6.7">Upgrade</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-5.5.3">User-Agent</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-7.1.4">Vary</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230#section-5.7.1">Via</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-Authenticate</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.5">Warning</a></p></li>
 </ul>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3.0 新版功能.</span></p>
@@ -841,8 +946,8 @@
 <p>从Flask应用程序生成HTTP API引用，并将它们放在带有快速引用链接的列表表中。用法和选项与 <a class="reference internal" href="#module-sphinxcontrib.autohttp.flask" title="sphinxcontrib.autohttp.flask"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.flask</span></code></a> 相同，增加了 <code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> 选项。</p>
 </dd></dl>
 
-<div class="section" id="id138">
-<h3>基本用法<a class="headerlink" href="#id138" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id4">
+<h3>基本用法<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>您通常会将快速参考表放在docco顶部附近并使用 <em>.. autoflask::</em> 进一步向下。</p>
 <p>除非使用 <code class="docutils literal notranslate"><span class="pre">autoquickref</span></code> 选项，否则要包含在快速参考表中的路由需要将以下第一条注释添加到其文档字符串中:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. :quickref: [&lt;resource&gt;;] &lt;short description&gt;</span>
@@ -939,7 +1044,7 @@
 <span class="target" id="module-sphinxcontrib.autohttp.tornado"></span></div>
 <div class="section" id="sphinxcontrib-autohttp-tornado-exporting-api-reference-from-tornado-app">
 <h2><a class="reference internal" href="#module-sphinxcontrib.autohttp.tornado" title="sphinxcontrib.autohttp.tornado"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code></a> — 从Tornado应用程序导出API参考<a class="headerlink" href="#sphinxcontrib-autohttp-tornado-exporting-api-reference-from-tornado-app" title="永久链接至标题">¶</a></h2>
-<p>它从Tornado_应用程序的路由表生成RESTful HTTP API参考文档，类似于 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 。</p>
+<p>它从 <a class="reference external" href="http://www.tornadoweb.org/">Tornado</a> 应用程序的路由表生成RESTful HTTP API参考文档，类似于 <a class="reference internal" href="autodoc.html#module-sphinx.ext.autodoc" title="sphinx.ext.autodoc: Include documentation from docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a> 。</p>
 <p>为了使用它，将 <a class="reference internal" href="#module-sphinxcontrib.autohttp.tornado" title="sphinxcontrib.autohttp.tornado"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.autohttp.tornado</span></code></a> 添加到 <code class="xref py py-data docutils literal notranslate"><span class="pre">extensions</span></code> 列表中的Sphinx配置(<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>)文件:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib.autohttp.tornado&#39;</span><span class="p">]</span>
 </pre></div>
@@ -966,7 +1071,7 @@
    <span class="nc">:endpoints:</span> <span class="nf">User.get, User.post, Friends.get</span>
 </pre></div>
 </div>
-<p>将记录 <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code> 方法 <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code><code class="xref py py-class docutils literal notranslate"><span class="pre">RequestHandler</span></code> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> 方法 <code class="xref py py-class docutils literal notranslate"><span class="pre">Friend</span></code>:class :<cite>RequestHandler</cite> ，而</p>
+<p>将记录 <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">post()</span></code> 方法 <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">RequestHandler</span></code> 和 <code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code> 方法  <code class="xref py py-class docutils literal notranslate"><span class="pre">Friend</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">RequestHandler</span></code> ，而</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autotornado</span><span class="p">::</span> yourwebapp:app
    <span class="nc">:endpoints:</span>
 </pre></div>
@@ -1016,6 +1121,9 @@
           <a href="../../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
@@ -1032,7 +1140,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

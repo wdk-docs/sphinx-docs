@@ -19,115 +19,115 @@ msgstr ""
 
 #: ../../extdev/logging.rst:4
 msgid "Logging API"
-msgstr ""
+msgstr "记录API"
 
 #: of sphinx.util.logging.getLogger:1
 msgid "Get logger wrapped by :class:`sphinx.util.logging.SphinxLoggerAdapter`."
-msgstr ""
+msgstr "获取记录器包装 :class:`sphinx.util.logging.SphinxLoggerAdapter` 。"
 
 #: of sphinx.util.logging.getLogger:3
 msgid ""
 "Sphinx logger always uses ``sphinx.*`` namespace to be independent from "
 "settings of root logger.  It ensures logging is consistent even if a "
 "third-party extension or imported application resets logger settings."
-msgstr ""
+msgstr "Sphinx记录器总是使用 ``sphinx.*`` 命名空间独立于root logger的设置。即使第三方扩展或导入的应用程序重置记录器设置，它也可确保记录一致。"
 
 #: of sphinx.util.logging.getLogger:7
 msgid "Example usage::"
-msgstr ""
+msgstr "用法示例::"
 
 #: of sphinx.util.logging.SphinxLoggerAdapter:1
 msgid "LoggerAdapter allowing ``type`` and ``subtype`` keywords."
-msgstr ""
+msgstr "LoggerAdapter允许 ``type`` 和 ``subtype`` 关键字。"
 
 #: ../../extdev/logging.rst:16
 msgid ""
 "Logs a message on this logger with the specified level. Basically, the "
 "arguments are as with python's logging module."
-msgstr ""
+msgstr "使用指定的级别在此记录器上记录消息。基本上，参数与python的日志记录模块一样。"
 
 #: ../../extdev/logging.rst:19 ../../extdev/logging.rst:48
 msgid "In addition, Sphinx logger supports following keyword arguments:"
-msgstr ""
+msgstr "此外，Sphinx记录器支持以下关键字参数:"
 
 #: ../../extdev/logging.rst:23
 msgid "**type**, ***subtype***"
-msgstr ""
+msgstr "**type**, ***subtype***"
 
 #: ../../extdev/logging.rst:22
 msgid ""
 "Categories of warning logs.  It is used to suppress warnings by "
 ":confval:`suppress_warnings` setting."
-msgstr ""
+msgstr "警告日志的类别。它用于通过以下方式抑制警告 :confval:`suppress_warnings` 设置。"
 
 #: ../../extdev/logging.rst:33 ../../extdev/logging.rst:56
 msgid "**location**"
-msgstr ""
+msgstr "**location**"
 
 #: ../../extdev/logging.rst:26
 msgid ""
 "Where the warning happened.  It is used to include the path and line "
 "number in each log.  It allows docname, tuple of docname and line number "
 "and nodes::"
-msgstr ""
+msgstr "发生警告的地方。它用于包括每个日志中的路径和行号。它允许docname，docname和行号和节点的元组::"
 
 #: ../../extdev/logging.rst:37 ../../extdev/logging.rst:59
 msgid "**color**"
-msgstr ""
+msgstr "**color**"
 
 #: ../../extdev/logging.rst:36
 msgid ""
 "The color of logs.  By default, error level logs are colored as "
 "``\"darkred\"``, critical level ones is not colored, and warning level "
 "ones are colored as ``\"red\"``."
-msgstr ""
+msgstr "日志的颜色。默认情况下，错误级别日志的颜色为“黑色”，“关键级别”没有着色，警告级别日志的颜色为“红色”“红色”。"
 
 #: ../../extdev/logging.rst:45
 msgid ""
 "Logs a message to this logger with the specified level. Basically, the "
 "arguments are as with python's logging module."
-msgstr ""
+msgstr "使用指定的级别将消息记录到此记录器。基本上，参数与python的日志记录模块一样。"
 
 #: ../../extdev/logging.rst:52
 msgid "**nonl**"
-msgstr ""
+msgstr "**nonl**"
 
 #: ../../extdev/logging.rst:51
 msgid ""
 "If true, the logger does not fold lines at the end of the log message. "
 "The default is ``False``."
-msgstr ""
+msgstr "如果为true，则记录器不会在日志消息的末尾折叠行。默认为 ``False`` 。"
 
 #: ../../extdev/logging.rst:55
 msgid ""
 "Where the message emitted.  For more detail, see "
 ":meth:`SphinxLoggerAdapter.warning`."
-msgstr ""
+msgstr "发出消息的地方。有关更多详细信息，请参阅 :meth:`SphinxLoggerAdapter.warning` 。"
 
 #: ../../extdev/logging.rst:59
 msgid ""
 "The color of logs.  By default, info and verbose level logs are not "
 "colored, and debug level ones are colored as ``\"darkgray\"``."
-msgstr ""
+msgstr "日志的颜色。默认情况下，信息和详细级别日志不会着色，调试级别日志会显示为 ``\"darkgray\"`` 。"
 
 #: of sphinx.util.logging.pending_logging:1
 msgid "Contextmanager to pend logging all logs temporary."
-msgstr ""
+msgstr "Contextmanager挂起临时记录所有日志。"
 
 #: of sphinx.util.logging.pending_logging:3
 #: sphinx.util.logging.prefixed_warnings:3
 msgid "For example::"
-msgstr ""
+msgstr "例如::"
 
 #: of sphinx.util.logging.pending_warnings:1
 msgid "Contextmanager to pend logging warnings temporary."
-msgstr ""
+msgstr "Contextmanager暂时挂起日志记录警告。"
 
 #: of sphinx.util.logging.pending_warnings:3
 msgid "Similar to :func:`pending_logging`."
-msgstr ""
+msgstr "类似于 :func:`pending_logging` 。"
 
 #: of sphinx.util.logging.prefixed_warnings:1
 msgid "Prepend prefix to all records for a while."
-msgstr ""
+msgstr "将前缀添加到所有记录一段时间。"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:15+0800\n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,14 +30,18 @@ msgid ""
 " will be added to all object descriptions that leads to the source code "
 "of the described object.  A link back from the source to the description "
 "will also be inserted."
-msgstr "这个扩展名查看你的Python对象描述(``.. class::``, ``.. function::`` 等)并尝试查找包含对象的源文件。找到后，将为每个模块输出一个单独的HTML页面，其中包含源代码的突出显示版本，并且链接将添加到所有对象描述中，这些描述将导致所描述对象的源代码。还将插入从源到描述的链接。"
+msgstr ""
+"这个扩展名查看你的Python对象描述(``.. class::``, ``.. function::`` "
+"等)并尝试查找包含对象的源文件。找到后，将为每个模块输出一个单独的HTML页面，其中包含源代码的突出显示版本，并且链接将添加到所有对象描述中，这些描述将导致所描述对象的源代码。还将插入从源到描述的链接。"
 
 #: ../../usage/extensions/viewcode.rst:19
 msgid ""
 "Basically, ``viewcode`` extension will import the modules being linked "
 "to. If any modules have side effects on import, these will be executed "
 "when ``sphinx-build`` is run."
-msgstr "基本上， ``viewcode`` 扩展名将导入链接到的模块。如果任何模块在导入时有副作用，那么当运行 ``sphinx-build`` 时会执行这些副作用。"
+msgstr ""
+"基本上， ``viewcode`` 扩展名将导入链接到的模块。如果任何模块在导入时有副作用，那么当运行 ``sphinx-build`` "
+"时会执行这些副作用。"
 
 #: ../../usage/extensions/viewcode.rst:23
 msgid ""
@@ -50,14 +54,18 @@ msgid ""
 "In addition, if you don't want to import the modules by ``viewcode``, you"
 " can tell the location of the location of source code to ``viewcode`` "
 "using the :event:`viewcode-find-source` event."
-msgstr "另外，如果你不想通过 ``viewcode`` 导入模块，你可以使用 :event:`viewcode-find-source` 事件来告诉源代码 ``viewcode`` 的位置。 。"
+msgstr ""
+"另外，如果你不想通过 ``viewcode`` 导入模块，你可以使用 :event:`viewcode-find-source` 事件来告诉源代码"
+" ``viewcode`` 的位置。 。"
 
 #: ../../usage/extensions/viewcode.rst:30
 msgid ""
 "If :confval:`viewcode_follow_imported_members` is enabled, you will also "
 "need to resolve imported attributes using the :event:`viewcode-follow-"
 "imported` event."
-msgstr "如果 :confval:`viewcode_follow_imported_members` 已启用，您还需要使用 :event:`viewcode-follow-imported` 事件来解析导入的属性。"
+msgstr ""
+"如果 :confval:`viewcode_follow_imported_members` 已启用，您还需要使用 :event"
+":`viewcode-follow-imported` 事件来解析导入的属性。"
 
 #: ../../usage/extensions/viewcode.rst:34
 msgid ""
@@ -65,7 +73,10 @@ msgid ""
 "``applehelp``, ``devhelp``, ``htmlhelp``, ``qthelp`` and so on except "
 "``singlehtml``. By default ``epub`` builder doesn't support this "
 "extension (see :confval:`viewcode_enable_epub`)."
-msgstr "此扩展仅适用于HTML相关的构建器，如 ``html`` ， ``applehelp`` ， ``devhelp`` ， ``htmlhelp`` ， ``qthelp`` 等除了 ``singlehtml`` 。默认情况下， ``epub`` 构建器不支持此扩展（请参阅 :confval:`viewcode_enable_epub`）。"
+msgstr ""
+"此扩展仅适用于HTML相关的构建器，如 ``html`` ， ``applehelp`` ， ``devhelp`` ， ``htmlhelp``"
+" ， ``qthelp`` 等除了 ``singlehtml`` 。默认情况下， ``epub`` 构建器不支持此扩展（请参阅 "
+":confval:`viewcode_enable_epub`）。"
 
 #: ../../usage/extensions/viewcode.rst:40
 msgid "Configuration"
@@ -124,7 +135,7 @@ msgstr ""
 
 #: ../../usage/extensions/viewcode.rst
 msgid "参数"
-msgstr "参数"
+msgstr ""
 
 #: ../../usage/extensions/viewcode.rst:87
 #: ../../usage/extensions/viewcode.rst:96
@@ -149,4 +160,7 @@ msgstr "The name of the member to follow."
 
 #~ msgid "Parameters"
 #~ msgstr ""
+
+#~ msgid "参数"
+#~ msgstr "参数"
 

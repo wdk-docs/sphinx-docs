@@ -19,210 +19,210 @@ msgstr ""
 
 #: ../../extdev/nodes.rst:4
 msgid "Doctree node classes added by Sphinx"
-msgstr ""
+msgstr "由Sphinx添加的Doctree节点类"
 
 #: ../../extdev/nodes.rst:9
 msgid "Nodes for domain-specific object descriptions"
-msgstr ""
+msgstr "特定于域的对象描述的节点"
 
 #: of sphinx.addnodes.desc:1
 msgid "Node for object descriptions."
-msgstr ""
+msgstr "用于对象描述的节点。"
 
 #: of sphinx.addnodes.desc:3
 msgid ""
 "This node is similar to a \"definition list\" with one definition.  It "
 "contains one or more ``desc_signature`` and a ``desc_content``."
-msgstr ""
+msgstr "此节点类似于具有一个定义的 \"definition list\" 。  它包含一个或多个 ``desc_signature`` 和 ``desc_content`` 。"
 
 #: of sphinx.addnodes.desc_signature:1
 msgid "Node for object signatures."
-msgstr ""
+msgstr "用于对象签名的节点。"
 
 #: of sphinx.addnodes.desc_signature:3
 msgid "The \"term\" part of the custom Sphinx definition list."
-msgstr ""
+msgstr "自定义Sphinx定义列表的 \"term\" 部分。"
 
 #: of sphinx.addnodes.desc_signature:5
 msgid ""
 "As default the signature is a single line signature, but set "
 "``is_multiline = True`` to describe a multi-line signature. In that case "
 "all child nodes must be ``desc_signature_line`` nodes."
-msgstr ""
+msgstr "默认情况下，签名是单行签名，但设置 ``is_multiline = True`` 来描述多行签名。在这种情况下，所有子节点必须是  ``desc_signature_line`` 节点。"
 
 #: of sphinx.addnodes.desc_signature_line:1
 msgid "Node for a line in a multi-line object signatures."
-msgstr ""
+msgstr "多行对象签名中的行的节点。"
 
 #: of sphinx.addnodes.desc_signature_line:3
 msgid ""
 "It should only be used in a ``desc_signature`` with ``is_multiline`` set."
 " Set ``add_permalink = True`` for the line that should get the permalink."
-msgstr ""
+msgstr "它只应用于 ``desc_signature`` 并设置 ``is_multiline`` 。 为应该获得永久链接的行设置 ``add_permalink = True`` 。"
 
 #: of sphinx.addnodes.desc_addname:1
 msgid "Node for additional name parts (module name, class name)."
-msgstr ""
+msgstr "其他名称部分的节点(模块名称，类名称)。"
 
 #: of sphinx.addnodes.desc_type:1
 msgid "Node for return types or object type names."
-msgstr ""
+msgstr "返回类型或对象类型名称的节点。"
 
 #: of sphinx.addnodes.desc_returns:1
 msgid "Node for a \"returns\" annotation (a la -> in Python)."
-msgstr ""
+msgstr "用于 \"返回\" 注释的节点(Python中的 -> la)。"
 
 #: of sphinx.addnodes.desc_name:1
 msgid "Node for the main object name."
-msgstr ""
+msgstr "节点为主对象名称。"
 
 #: of sphinx.addnodes.desc_parameterlist:1
 msgid "Node for a general parameter list."
-msgstr ""
+msgstr "用于常规参数列表的节点。"
 
 #: of sphinx.addnodes.desc_parameter:1
 msgid "Node for a single parameter."
-msgstr ""
+msgstr "单个参数的节点。"
 
 #: of sphinx.addnodes.desc_optional:1
 msgid "Node for marking optional parts of the parameter list."
-msgstr ""
+msgstr "用于标记参数列表的可选部分的节点。"
 
 #: of sphinx.addnodes.desc_annotation:1
 msgid "Node for signature annotations (not Python 3-style annotations)."
-msgstr ""
+msgstr "用于签名注释的节点(不是 Python 3 样式的注释)。"
 
 #: of sphinx.addnodes.desc_content:1
 msgid "Node for object description content."
-msgstr ""
+msgstr "用于对象描述内容的节点。"
 
 #: of sphinx.addnodes.desc_content:3
 msgid "This is the \"definition\" part of the custom Sphinx definition list."
-msgstr ""
+msgstr "这是自定义Sphinx定义列表的 \"定义\" 部分。"
 
 #: ../../extdev/nodes.rst:25
 msgid "New admonition-like constructs"
-msgstr ""
+msgstr "新的告诫式结构"
 
 #: of sphinx.addnodes.versionmodified:1
 msgid "Node for version change entries."
-msgstr ""
+msgstr "用于版本更改条目的节点。"
 
 #: of sphinx.addnodes.versionmodified:3
 msgid ""
 "Currently used for \"versionadded\", \"versionchanged\" and "
 "\"deprecated\" directives."
-msgstr ""
+msgstr "目前用于 \"versionadded \" ， \"versionchanged\" 和 \"deprecated\" 指令。"
 
 #: of sphinx.addnodes.seealso:1
 msgid "Custom \"see also\" admonition."
-msgstr ""
+msgstr "自定义 \"另见\" 告诫。"
 
 #: ../../extdev/nodes.rst:31
 msgid "Other paragraph-level nodes"
-msgstr ""
+msgstr "其他段落级节点"
 
 #: of sphinx.addnodes.compact_paragraph:1
 msgid "Node for a compact paragraph (which never makes a <p> node)."
-msgstr ""
+msgstr "紧凑段落的节点(从不创建<p>节点)。"
 
 #: ../../extdev/nodes.rst:36
 msgid "New inline nodes"
-msgstr ""
+msgstr "新的内联节点"
 
 #: of sphinx.addnodes.index:1
 msgid "Node for index entries."
-msgstr ""
+msgstr "索引条目的节点。"
 
 #: of sphinx.addnodes.index:3
 msgid ""
 "This node is created by the ``index`` directive and has one attribute, "
 "``entries``.  Its value is a list of 5-tuples of ``(entrytype, entryname,"
 " target, ignored, key)``."
-msgstr ""
+msgstr "该节点由 ``index`` 指令创建，并具有一个属性 ``entries`` 。它的值是一个5元组的列表 ``(entrytype，entryname，target，ignored，key)`` 。"
 
 #: of sphinx.addnodes.index:7
 msgid "*entrytype* is one of \"single\", \"pair\", \"double\", \"triple\"."
-msgstr ""
+msgstr "*entrytype* 是 \"single\" ，\"pair\" ， \"double \" ， \"triple\" 之一。"
 
 #: of sphinx.addnodes.index:9
 msgid ""
 "*key* is categorization characters (usually a single character) for "
 "general index page. For the details of this, please see also: "
 ":rst:dir:`glossary` and issue #2320."
-msgstr ""
+msgstr "*key* 是一般索引页面的分类字符(通常是单个字符)。有关详细信息，请参阅: :rst:dir:`glossary` 和 issue ＃2320。"
 
 #: of sphinx.addnodes.pending_xref:1
 msgid ""
 "Node for cross-references that cannot be resolved without complete "
 "information about all documents."
-msgstr ""
+msgstr "没有关于所有文档的完整信息的交叉引用节点。"
 
 #: of sphinx.addnodes.pending_xref:4
 msgid ""
 "These nodes are resolved before writing output, in "
 "BuildEnvironment.resolve_references."
-msgstr ""
+msgstr "在BuildEnvironment.resolve_references中写入输出之前解析这些节点。"
 
 #: of sphinx.addnodes.literal_emphasis:1
 msgid ""
 "Node that behaves like `emphasis`, but further text processors are not "
 "applied (e.g. smartypants for HTML output)."
-msgstr ""
+msgstr "行为类似于 `emphasis` 的节点，但不应用其他文本处理器(例如，用于HTML输出的智能型)。"
 
 #: of sphinx.addnodes.abbreviation:1
 msgid "Node for abbreviations with explanations."
-msgstr ""
+msgstr "带有解释的缩写节点。"
 
 #: of sphinx.addnodes.download_reference:1
 msgid "Node for download references, similar to pending_xref."
-msgstr ""
+msgstr "用于下载引用的节点，类似于pending_xref。"
 
 #: ../../extdev/nodes.rst:45
 msgid "Special nodes"
-msgstr ""
+msgstr "特殊节点"
 
 #: of sphinx.addnodes.only:1
 msgid "Node for \"only\" directives (conditional inclusion based on tags)."
-msgstr ""
+msgstr ""仅"指令的节点(基于标签的条件包含)。"
 
 #: of sphinx.addnodes.meta:1
 msgid ""
 "Node for meta directive -- same as docutils' standard meta node, but "
 "pickleable."
-msgstr ""
+msgstr "meta指令的节点 - 与docutils的标准元节点相同，但是pickleable。"
 
 #: of sphinx.addnodes.highlightlang:1
 msgid ""
 "Inserted to set the highlight language and line number options for "
 "subsequent code blocks."
-msgstr ""
+msgstr "已插入以设置后续代码块的高亮语言和行号选项。"
 
 #: ../../extdev/nodes.rst:51
 msgid "You should not need to generate the nodes below in extensions."
-msgstr ""
+msgstr "您不需要在扩展中生成下面的节点。"
 
 #: of sphinx.addnodes.glossary:1
 msgid "Node to insert a glossary."
-msgstr ""
+msgstr "节点插入词汇表。"
 
 #: of sphinx.addnodes.toctree:1
 msgid "Node for inserting a \"TOC tree\"."
-msgstr ""
+msgstr "用于插入 \"TOC树\" 的节点。"
 
 #: of sphinx.addnodes.start_of_file:1
 msgid "Node to mark start of a new file, used in the LaTeX builder only."
-msgstr ""
+msgstr "用于标记新文件的开始的节点，仅在LaTeX构建器中使用。"
 
 #: of sphinx.addnodes.productionlist:1
 msgid "Node for grammar production lists."
-msgstr ""
+msgstr "用于语法生成列表的节点。"
 
 #: of sphinx.addnodes.productionlist:3
 msgid "Contains ``production`` nodes."
-msgstr ""
+msgstr "Contains ``production`` nodes."
 
 #: of sphinx.addnodes.production:1
 msgid "Node for a single grammar production rule."
-msgstr ""
+msgstr "单个语法生成规则的节点。"
 

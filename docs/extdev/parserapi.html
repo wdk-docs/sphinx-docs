@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Parser API &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>解析器API &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Doctree node classes added by Sphinx" href="nodes.html" />
-    <link rel="prev" title="Domain API" href="domainapi.html" />
+    <link rel="next" title="由Sphinx添加的Doctree节点类" href="nodes.html" />
+    <link rel="prev" title="域API" href="domainapi.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/parserapi.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -102,28 +102,31 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="nodes.html" title="Doctree node classes added by Sphinx"
+          <a href="nodes.html" title="由Sphinx添加的Doctree节点类"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="domainapi.html" title="Domain API"
+          <a href="domainapi.html" title="域API"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发扩展</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="domainapi.html"
-                        title="上一章">Domain API</a></p>
+                        title="上一章">域API</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="nodes.html"
-                        title="下一章">Doctree node classes added by Sphinx</a></p>
+                        title="下一章">由Sphinx添加的Doctree节点类</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -150,22 +153,14 @@
           <div class="body" role="main">
             
   <div class="section" id="parser-api">
-<span id="id1"></span><h1>Parser API<a class="headerlink" href="#parser-api" title="永久链接至标题">¶</a></h1>
-<p><a class="reference external" href="http://docutils.sourceforge.net/docs/dev/hacking.html#parsing-the-document">The docutils documentation describes</a> parsers as follows:</p>
+<span id="id1"></span><h1>解析器API<a class="headerlink" href="#parser-api" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docs/dev/hacking.html#parsing-the-document">The docutils documentation describes</a> 解析器如下:</p>
 <blockquote>
-<div><p>The Parser analyzes the input document and creates a node tree
-representation.</p>
+<div><p>解析器分析输入文档并创建节点树表示。</p>
 </div></blockquote>
-<p>In Sphinx, the parser modules works as same as docutils.  The parsers are
-registered to Sphinx by extensions using Application APIs;
-<a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_source_suffix" title="sphinx.application.Sphinx.add_source_suffix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.add_source_suffix()</span></code></a> and <a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_source_parser" title="sphinx.application.Sphinx.add_source_parser"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.add_source_parser()</span></code></a>.</p>
-<p>The <em>source suffix</em> is a mapping from file suffix to file type.  For example,
-<code class="docutils literal notranslate"><span class="pre">.rst</span></code> file is mapped to <code class="docutils literal notranslate"><span class="pre">'restructuredtext'</span></code> type.  Sphinx uses the
-file type to looking for parsers from registered list.  On searching,
-Sphinx refers to the <code class="docutils literal notranslate"><span class="pre">Parser.supported</span></code> attribute and picks up a parser
-which contains the file type in the attribute.</p>
-<p>The users can override the source suffix mappings using
-<a class="reference internal" href="../usage/configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a> like following:</p>
+<p>在Sphinx中，解析器模块与docutils的工作方式相同。  解析器通过使用Application API的扩展注册到Sphinx; <a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_source_suffix" title="sphinx.application.Sphinx.add_source_suffix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.add_source_suffix()</span></code></a> 和 <a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_source_parser" title="sphinx.application.Sphinx.add_source_parser"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.add_source_parser()</span></code></a> 。</p>
+<p><em>source suffix</em> 是从文件后缀到文件类型的映射。例如，<code class="docutils literal notranslate"><span class="pre">.rst</span></code> 文件被映射到 <code class="docutils literal notranslate"><span class="pre">'restructuredtext'</span></code> 类型。  Sphinx使用文件类型从注册列表中查找解析器。  在搜索时，Sphinx引用 <code class="docutils literal notranslate"><span class="pre">Parser.supported</span></code> 属性并选取一个包含属性中文件类型的解析器。</p>
+<p>用户可以使用 <a class="reference internal" href="../usage/configuration.html#confval-source_suffix"><code class="xref std std-confval docutils literal notranslate"><span class="pre">source_suffix</span></code></a> 覆盖源后缀映射，如下所示:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># a mapping from file suffix to file types</span>
 <span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
@@ -173,29 +168,26 @@ which contains the file type in the attribute.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>You should indicate file types your parser supports. This will allow users
-to configure their settings appropriately.</p>
+<p>您应该指出解析器支持的文件类型。这将允许用户适当地配置他们的设置。</p>
 <span class="target" id="module-sphinx.parsers"></span><dl class="class">
 <dt id="sphinx.parsers.Parser">
 <em class="property">class </em><code class="descclassname">sphinx.parsers.</code><code class="descname">Parser</code><a class="reference internal" href="../_modules/sphinx/parsers.html#Parser"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.parsers.Parser" title="永久链接至目标">¶</a></dt>
-<dd><p>A base class of source parsers.  The additional parsers should inherit this class instead
-of <code class="docutils literal notranslate"><span class="pre">docutils.parsers.Parser</span></code>.  Compared with <code class="docutils literal notranslate"><span class="pre">docutils.parsers.Parser</span></code>, this class
-improves accessibility to Sphinx APIs.</p>
-<p>The subclasses can access following objects and functions:</p>
+<dd><p>源类解析器的基类。额外的解析器应该继承这个类而不是 <code class="docutils literal notranslate"><span class="pre">docutils.parsers.Parser</span></code> 。  与 <code class="docutils literal notranslate"><span class="pre">docutils.parsers.Parser</span></code> 相比，该类提高了Sphinx API的可访问性。</p>
+<p>子类可以访问以下对象和函数:</p>
 <dl class="simple">
-<dt>self.app</dt><dd><p>The application object (<a class="reference internal" href="appapi.html#sphinx.application.Sphinx" title="sphinx.application.Sphinx"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.application.Sphinx</span></code></a>)</p>
+<dt>self.app</dt><dd><p>应用程序对象 (<a class="reference internal" href="appapi.html#sphinx.application.Sphinx" title="sphinx.application.Sphinx"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.application.Sphinx</span></code></a>)</p>
 </dd>
-<dt>self.config</dt><dd><p>The config object (<a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.config.Config</span></code></a>)</p>
+<dt>self.config</dt><dd><p>配置对象(<a class="reference internal" href="appapi.html#sphinx.config.Config" title="sphinx.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.config.Config</span></code></a>)</p>
 </dd>
-<dt>self.env</dt><dd><p>The environment object (<a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.environment.BuildEnvironment</span></code></a>)</p>
+<dt>self.env</dt><dd><p>环境对象(<a class="reference internal" href="envapi.html#sphinx.environment.BuildEnvironment" title="sphinx.environment.BuildEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.environment.BuildEnvironment</span></code></a>)</p>
 </dd>
-<dt>self.warn()</dt><dd><p>Emit a warning. (Same as <code class="xref py py-meth docutils literal notranslate"><span class="pre">sphinx.application.Sphinx.warn()</span></code>)</p>
+<dt>self.warn()</dt><dd><p>发出警告。 (与 <code class="xref py py-meth docutils literal notranslate"><span class="pre">sphinx.application.Sphinx.warn()</span></code> 一样)</p>
 </dd>
-<dt>self.info()</dt><dd><p>Emit a informational message. (Same as <code class="xref py py-meth docutils literal notranslate"><span class="pre">sphinx.application.Sphinx.info()</span></code>)</p>
+<dt>self.info()</dt><dd><p>发出信息性消息。 (与 <code class="xref py py-meth docutils literal notranslate"><span class="pre">sphinx.application.Sphinx.info()</span></code> 一样)</p>
 </dd>
 </dl>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">1.6 版后已移除: </span><code class="docutils literal notranslate"><span class="pre">warn()</span></code> and <code class="docutils literal notranslate"><span class="pre">info()</span></code> is deprecated.  Use <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.util.logging</span></code> instead.</p>
+<p><span class="versionmodified deprecated">1.6 版后已移除: </span><code class="docutils literal notranslate"><span class="pre">warn()</span></code> 和 <code class="docutils literal notranslate"><span class="pre">info()</span></code> 已弃用。  使用 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.util.logging</span></code> 代替.</p>
 </div>
 </dd></dl>
 
@@ -214,23 +206,26 @@ improves accessibility to Sphinx APIs.</p>
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="nodes.html" title="Doctree node classes added by Sphinx"
+          <a href="nodes.html" title="由Sphinx添加的Doctree节点类"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="domainapi.html" title="Domain API"
+          <a href="domainapi.html" title="域API"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发扩展</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

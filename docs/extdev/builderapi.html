@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Builder API &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>生成器API &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Environment Collector API" href="collectorapi.html" />
-    <link rel="prev" title="Build environment API" href="envapi.html" />
+    <link rel="next" title="环境收集器API" href="collectorapi.html" />
+    <link rel="prev" title="构建环境API" href="envapi.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/builderapi.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -102,28 +102,31 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="collectorapi.html" title="Environment Collector API"
+          <a href="collectorapi.html" title="环境收集器API"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="envapi.html" title="Build environment API"
+          <a href="envapi.html" title="构建环境API"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发扩展</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="envapi.html"
-                        title="上一章">Build environment API</a></p>
+                        title="上一章">构建环境API</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="collectorapi.html"
-                        title="下一章">Environment Collector API</a></p>
+                        title="下一章">环境收集器API</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -150,138 +153,129 @@
           <div class="body" role="main">
             
   <div class="section" id="builder-api">
-<span id="writing-builders"></span><h1>Builder API<a class="headerlink" href="#builder-api" title="永久链接至标题">¶</a></h1>
+<span id="writing-builders"></span><h1>生成器API<a class="headerlink" href="#builder-api" title="永久链接至标题">¶</a></h1>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">待处理</p>
-<p>Expand this.</p>
+<p>展开这个。</p>
 </div>
 <dl class="class">
 <dt id="sphinx.builders.Builder">
 <em class="property">class </em><code class="descclassname">sphinx.builders.</code><code class="descname">Builder</code><a class="reference internal" href="../_modules/sphinx/builders.html#Builder"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder" title="永久链接至目标">¶</a></dt>
-<dd><p>This is the base class for all builders.</p>
-<p>These attributes should be set on builder classes:</p>
+<dd><p>这是所有构建器的基类。</p>
+<p>应在构建器类上设置这些属性:</p>
 <dl class="attribute">
 <dt id="sphinx.builders.Builder.name">
 <code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#sphinx.builders.Builder.name" title="永久链接至目标">¶</a></dt>
-<dd><p>The builder’s name, for the -b command line option.</p>
+<dd><p>构建器的名称，用于 -b 命令行选项。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.builders.Builder.format">
 <code class="descname">format</code><em class="property"> = ''</em><a class="headerlink" href="#sphinx.builders.Builder.format" title="永久链接至目标">¶</a></dt>
-<dd><p>The builder’s output format, or ‘’ if no document output is produced.</p>
+<dd><p>构建器的输出格式，或者“如果没有生成文档输出”。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.builders.Builder.epilog">
 <code class="descname">epilog</code><em class="property"> = ''</em><a class="headerlink" href="#sphinx.builders.Builder.epilog" title="永久链接至目标">¶</a></dt>
-<dd><p>The message emitted upon successful build completion. This can be a
-printf-style template string with the following keys: <code class="docutils literal notranslate"><span class="pre">outdir</span></code>,
-<code class="docutils literal notranslate"><span class="pre">project</span></code></p>
+<dd><p>成功构建完成后发出的消息。 这可以是一个printf样式的模板字符串，其中包含以下键: <code class="docutils literal notranslate"><span class="pre">outdir</span></code> ， <code class="docutils literal notranslate"><span class="pre">project</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.builders.Builder.supported_image_types">
 <code class="descname">supported_image_types</code><em class="property"> = []</em><a class="headerlink" href="#sphinx.builders.Builder.supported_image_types" title="永久链接至目标">¶</a></dt>
-<dd><p>The list of MIME types of image formats supported by the builder.
-Image files are searched in the order in which they appear here.</p>
+<dd><p>构建器支持的图像格式的MIME类型列表。将按照图像文件在此处显示的顺序搜索图像文件。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.builders.Builder.supported_remote_images">
 <code class="descname">supported_remote_images</code><em class="property"> = False</em><a class="headerlink" href="#sphinx.builders.Builder.supported_remote_images" title="永久链接至目标">¶</a></dt>
-<dd><p>The builder supports remote images or not.</p>
+<dd><p>构建器是否支持远程图像。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.builders.Builder.supported_data_uri_images">
 <code class="descname">supported_data_uri_images</code><em class="property"> = False</em><a class="headerlink" href="#sphinx.builders.Builder.supported_data_uri_images" title="永久链接至目标">¶</a></dt>
-<dd><p>The builder supports data URIs or not.</p>
+<dd><p>构建器是否支持数据URI。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.builders.Builder.default_translator_class">
 <code class="descname">default_translator_class</code><em class="property"> = None</em><a class="headerlink" href="#sphinx.builders.Builder.default_translator_class" title="永久链接至目标">¶</a></dt>
-<dd><p>default translator class for the builder.  This can be overridden by
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">app.set_translator()</span></code>.</p>
+<dd><p>构建器的默认转换器类。  这可以被覆盖 <code class="xref py py-meth docutils literal notranslate"><span class="pre">app.set_translator()</span></code> 。</p>
 </dd></dl>
 
-<p>These methods are predefined and will be called from the application:</p>
+<p>这些方法是预定义的，将从应用程序中调用:</p>
 <dl class="method">
 <dt id="sphinx.builders.Builder.get_relative_uri">
 <code class="descname">get_relative_uri</code><span class="sig-paren">(</span><em>from_</em>, <em>to</em>, <em>typ=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.get_relative_uri"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.get_relative_uri" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a relative URI between two source filenames.</p>
-<p>May raise environment.NoUri if there’s no way to return a sensible URI.</p>
+<dd><p>返回两个源文件名之间的相对URI。</p>
+<p>如果没有办法返回合理的URI，可能会引发环境.NoUri。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.build_all">
 <code class="descname">build_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.build_all"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.build_all" title="永久链接至目标">¶</a></dt>
-<dd><p>Build all source files.</p>
+<dd><p>构建所有源文件。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.build_specific">
 <code class="descname">build_specific</code><span class="sig-paren">(</span><em>filenames</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.build_specific"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.build_specific" title="永久链接至目标">¶</a></dt>
-<dd><p>Only rebuild as much as needed for changes in the <em>filenames</em>.</p>
+<dd><p>仅重建 <em>filenames</em> 中的更改所需的内容。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.build_update">
 <code class="descname">build_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.build_update"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.build_update" title="永久链接至目标">¶</a></dt>
-<dd><p>Only rebuild what was changed or added since last build.</p>
+<dd><p>仅重建自上次构建以来更改或添加的内容。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.build">
 <code class="descname">build</code><span class="sig-paren">(</span><em>docnames</em>, <em>summary=None</em>, <em>method='update'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.build"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.build" title="永久链接至目标">¶</a></dt>
-<dd><p>Main build method.</p>
-<p>First updates the environment, and then calls <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code>.</p>
+<dd><p>主要构建方法。</p>
+<p>首先更新环境，然后调用 <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> 。</p>
 </dd></dl>
 
-<p>These methods can be overridden in concrete builder classes:</p>
+<p>可以在具体构建器类中重写这些方法:</p>
 <dl class="method">
 <dt id="sphinx.builders.Builder.init">
 <code class="descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.init"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.init" title="永久链接至目标">¶</a></dt>
-<dd><p>Load necessary templates and perform initialization.  The default
-implementation does nothing.</p>
+<dd><p>加载必要的模板并执行初始化。  默认实现什么都不做。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.get_outdated_docs">
 <code class="descname">get_outdated_docs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.get_outdated_docs"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.get_outdated_docs" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterable of output files that are outdated, or a string
-describing what an update build will build.</p>
-<p>If the builder does not output individual files corresponding to
-source files, return a string here.  If it does, return an iterable
-of those files that need to be written.</p>
+<dd><p>返回过时的可迭代输出文件，或者描述更新构建将构建的字符串。</p>
+<p>如果构建器未输出与源文件对应的单个文件，请在此处返回一个字符串。  如果是，则返回需要写入的那些文件的可迭代。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.get_target_uri">
 <code class="descname">get_target_uri</code><span class="sig-paren">(</span><em>docname</em>, <em>typ=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.get_target_uri"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.get_target_uri" title="永久链接至目标">¶</a></dt>
-<dd><p>Return the target URI for a document name.</p>
-<p><em>typ</em> can be used to qualify the link characteristic for individual
-builders.</p>
+<dd><p>返回文档名称的目标URI。</p>
+<p><em>typ</em> 可用于限定各个构建器的链接特性。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.prepare_writing">
 <code class="descname">prepare_writing</code><span class="sig-paren">(</span><em>docnames</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.prepare_writing"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.prepare_writing" title="永久链接至目标">¶</a></dt>
-<dd><p>A place where you can add logic before <a class="reference internal" href="#sphinx.builders.Builder.write_doc" title="sphinx.builders.Builder.write_doc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_doc()</span></code></a> is run</p>
+<dd><p>你可以在之前添加逻辑的地方 <a class="reference internal" href="#sphinx.builders.Builder.write_doc" title="sphinx.builders.Builder.write_doc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_doc()</span></code></a> 运行</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.write_doc">
 <code class="descname">write_doc</code><span class="sig-paren">(</span><em>docname</em>, <em>doctree</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.write_doc"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.write_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>Where you actually write something to the filesystem.</p>
+<dd><p>你真正在文件系统中写东西的地方。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.builders.Builder.finish">
 <code class="descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/builders.html#Builder.finish"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.builders.Builder.finish" title="永久链接至目标">¶</a></dt>
-<dd><p>Finish the building process.</p>
-<p>The default implementation does nothing.</p>
+<dd><p>完成建设过程。</p>
+<p>默认实现什么都不做。</p>
 </dd></dl>
 
 </dd></dl>
@@ -301,23 +295,26 @@ builders.</p>
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="collectorapi.html" title="Environment Collector API"
+          <a href="collectorapi.html" title="环境收集器API"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="envapi.html" title="Build environment API"
+          <a href="envapi.html" title="构建环境API"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发扩展</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

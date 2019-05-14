@@ -40,7 +40,7 @@ msgstr "概述"
 
 #: ../../development/tutorials/recipe.rst:19
 msgid "We want the extension to add the following to Sphinx:"
-msgstr ""
+msgstr "We want the extension to add the following to Sphinx:"
 
 #: ../../development/tutorials/recipe.rst:21
 msgid ""
@@ -63,15 +63,15 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:31
 msgid "For that, we will need to add the following elements to Sphinx:"
-msgstr ""
+msgstr "For that, we will need to add the following elements to Sphinx:"
 
 #: ../../development/tutorials/recipe.rst:33
 msgid "A new directive called ``recipe``"
-msgstr ""
+msgstr "A new directive called ``recipe``"
 
 #: ../../development/tutorials/recipe.rst:35
 msgid "New indexes to allow us to reference ingredient and recipes"
-msgstr ""
+msgstr "New indexes to allow us to reference ingredient and recipes"
 
 #: ../../development/tutorials/recipe.rst:37
 msgid ""
@@ -92,7 +92,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:47
 msgid "Here is an example of the folder structure you might obtain:"
-msgstr ""
+msgstr "Here is an example of the folder structure you might obtain:"
 
 #: ../../development/tutorials/recipe.rst:59
 msgid "Writing the extension"
@@ -112,11 +112,11 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:72
 msgid "The directive class"
-msgstr ""
+msgstr "The directive class"
 
 #: ../../development/tutorials/recipe.rst:73
 msgid "The first thing to examine is the ``RecipeDirective`` directive:"
-msgstr ""
+msgstr "The first thing to examine is the ``RecipeDirective`` directive:"
 
 #: ../../development/tutorials/recipe.rst:80
 msgid ""
@@ -144,15 +144,15 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:98
 msgid "The index classes"
-msgstr ""
+msgstr "The index classes"
 
 #: ../../development/tutorials/recipe.rst:101
 msgid "待处理"
-msgstr ""
+msgstr "待处理"
 
 #: ../../development/tutorials/recipe.rst:101
 msgid "Add brief overview of indices"
-msgstr ""
+msgstr "Add brief overview of indices"
 
 #: ../../development/tutorials/recipe.rst:108
 msgid ""
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:121
 msgid "The domain"
-msgstr ""
+msgstr "The domain"
 
 #: ../../development/tutorials/recipe.rst:122
 msgid ""
@@ -220,7 +220,7 @@ msgstr ""
 
 #: ../../development/tutorials/recipe.rst:157
 msgid "The ``setup`` function"
-msgstr ""
+msgstr "The ``setup`` function"
 
 #: ../../development/tutorials/recipe.rst:160
 msgid ""
@@ -245,15 +245,15 @@ msgstr "使用"
 
 #: ../../development/tutorials/recipe.rst:180
 msgid "You can now use the extension throughout your project. For example:"
-msgstr ""
+msgstr "You can now use the extension throughout your project. For example:"
 
 #: ../../development/tutorials/recipe.rst:182
 msgid "index.rst"
-msgstr ""
+msgstr "index.rst"
 
 #: ../../development/tutorials/recipe.rst:195
 msgid "tomato-soup.rst"
-msgstr ""
+msgstr "tomato-soup.rst"
 
 #: ../../development/tutorials/recipe.rst:206
 msgid ""

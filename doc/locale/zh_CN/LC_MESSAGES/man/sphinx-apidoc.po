@@ -29,7 +29,7 @@ msgstr "概要"
 msgid ""
 "**sphinx-apidoc** [*OPTIONS*] -o <*OUTPUT_PATH*> <*MODULE_PATH*> "
 "[*EXCLUDE_PATTERN*, ...]"
-msgstr ""
+msgstr "**sphinx-apidoc** [*OPTIONS*] -o <*OUTPUT_PATH*> <*MODULE_PATH*> [*EXCLUDE_PATTERN*, ...]"
 
 #: ../../man/sphinx-apidoc.rst:10
 msgid "Description"
@@ -40,7 +40,7 @@ msgid ""
 ":program:`sphinx-apidoc` is a tool for automatic generation of Sphinx "
 "sources that, using the :rst:dir:`autodoc` extension, document a whole "
 "package in the style of other automatic API documentation tools."
-msgstr ""
+msgstr ":program:`sphinx-apidoc` 是一个自动生成Sphinx源的工具，使用 :rst:dir:`autodoc` 扩展，以其他自动API文档工具的方式记录整个包。"
 
 #: ../../man/sphinx-apidoc.rst:16
 msgid ""
@@ -48,7 +48,7 @@ msgid ""
 "*OUTPUT_PATH* is the directory where the generated sources are placed. "
 "Any *EXCLUDE_PATTERN*\\s given are `fnmatch-style`_ file and/or directory"
 " patterns that will be excluded from generation."
-msgstr ""
+msgstr "*MODULE_PATH* 是要记录的Python包的路径，*OUTPUT_PATH* 是生成的源所在的目录。 给出的任何 *EXCLUDE_PATTERN*\\s 是 `fnmatch-style`_ 文件和/或将从生成中排除的目录模式。"
 
 #: ../../man/sphinx-apidoc.rst:25
 msgid ""
@@ -56,13 +56,13 @@ msgid ""
 ":mod:`sphinx.ext.autodoc` to document all found modules.  If any modules "
 "have side effects on import, these will be executed by ``autodoc`` when "
 "``sphinx-build`` is run."
-msgstr ""
+msgstr "``sphinx-apidoc`` 生成源文件，使用 :mod:`sphinx.ext.autodoc` 来记录所有找到的模块。  如果任何模块对导入有副作用，那么当运行 ``sphinx-build`` 时，这些将由 ``autodoc`` 执行。"
 
 #: ../../man/sphinx-apidoc.rst:29
 msgid ""
 "If you document scripts (as opposed to library modules), make sure their "
 "main routine is protected by a ``if __name__ == '__main__'`` condition."
-msgstr ""
+msgstr "如果您记录脚本(而不是库模块)，请确保它们的主例程受 ``if __name__ == '__main__'`` 条件的保护。"
 
 #: ../../man/sphinx-apidoc.rst:33
 msgid "Options"
@@ -70,57 +70,57 @@ msgstr "选项"
 
 #: ../../man/sphinx-apidoc.rst:39
 msgid "Directory to place the output files. If it does not exist, it is created."
-msgstr "Directory to place the output files. If it does not exist, it is created."
+msgstr "放置输出文件的目录。如果它不存在，则创建它。"
 
 #: ../../man/sphinx-apidoc.rst:43
 msgid "Force overwriting of any existing generated files."
-msgstr "Force overwriting of any existing generated files."
+msgstr "强制覆盖任何现有生成的文件。"
 
 #: ../../man/sphinx-apidoc.rst:47
 msgid "Follow symbolic links."
-msgstr "Follow symbolic links."
+msgstr "遵循符号链接。"
 
 #: ../../man/sphinx-apidoc.rst:51
 msgid "Do not create any files."
-msgstr "Do not create any files."
+msgstr "不要创建任何文件。"
 
 #: ../../man/sphinx-apidoc.rst:55
 msgid "Suffix for the source files generated. Defaults to ``rst``."
-msgstr "Suffix for the source files generated. Defaults to ``rst``."
+msgstr "生成的源文件的后缀。默认为 ``rst``。"
 
 #: ../../man/sphinx-apidoc.rst:59
 msgid "Maximum depth for the generated table of contents file."
-msgstr "Maximum depth for the generated table of contents file."
+msgstr "生成的目录文件的最大深度。"
 
 #: ../../man/sphinx-apidoc.rst:63
 msgid "Filename for a table of contents file. Defaults to ``modules``."
-msgstr "Filename for a table of contents file. Defaults to ``modules``."
+msgstr "目录文件的文件名。默认为 ``modules`` 。"
 
 #: ../../man/sphinx-apidoc.rst:67
 msgid ""
 "Do not create a table of contents file. Ignored when :option:`--full` is "
 "provided."
-msgstr ""
+msgstr "不要创建目录文件。忽略时 :option:`--full` 被提供。"
 
 #: ../../man/sphinx-apidoc.rst:72
 msgid ""
 "Generate a full Sphinx project (``conf.py``, ``Makefile`` etc.) using the"
 " same mechanism as :program:`sphinx-quickstart`."
-msgstr ""
+msgstr "使用与 :program:`sphinx-quickstart` 相同的机制生成一个完整的Sphinx项目(``conf.py``, ``Makefile`` 等)。"
 
 #: ../../man/sphinx-apidoc.rst:77
 msgid "Put documentation for each module on its own page."
-msgstr "Put documentation for each module on its own page."
+msgstr "将每个模块的文档放在自己的页面上。"
 
 #: ../../man/sphinx-apidoc.rst:83
 msgid ""
 "Do not create headings for the modules/packages. This is useful, for "
 "example, when docstrings already contain headings."
-msgstr ""
+msgstr "不要为模块/包创建标题。 例如，当文档字符串已包含标题时，这很有用。"
 
 #: ../../man/sphinx-apidoc.rst:88
 msgid "Include \"_private\" modules."
-msgstr "Include \"_private\" modules."
+msgstr "包括 \"_private\" 模块."
 
 #: ../../man/sphinx-apidoc.rst:94
 msgid ""
@@ -129,45 +129,45 @@ msgid ""
 "path structures such as ``foo/bar/module.py`` or "
 "``foo/bar/baz/__init__.py`` (notice that ``bar`` and ``foo`` are "
 "namespaces, not modules)."
-msgstr ""
+msgstr "默认情况下，sphinx-apidoc 只处理 sys.path 搜索模块。 Python 3.3 介绍 :pep:`420` 隐式命名空间，允许模块路径结构，如 ``foo/bar/module.py`` 或 ``foo/bar/baz/__init__.py`` (注意 ``bar`` 和 ``foo`` 是命名空间，而不是模块)。"
 
 #: ../../man/sphinx-apidoc.rst:99
 msgid "Interpret paths recursively according to PEP-0420."
-msgstr "Interpret paths recursively according to PEP-0420."
+msgstr "根据PEP-0420递归解释路径。"
 
 #: ../../man/sphinx-apidoc.rst:103
 msgid "Put module documentation before submodule documentation."
-msgstr "Put module documentation before submodule documentation."
+msgstr "在子模块文档之前放置模块文档。"
 
 #: ../../man/sphinx-apidoc.rst:105
 msgid "These options are used when :option:`--full` is specified:"
-msgstr "These options are used when :option:`--full` is specified:"
+msgstr "在以下情况下使用这些选项 :option:`--full`:"
 
 #: ../../man/sphinx-apidoc.rst:109
 msgid "Append module_path to sys.path."
-msgstr "Append module_path to sys.path."
+msgstr "将module_path附加到sys.path。"
 
 #: ../../man/sphinx-apidoc.rst:113
 msgid "Sets the project name to put in generated files (see :confval:`project`)."
-msgstr "Sets the project name to put in generated files (see :confval:`project`)."
+msgstr "设置项目名称以放入生成的文件中(请参阅 :confval:`project`)。"
 
 #: ../../man/sphinx-apidoc.rst:117
 msgid ""
 "Sets the author name(s) to put in generated files (see "
 ":confval:`copyright`)."
-msgstr ""
+msgstr "设置要放入生成文件的作者姓名(参见 :confval:`copyright`)。"
 
 #: ../../man/sphinx-apidoc.rst:122
 msgid ""
 "Sets the project version to put in generated files (see "
 ":confval:`version`)."
-msgstr ""
+msgstr "设置项目版本以放入生成的文件中(请参阅 :confval:`version`)。"
 
 #: ../../man/sphinx-apidoc.rst:126
 msgid ""
 "Sets the project release to put in generated files (see "
 ":confval:`release`)."
-msgstr ""
+msgstr "设置项目发布以放入生成的文件(请参阅 :confval:`release`)。"
 
 #: ../../man/sphinx-apidoc.rst:129
 msgid "Environment"
@@ -177,7 +177,7 @@ msgstr "环境"
 msgid ""
 "A comma-separated list of option to append to generated ``automodule`` "
 "directives. Defaults to ``members,undoc-members,show-inheritance``."
-msgstr ""
+msgstr "以逗号分隔的选项列表，附加到生成的 ``automodule`` 指令。默认为 ``members,undoc-members,show-inheritance`` 。"
 
 #: ../../man/sphinx-apidoc.rst:137
 msgid "See also"

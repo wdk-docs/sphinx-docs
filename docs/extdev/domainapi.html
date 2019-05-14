@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Domain API &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>域API &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Parser API" href="parserapi.html" />
-    <link rel="prev" title="Docutils markup API" href="markupapi.html" />
+    <link rel="next" title="解析器API" href="parserapi.html" />
+    <link rel="prev" title="Docutils标记API" href="markupapi.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/domainapi.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -102,28 +102,31 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="parserapi.html" title="Parser API"
+          <a href="parserapi.html" title="解析器API"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="markupapi.html" title="Docutils markup API"
+          <a href="markupapi.html" title="Docutils标记API"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发扩展</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="markupapi.html"
-                        title="上一章">Docutils markup API</a></p>
+                        title="上一章">Docutils标记API</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="parserapi.html"
-                        title="下一章">Parser API</a></p>
+                        title="下一章">解析器API</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -150,62 +153,47 @@
           <div class="body" role="main">
             
   <div class="section" id="module-sphinx.domains">
-<span id="id1"></span><span id="domain-api"></span><h1>Domain API<a class="headerlink" href="#module-sphinx.domains" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><span id="domain-api"></span><h1>域API<a class="headerlink" href="#module-sphinx.domains" title="永久链接至标题">¶</a></h1>
 <dl class="class">
 <dt id="sphinx.domains.Domain">
 <em class="property">class </em><code class="descclassname">sphinx.domains.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>env</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain" title="永久链接至目标">¶</a></dt>
-<dd><p>A Domain is meant to be a group of “object” description directives for
-objects of a similar nature, and corresponding roles to create references to
-them.  Examples would be Python modules, classes, functions etc., elements
-of a templating language, Sphinx roles and directives, etc.</p>
-<p>Each domain has a separate storage for information about existing objects
-and how to reference them in <cite>self.data</cite>, which must be a dictionary.  It
-also must implement several functions that expose the object information in
-a uniform way to parts of Sphinx that allow the user to reference or search
-for objects in a domain-agnostic way.</p>
-<p>About <cite>self.data</cite>: since all object and cross-referencing information is
-stored on a BuildEnvironment instance, the <cite>domain.data</cite> object is also
-stored in the <cite>env.domaindata</cite> dict under the key <cite>domain.name</cite>.  Before the
-build process starts, every active domain is instantiated and given the
-environment object; the <cite>domaindata</cite> dict must then either be nonexistent or
-a dictionary whose ‘version’ key is equal to the domain class’
-<a class="reference internal" href="#sphinx.domains.Domain.data_version" title="sphinx.domains.Domain.data_version"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data_version</span></code></a> attribute.  Otherwise, <cite>OSError</cite> is raised and the
-pickled environment is discarded.</p>
+<dd><p>域意味着是一组具有类似性质的对象的“对象”描述指令, 以及用于创建对它们的引用的相应角色。  示例包括Python模块, 类, 函数等, 模板语言的元素, Sphinx角色和指令等。</p>
+<p>每个域都有一个单独的存储空间, 用于存储有关现有对象的信息, 以及如何在 <cite>self.data</cite> 中引用它们, 它必须是字典。  它还必须实现几个函数, 这些函数以统一的方式将对象信息暴露给Sphinx的部分, 允许用户以域无关的方式引用或搜索对象。</p>
+<p>关于`self.data`:由于所有对象和交叉引用信息都存储在BuildEnvironment实例中,  <cite>domain.data</cite> 对象也存储在 <cite>domain.name</cite> 键下的`env.domaindata` 字典中。  在构建过程开始之前, 每个活动域都被实例化并被赋予环境对象;那么 <cite>domaindata</cite> 字典必须是不存在的, 或者是 ‘version’ 键等于域类 attr:<cite>data_version</cite> 属性的字典。否则, 引发 <cite>OSError</cite> 并丢弃pickle环境。</p>
 <dl class="method">
 <dt id="sphinx.domains.Domain.add_object_type">
 <code class="descname">add_object_type</code><span class="sig-paren">(</span><em>name</em>, <em>objtype</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.add_object_type"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.add_object_type" title="永久链接至目标">¶</a></dt>
-<dd><p>Add an object type.</p>
+<dd><p>添加对象类型。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.check_consistency">
 <code class="descname">check_consistency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.check_consistency"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.check_consistency" title="永久链接至目标">¶</a></dt>
-<dd><p>Do consistency checks (<strong>experimental</strong>).</p>
+<dd><p>进行一致性检查(<strong>实验</strong>)。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.clear_doc">
 <code class="descname">clear_doc</code><span class="sig-paren">(</span><em>docname</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.clear_doc"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.clear_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>Remove traces of a document in the domain-specific inventories.</p>
+<dd><p>删除特定于域的清单中的文档痕迹。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.directive">
 <code class="descname">directive</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.directive"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.directive" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a directive adapter class that always gives the registered
-directive its full name (‘domain:name’) as <code class="docutils literal notranslate"><span class="pre">self.name</span></code>.</p>
+<dd><p>返回一个指令适配器类, 它始终将注册指令的全名(‘domain:name’)作为 <code class="docutils literal notranslate"><span class="pre">self.name</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.get_enumerable_node_type">
 <code class="descname">get_enumerable_node_type</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.get_enumerable_node_type"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.get_enumerable_node_type" title="永久链接至目标">¶</a></dt>
-<dd><p>Get type of enumerable nodes (experimental).</p>
+<dd><p>获取可枚举节点的类型(实验性)。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.get_full_qualified_name">
 <code class="descname">get_full_qualified_name</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.get_full_qualified_name"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.get_full_qualified_name" title="永久链接至目标">¶</a></dt>
-<dd><p>Return full qualified name for given node.</p>
+<dd><p>返回给定节点的完全限定名称。</p>
 </dd></dl>
 
 <dl class="method">
@@ -243,40 +231,33 @@ results). One of:</p>
 <dl class="method">
 <dt id="sphinx.domains.Domain.get_type_name">
 <code class="descname">get_type_name</code><span class="sig-paren">(</span><em>type</em>, <em>primary=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.get_type_name"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.get_type_name" title="永久链接至目标">¶</a></dt>
-<dd><p>Return full name for given ObjType.</p>
+<dd><p>返回给定 ObjType 的全名。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.merge_domaindata">
 <code class="descname">merge_domaindata</code><span class="sig-paren">(</span><em>docnames</em>, <em>otherdata</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.merge_domaindata"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.merge_domaindata" title="永久链接至目标">¶</a></dt>
-<dd><p>Merge in data regarding <em>docnames</em> from a different domaindata
-inventory (coming from a subprocess in parallel builds).</p>
+<dd><p>合并来自不同 domaindata 库存的 <em>docnames</em> 数据(来自并行构建中的子流程)。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.process_doc">
 <code class="descname">process_doc</code><span class="sig-paren">(</span><em>env</em>, <em>docname</em>, <em>document</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.process_doc"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.process_doc" title="永久链接至目标">¶</a></dt>
-<dd><p>Process a document after it is read by the environment.</p>
+<dd><p>在环境读取文档后处理文档。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.process_field_xref">
 <code class="descname">process_field_xref</code><span class="sig-paren">(</span><em>pnode</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.process_field_xref"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.process_field_xref" title="永久链接至目标">¶</a></dt>
-<dd><p>Process a pending xref created in a doc field.
-For example, attach information about the current scope.</p>
+<dd><p>处理在doc字段中创建的待处理外部参照。例如, 附加有关当前范围的信息。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.resolve_any_xref">
 <code class="descname">resolve_any_xref</code><span class="sig-paren">(</span><em>env</em>, <em>fromdocname</em>, <em>builder</em>, <em>target</em>, <em>node</em>, <em>contnode</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.resolve_any_xref"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.resolve_any_xref" title="永久链接至目标">¶</a></dt>
-<dd><p>Resolve the pending_xref <em>node</em> with the given <em>target</em>.</p>
-<p>The reference comes from an “any” or similar role, which means that we
-don’t know the type.  Otherwise, the arguments are the same as for
-<a class="reference internal" href="#sphinx.domains.Domain.resolve_xref" title="sphinx.domains.Domain.resolve_xref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resolve_xref()</span></code></a>.</p>
-<p>The method must return a list (potentially empty) of tuples
-<code class="docutils literal notranslate"><span class="pre">('domain:role',</span> <span class="pre">newnode)</span></code>, where <code class="docutils literal notranslate"><span class="pre">'domain:role'</span></code> is the name of a
-role that could have created the same reference, e.g. <code class="docutils literal notranslate"><span class="pre">'py:func'</span></code>.
-<code class="docutils literal notranslate"><span class="pre">newnode</span></code> is what <a class="reference internal" href="#sphinx.domains.Domain.resolve_xref" title="sphinx.domains.Domain.resolve_xref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resolve_xref()</span></code></a> would return.</p>
+<dd><p>使用给定的 <em>target</em> 解析 pending_xref <em>node</em>.</p>
+<p>引用来自 “any” 或类似的角色, 这意味着我们不知道类型。否则, 参数与 <a class="reference internal" href="#sphinx.domains.Domain.resolve_xref" title="sphinx.domains.Domain.resolve_xref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resolve_xref()</span></code></a> 相同。</p>
+<p>该方法必须返回一个列表(可能为空)的元组 <code class="docutils literal notranslate"><span class="pre">('domain:role',</span> <span class="pre">newnode)</span></code>, 其中 <code class="docutils literal notranslate"><span class="pre">'domain:role'</span></code> 是一个可以创建相同引用的角色的名称, 例如 <code class="docutils literal notranslate"><span class="pre">'py:func'</span></code>. <code class="docutils literal notranslate"><span class="pre">newnode</span></code> 是什么 <a class="reference internal" href="#sphinx.domains.Domain.resolve_xref" title="sphinx.domains.Domain.resolve_xref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resolve_xref()</span></code></a> 会返回。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.3 新版功能.</span></p>
 </div>
@@ -285,28 +266,22 @@ role that could have created the same reference, e.g. <code class="docutils lite
 <dl class="method">
 <dt id="sphinx.domains.Domain.resolve_xref">
 <code class="descname">resolve_xref</code><span class="sig-paren">(</span><em>env</em>, <em>fromdocname</em>, <em>builder</em>, <em>typ</em>, <em>target</em>, <em>node</em>, <em>contnode</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.resolve_xref"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.resolve_xref" title="永久链接至目标">¶</a></dt>
-<dd><p>Resolve the pending_xref <em>node</em> with the given <em>typ</em> and <em>target</em>.</p>
-<p>This method should return a new node, to replace the xref node,
-containing the <em>contnode</em> which is the markup content of the
-cross-reference.</p>
-<p>If no resolution can be found, None can be returned; the xref node will
-then given to the <a class="reference internal" href="appapi.html#event-missing-reference"><code class="xref std std-event docutils literal notranslate"><span class="pre">missing-reference</span></code></a> event, and if that yields no
-resolution, replaced by <em>contnode</em>.</p>
-<p>The method can also raise <code class="xref py py-exc docutils literal notranslate"><span class="pre">sphinx.environment.NoUri</span></code> to suppress
-the <a class="reference internal" href="appapi.html#event-missing-reference"><code class="xref std std-event docutils literal notranslate"><span class="pre">missing-reference</span></code></a> event being emitted.</p>
+<dd><p>使用给定的* type <em>和</em> target <em>解析挂起的外部参照*节点</em>。</p>
+<p>此方法应返回一个新节点, 以替换xref节点, 其中包含 <em>contnode</em> , 它是交叉引用的标记内容。</p>
+<p>如果找不到解决方案, 则无法返回;然后, 外部参照节点将被赋予:event:<a href="#id1"><span class="problematic" id="id2">`</span></a>missing-reference`事件, 如果没有产生分辨率, 则替换为 <em>contnode</em>.</p>
+<p>该方法还可以引发 <code class="xref py py-exc docutils literal notranslate"><span class="pre">sphinx.environment.NoUri</span></code> 来抑制 <a class="reference internal" href="appapi.html#event-missing-reference"><code class="xref std std-event docutils literal notranslate"><span class="pre">missing-reference</span></code></a> 事件被发出。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.domains.Domain.role">
 <code class="descname">role</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Domain.role"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Domain.role" title="永久链接至目标">¶</a></dt>
-<dd><p>Return a role adapter function that always gives the registered
-role its full name (‘domain:name’) as the first argument.</p>
+<dd><p>返回角色适配器函数, 该函数始终为注册角色提供其全名(‘domain:name’)作为第一个参数。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.dangling_warnings">
 <code class="descname">dangling_warnings</code><em class="property"> = {}</em><a class="headerlink" href="#sphinx.domains.Domain.dangling_warnings" title="永久链接至目标">¶</a></dt>
-<dd><p>role name -&gt; a warning message if reference is missing</p>
+<dd><p>角色名称 - &gt;如果缺少引用, 则显示警告消息</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -318,13 +293,13 @@ role its full name (‘domain:name’) as the first argument.</p>
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.data_version">
 <code class="descname">data_version</code><em class="property"> = 0</em><a class="headerlink" href="#sphinx.domains.Domain.data_version" title="永久链接至目标">¶</a></dt>
-<dd><p>data version, bump this when the format of <cite>self.data</cite> changes</p>
+<dd><p>数据版本, 当 <cite>self.data</cite> 的格式发生变化时, 请对此进行修改</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.directives">
 <code class="descname">directives</code><em class="property"> = {}</em><a class="headerlink" href="#sphinx.domains.Domain.directives" title="永久链接至目标">¶</a></dt>
-<dd><p>directive name -&gt; directive class</p>
+<dd><p>指令名称 - &gt;指令类</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -336,37 +311,37 @@ role its full name (‘domain:name’) as the first argument.</p>
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.indices">
 <code class="descname">indices</code><em class="property"> = []</em><a class="headerlink" href="#sphinx.domains.Domain.indices" title="永久链接至目标">¶</a></dt>
-<dd><p>a list of Index subclasses</p>
+<dd><p>索引子类列表</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.initial_data">
 <code class="descname">initial_data</code><em class="property"> = {}</em><a class="headerlink" href="#sphinx.domains.Domain.initial_data" title="永久链接至目标">¶</a></dt>
-<dd><p>data value for a fresh environment</p>
+<dd><p>新环境的数据价值</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.label">
 <code class="descname">label</code><em class="property"> = ''</em><a class="headerlink" href="#sphinx.domains.Domain.label" title="永久链接至目标">¶</a></dt>
-<dd><p>domain label: longer, more descriptive (used in messages)</p>
+<dd><p>域名标签:更长, 更具描述性(用于邮件)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.name">
 <code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#sphinx.domains.Domain.name" title="永久链接至目标">¶</a></dt>
-<dd><p>domain name: should be short, but unique</p>
+<dd><p>域名:应该简短, 但要独一无二</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.object_types">
 <code class="descname">object_types</code><em class="property"> = {}</em><a class="headerlink" href="#sphinx.domains.Domain.object_types" title="永久链接至目标">¶</a></dt>
-<dd><p>type (usually directive) name -&gt; ObjType instance</p>
+<dd><p>type(通常是指令) name -&gt; ObjType 实例</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sphinx.domains.Domain.roles">
 <code class="descname">roles</code><em class="property"> = {}</em><a class="headerlink" href="#sphinx.domains.Domain.roles" title="永久链接至目标">¶</a></dt>
-<dd><p>role name -&gt; role callable</p>
+<dd><p>角色名称 -&gt; 角色可调用</p>
 </dd></dl>
 
 </dd></dl>
@@ -374,33 +349,25 @@ role its full name (‘domain:name’) as the first argument.</p>
 <dl class="class">
 <dt id="sphinx.domains.ObjType">
 <em class="property">class </em><code class="descclassname">sphinx.domains.</code><code class="descname">ObjType</code><span class="sig-paren">(</span><em>lname</em>, <em>*roles</em>, <em>**attrs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#ObjType"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.ObjType" title="永久链接至目标">¶</a></dt>
-<dd><p>An ObjType is the description for a type of object that a domain can
-document.  In the object_types attribute of Domain subclasses, object type
-names are mapped to instances of this class.</p>
-<p>Constructor arguments:</p>
+<dd><p>ObjType是域可以记录的对象类型的描述。在Domain子类的 object_types 属性中, 对象类型名称映射到此类的实例。</p>
+<p>构造函数参数:</p>
 <ul class="simple">
-<li><p><em>lname</em>: localized name of the type (do not include domain name)</p></li>
-<li><p><em>roles</em>: all the roles that can refer to an object of this type</p></li>
-<li><p><em>attrs</em>: object attributes – currently only “searchprio” is known,
-which defines the object’s priority in the full-text search index,
-see <a class="reference internal" href="#sphinx.domains.Domain.get_objects" title="sphinx.domains.Domain.get_objects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Domain.get_objects()</span></code></a>.</p></li>
+<li><p><em>lname</em>: 类型的本地化名称(不包括域名)</p></li>
+<li><p><em>roles</em>: 可以引用此类对象的所有角色</p></li>
+<li><p><em>attrs</em>: 对象属性 - 目前只有“searchprio ”是已知的, 它定义了全文搜索索引中对象的优先级, 参见 <a class="reference internal" href="#sphinx.domains.Domain.get_objects" title="sphinx.domains.Domain.get_objects"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Domain.get_objects()</span></code></a>.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="class">
 <dt id="sphinx.domains.Index">
 <em class="property">class </em><code class="descclassname">sphinx.domains.</code><code class="descname">Index</code><span class="sig-paren">(</span><em>domain</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Index"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Index" title="永久链接至目标">¶</a></dt>
-<dd><p>An Index is the description for a domain-specific index.  To add an index to
-a domain, subclass Index, overriding the three name attributes:</p>
+<dd><p>索引是特定于域的索引的描述。要向域添加索引, 请将索引子类化, 覆盖三个名称属性:</p>
 <ul class="simple">
-<li><p><cite>name</cite> is an identifier used for generating file names.</p></li>
-<li><p><cite>localname</cite> is the section title for the index.</p></li>
-<li><p><cite>shortname</cite> is a short name for the index, for use in the relation bar in
-HTML output.  Can be empty to disable entries in the relation bar.</p></li>
+<li><p><cite>name</cite> 是用于生成文件名的标识符。</p></li>
+<li><p><cite>localname</cite> 是索引的节标题。</p></li>
+<li><p><cite>shortname</cite> 是索引的简称, 用于HTML输出中的关系栏。可以为空以禁用关系栏中的条目。</p></li>
 </ul>
-<p>and providing a <a class="reference internal" href="#sphinx.domains.Index.generate" title="sphinx.domains.Index.generate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generate()</span></code></a> method.  Then, add the index class to
-your domain’s <cite>indices</cite> list.  Extensions can add indices to existing
-domains using <a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_index_to_domain" title="sphinx.application.Sphinx.add_index_to_domain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_index_to_domain()</span></code></a>.</p>
+<p>并提供 <a class="reference internal" href="#sphinx.domains.Index.generate" title="sphinx.domains.Index.generate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">generate()</span></code></a> 方法。然后, 将索引类添加到域的 <cite>indices</cite> 列表中。扩展可以使用 <a class="reference internal" href="appapi.html#sphinx.application.Sphinx.add_index_to_domain" title="sphinx.application.Sphinx.add_index_to_domain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_index_to_domain()</span></code></a> 为现有域添加索引。</p>
 <dl class="method">
 <dt id="sphinx.domains.Index.generate">
 <code class="descname">generate</code><span class="sig-paren">(</span><em>docnames=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/domains.html#Index.generate"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.domains.Index.generate" title="永久链接至目标">¶</a></dt>
@@ -412,21 +379,17 @@ docnames.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">collapse</span></code></dt><dd><p>A boolean that determines if sub-entries should start collapsed (for
 output formats that support collapsing sub-entries).</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">content</span></code>:</dt><dd><p>A sequence of <code class="docutils literal notranslate"><span class="pre">(letter,</span> <span class="pre">entries)</span></code> tuples, where <code class="docutils literal notranslate"><span class="pre">letter</span></code> is the
-“heading” for the given <code class="docutils literal notranslate"><span class="pre">entries</span></code>, usually the starting letter, and
-<code class="docutils literal notranslate"><span class="pre">entries</span></code> is a sequence of single entries. Each entry is a sequence
-<code class="docutils literal notranslate"><span class="pre">[name,</span> <span class="pre">subtype,</span> <span class="pre">docname,</span> <span class="pre">anchor,</span> <span class="pre">extra,</span> <span class="pre">qualifier,</span> <span class="pre">descr]</span></code>. The
-items in this sequence have the following meaning:</p>
+<dt><code class="docutils literal notranslate"><span class="pre">content</span></code>:</dt><dd><p>一系列 <code class="docutils literal notranslate"><span class="pre">(letter，entries)</span></code> 元组，其中 <code class="docutils literal notranslate"><span class="pre">letter</span></code> 是给定 <code class="docutils literal notranslate"><span class="pre">entries</span></code> 的 “heading”, 通常是起始字母, <code class="docutils literal notranslate"><span class="pre">entries</span></code> 是一个序列单个条目。 每个条目都是一个序列 <code class="docutils literal notranslate"><span class="pre">[name，subtype，docname，anchor，extra，qualifier，descr]</span></code>. 此序列中的项目具有以下含义:</p>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>The name of the index entry to be displayed.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">subtype</span></code></dt><dd><p>The sub-entry related type. One of:</p>
+<dt><code class="docutils literal notranslate"><span class="pre">subtype</span></code></dt><dd><p>子条目相关类型。之一:</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">0</span></code></dt><dd><p>A normal entry.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">0</span></code></dt><dd><p>正常进入。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">1</span></code></dt><dd><p>An entry with sub-entries.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">1</span></code></dt><dd><p>包含子条目的条目。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">2</span></code></dt><dd><p>A sub-entry.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">2</span></code></dt><dd><p>一个子条目。</p>
 </dd>
 </dl>
 </dd>
@@ -464,23 +427,26 @@ as LaTeX.</p>
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="parserapi.html" title="Parser API"
+          <a href="parserapi.html" title="解析器API"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="markupapi.html" title="Docutils markup API"
+          <a href="markupapi.html" title="Docutils标记API"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发扩展</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

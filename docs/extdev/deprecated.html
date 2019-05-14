@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Deprecated APIs &#8212; Sphinx 2.1.0+/27801b188 文档</title>
+    <title>弃用 APIs &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/27801b188 文档 中搜索"
+          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="扩展教程" href="../development/tutorials/index.html" />
-    <link rel="prev" title="Utilities" href="utils.html" />
+    <link rel="prev" title="实用工具" href="utils.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/extdev/deprecated.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -102,25 +102,28 @@
           <a href="../genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
           <a href="../development/tutorials/index.html" title="扩展教程"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="utils.html" title="Utilities"
+          <a href="utils.html" title="实用工具"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发扩展</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>上一个主题</h4>
   <p class="topless"><a href="utils.html"
-                        title="上一章">Utilities</a></p>
+                        title="上一章">实用工具</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="../development/tutorials/index.html"
                         title="下一章">扩展教程</a></p>
@@ -150,12 +153,9 @@
           <div class="body" role="main">
             
   <div class="section" id="deprecated-apis">
-<span id="dev-deprecated-apis"></span><h1>Deprecated APIs<a class="headerlink" href="#deprecated-apis" title="永久链接至标题">¶</a></h1>
-<p>On developing Sphinx, we are always careful to the compatibility of our APIs.
-But, sometimes, the change of interface are needed for some reasons.  In such
-cases, we’ve marked them as deprecated. And they are kept during the two
-major versions (for more details, please see <a class="reference internal" href="../devguide.html#deprecation-policy"><span class="std std-ref">弃用政策</span></a>).</p>
-<p>The following is a list of deprecated interfaces.</p>
+<span id="dev-deprecated-apis"></span><h1>弃用 APIs<a class="headerlink" href="#deprecated-apis" title="永久链接至标题">¶</a></h1>
+<p>在开发Sphinx时，我们始终注意API的兼容性。 但是，有时候，由于某些原因需要改变界面。  在这种情况下，我们已将其标记为已弃用。它们保留在两个主要版本中(有关详细信息，请参阅 <a class="reference internal" href="../devguide.html#deprecation-policy"><span class="std std-ref">弃用政策</span></a>)。</p>
+<p>以下是不推荐使用的接口列表。</p>
 <table class="colwidths-given deprecated docutils align-center" id="id1">
 <caption><span class="caption-text">deprecated APIs</span><a class="headerlink" href="#id1" title="永久链接至表格">¶</a></caption>
 <colgroup>
@@ -165,10 +165,10 @@ major versions (for more details, please see <a class="reference internal" href=
 <col style="width: 40%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Target</p></th>
-<th class="head"><p>Deprecated</p></th>
-<th class="head"><p>(will be) Removed</p></th>
-<th class="head"><p>Alternatives</p></th>
+<tr class="row-odd"><th class="head"><p>目标</p></th>
+<th class="head"><p>弃用</p></th>
+<th class="head"><p>(将)删除</p></th>
+<th class="head"><p>备择方案</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1106,12 +1106,12 @@ major versions (for more details, please see <a class="reference internal" href=
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Sphinx.warn()</span></code>, <code class="docutils literal notranslate"><span class="pre">Sphinx.info()</span></code></p></td>
 <td><p>1.6</p></td>
 <td><p>2.0</p></td>
-<td><p><a class="reference internal" href="logging.html#logging-api"><span class="std std-ref">Logging API</span></a></p></td>
+<td><p><a class="reference internal" href="logging.html#logging-api"><span class="std std-ref">记录API</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BuildEnvironment.set_warnfunc()</span></code></p></td>
 <td><p>1.6</p></td>
 <td><p>2.0</p></td>
-<td><p><a class="reference internal" href="logging.html#logging-api"><span class="std std-ref">Logging API</span></a></p></td>
+<td><p><a class="reference internal" href="logging.html#logging-api"><span class="std std-ref">记录API</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BuildEnvironment.note_toctree()</span></code></p></td>
 <td><p>1.6</p></td>
@@ -1177,8 +1177,7 @@ major versions (for more details, please see <a class="reference internal" href=
 </table>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>On deprecating on public APIs (internal functions and classes),
-we also follow the policy as much as possible.</p>
+<p>在弃用公共API(内部函数和类)时，我们也尽可能遵循该策略。</p>
 </div>
 </div>
 
@@ -1195,23 +1194,26 @@ we also follow the policy as much as possible.</p>
           <a href="../genindex.html" title="总目录"
              >索引</a></li>
         <li class="right" >
+          <a href="../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
           <a href="../development/tutorials/index.html" title="扩展教程"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="utils.html" title="Utilities"
+          <a href="utils.html" title="实用工具"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >为Sphinx开发扩展</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发扩展</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/27801b188 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
     </div>
   </body>
 </html>

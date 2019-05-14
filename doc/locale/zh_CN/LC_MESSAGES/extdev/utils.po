@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-05-10 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../extdev/utils.rst:2
 msgid "Utilities"
-msgstr ""
+msgstr "实用工具"
 
 #: ../../extdev/utils.rst:4
 msgid "Sphinx provides utility classes and functions to develop extensions."
-msgstr ""
+msgstr "Sphinx提供实用程序类和函数来开发扩展。"
 
 #: ../../extdev/utils.rst:7
 msgid "Base classes for components"
-msgstr ""
+msgstr "组件的基类"
 
 #: ../../extdev/utils.rst:9
 msgid ""
@@ -35,42 +35,45 @@ msgid ""
 "components (e.g. :class:`.Config`, :class:`.BuildEnvironment` and so on) "
 "easily."
 msgstr ""
+"这些基类有助于您的扩展轻松获取Sphinx组件(例如 :class:`.Config`, :class:`.BuildEnvironment` "
+"等)。"
 
 #: ../../extdev/utils.rst:12
 msgid ""
 "The subclasses of them might not work with bare docutils because they are"
 " strongly coupled with Sphinx."
-msgstr ""
+msgstr "它们的子类可能不适用于裸的docutils，因为它们与Sphinx强烈耦合。"
 
 #: of sphinx.transforms.SphinxTransform:1
 msgid "A base class of Transforms."
-msgstr ""
+msgstr "变换的基类。"
 
 #: of sphinx.transforms.SphinxTransform:3
 msgid ""
 "Compared with ``docutils.transforms.Transform``, this class improves "
 "accessibility to Sphinx APIs."
-msgstr ""
+msgstr "与 ``docutils.transforms.Transform`` 相比，该类提高了Sphinx API的可访问性。"
 
 #: of sphinx.transforms.SphinxTransform.app:1
 msgid "Reference to the :class:`.Sphinx` object."
-msgstr ""
+msgstr "引用 :class:`.Sphinx` 对象。"
 
 #: of sphinx.transforms.SphinxTransform.config:1
 #: sphinx.util.docutils.SphinxDirective.config:1
 #: sphinx.util.docutils.SphinxRole.config:1
 msgid "Reference to the :class:`.Config` object."
-msgstr ""
+msgstr "引用 :class:`.Config` 对象。"
 
 #: of sphinx.transforms.SphinxTransform.env:1
 #: sphinx.util.docutils.SphinxDirective.env:1
 #: sphinx.util.docutils.SphinxRole.env:1
 msgid "Reference to the :class:`.BuildEnvironment` object."
-msgstr ""
+msgstr "引用 :class:`.BuildEnvironment` 对象。"
 
 #: of sphinx.transforms.post_transforms.SphinxPostTransform:1
+#, fuzzy
 msgid "A base class of post-transforms."
-msgstr ""
+msgstr "变换的基类。"
 
 #: of sphinx.transforms.post_transforms.SphinxPostTransform:3
 msgid ""
@@ -98,17 +101,17 @@ msgstr ""
 
 #: of sphinx.util.docutils.SphinxDirective:1
 msgid "A base class for Sphinx directives."
-msgstr ""
+msgstr "Sphinx指令的基类。"
 
 #: of sphinx.util.docutils.SphinxDirective:3
 msgid "This class provides helper methods for Sphinx directives."
-msgstr ""
+msgstr "该类为Sphinx指令提供了辅助方法。"
 
 #: of sphinx.util.docutils.SphinxDirective:5 sphinx.util.docutils.SphinxRole:5
 msgid ""
 "The subclasses of this class might not work with docutils. This class is "
 "strongly coupled with Sphinx."
-msgstr ""
+msgstr "此类的子类可能不适用于docutils。这个类与Sphinx强烈结合。"
 
 #: of sphinx.util.docutils.SphinxDirective.set_source_info:1
 msgid "Set source and line number to the node."
@@ -116,43 +119,43 @@ msgstr ""
 
 #: of sphinx.util.docutils.SphinxRole:1
 msgid "A base class for Sphinx roles."
-msgstr ""
+msgstr "Sphinx角色的基类。"
 
 #: of sphinx.util.docutils.SphinxRole:3
 msgid "This class provides helper methods for Sphinx roles."
-msgstr ""
+msgstr "此类为Sphinx角色提供帮助方法。"
 
 #: of sphinx.util.docutils.SphinxRole.content:1
 msgid "A list of strings, the directive content for customization"
-msgstr ""
+msgstr "字符串列表，用于自定义的指令内容"
 
 #: of sphinx.util.docutils.SphinxRole.inliner:1
 msgid "The ``docutils.parsers.rst.states.Inliner`` object."
-msgstr ""
+msgstr "The ``docutils.parsers.rst.states.Inliner`` object."
 
 #: of sphinx.util.docutils.SphinxRole.lineno:1
 msgid "The line number where the interpreted text begins."
-msgstr ""
+msgstr "解释文本开始的行号。"
 
 #: of sphinx.util.docutils.SphinxRole.name:1
 msgid "The role name actually used in the document."
-msgstr ""
+msgstr "文档中实际使用的角色名称。"
 
 #: of sphinx.util.docutils.SphinxRole.options:1
 msgid "A dictionary of directive options for customization"
-msgstr ""
+msgstr "用于自定义的指令选项字典"
 
 #: of sphinx.util.docutils.SphinxRole.rawtext:1
 msgid "A string containing the entire interpreted text input."
-msgstr ""
+msgstr "包含整个解释文本输入的字符串。"
 
 #: of sphinx.util.docutils.SphinxRole.text:1
 msgid "The interpreted text content."
-msgstr ""
+msgstr "解释的文本内容。"
 
 #: of sphinx.util.docutils.ReferenceRole:1
 msgid "A base class for reference roles."
-msgstr ""
+msgstr "参考角色的基类。"
 
 #: of sphinx.util.docutils.ReferenceRole:3
 msgid ""
@@ -160,29 +163,31 @@ msgid ""
 "for the role.  The parsed result; link title and target will be stored to"
 " ``self.title`` and ``self.target``."
 msgstr ""
+"引用角色可以接受 ``link title <target>`` style 作为角色的文本。  解析后的结果;链接标题和目标将存储到 "
+"``self.title`` 和 ``self.target`` 。"
 
 #: of sphinx.util.docutils.ReferenceRole.has_explicit_title:1
 msgid "A boolean indicates the role has explicit title or not."
-msgstr ""
+msgstr "布尔值表示角色具有明确的标题。"
 
 #: of sphinx.util.docutils.ReferenceRole.target:1
 msgid "The link target for the interpreted text."
-msgstr ""
+msgstr "解释文本的链接目标。"
 
 #: of sphinx.util.docutils.ReferenceRole.title:1
 msgid "The link title for the interpreted text."
-msgstr ""
+msgstr "解释文本的链接标题。"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter:1
 msgid "A base class for image converters."
-msgstr ""
+msgstr "图像转换器的基类。"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter:3
 msgid ""
 "An image converter is kind of Docutils transform module.  It is used to "
 "convert image files which does not supported by builder to appropriate "
 "format for that builder."
-msgstr ""
+msgstr "图像转换器是一种Docutils转换模块。  它用于将构建器不支持的图像文件转换为该构建器的适当格式。"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter:7
 msgid ""
@@ -193,43 +198,75 @@ msgid ""
 ":ref:`sphinx.ext.imgconverter <sphinx.ext.imgconverter>` can convert a "
 "SVG image to PNG format using Imagemagick internally."
 msgstr ""
+"例如，:py:class:`LaTeX builder <.LaTeXBuilder>` 支持PDF，PNG和JPEG作为图像格式。  "
+"但是它不支持SVG图像。对于这种情况，使用图像转换器允许将这些不支持的图像嵌入到文档中。  一个图像转换器;  "
+":ref:`sphinx.ext.imgconverter <sphinx.ext.imgconverter>` "
+"可以在内部使用Imagemagick将SVG图像转换为PNG格式。"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter:14
 msgid "There are three steps to make your custom image converter:"
-msgstr ""
+msgstr "制作自定义图像转换器有三个步骤:"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter:16
 msgid "Make a subclass of ``ImageConverter`` class"
-msgstr ""
+msgstr "创建 ``ImageConverter`` 类的子类"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter:17
 msgid "Override ``conversion_rules``, ``is_available()`` and ``convert()``"
-msgstr ""
+msgstr "覆盖 ``conversion_rules``, ``is_available()`` 和 ``convert()``"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter:18
 msgid ""
 "Register your image converter to Sphinx using "
 ":py:meth:`.Sphinx.add_post_transform`"
-msgstr ""
+msgstr "使用以下命令将图像转换器注册到Sphinx :py:meth:`.Sphinx.add_post_transform`"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter.convert:1
 msgid "Convert a image file to expected format."
-msgstr ""
+msgstr "将图像文件转换为预期格式。"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter.convert:3
 msgid ""
 "*_from* is a path for source image file, and *_to* is a path for "
 "destination file."
-msgstr ""
+msgstr "*_from* 是源图像文件的路径，*_to* 是目标文件的路径。"
 
 #: of sphinx.transforms.post_transforms.images.ImageConverter.is_available:1
 msgid "Return the image converter is available or not."
-msgstr ""
+msgstr "返回图像转换器是否可用。"
 
 #: of
 #: sphinx.transforms.post_transforms.images.ImageConverter.conversion_rules:1
 msgid ""
 "A conversion rules the image converter supports. It is represented as a "
 "list of pair of source image format (mimetype) and destination one::"
-msgstr ""
+msgstr "图像转换器支持的转换规则。它表示为源图像格式(mimetype)和目标图像对的列表::"
+
+#~ msgid "A base class of post-transforms."
+#~ msgstr "后变换的基类。"
+
+#~ msgid ""
+#~ "Post transforms are invoked to modify"
+#~ " the document to restructure it for"
+#~ " outputting. They do resolving references,"
+#~ " convert images, special transformation for"
+#~ " each output formats and so on.  "
+#~ "This class helps to implement these "
+#~ "post transforms."
+#~ msgstr "调用后变换以修改文档以重新构造它以进行输出。它们可以解析引用，转换图像，为每种输出格式进行特殊转换等。该类有助于实现这些后期转换。"
+
+#~ msgid "Override to apply the transform to the document tree."
+#~ msgstr "覆盖以将变换应用于文档树。"
+
+#~ msgid "Check this transform working for current builder."
+#~ msgstr "检查此转换是否适用于当前构建器。"
+
+#~ msgid "main method of post transforms."
+#~ msgstr "后变换的主要方法。"
+
+#~ msgid "Subclasses should override this method instead of ``apply()``."
+#~ msgstr "子类应该重写此方法而不是 ``apply()``。"
+
+#~ msgid "Set source and line number to the node."
+#~ msgstr "将源和行号设置为节点。"
 
