@@ -60,6 +60,7 @@ list (`join here <https://groups.google.com/forum/#!forum/sphinx-dev>`_).
 .. toctree::
 
    httpdomain
+   sphinx-js
 
 Where to put your own extensions?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

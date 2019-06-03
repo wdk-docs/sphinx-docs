@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/e678b9c34\n"
+"Project-Id-Version: Sphinx 3.0.0+/7f2c8fd82\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 20:31+0800\n"
+"POT-Creation-Date: 2019-05-17 23:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_builder:6
 #: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.set_translator:8
-#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:48
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:34
 #: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_role:8
 #: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_generic_role:7
 #: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_domain:7
@@ -184,30 +184,18 @@ msgid "Register a Docutils directive."
 msgstr ""
 
 #: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:3
-msgid "*name* must be the prospective directive name.  There are two possible ways to write a directive:"
+msgid "*name* must be the prospective directive name.  *cls* is a directive class which inherits ``docutils.parsers.rst.Directive``.  For more details, see `the Docutils docs <http://docutils.sourceforge.net/docs/howto/rst-directives.html>`_ ."
 msgstr ""
 
-#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:6
-msgid "In the docutils 0.4 style, *obj* is the directive function. *content*, *arguments* and *options* are set as attributes on the function and determine whether the directive has content, arguments and options, respectively.  **This style is deprecated.**"
-msgstr ""
-
-#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:11
-msgid "In the docutils 0.5 style, *obj* is the directive class. It must already have attributes named *has_content*, *required_arguments*, *optional_arguments*, *final_argument_whitespace* and *option_spec* that correspond to the options for the function way.  See `the Docutils docs <http://docutils.sourceforge.net/docs/howto/rst-directives.html>`_ for details."
-msgstr ""
-
-#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:19
-msgid "The directive class must inherit from the class ``docutils.parsers.rst.Directive``."
-msgstr ""
-
-#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:22
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:8
 msgid "For example, the (already existing) :rst:dir:`literalinclude` directive would be added like this:"
 msgstr ""
 
-#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:44
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:30
 msgid "Docutils 0.5-style directive classes are now supported."
 msgstr ""
 
-#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:46
+#: ../../../../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sphinx/application.py:docstring of sphinx.application.Sphinx.add_directive:32
 msgid "Docutils 0.4-style (function based) directives support is deprecated."
 msgstr ""
 

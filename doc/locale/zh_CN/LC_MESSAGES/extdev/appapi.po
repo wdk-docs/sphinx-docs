@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 20:31+0800\n"
+"POT-Creation-Date: 2019-05-17 23:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,7 +104,7 @@ msgstr "*builder* 必须是一个继承自 :class:`~sphinx.builders.Builder` 的
 
 #: of sphinx.application.Sphinx.add_builder:6
 #: sphinx.application.Sphinx.add_crossref_type:27
-#: sphinx.application.Sphinx.add_directive:48
+#: sphinx.application.Sphinx.add_directive:34
 #: sphinx.application.Sphinx.add_directive_to_domain:7
 #: sphinx.application.Sphinx.add_domain:7
 #: sphinx.application.Sphinx.add_generic_role:7
@@ -260,51 +260,23 @@ msgstr "注册Docutils指令."
 
 #: of sphinx.application.Sphinx.add_directive:3
 msgid ""
-"*name* must be the prospective directive name.  There are two possible "
-"ways to write a directive:"
-msgstr "*name* 必须是预期的指令名称. 编写指令有两种可能的方法:"
-
-#: of sphinx.application.Sphinx.add_directive:6
-msgid ""
-"In the docutils 0.4 style, *obj* is the directive function. *content*, "
-"*arguments* and *options* are set as attributes on the function and "
-"determine whether the directive has content, arguments and options, "
-"respectively.  **This style is deprecated.**"
+"*name* must be the prospective directive name.  *cls* is a directive "
+"class which inherits ``docutils.parsers.rst.Directive``.  For more "
+"details, see `the Docutils docs "
+"<http://docutils.sourceforge.net/docs/howto/rst-directives.html>`_ ."
 msgstr ""
-"在docutils 0.4 style中, *obj* 是指令函数. *content*, *arguments* 和 "
-"*options*被设置为函数的属性,并分别确定该指令是否包含内容,参数和选项.  **此款式已弃用.**"
 
-#: of sphinx.application.Sphinx.add_directive:11
-msgid ""
-"In the docutils 0.5 style, *obj* is the directive class. It must already "
-"have attributes named *has_content*, *required_arguments*, "
-"*optional_arguments*, *final_argument_whitespace* and *option_spec* that "
-"correspond to the options for the function way.  See `the Docutils docs "
-"<http://docutils.sourceforge.net/docs/howto/rst-directives.html>`_ for "
-"details."
-msgstr ""
-"在docutils 0.5 style中, *obj* 是指令类. 它必须已经具有名为 *has_content*, "
-"*required_arguments*, *optional_arguments* , *final_argument_whitespace* "
-"和 *option_spec* 的属性,这些属性对应于函数方式的选项.  有关详细信息,请参阅 `Docutils docs "
-"<http://docutils.sourceforge.net/docs/howto/rst-directives.html>`_."
-
-#: of sphinx.application.Sphinx.add_directive:19
-msgid ""
-"The directive class must inherit from the class "
-"``docutils.parsers.rst.Directive``."
-msgstr "指令类必须从类 ``docutils.parsers.rst.Directive`` 继承."
-
-#: of sphinx.application.Sphinx.add_directive:22
+#: of sphinx.application.Sphinx.add_directive:8
 msgid ""
 "For example, the (already existing) :rst:dir:`literalinclude` directive "
 "would be added like this:"
 msgstr "例如,(已存在的) :rst:dir:`literalinclude` 指令将添加如下:"
 
-#: of sphinx.application.Sphinx.add_directive:44
+#: of sphinx.application.Sphinx.add_directive:30
 msgid "Docutils 0.5-style directive classes are now supported."
 msgstr "现在支持Docutils 0.5样式的指令类."
 
-#: of sphinx.application.Sphinx.add_directive:46
+#: of sphinx.application.Sphinx.add_directive:32
 msgid "Docutils 0.4-style (function based) directives support is deprecated."
 msgstr "不推荐使用Docutils 0.4-style(基于功能)指令支持."
 
@@ -528,7 +500,7 @@ msgstr "优先"
 
 #: of sphinx.application.Sphinx.add_transform:11
 msgid "Main purpose in Sphinx"
-msgstr "狮身人面像的主要目的"
+msgstr "sphinx 的主要目的"
 
 #: of sphinx.application.Sphinx.add_transform:12
 msgid "0-99"
@@ -896,7 +868,7 @@ msgstr "用于存储构建文档的目录."
 
 #: ../../extdev/appapi.rst:145
 msgid "Sphinx core events"
-msgstr "狮身人面像核心事件"
+msgstr "sphinx 核心事件"
 
 #: ../../extdev/appapi.rst:147
 #, fuzzy
@@ -1412,4 +1384,46 @@ msgstr "不兼容的Sphinx版本错误."
 
 #~ msgid "Integrated to :meth:`add_domain`."
 #~ msgstr "集成到 :meth:`add_domain`."
+
+#~ msgid ""
+#~ "*name* must be the prospective directive"
+#~ " name.  There are two possible ways"
+#~ " to write a directive:"
+#~ msgstr "*name* 必须是预期的指令名称. 编写指令有两种可能的方法:"
+
+#~ msgid ""
+#~ "In the docutils 0.4 style, *obj* "
+#~ "is the directive function. *content*, "
+#~ "*arguments* and *options* are set as "
+#~ "attributes on the function and determine"
+#~ " whether the directive has content, "
+#~ "arguments and options, respectively.  **This"
+#~ " style is deprecated.**"
+#~ msgstr ""
+#~ "在docutils 0.4 style中, *obj* 是指令函数. "
+#~ "*content*, *arguments* 和 "
+#~ "*options*被设置为函数的属性,并分别确定该指令是否包含内容,参数和选项.  **此款式已弃用.**"
+
+#~ msgid ""
+#~ "In the docutils 0.5 style, *obj* "
+#~ "is the directive class. It must "
+#~ "already have attributes named *has_content*,"
+#~ " *required_arguments*, *optional_arguments*, "
+#~ "*final_argument_whitespace* and *option_spec* that"
+#~ " correspond to the options for the"
+#~ " function way.  See `the Docutils "
+#~ "docs <http://docutils.sourceforge.net/docs/howto/rst-"
+#~ "directives.html>`_ for details."
+#~ msgstr ""
+#~ "在docutils 0.5 style中, *obj* 是指令类. "
+#~ "它必须已经具有名为 *has_content*, *required_arguments*, "
+#~ "*optional_arguments* , *final_argument_whitespace* 和"
+#~ " *option_spec* 的属性,这些属性对应于函数方式的选项.  有关详细信息,请参阅 "
+#~ "`Docutils docs <http://docutils.sourceforge.net/docs/howto"
+#~ "/rst-directives.html>`_."
+
+#~ msgid ""
+#~ "The directive class must inherit from"
+#~ " the class ``docutils.parsers.rst.Directive``."
+#~ msgstr "指令类必须从类 ``docutils.parsers.rst.Directive`` 继承."
 

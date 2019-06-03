@@ -31,7 +31,7 @@ msgid ""
 " capabilities to include todo entries in the documentation, and to "
 "collect these in a central place. This is similar the ``sphinxext.todo`` "
 "extension distributed with Sphinx."
-msgstr ""
+msgstr "本教程的目标是创建一个比在 :doc:`helloworld` 中创建的更全面的扩展.虽然该指南仅涉及编写自定义 :term:`directive`,但本指南添加了多个指令,以及自定义节点,其他配置值和自定义事件处理程序.为此,我们将介绍一个 ``todo`` 扩展,它增加了在文档中包含todo条目的功能,并在中心位置收集这些条目.这类似于与Sphinx一起发布的 ``sphinxext.todo`` 扩展."
 
 #: ../../development/tutorials/todo.rst:14
 msgid "Overview"
@@ -41,32 +41,32 @@ msgstr "概述"
 msgid ""
 "To understand the design of this extension, refer to :ref:`important-"
 "objects` and :ref:`build-phases`."
-msgstr ""
+msgstr "要了解此扩展的设计,请参考 :ref:`important-objects` 和 :ref:`build-phases`."
 
 #: ../../development/tutorials/todo.rst:20
 msgid "We want the extension to add the following to Sphinx:"
-msgstr "We want the extension to add the following to Sphinx:"
+msgstr "我们希望扩展程序将以下内容添加到Sphinx:"
 
 #: ../../development/tutorials/todo.rst:22
 msgid ""
 "A ``todo`` directive, containing some content that is marked with "
 "\"TODO\" and only shown in the output if a new config value is set. Todo "
 "entries should not be in the output by default."
-msgstr ""
+msgstr "一个 ``todo`` 指令,包含一些用 \"TODO\" 标记的内容,如果设置了新的配置值,则只显示在输出中. Todo条目默认不应该在输出中."
 
 #: ../../development/tutorials/todo.rst:26
 msgid ""
 "A ``todolist`` directive that creates a list of all todo entries "
 "throughout the documentation."
-msgstr ""
+msgstr "一个 ``todolist`` 指令,用于创建整个文档中所有todo条目的列表."
 
 #: ../../development/tutorials/todo.rst:29
 msgid "For that, we will need to add the following elements to Sphinx:"
-msgstr "For that, we will need to add the following elements to Sphinx:"
+msgstr "为此,我们需要将以下元素添加到Sphinx:"
 
 #: ../../development/tutorials/todo.rst:31
 msgid "New directives, called ``todo`` and ``todolist``."
-msgstr "New directives, called ``todo`` and ``todolist``."
+msgstr "新的指令,称为 ``todo`` 和 ``todolist``."
 
 #: ../../development/tutorials/todo.rst:33
 msgid ""
@@ -74,21 +74,21 @@ msgid ""
 "also called ``todo`` and ``todolist``.  We wouldn't need new nodes if the"
 " new directives only produced some content representable by existing "
 "nodes."
-msgstr ""
+msgstr "用于表示这些指令的新文档树节点,通常也称为 ``todo`` 和 ``todolist``.如果新指令仅产生现有节点可表示的某些内容,则我们不需要新节点."
 
 #: ../../development/tutorials/todo.rst:37
 msgid ""
 "A new config value ``todo_include_todos`` (config value names should "
 "start with the extension name, in order to stay unique) that controls "
 "whether todo entries make it into the output."
-msgstr ""
+msgstr "一个新的配置值 ``todo_include_todos`` (配置值名称应以扩展名开头,以保持唯一),控制todo条目是否使其进入输出."
 
 #: ../../development/tutorials/todo.rst:41
 msgid ""
 "New event handlers: one for the :event:`doctree-resolved` event, to "
 "replace the todo and todolist nodes, and one for :event:`env-purge-doc` "
 "(the reason for that will be covered later)."
-msgstr ""
+msgstr "新事件处理程序: 一个用于 :event:`doctree-resolved` 事件,用于替换todo和todolist节点,另一个用于 :event:`env-purge-doc` (其原因将在后面介绍)."
 
 #: ../../development/tutorials/todo.rst:47
 msgid "Prerequisites"
@@ -100,26 +100,26 @@ msgid ""
 "PyPI so once again we need a Sphinx project to call this from. You can "
 "use an existing project or create a new one using :program:`sphinx-"
 "quickstart`."
-msgstr ""
+msgstr "与 :doc:`helloworld` 一样,我们不会通过PyPI分发这个插件,所以我们需要一个Sphinx项目来调用它.您可以使用 :program:`sphinx-quickstart` 来使用现有项目或创建新项目."
 
 #: ../../development/tutorials/todo.rst:53
 msgid ""
 "We assume you are using separate source (:file:`source`) and build "
 "(:file:`build`) folders. Your extension file could be in any folder of "
 "your project. In our case, let's do the following:"
-msgstr ""
+msgstr "我们假设您使用单独的源(:file:`source`)和build(:file:`build`)文件夹.您的扩展文件可以位于项目的任何文件夹中.在我们的例子中,让我们做以下事情:"
 
 #: ../../development/tutorials/todo.rst:57
 msgid "Create an :file:`_ext` folder in :file:`source`"
-msgstr "Create an :file:`_ext` folder in :file:`source`"
+msgstr "在 :file:`source` 中创建一个 :file:`_ext` 文件夹"
 
 #: ../../development/tutorials/todo.rst:58
 msgid "Create a new Python file in the :file:`_ext` folder called :file:`todo.py`"
-msgstr "Create a new Python file in the :file:`_ext` folder called :file:`todo.py`"
+msgstr "在 :file:`_ext` 文件夹中创建一个名为 :file:`todo.py` 的新Python文件"
 
 #: ../../development/tutorials/todo.rst:60
 msgid "Here is an example of the folder structure you might obtain:"
-msgstr "Here is an example of the folder structure you might obtain:"
+msgstr "以下是您可能获得的文件夹结构的示例:"
 
 #: ../../development/tutorials/todo.rst:76
 msgid "Writing the extension"
@@ -129,22 +129,22 @@ msgstr "编写扩展"
 msgid ""
 "Open :file:`todo.py` and paste the following code in it, all of which we "
 "will explain in detail shortly:"
-msgstr ""
+msgstr "打开 :file:`todo.py` 并在其中粘贴以下代码,所有这些我们将在稍后详细解释:"
 
 #: ../../development/tutorials/todo.rst:85
 msgid ""
 "This is far more extensive extension than the one detailed in "
 ":doc:`helloworld`, however, we will will look at each piece step-by-step "
 "to explain what's happening."
-msgstr ""
+msgstr "这是比以下详细介绍的更广泛的扩展 :doc:`helloworld`,但是,我们将逐步查看每个部分以解释正在发生的事情."
 
 #: ../../development/tutorials/todo.rst:90
 msgid "The node classes"
-msgstr "The node classes"
+msgstr "节点类"
 
 #: ../../development/tutorials/todo.rst:91
 msgid "Let's start with the node classes:"
-msgstr "Let's start with the node classes:"
+msgstr "让我们从节点类开始:"
 
 #: ../../development/tutorials/todo.rst:98
 msgid ""
@@ -152,7 +152,7 @@ msgid ""
 "standard docutils classes defined in :mod:`docutils.nodes`.  ``todo`` "
 "inherits from ``Admonition`` because it should be handled like a note or "
 "warning, ``todolist`` is just a \"general\" node."
-msgstr ""
+msgstr "除了继承自 :mod:`docutils.nodes` 中定义的标准docutils类之外,节点类通常不需要做任何事情. ``todo`` 继承自 ``Admonition`` ,因为它应该像笔记或警告一样处理, ``todolist`` 只是一个“普通”节点."
 
 #: ../../development/tutorials/todo.rst:105
 msgid ""
@@ -160,11 +160,11 @@ msgid ""
 "fine with the nodes already provided by `docutils "
 "<http://docutils.sourceforge.net/docs/ref/doctree.html>`__ and "
 ":ref:`Sphinx <nodes>`."
-msgstr ""
+msgstr "许多扩展不必创建自己的节点类,并且可以使用 `docutils <http://docutils.sourceforge.net/docs/ref/doctree.html>`__ 和 :ref:`Sphinx <已经提供的节点正常工作.节点>`."
 
 #: ../../development/tutorials/todo.rst:111
 msgid "The directive classes"
-msgstr "The directive classes"
+msgstr "指令类"
 
 #: ../../development/tutorials/todo.rst:112
 msgid ""
@@ -173,11 +173,11 @@ msgid ""
 "covered in detail in the `docutils documentation`_; the important thing "
 "is that the class should have attributes that configure the allowed "
 "markup, and a ``run`` method that returns a list of nodes."
-msgstr ""
+msgstr "指令类是通常从“派生”派生的类 :class:`docutils.parsers.rst.Directive`.指令接口也在 `docutils documentation`_ 中详细介绍;重要的是该类应该具有配置允许标记的属性,并且 ``run`` 方法,返回节点列表."
 
 #: ../../development/tutorials/todo.rst:118
 msgid "Looking first at the ``TodolistDirective`` directive:"
-msgstr "Looking first at the ``TodolistDirective`` directive:"
+msgstr "首先看一下 ``TodolistDirective`` 指令:"
 
 #: ../../development/tutorials/todo.rst:125
 msgid ""
@@ -185,7 +185,7 @@ msgid ""
 "node class.  The ``TodolistDirective`` directive itself has neither "
 "content nor arguments that need to be handled. That brings us to the "
 "``TodoDirective`` directive:"
-msgstr ""
+msgstr "它非常简单,创建并返回我们的 ``todolist`` 节点类的实例. ``TodolistDirective`` 指令本身既没有内容也没有需要处理的参数.这就把我们带到了 ``TodoDirective`` 指令:"
 
 #: ../../development/tutorials/todo.rst:135
 msgid ""
@@ -201,7 +201,7 @@ msgid ""
 " is generated by using ``env.new_serialno`` which returns a new unique "
 "integer on each call and therefore leads to unique target names. The "
 "target node is instantiated without any text (the first two arguments)."
-msgstr ""
+msgstr "这里介绍了几个重要的事情.首先,正如您所看到的,我们现在继承子类 :class:`~sphinx.util.docutils.SphinxDirective` 助手类而不是通常的 :class:`~docutils.parsers.rst.Directive` 类.这使我们可以使用 ``self.env`` 属性访问 :ref:`build environment instance <important-objects>`.没有这个,我们必须使用相当复杂的 ``self.state.document.settings.env``.然后,作为一个链接目标(来自 ``TodolistDirective``), ``TodoDirective`` 指令除了 ``todo`` 节点外还需要返回一个目标节点.目标ID(在HTML中,这将是锚名称)是使用 ``env.new_serialno`` 生成的,它在每次调用时返回一个新的唯一整数,因此会导致唯一的目标名称.目标节点实例化而没有任何文本(前两个参数)."
 
 #: ../../development/tutorials/todo.rst:147
 msgid ""
@@ -218,21 +218,21 @@ msgid ""
 " the directive must check and create it if necessary.  Various "
 "information about the todo entry's location are stored along with a copy "
 "of the node."
-msgstr ""
+msgstr "在创建admonition节点时,使用 ``self.state.nested_pa​​rse`` 解析指令的内容主体.第一个参数给出内容主体,第二个参数给出内容偏移量.第三个参数给出了解析结果的父节点,在我们的例子中是 ``todo`` 节点.在此之后, ``todo`` 节点被添加到环境中.这需要能够在整个文档中创建所有todo条目的列表,在作者放置 ``todolist`` 指令的地方.在这种情况下,使用环境属性 ``todo_all_todos`` (同样,名称应该是唯一的,因此它以扩展名称为前缀).创建新环境时不存在,因此必要时必须检查并创建指令.关于todo条目位置的各种信息与节点的副本一起存储."
 
 #: ../../development/tutorials/todo.rst:159
 msgid ""
 "In the last line, the nodes that should be put into the doctree are "
 "returned: the target node and the admonition node."
-msgstr ""
+msgstr "在最后一行中,将返回应放入doctree的节点:目标节点和admonition节点."
 
 #: ../../development/tutorials/todo.rst:162
 msgid "The node structure that the directive returns looks like this::"
-msgstr "The node structure that the directive returns looks like this::"
+msgstr "指令返回的节点结构如下所示::"
 
 #: ../../development/tutorials/todo.rst:179
 msgid "The event handlers"
-msgstr "The event handlers"
+msgstr "事件处理程序"
 
 #: ../../development/tutorials/todo.rst:180
 msgid ""
@@ -240,13 +240,13 @@ msgid ""
 "way to do hook into any part of the documentation process. There are many"
 " events provided by Sphinx itself, as detailed in :ref:`the API guide "
 "<events>`, and we're going to use a subset of them here."
-msgstr ""
+msgstr "事件处理程序是Sphinx最强大的功能之一,提供了一种挂钩文档过程任何部分的方法. Sphinx本身提供了许多事件,详见 :ref:`API guide <events>`,我们将在这里使用它们的子集."
 
 #: ../../development/tutorials/todo.rst:185
 msgid ""
 "Let's look at the event handlers used in the above example.  First, the "
 "one for the :event:`env-purge-doc` event:"
-msgstr ""
+msgstr "让我们看看上面例子中使用的事件处理程序.首先,一个用于 :event:`env-purge-doc` 事件:"
 
 #: ../../development/tutorials/todo.rst:193
 msgid ""
@@ -257,11 +257,11 @@ msgid ""
 "chance to do the same. Here we clear out all todos whose docname matches "
 "the given one from the ``todo_all_todos`` list.  If there are todos left "
 "in the document, they will be added again during parsing."
-msgstr ""
+msgstr "由于我们将源文件中的信息存储在持久的环境中,因此当源文件发生更改时,它可能会过时.因此,在读取每个源文件之前,清除环境的记录,并且 :event:`env-purge-doc` 事件为扩展提供了执行相同操作的机会.在这里,我们清除所有todos,其docname与 ``todo_all_todos`` 列表中的给定匹配.如果文档中还有待办事项,则在解析期间将再次添加它们."
 
 #: ../../development/tutorials/todo.rst:201
 msgid "The other handler belongs to the :event:`doctree-resolved` event:"
-msgstr "The other handler belongs to the :event:`doctree-resolved` event:"
+msgstr "另一个处理程序属于 :event:`doctree-resolved` 事件:"
 
 #: ../../development/tutorials/todo.rst:208
 msgid ""
@@ -280,11 +280,11 @@ msgid ""
 ":meth:`sphinx.builders.Builder.get_relative_uri`` which creates a "
 "suitable URI depending on the used builder, and appending the todo node's"
 " (the target's) ID as the anchor name."
-msgstr ""
+msgstr ":event:`doctree-resolved` 事件在以下结尾发出 :ref:`阶段3(解析) <build-phases>` 并允许自定义解析.我们为此事件编写的处理程序涉及更多.如果 ``todo_include_todos`` 配置值(我们将在稍后描述)为false,则从文档中删除所有 ``todo`` 和 ``todolist`` 节点.如果没有, ``todo`` 节点就会停留在哪里以及它们如何. ``todolist`` 节点被todo条目列表替换,并带有到它们来自的位置的反向链接.列表项由 ``todo`` 条目中的节点和动态创建的docutils节点组成:每个条目的段落,包含给出位置的文本,以及包含斜体节点的链接(包含斜体节点的参考节点)反向引用.引用URI由以下构建 :meth:`sphinx.builders.Builder.get_relative_uri`, 它根据使用的构建器创建合适的URI,并附加待办事项节点(目标)的ID作为锚名称."
 
 #: ../../development/tutorials/todo.rst:224
 msgid "The ``setup`` function"
-msgstr "The ``setup`` function"
+msgstr "``setup``  函数"
 
 #: ../../development/tutorials/todo.rst:227
 msgid ""
@@ -292,13 +292,13 @@ msgid ""
 "requirement and is used to plug directives into Sphinx. However, we also "
 "use it to hook up the other parts of our extension. Let's look at our "
 "``setup`` function:"
-msgstr ""
+msgstr "如上所述 :doc:`之前的 <helloworld>`, ``setup`` 函数是一个要求,用于将指令插入Sphinx.但是,我们也使用它来连接扩展的其他部分.让我们看看我们的 ``setup`` 函数:"
 
 #: ../../development/tutorials/todo.rst:236
 msgid ""
 "The calls in this function refer to the classes and functions we added "
 "earlier. What the individual calls do is the following:"
-msgstr ""
+msgstr "此函数中的调用是指我们之前添加的类和函数.个人电话的作用如下:"
 
 #: ../../development/tutorials/todo.rst:239
 msgid ""
@@ -306,7 +306,7 @@ msgid ""
 "recognize the new *config value* ``todo_include_todos``, whose default "
 "value should be ``False`` (this also tells Sphinx that it is a boolean "
 "value)."
-msgstr ""
+msgstr ":meth:`~Sphinx.add_config_value` 让Sphinx知道它应该识别新的 *config 值* ``todo_include_todos``,其默认值应该是 ``False`` (这也告诉Sphinx它是一个布尔值) ."
 
 #: ../../development/tutorials/todo.rst:243
 msgid ""
@@ -314,7 +314,7 @@ msgid ""
 "rebuild if the config value changed its value.  This is needed for config"
 " values that influence reading (build :ref:`phase 1 (reading) <build-"
 "phases>`)."
-msgstr ""
+msgstr "如果第三个参数是 ``'html'``,如果配置值改变了它的值,HTML文档将完全重建.这对于影响读取的配置值是必需的(build:ref:`phase 1(reading)<build-phases>`)."
 
 #: ../../development/tutorials/todo.rst:247
 msgid ""
@@ -324,24 +324,24 @@ msgid ""
 ":ref:`phase 4 (writing) <build-phases>`. Since the ``todolist`` node is "
 "always replaced in :ref:`phase 3 (resolving) <build-phases>`, it doesn't "
 "need any."
-msgstr ""
+msgstr ":meth:`~Sphinx.add_node` 为构建系统添加了一个新的 *node class*.它还可以为每种支持的输出格式指定访问者功能.当新节点停留时,需要这些访问者函数 :ref:`阶段4(写入) <build-phases>`.由于 ``todolist`` 节点总是被替换为 :ref:`phase 3(resolving)<build-phases>`,它不需要任何节点."
 
 #: ../../development/tutorials/todo.rst:253
 msgid ""
 ":meth:`~Sphinx.add_directive` adds a new *directive*, given by name and "
 "class."
-msgstr ""
+msgstr ":meth:`~Sphinx.add_directive` 添加一个新的*指令*,由name和class给出."
 
 #: ../../development/tutorials/todo.rst:255
 msgid ""
 "Finally, :meth:`~Sphinx.connect` adds an *event handler* to the event "
 "whose name is given by the first argument.  The event handler function is"
 " called with several arguments which are documented with the event."
-msgstr ""
+msgstr "最后,:meth:`~Sphinx.connect` 将 *事件处理程序* 添加到名称由第一个参数给出的事件中.使用事件记录的几个参数调用事件处理函数."
 
 #: ../../development/tutorials/todo.rst:259
 msgid "With this, our extension is complete."
-msgstr "With this, our extension is complete."
+msgstr "有了这个,我们的扩展就完成了."
 
 #: ../../development/tutorials/todo.rst:263
 msgid "Using the extension"
@@ -351,33 +351,33 @@ msgstr "使用扩展"
 msgid ""
 "As before, we need to enable the extension by declaring it in our "
 ":file:`conf.py` file. There are two steps necessary here:"
-msgstr ""
+msgstr "和以前一样,我们需要通过在我们的 :file:`conf.py` 文件中声明它来启用扩展.这里有两个步骤:"
 
 #: ../../development/tutorials/todo.rst:268
 msgid ""
 "Add the :file:`_ext` directory to the `Python path`_ using "
 "``sys.path.append``. This should be placed at the top of the file."
-msgstr ""
+msgstr "使用 ``sys.path.append`` 将 :file:`_ext` 目录添加到 `Python path`_ 中.这应该放在文件的顶部."
 
 #: ../../development/tutorials/todo.rst:271
 msgid ""
 "Update or create the :confval:`extensions` list and add the extension "
 "file name to the list"
-msgstr ""
+msgstr "更新或创建 :confval:`extensions` 列表并将扩展名文件名添加到列表中"
 
 #: ../../development/tutorials/todo.rst:274
 msgid ""
 "In addition, we may wish to set the ``todo_include_todos`` config value. "
 "As noted above, this defaults to ``False`` but we can set it explicitly."
-msgstr ""
+msgstr "另外,我们可能希望设置 ``todo_include_todos`` 配置值.如上所述,这默认为“False”,但我们可以明确地设置它."
 
 #: ../../development/tutorials/todo.rst:277
 msgid "For example:"
-msgstr "For example:"
+msgstr "例如:"
 
 #: ../../development/tutorials/todo.rst:290
 msgid "You can now use the extension throughout your project. For example:"
-msgstr "You can now use the extension throughout your project. For example:"
+msgstr "您现在可以在整个项目中使用扩展程序.例如:"
 
 #: ../../development/tutorials/todo.rst:292
 msgid "index.rst"
@@ -397,7 +397,7 @@ msgid ""
 "actually see anything rendered for the ``todo`` and ``todolist`` "
 "directives. However, if we toggle this to true, we will see the output "
 "described previously."
-msgstr ""
+msgstr "因为我们已将 ``todo_include_todos`` 配置为 ``False``,所以我们实际上看不到为 ``todo`` 和 ``todolist`` 指令渲染的内容.但是,如果我们将其切换为true,我们将看到前面描述的输出."
 
 #: ../../development/tutorials/todo.rst:333
 msgid "Further reading"
@@ -407,5 +407,5 @@ msgstr "延伸阅读"
 msgid ""
 "For more information, refer to the `docutils`_ documentation and "
 ":doc:`/extdev/index`."
-msgstr ""
+msgstr "有关更多信息,请参阅 `docutils`_ 文档和 :doc:`/extdev/index`."
 

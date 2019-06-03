@@ -33,7 +33,7 @@ msgid ""
 "comments and other things are in a document.  To do this you will need to"
 " create an instance of the :class:`~.WebSupport` class and call its "
 ":meth:`~.WebSupport.build` method::"
-msgstr ""
+msgstr "要在应用程序中使用Web支持包,您需要构建它使用的数据.此数据包括表示文档,搜索索引和节点数据的pickle文件,这些文件用于跟踪文档中注释和其他内容的位置.要做到这一点,你需要创建一个 :class:`~.WebSupport` 类的实例并调用它 :meth:`~.WebSupport.build` 方法::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:23
 msgid ""
@@ -43,14 +43,14 @@ msgid ""
 "display documents, search through documents, and add comments to "
 "documents.  The other directory will be called \"static\" and contains "
 "static files that should be served from \"/static\"."
-msgstr ""
+msgstr "这将从 ``srcdir`` 读取reStructuredText源,并将必要的数据放在 ``builddir`` 中. ``builddir`` 将包含两个子目录: 一个名为 \"data\",其中包含显示文档,搜索文档和向文档添加注释所需的所有数据.另一个目录将被称为“静态”,并包含应该从 \"/static\" 提供的静态文件."
 
 #: ../../usage/advanced/websupport/quickstart.rst:31
 msgid ""
 "If you wish to serve static files from a path other than \"/static\", you"
 " can do so by providing the *staticdir* keyword argument when creating "
 "the :class:`~.WebSupport` object."
-msgstr ""
+msgstr "如果您希望从 \"/static\" 以外的路径提供静态文件,可以在创建 :class:`~.WebSupport` 对象时提供 *staticdir* 关键字参数。"
 
 #: ../../usage/advanced/websupport/quickstart.rst:37
 msgid "Integrating Sphinx Documents Into Your Webapp"
@@ -61,18 +61,18 @@ msgid ""
 "Now that the data is built, it's time to do something useful with it.  "
 "Start off by creating a :class:`~.WebSupport` object for your "
 "application::"
-msgstr ""
+msgstr "现在数据已经构建完毕,是时候做一些有用的事了.首先为您的应用程序创建一个 :class:`~.WebSupport` 对象::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:47
 msgid ""
 "You'll only need one of these for each set of documentation you will be "
 "working with.  You can then call its :meth:`~.WebSupport.get_document` "
 "method to access individual documents::"
-msgstr ""
+msgstr "对于您将要使用的每组文档,您只需要其中一个.然后,您可以调用它: :meth:`~.WebSupport.get_document` 方法来访问单个文档::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:53
 msgid "This will return a dictionary containing the following items:"
-msgstr "This will return a dictionary containing the following items:"
+msgstr "这将返回包含以下项目的字典:"
 
 #: ../../usage/advanced/websupport/quickstart.rst:55
 msgid "**body**: The main body of the document as HTML"
@@ -103,7 +103,7 @@ msgid ""
 "This dict can then be used as context for templates.  The goal is to be "
 "easy to integrate with your existing templating system.  An example using"
 " `Jinja2 <http://jinja.pocoo.org/>`_ is:"
-msgstr ""
+msgstr "然后可以将此dict用作模板的上下文.目标是轻松与您现有的模板系统集成.使用 `Jinja2 <http://jinja.pocoo.org/>`_ 的一个例子是:"
 
 #: ../../usage/advanced/websupport/quickstart.rst:99
 msgid "Authentication"
@@ -119,20 +119,20 @@ msgid ""
 "username with comments and votes.  The only caveat is that if you allow "
 "users to change their username you must update the websupport package's "
 "data::"
-msgstr ""
+msgstr "要使用某些功能(如投票),必须可以对用户进行身份验证.身份验证的详细信息留给您的应用程序.一旦用户通过身份验证,您就可以使用 *username* 和 *moderator* 关键字参数将用户的详细信息传递给某些 :class:`~.WebSupport` 方法. Web支持包将存储带有注释和投票的用户名.唯一需要注意的是,如果您允许用户更改其用户名,则必须更新websupport包的数据::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:111
 msgid ""
 "*username* should be a unique string which identifies a user, and "
 "*moderator* should be a boolean representing whether the user has "
 "moderation privileges. The default value for *moderator* is ``False``."
-msgstr ""
+msgstr "* username *应该是标识用户的唯一字符串, *moderator* 应该是表示用户是否具有审核权限的布尔值. *moderator* 的默认值是 ``False``."
 
 #: ../../usage/advanced/websupport/quickstart.rst:115
 msgid ""
 "An example `Flask <http://flask.pocoo.org/>`_ function that checks "
 "whether a user is logged in and then retrieves a document is::"
-msgstr ""
+msgstr "一个示例 `Flask <http://flask.pocoo.org/>`_ 函数检查用户是否登录然后检索文档是::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:130
 msgid ""
@@ -142,7 +142,7 @@ msgid ""
 "passed along with the docname to :meth:`~.WebSupport.get_document`.  The "
 "web support package will then add this data to the ``COMMENT_OPTIONS`` "
 "that are used in the template."
-msgstr ""
+msgstr "首先要注意的是 *docname* 只是请求路径.这样可以从单个视图轻松访问正确的文档.如果用户已通过身份验证,则用户名和审核状态将与docname一起传递到 :meth:`~.WebSupport.get_document`.然后,Web支持包将此数据添加到模板中使用的 ``COMMENT_OPTIONS``."
 
 #: ../../usage/advanced/websupport/quickstart.rst:138
 msgid ""
@@ -150,7 +150,7 @@ msgid ""
 "If it is served from another directory, you will need to prefix the url "
 "route with that directory, and give the `docroot` keyword argument when "
 "creating the web support object::"
-msgstr ""
+msgstr "这仅适用于从文档根目录提供文档的情况.如果它是从另一个目录提供的,则需要在url路由前加上该目录,并在创建Web支持对象时给出 `docroot` 关键字参数::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:149
 msgid "Performing Searches"
@@ -165,7 +165,7 @@ msgid ""
 ":meth:`~sphinxcontrib.websupport.WebSupport.get_search_results` method to"
 " retrieve search results. In `Flask <http://flask.pocoo.org/>`_ that "
 "would be like this::"
-msgstr ""
+msgstr "要使用Sphinx侧边栏内置的搜索表单,请创建一个函数来处理相对于文档根目录的URL 'search' 请求.用户的搜索查询将在GET参数中,键为 `q`.然后使用 :meth:`~sphinxcontrib.websupport.WebSupport.get_search_results` 方法检索搜索结果.在 `Flask <http://flask.pocoo.org/>`_ 就像这样::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:164
 msgid ""
@@ -173,7 +173,7 @@ msgid ""
 "did to render our documents.  That's because "
 ":meth:`~.WebSupport.get_search_results` returns a context dict in the "
 "same format that :meth:`~.WebSupport.get_document` does."
-msgstr ""
+msgstr "请注意,我们使用相同的模板来渲染搜索结果,就像我们渲染文档一样.那是因为 :meth:`~.WebSupport.get_search_results` 返回一个上下文字典,其格式与 :meth:`~.WebSupport.get_document` 相同."
 
 #: ../../usage/advanced/websupport/quickstart.rst:171
 msgid "Comments & Proposals"
@@ -185,7 +185,7 @@ msgid ""
 "AJAX calls from the script.  You will need three functions.  The first "
 "function is used to add a new comment, and will call the web support "
 "method :meth:`~.WebSupport.add_comment`::"
-msgstr ""
+msgstr "现在已经完成了,现在是时候定义处理来自脚本的AJAX调用的函数了.您将需要三个功能.第一个函数用于添加新注释,并将调用Web支持方法 :meth:`~.WebSupport.add_comment`::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:190
 msgid ""
@@ -195,14 +195,14 @@ msgid ""
 "comment, then ``node_id`` will be empty. Then next function handles the "
 "retrieval of comments for a specific node, and is aptly named "
 ":meth:`~sphinxcontrib.websupport.WebSupport.get_data`::"
-msgstr ""
+msgstr "您会注意到 ``parent_id`` 和 ``node_id`` 都随请求一起发送.如果注释直接附加到节点,则 ``parent_id`` 将为空.如果注释是另一个注释的子项,那么 ``node_id`` 将为空.然后,下一个函数处理特定节点的注释检索,并且恰当地命名为 :meth:`~sphinxcontrib.websupport.WebSupport.get_data`::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:205
 msgid ""
 "The final function that is needed will call "
 ":meth:`~.WebSupport.process_vote`, and will handle user votes on "
 "comments::"
-msgstr ""
+msgstr "需要的最后一个函数将调用 :meth:`~.WebSupport.process_vote`,并将处理用户对评论的投票::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:221
 msgid "Comment Moderation"
@@ -213,29 +213,29 @@ msgid ""
 "By default, all comments added through :meth:`~.WebSupport.add_comment` "
 "are automatically displayed.  If you wish to have some form of "
 "moderation, you can pass the ``displayed`` keyword argument::"
-msgstr ""
+msgstr "默认情况下,将自动显示通过 :meth:`~.WebSupport.add_comment` 添加的所有注释.如果你想要某种形式的审核,你可以传递 ``displayed`` 关键字参数::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:232
 msgid ""
 "You can then create a new view to handle the moderation of comments.  It "
 "will be called when a moderator decides a comment should be accepted and "
 "displayed::"
-msgstr ""
+msgstr "然后,您可以创建一个新视图来处理注释的审核.当主持人决定接受并显示评论时,将调用它::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:243
 msgid "Rejecting comments happens via comment deletion."
-msgstr "通过删除评论来拒绝评论。"
+msgstr "通过删除评论来拒绝评论."
 
 #: ../../usage/advanced/websupport/quickstart.rst:245
 msgid ""
 "To perform a custom action (such as emailing a moderator) when a new "
 "comment is added but not displayed, you can pass callable to the "
 ":class:`~.WebSupport` class when instantiating your support object::"
-msgstr ""
+msgstr "要在添加新注释但未显示时执行自定义操作(例如通过电子邮件发送主持人),可以在实例化支持对象时将callable传递给 :class:`~.WebSupport` 类::"
 
 #: ../../usage/advanced/websupport/quickstart.rst:254
 msgid ""
 "The moderation callback must take one argument, which will be the same "
 "comment dict that is returned by :meth:`add_comment`."
-msgstr ""
+msgstr "审核回调必须采用一个参数,该参数将是由:meth:`add_comment`返回的相同注释dict."
 

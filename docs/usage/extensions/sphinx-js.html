@@ -1,0 +1,653 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>sphinx-js &#8212; Sphinx 2.1.0+/7f2c8fd82 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Sphinx 2.1.0+/7f2c8fd82 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="HTML" href="../theming.html" />
+    <link rel="prev" title="sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域" href="httpdomain.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/extensions/sphinx-js.html" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
+ 
+<style type="text/css">
+  table.right {
+    float: right;
+    margin-left: 20px;
+  }
+
+  table.right td {
+    border: 1px solid #ccc;
+  }
+
+    {
+    % if pagename=='index'%
+  }
+
+  .related {
+    display: none;
+  }
+
+    {
+    % endif %
+  }
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function () {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+        $(document).height() - sbh - 200
+      ]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20,
+          $(document).height() - sbh - 200
+        ]));
+      }
+    }
+  });
+</script>
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../installation.html">安装</a></li>
+    <li><a href="../../contents.html">文档</a></li>
+    <li><a href="../../develop.html">扩展/开发</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/sphinxheader.png" alt="SPHINX" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="../theming.html" title="HTML"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="httpdomain.html" title="sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">扩展</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sphinx-js</a><ul>
+<li><a class="reference internal" href="#why">为什么</a></li>
+<li><a class="reference internal" href="#setup">配置</a></li>
+<li><a class="reference internal" href="#use">使用</a><ul>
+<li><a class="reference internal" href="#autofunction">自动功能</a></li>
+<li><a class="reference internal" href="#autoclass">autoclass</a></li>
+<li><a class="reference internal" href="#autoattribute">autoattribute</a></li>
+<li><a class="reference internal" href="#dodging-ambiguity-with-pathnames">用路径名避免歧义</a></li>
+<li><a class="reference internal" href="#saving-keystrokes-by-setting-the-primary-domain">通过设置主域来保存击键</a></li>
+<li><a class="reference internal" href="#typescript-support">TypeScript支持</a></li>
+<li><a class="reference internal" href="#configuration-reference">配置参考</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example">示例</a></li>
+<li><a class="reference internal" href="#caveats">注意事项</a></li>
+<li><a class="reference internal" href="#tests">测试</a></li>
+<li><a class="reference internal" href="#version-history">版本历史</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="httpdomain.html"
+                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code> — 用于记录HTTP API的Sphinx域</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../theming.html"
+                        title="下一章">HTML</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/usage/extensions/sphinx-js.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sphinx-js">
+<h1>sphinx-js<a class="headerlink" href="#sphinx-js" title="永久链接至标题">¶</a></h1>
+<div class="section" id="why">
+<h2>为什么<a class="headerlink" href="#why" title="永久链接至标题">¶</a></h2>
+<p>编写JavaScript库时, 如何向人们解释？ 如果它是用户熟悉的域中的一个小项目, 那么JSDoc按字母顺序排列的例程列表就足够了.  但是在一个更大的项目中, 散布散文与API文档是有用的, 而无需复制和粘贴内容.</p>
+<p>sphinx-js允许您使用业界领先的 <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> 文档工具和JS项目. 它提供了一些指令, 在以Python为中心的 <a class="reference external" href="www.sphinx-doc.org/en/latest/ext/autodoc.html">autodoc</a> 之后, 用于将JSDoc格式的文档拉入reStructuredText页面.  而且, 因为您可以在代码中继续使用JSDoc, 所以您仍然可以与其他JS工具兼容, 例如Google的Closure Compiler.</p>
+</div>
+<div class="section" id="setup">
+<h2>配置<a class="headerlink" href="#setup" title="永久链接至标题">¶</a></h2>
+<ol class="arabic">
+<li><p>使用npm安装JSDoc.  <code class="docutils literal notranslate"><span class="pre">jsdoc</span></code> 必须在你的 <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> 上, 所以你可能想要全局安装它:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">jsdoc</span>
+</pre></div>
+</div>
+<p>我们使用jsdoc 3.4.3,3.5.4, 很可能还有其他版本.</p>
+</li>
+<li><p>安装sphinx-js, 它会将Sphinx本身作为一个依赖项:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">js</span>
+</pre></div>
+</div>
+</li>
+<li><p>通过运行 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 并回答问题, 在项目中创建一个文档文件夹:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd my-project
+sphinx-quickstart
+
+  &gt; Root path for the documentation [.]: docs
+  &gt; Separate source and build directories (y/n) [n]:
+  &gt; Name prefix for templates and static dir [_]:
+  &gt; Project name: My Project
+  &gt; Author name(s): Fred Fredson
+  &gt; Project version []: 1.0
+  &gt; Project release [1.0]:
+  &gt; Project language [en]:
+  &gt; Source file suffix [.rst]:
+  &gt; Name of your master document (without suffix) [index]:
+  &gt; Do you want to use the epub builder (y/n) [n]:
+  &gt; autodoc: automatically insert docstrings from modules (y/n) [n]:
+  &gt; doctest: automatically test code snippets in doctest blocks (y/n) [n]:
+  &gt; intersphinx: link between Sphinx documentation of different projects (y/n) [n]:
+  &gt; todo: write &quot;todo&quot; entries that can be shown or hidden on build (y/n) [n]:
+  &gt; coverage: checks for documentation coverage (y/n) [n]:
+  &gt; imgmath: include math, rendered as PNG or SVG images (y/n) [n]:
+  &gt; mathjax: include math, rendered in the browser by MathJax (y/n) [n]:
+  &gt; ifconfig: conditional inclusion of content based on config values (y/n) [n]:
+  &gt; viewcode: include links to the source code of documented Python objects (y/n) [n]:
+  &gt; githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]:
+  &gt; Create Makefile? (y/n) [y]:
+  &gt; Create Windows command file? (y/n) [y]:
+</pre></div>
+</div>
+</li>
+<li><p>在生成的 Sphinx conf.py 文件中, 将 <code class="docutils literal notranslate"><span class="pre">sphinx_js</span></code> 添加到 <code class="docutils literal notranslate"><span class="pre">extensions</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx_js&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>如果您的JS源代码在项目的根目录中的任何位置, 请在 conf.py 中自行添加 <code class="docutils literal notranslate"><span class="pre">js_source_path</span> <span class="pre">=</span> <span class="pre">'../somewhere/else'</span></code> .  JS源代码树的根目录应该是相对于 conf.py 文件的设置指向的位置.  (当项目的根目录下有一个 <code class="docutils literal notranslate"><span class="pre">docs</span></code> 文件夹并且你的源代码直接存在于根目录中时, 默认的 <code class="docutils literal notranslate"><span class="pre">../</span></code> 效果很好. )</p></li>
+<li><p>如果您有特殊的jsdoc配置, 请将 <code class="docutils literal notranslate"><span class="pre">jsdoc_config_path</span> <span class="pre">=</span> <span class="pre">'../conf.json'</span></code> (例如)添加到 conf.py 中.</p></li>
+<li><p>如果您只记录JS而没有其他语言, 则可以在conf.py中将“主域”设置为JS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">primary_domain</span> <span class="o">=</span> <span class="s1">&#39;js&#39;</span>
+</pre></div>
+</div>
+<p>然后你可以省略下面指令中的所有 “js:” 前缀.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="use">
+<h2>使用<a class="headerlink" href="#use" title="永久链接至标题">¶</a></h2>
+<p>简而言之, 编写一个充满reStructuredText文件的文件夹, 使用以下指令来获取JSDoc文档, 然后告诉Sphinx通过在docs目录中运行 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 来渲染它. 如果您之前从未使用过Sphinx或编写过reStructuredText, 那么这里是 <a class="reference external" href="http://www.sphinx-doc.org/en/stable/tutorial.html#defining-document-structure">我们在其教程中停止的地方</a> . 为了快速入门, 现在只需向index.rst添加内容即可.</p>
+<div class="section" id="autofunction">
+<h3>自动功能<a class="headerlink" href="#autofunction" title="永久链接至标题">¶</a></h3>
+<p>首先, 使用标准JSDoc格式记录您的JS代码:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="n">Return</span> <span class="n">the</span> <span class="n">ratio</span> <span class="n">of</span> <span class="n">the</span> <span class="n">inline</span> <span class="n">text</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">links</span> <span class="ow">in</span> <span class="n">an</span> <span class="n">element</span> <span class="n">to</span>
+ <span class="o">*</span> <span class="n">the</span> <span class="n">inline</span> <span class="n">text</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">element</span><span class="o">.</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">{</span><span class="n">Node</span><span class="p">}</span> <span class="n">node</span> <span class="o">-</span> <span class="n">Types</span> <span class="ow">or</span> <span class="ow">not</span><span class="p">:</span> <span class="n">either</span> <span class="n">works</span><span class="o">.</span>
+ <span class="o">*</span> <span class="nd">@throws</span> <span class="p">{</span><span class="n">PartyError</span><span class="o">|</span><span class="n">Hearty</span><span class="p">}</span> <span class="n">Multiple</span> <span class="n">types</span> <span class="n">work</span> <span class="n">fine</span><span class="o">.</span>
+ <span class="o">*</span> <span class="nd">@returns</span> <span class="p">{</span><span class="n">Number</span><span class="p">}</span> <span class="n">Types</span> <span class="ow">and</span> <span class="n">descriptions</span> <span class="n">are</span> <span class="n">both</span> <span class="n">supported</span><span class="o">.</span>
+ <span class="o">*/</span>
+<span class="n">function</span> <span class="n">linkDensity</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">const</span> <span class="n">length</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">flavors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;paragraphish&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">inlineLength</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">lengthWithoutLinks</span> <span class="o">=</span> <span class="n">inlineTextLength</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">element</span><span class="p">,</span>
+                                                <span class="n">element</span> <span class="o">=&gt;</span> <span class="n">element</span><span class="o">.</span><span class="n">tagName</span> <span class="o">!==</span> <span class="s1">&#39;A&#39;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="n">lengthWithoutLinks</span><span class="p">)</span> <span class="o">/</span> <span class="n">length</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>然后, 使用sphinx-js指令引用您的文档. 我们的指令与Sphinx标准的autodoc指令非常相似. 你只能指定一个函数的名字……</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autofunction</span><span class="p">::</span> <span class="n">someFunction</span>
+</pre></div>
+</div>
+<p>…一个格式很好的文档块将显示在您的文档中.</p>
+<p>如果要记录可选参数, 也可以输入自己的显式参数列表:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autofunction</span><span class="p">::</span> <span class="n">someFunction</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">[,</span> <span class="n">baz</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>参数属性和解构参数也可以使用 <a class="reference external" href="http://usejsdoc.org/tags-param.html#parameters-with-properties">标准JSDoc语法</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/**
+ * Export an image from the given canvas and save it to the disk.
+ *
+ * @param {Object} options Output options
+ * @param {string} options.format The output format (``jpeg``,  ``png``, or
+ *     ``webp``)
+ * @param {number} options.quality The output quality when format is
+ *     ``jpeg`` or ``webp`` (from ``0.00`` to ``1.00``)
+ */
+function saveCanvas({ format, quality }) {
+    // ...
+}
+</pre></div>
+</div>
+<p>提取默认参数值也很有效. 这些行为符合预期, 但有一些注意事项:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="n">You</span> <span class="n">must</span> <span class="n">declare</span> <span class="n">the</span> <span class="n">params</span><span class="p">,</span> <span class="n">even</span> <span class="k">if</span> <span class="n">you</span> <span class="n">have</span> <span class="n">nothing</span> <span class="k">else</span> <span class="n">to</span> <span class="n">say</span><span class="p">,</span> <span class="n">so</span>
+ <span class="o">*</span> <span class="n">JSDoc</span> <span class="n">will</span> <span class="n">extract</span> <span class="n">the</span> <span class="n">default</span> <span class="n">values</span><span class="o">.</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">[</span><span class="n">num</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">[</span><span class="nb">bool</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">[</span><span class="n">nil</span><span class="p">]</span>
+ <span class="o">*/</span>
+<span class="n">function</span> <span class="n">defaultsDocumentedInCode</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="nb">bool</span><span class="o">=</span><span class="n">true</span><span class="p">,</span> <span class="n">nil</span><span class="o">=</span><span class="n">null</span><span class="p">)</span> <span class="p">{}</span>
+
+<span class="o">/**</span>
+ <span class="o">*</span> <span class="n">JSDoc</span> <span class="n">guesses</span> <span class="n">types</span> <span class="k">for</span> <span class="n">things</span> <span class="n">like</span> <span class="s2">&quot;42&quot;</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">have</span> <span class="n">a</span> <span class="n">string</span><span class="o">-</span><span class="n">typed</span>
+ <span class="o">*</span> <span class="n">default</span> <span class="n">value</span> <span class="n">that</span> <span class="n">looks</span> <span class="n">like</span> <span class="n">a</span> <span class="n">number</span> <span class="ow">or</span> <span class="n">boolean</span><span class="p">,</span> <span class="n">you</span><span class="s1">&#39;ll need to</span>
+ <span class="o">*</span> <span class="n">specify</span> <span class="n">its</span> <span class="nb">type</span> <span class="n">explicitly</span><span class="o">.</span> <span class="n">Conversely</span><span class="p">,</span> <span class="k">if</span> <span class="n">you</span> <span class="n">have</span> <span class="n">a</span> <span class="n">more</span> <span class="nb">complex</span>
+ <span class="o">*</span> <span class="n">value</span> <span class="n">like</span> <span class="n">an</span> <span class="n">arrow</span> <span class="n">function</span><span class="p">,</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">non</span><span class="o">-</span><span class="n">string</span> <span class="nb">type</span> <span class="n">on</span> <span class="n">it</span> <span class="n">so</span> <span class="n">it</span>
+ <span class="o">*</span> <span class="n">isn</span><span class="s1">&#39;t interpreted as a string. Finally, if you have a disjoint type like</span>
+ <span class="o">*</span> <span class="p">{</span><span class="n">string</span><span class="o">|</span><span class="n">Array</span><span class="p">}</span> <span class="n">specify</span> <span class="n">string</span> <span class="n">first</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">your</span> <span class="n">default</span> <span class="n">to</span> <span class="n">be</span>
+ <span class="o">*</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">a</span> <span class="n">string</span><span class="o">.</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">{</span><span class="n">function</span><span class="p">}</span> <span class="p">[</span><span class="n">func</span><span class="o">=</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">[</span><span class="nb">str</span><span class="o">=</span><span class="n">some</span> <span class="n">string</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="p">[</span><span class="n">strNum</span><span class="o">=</span><span class="mi">42</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">{</span><span class="n">string</span><span class="o">|</span><span class="n">Array</span><span class="p">}</span> <span class="p">[</span><span class="n">strBool</span><span class="o">=</span><span class="n">true</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">[</span><span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">]</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">[</span><span class="n">nil</span><span class="o">=</span><span class="n">null</span><span class="p">]</span>
+ <span class="o">*/</span>
+<span class="n">function</span> <span class="n">defaultsDocumentedInDoclet</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">strNum</span><span class="p">,</span> <span class="n">strBool</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">nil</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<p>您甚至可以添加其他内容. 如果这样做, 它将出现在任何提取的文档下面:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. js:autofunction:: someFunction
+
+    Here are some things that will appear...
+
+    * Below
+    * The
+    * Extracted
+    * Docs
+
+    Enjoy!
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">js:autofunction</span></code> 有一个选项,  <code class="docutils literal notranslate"><span class="pre">:short-name:</span></code> , 它对于链接的API很方便, 它们的实现细节你想要看不见. 当你在类方法上使用它时, 文档中不会提到包含类, 函数将在其索引中的短名称下出现, 并且交叉引用也必须使用短名称(<code class="docutils literal notranslate"><span class="pre">:func:`someFunction</span> <span class="pre">`</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autofunction</span><span class="p">::</span> <span class="n">someClass</span><span class="c1">#someFunction</span>
+   <span class="p">:</span><span class="n">short</span><span class="o">-</span><span class="n">name</span><span class="p">:</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">autofunction</span></code> 也可用于使用 <a class="reference external" href="http://usejsdoc.org/tags-callback.html">&#64;callback标签</a> 定义的回调.</p>
+<p>有一些实验支持滥用 <code class="docutils literal notranslate"><span class="pre">autofunction</span></code> 来记录 <a class="reference external" href="http://usejsdoc.org/tags-typedef.html">&#64;typedef tags</a>, 虽然结果将被设计为一个函数, 并且 <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> 标签会在 “Arguments” 标题下误导. 不过, 在我们能够做到正确之前, 它总比没有好.</p>
+</div>
+<div class="section" id="autoclass">
+<h3>autoclass<a class="headerlink" href="#autoclass" title="永久链接至标题">¶</a></h3>
+<p>我们提供了一个 <code class="docutils literal notranslate"><span class="pre">js:autoclass</span></code> 指令, 它使用类注释和构造函数注释的连接来记录一个类. 它共享 <code class="docutils literal notranslate"><span class="pre">js:autofunction</span></code> 的所有功能, 甚至采用相同的 <code class="docutils literal notranslate"><span class="pre">:short-name:</span></code> 标志, 这对于内部类可以派上用场. 使用它的最简单方法是调用它的 <code class="docutils literal notranslate"><span class="pre">:members:</span></code> 选项, 它自动记录你所有类的所有公共方法和属性:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autoclass</span><span class="p">::</span> <span class="n">SomeEs6Class</span><span class="p">(</span><span class="n">constructor</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="k">if</span><span class="p">,</span> <span class="n">you</span><span class="p">[,</span> <span class="n">wish</span><span class="p">])</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>您可以通过说…添加私人会员:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autoclass</span><span class="p">::</span> <span class="n">SomeEs6Class</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+   <span class="p">:</span><span class="n">private</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>隐私由JSDoc <code class="docutils literal notranslate"><span class="pre">&#64;private</span></code> 标签决定.</p>
+<p>用 <code class="docutils literal notranslate"><span class="pre">:exclude-members:</span></code> 按名称排除某些成员:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autoclass</span><span class="p">::</span> <span class="n">SomeEs6Class</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+   <span class="p">:</span><span class="n">exclude</span><span class="o">-</span><span class="n">members</span><span class="p">:</span> <span class="n">Foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">,</span> <span class="n">baz</span>
+</pre></div>
+</div>
+<p>或者明确列出您想要的成员. 我们会尊重您的订购.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autoclass</span><span class="p">::</span> <span class="n">SomeEs6Class</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span> <span class="n">Qux</span><span class="p">,</span> <span class="n">qum</span>
+</pre></div>
+</div>
+<p>显式列出成员时, 可以包含 <code class="docutils literal notranslate"><span class="pre">*</span></code> 以包含所有未提及的成员. 这对于控制某些元素的排序很有用, 而不必包含详尽的列表.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autoclass</span><span class="p">::</span> <span class="n">SomeEs6Class</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span> <span class="n">importMethod</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">uncommonlyUsedMethod</span>
+</pre></div>
+</div>
+<p>最后, 如果你想要完全控制, 可以通过嵌入 <code class="docutils literal notranslate"><span class="pre">js:autofunction</span></code> 或 <code class="docutils literal notranslate"><span class="pre">js:autoattribute</span></code> 来一次拉一个类成员.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autoclass</span><span class="p">::</span> <span class="n">SomeEs6Class</span>
+
+   <span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autofunction</span><span class="p">::</span> <span class="n">SomeEs6Class</span><span class="c1">#someMethod</span>
+
+   <span class="n">Additional</span> <span class="n">content</span> <span class="n">can</span> <span class="n">go</span> <span class="n">here</span> <span class="ow">and</span> <span class="n">appears</span> <span class="n">below</span> <span class="n">the</span> <span class="ow">in</span><span class="o">-</span><span class="n">code</span> <span class="n">comments</span><span class="p">,</span>
+   <span class="n">allowing</span> <span class="n">you</span> <span class="n">to</span> <span class="n">intersperse</span> <span class="n">long</span> <span class="n">prose</span> <span class="n">passages</span> <span class="ow">and</span> <span class="n">examples</span> <span class="n">that</span> <span class="n">you</span>
+   <span class="n">don</span><span class="s1">&#39;t want in your code.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="autoattribute">
+<h3>autoattribute<a class="headerlink" href="#autoattribute" title="永久链接至标题">¶</a></h3>
+<p>这对于记录公共属性很有用:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Fnode</span> <span class="p">{</span>
+    <span class="n">constructor</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="p">{</span>
+        <span class="o">/**</span>
+         <span class="o">*</span> <span class="n">The</span> <span class="n">raw</span> <span class="n">DOM</span> <span class="n">element</span> <span class="n">this</span> <span class="n">wrapper</span> <span class="n">describes</span>
+         <span class="o">*/</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">element</span> <span class="o">=</span> <span class="n">element</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>然后, 在文档中……:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">Fnode</span>
+
+   <span class="o">..</span> <span class="n">autoattribute</span><span class="p">::</span> <span class="n">Fnode</span><span class="c1">#element</span>
+</pre></div>
+</div>
+<p>这也是记录ES6风格的getter和setter的方法, 因为它省略了函数的尾随 <code class="docutils literal notranslate"><span class="pre">()</span></code> .  假定的做法是通常的JSDoc:只记录你的 getter/setter 对中的一个:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Bing</span> <span class="p">{</span>
+    <span class="o">/**</span> <span class="n">The</span> <span class="n">bong</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bing</span> <span class="o">*/</span>
+    <span class="n">get</span> <span class="n">bong</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">_bong</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nb">set</span> <span class="n">bong</span><span class="p">(</span><span class="n">newBong</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">_bong</span> <span class="o">=</span> <span class="n">newBong</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>然后, 在文档中……:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoattribute</span><span class="p">::</span> <span class="n">Bing</span><span class="c1">#bong</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dodging-ambiguity-with-pathnames">
+<h3>用路径名避免歧义<a class="headerlink" href="#dodging-ambiguity-with-pathnames" title="永久链接至标题">¶</a></h3>
+<p>如果在不同文件中有相同名称的对象, 请使用路径名来消除它们的歧义. 这是一个特别长的例子:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">autofunction</span><span class="p">::</span> <span class="o">./</span><span class="n">some</span><span class="o">/</span><span class="nb">dir</span><span class="o">/</span><span class="n">some</span><span class="o">/</span><span class="n">file</span><span class="o">.</span><span class="n">SomeClass</span><span class="c1">#someInstanceMethod.staticMethod~innerMember</span>
+</pre></div>
+</div>
+<p>您可以从 <a class="reference external" href="http://usejsdoc.org/about-namepaths.html">JSDoc namepaths</a> 中识别分隔符 <code class="docutils literal notranslate"><span class="pre">＃.</span> <span class="pre">〜</span></code>. 他们在这里工作相同.</p>
+<p>为简明起见, 您可以使用任何唯一的后缀, 只要它包含完整的路径段即可. 假设它们在源树中是唯一的, 这些都将等同于上述内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">innerMember</span>
+<span class="n">staticMethod</span><span class="o">~</span><span class="n">innerMember</span>
+<span class="n">SomeClass</span><span class="c1">#someInstanceMethod.staticMethod~innerMember</span>
+<span class="n">some</span><span class="o">/</span><span class="n">file</span><span class="o">.</span><span class="n">SomeClass</span><span class="c1">#someInstanceMethod.staticMethod~innerMember</span>
+</pre></div>
+</div>
+<p>注意事项:</p>
+<ul>
+<li><p>我们使用简单的文件路径而不是JSDoc的 <code class="docutils literal notranslate"><span class="pre">module:</span></code> 前缀.</p></li>
+<li><p>我们使用简单的反斜杠转义, 而不是在路径中途切换转义方案; JSDoc本身 <a class="reference external" href="https://github.com/jsdoc3/jsdoc/issues/876">也是如此</a>. 需要转义的字符是 <code class="docutils literal notranslate"><span class="pre">＃.~(/</span></code>, 虽然你不需要在前导 <code class="docutils literal notranslate"><span class="pre">.</span></code> 或 <code class="docutils literal notranslate"><span class="pre">../</span></code> 中逃脱点. 一条非常可怕的路径可能是…::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some</span><span class="o">/</span><span class="n">path</span>\ <span class="k">with</span>\ <span class="n">spaces</span><span class="o">/</span><span class="n">file</span><span class="o">.</span><span class="n">topLevelObject</span><span class="c1">#instanceMember.staticMember\(with\(parens</span>
+</pre></div>
+</div>
+</li>
+<li><p>相对路径相对于config中指定的 <code class="docutils literal notranslate"><span class="pre">js_source_path</span></code>. 绝对路径是不允许的.</p></li>
+</ul>
+<p>在幕后, sphinx-js 会将所有分隔符更改为点, 以便……</p>
+<ul class="simple">
+<li><p>Sphinx的“缩短”语法有效: <code class="docutils literal notranslate"><span class="pre">:func:`~InwardRhs.atMost`</span></code> 只打印 <code class="docutils literal notranslate"><span class="pre">atMost()</span></code>.  (现在, 你应该总是使用点而不是其他名称路径分隔符: <code class="docutils literal notranslate"><span class="pre">＃〜</span></code>. )</p></li>
+<li><p>Sphinx索引信息更多, 称方法属于他们的类.</p></li>
+</ul>
+</div>
+<div class="section" id="saving-keystrokes-by-setting-the-primary-domain">
+<h3>通过设置主域来保存击键<a class="headerlink" href="#saving-keystrokes-by-setting-the-primary-domain" title="永久链接至标题">¶</a></h3>
+<p>要保存一些击键, 你可以在conf.py中设置 <code class="docutils literal notranslate"><span class="pre">primary_domain</span> <span class="pre">='js'</span></code> 然后说(例如) <code class="docutils literal notranslate"><span class="pre">autofunction</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">js:autofunction</span></code>.</p>
+</div>
+<div class="section" id="typescript-support">
+<h3>TypeScript支持<a class="headerlink" href="#typescript-support" title="永久链接至标题">¶</a></h3>
+<p>sphinx-js中有实验性的TypeScript支持. 通过设置配置变量 <code class="docutils literal notranslate"><span class="pre">js_language</span> <span class="pre">='typescript'</span></code> 来启用它. 然后, 安装TypeDoc(版本0.11.1已知可以工作), 而不是安装JSDoc:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">typedoc</span>
+</pre></div>
+</div>
+<p>您将注意到的主要区别是函数文档中的其他 <strong>type</strong> 字段.</p>
+</div>
+<div class="section" id="configuration-reference">
+<h3>配置参考<a class="headerlink" href="#configuration-reference" title="永久链接至标题">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">js_language</span></code></dt><dd><p>根据您使用的语言, 使用 ‘javascript’ 或 ‘typescript’. 默认为 ‘javascript’.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">js_source_path</span></code></dt><dd><p>扫描(非递归)JS文件的目录列表, 相对于Sphinx的conf.py文件. 如果只有一个字符串, 则可以是字符串. 如果有多个, 则必须指定 <code class="docutils literal notranslate"><span class="pre">root_for_relative_js_paths</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">jsdoc_config_path</span></code></dt><dd><p>jsdoc或typedoc配置文件的conf.py相对路径, 如果要指定自己的jsdoc选项(如递归和自定义文件名匹配), 这将非常有用.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">root_for_relative_js_paths</span></code></dt><dd><p>如果要指定自己的jsdoc选项(例如递归和自定义文件名匹配), 则jsdoc或typedoc配置文件的conf.py相对路径很有用.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="example">
+<h2>示例<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
+<p>使用大多数sphinx-js功能的一个很好的例子是Fathom文档. 一个特别多汁的页面是 <a class="reference external" href="https://mozilla.github.io/fathom/ruleset.html">https://mozilla.github.io/fathom/ruleset.html</a>. 单击 “查看页面源” 链接以查看原始指令.</p>
+<p><a class="reference external" href="https://readthedocs.org/">ReadTheDocs</a> 是Sphinx文档的规范托管平台, 现在支持sphinx-js作为选择加入测试版. 把它放在你的repo根目录下的 <code class="docutils literal notranslate"><span class="pre">.readthedocs.yml</span></code> 文件中:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">requirements_file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">build</span><span class="p">:</span>
+  <span class="n">image</span><span class="p">:</span> <span class="n">latest</span>
+</pre></div>
+</div>
+<p>然后把你想要的sphinx-js版本放在 <code class="docutils literal notranslate"><span class="pre">docs/requirements.txt</span></code> 中. 例如…:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">js</span><span class="o">==</span><span class="mf">2.5</span>
+</pre></div>
+</div>
+<p>或者, 如果您愿意, Fathom repo带有 <a class="reference external" href="https://github.com/mozilla/fathom/blob/master/.travis.yml">Travis CI配置</a> 和 <a class="reference external" href="https://github.com/mozilla/fathom/blob/master/docs/tooling/travis-deploy-docs">部署脚本</a> 用于使用sphinx-js构建文档并将它们发布到GitHub Pages. 随意借用它们.</p>
+</div>
+<div class="section" id="caveats">
+<h2>注意事项<a class="headerlink" href="#caveats" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>我们不理解内联JSDoc结构, 如 <code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">foo}</span></code>;你现在必须使用Sphinx风格的等价物, 比如 <code class="docutils literal notranslate"><span class="pre">:js:func:`foo`</span></code> (或者只是 <code class="docutils literal notranslate"><span class="pre">:func:`foo`</span></code> 如果你设置 <code class="docutils literal notranslate"><span class="pre">primary_domain</span> <span class="pre">='js'</span></code> 在conf.py.</p></li>
+<li><p>到目前为止, 我们理解并转换JSDoc块标签 <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;returns</span></code>, <code class="docutils literal notranslate"><span class="pre">throws</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;example</span></code> (没有可选的 <code class="docutils literal notranslate"><span class="pre">&lt;caption&gt;</span></code>) , <code class="docutils literal notranslate"><span class="pre">&#64;deprecated</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;see</span></code> 和他们的同义词. 其他人将 <em>噗</em> 进入以太.</p></li>
+</ul>
+</div>
+<div class="section" id="tests">
+<h2>测试<a class="headerlink" href="#tests" title="永久链接至标题">¶</a></h2>
+<p>运行 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">test</span></code> . 运行 <code class="docutils literal notranslate"><span class="pre">tox</span></code> 来测试Python版本.</p>
+</div>
+<div class="section" id="version-history">
+<h2>版本历史<a class="headerlink" href="#version-history" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>2.7.1</dt><dd><ul class="simple">
+<li><p>修复Windows上UTF-8有时会发生的崩溃.  ＃67.</p></li>
+<li><p>始终对jsdoc的工作目录使用conf.py的目录.  ＃78.  (Thomas Khyn)</p></li>
+</ul>
+</dd>
+<dt>2.7</dt><dd><ul class="simple">
+<li><p>添加实验性TypeScript支持.  (Wim Yedema)</p></li>
+</ul>
+</dd>
+<dt>2.6</dt><dd><ul class="simple">
+<li><p>添加对 <code class="docutils literal notranslate"><span class="pre">&#64;deprecated</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&#64;see</span></code> 的支持. (David Li)</p></li>
+<li><p>注意并记录JS variadic params很好.  (David Li)</p></li>
+<li><p>将linter添加到代码库.</p></li>
+</ul>
+</dd>
+<dt>2.5</dt><dd><ul class="simple">
+<li><p>使用记录的 <code class="docutils literal notranslate"><span class="pre">&#64;params</span></code> 来帮助填写函数的正式参数列表. 这使我们不会错过使用解构的params.  (flozz)</p></li>
+<li><p>缺少jsdoc时改进错误报告.</p></li>
+<li><p>将提取的默认值添加到生成的正式参数列表中.  (flozz and erikrose)</p></li>
+</ul>
+</dd>
+<dt>2.4</dt><dd><ul class="simple">
+<li><p>支持 <code class="docutils literal notranslate"><span class="pre">&#64;example</span></code> 标签.  (lidavidm)</p></li>
+<li><p>在Windows下工作. 以前, 我们几乎找不到任何文件.  (flozz)</p></li>
+<li><p>正确展开多行JSDoc标记, 即使它们具有Windows行结尾.  (Wim Yedema)</p></li>
+<li><p>删除对Python 3.3的支持, 因为Sphinx也已经这样做了.</p></li>
+<li><p>在Sphinx&gt; = 1.7.1下使用Recommonmark(用于Markdown支持)时修复构建时崩溃.  (jamrizzi)</p></li>
+</ul>
+</dd>
+<dt>2.3.1</dt><dd><ul class="simple">
+<li><p>在Windows上找到jsdoc命令, 它具有不同的名称. 然后修补进程通信, 使其不挂起.</p></li>
+</ul>
+</dd>
+<dt>2.3</dt><dd><ul class="simple">
+<li><p>添加在 <code class="docutils literal notranslate"><span class="pre">autoclass:members:</span></code> 选项中说 “*” 的能力, 意思是 “和我没有明确列出的所有成员”.</p></li>
+</ul>
+</dd>
+<dt>2.2</dt><dd><ul class="simple">
+<li><p>为 <code class="docutils literal notranslate"><span class="pre">&#64;callback</span></code> 标签添加 <code class="docutils literal notranslate"><span class="pre">autofunction</span></code> 支持.  (krassowski)</p></li>
+<li><p>为 <code class="docutils literal notranslate"><span class="pre">&#64;typedef</span></code> 标签添加实验 <code class="docutils literal notranslate"><span class="pre">autofunction</span></code> 支持.  (KRASSOWSKI)</p></li>
+<li><p>为jsdoc找不到任何JS文件时添加一条很好的错误消息.</p></li>
+<li><p>更紧密地固定六个, 以便 <code class="docutils literal notranslate"><span class="pre">python_2_unicode_compatible</span></code> 肯定会出现.</p></li>
+</ul>
+</dd>
+<dt>2.1</dt><dd><ul class="simple">
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">js_source_path</span></code> 中允许多个文件夹. 这对于逐步将大型项目(一次一个文件夹)迁移到jsdoc非常有用. 引入 <code class="docutils literal notranslate"><span class="pre">root_for_relative_js_paths</span></code> 以在多个源路径面前保持相对路径的明确性.</p></li>
+<li><p>聚合PathTaken错误, 并立即报告所有错误. 这意味着您在清理大型项目时不必重复运行JSDoc.</p></li>
+<li><p>修复了在3.6之前的Python 3版本上崩溃的字节vs字符串问题.  (jhkennedy)</p></li>
+<li><p>容忍文件扩展名不是 “. js” 的JS文件. 之前, 当与摄取此类文件的自定义jsdoc配置结合使用时, 会生成不正确的对象路径名, 从而导致虚假的“找不到对象…的错误的JSDoc文档”.</p></li>
+</ul>
+</dd>
+<dt>2.0.1</dt><dd><ul class="simple">
+<li><p>通过首先将大型JSDoc输出写入临时文件来修复虚假语法错误. (jhkennedy)</p></li>
+</ul>
+</dd>
+<dt>2.0</dt><dd><ul class="simple">
+<li><p>处理模棱两可的对象路径. 具有相同JSDoc长名称的符号(例如在不同文件中称为 “foo” 的两个顶级事物)将不再具有另一个阴影. 引入用于引用对象的明确路径约定. 添加一个真正的解析器来解析它们, 而不是我们之前使用的肮脏技巧. 向后兼容性稍微破坏, 因为模糊引用现在是一个致命的错误, 而不是悄悄地引用JSDoc碰巧遇到的最后一个定义.</p></li>
+<li><p>将所有内容索引到后缀树中, 以便您可以使用任何唯一的路径后缀来引用对象.</p></li>
+<li><p>有一个真正的解析器的其他后果:</p>
+<ul>
+<li><p>停止支持 “-” 作为名称路径分隔符.</p></li>
+<li><p>不再虚假地将名称路径中的转义分隔符转换为点.</p></li>
+<li><p>否则正确处理路径和逃逸. 例如, 我们现在可以处理包含 “(” 的符号.</p></li>
+</ul>
+</li>
+<li><p>在尝试收集标记为 <code class="docutils literal notranslate"><span class="pre">&#64;class</span></code> 的普通旧对象的构造函数params时修复KeyError.</p></li>
+</ul>
+</dd>
+<dt>1.5.2</dt><dd><ul class="simple">
+<li><p>修复crasher, 同时警告未找到指定的长名称.</p></li>
+</ul>
+</dd>
+<dt>1.5.1</dt><dd><ul class="simple">
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">:members:</span></code> 选项添加到 <code class="docutils literal notranslate"><span class="pre">autoclass</span></code> 中.</p></li>
+</ul>
+</dd>
+<dt>1.5</dt><dd><ul class="simple">
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">autoclass</span></code> 中添加 <code class="docutils literal notranslate"><span class="pre">:members:</span></code> 选项.</p></li>
+<li><p>添加 <code class="docutils literal notranslate"><span class="pre">:private-members:</span></code> 和 <code class="docutils literal notranslate"><span class="pre">:exclude-members:</span></code> 选项.</p></li>
+<li><p>重要的重构允许指令类相互通信.</p></li>
+</ul>
+</dd>
+<dt>1.4</dt><dd><ul class="simple">
+<li><p>添加 <code class="docutils literal notranslate"><span class="pre">jsdoc_config_path</span></code> 选项.</p></li>
+</ul>
+</dd>
+<dt>1.3.1</dt><dd><ul class="simple">
+<li><p>容忍包含在源代码中的&#64;args和其他信息字段行.</p></li>
+<li><p>在Sphinx发出的警告和错误中引用源注释的文件和行.</p></li>
+</ul>
+</dd>
+<dt>1.3</dt><dd><ul class="simple">
+<li><p>添加 <code class="docutils literal notranslate"><span class="pre">autoattribute</span></code> 指令.</p></li>
+</ul>
+</dd>
+<dt>1.2</dt><dd><ul class="simple">
+<li><p>始终做完全重建;当JS代码发生变化但RST没有变更时, 不要让页面过时.</p></li>
+<li><p>使Python-3兼容.</p></li>
+<li><p>添加基本​​的 <code class="docutils literal notranslate"><span class="pre">autoclass</span></code> 指令.</p></li>
+</ul>
+</dd>
+<dt>1.1</dt><dd><ul class="simple">
+<li><p>添加 <code class="docutils literal notranslate"><span class="pre">:short-name:</span></code> 选项.</p></li>
+</ul>
+</dd>
+<dt>1.0</dt><dd><ul class="simple">
+<li><p>初始版本, 只有 <code class="docutils literal notranslate"><span class="pre">js:autofunction</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="../theming.html" title="HTML"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="httpdomain.html" title="sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" >扩展</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7f2c8fd82 创建。
+    </div>
+  </body>
+</html>

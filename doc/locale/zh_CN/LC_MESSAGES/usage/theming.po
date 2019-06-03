@@ -23,7 +23,7 @@ msgstr "HTML"
 
 #: ../../usage/theming.rst:6
 msgid "Sphinx provides a number of builders for HTML and HTML-based formats."
-msgstr "Sphinx为HTML和基于HTML的格式提供了许多构建器。"
+msgstr "Sphinx为HTML和基于HTML的格式提供了许多构建器. "
 
 #: ../../usage/theming.rst:9
 msgid "Builders"
@@ -35,7 +35,7 @@ msgstr "待处理"
 
 #: ../../usage/theming.rst:11
 msgid "Populate when the 'builders' document is split up."
-msgstr "在 'builders' 文档被拆分时填充。"
+msgstr "在 'builders' 文档被拆分时填充. "
 
 #: ../../usage/theming.rst:15
 msgid "Themes"
@@ -45,7 +45,7 @@ msgstr "主题"
 msgid ""
 "This section provides information about using pre-existing HTML themes. "
 "If you wish to create your own theme, refer to :doc:`/theming`."
-msgstr ""
+msgstr "本节提供有关使用预先存在的HTML主题的信息. 如果您想创建自己的主题, 请参阅 :doc:`/theming`. "
 
 #: ../../usage/theming.rst:24
 msgid ""
@@ -54,13 +54,13 @@ msgid ""
 "static files. Additionally, it has a configuration file which specifies "
 "from which theme to inherit, which highlighting style to use, and what "
 "options exist for customizing the theme's look and feel."
-msgstr ""
+msgstr "Sphinx支持通过 *themes* 更改其HTML输出的外观. 主题是HTML模板, 样式表和其他静态文件的集合. 此外, 它还有一个配置文件, 用于指定要继承的主题, 要使用的突出显示样式以及用于自定义主题外观的选项. "
 
 #: ../../usage/theming.rst:30
 msgid ""
 "Themes are meant to be project-unaware, so they can be used for different"
 " projects without change."
-msgstr ""
+msgstr "主题意味着项目不知情, 因此它们可以用于不同的项目而无需改变. "
 
 #: ../../usage/theming.rst:34
 msgid "Using a theme"
@@ -72,7 +72,7 @@ msgid ""
 " these do not need to be installed, you only need to set the "
 ":confval:`html_theme` config value. For example, to enable the "
 "``classic`` theme, add the following to :file:`conf.py`::"
-msgstr ""
+msgstr "使用 :ref:`Sphinx提供的主题 <builtin-themes>` 很简单. 由于不需要安装它们, 您只需要设置 :confval:`html_theme` 配置值. 例如, 要启用 ``classic`` 主题, 请将以下内容添加到 :file:`conf.py` ::"
 
 #: ../../usage/theming.rst:43
 msgid ""
@@ -82,7 +82,7 @@ msgid ""
 "sidebar on the right side and a black background for the relation bar "
 "(the bar with the navigation links at the page's top and bottom), add the"
 " following :file:`conf.py`::"
-msgstr ""
+msgstr "您还可以使用 :confval:`html_theme_options` 配置值设置特定于主题的选项. 这些选项通常用于更改主题的外观. 例如, 要将侧边栏放在右侧, 使用黑色背景放置关系栏(带有位于页面顶部和底部的导航链接的栏), 请添加以下内容 :file:`conf.py` ::"
 
 #: ../../usage/theming.rst:54
 msgid ""
@@ -96,25 +96,29 @@ msgid ""
 "directories or zip files.  For example, if you have a theme in the file "
 ":file:`blue.zip`, you can put it right in the directory containing "
 ":file:`conf.py` and use this configuration::"
-msgstr ""
+msgstr "如果主题没有Sphinx, 它可以是两个静态形式或Python包. "
+"对于静态表单, 支持目录(包含 :file:`theme.conf` 和其他所需文件)或具有相同内容的zip文件. "
+"必须将目录或zip文件放在Sphinx可以找到的位置;为此, 有配置值 :confval:`html_theme_path`. "
+"这可以是目录列表, 相对于包含 :file:`conf.py` 的目录, 可以包含主题目录或zip文件. "
+"例如, 如果文件中有一个主题 :file:`blue.zip`, 则可以将其放在包含 :file:`conf.py` 的目录中并使用此配置::"
 
 #: ../../usage/theming.rst:67
 msgid ""
 "The third form is a Python package.  If a theme you want to use is "
 "distributed as a Python package, you can use it after installing"
-msgstr ""
+msgstr "第三种形式是Python包. 如果要使用的主题是作为Python包分发的, 则可以在安装后使用它"
 
 #: ../../usage/theming.rst:75
 msgid ""
 "Once installed, this can be used in the same manner as a directory or "
 "zipfile-based theme::"
-msgstr ""
+msgstr "安装后, 可以使用与基于目录或zipfile的主题相同的方式::"
 
 #: ../../usage/theming.rst:80
 msgid ""
 "For more information on the design of themes, including information about"
 " writing your own themes, refer to :doc:`/theming`."
-msgstr ""
+msgstr "有关主题设计的更多信息, 包括有关编写自己主题的信息, 请参阅 :doc:`/theming`. "
 
 #: ../../usage/theming.rst:86
 msgid "Builtin themes"
@@ -206,11 +210,11 @@ msgstr "*bizstyle*"
 
 #: ../../usage/theming.rst:125
 msgid "Sphinx comes with a selection of themes to choose from."
-msgstr "Sphinx comes with a selection of themes to choose from."
+msgstr "sphinx 有多种主题可供选择"
 
 #: ../../usage/theming.rst:129
 msgid "These themes are:"
-msgstr "These themes are:"
+msgstr "这些主题是:"
 
 #: ../../usage/theming.rst:152
 msgid "**basic**"
@@ -222,20 +226,20 @@ msgid ""
 "themes, and usable as the base for custom themes as well.  The HTML "
 "contains all important elements like sidebar and relation bar.  There are"
 " these options (which are inherited by the other themes):"
-msgstr ""
+msgstr "这是一个基本上没有样式的布局, 用作其他主题的基础, 也可用作自定义主题的基础.  HTML包含所有重要元素, 如侧边栏和关系栏. 有这些选项(由其他主题继承):"
 
 #: ../../usage/theming.rst:137
 msgid ""
 "**nosidebar** (true or false): Don't include the sidebar.  Defaults to "
 "``False``."
-msgstr ""
+msgstr "**nosidebar** (true or false): 不包括侧边栏. 默认为 ``False`` . "
 
 #: ../../usage/theming.rst:140
 msgid ""
 "**sidebarwidth** (int or str): Width of the sidebar in pixels. This can "
 "be an int, which is interpreted as pixels or a valid CSS dimension string"
 " such as '70em' or '50%'.  Defaults to 230 pixels."
-msgstr ""
+msgstr "**sidebarwidth** (int或str): 侧边栏的宽度(以像素为单位). 这可以是 int, 它被解释为像素或有效的CSS维度字符串, 例如 '70em' 或 '50％'. 默认为230像素. "
 
 #: ../../usage/theming.rst:144
 msgid ""
@@ -243,7 +247,7 @@ msgid ""
 " can be an int, which is interpreted as pixels or a valid CSS dimension "
 "string such as '70em' or '50%'. Use 0 if you don't want a width limit. "
 "Defaults may depend on the theme (often 450px)."
-msgstr ""
+msgstr "**body_min_width** (int或str):文档正文的最小宽度. 这可以是int, 它被解释为像素或有效的CSS维度字符串, 例如'70em'或'50％'. 如果您不想要宽度限制, 请使用0. 默认值可能取决于主题(通常为450px). "
 
 #: ../../usage/theming.rst:149
 msgid ""
@@ -251,7 +255,7 @@ msgid ""
 " can be an int, which is interpreted as pixels or a valid CSS dimension "
 "string such as '70em' or '50%'. Use 'none' if you don't want a width "
 "limit. Defaults may depend on the theme (often 800px)."
-msgstr ""
+msgstr "**body_max_width** (int或str):文档正文的最大宽度. 这可以是int, 它被解释为像素或有效的CSS维度字符串, 例如'70em'或'50％'. 如果您不想要宽度限制, 请使用 ``none`` . 默认值可能取决于主题(通常为800px). "
 
 #: ../../usage/theming.rst:162
 msgid "**alabaster**"
@@ -264,7 +268,7 @@ msgid ""
 " based on @mitsuhiko's theme used for Flask & related projects.  Refer to"
 " its `installation page`_ for information on how to configure "
 ":confval:`html_sidebars` for its use."
-msgstr ""
+msgstr "`Alabaster theme`_ 是来自@kennethreitz的修改后的 ``Kr`` Sphinx主题(特别是在他的Requests项目中使用), 它本身最初基于@mitsuhiko用于Flask及相关项目的主题. 有关如何配置的信息, 请参阅其 `installation page`_ :confval:`html_sidebars` 供其使用. "
 
 #: ../../usage/theming.rst:208
 msgid "**classic**"
@@ -274,123 +278,123 @@ msgstr "**classic**"
 msgid ""
 "This is the classic theme, which looks like `the Python 2 documentation "
 "<https://docs.python.org/2/>`_.  It can be customized via these options:"
-msgstr ""
+msgstr "这是经典主题, 看起来像是 `Python 2文档 <https://docs.python.org/2/>`_. 它可以通过以下选项进行定制:"
 
 #: ../../usage/theming.rst:169 ../../usage/theming.rst:293
 msgid ""
 "**rightsidebar** (true or false): Put the sidebar on the right side. "
 "Defaults to ``False``."
-msgstr ""
+msgstr "**右侧栏** (true or false):将侧边栏放在右侧. 默认为 ``False`` . "
 
 #: ../../usage/theming.rst:172
 msgid ""
 "**stickysidebar** (true or false): Make the sidebar \"fixed\" so that it "
 "doesn't scroll out of view for long body content.  This may not work well"
 " with all browsers.  Defaults to ``False``."
-msgstr ""
+msgstr "**stickysidebar** (true or false):使侧边栏 ``固定`` , 以便它不会滚出视图以获取长身体内容. 这可能不适用于所有浏览器. 默认为 ``False`` . "
 
 #: ../../usage/theming.rst:176
 msgid ""
 "**collapsiblesidebar** (true or false): Add an *experimental* JavaScript "
 "snippet that makes the sidebar collapsible via a button on its side. "
 "Defaults to ``False``."
-msgstr ""
+msgstr "**collapsiblesidebar** (true or false):添加一个*实验性* JavaScript代码段, 通过侧面的按钮使侧边栏可折叠. 默认为 ``False`` . "
 
 #: ../../usage/theming.rst:180
 msgid ""
 "**externalrefs** (true or false): Display external links differently from"
 " internal links.  Defaults to ``False``."
-msgstr ""
+msgstr "**externalrefs** (true或false):显示外部链接与内部链接不同. 默认为 ``False`` . "
 
 #: ../../usage/theming.rst:183
 msgid ""
 "There are also various color and font options that can change the color "
 "scheme without having to write a custom stylesheet:"
-msgstr ""
+msgstr "还有各种颜色和字体选项可以更改颜色方案, 而无需编写自定义样式表:"
 
 #: ../../usage/theming.rst:186
 msgid "**footerbgcolor** (CSS color): Background color for the footer line."
-msgstr "**footerbgcolor** (CSS color): Background color for the footer line."
+msgstr "**footerbgcolor** (CSS颜色):页脚行的背景颜色. "
 
 #: ../../usage/theming.rst:187
 msgid "**footertextcolor** (CSS color): Text color for the footer line."
-msgstr "**footertextcolor** (CSS color): Text color for the footer line."
+msgstr "**footertextcolor** (CSS颜色):页脚行的文本颜色. "
 
 #: ../../usage/theming.rst:188
 msgid "**sidebarbgcolor** (CSS color): Background color for the sidebar."
-msgstr "**sidebarbgcolor** (CSS color): Background color for the sidebar."
+msgstr "**sidebarbgcolor** (CSS颜色):侧边栏的背景颜色. "
 
 #: ../../usage/theming.rst:189
 msgid ""
 "**sidebarbtncolor** (CSS color): Background color for the sidebar "
 "collapse button (used when *collapsiblesidebar* is ``True``)."
-msgstr ""
+msgstr "**sidebarbtncolor** （CSS颜色:侧边栏折叠按钮的背景颜色（当 *collapsiblesidebar* 为 ``True`` 时使用）。"
 
 #: ../../usage/theming.rst:191
 msgid "**sidebartextcolor** (CSS color): Text color for the sidebar."
-msgstr "**sidebartextcolor** (CSS color): Text color for the sidebar."
+msgstr "**sidebartextcolor** (CSS颜色):侧边栏的文本颜色. "
 
 #: ../../usage/theming.rst:192
 msgid "**sidebarlinkcolor** (CSS color): Link color for the sidebar."
-msgstr "**sidebarlinkcolor** (CSS color): Link color for the sidebar."
+msgstr "**sidebarlinkcolor** (CSS颜色):侧边栏的链接颜色. "
 
 #: ../../usage/theming.rst:193
 msgid "**relbarbgcolor** (CSS color): Background color for the relation bar."
-msgstr "**relbarbgcolor** (CSS color): Background color for the relation bar."
+msgstr "**relbarbgcolor** (CSS颜色):关系栏的背景颜色. "
 
 #: ../../usage/theming.rst:194
 msgid "**relbartextcolor** (CSS color): Text color for the relation bar."
-msgstr "**relbartextcolor** (CSS color): Text color for the relation bar."
+msgstr "**relbartextcolor** (CSS颜色): 关系栏的文本颜色."
 
 #: ../../usage/theming.rst:195
 msgid "**relbarlinkcolor** (CSS color): Link color for the relation bar."
-msgstr "**relbarlinkcolor** (CSS color): Link color for the relation bar."
+msgstr "**relbarlinkcolor** (CSS颜色):关系栏的链接颜色. "
 
 #: ../../usage/theming.rst:196
 msgid "**bgcolor** (CSS color): Body background color."
-msgstr "**bgcolor** (CSS color): Body background color."
+msgstr "**bgcolor** (CSS颜色):身体背景颜色. "
 
 #: ../../usage/theming.rst:197
 msgid "**textcolor** (CSS color): Body text color."
-msgstr "**textcolor** (CSS color): Body text color."
+msgstr "**textcolor** (CSS颜色):正文文本颜色. "
 
 #: ../../usage/theming.rst:198 ../../usage/theming.rst:245
 msgid "**linkcolor** (CSS color): Body link color."
-msgstr "**linkcolor** (CSS color): Body link color."
+msgstr "**linkcolor** (CSS颜色):正文链接颜色. "
 
 #: ../../usage/theming.rst:199
 msgid "**visitedlinkcolor** (CSS color): Body color for visited links."
-msgstr "**visitedlinkcolor** (CSS color): Body color for visited links."
+msgstr "**visitedlinkcolor** (CSS颜色):访问过的链接的正文颜色. "
 
 #: ../../usage/theming.rst:200
 msgid "**headbgcolor** (CSS color): Background color for headings."
-msgstr "**headbgcolor** (CSS color): Background color for headings."
+msgstr "**headbgcolor** (CSS颜色):标题的背景颜色. "
 
 #: ../../usage/theming.rst:201
 msgid "**headtextcolor** (CSS color): Text color for headings."
-msgstr "**headtextcolor** (CSS color): Text color for headings."
+msgstr "**headtextcolor** (CSS颜色):标题的文本颜色. "
 
 #: ../../usage/theming.rst:202
 msgid "**headlinkcolor** (CSS color): Link color for headings."
-msgstr "**headlinkcolor** (CSS color): Link color for headings."
+msgstr "**headlinkcolor** (CSS颜色):标题的链接颜色. "
 
 #: ../../usage/theming.rst:203
 msgid "**codebgcolor** (CSS color): Background color for code blocks."
-msgstr "**codebgcolor** (CSS color): Background color for code blocks."
+msgstr "**codebgcolor** (CSS颜色):代码块的背景颜色. "
 
 #: ../../usage/theming.rst:204
 msgid ""
 "**codetextcolor** (CSS color): Default text color for code blocks, if not"
 " set differently by the highlighting style."
-msgstr ""
+msgstr "**codetextcolor** (CSS颜色): 代码块的默认文本颜色，如果没有通过突出显示样式设置不同."
 
 #: ../../usage/theming.rst:207
 msgid "**bodyfont** (CSS font-family): Font for normal text."
-msgstr "**bodyfont** (CSS font-family): Font for normal text."
+msgstr "**bodyfont** (CSS字体系列):普通文本的字体. "
 
 #: ../../usage/theming.rst:208
 msgid "**headfont** (CSS font-family): Font for headings."
-msgstr "**headfont** (CSS font-family): Font for headings."
+msgstr "**headfont** (CSS字体系列):标题的字体. "
 
 #: ../../usage/theming.rst:219
 msgid "**sphinxdoc**"
@@ -401,14 +405,14 @@ msgid ""
 "The theme originally used by this documentation. It features a sidebar on"
 " the right side. There are currently no options beyond *nosidebar* and "
 "*sidebarwidth*."
-msgstr ""
+msgstr "本文档最初使用的主题。它的右侧有一个侧边栏。除了* nosidebar *和* sidebarwidth *之外，目前没有其他选项。"
 
 #: ../../usage/theming.rst:217
 msgid ""
 "The Sphinx documentation now uses `an adjusted version of the sphinxdoc "
 "theme <https://github.com/sphinx-"
 "doc/sphinx/tree/master/doc/_themes/sphinx13>`_."
-msgstr ""
+msgstr "Sphinx文档现在使用了 `sphinxdoc主题的调整版本 <https://github.com/sphinx-doc/sphinx/tree/master/doc/_themes/sphinx13>`_。"
 
 #: ../../usage/theming.rst:229
 msgid "**scrolls**"
@@ -418,7 +422,7 @@ msgstr "**scrolls**"
 msgid ""
 "A more lightweight theme, based on `the Jinja documentation "
 "<http://jinja.pocoo.org/>`_.  The following color options are available:"
-msgstr ""
+msgstr "一个更轻量级的主题, 基于 `Jinja文档 <http://jinja.pocoo.org/>`_. 可以使用以下颜色选项:"
 
 #: ../../usage/theming.rst:225
 msgid "**headerbordercolor**"
@@ -446,63 +450,63 @@ msgstr "**agogo**"
 
 #: ../../usage/theming.rst:232
 msgid "A theme created by Andi Albrecht.  The following options are supported:"
-msgstr "A theme created by Andi Albrecht.  The following options are supported:"
+msgstr "Andi Albrecht创作的主题. 支持以下选项:"
 
 #: ../../usage/theming.rst:234
 msgid "**bodyfont** (CSS font family): Font for normal text."
-msgstr "**bodyfont** (CSS font family): Font for normal text."
+msgstr "**bodyfont** (CSS字体系列):普通文本的字体. "
 
 #: ../../usage/theming.rst:235
 msgid "**headerfont** (CSS font family): Font for headings."
-msgstr "**headerfont** (CSS font family): Font for headings."
+msgstr "**headerfont** (CSS字体系列):标题字体. "
 
 #: ../../usage/theming.rst:236
 msgid "**pagewidth** (CSS length): Width of the page content, default 70em."
-msgstr "**pagewidth** (CSS length): Width of the page content, default 70em."
+msgstr "**pagewidth** (CSS长度):页面内容的宽度, 默认为70em. "
 
 #: ../../usage/theming.rst:237
 msgid ""
 "**documentwidth** (CSS length): Width of the document (without sidebar), "
 "default 50em."
-msgstr ""
+msgstr "**documentwidth** (CSS长度):文档的宽度(没有侧边栏), 默认为50em. "
 
 #: ../../usage/theming.rst:239
 msgid "**sidebarwidth** (CSS length): Width of the sidebar, default 20em."
-msgstr "**sidebarwidth** (CSS length): Width of the sidebar, default 20em."
+msgstr "**sidebarwidth** (CSS长度):侧边栏的宽度, 默认为20em. "
 
 #: ../../usage/theming.rst:240
 msgid "**bgcolor** (CSS color): Background color."
-msgstr "**bgcolor** (CSS color): Background color."
+msgstr "**bgcolor** (CSS color): 背景颜色. "
 
 #: ../../usage/theming.rst:241
 msgid ""
 "**headerbg** (CSS value for \"background\"): background for the header "
 "area, default a grayish gradient."
-msgstr ""
+msgstr "**headerbg** (\"background\" 的CSS值):标题区域的背景, 默认为浅灰色渐变. "
 
 #: ../../usage/theming.rst:243
 msgid ""
 "**footerbg** (CSS value for \"background\"): background for the footer "
 "area, default a light gray gradient."
-msgstr ""
+msgstr "**footerbg** (\"background\" 的CSS值):页脚区域的背景, 默认为浅灰色渐变. "
 
 #: ../../usage/theming.rst:246
 msgid ""
 "**headercolor1**, **headercolor2** (CSS color): colors for <h1> and <h2> "
 "headings."
-msgstr ""
+msgstr "**headercolor1**, **headercolor2** (CSS颜色):<h1>和<h2>标题的颜色. "
 
 #: ../../usage/theming.rst:248
 msgid ""
 "**headerlinkcolor** (CSS color): Color for the backreference link in "
 "headings."
-msgstr ""
+msgstr "**headerlinkcolor** (CSS颜色):标题中后向引用链接的颜色. "
 
 #: ../../usage/theming.rst:250
 msgid ""
 "**textalign** (CSS *text-align* value): Text alignment for the body, "
 "default is ``justify``."
-msgstr ""
+msgstr "**textalign** (CSS *text-align* 值):正文的文本对齐方式, 默认为 ``justify``. "
 
 #: ../../usage/theming.rst:255
 msgid "**nature**"
@@ -512,7 +516,7 @@ msgstr "**nature**"
 msgid ""
 "A greenish theme.  There are currently no options beyond *nosidebar* and "
 "*sidebarwidth*."
-msgstr ""
+msgstr "一个绿色的主题. 除了 *nosidebar* 和 *sidebarwidth* 之外, 目前没有其他选项. "
 
 #: ../../usage/theming.rst:259
 msgid "**pyramid**"
@@ -523,7 +527,7 @@ msgid ""
 "A theme from the Pyramid web framework project, designed by Blaise "
 "Laflamme. There are currently no options beyond *nosidebar* and "
 "*sidebarwidth*."
-msgstr ""
+msgstr "由Blaise Laflamme设计的金字塔网络框架项目的主题. 除了 *nosidebar* 和 *sidebarwidth* 之外, 目前没有其他选项. "
 
 #: ../../usage/theming.rst:272
 msgid "**haiku**"
@@ -534,7 +538,7 @@ msgid ""
 "A theme without sidebar inspired by the `Haiku OS user guide <https://www"
 ".haiku-os.org/docs/userguide/en/contents.html>`_.  The following options "
 "are supported:"
-msgstr ""
+msgstr "没有侧栏的主题受到了 `Haiku OS用户指南 <https://www.haiku-os.org/docs/userguide/en/contents.html>`_ 的启发. 支持以下选项:"
 
 #: ../../usage/theming.rst:266
 msgid ""
@@ -542,13 +546,13 @@ msgid ""
 "header will only show the :confval:`html_logo`.  Use this for large "
 "logos. If this is false, the logo (if present) will be shown floating "
 "right, and the documentation title will be put in the header."
-msgstr ""
+msgstr "**full_logo** (true 或 false, 默认为 ``False``):如果这是真的, 标题只会显示 :confval:`html_logo`. 用于大型徽标. 如果这是假的, 则徽标(如果存在)将浮动右侧显示, 文档标题将放在标题中. "
 
 #: ../../usage/theming.rst:271
 msgid ""
 "**textcolor**, **headingcolor**, **linkcolor**, **visitedlinkcolor**, "
 "**hoverlinkcolor** (CSS colors): Colors for various body elements."
-msgstr ""
+msgstr "**textcolor**, **headingcolor**, **linkcolor**, **visitedlinkcolor**, **hoverlinkcolor** (CSS颜色):各种身体元素的颜色. "
 
 #: ../../usage/theming.rst:276
 msgid "**traditional**"
@@ -558,7 +562,7 @@ msgstr "**traditional**"
 msgid ""
 "A theme resembling the old Python documentation.  There are currently no "
 "options beyond *nosidebar* and *sidebarwidth*."
-msgstr ""
+msgstr "一个类似于旧Python文档的主题. 除了 *nosidebar* 和 *sidebarwidth* 之外, 目前没有其他选项. "
 
 #: ../../usage/theming.rst:287
 msgid "**epub**"
@@ -569,19 +573,19 @@ msgid ""
 "A theme for the epub builder.  This theme tries to save visual space "
 "which is a sparse resource on ebook readers.  The following options are "
 "supported:"
-msgstr ""
+msgstr "epub构建器的主题. 这个主题试图保留视觉空间, 这是电子书阅读器上的稀疏资源. 支持以下选项:"
 
 #: ../../usage/theming.rst:283
 msgid ""
 "**relbar1** (true or false, default ``True``): If this is true, the "
 "`relbar1` block is inserted in the epub output, otherwise it is omitted."
-msgstr ""
+msgstr "**relbar1** (true 或 false, 默认为 ``True``): 如果为true, 则将 `relbar1` 块插入epub输出中, 否则将省略. "
 
 #: ../../usage/theming.rst:286
 msgid ""
 "**footer**  (true or false, default ``True``): If this is true, the "
 "`footer` block is inserted in the epub output, otherwise it is omitted."
-msgstr ""
+msgstr "**footer** (true 或 false, 默认为 ``True``):如果为true, 则在脚本输出中插入 `footer` 块, 否则省略. "
 
 #: ../../usage/theming.rst:294
 msgid "**bizstyle**"
@@ -591,18 +595,18 @@ msgstr "**bizstyle**"
 msgid ""
 "A simple bluish theme. The following options are supported beyond "
 "*nosidebar* and *sidebarwidth*:"
-msgstr ""
+msgstr "一个简单的蓝色主题. 除了 *nosidebar* 和 *sidebarwidth* 之外, 还支持以下选项:"
 
 #: ../../usage/theming.rst:296
 msgid "'alabaster', 'sphinx_rtd_theme' and 'bizstyle' theme."
-msgstr "'alabaster', 'sphinx_rtd_theme' and 'bizstyle' theme."
+msgstr "'alabaster', 'sphinx_rtd_theme' 和 'bizstyle' 主题.  ``"
 
 #: ../../usage/theming.rst:299
 msgid ""
 "The 'default' theme has been renamed to 'classic'. 'default' is still "
 "available, however it will emit a notice that it is an alias for the new "
 "'alabaster' theme."
-msgstr ""
+msgstr "'default' 主题已重命名为 'classic'. 'default' 仍然可用, 但它会发出通知, 告知它是新 'alabaster' 主题的别名. "
 
 #: ../../usage/theming.rst:305
 msgid "Third Party Themes"
@@ -622,7 +626,7 @@ msgid ""
 "use, while others are specific to an individual project. A section of "
 "third-party themes is listed below. Many more can be found on PyPI__, "
 "GitHub__ and sphinx-themes.org__."
-msgstr ""
+msgstr "有许多第三方主题可用. 其中一些是一般用途, 而另一些则是针对单个项目的. 下面列出了第三方主题的一部分. 在 PyPI__, GitHub__ 和 sphinx-themes.org__ 上可以找到更多. "
 
 #: ../../usage/theming.rst:335
 msgid "**sphinx_rtd_theme**"
@@ -634,11 +638,11 @@ msgid ""
 "that was made for readthedocs.org. View a working demo over on "
 "readthedocs.org. You can get install and options information at `Read the"
 " Docs Sphinx Theme`_ page."
-msgstr ""
+msgstr "`Read the Docs Sphinx Theme`_. 这是一个针对readthedocs.org制作的适合移动设备的sphinx主题. 在readthedocs.org上查看工作演示. 您可以在 `Read the Docs Sphinx Theme`_ 页面获取安装和选项信息. "
 
 #: ../../usage/theming.rst:334
 msgid "**sphinx_rtd_theme** has become optional."
-msgstr "**sphinx_rtd_theme** has become optional."
+msgstr "**sphinx_rtd_theme** 已成为可选项。"
 
 #~ msgid "Todo"
 #~ msgstr ""

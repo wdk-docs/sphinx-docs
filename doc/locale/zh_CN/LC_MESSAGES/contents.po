@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sphinx 2.1.0+/1499a97c2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 17:17+0800\n"
+"POT-Creation-Date: 2019-05-17 23:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,23 +21,27 @@ msgstr ""
 msgid "Sphinx documentation contents"
 msgstr "Sphinx文档内容"
 
-#: ../../contents.rst:41
+#: ../../contents.rst:42
 msgid "Indices and tables"
 msgstr "指数和表格"
 
-#: ../../contents.rst:45
+#: ../../contents.rst:46
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../contents.rst:46 ../../contents.rst:52
+#: ../../contents.rst:47 ../../contents.rst:53
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../../contents.rst:47
+#: ../../contents.rst:48
 msgid ":ref:`search`"
 msgstr ":ref:`search`"
 
-#: ../../contents.rst:48 ../../contents.rst:53
+#: ../../contents.rst:49 ../../contents.rst:54
 msgid ":ref:`glossary`"
 msgstr ":ref:`glossary`"
+
+#: ../../contents.rst:57
+msgid "Comments"
+msgstr ""
 

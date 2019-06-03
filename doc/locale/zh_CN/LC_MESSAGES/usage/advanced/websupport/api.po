@@ -25,7 +25,7 @@ msgstr "Web Support类"
 msgid ""
 "The main API class for the web support package.  All interactions with "
 "the web support package should occur through this class."
-msgstr "Web支持包的主要API类。与Web支持包的所有交互都应该通过此类进行。"
+msgstr "Web支持包的主要API类. 与Web支持包的所有交互都应该通过此类进行. "
 
 #: ../../usage/advanced/websupport/api.rst:13
 msgid "The class takes the following keyword arguments:"
@@ -37,7 +37,7 @@ msgstr "srcdir"
 
 #: ../../usage/advanced/websupport/api.rst:16
 msgid "The directory containing reStructuredText source files."
-msgstr "The directory containing reStructuredText source files."
+msgstr "包含reStructuredText源文件的目录. "
 
 #: ../../usage/advanced/websupport/api.rst:21
 msgid "builddir"
@@ -48,7 +48,7 @@ msgid ""
 "The directory that build data and static files should be placed in.  This"
 " should be used when creating a :class:`WebSupport` object that will be "
 "used to build data."
-msgstr ""
+msgstr "应该放置构建数据和静态文件的目录. 这应该在创建 :class:`WebSupport` 对象时使用, 该对象将用于构建数据. "
 
 #: ../../usage/advanced/websupport/api.rst:25
 msgid "datadir"
@@ -58,29 +58,29 @@ msgstr "datadir"
 msgid ""
 "The directory that the web support data is in.  This should be used when "
 "creating a :class:`WebSupport` object that will be used to retrieve data."
-msgstr ""
+msgstr "Web支持数据所在的目录. 在创建将用于检索数据的 :class:`WebSupport` 对象时, 应使用此目录. "
 
 #: ../../usage/advanced/websupport/api.rst:30
 msgid "search"
-msgstr "search"
+msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:28
 msgid ""
 "This may contain either a string (e.g. 'xapian') referencing a built-in "
 "search adapter to use, or an instance of a subclass of "
 ":class:`~.search.BaseSearch`."
-msgstr ""
+msgstr "这可能包含引用要使用的内置搜索适配器的字符串(例如 'xapian'), 或者包含以下类的子类的实例 :class:`~.search.BaseSearch`. "
 
 #: ../../usage/advanced/websupport/api.rst:35
 msgid "storage"
-msgstr "storage"
+msgstr ""
 
 #: ../../usage/advanced/websupport/api.rst:33
 msgid ""
 "This may contain either a string representing a database uri, or an "
 "instance of a subclass of :class:`~.storage.StorageBackend`.  If this is "
 "not provided, a new sqlite database will be created."
-msgstr ""
+msgstr "这可能包含表示数据库uri的字符串或子类的实例 :class:`~.storage.StorageBackend`. 如果未提供, 则将创建新的sqlite数据库. "
 
 #: ../../usage/advanced/websupport/api.rst:40
 msgid "moderation_callback"
@@ -91,7 +91,7 @@ msgid ""
 "A callable to be called when a new comment is added that is not "
 "displayed.  It must accept one argument: a dictionary representing the "
 "comment that was added."
-msgstr ""
+msgstr "添加未添加的新注释时要调用的可调用项. 它必须接受一个参数:表示添加的注释的字典. "
 
 #: ../../usage/advanced/websupport/api.rst:49
 msgid "staticdir"
@@ -102,13 +102,13 @@ msgid ""
 "If the static files should be created in a different location **and not "
 "in** ``'/static'``, this should be a string with the name of that "
 "location (e.g. ``builddir + '/static_files'``)."
-msgstr ""
+msgstr "如果静态文件应该在不同的位置 **而不是** 在 ``'/static'`` 中创建, 那么这应该是一个带有该位置名称的字符串(例如 ``builddir + '/static_files'``). "
 
 #: ../../usage/advanced/websupport/api.rst:48
 msgid ""
 "If you specify ``staticdir``, you will typically want to adjust "
 "``staticroot`` accordingly."
-msgstr ""
+msgstr "如果指定 ``staticdir``, 通常需要相应地调整 ``staticroot``. "
 
 #: ../../usage/advanced/websupport/api.rst:53
 msgid "staticroot"
@@ -118,7 +118,7 @@ msgstr "staticroot"
 msgid ""
 "If the static files are not served from ``'/static'``, this should be a "
 "string with the name of that location (e.g. ``'/static_files'``)."
-msgstr ""
+msgstr "如果静态文件不是来自 ``'/static'``, 那么这应该是一个带有该位置名称的字符串(例如 ``'/static_files'``). "
 
 #: ../../usage/advanced/websupport/api.rst:56
 msgid "docroot"
@@ -128,80 +128,80 @@ msgstr "docroot"
 msgid ""
 "If the documentation is not served from the base path of a URL, this "
 "should be a string specifying that path (e.g. ``'docs'``)."
-msgstr ""
+msgstr "如果文档不是从URL的基本路径提供的, 那么这应该是指定该路径的字符串(例如 ``'docs'``). "
 
 #: ../../usage/advanced/websupport/api.rst:62
 msgid ""
 "WebSupport class is moved to sphinxcontrib.websupport from "
 "sphinx.websupport. Please add ``sphinxcontrib-websupport`` package in "
 "your dependency and use moved class instead."
-msgstr ""
+msgstr "WebSupport 类从 sphinx.websupport 移至 sphinxcontrib.websupport. 请在您的依赖项中添加 ``sphinxcontrib-websupport`` 包, 然后使用移动的类. "
 
 #: ../../usage/advanced/websupport/api.rst:68
 msgid "Methods"
-msgstr "Methods"
+msgstr "方法"
 
 #: of sphinxcontrib.websupport.WebSupport.build:1
 msgid ""
 "Build the documentation. Places the data into the `outdir` directory. Use"
 " it like this::"
-msgstr ""
+msgstr "构建文档. 将数据放入 `outdir` 目录. 像这样使用::"
 
 #: of sphinxcontrib.websupport.WebSupport.build:7
 msgid ""
 "This will read reStructured text files from `srcdir`. Then it will build "
 "the pickles and search index, placing them into `builddir`. It will also "
 "save node data to the database."
-msgstr ""
+msgstr "这将从 `srcdir` 读取reStructured文本文件. 然后它将构建pickles和搜索索引, 将它们放入 `builddir`. 它还将节点数据保存到数据库中. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:1
 msgid ""
 "Load and return a document from a pickle. The document will be a dict "
 "object which can be used to render a template::"
-msgstr ""
+msgstr "从pickle加载并返回文档. 该文档将是一个dict对象, 可用于呈现模板::"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:7
 msgid ""
 "In most cases `docname` will be taken from the request path and passed "
 "directly to this function. In Flask, that would be something like this::"
-msgstr ""
+msgstr "在大多数情况下, `docname` 将从请求路径中获取并直接传递给此函数. 在Flask中, 这将是这样的::"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:22
 msgid ""
 "The document dict that is returned contains the following items to be "
 "used during template rendering."
-msgstr ""
+msgstr "返回的文档字典包含在模板渲染期间使用的以下项目. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:25
 msgid "**body**: The main body of the document as HTML"
-msgstr "**body**: The main body of the document as HTML"
+msgstr "**body**: 文档的主体为HTML"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:26
 msgid "**sidebar**: The sidebar of the document as HTML"
-msgstr "**sidebar**: The sidebar of the document as HTML"
+msgstr "**sidebar**: 文档的侧边栏为HTML"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:27
 msgid "**relbar**: A div containing links to related documents"
-msgstr "**relbar**: A div containing links to related documents"
+msgstr "**relbar**: 包含相关文档链接的div"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:28
 msgid "**title**: The title of the document"
-msgstr "**title**: The title of the document"
+msgstr "**title**: 文件的标题"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:29
 msgid "**css**: Links to css files used by Sphinx"
-msgstr "**css**: Links to css files used by Sphinx"
+msgstr "**css**: 链接到Sphinx使用的css文件"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:30
 msgid "**script**: Javascript containing comment options"
-msgstr "**script**: Javascript containing comment options"
+msgstr "**script**: 包含评论选项的Javascript"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:32
 msgid ""
 "This raises "
 ":class:`~sphinxcontrib.websupport.errors.DocumentNotFoundError` if a "
 "document matching `docname` is not found."
-msgstr ""
+msgstr "如果找不到匹配 `docname` 的文档, 则会引发 :class:`~sphinxcontrib.websupport.errors.DocumentNotFoundError`. "
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment
 #: sphinxcontrib.websupport.WebSupport.get_data
@@ -213,7 +213,7 @@ msgstr "参数"
 
 #: of sphinxcontrib.websupport.WebSupport.get_document:35
 msgid "the name of the document to load."
-msgstr "the name of the document to load."
+msgstr "要加载的文档的名称. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:1
 msgid ""
@@ -223,7 +223,7 @@ msgid ""
 "*comments*. *source* is raw source of the node and is used as the "
 "starting point for proposals a user can add. *comments* is a list of "
 "dicts that represent a comment, each having the following items:"
-msgstr ""
+msgstr "获取与 `node_id` 相关的注释和来源. 如果给出 `username`, 则返回的评论中将包含投票信息. 默认的CommentBackend返回一个带有两个键的字典,  *source* 和 *comments*.  *source* 是节点的原始源, 用作用户可以添加的提案的起点. *comments* 是代表评论的dicts列表, 每个都包含以下项目:"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:10
 msgid "Key"
@@ -231,23 +231,23 @@ msgstr "Key"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:10
 msgid "Contents"
-msgstr "Contents"
+msgstr "内容"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:12
 msgid "text"
-msgstr "text"
+msgstr "文本"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:12
 msgid "The comment text."
-msgstr "The comment text."
+msgstr "评论文本. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:13
 msgid "username"
-msgstr "username"
+msgstr "用户名"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:13
 msgid "The username that was stored with the comment."
-msgstr "The username that was stored with the comment."
+msgstr "与评论一起存储的用户名. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:14
 msgid "id"
@@ -255,27 +255,27 @@ msgstr "id"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:14
 msgid "The comment's unique identifier."
-msgstr "The comment's unique identifier."
+msgstr "评论的唯一标识符. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:15
 msgid "rating"
-msgstr "rating"
+msgstr "评分"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:15
 msgid "The comment's current rating."
-msgstr "The comment's current rating."
+msgstr "评论的当前评级. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:16
 msgid "age"
-msgstr "age"
+msgstr "年龄"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:16
 msgid "The time in seconds since the comment was added."
-msgstr "The time in seconds since the comment was added."
+msgstr "添加评论后的秒数. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:17
 msgid "time"
-msgstr "time"
+msgstr "时间"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:17
 msgid ""
@@ -283,45 +283,45 @@ msgid ""
 " month, day, hour, minute, second, iso, and delta. `iso` is the time "
 "formatted in ISO 8601 format. `delta` is a printable form of how old the "
 "comment is (e.g. \"3 hours ago\")."
-msgstr ""
+msgstr "包含时间信息的字典. 它包含以下键:年, 月, 日, 小时, 分钟, 秒, iso和delta.  `iso` 是以ISO 8601格式格式化的时间.  `delta` 是评论的年龄的可打印形式(例如, \"3 hours ago\"). "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:22
 msgid "vote"
-msgstr "vote"
+msgstr "投票"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:22
 msgid ""
 "If `user_id` was given, this will be an integer representing the vote. 1 "
 "for an upvote, -1 for a downvote, or 0 if unvoted."
-msgstr ""
+msgstr "如果给出 `user_id`, 这将是表示投票的整数.  1 表示 upvote, -1 表示 downvote, 或 0 表示未投票. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:25
 msgid "node"
-msgstr "node"
+msgstr "节点"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:25
 msgid ""
 "The id of the node that the comment is attached to. If the comment's "
 "parent is another comment rather than a node, this will be null."
-msgstr ""
+msgstr "注释附加到的节点的id. 如果注释的父级是另一个注释而不是节点, 则它将为null. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:28
 msgid "parent"
-msgstr "parent"
+msgstr "亲"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:28
 msgid ""
 "The id of the comment that this comment is attached to if it is not "
 "attached to a node."
-msgstr ""
+msgstr "如果未附加到节点, 则附加此注释的注释的id. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:30
 msgid "children"
-msgstr "children"
+msgstr "孩子"
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:30
 msgid "A list of all children, in this format."
-msgstr "A list of all children, in this format."
+msgstr "这种格式的所有孩子的列表. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:31
 msgid "proposal_diff"
@@ -331,19 +331,19 @@ msgstr "proposal_diff"
 msgid ""
 "An HTML representation of the differences between the the current source "
 "and the user's proposed source."
-msgstr ""
+msgstr "HTML表示当前源和用户提议的源之间的差异. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:35
 msgid "the id of the node to get comments for."
-msgstr "the id of the node to get comments for."
+msgstr "要获取注释的节点的ID. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:36
 msgid "the username of the user viewing the comments."
-msgstr "the username of the user viewing the comments."
+msgstr "查看评论的用户的用户名. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_data:37
 msgid "whether the user is a moderator."
-msgstr "whether the user is a moderator."
+msgstr "用户是否是主持人. "
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:1
 msgid ""
@@ -351,39 +351,39 @@ msgid ""
 "same format as :meth:`get_comments`. If the comment is being attached to "
 "a node, pass in the node's id (as a string) with the node keyword "
 "argument::"
-msgstr ""
+msgstr "为节点或其他评论添加评论. 以与下面相同的格式返回注释 :meth:`get_comments`. 如果注释附加到节点, 则使用no​​de关键字参数传递节点的id(作为字符串)::"
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:8
 msgid ""
 "If the comment is the child of another comment, provide the parent's id "
 "(as a string) with the parent keyword argument::"
-msgstr ""
+msgstr "如果注释是另一个注释的子项, 请使用parent关键字参数提供父项的id(作为字符串)::"
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:13
 msgid ""
 "If you would like to store a username with the comment, pass in the "
 "optional `username` keyword argument::"
-msgstr ""
+msgstr "如果您想用注释存储用户名, 请传入可选的 `username` 关键字参数::"
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:19
 msgid "the prefixed id of the comment's parent."
-msgstr "the prefixed id of the comment's parent."
+msgstr "注释的父级的前缀id. "
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:20
 msgid "the text of the comment."
-msgstr "the text of the comment."
+msgstr "评论的文本. "
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:21
 msgid "for moderation purposes"
-msgstr "for moderation purposes"
+msgstr "出于审核目的"
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:22
 msgid "the username of the user making the comment."
-msgstr "the username of the user making the comment."
+msgstr "发表评论的用户的用户名. "
 
 #: of sphinxcontrib.websupport.WebSupport.add_comment:23
 msgid "the time the comment was created, defaults to now."
-msgstr "the time the comment was created, defaults to now."
+msgstr "评论创建的时间, 默认为现在. "
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:1
 msgid ""
@@ -392,30 +392,30 @@ msgid ""
 "and value from a form, and then make sure the user is authenticated. A "
 "unique username  must be passed in, which will also be used to retrieve "
 "the user's past voting data. An example, once again in Flask::"
-msgstr ""
+msgstr "处理用户的投票.  Web支持包依赖于API用户来执行身份验证.  API用户通常会从表单接收comment_id和值, 然后确保用户已通过身份验证. 必须传入唯一的用户名, 该用户名还将用于检索用户过去的投票数据. 一个例子, 再一次在Flask ::"
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:19
 msgid "the comment being voted on"
-msgstr "the comment being voted on"
+msgstr "评论被投票"
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:20
 msgid "the unique username of the user voting"
-msgstr "the unique username of the user voting"
+msgstr "用户投票的唯一用户名"
 
 #: of sphinxcontrib.websupport.WebSupport.process_vote:21
 msgid "1 for an upvote, -1 for a downvote, 0 for an unvote."
-msgstr "1 for an upvote, -1 for a downvote, 0 for an unvote."
+msgstr "1表示upvote, -1表示downvote, 0表示unvote. "
 
 #: of sphinxcontrib.websupport.WebSupport.get_search_results:1
 msgid ""
 "Perform a search for the query `q`, and create a set of search results. "
 "Then render the search results as html and return a context dict like the"
 " one created by :meth:`get_document`::"
-msgstr ""
+msgstr "执行查询 `q` 的搜索, 并创建一组搜索结果. 然后将搜索结果呈现为html并返回一个上下文字典, 如下所示 :meth:`get_document`::"
 
 #: of sphinxcontrib.websupport.WebSupport.get_search_results:8
 msgid "the search query"
-msgstr "the search query"
+msgstr "搜索查询"
 
 #~ msgid "Parameters"
 #~ msgstr ""

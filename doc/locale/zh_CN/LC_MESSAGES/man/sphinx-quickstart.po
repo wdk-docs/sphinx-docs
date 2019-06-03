@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:28
 msgid "Display usage summary or Sphinx version."
-msgstr "Display usage summary or Sphinx version."
+msgstr "显示使用情况摘要或Sphinx版本."
 
 #: ../../man/sphinx-quickstart.rst:31
 msgid "Structure Options"
@@ -60,7 +60,7 @@ msgstr "Structure Options"
 
 #: ../../man/sphinx-quickstart.rst:34
 msgid "If specified, separate source and build directories."
-msgstr "If specified, separate source and build directories."
+msgstr "如果指定,则单独的源和构建目录."
 
 #: ../../man/sphinx-quickstart.rst:38
 msgid ""
@@ -72,121 +72,121 @@ msgstr ""
 
 #: ../../man/sphinx-quickstart.rst:44
 msgid "Project Basic Options"
-msgstr "Project Basic Options"
+msgstr "项目基本选项"
 
 #: ../../man/sphinx-quickstart.rst:47
 msgid "Project name will be set. (see :confval:`project`)."
-msgstr "Project name will be set. (see :confval:`project`)."
+msgstr "项目名称将被设置. (见:confval:`project`)."
 
 #: ../../man/sphinx-quickstart.rst:51
 msgid "Author names. (see :confval:`copyright`)."
-msgstr "Author names. (see :confval:`copyright`)."
+msgstr "作者姓名. (见:confval:`copyright`)."
 
 #: ../../man/sphinx-quickstart.rst:55
 msgid "Version of project. (see :confval:`version`)."
-msgstr "Version of project. (see :confval:`version`)."
+msgstr "作者姓名.(See: confval: `copyright`)."
 
 #: ../../man/sphinx-quickstart.rst:59
 msgid "Release of project. (see :confval:`release`)."
-msgstr "Release of project. (see :confval:`release`)."
+msgstr "发布项目.(see :confval:`release`)."
 
 #: ../../man/sphinx-quickstart.rst:63
 msgid "Document language. (see :confval:`language`)."
-msgstr "Document language. (see :confval:`language`)."
+msgstr "文档语言.(see :confval:`language`)."
 
 #: ../../man/sphinx-quickstart.rst:67
 msgid "Source file suffix. (see :confval:`source_suffix`)."
-msgstr "Source file suffix. (see :confval:`source_suffix`)."
+msgstr "源文件后缀.(see :confval:`source_suffix`)."
 
 #: ../../man/sphinx-quickstart.rst:71
 msgid "Master document name. (see :confval:`master_doc`)."
-msgstr "Master document name. (see :confval:`master_doc`)."
+msgstr "主文档名称.(see :confval:`master_doc`)."
 
 #: ../../man/sphinx-quickstart.rst:74
 msgid "Extension Options"
-msgstr "Extension Options"
+msgstr "扩展选项"
 
 #: ../../man/sphinx-quickstart.rst:77
 msgid "Enable `sphinx.ext.autodoc` extension."
-msgstr "Enable `sphinx.ext.autodoc` extension."
+msgstr "启用 sphinx.ext.autodoc 扩展."
 
 #: ../../man/sphinx-quickstart.rst:81
 msgid "Enable `sphinx.ext.doctest` extension."
-msgstr "Enable `sphinx.ext.doctest` extension."
+msgstr "启用 sphinx.ext.doctest 扩展."
 
 #: ../../man/sphinx-quickstart.rst:85
 msgid "Enable `sphinx.ext.intersphinx` extension."
-msgstr "Enable `sphinx.ext.intersphinx` extension."
+msgstr "启用 sphinx.ext.intersphinx 扩展."
 
 #: ../../man/sphinx-quickstart.rst:89
 msgid "Enable `sphinx.ext.todo` extension."
-msgstr "Enable `sphinx.ext.todo` extension."
+msgstr "启用 sphinx.ext.todo 扩展."
 
 #: ../../man/sphinx-quickstart.rst:93
 msgid "Enable `sphinx.ext.coverage` extension."
-msgstr "Enable `sphinx.ext.coverage` extension."
+msgstr "启用 sphinx.ext.coverage 扩展."
 
 #: ../../man/sphinx-quickstart.rst:97
 msgid "Enable `sphinx.ext.imgmath` extension."
-msgstr "Enable `sphinx.ext.imgmath` extension."
+msgstr "启用 sphinx.ext.imgmath 扩展."
 
 #: ../../man/sphinx-quickstart.rst:101
 msgid "Enable `sphinx.ext.mathjax` extension."
-msgstr "Enable `sphinx.ext.mathjax` extension."
+msgstr "启用 sphinx.ext.mathjax 扩展."
 
 #: ../../man/sphinx-quickstart.rst:105
 msgid "Enable `sphinx.ext.ifconfig` extension."
-msgstr "Enable `sphinx.ext.ifconfig` extension."
+msgstr "启用 sphinx.ext.ifconfig 扩展."
 
 #: ../../man/sphinx-quickstart.rst:109
 msgid "Enable `sphinx.ext.viewcode` extension."
-msgstr "Enable `sphinx.ext.viewcode` extension."
+msgstr "启用 sphinx.ext.viewcode 扩展."
 
 #: ../../man/sphinx-quickstart.rst:113
 msgid "Enable `sphinx.ext.githubpages` extension."
-msgstr "Enable `sphinx.ext.githubpages` extension."
+msgstr "启用 sphinx.ext.githubpages 扩展."
 
 #: ../../man/sphinx-quickstart.rst:117
 msgid "Enable arbitrary extensions."
-msgstr "Enable arbitrary extensions."
+msgstr "启用任意扩展."
 
 #: ../../man/sphinx-quickstart.rst:120
 msgid "Makefile and Batchfile Creation Options"
-msgstr "Makefile and Batchfile Creation Options"
+msgstr "Makefile和Batchfile创建选项"
 
 #: ../../man/sphinx-quickstart.rst:123
 msgid ""
 ":file:`Makefile/make.bat` uses (or doesn't use) :ref:`make-mode "
 "<make_mode>`. Default is ``use``, which generates a more concise "
 ":file:`Makefile/make.bat`."
-msgstr ""
+msgstr ":file:`Makefile/make.bat` 使用(或不使用) :ref:`make-mode <make_mode>`. 默认是``use``,它生成一个更简洁的 :file:`Makefile/make.bat`."
 
 #: ../../man/sphinx-quickstart.rst:126
 msgid "make-mode is default."
-msgstr "make-mode is default."
+msgstr "make-mode 是默认的."
 
 #: ../../man/sphinx-quickstart.rst:131
 msgid "Create (or not create) makefile."
-msgstr "Create (or not create) makefile."
+msgstr "创建(或不创建)makefile."
 
 #: ../../man/sphinx-quickstart.rst:135
 msgid "Create (or not create) batchfile"
-msgstr "Create (or not create) batchfile"
+msgstr "创建(或不创建)批处理文件"
 
 #: ../../man/sphinx-quickstart.rst:138
 msgid "Project templating"
-msgstr "Project templating"
+msgstr "项目模板"
 
 #: ../../man/sphinx-quickstart.rst:139
 msgid "Project templating options for sphinx-quickstart"
-msgstr "Project templating options for sphinx-quickstart"
+msgstr "sphinx-quickstart的项目模板选项"
 
 #: ../../man/sphinx-quickstart.rst:144
 msgid ""
 "Template directory for template files.  You can modify the templates of "
 "sphinx project files generated by quickstart.  Following Jinja2 template "
 "files are allowed:"
-msgstr ""
+msgstr "模板文件的模板目录.您可以修改快速入门生成的sphinx项目文件的模板.允许使用以下Jinja2模板文件:"
 
 #: ../../man/sphinx-quickstart.rst:148
 msgid "``master_doc.rst_t``"
@@ -216,11 +216,11 @@ msgstr "``make.bat.new_t``"
 msgid ""
 "In detail, please refer the system template files Sphinx provides. "
 "(``sphinx/templates/quickstart``)"
-msgstr ""
+msgstr "具体请参考Sphinx提供的系统模板文件.(``sphinx/templates/quickstart``)"
 
 #: ../../man/sphinx-quickstart.rst:160
 msgid "Define a template variable"
-msgstr "Define a template variable"
+msgstr "定义模板变量"
 
 #: ../../man/sphinx-quickstart.rst:163
 msgid "See also"

@@ -1,0 +1,775 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2019, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 3.0.0+/7f2c8fd82\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-17 23:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../usage/extensions/sphinx-js.rst:3
+msgid "sphinx-js"
+msgstr "sphinx-js"
+
+#: ../../usage/extensions/sphinx-js.rst:6
+msgid "Why"
+msgstr "为什么"
+
+#: ../../usage/extensions/sphinx-js.rst:8
+msgid ""
+"When you write a JavaScript library, how do you explain it to people? If "
+"it's a small project in a domain your users are familiar with, JSDoc's "
+"alphabetical list of routines might suffice. But in a larger project, it "
+"is useful to intersperse prose with your API docs without having to copy "
+"and paste things."
+msgstr "编写JavaScript库时, 如何向人们解释？ 如果它是用户熟悉的域中的一个小项目, 那么JSDoc按字母顺序排列的例程列表就足够了.  但是在一个更大的项目中, 散布散文与API文档是有用的, 而无需复制和粘贴内容. "
+
+#: ../../usage/extensions/sphinx-js.rst:10
+msgid ""
+"sphinx-js lets you use the industry-leading `Sphinx <http://sphinx-"
+"doc.org/>`_ documentation tool with JS projects. It provides a handful of"
+" directives, patterned after the Python-centric `autodoc <www.sphinx-"
+"doc.org/en/latest/ext/autodoc.html>`_ ones, for pulling JSDoc-formatted "
+"documentation into reStructuredText pages. And, because you can keep "
+"using JSDoc in your code, you remain compatible with the rest of your JS "
+"tooling, like Google's Closure Compiler."
+msgstr "sphinx-js允许您使用业界领先的 `Sphinx <http://sphinx-doc.org/>`_ 文档工具和JS项目. 它提供了一些指令, 在以Python为中心的 `autodoc <www.sphinx-doc.org/en/latest/ext/autodoc.html>`_ 之后, 用于将JSDoc格式的文档拉入reStructuredText页面.  而且, 因为您可以在代码中继续使用JSDoc, 所以您仍然可以与其他JS工具兼容, 例如Google的Closure Compiler. "
+
+#: ../../usage/extensions/sphinx-js.rst:13
+msgid "Setup"
+msgstr "配置"
+
+#: ../../usage/extensions/sphinx-js.rst:15
+msgid ""
+"Install JSDoc using npm. ``jsdoc`` must be on your ``$PATH``, so you "
+"might want to install it globally::"
+msgstr "使用npm安装JSDoc.  ``jsdoc`` 必须在你的 ``$PATH`` 上, 所以你可能想要全局安装它::"
+
+#: ../../usage/extensions/sphinx-js.rst:19
+msgid "We work with jsdoc 3.4.3, 3.5.4, and quite possibly other versions."
+msgstr "我们使用jsdoc 3.4.3,3.5.4, 很可能还有其他版本. "
+
+#: ../../usage/extensions/sphinx-js.rst:21
+msgid "Install sphinx-js, which will pull in Sphinx itself as a dependency::"
+msgstr "安装sphinx-js, 它会将Sphinx本身作为一个依赖项::"
+
+#: ../../usage/extensions/sphinx-js.rst:25
+msgid ""
+"Make a documentation folder in your project by running ``sphinx-"
+"quickstart`` and answering its questions::"
+msgstr "通过运行 ``sphinx-quickstart`` 并回答问题, 在项目中创建一个文档文件夹::"
+
+#: ../../usage/extensions/sphinx-js.rst:54
+msgid ""
+"In the generated Sphinx conf.py file, turn on ``sphinx_js`` by adding it "
+"to ``extensions``::"
+msgstr "在生成的 Sphinx conf.py 文件中, 将 ``sphinx_js`` 添加到 ``extensions``::"
+
+#: ../../usage/extensions/sphinx-js.rst:58
+msgid ""
+"If your JS source code is anywhere but at the root of your project, add "
+"``js_source_path = '../somewhere/else'`` on a line by itself in conf.py. "
+"The root of your JS source tree should be where that setting points, "
+"relative to the conf.py file. (The default, ``../``, works well when "
+"there is a ``docs`` folder at the root of your project and your source "
+"code lives directly inside the root.)"
+msgstr "如果您的JS源代码在项目的根目录中的任何位置, 请在 conf.py 中自行添加 ``js_source_path = '../somewhere/else'`` .  JS源代码树的根目录应该是相对于 conf.py 文件的设置指向的位置.  (当项目的根目录下有一个 ``docs`` 文件夹并且你的源代码直接存在于根目录中时, 默认的 ``../`` 效果很好. )"
+
+#: ../../usage/extensions/sphinx-js.rst:59
+msgid ""
+"If you have special jsdoc configuration, add ``jsdoc_config_path = "
+"'../conf.json'`` (for example) to conf.py as well."
+msgstr "如果您有特殊的jsdoc配置, 请将 ``jsdoc_config_path = '../conf.json'`` (例如)添加到 conf.py 中. "
+
+#: ../../usage/extensions/sphinx-js.rst:60
+msgid ""
+"If you're documenting only JS and no other languages, you can set your "
+"\"primary domain\" to JS in conf.py::"
+msgstr "如果您只记录JS而没有其他语言, 则可以在conf.py中将“主域”设置为JS::"
+
+#: ../../usage/extensions/sphinx-js.rst:64
+msgid "Then you can omit all the \"js:\" prefixes in the directives below."
+msgstr "然后你可以省略下面指令中的所有 \"js:\" 前缀. "
+
+#: ../../usage/extensions/sphinx-js.rst:67
+msgid "Use"
+msgstr "使用"
+
+#: ../../usage/extensions/sphinx-js.rst:69
+msgid ""
+"In short, write a folder full of reStructuredText files, use the "
+"following directives to pull in your JSDoc documentation, then tell "
+"Sphinx to render it all by running ``make html`` in your docs directory. "
+"If you have never used Sphinx or written reStructuredText before, here is"
+" `where we left off in its tutorial <http://www.sphinx-"
+"doc.org/en/stable/tutorial.html#defining-document-structure>`_. For a "
+"quick start, just add things to index.rst for now."
+msgstr "简而言之, 编写一个充满reStructuredText文件的文件夹, 使用以下指令来获取JSDoc文档, 然后告诉Sphinx通过在docs目录中运行 ``make html`` 来渲染它. 如果您之前从未使用过Sphinx或编写过reStructuredText, 那么这里是 `我们在其教程中停止的地方 <http://www.sphinx-doc.org/en/stable/tutorial.html#defining-document-structure>`_ . 为了快速入门, 现在只需向index.rst添加内容即可. "
+
+#: ../../usage/extensions/sphinx-js.rst:72
+msgid "autofunction"
+msgstr "自动功能"
+
+#: ../../usage/extensions/sphinx-js.rst:74
+msgid "First, document your JS code using standard JSDoc formatting::"
+msgstr "首先, 使用标准JSDoc格式记录您的JS代码::"
+
+#: ../../usage/extensions/sphinx-js.rst:91
+msgid ""
+"Then, reference your documentation using sphinx-js directives. Our "
+"directives work much like Sphinx's standard autodoc ones. You can specify"
+" just a function's name... ::"
+msgstr "然后, 使用sphinx-js指令引用您的文档. 我们的指令与Sphinx标准的autodoc指令非常相似. 你只能指定一个函数的名字...... ::"
+
+#: ../../usage/extensions/sphinx-js.rst:95
+msgid ""
+"...and a nicely formatted block of documentation will show up in your "
+"docs."
+msgstr "...一个格式很好的文档块将显示在您的文档中. "
+
+#: ../../usage/extensions/sphinx-js.rst:97
+msgid ""
+"You can also throw in your own explicit parameter list, if you want to "
+"note optional parameters::"
+msgstr "如果要记录可选参数, 也可以输入自己的显式参数列表::"
+
+#: ../../usage/extensions/sphinx-js.rst:102
+msgid ""
+"Parameter properties and destructuring parameters also work fine, using "
+"`standard JSDoc syntax <http://usejsdoc.org/tags-param.html#parameters-"
+"with-properties>`_::"
+msgstr "参数属性和解构参数也可以使用 `标准JSDoc语法 <http://usejsdoc.org/tags-param.html#parameters-with-properties>`_::"
+
+#: ../../usage/extensions/sphinx-js.rst:117
+msgid ""
+"Extraction of default parameter values works as well. These act as "
+"expected, with a few caveats::"
+msgstr "提取默认参数值也很有效. 这些行为符合预期, 但有一些注意事项::"
+
+#: ../../usage/extensions/sphinx-js.rst:148
+msgid ""
+"You can even add additional content. If you do, it will appear just below"
+" any extracted documentation::"
+msgstr "您甚至可以添加其他内容. 如果这样做, 它将出现在任何提取的文档下面::"
+
+#: ../../usage/extensions/sphinx-js.rst:161
+msgid ""
+"``js:autofunction`` has one option, ``:short-name:``, which comes in "
+"handy for chained APIs whose implementation details you want to keep out "
+"of sight. When you use it on a class method, the containing class won't "
+"be mentioned in the docs, the function will appear under its short name "
+"in indices, and cross references must use the short name as well "
+"(``:func:`someFunction```)::"
+msgstr "``js:autofunction`` 有一个选项,  ``:short-name:`` , 它对于链接的API很方便, 它们的实现细节你想要看不见. 当你在类方法上使用它时, 文档中不会提到包含类, 函数将在其索引中的短名称下出现, 并且交叉引用也必须使用短名称(``:func:`someFunction ```)::"
+
+#: ../../usage/extensions/sphinx-js.rst:166
+msgid ""
+"``autofunction`` can also be used on callbacks defined with the "
+"`@callback tag <http://usejsdoc.org/tags-callback.html>`_."
+msgstr "``autofunction`` 也可用于使用 `@callback标签 <http://usejsdoc.org/tags-callback.html>`_ 定义的回调. "
+
+#: ../../usage/extensions/sphinx-js.rst:168
+msgid ""
+"There is experimental support for abusing ``autofunction`` to document "
+"`@typedef tags <http://usejsdoc.org/tags-typedef.html>`_ as well, though "
+"the result will be styled as a function, and ``@property`` tags will fall"
+" misleadingly under an \"Arguments\" heading. Still, it's better than "
+"nothing until we can do it properly."
+msgstr "有一些实验支持滥用 ``autofunction`` 来记录 `@typedef tags <http://usejsdoc.org/tags-typedef.html>`_, 虽然结果将被设计为一个函数, 并且 ``@property`` 标签会在 \"Arguments\" 标题下误导. 不过, 在我们能够做到正确之前, 它总比没有好. "
+
+#: ../../usage/extensions/sphinx-js.rst:171
+msgid "autoclass"
+msgstr "autoclass"
+
+#: ../../usage/extensions/sphinx-js.rst:173
+msgid ""
+"We provide a ``js:autoclass`` directive which documents a class with the "
+"concatenation of its class comment and its constructor comment. It shares"
+" all the features of ``js:autofunction`` and even takes the same "
+"``:short-name:`` flag, which can come in handy for inner classes. The "
+"easiest way to use it is to invoke its ``:members:`` option, which "
+"automatically documents all your class's public methods and attributes::"
+msgstr "我们提供了一个 ``js:autoclass`` 指令, 它使用类注释和构造函数注释的连接来记录一个类. 它共享 ``js:autofunction`` 的所有功能, 甚至采用相同的 ``:short-name:`` 标志, 这对于内部类可以派上用场. 使用它的最简单方法是调用它的 ``:members:`` 选项, 它自动记录你所有类的所有公共方法和属性::"
+
+#: ../../usage/extensions/sphinx-js.rst:178
+msgid "You can add private members by saying... ::"
+msgstr "您可以通过说...添加私人会员::"
+
+#: ../../usage/extensions/sphinx-js.rst:184
+msgid "Privacy is determined by JSDoc ``@private`` tags."
+msgstr "隐私由JSDoc ``@private`` 标签决定. "
+
+#: ../../usage/extensions/sphinx-js.rst:186
+msgid "Exclude certain members by name with ``:exclude-members:``::"
+msgstr "用 ``:exclude-members:`` 按名称排除某些成员::"
+
+#: ../../usage/extensions/sphinx-js.rst:192
+msgid "Or explicitly list the members you want. We will respect your ordering. ::"
+msgstr "或者明确列出您想要的成员. 我们会尊重您的订购.  ::"
+
+#: ../../usage/extensions/sphinx-js.rst:197
+msgid ""
+"When explicitly listing members, you can include ``*`` to include all "
+"unmentioned members. This is useful to have control over ordering of some"
+" elements, without having to include an exhaustive list. ::"
+msgstr "显式列出成员时, 可以包含 ``*`` 以包含所有未提及的成员. 这对于控制某些元素的排序很有用, 而不必包含详尽的列表.  ::"
+
+#: ../../usage/extensions/sphinx-js.rst:202
+msgid ""
+"Finally, if you want full control, pull your class members in one at a "
+"time by embedding ``js:autofunction`` or ``js:autoattribute``::"
+msgstr "最后, 如果你想要完全控制, 可以通过嵌入 ``js:autofunction`` 或 ``js:autoattribute`` 来一次拉一个类成员. ::"
+
+#: ../../usage/extensions/sphinx-js.rst:213
+msgid "autoattribute"
+msgstr "autoattribute"
+
+#: ../../usage/extensions/sphinx-js.rst:215
+msgid "This is useful for documenting public properties::"
+msgstr "这对于记录公共属性很有用::"
+
+#: ../../usage/extensions/sphinx-js.rst:226
+#: ../../usage/extensions/sphinx-js.rst:245
+msgid "And then, in the docs... ::"
+msgstr "然后, 在文档中......::"
+
+#: ../../usage/extensions/sphinx-js.rst:232
+msgid ""
+"This is also the way to document ES6-style getters and setters, as it "
+"omits the trailing ``()`` of a function. The assumed practice is the "
+"usual JSDoc one: document only one of your getter/setter pair::"
+msgstr "这也是记录ES6风格的getter和setter的方法, 因为它省略了函数的尾随 ``()`` .  假定的做法是通常的JSDoc:只记录你的 getter/setter 对中的一个::"
+
+#: ../../usage/extensions/sphinx-js.rst:250
+msgid "Dodging Ambiguity With Pathnames"
+msgstr "用路径名避免歧义"
+
+#: ../../usage/extensions/sphinx-js.rst:252
+msgid ""
+"If you have same-named objects in different files, use pathnames to "
+"disambiguate them. Here's a particularly long example::"
+msgstr "如果在不同文件中有相同名称的对象, 请使用路径名来消除它们的歧义. 这是一个特别长的例子::"
+
+#: ../../usage/extensions/sphinx-js.rst:256
+msgid ""
+"You may recognize the separators ``#.~`` from `JSDoc namepaths "
+"<http://usejsdoc.org/about-namepaths.html>`_; they work the same here."
+msgstr "您可以从 `JSDoc namepaths <http://usejsdoc.org/about-namepaths.html>`_ 中识别分隔符 ``＃. 〜``. 他们在这里工作相同. "
+
+#: ../../usage/extensions/sphinx-js.rst:258
+msgid ""
+"For conciseness, you can use any unique suffix, as long as it consists of"
+" complete path segments. These would all be equivalent to the above, "
+"assuming they are unique within your source tree::"
+msgstr "为简明起见, 您可以使用任何唯一的后缀, 只要它包含完整的路径段即可. 假设它们在源树中是唯一的, 这些都将等同于上述内容::"
+
+#: ../../usage/extensions/sphinx-js.rst:265
+msgid "Things to note:"
+msgstr "注意事项:"
+
+#: ../../usage/extensions/sphinx-js.rst:267
+msgid "We use simple file paths rather than JSDoc's ``module:`` prefix."
+msgstr "我们使用简单的文件路径而不是JSDoc的 ``module:`` 前缀. "
+
+#: ../../usage/extensions/sphinx-js.rst:268
+msgid ""
+"We use simple backslash escaping exclusively rather than switching "
+"escaping schemes halfway through the path; JSDoc itself `is headed that "
+"way as well <https://github.com/jsdoc3/jsdoc/issues/876>`_. The "
+"characters that need to be escaped are ``#.~(/``, though you do not need "
+"to escape the dots in a leading ``./`` or ``../``. A really horrible path"
+" might be... ::"
+msgstr "我们使用简单的反斜杠转义, 而不是在路径中途切换转义方案; JSDoc本身 `也是如此 <https://github.com/jsdoc3/jsdoc/issues/876>`_. 需要转义的字符是 ``＃.~(/``, 虽然你不需要在前导 ``.`` 或 ``../`` 中逃脱点. 一条非常可怕的路径可能是...:::"
+
+#: ../../usage/extensions/sphinx-js.rst:271
+msgid ""
+"Relative paths are relative to the ``js_source_path`` specified in the "
+"config. Absolute paths are not allowed."
+msgstr "相对路径相对于config中指定的 ``js_source_path``. 绝对路径是不允许的. "
+
+#: ../../usage/extensions/sphinx-js.rst:273
+msgid "Behind the scenes, sphinx-js will change all separators to dots so that..."
+msgstr "在幕后, sphinx-js 会将所有分隔符更改为点, 以便......"
+
+#: ../../usage/extensions/sphinx-js.rst:275
+msgid ""
+"Sphinx's \"shortening\" syntax works: ``:func:`~InwardRhs.atMost``` "
+"prints as merely ``atMost()``. (For now, you should always use dots "
+"rather than other namepath separators: ``#~``.)"
+msgstr "Sphinx的“缩短”语法有效: ``:func:`~InwardRhs.atMost``` 只打印 ``atMost()``.  (现在, 你应该总是使用点而不是其他名称路径分隔符: ``＃〜``. )"
+
+#: ../../usage/extensions/sphinx-js.rst:276
+msgid "Sphinx indexes more informatively, saying methods belong to their classes."
+msgstr "Sphinx索引信息更多, 称方法属于他们的类. "
+
+#: ../../usage/extensions/sphinx-js.rst:279
+msgid "Saving Keystrokes By Setting The Primary Domain"
+msgstr "通过设置主域来保存击键"
+
+#: ../../usage/extensions/sphinx-js.rst:281
+msgid ""
+"To save some keystrokes, you can set ``primary_domain = 'js'`` in conf.py"
+" and then say (for example) ``autofunction`` rather than "
+"``js:autofunction``."
+msgstr "要保存一些击键, 你可以在conf.py中设置 ``primary_domain ='js'`` 然后说(例如) ``autofunction`` 而不是 ``js:autofunction``. "
+
+#: ../../usage/extensions/sphinx-js.rst:284
+msgid "TypeScript support"
+msgstr "TypeScript支持"
+
+#: ../../usage/extensions/sphinx-js.rst:286
+msgid ""
+"There is experimental TypeScript support in sphinx-js. Enable it by "
+"setting the config variable ``js_language = 'typescript'``. Then, instead"
+" of installing JSDoc, install TypeDoc (version 0.11.1 is known to work)::"
+msgstr "sphinx-js中有实验性的TypeScript支持. 通过设置配置变量 ``js_language ='typescript'`` 来启用它. 然后, 安装TypeDoc(版本0.11.1已知可以工作), 而不是安装JSDoc::"
+
+#: ../../usage/extensions/sphinx-js.rst:290
+msgid ""
+"The main difference you'll notice is additional **type** fields in "
+"function documentation."
+msgstr "您将注意到的主要区别是函数文档中的其他 **type** 字段. "
+
+#: ../../usage/extensions/sphinx-js.rst:293
+msgid "Configuration Reference"
+msgstr "配置参考"
+
+#: ../../usage/extensions/sphinx-js.rst:296
+msgid "``js_language``"
+msgstr "``js_language``"
+
+#: ../../usage/extensions/sphinx-js.rst:296
+msgid ""
+"Use 'javascript' or 'typescript' depending on the language you use. The "
+"default is 'javascript'."
+msgstr "根据您使用的语言, 使用 'javascript' 或 'typescript'. 默认为 'javascript'. "
+
+#: ../../usage/extensions/sphinx-js.rst:299
+msgid "``js_source_path``"
+msgstr "``js_source_path``"
+
+#: ../../usage/extensions/sphinx-js.rst:299
+msgid ""
+"A list of directories to scan (non-recursively) for JS files, relative to"
+" Sphinx's conf.py file. Can be a string instead if there is only one. If "
+"there is more than one, ``root_for_relative_js_paths`` must be specified "
+"as well."
+msgstr "扫描(非递归)JS文件的目录列表, 相对于Sphinx的conf.py文件. 如果只有一个字符串, 则可以是字符串. 如果有多个, 则必须指定 ``root_for_relative_js_paths``. "
+
+#: ../../usage/extensions/sphinx-js.rst:302
+msgid "``jsdoc_config_path``"
+msgstr "``jsdoc_config_path``"
+
+#: ../../usage/extensions/sphinx-js.rst:302
+msgid ""
+"A conf.py-relative path to a jsdoc or typedoc config file, which is "
+"useful if you want to specify your own jsdoc options, like recursion and "
+"custom filename matching."
+msgstr "jsdoc或typedoc配置文件的conf.py相对路径, 如果要指定自己的jsdoc选项(如递归和自定义文件名匹配), 这将非常有用. "
+
+#: ../../usage/extensions/sphinx-js.rst:305
+msgid "``root_for_relative_js_paths``"
+msgstr "``root_for_relative_js_paths``"
+
+#: ../../usage/extensions/sphinx-js.rst:305
+msgid ""
+"The directory relative to which relative pathnames are resolved. Defaults"
+" to ``js_source_path`` if it is only one item."
+msgstr "如果要指定自己的jsdoc选项(例如递归和自定义文件名匹配), 则jsdoc或typedoc配置文件的conf.py相对路径很有用. "
+
+#: ../../usage/extensions/sphinx-js.rst:308
+msgid "Example"
+msgstr "示例"
+
+#: ../../usage/extensions/sphinx-js.rst:310
+msgid ""
+"A good example using most of sphinx-js's functionality is the Fathom "
+"documentation. A particularly juicy page is "
+"https://mozilla.github.io/fathom/ruleset.html. Click the \"View page "
+"source\" link to see the raw directives."
+msgstr "使用大多数sphinx-js功能的一个很好的例子是Fathom文档. 一个特别多汁的页面是 https://mozilla.github.io/fathom/ruleset.html. 单击 \"查看页面源\" 链接以查看原始指令. "
+
+#: ../../usage/extensions/sphinx-js.rst:312
+msgid ""
+"`ReadTheDocs <https://readthedocs.org/>`_ is the canonical hosting "
+"platform for Sphinx docs and now supports sphinx-js as an opt-in beta. "
+"Put this in the ``.readthedocs.yml`` file at the root of your repo::"
+msgstr "`ReadTheDocs <https://readthedocs.org/>`_ 是Sphinx文档的规范托管平台, 现在支持sphinx-js作为选择加入测试版. 把它放在你的repo根目录下的 ``.readthedocs.yml`` 文件中::"
+
+#: ../../usage/extensions/sphinx-js.rst:318
+msgid ""
+"Then put the version of sphinx-js you want in ``docs/requirements.txt``. "
+"For example... ::"
+msgstr "然后把你想要的sphinx-js版本放在 ``docs/requirements.txt`` 中. 例如...::"
+
+#: ../../usage/extensions/sphinx-js.rst:322
+msgid ""
+"Or, if you prefer, the Fathom repo carries a `Travis CI configuration "
+"<https://github.com/mozilla/fathom/blob/master/.travis.yml>`_ and a "
+"`deployment script "
+"<https://github.com/mozilla/fathom/blob/master/docs/tooling/travis-"
+"deploy-docs>`_ for building docs with sphinx-js and publishing them to "
+"GitHub Pages. Feel free to borrow them."
+msgstr "或者, 如果您愿意, Fathom repo带有 `Travis CI配置 <https://github.com/mozilla/fathom/blob/master/.travis.yml>`_ 和 `部署脚本 <https:// github .com/mozilla/fathom/blob/master/docs/tooling/travis-deploy-docs>`_ 用于使用sphinx-js构建文档并将它们发布到GitHub Pages. 随意借用它们. "
+
+#: ../../usage/extensions/sphinx-js.rst:325
+msgid "Caveats"
+msgstr "注意事项"
+
+#: ../../usage/extensions/sphinx-js.rst:327
+msgid ""
+"We don't understand the inline JSDoc constructs like ``{@link foo}``; you"
+" have to use Sphinx-style equivalents for now, like ``:js:func:`foo``` "
+"(or simply ``:func:`foo``` if you have set ``primary_domain = 'js'`` in "
+"conf.py."
+msgstr "我们不理解内联JSDoc结构, 如 ``{@link foo}``;你现在必须使用Sphinx风格的等价物, 比如 ``:js:func:`foo``` (或者只是 ``:func:`foo``` 如果你设置 ``primary_domain ='js'`` 在conf.py."
+
+#: ../../usage/extensions/sphinx-js.rst:328
+msgid ""
+"So far, we understand and convert the JSDoc block tags ``@param``, "
+"``@returns``, ``@throws``, ``@example`` (without the optional "
+"``<caption>``), ``@deprecated``, ``@see``, and their synonyms. Other ones"
+" will go *poof* into the ether."
+msgstr "到目前为止, 我们理解并转换JSDoc块标签 ``@param``, ``@returns``, ``throws``, ``@example`` (没有可选的 ``<caption>``) , ``@deprecated``, ``@see`` 和他们的同义词. 其他人将 *噗* 进入以太. "
+
+#: ../../usage/extensions/sphinx-js.rst:331
+msgid "Tests"
+msgstr "测试"
+
+#: ../../usage/extensions/sphinx-js.rst:333
+msgid "Run ``python setup.py test``. Run ``tox`` to test across Python versions."
+msgstr "运行 ``python setup.py test`` . 运行 ``tox`` 来测试Python版本. "
+
+#: ../../usage/extensions/sphinx-js.rst:336
+msgid "Version History"
+msgstr "版本历史"
+
+#: ../../usage/extensions/sphinx-js.rst:340
+msgid "2.7.1"
+msgstr "2.7.1"
+
+#: ../../usage/extensions/sphinx-js.rst:339
+msgid "Fix a crash that would happen sometimes with UTF-8 on Windows. #67."
+msgstr "修复Windows上UTF-8有时会发生的崩溃.  ＃67. "
+
+#: ../../usage/extensions/sphinx-js.rst:340
+msgid "Always use conf.py's dir for jsdoc's working dir. #78. (Thomas Khyn)"
+msgstr "始终对jsdoc的工作目录使用conf.py的目录.  ＃78.  (Thomas Khyn)"
+
+#: ../../usage/extensions/sphinx-js.rst:343
+msgid "2.7"
+msgstr "2.7"
+
+#: ../../usage/extensions/sphinx-js.rst:343
+msgid "Add experimental TypeScript support. (Wim Yedema)"
+msgstr "添加实验性TypeScript支持.  (Wim Yedema)"
+
+#: ../../usage/extensions/sphinx-js.rst:348
+msgid "2.6"
+msgstr "2.6"
+
+#: ../../usage/extensions/sphinx-js.rst:346
+msgid "Add support for ``@deprecated`` and ``@see``. (David Li)"
+msgstr "添加对 ``@deprecated`` 和 ``@see`` 的支持. (David Li)"
+
+#: ../../usage/extensions/sphinx-js.rst:347
+msgid "Notice and document JS variadic params nicely. (David Li)"
+msgstr "注意并记录JS variadic params很好.  (David Li)"
+
+#: ../../usage/extensions/sphinx-js.rst:348
+msgid "Add linter to codebase."
+msgstr "将linter添加到代码库. "
+
+#: ../../usage/extensions/sphinx-js.rst:354
+msgid "2.5"
+msgstr "2.5"
+
+#: ../../usage/extensions/sphinx-js.rst:351
+msgid ""
+"Use documented ``@params`` to help fill out the formal param list for a "
+"function. This keeps us from missing params that use destructuring. "
+"(flozz)"
+msgstr "使用记录的 ``@params`` 来帮助填写函数的正式参数列表. 这使我们不会错过使用解构的params.  (flozz)"
+
+#: ../../usage/extensions/sphinx-js.rst:353
+msgid "Improve error reporting when jsdoc is missing."
+msgstr "缺少jsdoc时改进错误报告. "
+
+#: ../../usage/extensions/sphinx-js.rst:354
+msgid ""
+"Add extracted default values to generated formal param lists. (flozz and "
+"erikrose)"
+msgstr "将提取的默认值添加到生成的正式参数列表中.  (flozz and erikrose)"
+
+#: ../../usage/extensions/sphinx-js.rst:361
+msgid "2.4"
+msgstr "2.4"
+
+#: ../../usage/extensions/sphinx-js.rst:357
+msgid "Support the ``@example`` tag. (lidavidm)"
+msgstr "支持 ``@example`` 标签.  (lidavidm)"
+
+#: ../../usage/extensions/sphinx-js.rst:358
+msgid ""
+"Work under Windows. Before, we could hardly find any documentation. "
+"(flozz)"
+msgstr "在Windows下工作. 以前, 我们几乎找不到任何文件.  (flozz)"
+
+#: ../../usage/extensions/sphinx-js.rst:359
+msgid ""
+"Properly unwrap multiple-line JSDoc tags, even if they have Windows line "
+"endings. (Wim Yedema)"
+msgstr "正确展开多行JSDoc标记, 即使它们具有Windows行结尾.  (Wim Yedema)"
+
+#: ../../usage/extensions/sphinx-js.rst:360
+msgid "Drop support for Python 3.3, since Sphinx has also done so."
+msgstr "删除对Python 3.3的支持, 因为Sphinx也已经这样做了. "
+
+#: ../../usage/extensions/sphinx-js.rst:361
+msgid ""
+"Fix build-time crash when using recommonmark (for Markdown support) under"
+" Sphinx >=1.7.1. (jamrizzi)"
+msgstr "在Sphinx> = 1.7.1下使用Recommonmark(用于Markdown支持)时修复构建时崩溃.  (jamrizzi)"
+
+#: ../../usage/extensions/sphinx-js.rst:365
+msgid "2.3.1"
+msgstr "2.3.1"
+
+#: ../../usage/extensions/sphinx-js.rst:364
+msgid ""
+"Find the jsdoc command on Windows, where it has a different name. Then "
+"patch up process communication so it doesn't hang."
+msgstr "在Windows上找到jsdoc命令, 它具有不同的名称. 然后修补进程通信, 使其不挂起. "
+
+#: ../../usage/extensions/sphinx-js.rst:368
+msgid "2.3"
+msgstr "2.3"
+
+#: ../../usage/extensions/sphinx-js.rst:368
+msgid ""
+"Add the ability to say \"*\" within the ``autoclass :members:`` option, "
+"meaning \"and all the members that I didn't explicitly list\"."
+msgstr "添加在 ``autoclass:members:`` 选项中说 \"*\" 的能力, 意思是 \"和我没有明确列出的所有成员\". "
+
+#: ../../usage/extensions/sphinx-js.rst:374
+msgid "2.2"
+msgstr "2.2"
+
+#: ../../usage/extensions/sphinx-js.rst:371
+msgid "Add ``autofunction`` support for ``@callback`` tags. (krassowski)"
+msgstr "为 ``@callback`` 标签添加 ``autofunction`` 支持.  (krassowski)"
+
+#: ../../usage/extensions/sphinx-js.rst:372
+msgid ""
+"Add experimental ``autofunction`` support for ``@typedef`` tags. "
+"(krassowski)"
+msgstr "为 ``@typedef`` 标签添加实验 ``autofunction`` 支持.  (KRASSOWSKI)"
+
+#: ../../usage/extensions/sphinx-js.rst:373
+msgid "Add a nice error message for when jsdoc can't find any JS files."
+msgstr "为jsdoc找不到任何JS文件时添加一条很好的错误消息. "
+
+#: ../../usage/extensions/sphinx-js.rst:374
+msgid ""
+"Pin six more tightly so ``python_2_unicode_compatible`` is sure to be "
+"around."
+msgstr "更紧密地固定六个, 以便 ``python_2_unicode_compatible`` 肯定会出现. "
+
+#: ../../usage/extensions/sphinx-js.rst:380
+msgid "2.1"
+msgstr "2.1"
+
+#: ../../usage/extensions/sphinx-js.rst:377
+msgid ""
+"Allow multiple folders in ``js_source_path``. This is useful for "
+"gradually migrating large projects, one folder at a time, to jsdoc. "
+"Introduce ``root_for_relative_js_paths`` to keep relative paths "
+"unambiguous in the face of multiple source paths."
+msgstr "在 ``js_source_path`` 中允许多个文件夹. 这对于逐步将大型项目(一次一个文件夹)迁移到jsdoc非常有用. 引入 ``root_for_relative_js_paths`` 以在多个源路径面前保持相对路径的明确性. "
+
+#: ../../usage/extensions/sphinx-js.rst:378
+msgid ""
+"Aggregate PathTaken errors, and report them all at once. This means you "
+"don't have to run JSDoc repeatedly while cleaning up large projects."
+msgstr "聚合PathTaken错误, 并立即报告所有错误. 这意味着您在清理大型项目时不必重复运行JSDoc. "
+
+#: ../../usage/extensions/sphinx-js.rst:379
+msgid ""
+"Fix a bytes-vs-strings issue that crashed on versions of Python 3 before "
+"3.6. (jhkennedy)"
+msgstr "修复了在3.6之前的Python 3版本上崩溃的字节vs字符串问题.  (jhkennedy)"
+
+#: ../../usage/extensions/sphinx-js.rst:380
+msgid ""
+"Tolerate JS files that have filename extensions other than \".js\". "
+"Before, when combined with custom jsdoc configuration that ingested such "
+"files, incorrect object pathnames were generated, which led to spurious "
+"\"No JSDoc documentation was found for object ...\" errors."
+msgstr "容忍文件扩展名不是 \". js\" 的JS文件. 之前, 当与摄取此类文件的自定义jsdoc配置结合使用时, 会生成不正确的对象路径名, 从而导致虚假的“找不到对象...的错误的JSDoc文档”. "
+
+#: ../../usage/extensions/sphinx-js.rst:383
+msgid "2.0.1"
+msgstr "2.0.1"
+
+#: ../../usage/extensions/sphinx-js.rst:383
+msgid ""
+"Fix spurious syntax errors while loading large JSDoc output by writing it"
+" to a temp file first. (jhkennedy)"
+msgstr "通过首先将大型JSDoc输出写入临时文件来修复虚假语法错误. (jhkennedy)"
+
+#: ../../usage/extensions/sphinx-js.rst:394
+msgid "2.0"
+msgstr "2.0"
+
+#: ../../usage/extensions/sphinx-js.rst:386
+msgid ""
+"Deal with ambiguous object paths. Symbols with identical JSDoc longnames "
+"(such as two top-level things called \"foo\" in different files) will no "
+"longer have one shadow the other. Introduce an unambiguous path "
+"convention for referring to objects. Add a real parser to parse them "
+"rather than the dirty tricks we were using before. Backward compatibility"
+" breaks a little, because ambiguous references are now a fatal error, "
+"rather than quietly referring to the last definition JSDoc happened to "
+"encounter."
+msgstr "处理模棱两可的对象路径. 具有相同JSDoc长名称的符号(例如在不同文件中称为 \"foo\" 的两个顶级事物)将不再具有另一个阴影. 引入用于引用对象的明确路径约定. 添加一个真正的解析器来解析它们, 而不是我们之前使用的肮脏技巧. 向后兼容性稍微破坏, 因为模糊引用现在是一个致命的错误, 而不是悄悄地引用JSDoc碰巧遇到的最后一个定义. "
+
+#: ../../usage/extensions/sphinx-js.rst:387
+msgid ""
+"Index everything into a suffix tree so you can use any unique path suffix"
+" to refer to an object."
+msgstr "将所有内容索引到后缀树中, 以便您可以使用任何唯一的路径后缀来引用对象. "
+
+#: ../../usage/extensions/sphinx-js.rst:388
+msgid "Other fallout of having a real parser:"
+msgstr "有一个真正的解析器的其他后果:"
+
+#: ../../usage/extensions/sphinx-js.rst:390
+msgid "Stop supporting \"-\" as a namepath separator."
+msgstr "停止支持 \"-\" 作为名称路径分隔符. "
+
+#: ../../usage/extensions/sphinx-js.rst:391
+msgid "No longer spuriously translate escaped separators in namepaths into dots."
+msgstr "不再虚假地将名称路径中的转义分隔符转换为点. "
+
+#: ../../usage/extensions/sphinx-js.rst:392
+msgid ""
+"Otherwise treat paths and escapes properly. For example, we can now "
+"handle symbols that contain \"(\"."
+msgstr "否则正确处理路径和逃逸. 例如, 我们现在可以处理包含 \"(\" 的符号. "
+
+#: ../../usage/extensions/sphinx-js.rst:393
+msgid ""
+"Fix KeyError when trying to gather the constructor params of a plain old "
+"object labeled as a ``@class``."
+msgstr "在尝试收集标记为 ``@class`` 的普通旧对象的构造函数params时修复KeyError. "
+
+#: ../../usage/extensions/sphinx-js.rst:397
+msgid "1.5.2"
+msgstr "1.5.2"
+
+#: ../../usage/extensions/sphinx-js.rst:397
+msgid "Fix crasher while warning that a specified longname isn't found."
+msgstr "修复crasher, 同时警告未找到指定的长名称. "
+
+#: ../../usage/extensions/sphinx-js.rst:400
+msgid "1.5.1"
+msgstr "1.5.1"
+
+#: ../../usage/extensions/sphinx-js.rst:400
+msgid ""
+"Sort ``:members:`` alphabetically when an order is not explicitly "
+"specified."
+msgstr "将 ``:members:`` 选项添加到 ``autoclass`` 中. "
+
+#: ../../usage/extensions/sphinx-js.rst:405
+msgid "1.5"
+msgstr "1.5"
+
+#: ../../usage/extensions/sphinx-js.rst:403
+msgid "Add ``:members:`` option to ``autoclass``."
+msgstr "在 ``autoclass`` 中添加 ``:members:`` 选项. "
+
+#: ../../usage/extensions/sphinx-js.rst:404
+msgid "Add ``:private-members:`` and ``:exclude-members:`` options to go with it."
+msgstr "添加 ``:private-members:`` 和 ``:exclude-members:`` 选项. "
+
+#: ../../usage/extensions/sphinx-js.rst:405
+msgid "Significantly refactor to allow directive classes to talk to each other."
+msgstr "重要的重构允许指令类相互通信. "
+
+#: ../../usage/extensions/sphinx-js.rst:408
+msgid "1.4"
+msgstr "1.4"
+
+#: ../../usage/extensions/sphinx-js.rst:408
+msgid "Add ``jsdoc_config_path`` option."
+msgstr "添加 ``jsdoc_config_path`` 选项. "
+
+#: ../../usage/extensions/sphinx-js.rst:412
+msgid "1.3.1"
+msgstr "1.3.1"
+
+#: ../../usage/extensions/sphinx-js.rst:411
+msgid ""
+"Tolerate @args and other info field lines that are wrapped in the source "
+"code."
+msgstr "容忍包含在源代码中的@args和其他信息字段行. "
+
+#: ../../usage/extensions/sphinx-js.rst:412
+msgid ""
+"Cite the file and line of the source comment in Sphinx-emitted warnings "
+"and errors."
+msgstr "在Sphinx发出的警告和错误中引用源注释的文件和行. "
+
+#: ../../usage/extensions/sphinx-js.rst:415
+msgid "1.3"
+msgstr "1.3"
+
+#: ../../usage/extensions/sphinx-js.rst:415
+msgid "Add ``autoattribute`` directive."
+msgstr "添加 ``autoattribute`` 指令. "
+
+#: ../../usage/extensions/sphinx-js.rst:420
+msgid "1.2"
+msgstr "1.2"
+
+#: ../../usage/extensions/sphinx-js.rst:418
+msgid ""
+"Always do full rebuilds; don't leave pages stale when JS code has changed"
+" but the RSTs have not."
+msgstr "始终做完全重建;当JS代码发生变化但RST没有变更时, 不要让页面过时. "
+
+#: ../../usage/extensions/sphinx-js.rst:419
+msgid "Make Python-3-compatible."
+msgstr "使Python-3兼容. "
+
+#: ../../usage/extensions/sphinx-js.rst:420
+msgid "Add basic ``autoclass`` directive."
+msgstr "添加基本​​的 ``autoclass`` 指令. "
+
+#: ../../usage/extensions/sphinx-js.rst:423
+msgid "1.1"
+msgstr "1.1"
+
+#: ../../usage/extensions/sphinx-js.rst:423
+msgid "Add ``:short-name:`` option."
+msgstr "添加 ``:short-name:`` 选项. "
+
+#: ../../usage/extensions/sphinx-js.rst:425
+msgid "1.0"
+msgstr "1.0"
+
+#: ../../usage/extensions/sphinx-js.rst:426
+msgid "Initial release, with just ``js:autofunction``"
+msgstr "初始版本, 只有 ``js:autofunction``"
+

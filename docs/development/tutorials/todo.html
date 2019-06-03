@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>开发 “TODO” 扩展 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
+    <title>开发 “TODO” 扩展 &#8212; Sphinx 2.1.0+/7f2c8fd82 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
+          title="在 Sphinx 2.1.0+/7f2c8fd82 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -166,55 +166,35 @@
             
   <div class="section" id="developing-a-todo-extension">
 <h1>开发 “TODO” 扩展<a class="headerlink" href="#developing-a-todo-extension" title="永久链接至标题">¶</a></h1>
-<p>The objective of this tutorial is to create a more comprehensive extension than
-that created in <a class="reference internal" href="helloworld.html"><span class="doc">开发一个 “Hello world” 扩展</span></a>. Whereas that guide just covered writing a
-custom <a class="reference internal" href="../../glossary.html#term-directive"><span class="xref std std-term">directive</span></a>, this guide adds multiple directives, along with custom
-nodes, additional config values and custom event handlers. To this end, we will
-cover a <code class="docutils literal notranslate"><span class="pre">todo</span></code> extension that adds capabilities to include todo entries in the
-documentation, and to collect these in a central place. This is similar the
-<code class="docutils literal notranslate"><span class="pre">sphinxext.todo</span></code> extension distributed with Sphinx.</p>
+<p>本教程的目标是创建一个比在 <a class="reference internal" href="helloworld.html"><span class="doc">开发一个 “Hello world” 扩展</span></a> 中创建的更全面的扩展.虽然该指南仅涉及编写自定义 <a class="reference internal" href="../../glossary.html#term-directive"><span class="xref std std-term">directive</span></a>,但本指南添加了多个指令,以及自定义节点,其他配置值和自定义事件处理程序.为此,我们将介绍一个 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 扩展,它增加了在文档中包含todo条目的功能,并在中心位置收集这些条目.这类似于与Sphinx一起发布的 <code class="docutils literal notranslate"><span class="pre">sphinxext.todo</span></code> 扩展.</p>
 <div class="section" id="overview">
 <h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>To understand the design of this extension, refer to
-<a class="reference internal" href="../../extdev/index.html#important-objects"><span class="std std-ref">重要的对象</span></a> and <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">建立阶段</span></a>.</p>
+<p>要了解此扩展的设计,请参考 <a class="reference internal" href="../../extdev/index.html#important-objects"><span class="std std-ref">重要的对象</span></a> 和 <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">建立阶段</span></a>.</p>
 </div>
-<p>We want the extension to add the following to Sphinx:</p>
+<p>我们希望扩展程序将以下内容添加到Sphinx:</p>
 <ul class="simple">
-<li><p>A <code class="docutils literal notranslate"><span class="pre">todo</span></code> directive, containing some content that is marked with “TODO” and
-only shown in the output if a new config value is set. Todo entries should not
-be in the output by default.</p></li>
-<li><p>A <code class="docutils literal notranslate"><span class="pre">todolist</span></code> directive that creates a list of all todo entries throughout the
-documentation.</p></li>
+<li><p>一个 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 指令,包含一些用 “TODO” 标记的内容,如果设置了新的配置值,则只显示在输出中. Todo条目默认不应该在输出中.</p></li>
+<li><p>一个 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 指令,用于创建整个文档中所有todo条目的列表.</p></li>
 </ul>
-<p>For that, we will need to add the following elements to Sphinx:</p>
+<p>为此,我们需要将以下元素添加到Sphinx:</p>
 <ul class="simple">
-<li><p>New directives, called <code class="docutils literal notranslate"><span class="pre">todo</span></code> and <code class="docutils literal notranslate"><span class="pre">todolist</span></code>.</p></li>
-<li><p>New document tree nodes to represent these directives, conventionally also
-called <code class="docutils literal notranslate"><span class="pre">todo</span></code> and <code class="docutils literal notranslate"><span class="pre">todolist</span></code>.  We wouldn’t need new nodes if the new
-directives only produced some content representable by existing nodes.</p></li>
-<li><p>A new config value <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> (config value names should start
-with the extension name, in order to stay unique) that controls whether todo
-entries make it into the output.</p></li>
-<li><p>New event handlers: one for the <a class="reference internal" href="../../extdev/appapi.html#event-doctree-resolved"><code class="xref std std-event docutils literal notranslate"><span class="pre">doctree-resolved</span></code></a> event, to replace
-the todo and todolist nodes, and one for <a class="reference internal" href="../../extdev/appapi.html#event-env-purge-doc"><code class="xref std std-event docutils literal notranslate"><span class="pre">env-purge-doc</span></code></a> (the reason
-for that will be covered later).</p></li>
+<li><p>新的指令,称为 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 和 <code class="docutils literal notranslate"><span class="pre">todolist</span></code>.</p></li>
+<li><p>用于表示这些指令的新文档树节点,通常也称为 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 和 <code class="docutils literal notranslate"><span class="pre">todolist</span></code>.如果新指令仅产生现有节点可表示的某些内容,则我们不需要新节点.</p></li>
+<li><p>一个新的配置值 <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> (配置值名称应以扩展名开头,以保持唯一),控制todo条目是否使其进入输出.</p></li>
+<li><p>新事件处理程序: 一个用于 <a class="reference internal" href="../../extdev/appapi.html#event-doctree-resolved"><code class="xref std std-event docutils literal notranslate"><span class="pre">doctree-resolved</span></code></a> 事件,用于替换todo和todolist节点,另一个用于 <a class="reference internal" href="../../extdev/appapi.html#event-env-purge-doc"><code class="xref std std-event docutils literal notranslate"><span class="pre">env-purge-doc</span></code></a> (其原因将在后面介绍).</p></li>
 </ul>
 </div>
 <div class="section" id="prerequisites">
 <h2>先决条件<a class="headerlink" href="#prerequisites" title="永久链接至标题">¶</a></h2>
-<p>As with <a class="reference internal" href="helloworld.html"><span class="doc">开发一个 “Hello world” 扩展</span></a>, we will not be distributing this plugin via PyPI so
-once again we need a Sphinx project to call this from. You can use an existing
-project or create a new one using <strong class="program">sphinx-quickstart</strong>.</p>
-<p>We assume you are using separate source (<code class="file docutils literal notranslate"><span class="pre">source</span></code>) and build
-(<code class="file docutils literal notranslate"><span class="pre">build</span></code>) folders. Your extension file could be in any folder of your
-project. In our case, let’s do the following:</p>
+<p>与 <a class="reference internal" href="helloworld.html"><span class="doc">开发一个 “Hello world” 扩展</span></a> 一样,我们不会通过PyPI分发这个插件,所以我们需要一个Sphinx项目来调用它.您可以使用 <strong class="program">sphinx-quickstart</strong> 来使用现有项目或创建新项目.</p>
+<p>我们假设您使用单独的源(<code class="file docutils literal notranslate"><span class="pre">source</span></code>)和build(<code class="file docutils literal notranslate"><span class="pre">build</span></code>)文件夹.您的扩展文件可以位于项目的任何文件夹中.在我们的例子中,让我们做以下事情:</p>
 <ol class="arabic simple">
-<li><p>Create an <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> folder in <code class="file docutils literal notranslate"><span class="pre">source</span></code></p></li>
-<li><p>Create a new Python file in the <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> folder called <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code></p></li>
+<li><p>在 <code class="file docutils literal notranslate"><span class="pre">source</span></code> 中创建一个 <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> 文件夹</p></li>
+<li><p>在 <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> 文件夹中创建一个名为 <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code> 的新Python文件</p></li>
 </ol>
-<p>Here is an example of the folder structure you might obtain:</p>
+<p>以下是您可能获得的文件夹结构的示例:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>└── source
     ├── _ext
     │   └── todo.py
@@ -229,8 +209,7 @@ project. In our case, let’s do the following:</p>
 </div>
 <div class="section" id="writing-the-extension">
 <h2>编写扩展<a class="headerlink" href="#writing-the-extension" title="永久链接至标题">¶</a></h2>
-<p>Open <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code> and paste the following code in it, all of which we will
-explain in detail shortly:</p>
+<p>打开 <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code> 并在其中粘贴以下代码,所有这些我们将在稍后详细解释:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
@@ -480,11 +459,9 @@ explain in detail shortly:</p>
     <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>This is far more extensive extension than the one detailed in <a class="reference internal" href="helloworld.html"><span class="doc">开发一个 “Hello world” 扩展</span></a>,
-however, we will will look at each piece step-by-step to explain what’s
-happening.</p>
-<p class="rubric">The node classes</p>
-<p>Let’s start with the node classes:</p>
+<p>这是比以下详细介绍的更广泛的扩展 <a class="reference internal" href="helloworld.html"><span class="doc">开发一个 “Hello world” 扩展</span></a>,但是,我们将逐步查看每个部分以解释正在发生的事情.</p>
+<p class="rubric">节点类</p>
+<p>让我们从节点类开始:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -514,22 +491,14 @@ happening.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">depart_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
-<p>Node classes usually don’t have to do anything except inherit from the standard
-docutils classes defined in <code class="xref py py-mod docutils literal notranslate"><span class="pre">docutils.nodes</span></code>.  <code class="docutils literal notranslate"><span class="pre">todo</span></code> inherits from
-<code class="docutils literal notranslate"><span class="pre">Admonition</span></code> because it should be handled like a note or warning, <code class="docutils literal notranslate"><span class="pre">todolist</span></code>
-is just a “general” node.</p>
+<p>除了继承自 <code class="xref py py-mod docutils literal notranslate"><span class="pre">docutils.nodes</span></code> 中定义的标准docutils类之外,节点类通常不需要做任何事情. <code class="docutils literal notranslate"><span class="pre">todo</span></code> 继承自 <code class="docutils literal notranslate"><span class="pre">Admonition</span></code> ,因为它应该像笔记或警告一样处理, <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 只是一个“普通”节点.</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Many extensions will not have to create their own node classes and work fine
-with the nodes already provided by <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/doctree.html">docutils</a> and <a class="reference internal" href="../../extdev/nodes.html#nodes"><span class="std std-ref">Sphinx</span></a>.</p>
+<p>许多扩展不必创建自己的节点类,并且可以使用 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/doctree.html">docutils</a> 和 <span class="xref std std-ref">Sphinx</span>.</p>
 </div>
-<p class="rubric">The directive classes</p>
-<p>A directive class is a class deriving usually from
-<a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code></a>. The directive interface is also
-covered in detail in the <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">docutils documentation</a>; the important thing is that
-the class should have attributes that configure the allowed markup, and a
-<code class="docutils literal notranslate"><span class="pre">run</span></code> method that returns a list of nodes.</p>
-<p>Looking first at the <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> directive:</p>
+<p class="rubric">指令类</p>
+<p>指令类是通常从“派生”派生的类 <a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code></a>.指令接口也在 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">docutils documentation</a> 中详细介绍;重要的是该类应该具有配置允许标记的属性,并且 <code class="docutils literal notranslate"><span class="pre">run</span></code> 方法,返回节点列表.</p>
+<p>首先看一下 <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> 指令:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -539,10 +508,7 @@ the class should have attributes that configure the allowed markup, and a
         <span class="k">return</span> <span class="p">[</span><span class="n">todolist</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)]</span>
 </pre></div>
 </td></tr></table></div>
-<p>It’s very simple, creating and returning an instance of our <code class="docutils literal notranslate"><span class="pre">todolist</span></code> node
-class.  The <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> directive itself has neither content nor
-arguments that need to be handled. That brings us to the <code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code>
-directive:</p>
+<p>它非常简单,创建并返回我们的 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 节点类的实例. <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code> 指令本身既没有内容也没有需要处理的参数.这就把我们带到了 <code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code> 指令:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -592,31 +558,10 @@ directive:</p>
         <span class="k">return</span> <span class="p">[</span><span class="n">targetnode</span><span class="p">,</span> <span class="n">todo_node</span><span class="p">]</span>
 </pre></div>
 </td></tr></table></div>
-<p>Several important things are covered here. First, as you can see, we’re now
-subclassing the <a class="reference internal" href="../../extdev/utils.html#sphinx.util.docutils.SphinxDirective" title="sphinx.util.docutils.SphinxDirective"><code class="xref py py-class docutils literal notranslate"><span class="pre">SphinxDirective</span></code></a> helper class
-instead of the usual <a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">Directive</span></code></a> class. This
-gives us access to the <a class="reference internal" href="../../extdev/index.html#important-objects"><span class="std std-ref">build environment instance</span></a>
-using the <code class="docutils literal notranslate"><span class="pre">self.env</span></code> property. Without this, we’d have to use the rather
-convoluted <code class="docutils literal notranslate"><span class="pre">self.state.document.settings.env</span></code>. Then, to act as a link target
-(from <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code>), the <code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code> directive needs to return a
-target node in addition to the <code class="docutils literal notranslate"><span class="pre">todo</span></code> node.  The target ID (in HTML, this will
-be the anchor name) is generated by using <code class="docutils literal notranslate"><span class="pre">env.new_serialno</span></code> which returns a
-new unique integer on each call and therefore leads to unique target names. The
-target node is instantiated without any text (the first two arguments).</p>
-<p>On creating admonition node, the content body of the directive are parsed using
-<code class="docutils literal notranslate"><span class="pre">self.state.nested_parse</span></code>.  The first argument gives the content body, and
-the second one gives content offset.  The third argument gives the parent node
-of parsed result, in our case the <code class="docutils literal notranslate"><span class="pre">todo</span></code> node. Following this, the <code class="docutils literal notranslate"><span class="pre">todo</span></code>
-node is added to the environment.  This is needed to be able to create a list of
-all todo entries throughout the documentation, in the place where the author
-puts a <code class="docutils literal notranslate"><span class="pre">todolist</span></code> directive.  For this case, the environment attribute
-<code class="docutils literal notranslate"><span class="pre">todo_all_todos</span></code> is used (again, the name should be unique, so it is prefixed
-by the extension name).  It does not exist when a new environment is created, so
-the directive must check and create it if necessary.  Various information about
-the todo entry’s location are stored along with a copy of the node.</p>
-<p>In the last line, the nodes that should be put into the doctree are returned:
-the target node and the admonition node.</p>
-<p>The node structure that the directive returns looks like this:</p>
+<p>这里介绍了几个重要的事情.首先,正如您所看到的,我们现在继承子类 <a class="reference internal" href="../../extdev/utils.html#sphinx.util.docutils.SphinxDirective" title="sphinx.util.docutils.SphinxDirective"><code class="xref py py-class docutils literal notranslate"><span class="pre">SphinxDirective</span></code></a> 助手类而不是通常的 <a class="reference internal" href="../../extdev/markupapi.html#docutils.parsers.rst.Directive" title="docutils.parsers.rst.Directive"><code class="xref py py-class docutils literal notranslate"><span class="pre">Directive</span></code></a> 类.这使我们可以使用 <code class="docutils literal notranslate"><span class="pre">self.env</span></code> 属性访问 <a class="reference internal" href="../../extdev/index.html#important-objects"><span class="std std-ref">build environment instance</span></a>.没有这个,我们必须使用相当复杂的 <code class="docutils literal notranslate"><span class="pre">self.state.document.settings.env</span></code>.然后,作为一个链接目标(来自 <code class="docutils literal notranslate"><span class="pre">TodolistDirective</span></code>), <code class="docutils literal notranslate"><span class="pre">TodoDirective</span></code> 指令除了 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 节点外还需要返回一个目标节点.目标ID(在HTML中,这将是锚名称)是使用 <code class="docutils literal notranslate"><span class="pre">env.new_serialno</span></code> 生成的,它在每次调用时返回一个新的唯一整数,因此会导致唯一的目标名称.目标节点实例化而没有任何文本(前两个参数).</p>
+<p>在创建admonition节点时,使用 <code class="docutils literal notranslate"><span class="pre">self.state.nested_pa​​rse</span></code> 解析指令的内容主体.第一个参数给出内容主体,第二个参数给出内容偏移量.第三个参数给出了解析结果的父节点,在我们的例子中是 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 节点.在此之后, <code class="docutils literal notranslate"><span class="pre">todo</span></code> 节点被添加到环境中.这需要能够在整个文档中创建所有todo条目的列表,在作者放置 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 指令的地方.在这种情况下,使用环境属性 <code class="docutils literal notranslate"><span class="pre">todo_all_todos</span></code> (同样,名称应该是唯一的,因此它以扩展名称为前缀).创建新环境时不存在,因此必要时必须检查并创建指令.关于todo条目位置的各种信息与节点的副本一起存储.</p>
+<p>在最后一行中,将返回应放入doctree的节点:目标节点和admonition节点.</p>
+<p>指令返回的节点结构如下所示:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+--------------------+</span>
 <span class="o">|</span> <span class="n">target</span> <span class="n">node</span>        <span class="o">|</span>
 <span class="o">+--------------------+</span>
@@ -632,13 +577,9 @@ the target node and the admonition node.</p>
      <span class="o">+--------------------+</span>
 </pre></div>
 </div>
-<p class="rubric">The event handlers</p>
-<p>Event handlers are one of Sphinx’s most powerful features, providing a way to
-do hook into any part of the documentation process. There are many events
-provided by Sphinx itself, as detailed in <a class="reference internal" href="../../extdev/appapi.html#events"><span class="std std-ref">the API guide</span></a>, and
-we’re going to use a subset of them here.</p>
-<p>Let’s look at the event handlers used in the above example.  First, the one for
-the <a class="reference internal" href="../../extdev/appapi.html#event-env-purge-doc"><code class="xref std std-event docutils literal notranslate"><span class="pre">env-purge-doc</span></code></a> event:</p>
+<p class="rubric">事件处理程序</p>
+<p>事件处理程序是Sphinx最强大的功能之一,提供了一种挂钩文档过程任何部分的方法. Sphinx本身提供了许多事件,详见 <a class="reference internal" href="../../extdev/appapi.html#events"><span class="std std-ref">API guide</span></a>,我们将在这里使用它们的子集.</p>
+<p>让我们看看上面例子中使用的事件处理程序.首先,一个用于 <a class="reference internal" href="../../extdev/appapi.html#event-env-purge-doc"><code class="xref std std-event docutils literal notranslate"><span class="pre">env-purge-doc</span></code></a> 事件:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -652,14 +593,8 @@ the <a class="reference internal" href="../../extdev/appapi.html#event-env-purge
                           <span class="k">if</span> <span class="n">todo</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">docname</span><span class="p">]</span>
 </pre></div>
 </td></tr></table></div>
-<p>Since we store information from source files in the environment, which is
-persistent, it may become out of date when the source file changes.  Therefore,
-before each source file is read, the environment’s records of it are cleared,
-and the <a class="reference internal" href="../../extdev/appapi.html#event-env-purge-doc"><code class="xref std std-event docutils literal notranslate"><span class="pre">env-purge-doc</span></code></a> event gives extensions a chance to do the same.
-Here we clear out all todos whose docname matches the given one from the
-<code class="docutils literal notranslate"><span class="pre">todo_all_todos</span></code> list.  If there are todos left in the document, they will be
-added again during parsing.</p>
-<p>The other handler belongs to the <a class="reference internal" href="../../extdev/appapi.html#event-doctree-resolved"><code class="xref std std-event docutils literal notranslate"><span class="pre">doctree-resolved</span></code></a> event:</p>
+<p>由于我们将源文件中的信息存储在持久的环境中,因此当源文件发生更改时,它可能会过时.因此,在读取每个源文件之前,清除环境的记录,并且 <a class="reference internal" href="../../extdev/appapi.html#event-env-purge-doc"><code class="xref std std-event docutils literal notranslate"><span class="pre">env-purge-doc</span></code></a> 事件为扩展提供了执行相同操作的机会.在这里,我们清除所有todos,其docname与 <code class="docutils literal notranslate"><span class="pre">todo_all_todos</span></code> 列表中的给定匹配.如果文档中还有待办事项,则在解析期间将再次添加它们.</p>
+<p>另一个处理程序属于 <a class="reference internal" href="../../extdev/appapi.html#event-doctree-resolved"><code class="xref std std-event docutils literal notranslate"><span class="pre">doctree-resolved</span></code></a> 事件:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -741,24 +676,9 @@ added again during parsing.</p>
         <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
-<p>The <a class="reference internal" href="../../extdev/appapi.html#event-doctree-resolved"><code class="xref std std-event docutils literal notranslate"><span class="pre">doctree-resolved</span></code></a> event is emitted at the end of <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">phase 3
-(resolving)</span></a> and allows custom resolving to be done. The handler
-we have written for this event is a bit more involved. If the
-<code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> config value (which we’ll describe shortly) is false,
-all <code class="docutils literal notranslate"><span class="pre">todo</span></code> and <code class="docutils literal notranslate"><span class="pre">todolist</span></code> nodes are removed from the documents. If not,
-<code class="docutils literal notranslate"><span class="pre">todo</span></code> nodes just stay where and how they are.  <code class="docutils literal notranslate"><span class="pre">todolist</span></code> nodes are
-replaced by a list of todo entries, complete with backlinks to the location
-where they come from.  The list items are composed of the nodes from the
-<code class="docutils literal notranslate"><span class="pre">todo</span></code> entry and docutils nodes created on the fly: a paragraph for each
-entry, containing text that gives the location, and a link (reference node
-containing an italic node) with the backreference. The reference URI is built
-by <code class="xref py py-meth docutils literal notranslate"><span class="pre">sphinx.builders.Builder.get_relative_uri`()</span></code> which creates a suitable
-URI depending on the used builder, and appending the todo node’s (the target’s)
-ID as the anchor name.</p>
-<p class="rubric">The <code class="docutils literal notranslate"><span class="pre">setup</span></code> function</p>
-<p>As noted <a class="reference internal" href="helloworld.html"><span class="doc">previously</span></a>, the <code class="docutils literal notranslate"><span class="pre">setup</span></code> function is a requirement
-and is used to plug directives into Sphinx. However, we also use it to hook up
-the other parts of our extension. Let’s look at our <code class="docutils literal notranslate"><span class="pre">setup</span></code> function:</p>
+<p><a class="reference internal" href="../../extdev/appapi.html#event-doctree-resolved"><code class="xref std std-event docutils literal notranslate"><span class="pre">doctree-resolved</span></code></a> 事件在以下结尾发出 <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">阶段3(解析)</span></a> 并允许自定义解析.我们为此事件编写的处理程序涉及更多.如果 <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> 配置值(我们将在稍后描述)为false,则从文档中删除所有 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 和 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 节点.如果没有, <code class="docutils literal notranslate"><span class="pre">todo</span></code> 节点就会停留在哪里以及它们如何. <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 节点被todo条目列表替换,并带有到它们来自的位置的反向链接.列表项由 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 条目中的节点和动态创建的docutils节点组成:每个条目的段落,包含给出位置的文本,以及包含斜体节点的链接(包含斜体节点的参考节点)反向引用.引用URI由以下构建 <a class="reference internal" href="../../extdev/builderapi.html#sphinx.builders.Builder.get_relative_uri" title="sphinx.builders.Builder.get_relative_uri"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sphinx.builders.Builder.get_relative_uri()</span></code></a>, 它根据使用的构建器创建合适的URI,并附加待办事项节点(目标)的ID作为锚名称.</p>
+<p class="rubric"><code class="docutils literal notranslate"><span class="pre">setup</span></code>  函数</p>
+<p>如上所述 <a class="reference internal" href="helloworld.html"><span class="doc">之前的</span></a>, <code class="docutils literal notranslate"><span class="pre">setup</span></code> 函数是一个要求,用于将指令插入Sphinx.但是,我们也使用它来连接扩展的其他部分.让我们看看我们的 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 函数:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -798,40 +718,26 @@ the other parts of our extension. Let’s look at our <code class="docutils lite
     <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>The calls in this function refer to the classes and functions we added earlier.
-What the individual calls do is the following:</p>
+<p>此函数中的调用是指我们之前添加的类和函数.个人电话的作用如下:</p>
 <ul>
-<li><p><a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_config_value" title="sphinx.application.Sphinx.add_config_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_config_value()</span></code></a> lets Sphinx know that it should recognize the
-new <em>config value</em> <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code>, whose default value should be
-<code class="docutils literal notranslate"><span class="pre">False</span></code> (this also tells Sphinx that it is a boolean value).</p>
-<p>If the third argument was <code class="docutils literal notranslate"><span class="pre">'html'</span></code>, HTML documents would be full rebuild if the
-config value changed its value.  This is needed for config values that
-influence reading (build <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">phase 1 (reading)</span></a>).</p>
+<li><p><a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_config_value" title="sphinx.application.Sphinx.add_config_value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_config_value()</span></code></a> 让Sphinx知道它应该识别新的 <em>config 值</em> <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code>,其默认值应该是 <code class="docutils literal notranslate"><span class="pre">False</span></code> (这也告诉Sphinx它是一个布尔值) .</p>
+<p>如果第三个参数是 <code class="docutils literal notranslate"><span class="pre">'html'</span></code>,如果配置值改变了它的值,HTML文档将完全重建.这对于影响读取的配置值是必需的(build:ref:<cite>phase 1(reading)&lt;build-phases&gt;</cite>).</p>
 </li>
-<li><p><a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_node" title="sphinx.application.Sphinx.add_node"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_node()</span></code></a> adds a new <em>node class</em> to the build system.  It also
-can specify visitor functions for each supported output format.  These visitor
-functions are needed when the new nodes stay until <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">phase 4 (writing)</span></a>. Since the <code class="docutils literal notranslate"><span class="pre">todolist</span></code> node is always replaced in
-<a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">phase 3 (resolving)</span></a>, it doesn’t need any.</p></li>
-<li><p><a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive" title="sphinx.application.Sphinx.add_directive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_directive()</span></code></a> adds a new <em>directive</em>, given by name and class.</p></li>
-<li><p>Finally, <a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.connect" title="sphinx.application.Sphinx.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> adds an <em>event handler</em> to the event whose
-name is given by the first argument.  The event handler function is called
-with several arguments which are documented with the event.</p></li>
+<li><p><a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_node" title="sphinx.application.Sphinx.add_node"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_node()</span></code></a> 为构建系统添加了一个新的 <em>node class</em>.它还可以为每种支持的输出格式指定访问者功能.当新节点停留时,需要这些访问者函数 <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">阶段4(写入)</span></a>.由于 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 节点总是被替换为 <a class="reference internal" href="../../extdev/index.html#build-phases"><span class="std std-ref">phase 3(resolving)</span></a>,它不需要任何节点.</p></li>
+<li><p><a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive" title="sphinx.application.Sphinx.add_directive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_directive()</span></code></a> 添加一个新的*指令*,由name和class给出.</p></li>
+<li><p>最后,:meth:<cite>~Sphinx.connect</cite> 将 <em>事件处理程序</em> 添加到名称由第一个参数给出的事件中.使用事件记录的几个参数调用事件处理函数.</p></li>
 </ul>
-<p>With this, our extension is complete.</p>
+<p>有了这个,我们的扩展就完成了.</p>
 </div>
 <div class="section" id="using-the-extension">
 <h2>使用扩展<a class="headerlink" href="#using-the-extension" title="永久链接至标题">¶</a></h2>
-<p>As before, we need to enable the extension by declaring it in our
-<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> file. There are two steps necessary here:</p>
+<p>和以前一样,我们需要通过在我们的 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 文件中声明它来启用扩展.这里有两个步骤:</p>
 <ol class="arabic simple">
-<li><p>Add the <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> directory to the <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python path</a> using
-<code class="docutils literal notranslate"><span class="pre">sys.path.append</span></code>. This should be placed at the top of the file.</p></li>
-<li><p>Update or create the <a class="reference internal" href="../../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> list and add the extension file
-name to the list</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">sys.path.append</span></code> 将 <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> 目录添加到 <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python path</a> 中.这应该放在文件的顶部.</p></li>
+<li><p>更新或创建 <a class="reference internal" href="../../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 列表并将扩展名文件名添加到列表中</p></li>
 </ol>
-<p>In addition, we may wish to set the <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> config value. As
-noted above, this defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code> but we can set it explicitly.</p>
-<p>For example:</p>
+<p>另外,我们可能希望设置 <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> 配置值.如上所述,这默认为“False”,但我们可以明确地设置它.</p>
+<p>例如:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -842,7 +748,7 @@ noted above, this defaults to <code class="docutils literal notranslate"><span c
 <span class="n">todo_include_todos</span> <span class="o">=</span> <span class="bp">False</span>
 </pre></div>
 </div>
-<p>You can now use the extension throughout your project. For example:</p>
+<p>您现在可以在整个项目中使用扩展程序.例如:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">index.rst</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Hello, world</span>
@@ -880,15 +786,11 @@ Some more text here...
 </pre></div>
 </div>
 </div>
-<p>Because we have configured <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>, we won’t
-actually see anything rendered for the <code class="docutils literal notranslate"><span class="pre">todo</span></code> and <code class="docutils literal notranslate"><span class="pre">todolist</span></code> directives.
-However, if we toggle this to true, we will see the output described
-previously.</p>
+<p>因为我们已将 <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> 配置为 <code class="docutils literal notranslate"><span class="pre">False</span></code>,所以我们实际上看不到为 <code class="docutils literal notranslate"><span class="pre">todo</span></code> 和 <code class="docutils literal notranslate"><span class="pre">todolist</span></code> 指令渲染的内容.但是,如果我们将其切换为true,我们将看到前面描述的输出.</p>
 </div>
 <div class="section" id="further-reading">
 <h2>延伸阅读<a class="headerlink" href="#further-reading" title="永久链接至标题">¶</a></h2>
-<p>For more information, refer to the <a class="reference external" href="http://docutils.sourceforge.net/docs/">docutils</a> documentation and
-<a class="reference internal" href="../../extdev/index.html"><span class="doc">开发扩展</span></a>.</p>
+<p>有关更多信息,请参阅 <a class="reference external" href="http://docutils.sourceforge.net/docs/">docutils</a> 文档和 <a class="reference internal" href="../../extdev/index.html"><span class="doc">开发扩展</span></a>.</p>
 </div>
 </div>
 
@@ -924,7 +826,7 @@ previously.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7f2c8fd82 创建。
     </div>
   </body>
 </html>

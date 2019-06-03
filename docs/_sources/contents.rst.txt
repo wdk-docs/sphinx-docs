@@ -34,6 +34,7 @@ Sphinx documentation contents
    changes
    examples
    authors
+   todolist
 
 
 
@@ -51,3 +52,9 @@ Indices and tables
 
    * :ref:`modindex`
    * :ref:`glossary`
+
+Comments
+===========
+
+.. disqus::
+    :disqus_identifier: sphinx

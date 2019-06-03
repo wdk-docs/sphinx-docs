@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 2.1.0+/e678b9c34\n"
+"Project-Id-Version: Sphinx 3.0.0+/7f2c8fd82\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 19:54+0800\n"
+"POT-Creation-Date: 2019-05-17 23:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,15 +60,15 @@ msgstr ""
 msgid "If you write an extension that you think others will find useful or you think should be included as a part of Sphinx, please write to the project mailing list (`join here <https://groups.google.com/forum/#!forum/sphinx-dev>`_)."
 msgstr ""
 
-#: ../../usage/extensions/index.rst:65
+#: ../../usage/extensions/index.rst:66
 msgid "Where to put your own extensions?"
 msgstr ""
 
-#: ../../usage/extensions/index.rst:67
+#: ../../usage/extensions/index.rst:68
 msgid "Extensions local to a project should be put within the project's directory structure.  Set Python's module search path, ``sys.path``, accordingly so that Sphinx can find them.  For example, if your extension ``foo.py`` lies in the ``exts`` subdirectory of the project root, put into :file:`conf.py`::"
 msgstr ""
 
-#: ../../usage/extensions/index.rst:78
+#: ../../usage/extensions/index.rst:79
 msgid "You can also install extensions anywhere else on ``sys.path``, e.g. in the ``site-packages`` directory."
 msgstr ""
 

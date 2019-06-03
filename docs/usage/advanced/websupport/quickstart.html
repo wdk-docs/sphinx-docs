@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>Web支持快速入门 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
+    <title>Web支持快速入门 &#8212; Sphinx 2.1.0+/7f2c8fd82 文档</title>
     <link rel="stylesheet" href="../../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
+          title="在 Sphinx 2.1.0+/7f2c8fd82 文档 中搜索"
           href="../../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../../genindex.html" />
@@ -171,11 +171,7 @@
 <span id="websupportquickstart"></span><h1>Web支持快速入门<a class="headerlink" href="#web-support-quick-start" title="永久链接至标题">¶</a></h1>
 <div class="section" id="building-documentation-data">
 <h2>构建文档数据<a class="headerlink" href="#building-documentation-data" title="永久链接至标题">¶</a></h2>
-<p>To make use of the web support package in your application you’ll need to build
-the data it uses.  This data includes pickle files representing documents,
-search indices, and node data that is used to track where comments and other
-things are in a document.  To do this you will need to create an instance of the
-<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> class and call its <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.build" title="sphinxcontrib.websupport.WebSupport.build"><code class="xref py py-meth docutils literal notranslate"><span class="pre">build()</span></code></a> method:</p>
+<p>要在应用程序中使用Web支持包,您需要构建它使用的数据.此数据包括表示文档,搜索索引和节点数据的pickle文件,这些文件用于跟踪文档中注释和其他内容的位置.要做到这一点,你需要创建一个 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> 类的实例并调用它 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.build" title="sphinxcontrib.websupport.WebSupport.build"><code class="xref py py-meth docutils literal notranslate"><span class="pre">build()</span></code></a> 方法:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.websupport</span> <span class="k">import</span> <span class="n">WebSupport</span>
 
 <span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="n">srcdir</span><span class="o">=</span><span class="s1">&#39;/path/to/rst/sources/&#39;</span><span class="p">,</span>
@@ -185,35 +181,26 @@ things are in a document.  To do this you will need to create an instance of the
 <span class="n">support</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This will read reStructuredText sources from <code class="docutils literal notranslate"><span class="pre">srcdir</span></code> and place the necessary
-data in <code class="docutils literal notranslate"><span class="pre">builddir</span></code>.  The <code class="docutils literal notranslate"><span class="pre">builddir</span></code> will contain two sub-directories: one
-named “data” that contains all the data needed to display documents, search
-through documents, and add comments to documents.  The other directory will be
-called “static” and contains static files that should be served from “/static”.</p>
+<p>这将从 <code class="docutils literal notranslate"><span class="pre">srcdir</span></code> 读取reStructuredText源,并将必要的数据放在 <code class="docutils literal notranslate"><span class="pre">builddir</span></code> 中. <code class="docutils literal notranslate"><span class="pre">builddir</span></code> 将包含两个子目录: 一个名为 “data”,其中包含显示文档,搜索文档和向文档添加注释所需的所有数据.另一个目录将被称为“静态”,并包含应该从 “/static” 提供的静态文件.</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>If you wish to serve static files from a path other than “/static”, you can
-do so by providing the <em>staticdir</em> keyword argument when creating the
-<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> object.</p>
+<p>如果您希望从 “/static” 以外的路径提供静态文件,可以在创建 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> 对象时提供 <em>staticdir</em> 关键字参数。</p>
 </div>
 </div>
 <div class="section" id="integrating-sphinx-documents-into-your-webapp">
 <h2>将Sphinx文档集成到您的Webapp中<a class="headerlink" href="#integrating-sphinx-documents-into-your-webapp" title="永久链接至标题">¶</a></h2>
-<p>Now that the data is built, it’s time to do something useful with it.  Start off
-by creating a <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> object for your application:</p>
+<p>现在数据已经构建完毕,是时候做一些有用的事了.首先为您的应用程序创建一个 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> 对象:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.websupport</span> <span class="k">import</span> <span class="n">WebSupport</span>
 
 <span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="n">datadir</span><span class="o">=</span><span class="s1">&#39;/path/to/the/data&#39;</span><span class="p">,</span>
                      <span class="n">search</span><span class="o">=</span><span class="s1">&#39;xapian&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You’ll only need one of these for each set of documentation you will be working
-with.  You can then call its <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a> method to access
-individual documents:</p>
+<p>对于您将要使用的每组文档,您只需要其中一个.然后,您可以调用它: <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a> 方法来访问单个文档:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">contents</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">get_document</span><span class="p">(</span><span class="s1">&#39;contents&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This will return a dictionary containing the following items:</p>
+<p>这将返回包含以下项目的字典:</p>
 <ul class="simple">
 <li><p><strong>body</strong>: 文档的主体为HTML</p></li>
 <li><p><strong>sidebar</strong>: 文档的侧边栏为HTML</p></li>
@@ -222,8 +209,7 @@ individual documents:</p>
 <li><p><strong>css</strong>: 链接到Sphinx使用的CSS文件</p></li>
 <li><p><strong>script</strong>: 包含评论选项的JavaScript</p></li>
 </ul>
-<p>This dict can then be used as context for templates.  The goal is to be easy to
-integrate with your existing templating system.  An example using <a class="reference external" href="http://jinja.pocoo.org/">Jinja2</a> is:</p>
+<p>然后可以将此dict用作模板的上下文.目标是轻松与您现有的模板系统集成.使用 <a class="reference external" href="http://jinja.pocoo.org/">Jinja2</a> 的一个例子是:</p>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">extends</span> <span class="s2">&quot;layout.html&quot;</span> <span class="cp">%}</span>
 
 <span class="cp">{%</span>- <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}</span>
@@ -256,21 +242,14 @@ integrate with your existing templating system.  An example using <a class="refe
 </div>
 <div class="section" id="authentication">
 <h3>认证<a class="headerlink" href="#authentication" title="永久链接至标题">¶</a></h3>
-<p>To use certain features such as voting, it must be possible to authenticate
-users.  The details of the authentication are left to your application.  Once a
-user has been authenticated you can pass the user’s details to certain
-<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> methods using the <em>username</em> and <em>moderator</em> keyword
-arguments.  The web support package will store the username with comments and
-votes.  The only caveat is that if you allow users to change their username you
-must update the websupport package’s data:</p>
+<p>要使用某些功能(如投票),必须可以对用户进行身份验证.身份验证的详细信息留给您的应用程序.一旦用户通过身份验证,您就可以使用 <em>username</em> 和 <em>moderator</em> 关键字参数将用户的详细信息传递给某些 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> 方法. Web支持包将存储带有注释和投票的用户名.唯一需要注意的是,如果您允许用户更改其用户名,则必须更新websupport包的数据:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">support</span><span class="o">.</span><span class="n">update_username</span><span class="p">(</span><span class="n">old_username</span><span class="p">,</span> <span class="n">new_username</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><em>username</em> should be a unique string which identifies a user, and <em>moderator</em>
 should be a boolean representing whether the user has moderation privileges.
 The default value for <em>moderator</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>An example <a class="reference external" href="http://flask.pocoo.org/">Flask</a> function that checks whether a
-user is logged in and then retrieves a document is:</p>
+<p>一个示例 <a class="reference external" href="http://flask.pocoo.org/">Flask</a> 函数检查用户是否登录然后检索文档是:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.websupport.errors</span> <span class="k">import</span> <span class="o">*</span>
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&lt;path:docname&gt;&#39;</span><span class="p">)</span>
@@ -284,17 +263,10 @@ user is logged in and then retrieves a document is:</p>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;doc.html&#39;</span><span class="p">,</span> <span class="n">document</span><span class="o">=</span><span class="n">document</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The first thing to notice is that the <em>docname</em> is just the request path.  This
-makes accessing the correct document easy from a single view.  If the user is
-authenticated, then the username and moderation status are passed along with the
-docname to <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a>.  The web support package will then
-add this data to the <code class="docutils literal notranslate"><span class="pre">COMMENT_OPTIONS</span></code> that are used in the template.</p>
+<p>首先要注意的是 <em>docname</em> 只是请求路径.这样可以从单个视图轻松访问正确的文档.如果用户已通过身份验证,则用户名和审核状态将与docname一起传递到 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a>.然后,Web支持包将此数据添加到模板中使用的 <code class="docutils literal notranslate"><span class="pre">COMMENT_OPTIONS</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>This only works if your documentation is served from your
-document root. If it is served from another directory, you will
-need to prefix the url route with that directory, and give the <cite>docroot</cite>
-keyword argument when creating the web support object:</p>
+<p>这仅适用于从文档根目录提供文档的情况.如果它是从另一个目录提供的,则需要在url路由前加上该目录,并在创建Web支持对象时给出 <cite>docroot</cite> 关键字参数:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">docroot</span><span class="o">=</span><span class="s1">&#39;docs&#39;</span><span class="p">)</span>
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/&lt;path:docname&gt;&#39;</span><span class="p">)</span>
@@ -305,12 +277,7 @@ keyword argument when creating the web support object:</p>
 </div>
 <div class="section" id="performing-searches">
 <h2>执行搜索<a class="headerlink" href="#performing-searches" title="永久链接至标题">¶</a></h2>
-<p>To use the search form built-in to the Sphinx sidebar, create a function to
-handle requests to the URL ‘search’ relative to the documentation root.  The
-user’s search query will be in the GET parameters, with the key <cite>q</cite>.  Then use
-the <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_search_results" title="sphinxcontrib.websupport.WebSupport.get_search_results"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code></a> method to
-retrieve search results. In <a class="reference external" href="http://flask.pocoo.org/">Flask</a> that would be
-like this:</p>
+<p>要使用Sphinx侧边栏内置的搜索表单,请创建一个函数来处理相对于文档根目录的URL ‘search’ 请求.用户的搜索查询将在GET参数中,键为 <cite>q</cite>.然后使用 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_search_results" title="sphinxcontrib.websupport.WebSupport.get_search_results"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code></a> 方法检索搜索结果.在 <a class="reference external" href="http://flask.pocoo.org/">Flask</a> 就像这样:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
     <span class="n">q</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
@@ -318,17 +285,11 @@ like this:</p>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;doc.html&#39;</span><span class="p">,</span> <span class="n">document</span><span class="o">=</span><span class="n">document</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note that we used the same template to render our search results as we did to
-render our documents.  That’s because <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_search_results" title="sphinxcontrib.websupport.WebSupport.get_search_results"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code></a>
-returns a context dict in the same format that <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a>
-does.</p>
+<p>请注意,我们使用相同的模板来渲染搜索结果,就像我们渲染文档一样.那是因为 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_search_results" title="sphinxcontrib.websupport.WebSupport.get_search_results"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_search_results()</span></code></a> 返回一个上下文字典,其格式与 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_document" title="sphinxcontrib.websupport.WebSupport.get_document"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_document()</span></code></a> 相同.</p>
 </div>
 <div class="section" id="comments-proposals">
 <h2>评论和建议<a class="headerlink" href="#comments-proposals" title="永久链接至标题">¶</a></h2>
-<p>Now that this is done it’s time to define the functions that handle the AJAX
-calls from the script.  You will need three functions.  The first function is
-used to add a new comment, and will call the web support method
-<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.add_comment" title="sphinxcontrib.websupport.WebSupport.add_comment"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code></a>:</p>
+<p>现在已经完成了,现在是时候定义处理来自脚本的AJAX调用的函数了.您将需要三个功能.第一个函数用于添加新注释,并将调用Web支持方法 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.add_comment" title="sphinxcontrib.websupport.WebSupport.add_comment"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/add_comment&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">add_comment</span><span class="p">():</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
@@ -342,12 +303,7 @@ used to add a new comment, and will call the web support method
     <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">comment</span><span class="o">=</span><span class="n">comment</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You’ll notice that both a <code class="docutils literal notranslate"><span class="pre">parent_id</span></code> and <code class="docutils literal notranslate"><span class="pre">node_id</span></code> are sent with the
-request. If the comment is being attached directly to a node, <code class="docutils literal notranslate"><span class="pre">parent_id</span></code>
-will be empty. If the comment is a child of another comment, then <code class="docutils literal notranslate"><span class="pre">node_id</span></code>
-will be empty. Then next function handles the retrieval of comments for a
-specific node, and is aptly named
-<a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_data" title="sphinxcontrib.websupport.WebSupport.get_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_data()</span></code></a>:</p>
+<p>您会注意到 <code class="docutils literal notranslate"><span class="pre">parent_id</span></code> 和 <code class="docutils literal notranslate"><span class="pre">node_id</span></code> 都随请求一起发送.如果注释直接附加到节点,则 <code class="docutils literal notranslate"><span class="pre">parent_id</span></code> 将为空.如果注释是另一个注释的子项,那么 <code class="docutils literal notranslate"><span class="pre">node_id</span></code> 将为空.然后,下一个函数处理特定节点的注释检索,并且恰当地命名为 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.get_data" title="sphinxcontrib.websupport.WebSupport.get_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_data()</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/get_comments&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">get_comments</span><span class="p">():</span>
     <span class="n">username</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="kc">None</span>
@@ -357,8 +313,7 @@ specific node, and is aptly named
     <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The final function that is needed will call <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.process_vote" title="sphinxcontrib.websupport.WebSupport.process_vote"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_vote()</span></code></a>,
-and will handle user votes on comments:</p>
+<p>需要的最后一个函数将调用 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.process_vote" title="sphinxcontrib.websupport.WebSupport.process_vote"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_vote()</span></code></a>,并将处理用户对评论的投票:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/process_vote&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">process_vote</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -374,18 +329,14 @@ and will handle user votes on comments:</p>
 </div>
 <div class="section" id="comment-moderation">
 <h2>评论审核<a class="headerlink" href="#comment-moderation" title="永久链接至标题">¶</a></h2>
-<p>By default, all comments added through <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.add_comment" title="sphinxcontrib.websupport.WebSupport.add_comment"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code></a> are
-automatically displayed.  If you wish to have some form of moderation, you can
-pass the <code class="docutils literal notranslate"><span class="pre">displayed</span></code> keyword argument:</p>
+<p>默认情况下,将自动显示通过 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport.add_comment" title="sphinxcontrib.websupport.WebSupport.add_comment"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code></a> 添加的所有注释.如果你想要某种形式的审核,你可以传递 <code class="docutils literal notranslate"><span class="pre">displayed</span></code> 关键字参数:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">comment</span> <span class="o">=</span> <span class="n">support</span><span class="o">.</span><span class="n">add_comment</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">node_id</span><span class="o">=</span><span class="s1">&#39;node_id&#39;</span><span class="p">,</span>
                               <span class="n">parent_id</span><span class="o">=</span><span class="s1">&#39;parent_id&#39;</span><span class="p">,</span>
                               <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">proposal</span><span class="o">=</span><span class="n">proposal</span><span class="p">,</span>
                               <span class="n">displayed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can then create a new view to handle the moderation of comments.  It
-will be called when a moderator decides a comment should be accepted and
-displayed:</p>
+<p>然后,您可以创建一个新视图来处理注释的审核.当主持人决定接受并显示评论时,将调用它:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/docs/accept_comment&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">accept_comment</span><span class="p">():</span>
     <span class="n">moderator</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">moderator</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">user</span> <span class="k">else</span> <span class="kc">False</span>
@@ -394,18 +345,15 @@ displayed:</p>
     <span class="k">return</span> <span class="s1">&#39;OK&#39;</span>
 </pre></div>
 </div>
-<p>通过删除评论来拒绝评论。</p>
-<p>To perform a custom action (such as emailing a moderator) when a new comment is
-added but not displayed, you can pass callable to the <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a>
-class when instantiating your support object:</p>
+<p>通过删除评论来拒绝评论.</p>
+<p>要在添加新注释但未显示时执行自定义操作(例如通过电子邮件发送主持人),可以在实例化支持对象时将callable传递给 <a class="reference internal" href="api.html#sphinxcontrib.websupport.WebSupport" title="sphinxcontrib.websupport.WebSupport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebSupport</span></code></a> 类:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moderation_callback</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Do something...&quot;&quot;&quot;</span>
 
 <span class="n">support</span> <span class="o">=</span> <span class="n">WebSupport</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">moderation_callback</span><span class="o">=</span><span class="n">moderation_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The moderation callback must take one argument, which will be the same comment
-dict that is returned by <code class="xref py py-meth docutils literal notranslate"><span class="pre">add_comment()</span></code>.</p>
+<p>审核回调必须采用一个参数,该参数将是由:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>add_comment`返回的相同注释dict.</p>
 </div>
 </div>
 
@@ -441,7 +389,7 @@ dict that is returned by <code class="xref py py-meth docutils literal notransla
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7f2c8fd82 创建。
     </div>
   </body>
 </html>

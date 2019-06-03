@@ -1,0 +1,583 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2019, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 3.0.0+/7f2c8fd82\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-17 23:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../usage/extensions/sphinx-js.rst:3
+msgid "sphinx-js"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:6
+msgid "Why"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:8
+msgid "When you write a JavaScript library, how do you explain it to people? If it's a small project in a domain your users are familiar with, JSDoc's alphabetical list of routines might suffice. But in a larger project, it is useful to intersperse prose with your API docs without having to copy and paste things."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:10
+msgid "sphinx-js lets you use the industry-leading `Sphinx <http://sphinx-doc.org/>`_ documentation tool with JS projects. It provides a handful of directives, patterned after the Python-centric `autodoc <www.sphinx-doc.org/en/latest/ext/autodoc.html>`_ ones, for pulling JSDoc-formatted documentation into reStructuredText pages. And, because you can keep using JSDoc in your code, you remain compatible with the rest of your JS tooling, like Google's Closure Compiler."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:13
+msgid "Setup"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:15
+msgid "Install JSDoc using npm. ``jsdoc`` must be on your ``$PATH``, so you might want to install it globally::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:19
+msgid "We work with jsdoc 3.4.3, 3.5.4, and quite possibly other versions."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:21
+msgid "Install sphinx-js, which will pull in Sphinx itself as a dependency::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:25
+msgid "Make a documentation folder in your project by running ``sphinx-quickstart`` and answering its questions::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:54
+msgid "In the generated Sphinx conf.py file, turn on ``sphinx_js`` by adding it to ``extensions``::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:58
+msgid "If your JS source code is anywhere but at the root of your project, add ``js_source_path = '../somewhere/else'`` on a line by itself in conf.py. The root of your JS source tree should be where that setting points, relative to the conf.py file. (The default, ``../``, works well when there is a ``docs`` folder at the root of your project and your source code lives directly inside the root.)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:59
+msgid "If you have special jsdoc configuration, add ``jsdoc_config_path = '../conf.json'`` (for example) to conf.py as well."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:60
+msgid "If you're documenting only JS and no other languages, you can set your \"primary domain\" to JS in conf.py::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:64
+msgid "Then you can omit all the \"js:\" prefixes in the directives below."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:67
+msgid "Use"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:69
+msgid "In short, write a folder full of reStructuredText files, use the following directives to pull in your JSDoc documentation, then tell Sphinx to render it all by running ``make html`` in your docs directory. If you have never used Sphinx or written reStructuredText before, here is `where we left off in its tutorial <http://www.sphinx-doc.org/en/stable/tutorial.html#defining-document-structure>`_. For a quick start, just add things to index.rst for now."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:72
+msgid "autofunction"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:74
+msgid "First, document your JS code using standard JSDoc formatting::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:91
+msgid "Then, reference your documentation using sphinx-js directives. Our directives work much like Sphinx's standard autodoc ones. You can specify just a function's name... ::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:95
+msgid "...and a nicely formatted block of documentation will show up in your docs."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:97
+msgid "You can also throw in your own explicit parameter list, if you want to note optional parameters::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:102
+msgid "Parameter properties and destructuring parameters also work fine, using `standard JSDoc syntax <http://usejsdoc.org/tags-param.html#parameters-with-properties>`_::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:117
+msgid "Extraction of default parameter values works as well. These act as expected, with a few caveats::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:148
+msgid "You can even add additional content. If you do, it will appear just below any extracted documentation::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:161
+msgid "``js:autofunction`` has one option, ``:short-name:``, which comes in handy for chained APIs whose implementation details you want to keep out of sight. When you use it on a class method, the containing class won't be mentioned in the docs, the function will appear under its short name in indices, and cross references must use the short name as well (``:func:`someFunction```)::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:166
+msgid "``autofunction`` can also be used on callbacks defined with the `@callback tag <http://usejsdoc.org/tags-callback.html>`_."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:168
+msgid "There is experimental support for abusing ``autofunction`` to document `@typedef tags <http://usejsdoc.org/tags-typedef.html>`_ as well, though the result will be styled as a function, and ``@property`` tags will fall misleadingly under an \"Arguments\" heading. Still, it's better than nothing until we can do it properly."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:171
+msgid "autoclass"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:173
+msgid "We provide a ``js:autoclass`` directive which documents a class with the concatenation of its class comment and its constructor comment. It shares all the features of ``js:autofunction`` and even takes the same ``:short-name:`` flag, which can come in handy for inner classes. The easiest way to use it is to invoke its ``:members:`` option, which automatically documents all your class's public methods and attributes::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:178
+msgid "You can add private members by saying... ::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:184
+msgid "Privacy is determined by JSDoc ``@private`` tags."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:186
+msgid "Exclude certain members by name with ``:exclude-members:``::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:192
+msgid "Or explicitly list the members you want. We will respect your ordering. ::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:197
+msgid "When explicitly listing members, you can include ``*`` to include all unmentioned members. This is useful to have control over ordering of some elements, without having to include an exhaustive list. ::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:202
+msgid "Finally, if you want full control, pull your class members in one at a time by embedding ``js:autofunction`` or ``js:autoattribute``::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:213
+msgid "autoattribute"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:215
+msgid "This is useful for documenting public properties::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:226
+#: ../../usage/extensions/sphinx-js.rst:245
+msgid "And then, in the docs... ::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:232
+msgid "This is also the way to document ES6-style getters and setters, as it omits the trailing ``()`` of a function. The assumed practice is the usual JSDoc one: document only one of your getter/setter pair::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:250
+msgid "Dodging Ambiguity With Pathnames"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:252
+msgid "If you have same-named objects in different files, use pathnames to disambiguate them. Here's a particularly long example::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:256
+msgid "You may recognize the separators ``#.~`` from `JSDoc namepaths <http://usejsdoc.org/about-namepaths.html>`_; they work the same here."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:258
+msgid "For conciseness, you can use any unique suffix, as long as it consists of complete path segments. These would all be equivalent to the above, assuming they are unique within your source tree::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:265
+msgid "Things to note:"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:267
+msgid "We use simple file paths rather than JSDoc's ``module:`` prefix."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:268
+msgid "We use simple backslash escaping exclusively rather than switching escaping schemes halfway through the path; JSDoc itself `is headed that way as well <https://github.com/jsdoc3/jsdoc/issues/876>`_. The characters that need to be escaped are ``#.~(/``, though you do not need to escape the dots in a leading ``./`` or ``../``. A really horrible path might be... ::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:271
+msgid "Relative paths are relative to the ``js_source_path`` specified in the config. Absolute paths are not allowed."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:273
+msgid "Behind the scenes, sphinx-js will change all separators to dots so that..."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:275
+msgid "Sphinx's \"shortening\" syntax works: ``:func:`~InwardRhs.atMost``` prints as merely ``atMost()``. (For now, you should always use dots rather than other namepath separators: ``#~``.)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:276
+msgid "Sphinx indexes more informatively, saying methods belong to their classes."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:279
+msgid "Saving Keystrokes By Setting The Primary Domain"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:281
+msgid "To save some keystrokes, you can set ``primary_domain = 'js'`` in conf.py and then say (for example) ``autofunction`` rather than ``js:autofunction``."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:284
+msgid "TypeScript support"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:286
+msgid "There is experimental TypeScript support in sphinx-js. Enable it by setting the config variable ``js_language = 'typescript'``. Then, instead of installing JSDoc, install TypeDoc (version 0.11.1 is known to work)::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:290
+msgid "The main difference you'll notice is additional **type** fields in function documentation."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:293
+msgid "Configuration Reference"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:296
+msgid "``js_language``"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:296
+msgid "Use 'javascript' or 'typescript' depending on the language you use. The default is 'javascript'."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:299
+msgid "``js_source_path``"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:299
+msgid "A list of directories to scan (non-recursively) for JS files, relative to Sphinx's conf.py file. Can be a string instead if there is only one. If there is more than one, ``root_for_relative_js_paths`` must be specified as well."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:302
+msgid "``jsdoc_config_path``"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:302
+msgid "A conf.py-relative path to a jsdoc or typedoc config file, which is useful if you want to specify your own jsdoc options, like recursion and custom filename matching."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:305
+msgid "``root_for_relative_js_paths``"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:305
+msgid "The directory relative to which relative pathnames are resolved. Defaults to ``js_source_path`` if it is only one item."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:308
+msgid "Example"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:310
+msgid "A good example using most of sphinx-js's functionality is the Fathom documentation. A particularly juicy page is https://mozilla.github.io/fathom/ruleset.html. Click the \"View page source\" link to see the raw directives."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:312
+msgid "`ReadTheDocs <https://readthedocs.org/>`_ is the canonical hosting platform for Sphinx docs and now supports sphinx-js as an opt-in beta. Put this in the ``.readthedocs.yml`` file at the root of your repo::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:318
+msgid "Then put the version of sphinx-js you want in ``docs/requirements.txt``. For example... ::"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:322
+msgid "Or, if you prefer, the Fathom repo carries a `Travis CI configuration <https://github.com/mozilla/fathom/blob/master/.travis.yml>`_ and a `deployment script <https://github.com/mozilla/fathom/blob/master/docs/tooling/travis-deploy-docs>`_ for building docs with sphinx-js and publishing them to GitHub Pages. Feel free to borrow them."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:325
+msgid "Caveats"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:327
+msgid "We don't understand the inline JSDoc constructs like ``{@link foo}``; you have to use Sphinx-style equivalents for now, like ``:js:func:`foo``` (or simply ``:func:`foo``` if you have set ``primary_domain = 'js'`` in conf.py."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:328
+msgid "So far, we understand and convert the JSDoc block tags ``@param``, ``@returns``, ``@throws``, ``@example`` (without the optional ``<caption>``), ``@deprecated``, ``@see``, and their synonyms. Other ones will go *poof* into the ether."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:331
+msgid "Tests"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:333
+msgid "Run ``python setup.py test``. Run ``tox`` to test across Python versions."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:336
+msgid "Version History"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:340
+msgid "2.7.1"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:339
+msgid "Fix a crash that would happen sometimes with UTF-8 on Windows. #67."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:340
+msgid "Always use conf.py's dir for jsdoc's working dir. #78. (Thomas Khyn)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:343
+msgid "2.7"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:343
+msgid "Add experimental TypeScript support. (Wim Yedema)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:348
+msgid "2.6"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:346
+msgid "Add support for ``@deprecated`` and ``@see``. (David Li)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:347
+msgid "Notice and document JS variadic params nicely. (David Li)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:348
+msgid "Add linter to codebase."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:354
+msgid "2.5"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:351
+msgid "Use documented ``@params`` to help fill out the formal param list for a function. This keeps us from missing params that use destructuring. (flozz)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:353
+msgid "Improve error reporting when jsdoc is missing."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:354
+msgid "Add extracted default values to generated formal param lists. (flozz and erikrose)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:361
+msgid "2.4"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:357
+msgid "Support the ``@example`` tag. (lidavidm)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:358
+msgid "Work under Windows. Before, we could hardly find any documentation. (flozz)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:359
+msgid "Properly unwrap multiple-line JSDoc tags, even if they have Windows line endings. (Wim Yedema)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:360
+msgid "Drop support for Python 3.3, since Sphinx has also done so."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:361
+msgid "Fix build-time crash when using recommonmark (for Markdown support) under Sphinx >=1.7.1. (jamrizzi)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:365
+msgid "2.3.1"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:364
+msgid "Find the jsdoc command on Windows, where it has a different name. Then patch up process communication so it doesn't hang."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:368
+msgid "2.3"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:368
+msgid "Add the ability to say \"*\" within the ``autoclass :members:`` option, meaning \"and all the members that I didn't explicitly list\"."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:374
+msgid "2.2"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:371
+msgid "Add ``autofunction`` support for ``@callback`` tags. (krassowski)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:372
+msgid "Add experimental ``autofunction`` support for ``@typedef`` tags. (krassowski)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:373
+msgid "Add a nice error message for when jsdoc can't find any JS files."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:374
+msgid "Pin six more tightly so ``python_2_unicode_compatible`` is sure to be around."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:380
+msgid "2.1"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:377
+msgid "Allow multiple folders in ``js_source_path``. This is useful for gradually migrating large projects, one folder at a time, to jsdoc. Introduce ``root_for_relative_js_paths`` to keep relative paths unambiguous in the face of multiple source paths."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:378
+msgid "Aggregate PathTaken errors, and report them all at once. This means you don't have to run JSDoc repeatedly while cleaning up large projects."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:379
+msgid "Fix a bytes-vs-strings issue that crashed on versions of Python 3 before 3.6. (jhkennedy)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:380
+msgid "Tolerate JS files that have filename extensions other than \".js\". Before, when combined with custom jsdoc configuration that ingested such files, incorrect object pathnames were generated, which led to spurious \"No JSDoc documentation was found for object ...\" errors."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:383
+msgid "2.0.1"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:383
+msgid "Fix spurious syntax errors while loading large JSDoc output by writing it to a temp file first. (jhkennedy)"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:394
+msgid "2.0"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:386
+msgid "Deal with ambiguous object paths. Symbols with identical JSDoc longnames (such as two top-level things called \"foo\" in different files) will no longer have one shadow the other. Introduce an unambiguous path convention for referring to objects. Add a real parser to parse them rather than the dirty tricks we were using before. Backward compatibility breaks a little, because ambiguous references are now a fatal error, rather than quietly referring to the last definition JSDoc happened to encounter."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:387
+msgid "Index everything into a suffix tree so you can use any unique path suffix to refer to an object."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:388
+msgid "Other fallout of having a real parser:"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:390
+msgid "Stop supporting \"-\" as a namepath separator."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:391
+msgid "No longer spuriously translate escaped separators in namepaths into dots."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:392
+msgid "Otherwise treat paths and escapes properly. For example, we can now handle symbols that contain \"(\"."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:393
+msgid "Fix KeyError when trying to gather the constructor params of a plain old object labeled as a ``@class``."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:397
+msgid "1.5.2"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:397
+msgid "Fix crasher while warning that a specified longname isn't found."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:400
+msgid "1.5.1"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:400
+msgid "Sort ``:members:`` alphabetically when an order is not explicitly specified."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:405
+msgid "1.5"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:403
+msgid "Add ``:members:`` option to ``autoclass``."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:404
+msgid "Add ``:private-members:`` and ``:exclude-members:`` options to go with it."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:405
+msgid "Significantly refactor to allow directive classes to talk to each other."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:408
+msgid "1.4"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:408
+msgid "Add ``jsdoc_config_path`` option."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:412
+msgid "1.3.1"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:411
+msgid "Tolerate @args and other info field lines that are wrapped in the source code."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:412
+msgid "Cite the file and line of the source comment in Sphinx-emitted warnings and errors."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:415
+msgid "1.3"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:415
+msgid "Add ``autoattribute`` directive."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:420
+msgid "1.2"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:418
+msgid "Always do full rebuilds; don't leave pages stale when JS code has changed but the RSTs have not."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:419
+msgid "Make Python-3-compatible."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:420
+msgid "Add basic ``autoclass`` directive."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:423
+msgid "1.1"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:423
+msgid "Add ``:short-name:`` option."
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:425
+msgid "1.0"
+msgstr ""
+
+#: ../../usage/extensions/sphinx-js.rst:426
+msgid "Initial release, with just ``js:autofunction``"
+msgstr ""
+

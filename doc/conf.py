@@ -14,7 +14,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.inheritance_diagram',
     'sphinx.ext.githubpages',
-    'sphinxcontrib.httpdomain'
+    'sphinxcontrib.httpdomain',
+    'sphinxcontrib.disqus'
 ]
 
 master_doc = 'contents'
@@ -91,9 +92,12 @@ latex_use_xindy = True
 
 autodoc_member_order = 'groupwise'
 todo_include_todos = True
+todo_link_only = True
 extlinks = {'duref': ('https://wdk-docs.github.io/docutils-docs/ref/rst/restructuredtext.html#%s', ''),
             'durole': ('https://wdk-docs.github.io/docutils-docs/ref/rst/roles.html#%s', ''),
             'dudir': ('https://wdk-docs.github.io/docutils-docs/ref/rst/directives.html#%s', '')}
+
+disqus_shortname = 'sphinx-doc-zh-CN'
 
 man_pages = [
     ('contents', 'sphinx-all', 'Sphinx documentation generator system manual',

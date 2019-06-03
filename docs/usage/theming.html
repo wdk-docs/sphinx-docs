@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>HTML &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
+    <title>HTML &#8212; Sphinx 2.1.0+/7f2c8fd82 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,13 +16,13 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
+          title="在 Sphinx 2.1.0+/7f2c8fd82 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="国际化" href="advanced/intl.html" />
-    <link rel="prev" title="sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域" href="extensions/httpdomain.html" />
+    <link rel="prev" title="sphinx-js" href="extensions/sphinx-js.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/usage/theming.html" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
@@ -111,7 +111,7 @@
           <a href="advanced/intl.html" title="国际化"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="extensions/httpdomain.html" title="sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域"
+          <a href="extensions/sphinx-js.html" title="sphinx-js"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
@@ -135,8 +135,8 @@
 </ul>
 
   <h4>上一个主题</h4>
-  <p class="topless"><a href="extensions/httpdomain.html"
-                        title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinxcontrib.httpdomain</span></code> — 用于记录HTTP API的Sphinx域</a></p>
+  <p class="topless"><a href="extensions/sphinx-js.html"
+                        title="上一章">sphinx-js</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="advanced/intl.html"
                         title="下一章">国际化</a></p>
@@ -167,12 +167,12 @@
             
   <div class="section" id="html">
 <h1>HTML<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h1>
-<p>Sphinx为HTML和基于HTML的格式提供了许多构建器。</p>
+<p>Sphinx为HTML和基于HTML的格式提供了许多构建器.</p>
 <div class="section" id="builders">
 <h2>生成器<a class="headerlink" href="#builders" title="永久链接至标题">¶</a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">待处理</p>
-<p>在 ‘builders’ 文档被拆分时填充。</p>
+<p>在 ‘builders’ 文档被拆分时填充.</p>
 </div>
 </div>
 <div class="section" id="themes">
@@ -182,62 +182,38 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>This section provides information about using pre-existing HTML themes. If
-you wish to create your own theme, refer to <a class="reference internal" href="../theming.html"><span class="doc">HTML主题支持</span></a>.</p>
+<p>本节提供有关使用预先存在的HTML主题的信息. 如果您想创建自己的主题, 请参阅 <a class="reference internal" href="../theming.html"><span class="doc">HTML主题支持</span></a>.</p>
 </div>
-<p>Sphinx supports changing the appearance of its HTML output via <em>themes</em>.  A
-theme is a collection of HTML templates, stylesheet(s) and other static files.
-Additionally, it has a configuration file which specifies from which theme to
-inherit, which highlighting style to use, and what options exist for customizing
-the theme’s look and feel.</p>
-<p>Themes are meant to be project-unaware, so they can be used for different
-projects without change.</p>
+<p>Sphinx支持通过 <em>themes</em> 更改其HTML输出的外观. 主题是HTML模板, 样式表和其他静态文件的集合. 此外, 它还有一个配置文件, 用于指定要继承的主题, 要使用的突出显示样式以及用于自定义主题外观的选项.</p>
+<p>主题意味着项目不知情, 因此它们可以用于不同的项目而无需改变.</p>
 <div class="section" id="using-a-theme">
 <h3>使用主题<a class="headerlink" href="#using-a-theme" title="永久链接至标题">¶</a></h3>
-<p>Using a <a class="reference internal" href="#builtin-themes"><span class="std std-ref">theme provided with Sphinx</span></a> is easy. Since these
-do not need to be installed, you only need to set the <a class="reference internal" href="configuration.html#confval-html_theme"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme</span></code></a>
-config value. For example, to enable the <code class="docutils literal notranslate"><span class="pre">classic</span></code> theme, add the following
-to <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<p>使用 <a class="reference internal" href="#builtin-themes"><span class="std std-ref">Sphinx提供的主题</span></a> 很简单. 由于不需要安装它们, 您只需要设置 <a class="reference internal" href="configuration.html#confval-html_theme"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme</span></code></a> 配置值. 例如, 要启用 <code class="docutils literal notranslate"><span class="pre">classic</span></code> 主题, 请将以下内容添加到 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;classic&quot;</span>
 </pre></div>
 </div>
-<p>You can also set theme-specific options using the <a class="reference internal" href="configuration.html#confval-html_theme_options"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_options</span></code></a>
-config value.  These options are generally used to change the look and feel of
-the theme. For example, to place the sidebar on the right side and a black
-background for the relation bar (the bar with the navigation links at the
-page’s top and bottom), add the following <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<p>您还可以使用 <a class="reference internal" href="configuration.html#confval-html_theme_options"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> 配置值设置特定于主题的选项. 这些选项通常用于更改主题的外观. 例如, 要将侧边栏放在右侧, 使用黑色背景放置关系栏(带有位于页面顶部和底部的导航链接的栏), 请添加以下内容 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;rightsidebar&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="s2">&quot;relbarbgcolor&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If the theme does not come with Sphinx, it can be in two static forms or as a
-Python package. For the static forms, either a directory (containing
-<code class="file docutils literal notranslate"><span class="pre">theme.conf</span></code> and other needed files), or a zip file with the same
-contents is supported. The directory or zipfile must be put where Sphinx can
-find it; for this there is the config value <a class="reference internal" href="configuration.html#confval-html_theme_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_path</span></code></a>. This
-can be a list of directories, relative to the directory containing
-<code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>, that can contain theme directories or zip files.  For example,
-if you have a theme in the file <code class="file docutils literal notranslate"><span class="pre">blue.zip</span></code>, you can put it right in the
-directory containing <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> and use this configuration:</p>
+<p>如果主题没有Sphinx, 它可以是两个静态形式或Python包. 对于静态表单, 支持目录(包含 <code class="file docutils literal notranslate"><span class="pre">theme.conf</span></code> 和其他所需文件)或具有相同内容的zip文件. 必须将目录或zip文件放在Sphinx可以找到的位置;为此, 有配置值 <a class="reference internal" href="configuration.html#confval-html_theme_path"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_path</span></code></a>. 这可以是目录列表, 相对于包含 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 的目录, 可以包含主题目录或zip文件. 例如, 如果文件中有一个主题 <code class="file docutils literal notranslate"><span class="pre">blue.zip</span></code>, 则可以将其放在包含 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 的目录中并使用此配置:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
 <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The third form is a Python package.  If a theme you want to use is distributed
-as a Python package, you can use it after installing</p>
+<p>第三种形式是Python包. 如果要使用的主题是作为Python包分发的, 则可以在安装后使用它</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># installing theme package</span>
 $ pip install sphinxjp.themes.dotted
 </pre></div>
 </div>
-<p>Once installed, this can be used in the same manner as a directory or
-zipfile-based theme:</p>
+<p>安装后, 可以使用与基于目录或zipfile的主题相同的方式:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;dotted&quot;</span>
 </pre></div>
 </div>
-<p>For more information on the design of themes, including information about
-writing your own themes, refer to <a class="reference internal" href="../theming.html"><span class="doc">HTML主题支持</span></a>.</p>
+<p>有关主题设计的更多信息, 包括有关编写自己主题的信息, 请参阅 <a class="reference internal" href="../theming.html"><span class="doc">HTML主题支持</span></a>.</p>
 </div>
 <div class="section" id="builtin-themes">
 <span id="id2"></span><h3>内置主题<a class="headerlink" href="#builtin-themes" title="永久链接至标题">¶</a></h3>
@@ -287,87 +263,57 @@ writing your own themes, refer to <a class="reference internal" href="../theming
 </tr>
 </tbody>
 </table>
-<p>Sphinx comes with a selection of themes to choose from.</p>
-<p class="clear">These themes are:</p>
+<p>sphinx 有多种主题可供选择</p>
+<p class="clear">这些主题是:</p>
 <dl>
-<dt><strong>basic</strong></dt><dd><p>This is a basically unstyled layout used as the base for the
-other themes, and usable as the base for custom themes as well.  The HTML
-contains all important elements like sidebar and relation bar.  There are
-these options (which are inherited by the other themes):</p>
+<dt><strong>basic</strong></dt><dd><p>这是一个基本上没有样式的布局, 用作其他主题的基础, 也可用作自定义主题的基础.  HTML包含所有重要元素, 如侧边栏和关系栏. 有这些选项(由其他主题继承):</p>
 <ul class="simple">
-<li><p><strong>nosidebar</strong> (true or false): Don’t include the sidebar.  Defaults to
-<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>sidebarwidth</strong> (int or str): Width of the sidebar in pixels.
-This can be an int, which is interpreted as pixels or a valid CSS
-dimension string such as ‘70em’ or ‘50%’.  Defaults to 230 pixels.</p></li>
-<li><p><strong>body_min_width</strong> (int or str): Minimal width of the document body.
-This can be an int, which is interpreted as pixels or a valid CSS
-dimension string such as ‘70em’ or ‘50%’. Use 0 if you don’t want
-a width limit. Defaults may depend on the theme (often 450px).</p></li>
-<li><p><strong>body_max_width</strong> (int or str): Maximal width of the document body.
-This can be an int, which is interpreted as pixels or a valid CSS
-dimension string such as ‘70em’ or ‘50%’. Use ‘none’ if you don’t
-want a width limit. Defaults may depend on the theme (often 800px).</p></li>
+<li><p><strong>nosidebar</strong> (true or false): 不包括侧边栏. 默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> .</p></li>
+<li><p><strong>sidebarwidth</strong> (int或str): 侧边栏的宽度(以像素为单位). 这可以是 int, 它被解释为像素或有效的CSS维度字符串, 例如 ‘70em’ 或 ‘50％’. 默认为230像素.</p></li>
+<li><p><strong>body_min_width</strong> (int或str):文档正文的最小宽度. 这可以是int, 它被解释为像素或有效的CSS维度字符串, 例如‘70em’或‘50％’. 如果您不想要宽度限制, 请使用0. 默认值可能取决于主题(通常为450px).</p></li>
+<li><p><strong>body_max_width</strong> (int或str):文档正文的最大宽度. 这可以是int, 它被解释为像素或有效的CSS维度字符串, 例如‘70em’或‘50％’. 如果您不想要宽度限制, 请使用 <code class="docutils literal notranslate"><span class="pre">none</span></code> . 默认值可能取决于主题(通常为800px).</p></li>
 </ul>
 </dd>
-<dt><strong>alabaster</strong></dt><dd><p><a class="reference external" href="https://pypi.org/project/alabaster/">Alabaster theme</a> is a modified “Kr” Sphinx theme from &#64;kennethreitz
-(especially as used in his Requests project), which was itself originally
-based on &#64;mitsuhiko’s theme used for Flask &amp; related projects.  Refer to its
-<a class="reference external" href="https://alabaster.readthedocs.io/en/latest/installation.html">installation page</a> for information on how to configure
-<a class="reference internal" href="configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a> for its use.</p>
+<dt><strong>alabaster</strong></dt><dd><p><a class="reference external" href="https://pypi.org/project/alabaster/">Alabaster theme</a> 是来自&#64;kennethreitz的修改后的 <code class="docutils literal notranslate"><span class="pre">Kr</span></code> Sphinx主题(特别是在他的Requests项目中使用), 它本身最初基于&#64;mitsuhiko用于Flask及相关项目的主题. 有关如何配置的信息, 请参阅其 <a class="reference external" href="https://alabaster.readthedocs.io/en/latest/installation.html">installation page</a> <a class="reference internal" href="configuration.html#confval-html_sidebars"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_sidebars</span></code></a> 供其使用.</p>
 </dd>
-<dt><strong>classic</strong></dt><dd><p>This is the classic theme, which looks like <a class="reference external" href="https://docs.python.org/2/">the Python 2
-documentation</a>.  It can be customized via
-these options:</p>
+<dt><strong>classic</strong></dt><dd><p>这是经典主题, 看起来像是 <a class="reference external" href="https://docs.python.org/2/">Python 2文档</a>. 它可以通过以下选项进行定制:</p>
 <ul class="simple">
-<li><p><strong>rightsidebar</strong> (true or false): Put the sidebar on the right side.
-Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>stickysidebar</strong> (true or false): Make the sidebar “fixed” so that it
-doesn’t scroll out of view for long body content.  This may not work well
-with all browsers.  Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>collapsiblesidebar</strong> (true or false): Add an <em>experimental</em> JavaScript
-snippet that makes the sidebar collapsible via a button on its side.
-Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>externalrefs</strong> (true or false): Display external links differently from
-internal links.  Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>右侧栏</strong> (true or false):将侧边栏放在右侧. 默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> .</p></li>
+<li><p><strong>stickysidebar</strong> (true or false):使侧边栏 <code class="docutils literal notranslate"><span class="pre">固定</span></code> , 以便它不会滚出视图以获取长身体内容. 这可能不适用于所有浏览器. 默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> .</p></li>
+<li><p><strong>collapsiblesidebar</strong> (true or false):添加一个*实验性* JavaScript代码段, 通过侧面的按钮使侧边栏可折叠. 默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> .</p></li>
+<li><p><strong>externalrefs</strong> (true或false):显示外部链接与内部链接不同. 默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> .</p></li>
 </ul>
-<p>There are also various color and font options that can change the color scheme
-without having to write a custom stylesheet:</p>
+<p>还有各种颜色和字体选项可以更改颜色方案, 而无需编写自定义样式表:</p>
 <ul class="simple">
-<li><p><strong>footerbgcolor</strong> (CSS color): Background color for the footer line.</p></li>
-<li><p><strong>footertextcolor</strong> (CSS color): Text color for the footer line.</p></li>
-<li><p><strong>sidebarbgcolor</strong> (CSS color): Background color for the sidebar.</p></li>
-<li><p><strong>sidebarbtncolor</strong> (CSS color): Background color for the sidebar collapse
-button (used when <em>collapsiblesidebar</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
-<li><p><strong>sidebartextcolor</strong> (CSS color): Text color for the sidebar.</p></li>
-<li><p><strong>sidebarlinkcolor</strong> (CSS color): Link color for the sidebar.</p></li>
-<li><p><strong>relbarbgcolor</strong> (CSS color): Background color for the relation bar.</p></li>
-<li><p><strong>relbartextcolor</strong> (CSS color): Text color for the relation bar.</p></li>
-<li><p><strong>relbarlinkcolor</strong> (CSS color): Link color for the relation bar.</p></li>
-<li><p><strong>bgcolor</strong> (CSS color): Body background color.</p></li>
-<li><p><strong>textcolor</strong> (CSS color): Body text color.</p></li>
-<li><p><strong>linkcolor</strong> (CSS color): Body link color.</p></li>
-<li><p><strong>visitedlinkcolor</strong> (CSS color): Body color for visited links.</p></li>
-<li><p><strong>headbgcolor</strong> (CSS color): Background color for headings.</p></li>
-<li><p><strong>headtextcolor</strong> (CSS color): Text color for headings.</p></li>
-<li><p><strong>headlinkcolor</strong> (CSS color): Link color for headings.</p></li>
-<li><p><strong>codebgcolor</strong> (CSS color): Background color for code blocks.</p></li>
-<li><p><strong>codetextcolor</strong> (CSS color): Default text color for code blocks, if not
-set differently by the highlighting style.</p></li>
-<li><p><strong>bodyfont</strong> (CSS font-family): Font for normal text.</p></li>
-<li><p><strong>headfont</strong> (CSS font-family): Font for headings.</p></li>
+<li><p><strong>footerbgcolor</strong> (CSS颜色):页脚行的背景颜色.</p></li>
+<li><p><strong>footertextcolor</strong> (CSS颜色):页脚行的文本颜色.</p></li>
+<li><p><strong>sidebarbgcolor</strong> (CSS颜色):侧边栏的背景颜色.</p></li>
+<li><p><strong>sidebarbtncolor</strong> （CSS颜色:侧边栏折叠按钮的背景颜色（当 <em>collapsiblesidebar</em> 为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 时使用）。</p></li>
+<li><p><strong>sidebartextcolor</strong> (CSS颜色):侧边栏的文本颜色.</p></li>
+<li><p><strong>sidebarlinkcolor</strong> (CSS颜色):侧边栏的链接颜色.</p></li>
+<li><p><strong>relbarbgcolor</strong> (CSS颜色):关系栏的背景颜色.</p></li>
+<li><p><strong>relbartextcolor</strong> (CSS颜色): 关系栏的文本颜色.</p></li>
+<li><p><strong>relbarlinkcolor</strong> (CSS颜色):关系栏的链接颜色.</p></li>
+<li><p><strong>bgcolor</strong> (CSS颜色):身体背景颜色.</p></li>
+<li><p><strong>textcolor</strong> (CSS颜色):正文文本颜色.</p></li>
+<li><p><strong>linkcolor</strong> (CSS颜色):正文链接颜色.</p></li>
+<li><p><strong>visitedlinkcolor</strong> (CSS颜色):访问过的链接的正文颜色.</p></li>
+<li><p><strong>headbgcolor</strong> (CSS颜色):标题的背景颜色.</p></li>
+<li><p><strong>headtextcolor</strong> (CSS颜色):标题的文本颜色.</p></li>
+<li><p><strong>headlinkcolor</strong> (CSS颜色):标题的链接颜色.</p></li>
+<li><p><strong>codebgcolor</strong> (CSS颜色):代码块的背景颜色.</p></li>
+<li><p><strong>codetextcolor</strong> (CSS颜色): 代码块的默认文本颜色，如果没有通过突出显示样式设置不同.</p></li>
+<li><p><strong>bodyfont</strong> (CSS字体系列):普通文本的字体.</p></li>
+<li><p><strong>headfont</strong> (CSS字体系列):标题的字体.</p></li>
 </ul>
 </dd>
-<dt><strong>sphinxdoc</strong></dt><dd><p>The theme originally used by this documentation. It features
-a sidebar on the right side. There are currently no options beyond
-<em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+<dt><strong>sphinxdoc</strong></dt><dd><p>本文档最初使用的主题。它的右侧有一个侧边栏。除了* nosidebar <em>和</em> sidebarwidth <a href="#id1"><span class="problematic" id="id2">*</span></a>之外，目前没有其他选项。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>The Sphinx documentation now uses
-<a class="reference external" href="https://github.com/sphinx-doc/sphinx/tree/master/doc/_themes/sphinx13">an adjusted version of the sphinxdoc theme</a>.</p>
+<p>Sphinx文档现在使用了 <a class="reference external" href="https://github.com/sphinx-doc/sphinx/tree/master/doc/_themes/sphinx13">sphinxdoc主题的调整版本</a>。</p>
 </div>
 </dd>
-<dt><strong>scrolls</strong></dt><dd><p>A more lightweight theme, based on <a class="reference external" href="http://jinja.pocoo.org/">the Jinja documentation</a>.  The following color options are available:</p>
+<dt><strong>scrolls</strong></dt><dd><p>一个更轻量级的主题, 基于 <a class="reference external" href="http://jinja.pocoo.org/">Jinja文档</a>. 可以使用以下颜色选项:</p>
 <ul class="simple">
 <li><p><strong>headerbordercolor</strong></p></li>
 <li><p><strong>subheadlinecolor</strong></p></li>
@@ -376,73 +322,51 @@ a sidebar on the right side. There are currently no options beyond
 <li><p><strong>admonitioncolor</strong></p></li>
 </ul>
 </dd>
-<dt><strong>agogo</strong></dt><dd><p>A theme created by Andi Albrecht.  The following options are supported:</p>
+<dt><strong>agogo</strong></dt><dd><p>Andi Albrecht创作的主题. 支持以下选项:</p>
 <ul class="simple">
-<li><p><strong>bodyfont</strong> (CSS font family): Font for normal text.</p></li>
-<li><p><strong>headerfont</strong> (CSS font family): Font for headings.</p></li>
-<li><p><strong>pagewidth</strong> (CSS length): Width of the page content, default 70em.</p></li>
-<li><p><strong>documentwidth</strong> (CSS length): Width of the document (without sidebar),
-default 50em.</p></li>
-<li><p><strong>sidebarwidth</strong> (CSS length): Width of the sidebar, default 20em.</p></li>
-<li><p><strong>bgcolor</strong> (CSS color): Background color.</p></li>
-<li><p><strong>headerbg</strong> (CSS value for “background”): background for the header area,
-default a grayish gradient.</p></li>
-<li><p><strong>footerbg</strong> (CSS value for “background”): background for the footer area,
-default a light gray gradient.</p></li>
-<li><p><strong>linkcolor</strong> (CSS color): Body link color.</p></li>
-<li><p><strong>headercolor1</strong>, <strong>headercolor2</strong> (CSS color): colors for &lt;h1&gt; and &lt;h2&gt;
-headings.</p></li>
-<li><p><strong>headerlinkcolor</strong> (CSS color): Color for the backreference link in
-headings.</p></li>
-<li><p><strong>textalign</strong> (CSS <em>text-align</em> value): Text alignment for the body, default
-is <code class="docutils literal notranslate"><span class="pre">justify</span></code>.</p></li>
+<li><p><strong>bodyfont</strong> (CSS字体系列):普通文本的字体.</p></li>
+<li><p><strong>headerfont</strong> (CSS字体系列):标题字体.</p></li>
+<li><p><strong>pagewidth</strong> (CSS长度):页面内容的宽度, 默认为70em.</p></li>
+<li><p><strong>documentwidth</strong> (CSS长度):文档的宽度(没有侧边栏), 默认为50em.</p></li>
+<li><p><strong>sidebarwidth</strong> (CSS长度):侧边栏的宽度, 默认为20em.</p></li>
+<li><p><strong>bgcolor</strong> (CSS color): 背景颜色.</p></li>
+<li><p><strong>headerbg</strong> (“background” 的CSS值):标题区域的背景, 默认为浅灰色渐变.</p></li>
+<li><p><strong>footerbg</strong> (“background” 的CSS值):页脚区域的背景, 默认为浅灰色渐变.</p></li>
+<li><p><strong>linkcolor</strong> (CSS颜色):正文链接颜色.</p></li>
+<li><p><strong>headercolor1</strong>, <strong>headercolor2</strong> (CSS颜色):&lt;h1&gt;和&lt;h2&gt;标题的颜色.</p></li>
+<li><p><strong>headerlinkcolor</strong> (CSS颜色):标题中后向引用链接的颜色.</p></li>
+<li><p><strong>textalign</strong> (CSS <em>text-align</em> 值):正文的文本对齐方式, 默认为 <code class="docutils literal notranslate"><span class="pre">justify</span></code>.</p></li>
 </ul>
 </dd>
-<dt><strong>nature</strong></dt><dd><p>A greenish theme.  There are currently no options beyond
-<em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+<dt><strong>nature</strong></dt><dd><p>一个绿色的主题. 除了 <em>nosidebar</em> 和 <em>sidebarwidth</em> 之外, 目前没有其他选项.</p>
 </dd>
-<dt><strong>pyramid</strong></dt><dd><p>A theme from the Pyramid web framework project, designed by Blaise Laflamme.
-There are currently no options beyond <em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+<dt><strong>pyramid</strong></dt><dd><p>由Blaise Laflamme设计的金字塔网络框架项目的主题. 除了 <em>nosidebar</em> 和 <em>sidebarwidth</em> 之外, 目前没有其他选项.</p>
 </dd>
-<dt><strong>haiku</strong></dt><dd><p>A theme without sidebar inspired by the <a class="reference external" href="https://www.haiku-os.org/docs/userguide/en/contents.html">Haiku OS user guide</a>.  The following
-options are supported:</p>
+<dt><strong>haiku</strong></dt><dd><p>没有侧栏的主题受到了 <a class="reference external" href="https://www.haiku-os.org/docs/userguide/en/contents.html">Haiku OS用户指南</a> 的启发. 支持以下选项:</p>
 <ul class="simple">
-<li><p><strong>full_logo</strong> (true or false, default <code class="docutils literal notranslate"><span class="pre">False</span></code>): If this is true, the
-header will only show the <a class="reference internal" href="configuration.html#confval-html_logo"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_logo</span></code></a>.  Use this for large logos.
-If this is false, the logo (if present) will be shown floating right, and
-the documentation title will be put in the header.</p></li>
-<li><p><strong>textcolor</strong>, <strong>headingcolor</strong>, <strong>linkcolor</strong>, <strong>visitedlinkcolor</strong>,
-<strong>hoverlinkcolor</strong> (CSS colors): Colors for various body elements.</p></li>
+<li><p><strong>full_logo</strong> (true 或 false, 默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code>):如果这是真的, 标题只会显示 <a class="reference internal" href="configuration.html#confval-html_logo"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_logo</span></code></a>. 用于大型徽标. 如果这是假的, 则徽标(如果存在)将浮动右侧显示, 文档标题将放在标题中.</p></li>
+<li><p><strong>textcolor</strong>, <strong>headingcolor</strong>, <strong>linkcolor</strong>, <strong>visitedlinkcolor</strong>, <strong>hoverlinkcolor</strong> (CSS颜色):各种身体元素的颜色.</p></li>
 </ul>
 </dd>
-<dt><strong>traditional</strong></dt><dd><p>A theme resembling the old Python documentation.  There are
-currently no options beyond <em>nosidebar</em> and <em>sidebarwidth</em>.</p>
+<dt><strong>traditional</strong></dt><dd><p>一个类似于旧Python文档的主题. 除了 <em>nosidebar</em> 和 <em>sidebarwidth</em> 之外, 目前没有其他选项.</p>
 </dd>
-<dt><strong>epub</strong></dt><dd><p>A theme for the epub builder.  This theme tries to save visual
-space which is a sparse resource on ebook readers.  The following options
-are supported:</p>
+<dt><strong>epub</strong></dt><dd><p>epub构建器的主题. 这个主题试图保留视觉空间, 这是电子书阅读器上的稀疏资源. 支持以下选项:</p>
 <ul class="simple">
-<li><p><strong>relbar1</strong> (true or false, default <code class="docutils literal notranslate"><span class="pre">True</span></code>): If this is true, the
-<cite>relbar1</cite> block is inserted in the epub output, otherwise it is omitted.</p></li>
-<li><p><strong>footer</strong>  (true or false, default <code class="docutils literal notranslate"><span class="pre">True</span></code>): If this is true, the
-<cite>footer</cite> block is inserted in the epub output, otherwise it is omitted.</p></li>
+<li><p><strong>relbar1</strong> (true 或 false, 默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code>): 如果为true, 则将 <cite>relbar1</cite> 块插入epub输出中, 否则将省略.</p></li>
+<li><p><strong>footer</strong> (true 或 false, 默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code>):如果为true, 则在脚本输出中插入 <cite>footer</cite> 块, 否则省略.</p></li>
 </ul>
 </dd>
-<dt><strong>bizstyle</strong></dt><dd><p>A simple bluish theme. The following options are supported
-beyond <em>nosidebar</em> and <em>sidebarwidth</em>:</p>
+<dt><strong>bizstyle</strong></dt><dd><p>一个简单的蓝色主题. 除了 <em>nosidebar</em> 和 <em>sidebarwidth</em> 之外, 还支持以下选项:</p>
 <ul class="simple">
-<li><p><strong>rightsidebar</strong> (true or false): Put the sidebar on the right side.
-Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>右侧栏</strong> (true or false):将侧边栏放在右侧. 默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> .</p></li>
 </ul>
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified added">1.3 新版功能: </span>‘alabaster’, ‘sphinx_rtd_theme’ and ‘bizstyle’ theme.</p>
+<p><span class="versionmodified added">1.3 新版功能: </span>‘alabaster’, ‘sphinx_rtd_theme’ 和 ‘bizstyle’ 主题.  ``</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.3 版更改: </span>The ‘default’ theme has been renamed to ‘classic’. ‘default’ is still
-available, however it will emit a notice that it is an alias for the new
-‘alabaster’ theme.</p>
+<p><span class="versionmodified changed">在 1.3 版更改: </span>‘default’ 主题已重命名为 ‘classic’. ‘default’ 仍然可用, 但它会发出通知, 告知它是新 ‘alabaster’ 主题的别名.</p>
 </div>
 </div>
 <div class="section" id="third-party-themes">
@@ -463,17 +387,11 @@ available, however it will emit a notice that it is an alias for the new
 </tr>
 </tbody>
 </table>
-<p>There are many third-party themes available. Some of these are general use,
-while others are specific to an individual project. A section of third-party
-themes is listed below. Many more can be found on <a class="reference external" href="https://pypi.org/search/?q=&amp;o=&amp;c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">PyPI</a>, <a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=sphinx+theme&amp;type=">GitHub</a> and
-<a class="reference external" href="https://sphinx-themes.org/">sphinx-themes.org</a>.</p>
+<p>有许多第三方主题可用. 其中一些是一般用途, 而另一些则是针对单个项目的. 下面列出了第三方主题的一部分. 在 <a class="reference external" href="https://pypi.org/search/?q=&amp;o=&amp;c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">PyPI</a>, <a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=sphinx+theme&amp;type=">GitHub</a> 和 <a class="reference external" href="https://sphinx-themes.org/">sphinx-themes.org</a> 上可以找到更多.</p>
 <dl class="clear">
-<dt><strong>sphinx_rtd_theme</strong></dt><dd><p><a class="reference external" href="https://pypi.org/project/sphinx_rtd_theme/">Read the Docs Sphinx Theme</a>.
-This is a mobile-friendly sphinx theme that was made for readthedocs.org.
-View a working demo over on readthedocs.org. You can get install and options
-information at <a class="reference external" href="https://pypi.org/project/sphinx_rtd_theme/">Read the Docs Sphinx Theme</a> page.</p>
+<dt><strong>sphinx_rtd_theme</strong></dt><dd><p><a class="reference external" href="https://pypi.org/project/sphinx_rtd_theme/">Read the Docs Sphinx Theme</a>. 这是一个针对readthedocs.org制作的适合移动设备的sphinx主题. 在readthedocs.org上查看工作演示. 您可以在 <a class="reference external" href="https://pypi.org/project/sphinx_rtd_theme/">Read the Docs Sphinx Theme</a> 页面获取安装和选项信息.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.4 版更改: </span><strong>sphinx_rtd_theme</strong> has become optional.</p>
+<p><span class="versionmodified changed">在 1.4 版更改: </span><strong>sphinx_rtd_theme</strong> 已成为可选项。</p>
 </div>
 </dd>
 </dl>
@@ -503,7 +421,7 @@ information at <a class="reference external" href="https://pypi.org/project/sphi
           <a href="advanced/intl.html" title="国际化"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="extensions/httpdomain.html" title="sphinxcontrib.httpdomain — 用于记录HTTP API的Sphinx域"
+          <a href="extensions/sphinx-js.html" title="sphinx-js"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
@@ -512,7 +430,7 @@ information at <a class="reference external" href="https://pypi.org/project/sphi
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7f2c8fd82 创建。
     </div>
   </body>
 </html>

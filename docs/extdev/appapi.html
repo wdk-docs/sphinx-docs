@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>应用程序API &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
+    <title>应用程序API &#8212; Sphinx 2.1.0+/7f2c8fd82 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
+          title="在 Sphinx 2.1.0+/7f2c8fd82 文档 中搜索"
           href="../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../genindex.html" />
@@ -127,7 +127,7 @@
 <li><a class="reference internal" href="#extension-setup">扩展设置</a></li>
 <li><a class="reference internal" href="#emitting-events">发出事件</a></li>
 <li><a class="reference internal" href="#sphinx-runtime-information">Sphinx运行时信息</a></li>
-<li><a class="reference internal" href="#sphinx-core-events">狮身人面像核心事件</a></li>
+<li><a class="reference internal" href="#sphinx-core-events">sphinx 核心事件</a></li>
 <li><a class="reference internal" href="#checking-the-sphinx-version">检查Sphinx版本</a></li>
 <li><a class="reference internal" href="#the-config-object">Config对象</a></li>
 <li><a class="reference internal" href="#the-template-bridge">模板桥</a></li>
@@ -201,7 +201,7 @@
 <dt id="sphinx.application.Sphinx.connect">
 <code class="descclassname">Sphinx.</code><code class="descname">connect</code><span class="sig-paren">(</span><em>event</em>, <em>callback</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/application.html#Sphinx.connect"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#sphinx.application.Sphinx.connect" title="永久链接至目标">¶</a></dt>
 <dd><p>注册 <em>callback*在发出 *event</em> 时被调用.</p>
-<p>有关可用核心事件和回调函数参数的详细信息,请参阅 <a class="reference internal" href="#events"><span class="std std-ref">狮身人面像核心事件</span></a> .</p>
+<p>有关可用核心事件和回调函数参数的详细信息,请参阅 <a class="reference internal" href="#events"><span class="std std-ref">sphinx 核心事件</span></a> .</p>
 <p>该方法返回一个 “listener ID” ,可用作以下参数 <a class="reference internal" href="#sphinx.application.Sphinx.disconnect" title="sphinx.application.Sphinx.disconnect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disconnect()</span></code></a> .</p>
 </dd></dl>
 
@@ -307,12 +307,22 @@ figtype is given.</p>
 <dt>
 <code class="descclassname">Sphinx.</code><code class="descname">add_directive</code><span class="sig-paren">(</span><em>name</em>, <em>directiveclass</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx/application.html#Sphinx.add_directive"><span class="viewcode-link">[源代码]</span></a></dt>
 <dd><p>注册Docutils指令.</p>
-<p><em>name</em> 必须是预期的指令名称. 编写指令有两种可能的方法:</p>
+<p><em>name</em> must be the prospective directive name.  There are two possible
+ways to write a directive:</p>
 <ul class="simple">
-<li><p>在docutils 0.4 style中, <em>obj</em> 是指令函数. <em>content</em>, <em>arguments</em> 和 <em>options*被设置为函数的属性,并分别确定该指令是否包含内容,参数和选项.  **此款式已弃用.*</em></p></li>
-<li><p>在docutils 0.5 style中, <em>obj</em> 是指令类. 它必须已经具有名为 <em>has_content</em>, <em>required_arguments</em>, <em>optional_arguments</em> , <em>final_argument_whitespace</em> 和 <em>option_spec</em> 的属性,这些属性对应于函数方式的选项.  有关详细信息,请参阅 <a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-directives.html">Docutils docs</a>.</p></li>
+<li><p>In the docutils 0.4 style, <em>obj</em> is the directive function.
+<em>content</em>, <em>arguments</em> and <em>options</em> are set as attributes on the
+function and determine whether the directive has content, arguments
+and options, respectively.  <strong>This style is deprecated.</strong></p></li>
+<li><p>In the docutils 0.5 style, <em>obj</em> is the directive class.
+It must already have attributes named <em>has_content</em>,
+<em>required_arguments</em>, <em>optional_arguments</em>,
+<em>final_argument_whitespace</em> and <em>option_spec</em> that correspond to the
+options for the function way.  See <a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-directives.html">the Docutils docs</a>
+for details.</p></li>
 </ul>
-<p>指令类必须从类 <code class="docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code> 继承.</p>
+<p>The directive class must inherit from the class
+<code class="docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code>.</p>
 <p>例如,(已存在的) <a class="reference internal" href="../usage/restructuredtext/directives.html#directive-literalinclude" title="literalinclude directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">literalinclude</span></code></a> 指令将添加如下:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
 
@@ -528,7 +538,7 @@ document.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>优先</p></td>
-<td><p>狮身人面像的主要目的</p></td>
+<td><p>sphinx 的主要目的</p></td>
 </tr>
 <tr class="row-even"><td><p>0-99</p></td>
 <td><p>通过docutils修复无效节点.翻译doctree.</p></td>
@@ -849,7 +859,7 @@ of message catalog.  For more details, see
 
 </div>
 <div class="section" id="sphinx-core-events">
-<span id="events"></span><h2>狮身人面像核心事件<a class="headerlink" href="#sphinx-core-events" title="永久链接至标题">¶</a></h2>
+<span id="events"></span><h2>sphinx 核心事件<a class="headerlink" href="#sphinx-core-events" title="永久链接至标题">¶</a></h2>
 <p>These events are known to the core.  The arguments shown are given to the
 registered event handlers.  Use <a class="reference internal" href="#sphinx.application.Sphinx.connect" title="sphinx.application.Sphinx.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Sphinx.connect()</span></code></a> in an extension’s <code class="docutils literal notranslate"><span class="pre">setup</span></code>
 function (note that <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> can also have a <code class="docutils literal notranslate"><span class="pre">setup</span></code> function) to connect
@@ -1224,7 +1234,7 @@ in subclasses.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7f2c8fd82 创建。
     </div>
   </body>
 </html>

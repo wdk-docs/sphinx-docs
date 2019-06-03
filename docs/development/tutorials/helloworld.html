@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>开发一个 “Hello world” 扩展 &#8212; Sphinx 2.1.0+/e678b9c34 文档</title>
+    <title>开发一个 “Hello world” 扩展 &#8212; Sphinx 2.1.0+/7f2c8fd82 文档</title>
     <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Sphinx 2.1.0+/e678b9c34 文档 中搜索"
+          title="在 Sphinx 2.1.0+/7f2c8fd82 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -166,36 +166,28 @@
             
   <div class="section" id="developing-a-hello-world-extension">
 <h1>开发一个 “Hello world” 扩展<a class="headerlink" href="#developing-a-hello-world-extension" title="永久链接至标题">¶</a></h1>
-<p>The objective of this tutorial is to create a very basic extension that adds a
-new directive. This directive will output a paragraph containing “hello world”.</p>
-<p>Only basic information is provided in this tutorial. For more information, refer
-to the <a class="reference internal" href="index.html"><span class="doc">other tutorials</span></a> that go into more details.</p>
+<p>本教程的目标是创建一个添加新指令的基本扩展.该指令将输出一个包含“hello world”的段落.</p>
+<p>本教程仅提供基本信息.有关更多信息,请参阅 <a class="reference internal" href="index.html"><span class="doc">other tutorials</span></a>,其中包含更多详细信息.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>For this extension, you will need some basic understanding of <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a>
-and Python.</p>
+<p>对于此扩展,您需要对 <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> 和 Python 有一些基本的了解.</p>
 </div>
 <div class="section" id="overview">
 <h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
 <p>我们希望扩展程序将以下内容添加到Sphinx中:</p>
 <ul class="simple">
-<li><p>A <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> directive, that will simply output the text “hello world”.</p></li>
+<li><p>一个 <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> 指令,它将简单地输出文本 “hello world”.</p></li>
 </ul>
 </div>
 <div class="section" id="prerequisites">
 <h2>预备条件<a class="headerlink" href="#prerequisites" title="永久链接至标题">¶</a></h2>
-<p>We will not be distributing this plugin via <a class="reference external" href="https://pypi.org/">PyPI</a> and will instead include it
-as part of an existing project. This means you will need to use an existing
-project or create a new one using <strong class="program">sphinx-quickstart</strong>.</p>
-<p>We assume you are using separate source (<code class="file docutils literal notranslate"><span class="pre">source</span></code>) and build
-(<code class="file docutils literal notranslate"><span class="pre">build</span></code>) folders. Your extension file could be in any folder of your
-project. In our case, let’s do the following:</p>
+<p>我们不会通过 <a class="reference external" href="https://pypi.org/">PyPI</a> 分发这个插件,而是将其作为现有项目的一部分包含在内.这意味着您将需要使用现有项目或使用 <strong class="program">sphinx-quickstart</strong> 创建一个新项目.</p>
+<p>我们假设您使用单独的源(<code class="file docutils literal notranslate"><span class="pre">source</span></code>)和build(<code class="file docutils literal notranslate"><span class="pre">build</span></code>)文件夹.您的扩展文件可以位于项目的任何文件夹中.在我们的例子中,让我们做以下事情:</p>
 <ol class="arabic simple">
-<li><p>Create an <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> folder in <code class="file docutils literal notranslate"><span class="pre">source</span></code></p></li>
-<li><p>Create a new Python file in the <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> folder called
-<code class="file docutils literal notranslate"><span class="pre">helloworld.py</span></code></p></li>
+<li><p>在 <code class="file docutils literal notranslate"><span class="pre">source</span></code> 中创建一个 <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> 文件夹</p></li>
+<li><p>在 <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> 文件夹中创建一个名为 <code class="file docutils literal notranslate"><span class="pre">helloworld.py</span></code> 的新Python文件</p></li>
 </ol>
-<p>Here is an example of the folder structure you might obtain:</p>
+<p>以下是您可能获得的文件夹结构的示例:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>└── source
     ├── _ext
     │   └── helloworld.py
@@ -210,7 +202,7 @@ project. In our case, let’s do the following:</p>
 </div>
 <div class="section" id="writing-the-extension">
 <h2>编写扩展<a class="headerlink" href="#writing-the-extension" title="永久链接至标题">¶</a></h2>
-<p>Open <code class="file docutils literal notranslate"><span class="pre">helloworld.py</span></code> and paste the following code in it:</p>
+<p>打开 <code class="file docutils literal notranslate"><span class="pre">helloworld.py</span></code> 并将以下代码粘贴到其中:</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -250,10 +242,9 @@ project. In our case, let’s do the following:</p>
     <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>Some essential things are happening in this example, and you will see them for
-all directives.</p>
-<p class="rubric">The directive class</p>
-<p>Our new directive is declared in the <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code> class.</p>
+<p>在这个例子中发生了一些重要的事情,你将看到它们适用于所有指令.</p>
+<p class="rubric">指令类</p>
+<p>我们的新指令在 <code class="docutils literal notranslate"><span class="pre">HelloWorld</span></code> 类中声明.</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -265,27 +256,19 @@ all directives.</p>
         <span class="k">return</span> <span class="p">[</span><span class="n">paragraph_node</span><span class="p">]</span>
 </pre></div>
 </td></tr></table></div>
-<p>This class extends the <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a>’ <code class="docutils literal notranslate"><span class="pre">Directive</span></code> class. All extensions that
-create directives should extend this class.</p>
+<p>这个类扩展了 <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a>’ <code class="docutils literal notranslate"><span class="pre">Directive</span></code> 类.创建指令的所有扩展都应扩展此类.</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference external" href="docutilsdirectives">The docutils documentation on creating directives</a></p>
+<p><a class="reference external" href="docutilsdirectives">关于创建指令的docutils文档</a></p>
 </div>
-<p>This class contains a <code class="docutils literal notranslate"><span class="pre">run</span></code> method.  This method is a requirement and it is
-part of every directive.  It contains the main logic of the directive and it
-returns a list of docutils nodes to be processed by Sphinx. These nodes are
-docutils’ way of representing the content of a document. There are many types of
-nodes available: text, paragraph, reference, table, etc.</p>
+<p>该类包含一个 <code class="docutils literal notranslate"><span class="pre">run</span></code> 方法.此方法是一项要求,它是每个指令的一部分.它包含指令的主要逻辑,并返回Sphinx要处理的docutils节点列表.这些节点是docutils表示文档内容的方式.有许多类型的节点可用: 文本,段落,参考,表格等.</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference external" href="docutilsnodes">The docutils documentation on nodes</a></p>
+<p><a class="reference external" href="docutilsnodes">节点</a> 上的docutils文档</p>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">nodes.paragraph</span></code> class creates a new paragraph node. A paragraph
-node typically contains some text that we can set during instantiation using
-the <code class="docutils literal notranslate"><span class="pre">text</span></code> parameter.</p>
+<p><code class="docutils literal notranslate"><span class="pre">nodes.paragraph</span></code> 类创建一个新的段落节点.段落节点通常包含一些我们可以在实例化期间使用 <code class="docutils literal notranslate"><span class="pre">text</span></code> 参数设置的文本.</p>
 <p class="rubric">The <code class="docutils literal notranslate"><span class="pre">setup</span></code> function</p>
-<p>This function is a requirement. We use it to plug our new directive into
-Sphinx.</p>
+<p>此功能是必需的.我们用它将我们的新指令插入Sphinx.</p>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -303,10 +286,7 @@ Sphinx.</p>
     <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>The simplest thing you can do it call the <a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive" title="sphinx.application.Sphinx.add_directive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_directive()</span></code></a> method,
-which is what we’ve done here. For this particular call, the first argument is
-the name of the directive itself as used in a reST file. In this case, we would
-use <code class="docutils literal notranslate"><span class="pre">helloworld</span></code>. For example:</p>
+<p>你能做到的最简单的事就是调用 <a class="reference internal" href="../../extdev/appapi.html#sphinx.application.Sphinx.add_directive" title="sphinx.application.Sphinx.add_directive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_directive()</span></code></a> 方法,这就是我们在这里所做的.对于此特定调用,第一个参数是reST文件中使用的指令本身的名称.在这种情况下,我们将使用 <code class="docutils literal notranslate"><span class="pre">helloworld</span></code>.例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Some intro text here...
 
 <span class="p">..</span> <span class="ow">helloworld</span><span class="p">::</span>
@@ -314,21 +294,16 @@ use <code class="docutils literal notranslate"><span class="pre">helloworld</spa
 Some more text here...
 </pre></div>
 </div>
-<p>We also return the <a class="reference internal" href="../../extdev/index.html#ext-metadata"><span class="std std-ref">extension metadata</span></a> that indicates the
-version of our extension, along with the fact that it is safe to use the
-extension for both parallel reading and writing.</p>
+<p>我们还返回 <a class="reference internal" href="../../extdev/index.html#ext-metadata"><span class="std std-ref">扩展元数据</span></a>,它表示扩展的版本,以及使用扩展进行并行读写的安全性这一事实.</p>
 </div>
 <div class="section" id="using-the-extension">
 <h2>使用扩展<a class="headerlink" href="#using-the-extension" title="永久链接至标题">¶</a></h2>
-<p>The extension has to be declared in your <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> file to make Sphinx
-aware of it. There are two steps necessary here:</p>
+<p>扩展必须在你的 <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> 文件中声明,以使Sphinx意识到它.这里有两个步骤:</p>
 <ol class="arabic simple">
-<li><p>Add the <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> directory to the <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python path</a> using
-<code class="docutils literal notranslate"><span class="pre">sys.path.append</span></code>. This should be placed at the top of the file.</p></li>
-<li><p>Update or create the <a class="reference internal" href="../../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> list and add the extension file
-name to the list</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">sys.path.append</span></code> 将 <code class="file docutils literal notranslate"><span class="pre">_ext</span></code> 目录添加到 <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python path</a> 中.这应该放在文件的顶部.</p></li>
+<li><p>更新或创建 <a class="reference internal" href="../../usage/configuration.html#confval-extensions"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 列表并将扩展名文件名添加到列表中</p></li>
 </ol>
-<p>For example:</p>
+<p>例如:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
@@ -339,11 +314,9 @@ name to the list</p></li>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>We’re not distributing this extension as a <a class="reference external" href="https://packaging.python.org/">Python package</a>, we need to
-modify the <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python path</a> so Sphinx can find our extension. This is why we
-need the call to <code class="docutils literal notranslate"><span class="pre">sys.path.append</span></code>.</p>
+<p>我们不是将这个扩展名分发为 <a class="reference external" href="https://packaging.python.org/">Python package</a>,我们需要修改 <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">Python path</a>,以便Sphinx可以找到我们的扩展.这就是我们需要调用 <code class="docutils literal notranslate"><span class="pre">sys.path.append</span></code> 的原因.</p>
 </div>
-<p>You can now use the extension in a file. For example:</p>
+<p>您现在可以在文件中使用扩展名.例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Some intro text here...
 
 <span class="p">..</span> <span class="ow">helloworld</span><span class="p">::</span>
@@ -351,7 +324,7 @@ need the call to <code class="docutils literal notranslate"><span class="pre">sy
 Some more text here...
 </pre></div>
 </div>
-<p>The sample above would generate:</p>
+<p>上面的示例将生成:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Some intro text here...
 
 Hello World!
@@ -362,8 +335,8 @@ Some more text here...
 </div>
 <div class="section" id="further-reading">
 <h2>延伸阅读<a class="headerlink" href="#further-reading" title="永久链接至标题">¶</a></h2>
-<p>This is the very basic principle of an extension that creates a new directive.</p>
-<p>For a more advanced example, refer to <a class="reference internal" href="todo.html"><span class="doc">开发 “TODO” 扩展</span></a>.</p>
+<p>这是创建新指令的扩展的基本原则.</p>
+<p>有关更高级的示例,请参阅 <a class="reference internal" href="todo.html"><span class="doc">开发 “TODO” 扩展</span></a>.</p>
 </div>
 </div>
 
@@ -399,7 +372,7 @@ Some more text here...
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2007-2019, Georg Brandl and the Sphinx team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/e678b9c34 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.0+/7f2c8fd82 创建。
     </div>
   </body>
 </html>
